@@ -1,0 +1,7 @@
+{
+  "name": "culture-governance-observer",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build_data.py && mkdir -p dist/data && cp index.html styles.css app.js methodology.html contribute.html dist/ && cp data/candidates.json data/governments.json dist/data/"
+  }
+}

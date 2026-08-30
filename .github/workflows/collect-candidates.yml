@@ -1,0 +1,28 @@
+name: Collect candidate policy sources
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: candidate-source-collector
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect new sources
+        run: python3 scripts/collect_candidates.py
+      - name: Commit inbox updates
+        run: |
+          if git diff --quiet -- data/inbox/candidate_sources.csv; then
+            echo "No new sources"
+            exit 0
+          fi
+          git config user.name "culture-governance-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/inbox/candidate_sources.csv
+          git commit -m "chore(data): collect candidate policy sources"
+          git push
