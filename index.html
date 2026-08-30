@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="追蹤 2026 台灣地方選舉候選人文化政見與地方政府文化施政概況。">
+  <title>文化治理觀察站｜2026 台灣地方選舉</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav><a class="brand" href="#top">文化治理觀察站</a><div><a href="#platforms">候選人政見</a><a href="#governments">地方施政</a><a href="methodology.html">資料方法</a></div></nav>
+    <div class="hero-copy" id="top">
+      <p class="eyebrow">2026 TAIWAN LOCAL ELECTIONS</p>
+      <h1>把文化政見，<br>放回治理脈絡裡檢視。</h1>
+      <p class="lede">追蹤候選人的文化政策承諾，也整理地方政府已經投入的預算、支出與施政。每筆資料保留來源、口徑與查核紀錄。</p>
+      <div class="status"><span class="pulse"></span><span>資料庫建置中</span><span id="updated"></span></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="platforms" class="section">
+      <div class="section-head"><div><p class="kicker">01 / POLICY TRACKER</p><h2>候選人的文化政見</h2></div><p>只收錄可辨識的政策主張、承諾或計畫；競選活動、拜會行程與個人經歷不列入。</p></div>
+      <div class="filters" aria-label="候選人政見篩選">
+        <label>縣市<select id="cityFilter"><option value="">全部縣市</option></select></label>
+        <label>選舉類型<select id="officeFilter"><option value="">縣市長與議員</option></select></label>
+        <label>文化議題<select id="topicFilter"><option value="">全部議題</option></select></label>
+      </div>
+      <p class="result-count" id="platformCount"></p>
+      <div class="cards" id="platformCards"></div>
+      <div class="empty" id="platformEmpty" hidden><strong>目前沒有符合條件的資料</strong><span>可調整篩選條件，或查看資料方法與收錄進度。</span></div>
+    </section>
+
+    <section id="governments" class="section section-dark">
+      <div class="section-head"><div><p class="kicker">02 / GOVERNANCE BASELINE</p><h2>各地方政府文化施政概況</h2></div><p>預算數字與決算支出分開呈現；比例只在分子、分母年度及統計口徑一致時提供。</p></div>
+      <div class="filters dark-filters"><label>縣市<select id="govCityFilter"><option value="">全部縣市</option></select></label><label>年度<select id="yearFilter"><option value="">全部年度</option></select></label></div>
+      <p class="result-count" id="governmentCount"></p>
+      <div class="gov-grid" id="governmentCards"></div>
+      <div class="empty empty-dark" id="governmentEmpty" hidden><strong>目前沒有符合條件的資料</strong><span>資料將依官方預決算與文化統計來源逐筆查核後上線。</span></div>
+    </section>
+  </main>
+  <footer><p>文化治理觀察站</p><p>開放資料專案 · <a href="methodology.html">資料方法與更正原則</a></p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
