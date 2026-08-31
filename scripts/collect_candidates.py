@@ -11,13 +11,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "collector.json"
-INBOX = ROOT / "data" / "inbox" / "candidate_sources.csv"
 FIELDS = ["collected_at", "city", "published_date", "source_name", "source_title", "source_url", "review_status", "review_note"]
 
-def load_rows():
-    if not INBOX.exists():
+def load_rows(inbox):
+    if not inbox.exists():
         return []
-    with INBOX.open(encoding="utf-8-sig", newline="") as f:
+    with inbox.open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
 
 def iso_date(value):
@@ -42,15 +41,15 @@ def fetch(city, terms, limit):
             "source_url": item.findtext("link", "").strip(),
         }
 
-def main():
-    config = json.loads(CONFIG.read_text(encoding="utf-8"))
-    rows = load_rows()
+def collect(config, collection):
+    inbox = ROOT / collection["inbox"]
+    rows = load_rows(inbox)
     known = {row.get("source_url", "") for row in rows}
     cutoff = datetime.now(timezone.utc).date() - timedelta(days=int(config["lookback_days"]))
     collected_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     for city in config["cities"]:
         try:
-            for item in fetch(city, config["query_terms"], int(config["max_items_per_city"])):
+            for item in fetch(city, collection["query_terms"], int(collection["max_items_per_city"])):
                 if not item["source_url"] or item["source_url"] in known:
                     continue
                 if item["published_date"] and datetime.fromisoformat(item["published_date"]).date() < cutoff:
@@ -60,12 +59,17 @@ def main():
         except Exception as exc:
             print(f"warning: {city}: {exc}")
         time.sleep(0.25)
-    INBOX.parent.mkdir(parents=True, exist_ok=True)
-    with INBOX.open("w", encoding="utf-8", newline="") as f:
+    inbox.parent.mkdir(parents=True, exist_ok=True)
+    with inbox.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"inbox rows: {len(rows)}")
+    print(f"{inbox.name}: {len(rows)} rows")
+
+def main():
+    config = json.loads(CONFIG.read_text(encoding="utf-8"))
+    for collection in config["collections"].values():
+        collect(config, collection)
 
 if __name__ == "__main__":
     main()

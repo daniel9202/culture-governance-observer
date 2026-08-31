@@ -8,6 +8,13 @@
 4. 在待查核檔把 `review_status` 改成 `accepted` 或 `rejected`，並填寫 `review_note`。
 5. `correction_log` 格式為 `YYYY-MM-DD｜修正說明`；多筆以 `||` 分隔。
 
+## 地方民眾／團體文化政策訴求
+
+1. 查看 `data/inbox/civic_policy_calls.csv`。此檔由每日自動蒐集建立，專門收錄地方居民、社區、協會、聯盟、藝文團體等對文化政策提出的具體呼籲。
+2. 確認來源清楚說明訴求對象、政策方向或可執行要求；單純活動宣傳、募款、人物報導及一般價值宣示不收錄。
+3. 審核後將 `review_status` 改為 `accepted` 或 `rejected`，並在 `review_note` 記錄團體／提出者、訴求重點與判斷理由。
+4. 此類資料與候選人政見分開保存，不得轉錄為候選人的政策立場；如未來新增公開呈現區塊，仍須保留原始來源與查核紀錄。
+
 ## 地方政府文化預算與支出
 
 編輯 `data/input/governments.csv`，每一列為一個縣市的一個年度。
@@ -32,7 +39,7 @@
 ## 自動蒐集設定
 
 - 執行時間：每天臺灣時間 10:30。
-- 搜尋範圍：22 縣市、最近 45 日、每縣市最多 15 筆。
+- 搜尋範圍：22 縣市、最近 45 日；候選人政見與民間文化訴求各每縣市最多 15 筆。
 - 設定檔：`config/collector.json`。
 - 手動執行：GitHub → Actions → `Collect candidate policy sources` → `Run workflow`。
 

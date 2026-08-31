@@ -17,12 +17,12 @@ jobs:
         run: python3 scripts/collect_candidates.py
       - name: Commit inbox updates
         run: |
-          if git diff --quiet -- data/inbox/candidate_sources.csv; then
+          if git diff --quiet -- data/inbox; then
             echo "No new sources"
             exit 0
           fi
           git config user.name "culture-governance-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/inbox/candidate_sources.csv
-          git commit -m "chore(data): collect candidate policy sources"
+          git add data/inbox/
+          git commit -m "chore(data): collect cultural policy sources"
           git push
