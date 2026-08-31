@@ -1,5 +1,179 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-08-30",
-  "records": []
+  "last_updated": "2026-08-31",
+  "records": [
+    {
+      "id": "candidate-tpe-mayor-shen-boyang-001",
+      "city": "臺北市",
+      "office": "縣市長",
+      "candidate": "沈伯洋",
+      "party": "民主進步黨",
+      "topics": [
+        "文化資產",
+        "地方文史",
+        "文化廊道"
+      ],
+      "summary": "主張文化資產保存須建立可持續的路徑、機制與後續投入，並以台北記憶倉庫串聯西門町、北門、淡水河及大稻埕，形成認識台北的文化廊道。",
+      "published_date": "2026-08-03",
+      "source_title": "議員：台北需要沈伯洋把在地故事帶向世界",
+      "source_url": "https://www.mirrormedia.mg/external/setn_1883065",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-ntpc-mayor-su-chiao-hui-001",
+      "city": "新北市",
+      "office": "縣市長",
+      "candidate": "蘇巧慧",
+      "party": "民主進步黨",
+      "topics": [
+        "文化場館",
+        "影視文化",
+        "地方文史"
+      ],
+      "summary": "提出將國家電影及視聽文化中心進一步打造成「三金博物館」，呈現金曲、金鐘與金馬文化，並讓更多人認識新莊的歷史文化。",
+      "published_date": "2026-08-07",
+      "source_title": "新北市長選戰 李四川、蘇巧慧同場上香祈福",
+      "source_url": "https://udn.com/vote2026/story/124652/9675933",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-ntpc-mayor-lee-sichuan-001",
+      "city": "新北市",
+      "office": "縣市長",
+      "candidate": "李四川",
+      "party": "中國國民黨",
+      "topics": [
+        "客家文化",
+        "文化教育",
+        "文化場館"
+      ],
+      "summary": "提出客家文化傳承與創新政策，包括將客家社團補助提高至每班最高10萬元、朝完成15座哈客館推進，並提高客語教師待遇。",
+      "published_date": "2026-06-17",
+      "source_title": "搶客家票 李四川提6政見 加碼社團補助",
+      "source_url": "https://udn.com/news/story/124652/9570752",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hcc-mayor-chuang-ching-cheng-001",
+      "city": "新竹市",
+      "office": "縣市長",
+      "candidate": "莊競程",
+      "party": "民主進步黨",
+      "topics": [
+        "客家文化",
+        "文化治理",
+        "文化科技"
+      ],
+      "summary": "主張成立客家事務處、推動客語扎根計畫，並以「科技客家」結合產業與大學資源，進行數位文化保存、智慧導覽、文化空間活化及地方創生。",
+      "published_date": "2026-07-26",
+      "source_title": "莊競程提「科技客家」政見 數位保存文化、活化客庄",
+      "source_url": "https://udn.com/vote2026/story/124652/9651723",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-yilan-mayor-lin-kuo-chang-001",
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "candidate": "林國漳",
+      "party": "民主進步黨",
+      "topics": [
+        "文化治理",
+        "文化教育",
+        "文化資產",
+        "文化產業"
+      ],
+      "summary": "提出「文化立縣2.0」五大綱領：活化文化場域、文化教育扎根與東部考古研究中心、節慶保存與一日文化假、文化政策白皮書與中興文創園區重整，以及設計展、影展和博物館家族串聯。",
+      "published_date": "2026-08-28",
+      "source_title": "林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
+      "source_url": "https://www.kamalan-news.com/political/22/18859",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-yunlin-mayor-chang-chia-chun-001",
+      "city": "雲林縣",
+      "office": "縣市長",
+      "candidate": "張嘉郡",
+      "party": "中國國民黨",
+      "topics": [
+        "文化場館",
+        "藝術教育",
+        "地方文化"
+      ],
+      "summary": "提出興建「雲林美術館」，兼具藝術展覽、美感教育、地方文化與觀光功能，並與各地文化資源串聯成文化廊帶。",
+      "published_date": "2026-08-26",
+      "source_title": "張嘉郡拋「雲林美術館」政見　親赴台中向盧秀燕取經",
+      "source_url": "https://life.tw/article/%E5%BC%B5%E5%98%89%E9%83%A1%E6%8B%8B-%E9%9B%B2%E6%9E%97%E7%BE%8E%E8%A1%93%E9%A4%A8-%E6%94%BF%E8%A6%8B-%E8%A6%AA%E8%B5%B4%E5%8F%B0%E4%B8%AD%E5%90%91%E7%9B%A7%E7%A7%80%E7%87%95%E5%8F%96%E7%B6%93-3130493",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hualien-mayor-yu-shu-chen-001",
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "candidate": "游淑貞",
+      "party": "中國國民黨",
+      "topics": [
+        "客家文化",
+        "文化治理",
+        "文化觀光",
+        "地方創生"
+      ],
+      "summary": "發布《花蓮客家文化願景白皮書》，提出客語生活化與教育扎根、客庄產業創生、族群主流化、客庄文化生活廊道及客庄慢旅與文化觀光五項政策。",
+      "published_date": "2026-08-24",
+      "source_title": "游淑貞發布《花蓮客家文化願景白皮書》打造客庄花蓮！以文化新生帶動產業創生與地方發展",
+      "source_url": "https://news.tvbs.com.tw/life/4011947",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hualien-mayor-chang-chun-001",
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "candidate": "張峻",
+      "party": "無黨籍",
+      "topics": [
+        "藝文資源",
+        "文化平權",
+        "社區文化"
+      ],
+      "summary": "主張盤點花蓮13鄉鎮市藝文需求，增加中南區及偏鄉巡迴展演與藝文據點，支持地方藝文團隊與社區文化據點，讓縣級藝文活動深入鄉鎮與部落。",
+      "published_date": "2026-08-15",
+      "source_title": "張峻出席「玉里・正來寮」成果展　提藝文資源均衡政策：住得遠不代表離文化也要遠",
+      "source_url": "https://news.pchome.com.tw/society/tcpttw/20260815/index-78678550970686334002.html",
+      "source_type": "新聞報導",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hualien-mayor-wei-chia-hsien-001",
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "candidate": "魏嘉賢",
+      "party": "無黨籍",
+      "topics": [
+        "文化資產",
+        "戰爭記憶",
+        "文化路徑"
+      ],
+      "summary": "主張由縣府系統性調查、保存、研究及活化花蓮二戰遺跡，串聯防空洞、地下坑道、砲陣地等戰地史跡，建立戰地文化路徑。",
+      "published_date": "2026-08-15",
+      "source_title": "從漢光演習看花蓮的戰地史跡｜魏嘉賢：這些遺跡不該被遺忘，而應該成為文化資產。",
+      "source_url": "https://etaiwan.news/2026/08/15/%E5%BE%9E%E6%BC%A2%E5%85%89%E6%BC%94%E7%BF%92%E7%9C%8B%E8%8A%B1%E8%93%AE%E7%9A%84%E6%88%B0%E5%9C%B0%E5%8F%B2%E8%B7%A1%EF%BD%9C%E9%AD%8F%E5%98%89%E8%B3%A2%EF%BC%9A%E9%80%99%E4%BA%9B%E9%81%BA%E8%B7%A1/",
+      "source_type": "候選人原文",
+      "last_verified": "2026-08-31",
+      "corrections": []
+    }
+  ]
 }
