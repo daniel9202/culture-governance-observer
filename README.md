@@ -1,6 +1,6 @@
 # 文化治理觀察站｜2026 台灣地方選舉
 
-公開追蹤候選人文化政見，並整理地方政府文化預算、實際支出與重點施政。
+公開追蹤候選人文化政見、地方民眾與團體的文化政策訴求，並整理地方政府文化預算、實際支出與重點施政。
 
 ## 原則
 
@@ -15,7 +15,7 @@ GitHub Actions 每天臺灣時間 10:30 搜尋 22 縣市、最近 45 日的兩�
 
 ## 手動更新
 
-候選人正式資料編輯 `data/input/candidates.csv`；地方文化預算、實際支出及統計口徑編輯 `data/input/governments.csv`。完整步驟見 `docs/manual-update.md`。
+候選人正式資料編輯 `data/input/candidates.csv`；已查核的民間訴求編輯 `data/input/civic_policy_calls.csv`；地方文化預算、實際支出及統計口徑編輯 `data/input/governments.csv`。完整步驟見 `docs/manual-update.md`。
 
 推送至 `main` 後，GitHub Actions 會驗證 CSV、自動計算比例、產生 JSON 並部署 GitHub Pages。
 
