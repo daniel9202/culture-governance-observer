@@ -75,6 +75,25 @@ def build_candidates():
         })
     return records
 
+def build_local_issues():
+    records = []
+    for index, row in enumerate(rows("local_cultural_issues.csv"), start=2):
+        if not any(row.values()):
+            continue
+        label = f"local_cultural_issues.csv row {index}"
+        required(row, ["id", "city", "title", "issue_type", "summary", "published_date", "source_title", "source_url", "last_verified"], label)
+        valid_date(row["published_date"], label)
+        valid_date(row["last_verified"], label)
+        valid_url(row["source_url"], label)
+        records.append({
+            "id": row["id"], "city": row["city"], "title": row["title"], "issue_type": row["issue_type"],
+            "topics": [x.strip() for x in row["topics"].split("|") if x.strip()], "summary": row["summary"],
+            "related_actor": row["related_actor"], "published_date": row["published_date"], "source_title": row["source_title"],
+            "source_url": row["source_url"], "source_type": row["source_type"], "last_verified": row["last_verified"],
+            "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
+        })
+    return records
+
 def build_civic_calls():
     records = []
     for index, row in enumerate(rows("civic_policy_calls.csv"), start=2):
@@ -123,6 +142,7 @@ def write(name, records):
 
 if __name__ == "__main__":
     write("candidates.json", build_candidates())
+    write("local_cultural_issues.json", build_local_issues())
     write("civic_policy_calls.json", build_civic_calls())
     write("governments.json", build_governments())
     print("data validation passed")
