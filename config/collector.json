@@ -5,12 +5,14 @@
     "candidate_policy": {
       "inbox": "data/inbox/candidate_sources.csv",
       "query_terms": "(文化政見 OR 文化政策 OR 藝文政策) (候選人 OR 參選 OR 選舉)",
-      "max_items_per_city": 15
+      "max_items_per_city": 15,
+      "duplicate_title_threshold": 0.92
     },
     "civic_policy_calls": {
       "inbox": "data/inbox/civic_policy_calls.csv",
       "query_terms": "(文化政策 OR 藝文政策 OR 文化預算 OR 文化資產 OR 文化空間) (公民團體 OR 民間團體 OR 協會 OR 聯盟 OR 連署 OR 呼籲 OR 倡議)",
-      "max_items_per_city": 15
+      "max_items_per_city": 15,
+      "duplicate_title_threshold": 0.92
     }
   }
 }
