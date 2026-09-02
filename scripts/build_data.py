@@ -64,10 +64,13 @@ def build_candidates():
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
+        related_sources = [x.strip() for x in row.get("related_sources", "").split("|") if x.strip()]
+        for source in related_sources:
+            valid_url(source, label)
         records.append({
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
             "topics": [x.strip() for x in row["topics"].split("|") if x.strip()], "summary": row["summary"], "published_date": row["published_date"],
-            "source_title": row["source_title"], "source_url": row["source_url"], "source_type": row["source_type"], "last_verified": row["last_verified"],
+            "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })
     return records
