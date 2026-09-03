@@ -2,6 +2,6 @@
   "name": "culture-governance-observer",
   "private": true,
   "scripts": {
-    "build": "python3 scripts/build_data.py && mkdir -p dist/data && cp index.html styles.css app.js methodology.html contribute.html review.html review.js dist/ && cp data/candidates.json data/civic_policy_calls.json data/governments.json dist/data/ && cp -r data/inbox dist/data/"
+    "build": "python3 scripts/build_data.py && mkdir -p dist/data && cp index.html styles.css app.js methodology.html contribute.html review.html review.js fulfillment.html fulfillment.js dist/ && cp data/candidates.json data/civic_policy_calls.json data/governments.json data/pledge_fulfillment.json dist/data/ && cp -r data/inbox dist/data/"
   }
 }

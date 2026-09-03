@@ -113,6 +113,34 @@ def build_civic_calls():
         })
     return records
 
+def build_fulfillment():
+    records = []
+    allowed_statuses = {"fulfilled", "partial", "in_progress", "no_verified_progress", "not_assessable"}
+    for index, row in enumerate(rows("pledge_fulfillment.csv"), start=2):
+        if not any(row.values()):
+            continue
+        label = f"pledge_fulfillment.csv row {index}"
+        required(row, ["id", "city", "person", "party", "current_office", "term", "election", "pledge_title", "pledge_summary", "pledge_date", "pledge_source_title", "pledge_source_url", "responsibility", "status", "evidence_summary", "last_verified"], label)
+        valid_date(row["pledge_date"], label)
+        valid_date(row["last_verified"], label)
+        valid_url(row["pledge_source_url"], label)
+        if row["status"] not in allowed_statuses:
+            raise ValueError(f"{label}: invalid status")
+        evidence_url = row.get("evidence_source_url", "").strip()
+        if evidence_url:
+            valid_url(evidence_url, label)
+        records.append({
+            "id": row["id"], "city": row["city"], "person": row["person"], "party": row["party"],
+            "current_office": row["current_office"], "term": row["term"], "election": row["election"],
+            "topics": [x.strip() for x in row["topics"].split("|") if x.strip()],
+            "pledge_title": row["pledge_title"], "pledge_summary": row["pledge_summary"], "pledge_date": row["pledge_date"],
+            "pledge_source_title": row["pledge_source_title"], "pledge_source_url": row["pledge_source_url"],
+            "responsibility": row["responsibility"], "status": row["status"], "evidence_summary": row["evidence_summary"],
+            "evidence_source_title": row.get("evidence_source_title", ""), "evidence_source_url": evidence_url,
+            "last_verified": row["last_verified"], "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
+        })
+    return records
+
 def build_governments():
     records = []
     for index, row in enumerate(rows("governments.csv"), start=2):
@@ -145,4 +173,5 @@ if __name__ == "__main__":
     write("local_cultural_issues.json", build_local_issues())
     write("civic_policy_calls.json", build_civic_calls())
     write("governments.json", build_governments())
+    write("pledge_fulfillment.json", build_fulfillment())
     print("data validation passed")
