@@ -13,3 +13,7 @@
 ## `governments.csv`
 
 每筆記錄包含：`id`、`city`、`year`、`culture_budget`、`actual_spending`、`total_budget`、`total_spending`、`budget_scope`、`spending_scope`、`methodology`、`official_source_title`、`official_source_url`、`key_policies`、`last_verified`、`notes`。顯示金額及比例由系統產生。
+
+## `region_metrics.csv`
+
+每個縣市、年度一筆，記錄文化資產、文化場館、藝文活動、藝術節慶、藝文團體、街頭藝人，以及文化部補助地方政府與地方配合款。中央補助與配合款另列，不併入地方文化局預算或政事別文化支出。原始來源檔名保留於 `source_files`，並記錄 `source_url` 與 `last_verified`。
