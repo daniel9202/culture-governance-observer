@@ -165,6 +165,45 @@ def build_governments():
         })
     return records
 
+def build_region_metrics():
+    numeric_fields = {
+        "monuments", "historical_buildings", "memorial_buildings", "settlements", "historical_sites",
+        "cultural_landscapes", "archaeological_sites", "antiquities", "traditional_arts", "folklore",
+        "oral_traditions", "traditional_knowledge", "cultural_venues_total", "dedicated_arts_venues",
+        "museum_art_venues", "memorial_cultural_halls", "galleries", "auditoriums", "theatre_rehearsal_venues",
+        "library_data_venues", "statutory_museums", "local_cultural_halls", "arts_events_total",
+        "arts_attendance_thousands", "visual_arts_events", "craft_events", "design_events",
+        "classical_traditional_music_events", "popular_music_events", "drama_events", "dance_events",
+        "folklore_heritage_events", "language_library_events", "festivals", "international_festivals",
+        "festival_days", "festival_attendance", "arts_groups", "arts_foundations", "street_performance_venues",
+        "street_artists_or_groups", "central_grants_thousand", "local_matching_thousand",
+        "community_grants_thousand", "community_matching_thousand", "museum_hall_grants_thousand",
+        "museum_hall_matching_thousand"
+    }
+    records = []
+    for index, row in enumerate(rows("region_metrics.csv"), start=2):
+        if not any(row.values()):
+            continue
+        label = f"region_metrics.csv row {index}"
+        required(row, ["id", "city", "year", "source_title", "source_url", "last_verified"], label)
+        valid_date(row["last_verified"], label)
+        valid_url(row["source_url"], label)
+        record = {"id": row["id"], "city": row["city"], "year": int(row["year"])}
+        for field in numeric_fields:
+            value = row.get(field, "").strip()
+            if not value:
+                record[field] = None
+            else:
+                parsed = float(value)
+                record[field] = int(parsed) if parsed.is_integer() else parsed
+        record.update({
+            "source_title": row["source_title"], "source_url": row["source_url"],
+            "source_files": [x.strip() for x in row.get("source_files", "").split("|") if x.strip()],
+            "last_verified": row["last_verified"], "notes": row.get("notes", "")
+        })
+        records.append(record)
+    return records
+
 def write(name, records):
     payload = {"schema_version": "1.1", "last_updated": date.today().isoformat(), "records": records}
     (OUTPUT / name).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -174,5 +213,6 @@ if __name__ == "__main__":
     write("local_cultural_issues.json", build_local_issues())
     write("civic_policy_calls.json", build_civic_calls())
     write("governments.json", build_governments())
+    write("region_metrics.json", build_region_metrics())
     write("pledge_fulfillment.json", build_fulfillment())
     print("data validation passed")
