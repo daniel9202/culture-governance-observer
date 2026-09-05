@@ -6,8 +6,8 @@ const metric=(label,value,unit='')=>`<div class="stat-line"><span>${label}</span
 
 Promise.all(['candidates','governments','local_cultural_issues','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))).then(([p,g,i,m])=>{
   const P=p.records.filter(x=>x.city===city),G=g.records.filter(x=>x.city===city),I=i.records.filter(x=>x.city===city),M=m.records.find(x=>x.city===city),topics=[...new Set(P.flatMap(x=>x.topics))];
-  document.title=`${city}文化 Board｜文化治理觀察站`;
-  title.textContent=city+'文化 Board';
+  document.title=`${city}文化儀表板｜文化治理觀察站`;
+  title.textContent=city+'文化儀表板';
   lede.textContent=`已收錄 ${new Set(P.map(x=>x.candidate)).size} 位候選人、${P.length} 筆文化政見、${I.length} 筆地方文化議題，並彙整 ${M?.year||'待查核'} 年縣市文化統計。`;
   count.textContent=`候選人 ${new Set(P.map(x=>x.candidate)).size} 位；文化主題：${topics.join('、')||'尚待查核'}`;
 

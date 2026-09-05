@@ -47,6 +47,15 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .gov-card .source-row{border-color:#44473e}
 .empty-dark{border-color:#55584e}
 .section-dark .kicker{color:var(--lime)}
+.region-entry-grid{display:grid;grid-template-columns:.7fr 1.4fr 1fr;gap:1px;background:#44473e;border:1px solid #44473e}
+.region-entry-grid>*{background:#22241f;padding:2rem}
+.region-entry-stat{display:flex;flex-direction:column;justify-content:space-between;min-height:230px}
+.region-entry-stat strong{font-size:clamp(4rem,8vw,7rem);line-height:.85;color:var(--lime);letter-spacing:-.06em}
+.region-entry-stat span{color:#c8cbbf;font-weight:700}
+.region-entry-topics{display:flex;flex-wrap:wrap;align-content:flex-start;gap:.65rem}
+.region-entry-topics span{border:1px solid #55584e;padding:.55rem .75rem;font-size:.85rem;color:#d9dcd1}
+.region-entry-link{display:flex;flex-direction:column;justify-content:space-between;min-height:230px;background:var(--lime);color:var(--ink);font-size:1.25rem;font-weight:800}
+.region-entry-link strong{align-self:flex-end;font-size:3rem;font-weight:400}
 footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:space-between;font-weight:700}
 .method{max-width:900px;margin:auto;padding:6rem 5vw}
 .method h1{font-size:clamp(2.5rem,6vw,5rem)}
@@ -80,3 +89,4 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .region-card{min-height:260px}
 @media(max-width:1000px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.stats-grid,.support-card{grid-template-columns:1fr}.support-card{gap:1rem}.stat-card{min-height:auto}}
+@media(max-width:760px){.region-entry-grid{grid-template-columns:1fr}.region-entry-stat,.region-entry-link{min-height:180px}}
