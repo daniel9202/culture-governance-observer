@@ -131,7 +131,8 @@ def build_fulfillment():
             valid_url(evidence_url, label)
         records.append({
             "id": row["id"], "city": row["city"], "person": row["person"], "party": row["party"],
-            "current_office": row["current_office"], "term": row["term"], "election": row["election"],\n            "reelection_status": row["reelection_status"],
+            "current_office": row["current_office"], "term": row["term"], "election": row["election"],
+            "reelection_status": row["reelection_status"],
             "topics": [x.strip() for x in row["topics"].split("|") if x.strip()],
             "pledge_title": row["pledge_title"], "pledge_summary": row["pledge_summary"], "pledge_date": row["pledge_date"],
             "pledge_source_type": row["pledge_source_type"], "pledge_source_title": row["pledge_source_title"], "pledge_source_url": row["pledge_source_url"],
