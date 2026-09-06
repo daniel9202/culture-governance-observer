@@ -52,6 +52,20 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .source-row{border-top:1px solid var(--line);padding-top:1rem;margin-top:1rem;display:flex;justify-content:space-between;gap:1rem;font-size:.78rem}
 .source-row a{font-weight:700}
 .verification{color:var(--muted)}
+.tracker-city+.tracker-city{margin-top:4rem}
+.tracker-city-name{font-size:clamp(2.2rem,4.5vw,3rem);letter-spacing:-.04em;margin:0 0 1.5rem;padding-bottom:.7rem;border-bottom:2px solid var(--ink)}
+.tracker-person{border-left:3px solid var(--line);padding-left:1.3rem}
+.tracker-person+.tracker-person{margin-top:2.5rem}
+.tracker-person-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1rem;margin-bottom:1rem}
+.tracker-person-head h3{font-size:1.4rem;letter-spacing:-.03em;margin:0}
+.tracker-person-head p{margin:0}
+.tracker-person-count{margin-left:auto;font:700 .76rem ui-monospace,monospace;color:var(--muted)}
+.pledge-card h4{font-size:1.1rem;line-height:1.45;margin:1.1rem 0 .5rem}
+.pledge-card .policy-actions h4{font-size:.78rem;letter-spacing:.08em;color:var(--muted);margin:0 0 .35rem}
+.pledge-card .policy-actions p{margin:0}
+.tag-status{border-color:var(--ink);font-weight:700}
+.status-fulfilled{background:var(--lime);border-color:var(--lime)}
+.status-partial,.status-in_progress{background:#e7e4d9}
 .empty{padding:4rem;text-align:center;border:1px dashed var(--line);display:flex;flex-direction:column}
 .empty[hidden]{display:none}
 .section-dark{background:var(--dark);color:var(--white)}
