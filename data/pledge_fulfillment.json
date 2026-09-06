@@ -303,12 +303,14 @@
       "pledge_source_title": "臺北市第8屆市長選舉選舉公報",
       "pledge_source_url": "https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/111%E5%B9%B4/%E8%87%BA%E5%8C%97%E5%B8%82%E5%B8%82%E9%95%B7.pdf",
       "responsibility": "臺北市政府文化局及所屬機關",
-      "status": "partial",
-      "evidence_summary": "文化局將閒置的迪化溫水游泳池活化為「臺北試演場」，2025年5月啟用，兼具排練與試演功能；文化局另指出已提供21處工作排練空間予藝文團隊。空間確有新增，但查核日前未見「劇場一條街」型態的展演聚落規劃或成果。",
+      "status": "no_verified_progress",
+      "evidence_summary": "文化局2025年5月將閒置的迪化溫水游泳池活化為「臺北試演場」，並表示已提供21處工作排練空間予藝文團隊；但這些屬於排練空間的供給，與公報承諾參考「劇場一條街」形成的展演空間聚落不是同一件事。查核日前未見市府提出劇場聚落的選址、規劃或成果，因此不足以驗證此項承諾的進度。",
       "evidence_source_title": "臺北市政府文化局：臺北試演場",
       "evidence_source_url": "https://culture.gov.taipei/cp.aspx?n=46FE614510B9F511",
       "last_verified": "2026-09-06",
-      "corrections": []
+      "corrections": [
+        "2026-09-06｜排練空間供給不等於劇場聚落型展演空間，狀態由部分實現改為未找到可驗證進度。"
+      ]
     },
     {
       "id": "taipei-chiang-2022-taipei-literature-museum",
