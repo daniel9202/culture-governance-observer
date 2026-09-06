@@ -4,8 +4,47 @@
   "collections": {
     "candidate_policy": {
       "inbox": "data/inbox/candidate_sources.csv",
-      "query_terms": "(文化政見 OR 文化政策 OR 藝文政策) (候選人 OR 參選 OR 選舉)",
+      "query_terms": "(文化 OR 藝文 OR 文資 OR 博物館 OR 圖書館 OR 文創 OR 客家 OR 原住民族文化) (政見 OR 政策 OR 白皮書 OR 主張 OR 承諾)",
+      "candidates_by_city": {
+        "基隆市": ["謝國樑", "童子瑋"],
+        "臺北市": ["沈伯洋", "蔣萬安"],
+        "新北市": ["蘇巧慧", "李四川"],
+        "桃園市": ["張善政", "黃世杰"],
+        "新竹市": ["莊競程"],
+        "新竹縣": ["鄭朝方", "徐欣瑩"],
+        "苗栗縣": ["陳品安", "鍾東錦"],
+        "臺中市": ["何欣純", "江啟臣"],
+        "彰化縣": ["陳素月", "魏平政"],
+        "南投縣": ["温世政", "許淑華"],
+        "雲林縣": ["張嘉郡", "劉建國"],
+        "嘉義市": ["張啓楷", "王美惠"],
+        "嘉義縣": ["蔡易餘"],
+        "臺南市": ["謝龍介", "陳亭妃"],
+        "高雄市": ["賴瑞隆", "柯志恩"],
+        "屏東縣": ["蘇清泉", "周春米"],
+        "宜蘭縣": ["吳宗憲", "林國漳"],
+        "花蓮縣": ["游淑貞"],
+        "臺東縣": ["陳瑩", "吳秀華"],
+        "澎湖縣": ["吳淑瑾", "陳振中"],
+        "金門縣": ["陳玉珍"],
+        "連江縣": ["王忠銘"]
+      },
+      "official_sites": {
+        "童子瑋": "https://t-ziwei.com/",
+        "沈伯洋": "https://puma.taipei/",
+        "蘇巧慧": "https://chiao.tw/",
+        "張善政": "https://sango.oen.tw/",
+        "何欣純": "https://a-chun.tw/",
+        "江啟臣": "https://taichungway.tw/",
+        "張嘉郡": "https://www.devotetoyunlin.com/",
+        "賴瑞隆": "https://zenolai.oen.tw/",
+        "柯志恩": "https://kochihen2026.tw/",
+        "林國漳": "https://2026openchang.tw/",
+        "吳宗憲": "https://www.yilan2026.tw/"
+      },
       "max_items_per_city": 15,
+      "max_items_per_candidate": 8,
+      "max_items_per_query": 4,
       "duplicate_title_threshold": 0.92
     },
     "civic_policy_calls": {

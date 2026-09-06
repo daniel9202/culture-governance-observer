@@ -41,6 +41,8 @@
 
 - 執行時間：每天臺灣時間 10:30。
 - 搜尋範圍：22 縣市、最近 45 日；候選人政見與民間文化訴求各每縣市最多 15 筆。
+- 候選人政見目前只搜尋已完成登記的民進黨、國民黨及民眾黨縣市長候選人；名單維護於設定檔的 `candidates_by_city`。
+- 經確認的候選人競選官網維護於 `official_sites`；蒐集器會另做官網網域限定搜尋。未確認為本人或競選團隊營運的網站不得加入。
 - 設定檔：`config/collector.json`。
 - 手動執行：GitHub → Actions → `Collect candidate policy sources` → `Run workflow`。
 

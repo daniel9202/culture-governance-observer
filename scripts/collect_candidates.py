@@ -46,8 +46,12 @@ def duplicate_title(city, title, known_titles, threshold):
             return True
     return False
 
-def fetch(city, terms, limit):
-    query = f'"{city}" {terms}'
+def fetch(city, terms, limit, candidate="", site=""):
+    if site:
+        subject = f'site:{urllib.parse.urlparse(site).netloc}'
+    else:
+        subject = f'"{candidate}"' if candidate else f'"{city}"'
+    query = f'{subject} {terms}'
     url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": query, "hl": "zh-TW", "gl": "TW", "ceid": "TW:zh-Hant"})
     request = urllib.request.Request(url, headers={"User-Agent": "culture-governance-observer/1.0"})
     with urllib.request.urlopen(request, timeout=25) as response:
@@ -72,21 +76,43 @@ def collect(config, collection):
     collected_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     skipped_duplicates = 0
     for city in config["cities"]:
-        try:
-            for item in fetch(city, collection["query_terms"], int(collection["max_items_per_city"])):
-                if not item["source_url"] or item["source_url"] in known_urls:
-                    continue
-                if duplicate_title(city, item["source_title"], known_titles, threshold):
-                    skipped_duplicates += 1
-                    continue
-                if item["published_date"] and datetime.fromisoformat(item["published_date"]).date() < cutoff:
-                    continue
-                rows.append({"collected_at": collected_at, **item, "review_status": "pending", "review_note": ""})
-                known_urls.add(item["source_url"])
-                known_titles.append((city, normalized_title(item["source_title"])))
-        except Exception as exc:
-            print(f"warning: {city}: {exc}")
-        time.sleep(0.25)
+        candidates = collection.get("candidates_by_city", {}).get(city, [""])
+        added_for_city = 0
+        for candidate in candidates:
+            if added_for_city >= int(collection["max_items_per_city"]):
+                break
+            try:
+                remaining = int(collection["max_items_per_city"]) - added_for_city
+                candidate_limit = min(remaining, int(collection.get("max_items_per_candidate", remaining)))
+                official_site = collection.get("official_sites", {}).get(candidate, "")
+                queries = [(candidate, "")]
+                if official_site:
+                    queries.append((candidate, official_site))
+                added_for_candidate = 0
+                for query_candidate, query_site in queries:
+                    if added_for_candidate >= candidate_limit:
+                        break
+                    query_limit = min(
+                        candidate_limit - added_for_candidate,
+                        int(collection.get("max_items_per_query", candidate_limit)),
+                    )
+                    for item in fetch(city, collection["query_terms"], query_limit, query_candidate, query_site):
+                        if not item["source_url"] or item["source_url"] in known_urls:
+                            continue
+                        if duplicate_title(city, item["source_title"], known_titles, threshold):
+                            skipped_duplicates += 1
+                            continue
+                        if item["published_date"] and datetime.fromisoformat(item["published_date"]).date() < cutoff:
+                            continue
+                        rows.append({"collected_at": collected_at, **item, "review_status": "pending", "review_note": ""})
+                        known_urls.add(item["source_url"])
+                        known_titles.append((city, normalized_title(item["source_title"])))
+                        added_for_city += 1
+                        added_for_candidate += 1
+            except Exception as exc:
+                label = f"{city}/{candidate}" if candidate else city
+                print(f"warning: {label}: {exc}")
+            time.sleep(0.25)
     inbox.parent.mkdir(parents=True, exist_ok=True)
     with inbox.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)

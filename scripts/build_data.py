@@ -67,9 +67,13 @@ def build_candidates():
         related_sources = [x.strip() for x in row.get("related_sources", "").split("|") if x.strip()]
         for source in related_sources:
             valid_url(source, label)
+        topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
+        argument = row.get("policy_argument", "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
+        proposals = [x.strip() for x in row.get("concrete_proposals", "").split("||") if x.strip()] or [row["summary"]]
+        statements = [x.strip() for x in row.get("related_statements", "").split("||") if x.strip()]
         records.append({
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
-            "topics": [x.strip() for x in row["topics"].split("|") if x.strip()], "summary": row["summary"], "published_date": row["published_date"],
+            "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })

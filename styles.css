@@ -29,6 +29,15 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .card h3{font-size:1.6rem;margin:1.2rem 0 .3rem}
 .party{color:var(--muted);font-size:.85rem}
 .summary{font-size:1rem;flex:1}
+.policy-layer{margin-top:1rem}
+.policy-layer h4{margin:0 0:.35rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.policy-layer p{margin:0}
+.policy-actions{background:#f4f3ed;padding:1rem}
+.policy-actions ul{margin:.2rem 0 0;padding-left:1.2rem}
+.policy-actions li+li{margin-top:.45rem}
+.policy-statements{border-left:3px solid var(--lime);padding-left:1rem}
+.policy-statements ul{margin:.2rem 0 0;padding-left:1.2rem}
+.policy-statements p{color:var(--muted);font-size:.9rem}
 .source-row{border-top:1px solid var(--line);padding-top:1rem;margin-top:1rem;display:flex;justify-content:space-between;gap:1rem;font-size:.78rem}
 .source-row a{font-weight:700}
 .verification{color:var(--muted)}
@@ -90,6 +99,11 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .method h1{font-size:clamp(2.5rem,6vw,5rem)}
 .method h2{margin-top:3rem}
 .method code{background:#e5e2d8;padding:.1rem .3rem}
+.update-log{max-width:1000px}
+.update-list{list-style:none;margin:3rem 0 0;padding:0;border-top:1px solid var(--line)}
+.update-list li{display:grid;grid-template-columns:12rem 1fr;gap:2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.update-list time{font:700 .82rem/1.6 ui-monospace,monospace;color:var(--muted)}
+.update-list p{margin:0;font-size:1.15rem;font-weight:700}
 @media(max-width:760px){nav div{display:none}
 .hero{min-height:68vh}
 .hero-copy{padding-top:7vh}
@@ -99,6 +113,7 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .gov-grid{gap:1rem;background:transparent}
 .source-row,footer{flex-direction:column}
 .card{min-height:auto}
+.update-list li{grid-template-columns:1fr;gap:.35rem}
 }
 
 .section-stats{background:#e7e4d9}
