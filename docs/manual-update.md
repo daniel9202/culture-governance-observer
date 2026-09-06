@@ -1,10 +1,19 @@
 # 手動更新流程
 
+## 本機查核與自動上架（主要流程）
+
+1. 執行 `python scripts/local_review.py`，開啟它印出的查核頁網址。
+2. 選擇資料類型，逐筆開啟原始來源判讀，按 Yes 或 No 並填寫查核備註；每個決定會即時寫回待查核檔並推送。
+3. 按 Yes 後在上架表單補齊欄位，按「確認上架」。系統會寫入 `data/input/` 的正式 CSV、執行 `scripts/build_data.py` 驗證並產生 JSON，再 commit 與 push。
+4. 欄位缺漏、日期或網址格式錯誤、來源重複時會被擋下，正式檔案不會變動。
+
+以下手動編輯流程適用於沒有經過待查核清單的資料，或需要修正既有資料的情況。
+
 ## 候選人文化政見
 
 1. 查看 `data/inbox/candidate_sources.csv`。每日自動蒐集會把新來源加入此檔，`review_status` 預設為 `pending`。
 2. 開啟來源，確認內容包含可辨識的政策主張、承諾、執行方式或資源配置。競選活動、拜會、個人經歷及一般價值宣示不收錄。
-3. 將查核完成的資料新增至 `data/input/candidates.csv`。多個 `topics` 以 `|` 分隔。
+3. 將查核完成的資料新增至 `data/input/candidates.csv`。多個 `topics` 以 `|` 分隔；`office` 填 `縣市長` 或 `縣市議員`，網站據此分列於不同頁面。
 4. 在待查核檔把 `review_status` 改成 `accepted` 或 `rejected`，並填寫 `review_note`。
 5. `correction_log` 格式為 `YYYY-MM-DD｜修正說明`；多筆以 `||` 分隔。
 

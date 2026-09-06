@@ -4,7 +4,7 @@
 
 ## `candidates.csv`
 
-每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`correction_log`、`related_sources`。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄訪談、記者會或其他可核實但未必構成承諾的相關發言。後兩欄多項皆以 `||` 分隔。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。
+每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`correction_log`、`related_sources`。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄訪談、記者會或其他可核實但未必構成承諾的相關發言。後兩欄多項皆以 `||` 分隔。`office` 目前使用 `縣市長` 與 `縣市議員` 兩種值，網站據此分別呈現於首頁與議員政見頁。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。
 
 ## `civic_policy_calls.csv`
 
