@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Serve review.html locally and commit each decision using the user's existing Git login."""
-import csv,hmac,json,secrets,subprocess
+import csv,hashlib,hmac,json,secrets,subprocess,sys
+from datetime import date
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parents[1]
 FILES={"civic_policy_calls":ROOT/"data/inbox/civic_policy_calls.csv","candidate_sources":ROOT/"data/inbox/candidate_sources.csv"}
+PUBLIC={"civic_policy_calls":ROOT/"data/input/civic_policy_calls.csv","candidate_sources":ROOT/"data/input/candidates.csv"}
+OUTPUT={"civic_policy_calls":ROOT/"data/civic_policy_calls.json","candidate_sources":ROOT/"data/candidates.json"}
 PORT=8765
 TOKEN=secrets.token_urlsafe(32)
 ALLOWED_ORIGINS={f"http://127.0.0.1:{PORT}",f"http://localhost:{PORT}"}
@@ -28,6 +32,67 @@ def update(p):
  rel=str(path.relative_to(ROOT));git("add","--",rel)
  if subprocess.run(["git","diff","--cached","--quiet","--",rel],cwd=ROOT).returncode==0:return "沒有資料變動"
  git("commit","--only","-m",f"data: review {kind} source","--",rel);git("push");return git("rev-parse","--short","HEAD")
+def read_csv(path):
+ with path.open(encoding="utf-8-sig",newline="") as f:
+  reader=csv.DictReader(f);return reader.fieldnames or [],list(reader)
+def write_csv(path,fields,rows):
+ with path.open("w",encoding="utf-8",newline="") as f:
+  writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(rows)
+def clean_fields(value,required,optional=()):
+ if not isinstance(value,dict):raise ValueError("上架欄位格式不正確")
+ result={key:str(value.get(key,"")).strip() for key in required|set(optional)|{"topics"}}
+ missing=[key for key in required if not result[key]]
+ if missing:raise ValueError("請補齊欄位："+"、".join(sorted(missing)))
+ if any(len(item)>3000 for item in result.values()):raise ValueError("欄位內容過長")
+ return result
+def valid_url(value,label):
+ parsed=urlparse(value)
+ if parsed.scheme not in {"http","https"} or not parsed.netloc:raise ValueError(f"{label}不是有效網址")
+ return value
+def related_urls(value):
+ urls=[]
+ for item in str(value or "").replace("\r","\n").replace("|","\n").split("\n"):
+  item=item.strip()
+  if item and item not in urls:urls.append(valid_url(item,"輔助來源"))
+ return urls
+def publish(p):
+ kind,url=p.get("kind"),p.get("source_url")
+ if kind not in FILES or not isinstance(url,str) or not url:raise ValueError("上架資料格式不正確")
+ git("pull","--ff-only")
+ inbox_fields,inbox_rows=read_csv(FILES[kind]);matches=[row for row in inbox_rows if row.get("source_url")==url]
+ if len(matches)!=1:raise ValueError("找不到唯一的待上架來源；請重新整理")
+ source=matches[0]
+ if source.get("review_status")!="accepted":raise ValueError("必須先按 Yes 接受這筆來源")
+ if kind=="candidate_sources":
+  required={"candidate","party","office","summary","policy_argument","concrete_proposals","published_date","source_title","source_url","source_type"}
+  values=clean_fields(p.get("fields"),required,{"related_statements","related_sources"})
+  try:date.fromisoformat(values["published_date"])
+  except ValueError as error:raise ValueError("主要來源日期格式不正確") from error
+  if values["source_type"] not in {"新聞報導","候選人原文","政黨官方資料","政府公開資料"}:raise ValueError("主要來源類型不正確")
+  primary_url=valid_url(values["source_url"],"主要來源")
+  auxiliary=related_urls(values["related_sources"])
+  if primary_url!=url and url not in auxiliary:auxiliary.append(url)
+  if primary_url in auxiliary:auxiliary.remove(primary_url)
+  record={"id":"candidate-auto-"+hashlib.sha256(primary_url.encode()).hexdigest()[:12],"city":source["city"],"office":values["office"],"candidate":values["candidate"],"party":values["party"],"topics":values["topics"],"summary":values["summary"],"policy_argument":values["policy_argument"],"concrete_proposals":values["concrete_proposals"],"related_statements":values["related_statements"],"published_date":values["published_date"],"source_title":values["source_title"],"source_url":primary_url,"source_type":values["source_type"],"last_verified":date.today().isoformat(),"correction_log":"","related_sources":"|".join(auxiliary)}
+ else:
+  values=clean_fields(p.get("fields"),{"proposer","proposer_type","summary","requested_action"})
+  record={"id":"civic-auto-"+hashlib.sha256(url.encode()).hexdigest()[:12],"city":source["city"],"proposer":values["proposer"],"proposer_type":values["proposer_type"],"topics":values["topics"],"summary":values["summary"],"requested_action":values["requested_action"],"published_date":source["published_date"],"source_title":source["source_title"],"source_url":url,"source_type":"新聞報導","last_verified":date.today().isoformat(),"correction_log":""}
+ public_fields,public_rows=read_csv(PUBLIC[kind])
+ record_urls={record["source_url"],*related_urls(record.get("related_sources",""))}
+ if any(row.get("id")==record["id"] or record_urls.intersection({row.get("source_url",""),*related_urls(row.get("related_sources",""))}) for row in public_rows):raise ValueError("這筆來源已在正式資料中")
+ unknown=set(record)-set(public_fields)
+ if unknown:raise ValueError("正式資料缺少欄位："+"、".join(sorted(unknown)))
+ public_rows.append(record);source["review_status"]="published"
+ snapshots={path:path.read_bytes() for path in (FILES[kind],PUBLIC[kind],OUTPUT[kind])}
+ try:
+  write_csv(PUBLIC[kind],public_fields,public_rows);write_csv(FILES[kind],inbox_fields,inbox_rows)
+  subprocess.run([sys.executable,"scripts/build_data.py"],cwd=ROOT,text=True,check=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=60)
+ except Exception:
+  for path,content in snapshots.items():path.write_bytes(content)
+  raise
+ paths=[str(path.relative_to(ROOT)) for path in (FILES[kind],PUBLIC[kind],OUTPUT[kind])]
+ git("add","--",*paths);git("commit","--only","-m",f"data: publish reviewed {kind} source","--",*paths);git("push")
+ return git("rev-parse","--short","HEAD")
 class H(SimpleHTTPRequestHandler):
  def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
  def do_GET(self):
@@ -35,14 +100,15 @@ class H(SimpleHTTPRequestHandler):
    self.reply(200,{"token":TOKEN},extra_headers={"Cache-Control":"no-store"});return
   super().do_GET()
  def do_POST(self):
-  if self.path!="/api/review":self.send_error(404);return
+  if self.path not in {"/api/review","/api/publish"}:self.send_error(404);return
   try:
    if self.headers.get("Origin") not in ALLOWED_ORIGINS:raise PermissionError("不允許的請求來源")
    if self.headers.get_content_type()!="application/json":raise ValueError("僅接受 JSON 請求")
    if not hmac.compare_digest(self.headers.get("X-Review-Token",""),TOKEN):raise PermissionError("查核工作階段已失效")
    size=int(self.headers.get("Content-Length","0"))
    if not 0<size<=200000:raise ValueError("請求內容大小不正確")
-   self.reply(200,{"commit":update(json.loads(self.rfile.read(size)))})
+   payload=json.loads(self.rfile.read(size));result=publish(payload) if self.path=="/api/publish" else update(payload)
+   self.reply(200,{"commit":result})
   except PermissionError as error:self.reply(403,{"error":str(error)})
   except (ValueError,json.JSONDecodeError) as error:self.reply(400,{"error":str(error)})
   except Exception as error:self.reply(500,{"error":str(error)})
