@@ -133,6 +133,17 @@ def build_fulfillment():
         evidence_url = row.get("evidence_source_url", "").strip()
         if evidence_url:
             valid_url(evidence_url, label)
+        # 補充證據每筆為「標題::網址」，多筆以 || 分隔。
+        additional_evidence = []
+        for item in row.get("additional_evidence", "").split("||"):
+            item = item.strip()
+            if not item:
+                continue
+            title, separator, url = item.partition("::")
+            if not separator or not title.strip() or not url.strip():
+                raise ValueError(f"{label}: additional_evidence must be 標題::網址")
+            valid_url(url.strip(), label)
+            additional_evidence.append({"title": title.strip(), "url": url.strip()})
         records.append({
             "id": row["id"], "city": row["city"], "person": row["person"], "party": row["party"],
             "current_office": row["current_office"], "term": row["term"], "election": row["election"],
@@ -142,6 +153,7 @@ def build_fulfillment():
             "pledge_source_type": row["pledge_source_type"], "pledge_source_title": row["pledge_source_title"], "pledge_source_url": row["pledge_source_url"],
             "responsibility": row["responsibility"], "status": row["status"], "evidence_summary": row["evidence_summary"],
             "evidence_source_title": row.get("evidence_source_title", ""), "evidence_source_url": evidence_url,
+            "additional_evidence": additional_evidence,
             "last_verified": row["last_verified"], "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })
     return records

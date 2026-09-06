@@ -63,6 +63,8 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .pledge-card h4{font-size:1.1rem;line-height:1.45;margin:1.1rem 0 .5rem}
 .pledge-card .policy-actions h4{font-size:.78rem;letter-spacing:.08em;color:var(--muted);margin:0 0 .35rem}
 .pledge-card .policy-actions p{margin:0}
+.pledge-card .source-row{flex-wrap:wrap;justify-content:flex-start;gap:.5rem 1rem}
+.pledge-card .source-row .verification{margin-left:auto}
 .tag-status{border-color:var(--ink);font-weight:700}
 .status-fulfilled{background:var(--lime);border-color:var(--lime)}
 .status-partial,.status-in_progress{background:#e7e4d9}

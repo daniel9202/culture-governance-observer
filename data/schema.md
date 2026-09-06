@@ -17,3 +17,7 @@
 ## `region_metrics.csv`
 
 每個縣市、年度一筆，記錄文化資產、文化場館、藝文活動、藝術節慶、藝文團體、街頭藝人，以及文化部「社區營造」與「博物館及地方文化館」計畫的中央核定補助和地方配合款。這些欄位只代表上述特定計畫，不代表中央對地方的全部補助；相關經費另列，不併入地方文化局預算或政事別文化支出。原始來源檔名保留於 `source_files`，並記錄 `source_url` 與 `last_verified`。
+
+## `pledge_fulfillment.csv`
+
+每筆記錄一項可查證的文化政策承諾，包含承諾內容、來源、職權範圍、查核狀態與證據。`status` 使用 `fulfilled`、`partial`、`in_progress`、`no_verified_progress`、`not_assessable` 五種值。主要證據填 `evidence_source_title` 與 `evidence_source_url`；同一筆若有多份佐證，填 `additional_evidence`，每筆格式為 `標題::網址`，多筆以 `||` 分隔。

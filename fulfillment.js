@@ -10,7 +10,7 @@ const pledgeCard=pledge=>`<article class="card pledge-card">
   <h4>${escapeHtml(pledge.pledge_title)}</h4>
   <p class="summary">${escapeHtml(pledge.pledge_summary)}</p>
   <div class="policy-layer policy-actions"><h4>查核判斷</h4><p>${escapeHtml(pledge.evidence_summary)}</p></div>
-  <div class="source-row"><a href="${escapeHtml(safeUrl(pledge.pledge_source_url))}" target="_blank" rel="noopener">${escapeHtml(pledge.pledge_source_type||'原始政見')} ↗</a>${pledge.evidence_source_url?`<a href="${escapeHtml(safeUrl(pledge.evidence_source_url))}" target="_blank" rel="noopener">實現情形 ↗</a>`:''}<span class="verification">查核 ${escapeHtml(pledge.last_verified)}</span></div>
+  <div class="source-row"><a href="${escapeHtml(safeUrl(pledge.pledge_source_url))}" target="_blank" rel="noopener">${escapeHtml(pledge.pledge_source_type||'原始政見')} ↗</a>${pledge.evidence_source_url?`<a href="${escapeHtml(safeUrl(pledge.evidence_source_url))}" target="_blank" rel="noopener">實現情形 ↗</a>`:''}${(pledge.additional_evidence||[]).map(item=>`<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener" title="${escapeHtml(item.title)}">${escapeHtml(item.title)} ↗</a>`).join('')}<span class="verification">查核 ${escapeHtml(pledge.last_verified)}</span></div>
 </article>`;
 
 const personBlock=person=>{

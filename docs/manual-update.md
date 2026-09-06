@@ -56,3 +56,7 @@
 - 手動執行：GitHub → Actions → `Collect candidate policy sources` → `Run workflow`。
 
 自動蒐集結果不會直接出現在公開網站。
+
+## 政見實現追蹤
+
+編輯 `data/input/pledge_fulfillment.csv`。`status` 只接受 `fulfilled`、`partial`、`in_progress`、`no_verified_progress`、`not_assessable`。主要證據填 `evidence_source_title` 與 `evidence_source_url`；補充佐證填 `additional_evidence`，格式為 `標題::網址`，多筆以 `||` 分隔，網址會在建置時驗證。修改既有判定時在 `correction_log` 留下紀錄。
