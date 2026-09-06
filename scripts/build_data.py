@@ -151,15 +151,27 @@ def build_governments():
         required(row, ["id", "city", "year", "methodology", "official_source_title", "official_source_url", "last_verified"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["official_source_url"], label)
-        amounts = {key: number(row[key].strip(), f"{label} {key}") for key in ["culture_budget", "actual_spending", "total_budget", "total_spending"]}
-        budget_ratio = ratio(amounts["culture_budget"], amounts["total_budget"])
-        spending_ratio = ratio(amounts["actual_spending"], amounts["total_spending"])
+        amount_fields = ["cultural_expenditure_budget", "cultural_expenditure_final", "bureau_budget", "bureau_final", "total_budget"]
+        amounts = {key: number(row[key].strip(), f"{label} {key}") for key in amount_fields}
+        cultural_execution_ratio = ratio(amounts["cultural_expenditure_final"], amounts["cultural_expenditure_budget"])
+        bureau_execution_ratio = ratio(amounts["bureau_final"], amounts["bureau_budget"])
+        cultural_budget_ratio = ratio(amounts["cultural_expenditure_budget"], amounts["total_budget"])
+        bureau_budget_ratio = ratio(amounts["bureau_budget"], amounts["total_budget"])
+        bureau_share_of_cultural_budget = ratio(amounts["bureau_budget"], amounts["cultural_expenditure_budget"])
         records.append({
             "id": row["id"], "city": row["city"], "year": int(row["year"]), **amounts,
-            "culture_budget_display": money(amounts["culture_budget"]), "actual_spending_display": money(amounts["actual_spending"]),
-            "budget_ratio": budget_ratio, "budget_ratio_display": f"{budget_ratio:.2f}%" if budget_ratio is not None else "尚待查核",
-            "spending_ratio": spending_ratio, "spending_ratio_display": f"{spending_ratio:.2f}%" if spending_ratio is not None else "尚待查核",
-            "budget_scope": row["budget_scope"], "spending_scope": row["spending_scope"], "methodology": row["methodology"],
+            **{f"{key}_display": money(value) for key, value in amounts.items()},
+            "cultural_execution_ratio": cultural_execution_ratio,
+            "bureau_execution_ratio": bureau_execution_ratio,
+            "cultural_budget_ratio": cultural_budget_ratio,
+            "bureau_budget_ratio": bureau_budget_ratio,
+            "bureau_share_of_cultural_budget": bureau_share_of_cultural_budget,
+            "cultural_execution_ratio_display": f"{cultural_execution_ratio:.2f}%" if cultural_execution_ratio is not None else "尚待查核",
+            "bureau_execution_ratio_display": f"{bureau_execution_ratio:.2f}%" if bureau_execution_ratio is not None else "尚待查核",
+            "cultural_budget_ratio_display": f"{cultural_budget_ratio:.2f}%" if cultural_budget_ratio is not None else "尚待查核",
+            "bureau_budget_ratio_display": f"{bureau_budget_ratio:.2f}%" if bureau_budget_ratio is not None else "尚待查核",
+            "bureau_share_of_cultural_budget_display": f"{bureau_share_of_cultural_budget:.2f}%" if bureau_share_of_cultural_budget is not None else "尚待查核",
+            "bureau_scope_note": row["bureau_scope_note"], "methodology": row["methodology"],
             "official_source_title": row["official_source_title"], "official_source_url": row["official_source_url"],
             "key_policies": [x.strip() for x in row["key_policies"].split("|") if x.strip()], "last_verified": row["last_verified"], "notes": row["notes"]
         })

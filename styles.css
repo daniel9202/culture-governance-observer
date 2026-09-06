@@ -38,13 +38,42 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .dark-filters{grid-template-columns:1fr 1fr;background:#44473e;border-color:#44473e}
 .dark-filters label{background:var(--dark);color:#aeb2a7}
 .dark-filters select{color:var(--white)}
-.gov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#44473e}
-.gov-card{background:#22241f;padding:1.5rem;min-height:390px}
+.gov-grid{display:grid;grid-template-columns:1fr;gap:1px;background:#44473e}
+.gov-card{background:#22241f;padding:1.8rem;min-height:0;display:grid;grid-template-columns:minmax(220px,.7fr) 1fr;column-gap:3rem}
 .gov-card h3{font-size:1.8rem;margin:.5rem 0 1.5rem}
+.gov-card h3{grid-row:1/5}
+.gov-card .metric{grid-column:2}
+.gov-card p,.gov-card>a{grid-column:1/-1}
 .metric{border-top:1px solid #44473e;padding:.8rem 0}
 .metric span{display:block;color:#aeb2a7;font-size:.72rem}
 .metric strong{font-size:1.25rem}
 .gov-card .source-row{border-color:#44473e}
+.finance-toolbar{background:var(--dark);padding:2.2rem 0 1rem;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.finance-toolbar span{font-weight:700;margin-right:auto}
+.finance-toolbar button{font:inherit;color:#c8cbbf;background:transparent;border:1px solid #55584e;padding:.55rem .9rem;cursor:pointer}
+.finance-toolbar button[aria-pressed="true"]{color:var(--dark);background:var(--lime);border-color:var(--lime);font-weight:700}
+.finance-charts{display:grid;gap:1px;background:#44473e}
+.finance-chart{background:#22241f;padding:1.8rem}
+.chart-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.chart-heading h3{font-size:1.35rem;margin:0}
+.chart-legend{display:flex;gap:1rem;flex-wrap:wrap;color:#c8cbbf;font-size:.78rem}
+.chart-legend span{display:inline-flex;align-items:center;gap:.4rem}
+.chart-legend i{width:1.1rem;height:3px;display:inline-block;background:currentColor}
+.chart-legend .chart-series-1{color:var(--lime)}
+.chart-legend .chart-series-2{color:var(--orange)}
+.chart-canvas{width:100%;margin-top:1rem}
+.chart-canvas svg{display:block;width:100%;overflow:visible}
+.chart-frame{fill:none;stroke:#55584e}
+.chart-grid{stroke:#44473e;stroke-width:1}
+.chart-axis{fill:#aeb2a7;font-size:12px}
+.chart-line{fill:none;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.chart-point{stroke:#22241f;stroke-width:2;cursor:pointer}
+.chart-line.chart-series-1{stroke:var(--lime)}
+.chart-line.chart-series-2{stroke:var(--orange)}
+.chart-point.chart-series-1{fill:var(--lime)}
+.chart-point.chart-series-2{fill:var(--orange)}
+.chart-point:focus{outline:none;stroke:var(--white);stroke-width:3}
+.chart-readout{min-height:1.4em;margin:.5rem 0 0;color:#c8cbbf;font-size:.78rem}
 .empty-dark{border-color:#55584e}
 .section-dark .kicker{color:var(--lime)}
 .region-entry-grid{display:grid;grid-template-columns:.7fr 1.4fr 1fr;gap:1px;background:#44473e;border:1px solid #44473e}
@@ -88,5 +117,5 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .support-card .stat-line span{color:#454b2d}
 .region-card{min-height:260px}
 @media(max-width:1000px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.stats-grid,.support-card{grid-template-columns:1fr}.support-card{gap:1rem}.stat-card{min-height:auto}}
+@media(max-width:760px){.stats-grid,.support-card,.gov-card{grid-template-columns:1fr}.support-card{gap:1rem}.stat-card{min-height:auto}.gov-card h3,.gov-card .metric,.gov-card p,.gov-card>a{grid-column:1;grid-row:auto}.finance-chart{padding:1.2rem}.finance-toolbar span{width:100%;margin-right:0}}
 @media(max-width:760px){.region-entry-grid{grid-template-columns:1fr}.region-entry-stat,.region-entry-link{min-height:180px}}

@@ -20,15 +20,15 @@
 
 編輯 `data/input/governments.csv`，每一列為一個縣市的一個年度。
 
-- `culture_budget`：文化預算，單位為新臺幣元。
-- `actual_spending`：文化實際支出／決算數，單位為新臺幣元。
-- `total_budget`、`total_spending`：同年度、同會計基礎的分母。
-- `budget_scope`、`spending_scope`：是否包含文化局、所屬館舍、基金、附屬單位、資本門等。
+- `cultural_expenditure_budget`、`cultural_expenditure_final`：政事別文化支出的預算與決算，單位為新臺幣元。
+- `bureau_budget`、`bureau_final`：文化局（處）機關別預算與決算，單位為新臺幣元。
+- `total_budget`：同年度地方政府總預算。
+- `bureau_scope_note`：註明文化局（處）是否兼辦觀光，以及年度中改制等口徑差異。
 - `methodology`：統計口徑與計算說明。
 - `official_source_url`：預算書、決算書或官方統計原始網址。
 - `key_policies`：重點施政，以 `|` 分隔。
 
-比例由系統自動計算，不要手動輸入。若預算或決算尚未取得，可留空金額，但仍需填寫來源與口徑後再公開該筆資料。
+比例由系統自動計算，不要手動輸入。政事別文化支出和文化局（處）預決算不可混用；若金額尚未取得，可留空，但仍需填寫來源與口徑後再公開該筆資料。
 
 ## GitHub 網頁操作
 
