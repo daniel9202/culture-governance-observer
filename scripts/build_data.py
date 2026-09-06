@@ -182,7 +182,8 @@ def build_governments():
     return records
 
 def build_region_metrics():
-    numeric_fields = {
+    # Tuple, not a set: iteration order decides the JSON key order, so it must be stable across builds.
+    numeric_fields = (
         "monuments", "historical_buildings", "memorial_buildings", "settlements", "historical_sites",
         "cultural_landscapes", "archaeological_sites", "antiquities", "traditional_arts", "folklore",
         "oral_traditions", "traditional_knowledge", "cultural_venues_total", "dedicated_arts_venues",
@@ -194,8 +195,8 @@ def build_region_metrics():
         "festival_days", "festival_attendance", "arts_groups", "arts_foundations", "street_performance_venues",
         "street_artists_or_groups", "central_grants_thousand", "local_matching_thousand",
         "community_grants_thousand", "community_matching_thousand", "museum_hall_grants_thousand",
-        "museum_hall_matching_thousand"
-    }
+        "museum_hall_matching_thousand",
+    )
     records = []
     for index, row in enumerate(rows("region_metrics.csv"), start=2):
         if not any(row.values()):
