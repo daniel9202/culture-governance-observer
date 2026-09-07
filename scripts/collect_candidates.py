@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "collector.json"
+SOURCE_REGISTRY = ROOT / "config" / "candidate_official_sources.csv"
 FIELDS = ["collected_at", "city", "published_date", "source_name", "source_title", "source_url", "review_status", "review_note"]
 
 def load_rows(inbox):
@@ -21,6 +22,16 @@ def load_rows(inbox):
         return []
     with inbox.open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
+
+def verified_campaign_sites():
+    if not SOURCE_REGISTRY.exists():
+        return {}
+    with SOURCE_REGISTRY.open(encoding="utf-8-sig", newline="") as f:
+        return {
+            row["candidate"].strip(): row["campaign_website"].strip()
+            for row in csv.DictReader(f)
+            if row.get("website_status") == "verified" and row.get("campaign_website", "").strip()
+        }
 
 def iso_date(value):
     try:
@@ -74,6 +85,7 @@ def collect(config, collection):
     threshold = float(collection.get("duplicate_title_threshold", 0.92))
     cutoff = datetime.now(timezone.utc).date() - timedelta(days=int(config["lookback_days"]))
     collected_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    campaign_sites = verified_campaign_sites()
     skipped_duplicates = 0
     for city in config["cities"]:
         candidates = collection.get("candidates_by_city", {}).get(city, [""])
@@ -84,7 +96,7 @@ def collect(config, collection):
             try:
                 remaining = int(collection["max_items_per_city"]) - added_for_city
                 candidate_limit = min(remaining, int(collection.get("max_items_per_candidate", remaining)))
-                official_site = collection.get("official_sites", {}).get(candidate, "")
+                official_site = campaign_sites.get(candidate, collection.get("official_sites", {}).get(candidate, ""))
                 queries = [(candidate, "")]
                 if official_site:
                     queries.append((candidate, official_site))

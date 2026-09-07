@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Serve review.html locally and commit each decision using the user's existing Git login."""
-import csv,hashlib,hmac,json,secrets,subprocess,sys
+import csv,hashlib,hmac,json,re,secrets,subprocess,sys,urllib.request
 from datetime import date
+from html.parser import HTMLParser
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
@@ -55,6 +56,44 @@ def related_urls(value):
   item=item.strip()
   if item and item not in urls:urls.append(valid_url(item,"輔助來源"))
  return urls
+class ArticleParser(HTMLParser):
+ def __init__(self):
+  super().__init__();self.meta={};self.title="";self.text=[];self._title=False;self._ignore=0
+ def handle_starttag(self,tag,attrs):
+  attrs=dict(attrs)
+  if tag in {"script","style","noscript"}:self._ignore+=1
+  if tag=="title":self._title=True
+  if tag=="meta":
+   key=(attrs.get("property") or attrs.get("name") or "").lower();value=attrs.get("content","").strip()
+   if key and value:self.meta.setdefault(key,value)
+ def handle_endtag(self,tag):
+  if tag in {"script","style","noscript"} and self._ignore:self._ignore-=1
+  if tag=="title":self._title=False
+ def handle_data(self,data):
+  value=" ".join(data.split())
+  if not value or self._ignore:return
+  if self._title:self.title+=value
+  elif len(value)>20:self.text.append(value)
+def article_prefill(kind,url):
+ if kind not in FILES:raise ValueError("資料類型不正確")
+ _,inbox_rows=read_csv(FILES[kind]);matches=[row for row in inbox_rows if row.get("source_url")==url]
+ if len(matches)!=1:raise ValueError("找不到唯一的待查核來源")
+ source=matches[0]
+ valid_url(url,"原始來源")
+ request=urllib.request.Request(url,headers={"User-Agent":"culture-governance-observer-review/1.0"})
+ with urllib.request.urlopen(request,timeout=20) as response:
+  raw=response.read(1_500_000);charset=response.headers.get_content_charset() or "utf-8"
+ parser=ArticleParser();parser.feed(raw.decode(charset,errors="replace"))
+ title=parser.meta.get("og:title") or parser.meta.get("twitter:title") or parser.title or source.get("source_title","")
+ description=parser.meta.get("og:description") or parser.meta.get("description","")
+ body=" ".join(dict.fromkeys(parser.text));excerpt=(description or body or source.get("source_title","")).strip()
+ topic_rules=[("文化資產","文資|古蹟|歷史建築|無形文化"),("藝文活動","藝文|藝術|展演|表演|音樂"),("文化場館","場館|博物館|美術館|圖書館"),("地方文史","地方文化|文史|記憶"),("文化預算","預算|經費"),("文化教育","文化教育|母語|客語|族語"),("文化觀光","文化觀光|觀光")]
+ topics="|".join(label for label,pattern in topic_rules if re.search(pattern,f"{title} {excerpt}"))
+ if kind=="candidate_sources":
+  config=json.loads(CONFIG.read_text(encoding="utf-8"));candidates=config["collections"]["candidate_policy"].get("candidates_by_city",{}).get(source.get("city",""),[])
+  candidate=next((name for name in candidates if name in f"{title} {excerpt} {body}"),"")
+  return {"candidate":candidate,"topics":topics,"summary":excerpt[:500],"policy_argument":excerpt[:1200],"concrete_proposals":excerpt[:1200],"published_date":source.get("published_date",""),"source_title":title[:500],"source_url":url}
+ return {"topics":topics,"summary":excerpt[:500],"requested_action":excerpt[:1200]}
 def publish(p):
  kind,url=p.get("kind"),p.get("source_url")
  if kind not in FILES or not isinstance(url,str) or not url:raise ValueError("上架資料格式不正確")
@@ -65,7 +104,7 @@ def publish(p):
  if source.get("review_status")!="accepted":raise ValueError("必須先按 Yes 接受這筆來源")
  if kind=="candidate_sources":
   required={"candidate","party","office","summary","policy_argument","concrete_proposals","published_date","source_title","source_url","source_type"}
-  values=clean_fields(p.get("fields"),required,{"related_statements","related_sources"})
+  values=clean_fields(p.get("fields"),required,{"related_statements","related_sources","policy_argument_sources","concrete_proposal_sources","related_statement_sources"})
   try:date.fromisoformat(values["published_date"])
   except ValueError as error:raise ValueError("主要來源日期格式不正確") from error
   if values["source_type"] not in {"新聞報導","候選人原文","政黨官方資料","政府公開資料"}:raise ValueError("主要來源類型不正確")
@@ -73,7 +112,7 @@ def publish(p):
   auxiliary=related_urls(values["related_sources"])
   if primary_url!=url and url not in auxiliary:auxiliary.append(url)
   if primary_url in auxiliary:auxiliary.remove(primary_url)
-  record={"id":"candidate-auto-"+hashlib.sha256(primary_url.encode()).hexdigest()[:12],"city":source["city"],"office":values["office"],"candidate":values["candidate"],"party":values["party"],"topics":values["topics"],"summary":values["summary"],"policy_argument":values["policy_argument"],"concrete_proposals":values["concrete_proposals"],"related_statements":values["related_statements"],"published_date":values["published_date"],"source_title":values["source_title"],"source_url":primary_url,"source_type":values["source_type"],"last_verified":date.today().isoformat(),"correction_log":"","related_sources":"|".join(auxiliary)}
+  record={"id":"candidate-auto-"+hashlib.sha256(primary_url.encode()).hexdigest()[:12],"city":source["city"],"office":values["office"],"candidate":values["candidate"],"party":values["party"],"topics":values["topics"],"summary":values["summary"],"policy_argument":values["policy_argument"],"concrete_proposals":values["concrete_proposals"],"related_statements":values["related_statements"],"published_date":values["published_date"],"source_title":values["source_title"],"source_url":primary_url,"source_type":values["source_type"],"last_verified":date.today().isoformat(),"correction_log":"","related_sources":"|".join(auxiliary),"policy_argument_sources":values["policy_argument_sources"],"concrete_proposal_sources":values["concrete_proposal_sources"],"related_statement_sources":values["related_statement_sources"]}
  else:
   values=clean_fields(p.get("fields"),{"proposer","proposer_type","summary","requested_action"})
   record={"id":"civic-auto-"+hashlib.sha256(url.encode()).hexdigest()[:12],"city":source["city"],"proposer":values["proposer"],"proposer_type":values["proposer_type"],"topics":values["topics"],"summary":values["summary"],"requested_action":values["requested_action"],"published_date":source["published_date"],"source_title":source["source_title"],"source_url":url,"source_type":"新聞報導","last_verified":date.today().isoformat(),"correction_log":""}
@@ -100,14 +139,14 @@ class H(SimpleHTTPRequestHandler):
    self.reply(200,{"token":TOKEN},extra_headers={"Cache-Control":"no-store"});return
   super().do_GET()
  def do_POST(self):
-  if self.path not in {"/api/review","/api/publish"}:self.send_error(404);return
+  if self.path not in {"/api/review","/api/publish","/api/prefill"}:self.send_error(404);return
   try:
    if self.headers.get("Origin") not in ALLOWED_ORIGINS:raise PermissionError("不允許的請求來源")
    if self.headers.get_content_type()!="application/json":raise ValueError("僅接受 JSON 請求")
    if not hmac.compare_digest(self.headers.get("X-Review-Token",""),TOKEN):raise PermissionError("查核工作階段已失效")
    size=int(self.headers.get("Content-Length","0"))
    if not 0<size<=200000:raise ValueError("請求內容大小不正確")
-   payload=json.loads(self.rfile.read(size));result=publish(payload) if self.path=="/api/publish" else update(payload)
+   payload=json.loads(self.rfile.read(size));result=publish(payload) if self.path=="/api/publish" else article_prefill(payload.get("kind"),payload.get("source_url")) if self.path=="/api/prefill" else update(payload)
    self.reply(200,{"commit":result})
   except PermissionError as error:self.reply(403,{"error":str(error)})
   except (ValueError,json.JSONDecodeError) as error:self.reply(400,{"error":str(error)})

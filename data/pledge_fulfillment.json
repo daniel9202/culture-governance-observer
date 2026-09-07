@@ -111,13 +111,20 @@
       "pledge_source_title": "蔣萬安5大文化政見 推100條文化小旅行",
       "pledge_source_url": "https://election.ltn.com.tw/2022/news/breakingnews/4095611",
       "responsibility": "臺北市政府文化局及相關局處",
-      "status": "no_verified_progress",
-      "evidence_summary": "文化局列舉既有場館的活動與活化成果，但未提出新增替代空間數量、政策誘因、法規鬆綁內容或文化廊帶擴增成果，因此目前不足以驗證原承諾的具體進度。",
-      "evidence_source_title": "臺北市政府文化局：回應外界對文化政策質疑",
-      "evidence_source_url": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=A7F63625FD50F4F9&sms=72544237BBE4C5F6",
-      "additional_evidence": [],
-      "last_verified": "2026-09-05",
-      "corrections": []
+      "status": "in_progress",
+      "evidence_summary": "2026年9月，市長於臺北藝術進駐國際沙龍表示將持續深耕寶藏巖，並串聯北投中心新村等聚落擴展跨領域進駐基地；已有具名場域與推動方向，但未公布新增空間數量、法規調整、民間參與機制或完成期程，故列為進行中。",
+      "evidence_source_title": "台灣好新聞：台日韓11組藝文機構齊聚台北國際沙龍，蔣萬安發表2030文化外交願景",
+      "evidence_source_url": "https://tw.news.yahoo.com/%E5%8F%B0%E6%97%A5%E9%9F%9311%E7%B5%84%E8%97%9D%E6%96%87%E6%A9%9F%E6%A7%8B%E9%BD%8A%E8%81%9A%E5%8F%B0%E5%8C%97%E5%9C%8B%E9%9A%9B%E6%B2%99%E9%BE%8D-%E8%94%A3%E8%90%AC%E5%AE%89%E7%99%BC%E8%A1%A82030%E6%96%87%E5%8C%96%E5%A4%96%E4%BA%A4%E9%A1%98%E6%99%AF%E5%8A%9B%E6%8E%A8%E8%88%8A%E7%A9%BA%E9%96%93%E5%86%8D%E7%94%9F%E6%B4%BB%E5%8C%96-023037543.html",
+      "additional_evidence": [
+        {
+          "title": "臺北市政府文化局：回應外界對文化政策質疑",
+          "url": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=A7F63625FD50F4F9&sms=72544237BBE4C5F6"
+        }
+      ],
+      "last_verified": "2026-09-07",
+      "corrections": [
+        "2026-09-07｜新增寶藏巖與北投中心新村串聯的公開規劃；因尚無量化成果、法規調整或時程，狀態由未找到可驗證進度改為進行中。"
+      ]
     },
     {
       "id": "taipei-chiang-2022-cultural-tours-100",

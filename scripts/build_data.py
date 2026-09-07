@@ -29,6 +29,19 @@ def valid_url(value, label):
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         raise ValueError(f"{label}: invalid URL")
 
+def field_sources(value, fallback_title, fallback_url, label):
+    sources = []
+    for item in (value or "").split("||"):
+        item = item.strip()
+        if not item:
+            continue
+        title, separator, url = item.partition("::")
+        if not separator or not title.strip() or not url.strip():
+            raise ValueError(f"{label}: sources must be 標題::網址")
+        valid_url(url.strip(), label)
+        sources.append({"title": title.strip(), "url": url.strip()})
+    return sources or [{"title": fallback_title or "主要來源", "url": fallback_url}]
+
 def number(value, label):
     if value == "":
         return None
@@ -64,16 +77,21 @@ def build_candidates():
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
-        related_sources = [x.strip() for x in row.get("related_sources", "").split("|") if x.strip()]
+        related_sources = [x.strip() for x in (row.get("related_sources") or "").split("|") if x.strip()]
         for source in related_sources:
             valid_url(source, label)
         topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
-        argument = row.get("policy_argument", "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
-        proposals = [x.strip() for x in row.get("concrete_proposals", "").split("||") if x.strip()] or [row["summary"]]
-        statements = [x.strip() for x in row.get("related_statements", "").split("||") if x.strip()]
+        argument = (row.get("policy_argument") or "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
+        proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()] or [row["summary"]]
+        statements = [x.strip() for x in (row.get("related_statements") or "").split("||") if x.strip()]
+        sources = {
+            "policy_argument": field_sources(row.get("policy_argument_sources"), row["source_title"], row["source_url"], label),
+            "concrete_proposals": field_sources(row.get("concrete_proposal_sources"), row["source_title"], row["source_url"], label),
+            "related_statements": field_sources(row.get("related_statement_sources"), row["source_title"], row["source_url"], label),
+        }
         records.append({
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
-            "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "published_date": row["published_date"],
+            "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })

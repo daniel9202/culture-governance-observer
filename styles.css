@@ -43,6 +43,15 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .policy-layer{margin-top:1rem}
 .policy-layer h4{margin:0 0:.35rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .policy-layer p{margin:0}
+.field-sources{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap;margin-top:.7rem;font-size:.75rem;color:var(--muted)}
+.field-sources>span{font-weight:700}
+.field-sources a{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.field-content{overflow-wrap:anywhere}
+.field-content.is-collapsed{max-height:9.2rem;overflow:hidden;position:relative}
+.field-content.is-collapsed::after{content:"";position:absolute;right:0;bottom:0;left:0;height:2.5rem;background:linear-gradient(transparent,var(--white))}
+.expand-field{appearance:none;border:0;border-bottom:1px solid currentColor;background:transparent;padding:0;margin-top:.45rem;color:var(--ink);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.prefill{border:0;background:#e5e2d7;color:var(--ink);padding:.7rem 1rem;font:inherit;font-weight:800;cursor:pointer;justify-self:start}
+.prefill:disabled{cursor:wait;opacity:.55}
 .policy-actions{background:#f4f3ed;padding:1rem}
 .policy-actions ul{margin:.2rem 0 0;padding-left:1.2rem}
 .policy-actions li+li{margin-top:.45rem}
