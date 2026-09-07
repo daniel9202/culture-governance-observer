@@ -9,20 +9,23 @@
 - 預算與決算分開，並註明統計口徑。
 - 未完成查核的資料不先行發布。
 
-## 自動蒐集
+## 蒐集、摘要與審核
 
-GitHub Actions 每天臺灣時間 10:30 搜尋 22 縣市、最近 45 日的兩類來源：候選人文化政見新增至 `data/inbox/candidate_sources.csv`；地方民眾或團體提出的文化政策訴求新增至 `data/inbox/civic_policy_calls.csv`。兩類蒐集結果都不會直接公開，必須人工查核。
+候選人文化政見由本帳號的 Codex 自動化研究公開來源、產生結構化摘要，並建立 GitHub Pull Request（PR）。研究資料不會直接寫入 `main`，也不會出現在公開 dashboard。
 
-候選人官方來源維護於 `config/candidate_official_sources.csv`。已驗證的競選官網會自動納入網域限定新聞搜尋；Facebook、Instagram、Threads、YouTube 等社群帳號僅在逐一確認官方身分後登錄，現階段不自動爬取，避免登入限制、平台規範或誤認帳號造成錯誤收錄。
+你可直接在 GitHub 網頁或 App 的 PR 頁面完成全部審核：
 
-從本機執行 `python scripts/local_review.py` 後開啟查核頁。按 Yes 接受來源後，補齊系統無法可靠判斷的正式欄位，再按「確認上架」；系統會驗證資料、更新公開 JSON、commit 並 push，由 GitHub Pages 自動部署。缺少必要欄位或資料重複時不會上架。
+1. 開啟 PR，核對候選人、摘要、來源連結與發布日期。
+2. 需要修改時直接留言；Codex 依留言更新同一個 PR。
+3. 確認無誤後按 **Merge pull request**；合併即為核准。
+4. GitHub Pages 只在資料合併至 `main` 後發布，因此公開頁只顯示已核准資料。
 
-## 手動更新
+請在 repository 的 **Settings → Branches** 為 `main` 啟用「Require a pull request before merging」與至少一項核准，避免資料繞過人工查核直接公開。
 
-候選人正式資料編輯 `data/input/candidates.csv`；已查核的民間訴求編輯 `data/input/civic_policy_calls.csv`；地方文化預算、實際支出及統計口徑編輯 `data/input/governments.csv`。完整步驟見 `docs/manual-update.md`。
+候選人官方來源維護於 `config/candidate_official_sources.csv`。已驗證的競選官網可作為研究優先來源；社群帳號僅在官方身分已確認後使用。
 
-推送至 `main` 後，GitHub Actions 會驗證 CSV、自動計算比例、產生 JSON 並部署 GitHub Pages。
+## 資料欄位
 
-## 本機預覽
+候選人正式資料為 `data/input/candidates.csv`；每筆都必須保留職務、縣市、政黨（可確認時）、政策摘要、具體主張、原始來源、發布日期與最後查核日。推送至 `main` 後，GitHub Actions 會驗證資料、產生公開 JSON 並部署 GitHub Pages。
 
-執行 `npm run build`，再於 `dist` 目錄啟動靜態伺服器。
+地方文化預算、實際支出及統計口徑則保留於 `data/input/governments.csv`，不由每日候選人自動化更新。
