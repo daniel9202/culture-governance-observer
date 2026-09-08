@@ -104,6 +104,46 @@
       "publisher": "新竹縣選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 68
+    },
+    {
+      "city": "基隆市",
+      "title": "115年縣市議員選舉候選人登記情形一覽表（總表）",
+      "url": "https://web.cec.gov.tw/api/file/91b2447a-768e-44f4-841a-892a7ddb35fc.pdf",
+      "publisher": "基隆市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 60
+    },
+    {
+      "city": "臺東縣",
+      "title": "115年地方公職人員選舉候選人在臺東縣登記情形一覽表－縣議員（至9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/b8bddffb-2bcb-47fa-ad1e-4f4dc13b1eb1.pdf",
+      "publisher": "臺東縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 56
+    },
+    {
+      "city": "澎湖縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/cd72a8a9-3b96-46fa-9c33-125cd7745da1.pdf",
+      "publisher": "澎湖縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 36
+    },
+    {
+      "city": "嘉義縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/4c0c3569-8970-486d-a997-cf40abcc8993.pdf",
+      "publisher": "嘉義縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 53
+    },
+    {
+      "city": "嘉義市",
+      "title": "嘉義市議會第12屆議員選舉候選人登記情形一覽表",
+      "url": "https://web.cec.gov.tw/api/file/b53580e2-387f-450e-ad4f-25f966891c1e.pdf",
+      "publisher": "嘉義市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 37
     }
   ]
 }
