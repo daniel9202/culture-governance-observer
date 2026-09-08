@@ -10,6 +10,7 @@ import argparse
 import csv
 from pathlib import Path
 
+import openpyxl
 import pdfplumber
 
 
@@ -77,9 +78,67 @@ def parse(pdf_path: Path, city: str, source_title: str, source_url: str, source_
     return records
 
 
+def parse_xlsx(xlsx_path: Path, city: str, source_title: str, source_url: str, source_date: str):
+    """Extract the county-councilor section from an official XLSX workbook."""
+    workbook = openpyxl.load_workbook(xlsx_path, read_only=True, data_only=True)
+    records = []
+    for sheet in workbook.worksheets:
+        rows = list(sheet.iter_rows(values_only=True))
+        section_start = next(
+            (
+                index
+                for index, row in enumerate(rows)
+                if any("縣議員" in str(value or "") or "市議員" in str(value or "") for value in row)
+            ),
+            None,
+        )
+        if section_start is None:
+            continue
+        header_index = next(
+            (
+                index
+                for index in range(section_start, len(rows))
+                if any(str(value or "").strip() == "姓名" for value in rows[index])
+            ),
+            None,
+        )
+        if header_index is None:
+            continue
+        header = [str(value or "").strip() for value in rows[header_index]]
+        name_index = next((index for index, name in enumerate(header) if name == "姓名"), None)
+        district_index = next((index for index, name in enumerate(header) if "選舉區" in name), None)
+        party_index = next((index for index, name in enumerate(header) if "推薦之政黨" in name), None)
+        date_index = next((index for index, name in enumerate(header) if "登記日期" in name), None)
+        if name_index is None or district_index is None:
+            continue
+        for raw_row in rows[header_index + 1:]:
+            row = [str(value or "").strip().replace("\n", " ") for value in raw_row]
+            if any(value.startswith(("三、", "四、", "五、")) for value in row):
+                break
+            name = row[name_index] if len(row) > name_index else ""
+            district = row[district_index] if len(row) > district_index else ""
+            if not name or not district:
+                continue
+            records.append({
+                "city": city,
+                "electoral_district": district,
+                "candidate": name,
+                "party": normalise_party(row[party_index] if party_index is not None and len(row) > party_index else ""),
+                "registration_date_roc": row[date_index] if date_index is not None and len(row) > date_index else "",
+                "incumbent": "",
+                "roster_status": "已完成登記，待中選會審定",
+                "source_title": source_title,
+                "source_url": source_url,
+                "source_date": source_date,
+            })
+    return records
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pdf", type=Path, required=True)
+    source_group = parser.add_mutually_exclusive_group(required=True)
+    source_group.add_argument("--pdf", type=Path)
+    source_group.add_argument("--xlsx", type=Path)
     parser.add_argument("--city", required=True)
     parser.add_argument("--source-title", required=True)
     parser.add_argument("--source-url", required=True)
@@ -88,7 +147,11 @@ def main() -> None:
     parser.add_argument("--append", action="store_true", help="保留既有名冊並加入本次擷取結果")
     args = parser.parse_args()
 
-    records = parse(args.pdf, args.city, args.source_title, args.source_url, args.source_date)
+    records = (
+        parse(args.pdf, args.city, args.source_title, args.source_url, args.source_date)
+        if args.pdf
+        else parse_xlsx(args.xlsx, args.city, args.source_title, args.source_url, args.source_date)
+    )
     if not records:
         raise SystemExit("未從 PDF 擷取到候選人名冊")
     if args.append and args.output.exists():

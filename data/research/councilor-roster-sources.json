@@ -80,6 +80,22 @@
       "publisher": "宜蘭縣選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 59
+    },
+    {
+      "city": "南投縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/7e8c733d-8d57-418d-bed9-f35bf2dc68e6.pdf",
+      "publisher": "南投縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 61
+    },
+    {
+      "city": "屏東縣",
+      "title": "屏東縣選舉委員會及各鄉鎮市選務作業中心115年8月31日至9月4日候選人登記情形如一覽表",
+      "url": "https://web.cec.gov.tw/api/file/a3daa1ca-75c3-4a71-895b-5732edc63bbe.xlsx",
+      "publisher": "屏東縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 87
     }
   ]
 }
