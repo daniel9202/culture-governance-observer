@@ -1,0 +1,10 @@
+name = "culture-review-ingest-staging"
+main = "src/ingest.js"
+compatibility_date = "2026-09-08"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "culture-governance-review"
+database_id = "6b8eb904-9b6a-4d92-ae54-9b71db14bba1"
+
+# Set INGEST_TOKEN as an encrypted Cloudflare Worker secret. Never commit it.

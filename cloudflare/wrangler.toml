@@ -1,0 +1,25 @@
+name = "culture-review-api-staging"
+main = "src/index.js"
+compatibility_date = "2026-09-08"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "culture-governance-review"
+database_id = "6b8eb904-9b6a-4d92-ae54-9b71db14bba1"
+
+[vars]
+# Comma-separated browser origins allowed to call the API. The production
+# domain is deliberately not committed until it exists.
+APP_ORIGINS = "http://localhost:8788,http://127.0.0.1:8788,https://daniel9202.github.io"
+
+[env.staging]
+name = "culture-review-api-staging"
+
+[env.production]
+# When a domain is ready, set this to the stable production Worker name and
+# add a separate D1 binding/database. Custom-domain routes live in the
+# Cloudflare dashboard rather than in this repository.
+name = "culture-review-api"
+
+# Set ALLOWED_EMAIL and INGEST_TOKEN as Cloudflare secrets in each environment.
+# Never put their values in Git or in this file.
