@@ -40,6 +40,30 @@
       "publisher": "彰化縣選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 86
+    },
+    {
+      "city": "高雄市",
+      "title": "115年直轄市議員選舉候選人登記情形一覽表（累計至9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/bde82aee-8f5a-49c3-aa07-ebedb960d159.pdf",
+      "publisher": "高雄市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 101
+    },
+    {
+      "city": "桃園市",
+      "title": "115年直轄市議員選舉候選人登記冊（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/334d7a37-3896-4f38-955f-6d0ec8810df7.pdf",
+      "publisher": "桃園市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 109
+    },
+    {
+      "city": "臺北市",
+      "title": "臺北市第15屆議員選舉候選人登記冊（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/94bd36a5-66c3-4773-b125-500c422d98af.pdf",
+      "publisher": "臺北市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 98
     }
   ]
 }
