@@ -72,6 +72,14 @@
       "publisher": "臺中市選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 102
+    },
+    {
+      "city": "宜蘭縣",
+      "title": "115年縣市議員選舉候選人登記概況表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/28b4728c-3693-4f03-b7ad-ae050dd46b5a.pdf",
+      "publisher": "宜蘭縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 59
     }
   ]
 }
