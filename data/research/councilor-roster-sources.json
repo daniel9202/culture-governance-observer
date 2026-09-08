@@ -1,0 +1,21 @@
+{
+  "last_updated": "2026-09-08",
+  "roster_status": "登記完成、待中選會審定",
+  "method": "名冊僅採中央選舉委員會與各地方選舉委員會的候選人登記資料；政黨提名、媒體名單與候選人自述僅可作交叉核對，不能取代官方登記資料。",
+  "national_schedule_source": {
+    "title": "中央選舉委員會：115年地方公職人員選舉候選人完成登記",
+    "url": "https://web.cec.gov.tw/central/article/64711",
+    "registration_period": "115年8月31日至9月4日",
+    "formal_candidate_announcement": "115年11月17日"
+  },
+  "sources": [
+    {
+      "city": "新北市",
+      "title": "115年直轄市議員選舉候選人登記情形一覽表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/669b82d7-7c65-4568-97a3-c7cc25046e6f.pdf",
+      "publisher": "新北市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 112
+    }
+  ]
+}
