@@ -64,6 +64,14 @@
       "publisher": "臺北市選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 98
+    },
+    {
+      "city": "臺中市",
+      "title": "臺中市議會第5屆議員選舉候選人登記情形一覽表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/19b865cd-1164-4d93-8947-a86577a1ae95.pdf",
+      "publisher": "臺中市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 102
     }
   ]
 }
