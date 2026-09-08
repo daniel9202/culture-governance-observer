@@ -33,6 +33,28 @@ export default {
       return json({ records }, 200, publicHeaders);
     }
 
+    if (request.method === "GET" && url.pathname === "/api/public/civic-calls") {
+      const { results = [] } = await env.DB.prepare(
+        "SELECT id, city, subject_name, source_url, source_title, published_date, payload, reviewed_at FROM review_items WHERE status = 'approved' AND kind = 'civic_call' ORDER BY reviewed_at DESC"
+      ).all();
+      const records = results.map(row => {
+        const payload = JSON.parse(row.payload);
+        return {
+          ...payload,
+          id: row.id,
+          city: payload.city || row.city,
+          proposer: payload.proposer || row.subject_name,
+          source_url: payload.source_url || row.source_url,
+          source_title: payload.source_title || row.source_title,
+          published_date: payload.published_date || row.published_date,
+          last_verified: row.reviewed_at || row.published_date,
+          topics: Array.isArray(payload.topics) ? payload.topics : [],
+          corrections: Array.isArray(payload.corrections) ? payload.corrections : [],
+        };
+      });
+      return json({ records }, 200, publicHeaders);
+    }
+
     if (request.method !== "POST" || url.pathname !== "/api/review/items") {
       return json({ error: "找不到路徑" }, 404);
     }
