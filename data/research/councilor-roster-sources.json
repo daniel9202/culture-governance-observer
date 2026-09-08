@@ -144,6 +144,38 @@
       "publisher": "嘉義市選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 37
+    },
+    {
+      "city": "花蓮縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/78ee1462-f5c6-4c3c-82a9-1660611c89ea.pdf",
+      "publisher": "花蓮縣選舉委員會",
+      "source_date": "2026-09-05",
+      "records_extracted": 55
+    },
+    {
+      "city": "苗栗縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/0e37e655-da6e-407e-a786-144dd1007dc8.xls",
+      "publisher": "苗栗縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 56
+    },
+    {
+      "city": "連江縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/80f5efcd-9280-48a9-b1f5-5a41c2e2bb77.xls",
+      "publisher": "連江縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 14
+    },
+    {
+      "city": "新竹市",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/8cb864fd-5945-41ec-99e6-33c0ba574d74.pdf",
+      "publisher": "新竹市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 56
     }
   ]
 }
