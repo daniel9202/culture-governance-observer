@@ -16,6 +16,30 @@
       "publisher": "新北市選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 112
+    },
+    {
+      "city": "臺南市",
+      "title": "115年直轄市議員選舉候選人登記情形一覽表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/4eb894dc-524f-4f35-a3e4-94d209593b7f.pdf",
+      "publisher": "臺南市選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 88
+    },
+    {
+      "city": "雲林縣",
+      "title": "115年縣市議員選舉候選人登記概況彙總表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/040f4ff6-4ddd-40be-b894-3bb09d4365d5.pdf",
+      "publisher": "雲林縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 73
+    },
+    {
+      "city": "彰化縣",
+      "title": "115年彰化縣議員選舉候選人登記概況表（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/0f035caf-13d2-4c4b-962d-008177a3944a.pdf",
+      "publisher": "彰化縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 86
     }
   ]
 }

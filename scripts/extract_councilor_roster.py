@@ -36,19 +36,32 @@ def parse(pdf_path: Path, city: str, source_title: str, source_url: str, source_
     with pdfplumber.open(pdf_path) as document:
         for page in document.pages:
             for table in page.extract_tables():
-                if not table or "姓名" not in table[0]:
+                if not table:
                     continue
-                header = [str(value or "").strip() for value in table[0]]
-                columns = {name: index for index, name in enumerate(header)}
-                for row in table[1:]:
+                header_index = next(
+                    (
+                        index
+                        for index, row in enumerate(table)
+                        if any(str(value or "").strip() == "姓名" for value in row)
+                    ),
+                    None,
+                )
+                if header_index is None:
+                    continue
+                header = [str(value or "").strip() for value in table[header_index]]
+                name_index = next((index for index, name in enumerate(header) if name == "姓名"), None)
+                district_index = next((index for index, name in enumerate(header) if "選舉區" in name), None)
+                if name_index is None or district_index is None:
+                    continue
+                party_index = next((index for index, name in enumerate(header) if "推薦之政黨" in name), None)
+                date_index = next((index for index, name in enumerate(header) if "登記日期" in name), None)
+                incumbent_index = next((index for index, name in enumerate(header) if "是否現任" in name), None)
+                for row in table[header_index + 1:]:
                     row = [str(value or "").strip().replace("\n", " ") for value in row]
-                    name = row[columns["姓名"]] if len(row) > columns["姓名"] else ""
-                    district = row[columns["選舉區"]] if len(row) > columns["選舉區"] else ""
+                    name = row[name_index] if len(row) > name_index else ""
+                    district = row[district_index] if len(row) > district_index else ""
                     if not name or not district:
                         continue
-                    party_index = columns.get("推薦之政黨")
-                    date_index = columns.get("登記日期")
-                    incumbent_index = columns.get("是否現任")
                     records.append({
                         "city": city,
                         "electoral_district": district,
@@ -72,17 +85,29 @@ def main() -> None:
     parser.add_argument("--source-url", required=True)
     parser.add_argument("--source-date", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--append", action="store_true", help="保留既有名冊並加入本次擷取結果")
     args = parser.parse_args()
 
     records = parse(args.pdf, args.city, args.source_title, args.source_url, args.source_date)
     if not records:
         raise SystemExit("未從 PDF 擷取到候選人名冊")
+    if args.append and args.output.exists():
+        with args.output.open(encoding="utf-8", newline="") as stream:
+            existing_records = list(csv.DictReader(stream))
+        records = existing_records + records
+
+    unique_records = {}
+    for record in records:
+        key = (record["city"], record["electoral_district"], record["candidate"])
+        unique_records[key] = record
+    records = [unique_records[key] for key in sorted(unique_records)]
+
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(records)
-    print(f"已寫入 {len(records)} 筆：{args.output}")
+    print(f"已寫入 {len(records)} 筆（本次擷取後去重）：{args.output}")
 
 
 if __name__ == "__main__":
