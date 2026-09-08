@@ -1,5 +1,5 @@
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-Promise.all(['candidates','governments','local_cultural_issues','civic_policy_calls','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))).then(([p,g,i,c,m])=>{
+Promise.all([loadCandidateDataset(),...['governments','local_cultural_issues','civic_policy_calls','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))]).then(([p,g,i,c,m])=>{
   const available=new Set([p,g,i,c,m].flatMap(x=>x.records.map(r=>r.city)));
   const cities=CITY_ORDER.filter(city=>available.has(city));
   regions.innerHTML=cities.map(city=>{

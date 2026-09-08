@@ -15,7 +15,7 @@ function render(){
   document.querySelectorAll('[data-expand-field]').forEach(button=>button.onclick=()=>{const content=button.previousElementSibling,collapsed=content.classList.toggle('is-collapsed');button.textContent=collapsed?'展開全文':'收合內容';button.setAttribute('aria-expanded',String(!collapsed))});
   empty.hidden=rows.length>0;
 }
-fetch('data/candidates.json').then(r=>r.json()).then(data=>{
+loadCandidateDataset().then(data=>{
   platforms=data.records.filter(inScope);
   options('cityFilter',uniq(platforms.map(x=>x.city)));
   options('partyFilter',uniq(platforms.map(x=>x.party)));

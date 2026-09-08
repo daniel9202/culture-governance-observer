@@ -1,13 +1,39 @@
-const json = (value, status = 200) => new Response(JSON.stringify(value), {
+const publicHeaders = {
+  "access-control-allow-origin": "https://daniel9202.github.io",
+  "access-control-allow-methods": "GET, POST, OPTIONS",
+  "access-control-allow-headers": "Content-Type, Authorization",
+};
+
+const json = (value, status = 200, headers = {}) => new Response(JSON.stringify(value), {
   status,
-  headers: { "content-type": "application/json; charset=utf-8" },
+  headers: { "content-type": "application/json; charset=utf-8", ...headers },
 });
 
 const id = () => crypto.randomUUID();
 
 export default {
   async fetch(request, env) {
-    if (request.method !== "POST" || new URL(request.url).pathname !== "/api/review/items") {
+    const url = new URL(request.url);
+    if (request.method === "OPTIONS") return new Response(null, { headers: publicHeaders });
+
+    if (request.method === "GET" && url.pathname === "/api/public/candidates") {
+      const { results = [] } = await env.DB.prepare(
+        "SELECT id, city, subject_name, source_url, source_title, published_date, payload, reviewed_at FROM review_items WHERE status = 'approved' AND kind = 'candidate' ORDER BY reviewed_at DESC"
+      ).all();
+      const records = results.map(row => ({
+        ...JSON.parse(row.payload),
+        id: row.id,
+        city: JSON.parse(row.payload).city || row.city,
+        candidate: JSON.parse(row.payload).candidate || row.subject_name,
+        source_url: JSON.parse(row.payload).source_url || row.source_url,
+        source_title: JSON.parse(row.payload).source_title || row.source_title,
+        published_date: JSON.parse(row.payload).published_date || row.published_date,
+        last_verified: row.reviewed_at || row.published_date,
+      }));
+      return json({ records }, 200, publicHeaders);
+    }
+
+    if (request.method !== "POST" || url.pathname !== "/api/review/items") {
       return json({ error: "找不到路徑" }, 404);
     }
 
