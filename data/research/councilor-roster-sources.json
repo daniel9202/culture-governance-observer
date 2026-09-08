@@ -96,6 +96,14 @@
       "publisher": "屏東縣選舉委員會",
       "source_date": "2026-09-04",
       "records_extracted": 87
+    },
+    {
+      "city": "新竹縣",
+      "title": "115年縣市議員選舉候選人登記冊（8月31日-9月4日）",
+      "url": "https://web.cec.gov.tw/api/file/30927dca-f200-425f-b462-281a353c8ec7.pdf",
+      "publisher": "新竹縣選舉委員會",
+      "source_date": "2026-09-04",
+      "records_extracted": 68
     }
   ]
 }
