@@ -87,7 +87,7 @@ def article_prefill(kind,url):
  title=parser.meta.get("og:title") or parser.meta.get("twitter:title") or parser.title or source.get("source_title","")
  description=parser.meta.get("og:description") or parser.meta.get("description","")
  body=" ".join(dict.fromkeys(parser.text));excerpt=(description or body or source.get("source_title","")).strip()
- topic_rules=[("文化資產","文資|古蹟|歷史建築|無形文化"),("藝文活動","藝文|藝術|展演|表演|音樂"),("文化場館","場館|博物館|美術館|圖書館"),("地方文史","地方文化|文史|記憶"),("文化預算","預算|經費"),("文化教育","文化教育|母語|客語|族語"),("文化觀光","文化觀光|觀光")]
+    topic_rules=[("文化資產","文資|古蹟|歷史建築|無形文化"),("藝文活動","藝文|藝術|展演|表演|音樂"),("文化場館","場館|博物館|美術館|圖書館"),("地方文史","地方文化|文史|記憶"),("節慶與民俗文化","節慶|文化祭|慶典|祭典|民俗|民俗活動|宗教文化|廟會|迎媽祖|遶境|藝閣|燈會|燈節|花季|文化節|藝術節|嘉年華|傳統信仰"),("文化預算","預算|經費"),("文化教育","文化教育|母語|客語|族語"),("文化觀光","文化觀光|觀光")]
  topics="|".join(label for label,pattern in topic_rules if re.search(pattern,f"{title} {excerpt}"))
  if kind=="candidate_sources":
   config=json.loads(CONFIG.read_text(encoding="utf-8"));candidates=config["collections"]["candidate_policy"].get("candidates_by_city",{}).get(source.get("city",""),[])
