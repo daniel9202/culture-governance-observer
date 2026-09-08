@@ -58,6 +58,10 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .policy-statements{border-left:3px solid var(--lime);padding-left:1rem}
 .policy-statements ul{margin:.2rem 0 0;padding-left:1.2rem}
 .policy-statements p{color:var(--muted);font-size:.9rem}
+.policy-sources{border-top:1px solid var(--line);padding-top:1rem}
+.source-list{margin:.2rem 0 0;padding-left:1.2rem;font-size:.86rem}
+.source-list li+li{margin-top:.4rem}
+.source-list a{font-weight:700}
 .source-row{border-top:1px solid var(--line);padding-top:1rem;margin-top:1rem;display:flex;justify-content:space-between;gap:1rem;font-size:.78rem}
 .source-row a{font-weight:700}
 .verification{color:var(--muted)}

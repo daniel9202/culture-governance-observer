@@ -51,10 +51,10 @@ const renderFinanceSection=records=>{
 };
 
 Promise.all([loadCandidateDataset(),...['governments','local_cultural_issues','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))]).then(([p,g,i,m])=>{
-  const P=p.records.filter(x=>x.city===city),G=g.records.filter(x=>x.city===city),I=i.records.filter(x=>x.city===city),M=m.records.find(x=>x.city===city),topics=[...new Set(P.flatMap(x=>x.topics))];
+  const rawPolicies=p.records.filter(x=>x.city===city),P=groupCandidateRecords(rawPolicies),G=g.records.filter(x=>x.city===city),I=i.records.filter(x=>x.city===city),M=m.records.find(x=>x.city===city),topics=[...new Set(P.flatMap(x=>x.topics))];
   document.title=`${city}文化儀表板｜文化治理觀察站`;
   title.textContent=city+'文化儀表板';
-  lede.textContent=`已收錄 ${new Set(P.map(x=>x.candidate)).size} 位候選人、${P.length} 筆文化政見、${I.length} 筆地方文化議題，並彙整 ${M?.year||'待查核'} 年縣市文化統計。`;
+  lede.textContent=`已收錄 ${P.length} 位候選人、${rawPolicies.length} 筆文化政見、${I.length} 筆地方文化議題，並彙整 ${M?.year||'待查核'} 年縣市文化統計。`;
   count.textContent=`候選人 ${new Set(P.map(x=>x.candidate)).size} 位；文化主題：${topics.join('、')||'尚待查核'}`;
 
   if(M){
@@ -73,6 +73,8 @@ Promise.all([loadCandidateDataset(),...['governments','local_cultural_issues','r
   }
 
   renderFinanceSection(G);
-  candidates.innerHTML=P.map(x=>`<article class="card"><div class="card-meta"><span class="tag">${escapeHtml(x.office)}</span>${x.topics.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><h3>${escapeHtml(x.candidate)}</h3><span class="party">${escapeHtml(x.party)}</span><div class="policy-layer"><h4>政策論述</h4><p>${escapeHtml(x.policy_argument||x.summary)}</p></div><div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${(x.concrete_proposals||[x.summary]).map(p=>`<li>${escapeHtml(p)}</li>`).join('')}</ul></div><div class="policy-layer policy-statements"><h4>相關發言</h4>${(x.related_statements||[]).length?`<ul>${x.related_statements.map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>`:'<p>尚未收錄可核實的相關發言。</p>'}</div><div class="source-row"><a href="${escapeHtml(safeUrl(x.source_url))}" target="_blank" rel="noopener">${escapeHtml(x.source_title||'主要來源')} ↗</a>${(x.related_sources||[]).map((url,i)=>`<a href="${escapeHtml(safeUrl(url))}" target="_blank" rel="noopener">輔助來源 ${i+1} ↗</a>`).join('')}</div></article>`).join('')||'<p class="empty">候選人政見尚待收錄。</p>';
+  const list=(values,emptyText)=>values.length?`<ul>${values.map(value=>`<li>${escapeHtml(value)}</li>`).join('')}</ul>`:`<p>${escapeHtml(emptyText)}</p>`;
+  const sources=x=>x.sources.length?`<ul class="source-list">${x.sources.map((source,index)=>`<li><a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener">${escapeHtml(source.title||`來源 ${index+1}`)} ↗</a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
+  candidates.innerHTML=P.map(x=>`<article class="card candidate-card"><div class="card-meta"><span class="tag">${escapeHtml(x.office)}</span>${x.topics.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div><h3>${escapeHtml(x.candidate)}</h3><span class="party">${escapeHtml(x.party)}</span><div class="policy-layer"><h4>政策論述</h4>${list(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${list(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${list(x.related_statements,'尚未收錄可核實的相關發言。')}</div><div class="policy-layer policy-sources"><h4>相關來源</h4>${sources(x)}</div><small class="verification">發布：${escapeHtml(x.published_dates.join('、')||'待查核')} · 最後查核：${escapeHtml(x.last_verified)} · 更正 ${Number(x.corrections.length)||0} 次</small></article>`).join('')||'<p class="empty">候選人政見尚待收錄。</p>';
   issues.innerHTML=I.map(x=>`<article class="card"><div class="card-meta"><span class="tag">${escapeHtml(x.issue_type)}</span></div><h3>${escapeHtml(x.title)}</h3><p class="summary">${escapeHtml(x.summary)}</p><a href="${escapeHtml(safeUrl(x.source_url))}" target="_blank" rel="noopener">查看來源 ↗</a></article>`).join('')||'<p class="empty">地方文化議題尚待收錄。</p>';
 }).catch(()=>{lede.textContent='資料載入失敗，請稍後再試。'});
