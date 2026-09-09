@@ -78,15 +78,17 @@ def parse(pdf_path: Path, city: str, source_title: str, source_url: str, source_
     return records
 
 
-def parse_spreadsheet_rows(sheets, city: str, source_title: str, source_url: str, source_date: str):
-    """Extract the councilor section from rows supplied by an official workbook."""
+def parse_xlsx(xlsx_path: Path, city: str, source_title: str, source_url: str, source_date: str):
+    """Extract the county-councilor section from an official XLSX workbook."""
+    workbook = openpyxl.load_workbook(xlsx_path, read_only=True, data_only=True)
     records = []
-    for rows in sheets:
+    for sheet in workbook.worksheets:
+        rows = list(sheet.iter_rows(values_only=True))
         section_start = next(
             (
                 index
                 for index, row in enumerate(rows)
-                if any("議員" in str(value or "") for value in row)
+                if any("縣議員" in str(value or "") or "市議員" in str(value or "") for value in row)
             ),
             None,
         )
@@ -132,33 +134,11 @@ def parse_spreadsheet_rows(sheets, city: str, source_title: str, source_url: str
     return records
 
 
-def parse_xlsx(xlsx_path: Path, city: str, source_title: str, source_url: str, source_date: str):
-    """Extract the county-councilor section from an official XLSX workbook."""
-    workbook = openpyxl.load_workbook(xlsx_path, read_only=True, data_only=True)
-    sheets = [list(sheet.iter_rows(values_only=True)) for sheet in workbook.worksheets]
-    return parse_spreadsheet_rows(sheets, city, source_title, source_url, source_date)
-
-
-def parse_xls(xls_path: Path, city: str, source_title: str, source_url: str, source_date: str):
-    """Extract the county-councilor section from an official legacy XLS workbook."""
-    try:
-        import xlrd
-    except ImportError as error:
-        raise SystemExit("需安裝 xlrd 才能擷取舊式 XLS 檔") from error
-    workbook = xlrd.open_workbook(xls_path)
-    sheets = [
-        [sheet.row_values(row_index) for row_index in range(sheet.nrows)]
-        for sheet in workbook.sheets()
-    ]
-    return parse_spreadsheet_rows(sheets, city, source_title, source_url, source_date)
-
-
 def main() -> None:
     parser = argparse.ArgumentParser()
     source_group = parser.add_mutually_exclusive_group(required=True)
     source_group.add_argument("--pdf", type=Path)
     source_group.add_argument("--xlsx", type=Path)
-    source_group.add_argument("--xls", type=Path)
     parser.add_argument("--city", required=True)
     parser.add_argument("--source-title", required=True)
     parser.add_argument("--source-url", required=True)
@@ -167,12 +147,11 @@ def main() -> None:
     parser.add_argument("--append", action="store_true", help="保留既有名冊並加入本次擷取結果")
     args = parser.parse_args()
 
-    if args.pdf:
-        records = parse(args.pdf, args.city, args.source_title, args.source_url, args.source_date)
-    elif args.xlsx:
-        records = parse_xlsx(args.xlsx, args.city, args.source_title, args.source_url, args.source_date)
-    else:
-        records = parse_xls(args.xls, args.city, args.source_title, args.source_url, args.source_date)
+    records = (
+        parse(args.pdf, args.city, args.source_title, args.source_url, args.source_date)
+        if args.pdf
+        else parse_xlsx(args.xlsx, args.city, args.source_title, args.source_url, args.source_date)
+    )
     if not records:
         raise SystemExit("未從 PDF 擷取到候選人名冊")
     if args.append and args.output.exists():
