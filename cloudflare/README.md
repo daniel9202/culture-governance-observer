@@ -12,7 +12,14 @@
 1. 在 Cloudflare Worker 設定 `ALLOWED_EMAIL`，只允許該信箱讀寫 `/api/review/*`。
 2. 以 secret 設定 `INGEST_TOKEN`，供每日研究匯入新線索使用；不可提交到 Git。
 3. 在 D1 Console 執行 `schema.sql`。
+   再執行 `migrations/0002_traffic_visits.sql`，建立匿名流量統計資料表。
 4. 以 Wrangler 部署 staging：`npx wrangler deploy --config cloudflare/wrangler.toml --env staging`。
 5. 為 Worker 的審核入口設定 Cloudflare Access，再把日常審核頁改為呼叫 `/api/review/items`。
 
 公開端點 `/api/public/candidates` 只會回傳 `approved` 的候選人資料。
+
+## 流量統計
+
+- 公開網站的 `nav.js` 會對 `/api/public/visit` 送出頁面路徑與當日匿名代碼；不傳送 IP、帳號或瀏覽內容。
+- 在審核入口 `/review` 選擇「流量統計」，可切換近 7、30、90 天，查看瀏覽量、每日不重複訪客與熱門頁面。
+- Cloudflare Access 的保護路徑請涵蓋 `/review/*`，讓統計頁與審核頁採用同一套登入限制。

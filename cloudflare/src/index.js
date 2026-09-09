@@ -31,7 +31,7 @@ function reviewPageV2() {
   return `<!doctype html>
 <html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>文化治理觀察站｜審核台</title>
 <style>body{margin:0;background:#f4f1e8;color:#181914;font:16px system-ui,sans-serif}main{max-width:760px;margin:auto;padding:32px 20px}h1{font-size:clamp(2.2rem,9vw,5rem);margin:.2em 0}article{border:1px solid #bdb9ad;background:#fffdf8;padding:18px;margin:18px 0}label{display:block;margin:12px 0}input,select,textarea{box-sizing:border-box;width:100%;padding:9px;margin-top:4px;font:inherit}textarea{min-height:6em}button{padding:10px 14px;margin:8px 8px 0 0;font:inherit;cursor:pointer}button[data-status="approved"]{background:#e7f6c8}button[data-status="rejected"]{background:#f7d7d2}.handled{padding:10px 0;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;gap:12px}.kind{font:700 .76rem ui-monospace,monospace;color:#62665d}a{color:#243d73}</style>
-<main><a href="https://daniel9202.github.io/culture-governance-observer/">← 回公開網站</a><p>REVIEW INBOX</p><h1>待審核收件匣</h1><p>候選人政見與民間文化訴求均在此核對、修正後上架。</p><label>資料類型<select id="kind-filter"><option value="">全部待審資料</option><option value="candidate">候選人政見</option><option value="civic_call">民間訴求</option></select></label><p id="status">正在讀取審核資料…</p><button id="reload">重新整理</button> <strong id="count"></strong><div id="rows"></div><details><summary>已處理 <span id="handled-count">0 筆</span></summary><div id="handled"></div></details></main>
+<main><a href="https://daniel9202.github.io/culture-governance-observer/">← 回公開網站</a><p>REVIEW INBOX</p><h1>待審核收件匣</h1><p><strong>審核收件匣</strong>　<a href="/review/analytics">流量統計</a></p><p>候選人政見與民間文化訴求均在此核對、修正後上架。</p><label>資料類型<select id="kind-filter"><option value="">全部待審資料</option><option value="candidate">候選人政見</option><option value="civic_call">民間訴求</option></select></label><p id="status">正在讀取審核資料…</p><button id="reload">重新整理</button> <strong id="count"></strong><div id="rows"></div><details><summary>已處理 <span id="handled-count">0 筆</span></summary><div id="handled"></div></details></main>
 <script>
 const s=document.querySelector('#status'),r=document.querySelector('#rows'),h=document.querySelector('#handled'),c=document.querySelector('#count'),kindFilter=document.querySelector('#kind-filter'),savedPayloads=new Map,e=x=>String(x??'').replace(/[&<>"']/g,q=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[q])),f=(p,o={})=>fetch(p,{...o,headers:{...(o.body?{'Content-Type':'application/json'}:{}),...(o.headers||{})}});
 const topics=p=>Array.isArray(p.topics)?p.topics.join(' | '):p.topics||'';
@@ -45,8 +45,25 @@ document.querySelector('#reload').onclick=()=>load().catch(x=>s.textContent=x.me
 </script></html>`;
 }
 
+function analyticsPage() {
+  return `<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>文化治理觀察站｜流量統計</title>
+<style>body{margin:0;background:#f4f1e8;color:#181914;font:16px system-ui,sans-serif}main{max-width:900px;margin:auto;padding:32px 20px}h1{font-size:clamp(2.2rem,9vw,5rem);margin:.2em 0}a{color:#243d73}.tabs{margin:20px 0}.tabs a,.tabs strong{display:inline-block;padding:9px 12px;border:1px solid #bdb9ad;background:#fffdf8}.tabs strong{background:#dce8c4}.summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}.card{border:1px solid #bdb9ad;background:#fffdf8;padding:18px}.number{font-size:2rem;font-weight:700;margin:.2em 0}button{padding:9px 12px;margin-right:8px;font:inherit;cursor:pointer}.active{background:#dce8c4}table{width:100%;border-collapse:collapse;background:#fffdf8}th,td{text-align:left;padding:10px;border-bottom:1px solid #d7d3c7}th{font-size:.86rem}@media(max-width:500px){.summary{grid-template-columns:1fr}th,td{padding:8px 5px}}</style>
+<main><a href="https://daniel9202.github.io/culture-governance-observer/">← 回公開網站</a><p>REVIEW INBOX</p><h1>流量統計</h1><nav class="tabs"><a href="/review">審核收件匣</a><strong>流量統計</strong></nav><p>僅統計頁面瀏覽與每日匿名訪客數，不記錄 IP、帳號或瀏覽內容。</p><p><button data-days="7">近 7 天</button><button class="active" data-days="30">近 30 天</button><button data-days="90">近 90 天</button></p><p id="status">正在讀取統計資料…</p><section class="summary"><article class="card"><div>頁面瀏覽</div><div id="views" class="number">—</div></article><article class="card"><div>不重複訪客</div><div id="visitors" class="number">—</div></article></section><h2>熱門頁面</h2><table><thead><tr><th>頁面</th><th>瀏覽</th><th>訪客</th></tr></thead><tbody id="pages"></tbody></table><h2>每日趨勢</h2><table><thead><tr><th>日期</th><th>瀏覽</th><th>訪客</th></tr></thead><tbody id="trend"></tbody></table></main>
+<script>const n=x=>Number(x||0).toLocaleString('zh-TW'),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));async function load(days){document.querySelector('#status').textContent='正在讀取統計資料…';let r=await fetch('/api/review/analytics?days='+days);if(!r.ok)throw Error(r.status===401?'請先完成 Cloudflare Access 登入。':'無法讀取統計資料');let d=await r.json();document.querySelector('#views').textContent=n(d.totals.page_views);document.querySelector('#visitors').textContent=n(d.totals.visitors);document.querySelector('#pages').innerHTML=d.pages.map(x=>'<tr><td>'+esc(x.page_path)+'</td><td>'+n(x.page_views)+'</td><td>'+n(x.visitors)+'</td></tr>').join('')||'<tr><td colspan="3">尚無資料</td></tr>';document.querySelector('#trend').innerHTML=d.trend.map(x=>'<tr><td>'+esc(x.day)+'</td><td>'+n(x.page_views)+'</td><td>'+n(x.visitors)+'</td></tr>').join('')||'<tr><td colspan="3">尚無資料</td></tr>';document.querySelector('#status').textContent='統計已更新。'}document.querySelectorAll('[data-days]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-days]').forEach(x=>x.classList.remove('active'));b.classList.add('active');load(b.dataset.days).catch(e=>document.querySelector('#status').textContent=e.message)});load(30).catch(e=>document.querySelector('#status').textContent=e.message);</script></html>`;
+}
+
 function parsePayload(row) {
   return { ...row, payload: JSON.parse(row.payload) };
+}
+
+async function trafficSummary(env, days) {
+  const since = `-${days - 1} days`;
+  const [totals, trend, pages] = await Promise.all([
+    env.DB.prepare("SELECT COUNT(*) AS page_views, COUNT(DISTINCT visitor_id) AS visitors FROM traffic_visits WHERE day >= DATE('now', ?)").bind(since).first(),
+    env.DB.prepare("SELECT day, COUNT(*) AS page_views, COUNT(DISTINCT visitor_id) AS visitors FROM traffic_visits WHERE day >= DATE('now', ?) GROUP BY day ORDER BY day").bind(since).all(),
+    env.DB.prepare("SELECT page_path, COUNT(*) AS page_views, COUNT(DISTINCT visitor_id) AS visitors FROM traffic_visits WHERE day >= DATE('now', ?) GROUP BY page_path ORDER BY page_views DESC LIMIT 10").bind(since).all(),
+  ]);
+  return { days, totals: { page_views: totals?.page_views || 0, visitors: totals?.visitors || 0 }, trend: trend.results || [], pages: pages.results || [] };
 }
 
 function emailFor(request, env) {
@@ -116,6 +133,11 @@ async function handleApi(request, env, url) {
 
   if (!reviewer) return response({ error: "此審核台需要 Cloudflare Access 登入" }, request, env, 401);
 
+  if (path === "/api/review/analytics" && request.method === "GET") {
+    const days = [7, 30, 90].includes(Number(url.searchParams.get("days"))) ? Number(url.searchParams.get("days")) : 30;
+    return response(await trafficSummary(env, days), request, env);
+  }
+
   if (path === "/api/review/items" && request.method === "GET") {
     const status = ["pending", "approved", "rejected"].includes(url.searchParams.get("status")) ? url.searchParams.get("status") : "pending";
     const kind = ["candidate", "civic_call"].includes(url.searchParams.get("kind")) ? url.searchParams.get("kind") : null;
@@ -148,6 +170,7 @@ export default {
     const url = new URL(request.url);
     try {
       if (url.pathname === "/review") return new Response(reviewPageV2(), { headers: { "content-type": "text/html; charset=utf-8" } });
+      if (url.pathname === "/review/analytics") return new Response(analyticsPage(), { headers: { "content-type": "text/html; charset=utf-8" } });
       if (url.pathname.startsWith("/api/")) return await handleApi(request, env, url);
       return new Response("文化治理觀察站審核 API 已啟動。", { headers: { "content-type": "text/plain; charset=utf-8" } });
     } catch (error) {

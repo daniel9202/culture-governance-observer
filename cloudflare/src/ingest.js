@@ -55,6 +55,20 @@ export default {
       return json({ records }, 200, publicHeaders);
     }
 
+    if (request.method === "POST" && url.pathname === "/api/public/visit") {
+      // 只接受公開網站送來的每日匿名訪客代碼；不記錄 IP 或其他識別資料。
+      if (request.headers.get("Origin") !== "https://daniel9202.github.io") return json({ error: "來源不允許" }, 403, publicHeaders);
+      const input = await request.json().catch(() => ({}));
+      const page = String(input.page || "").trim();
+      const visitorId = String(input.visitor_id || "").trim();
+      if (!/^\/culture-governance-observer\/(?:[\w.-]+)?$/.test(page) || !/^[a-f0-9]{32}$/i.test(visitorId)) {
+        return json({ error: "無效的流量資料" }, 400, publicHeaders);
+      }
+      await env.DB.prepare("INSERT OR IGNORE INTO traffic_visits (day, page_path, visitor_id) VALUES (DATE('now'), ?, ?)")
+        .bind(page, visitorId).run();
+      return json({ ok: true }, 202, publicHeaders);
+    }
+
     if (request.method !== "POST" || url.pathname !== "/api/review/items") {
       return json({ error: "找不到路徑" }, 404);
     }
