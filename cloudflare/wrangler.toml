@@ -15,6 +15,14 @@ APP_ORIGINS = "http://localhost:8788,http://127.0.0.1:8788,https://daniel9202.gi
 [env.staging]
 name = "culture-review-api-staging"
 
+[env.staging.vars]
+APP_ORIGINS = "http://localhost:8788,http://127.0.0.1:8788,https://daniel9202.github.io"
+
+[[env.staging.d1_databases]]
+binding = "DB"
+database_name = "culture-governance-review"
+database_id = "6b8eb904-9b6a-4d92-ae54-9b71db14bba1"
+
 [env.production]
 # When a domain is ready, set this to the stable production Worker name and
 # add a separate D1 binding/database. Custom-domain routes live in the
