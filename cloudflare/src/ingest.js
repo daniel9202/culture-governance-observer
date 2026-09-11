@@ -28,6 +28,7 @@ export default {
         source_url: JSON.parse(row.payload).source_url || row.source_url,
         source_title: JSON.parse(row.payload).source_title || row.source_title,
         published_date: JSON.parse(row.payload).published_date || row.published_date,
+        approved_at: row.reviewed_at,
         last_verified: row.reviewed_at || row.published_date,
       }));
       return json({ records }, 200, publicHeaders);
