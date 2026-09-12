@@ -30,19 +30,20 @@ function getDashboard(filters) {
 
 function saveReview(payload) {
   if (!payload || !['pending', 'accepted', 'rejected'].includes(payload.status)) throw new Error('審核狀態不合法。');
-  const lock = LockService.getDocumentLock();
+  const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
     const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(REVIEW_SHEET);
     const row = Number(payload.rowNumber);
     if (!Number.isInteger(row) || row < 2 || row > sheet.getLastRow()) throw new Error('找不到指定資料列。');
     if (sheet.getRange(row, 7).getDisplayValue() !== payload.sourceUrl) throw new Error('資料列已變更，請重新整理後再審核。');
-    sheet.getRange(row, 8).setValue(payload.status);
-    sheet.getRange(row, 9, 1, 8).setValues([[payload.summary || '', payload.category || '', payload.reason || '', payload.confidence || '', payload.actor || '', payload.actorType || '', payload.office || '', payload.policy || '']]);
-    sheet.getRange(row, 17).setValue(payload.note || '');
-    sheet.getRange(row, 18).setValue(Session.getActiveUser().getEmail() || 'Google 審核者');
-    sheet.getRange(row, 19).setValue(new Date());
-    SpreadsheetApp.flush();
+    // H:S is contiguous, so write the whole review in one Sheets request.
+    sheet.getRange(row, 8, 1, 12).setValues([[
+      payload.status,
+      payload.summary || '', payload.category || '', payload.reason || '', payload.confidence || '',
+      payload.actor || '', payload.actorType || '', payload.office || '', payload.policy || '',
+      payload.note || '', Session.getActiveUser().getEmail() || 'Google 審核者', new Date()
+    ]]);
     return {ok: true, rowNumber: row, status: payload.status};
   } finally { lock.releaseLock(); }
 }
