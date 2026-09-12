@@ -70,23 +70,33 @@ def main():
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
-    existing = {row[6].strip() for row in values[1:] if len(row) > 6 and row[6].strip()}
+    existing = {row[6].strip(): (number, row) for number, row in enumerate(values[1:], start=2) if len(row) > 6 and row[6].strip()}
     client = OpenAI()
     output = []
+    backfill = []
     skipped = 0
     for kind, row in inbox_rows():
         if row["source_url"] in existing:
-            skipped += 1
+            number, current = existing[row["source_url"]]
+            current += [""] * (len(HEADERS) - len(current))
+            if current[7] == "pending" and not current[8].strip():
+                ai = analyze(client, kind, row)
+                note = current[16] or ("AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else "")
+                backfill.append({"range": f"I{number}:Q{number}", "values": [[ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note]]})
+            else:
+                skipped += 1
             continue
         ai = analyze(client, kind, row)
         # AI supplies an opinion, but only the human reviewer changes the status.
         status = "pending"
         note = "AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else ""
         output.append([kind, row["collected_at"], row["city"], row["published_date"], row["source_name"], row["source_title"], row["source_url"], status, ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note, "", "", ""])
-        existing.add(row["source_url"])
+        existing[row["source_url"]] = (0, [])
+    if backfill:
+        ws.batch_update(backfill, value_input_option="USER_ENTERED")
     if output:
         ws.append_rows(output, value_input_option="USER_ENTERED")
-    print(f"Google review sheet: appended={len(output)}, already_present={skipped}")
+    print(f"Google review sheet: appended={len(output)}, AI_backfilled={len(backfill)}, already_complete={skipped}")
 
 
 if __name__ == "__main__":
