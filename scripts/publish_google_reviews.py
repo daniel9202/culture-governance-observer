@@ -45,7 +45,7 @@ def main():
     for number, row in enumerate(rows, start=2):
         if row["審核狀態"] != "accepted":
             continue
-        kind = row["資料類型"]
+        kind = {"候選人政見": "candidate", "民間政策訴求": "civic_call"}.get(row["資料類型"], row["資料類型"])
         digest = hashlib.sha256(str(row["來源網址"]).encode()).hexdigest()[:12]
         identifier = f"{kind}-auto-{digest}"
         common = {"id": identifier, "city": row["縣市"], "topics": row["AI分類"], "summary": row["AI摘要"], "published_date": row["發布日期"], "source_title": row["來源標題"], "source_url": row["來源網址"], "source_type": "新聞／公開網頁", "last_verified": today, "correction_log": row["人工備註"]}

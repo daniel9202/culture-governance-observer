@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SHEET_NAME = os.environ.get("GOOGLE_REVIEW_SHEET_NAME", "審核資料")
 SPREADSHEET_ID = os.environ["GOOGLE_REVIEW_SPREADSHEET_ID"]
 HEADERS = ["資料類型", "收集時間", "縣市", "發布日期", "來源名稱", "來源標題", "來源網址", "審核狀態", "AI摘要", "AI分類", "AI判斷理由", "AI信心分數", "候選人／提出者", "政黨／提出者類型", "職務", "政策主張／具體訴求", "人工備註", "審核者", "審核時間", "發布ID"]
+KIND_LABELS = {"candidate": "候選人政見", "civic_call": "民間政策訴求"}
 
 
 def worksheet():
@@ -90,7 +91,7 @@ def main():
         # AI supplies an opinion, but only the human reviewer changes the status.
         status = "pending"
         note = "AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else ""
-        output.append([kind, row["collected_at"], row["city"], row["published_date"], row["source_name"], row["source_title"], row["source_url"], status, ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note, "", "", ""])
+        output.append([KIND_LABELS[kind], row["collected_at"], row["city"], row["published_date"], row["source_name"], row["source_title"], row["source_url"], status, ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note, "", "", ""])
         existing[row["source_url"]] = (0, [])
     if backfill:
         ws.batch_update(backfill, value_input_option="USER_ENTERED")
