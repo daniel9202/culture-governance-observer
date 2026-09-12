@@ -1,1 +1,24 @@
-<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=https://culture-review-api-staging.b95302239.workers.dev/review"><title>前往安全審核台</title><p>正在前往安全審核台… <a href="https://culture-review-api-staging.b95302239.workers.dev/review">若未自動跳轉，請按這裡</a></p>
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbwpUyeWrJ4naNd2SqWHopD51EpJOT4po5Pg1TtpZB3bUWAOI3q8R-Trb0e91QMtL5u61g/exec">
+<title>前往 Google 雲端審核台</title>
+<link rel="stylesheet" href="styles.css">
+<body>
+<main class="container review-page">
+  <p class="eyebrow">REVIEW INBOX</p>
+  <h1>來源審核收件匣</h1>
+  <p>審核資料已移轉至 Google 雲端審核台，正在為你開啟。</p>
+  <p><a class="button" href="https://script.google.com/macros/s/AKfycbwpUyeWrJ4naNd2SqWHopD51EpJOT4po5Pg1TtpZB3bUWAOI3q8R-Trb0e91QMtL5u61g/exec">開啟 Google 雲端審核台 ↗</a></p>
+  <label>資料類型
+    <select id="type"><option value="candidate_sources">候選人政見來源</option><option value="civic_policy_calls">民間／團體文化政策訴求</option></select>
+  </label>
+  <p id="count" class="notice">正在載入…</p>
+  <p id="sync" class="muted">公開鏡像僅供瀏覽；不會把瀏覽器操作寫回資料庫。</p>
+  <p><a id="github" href="#">在 GitHub 查看原始收件匣 ↗</a>　<button id="download" type="button">下載目前清單</button></p>
+  <section id="rows" aria-live="polite"></section>
+</main>
+<script src="review.js"></script>
+</body>
+</html>
