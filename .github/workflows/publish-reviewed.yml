@@ -1,8 +1,8 @@
 name: Publish accepted policy reviews
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
+  # The active publish path is the local Codex automation. Keep this legacy
+  # workflow manual-only as an emergency fallback for service-account users.
   workflow_dispatch:
 
 permissions:
