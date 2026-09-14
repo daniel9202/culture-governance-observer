@@ -1,37 +1,24 @@
 # 本機 AI 雲端審核流程
 
-中央資料庫是 Google Sheet「文化治理觀察站－雲端審核資料庫」：
+更新日期：2026-09-14（Asia/Taipei）
 
-https://docs.google.com/spreadsheets/d/1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k/edit
+## 主機與資料責任
 
-雲端審核台：
+- `Danasus` 是唯一的自動化與 GitHub 發布主機；其他電腦的同名排程必須暫停。
+- Google Sheet 是唯一的處理佇列與人工審核紀錄；Google Apps Script 是人工審核台。
+- Google Drive 只存研究原料與附件；GitHub `main` 只存正式網站與已核准資料。
+- Sheet ID 與 Apps Script 端點是部署設定，僅存於受控本機操作手冊或應用程式設定，不可提交 Git。
 
-https://script.google.com/macros/s/AKfycbwpUyeWrJ4naNd2SqWHopD51EpJOT4po5Pg1TtpZB3bUWAOI3q8R-Trb0e91QMtL5u61g/exec
+## 每 15 分鐘流程
 
-## 正式流程
+1. 最多認領 20 筆 `queued`。
+2. 僅認領未鎖定，或其他裝置鎖定已逾期的資料；立即寫入 `processing`、裝置 `Danasus` 與 30 分鐘鎖定期限。
+3. 讀取原始來源後回填繁中摘要、分類、理由、信心與結構化政策欄位，改為 `complete`；審核狀態維持 `pending`。
+4. 來源內容不足或出錯時改為 `error` 並填錯誤原因；不得編造。
+5. 對人工 `accepted` 但未發布的資料，先 pull、更新正式 CSV、執行 `npm run build`；成功後才 commit、push，最後在 Sheet 填入 `published` 與發布 ID。
 
-1. GitHub Actions 每日執行 `scripts/collect_candidates.py`，只更新 `data/inbox/`。
-2. 本機 Codex 定時工作比較 GitHub inbox 與 Google Sheet 的來源網址，將新來源加入 Sheet，狀態設為 `pending` / `queued`。
-3. Codex 每次只認領最多 10 筆：先寫入 `processing`、處理者／裝置與 30 分鐘鎖定期限，再讀取正文。
-4. Codex 將 AI 摘要、分類、理由、信心與結構化政策欄位寫回 Sheet，AI 處理狀態改為 `complete`；審核狀態仍維持 `pending`。
-5. 人工在雲端審核台接受或拒絕。只有 `accepted` 會進入發佈階段。
-6. 本機 Codex 將 accepted 資料寫入正式 CSV，執行 `scripts/build_data.py`，測試後提交並推送 GitHub；成功後把 Sheet 狀態改為 `published` 並記錄發布 ID。
-7. GitHub Pages 由既有部署工作流程上架。
+## 安全條件
 
-## 跨電腦規則
-
-- Google Sheet 是唯一的處理進度來源，不使用 OneDrive 同步工作目錄。
-- 每台電腦都應使用獨立裝置名稱；不得處理尚未到期、且由其他裝置標記為 `processing` 的資料。
-- 鎖定逾期後可重新認領。完成或失敗時都要清除鎖定期限。
-- 同一個來源網址只保留一筆；新增前必須先比對 Sheet 與前台正式資料。
-- 另一台電腦登入同一 Codex 帳號後，可使用本文件內容建立相同定時工作；是否實際執行仍取決於該電腦的 Codex 本機排程是否啟用。
-
-## Sheet 佇列欄位
-
-- U `AI處理狀態`: `queued`、`processing`、`complete`、`error`、`reviewed`
-- V `處理者／裝置`
-- W `鎖定至`
-- X `AI完成時間`
-- Y `AI錯誤`
-
-本流程使用 Codex 帳號額度與已連線的 Google Drive，不需要 `OPENAI_API_KEY` 或 `GOOGLE_SERVICE_ACCOUNT_JSON`。GitHub 的舊 API 摘要步驟已停用；舊發佈工作流程僅保留手動緊急備援。
+- 不使用 OpenAI API Key、Google Service Account、Cloudflare D1、GitHub PR 或 `data/inbox/` 當處理佇列。
+- 不發布 `pending` 或僅有 AI 摘要的資料。
+- 首次啟用必須完成一筆「認領 → AI 完成 → 人工接受 → 建置 → 發布」測試。
