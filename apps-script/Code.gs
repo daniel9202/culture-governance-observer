@@ -47,3 +47,33 @@ function saveReview(payload) {
     return {ok: true, rowNumber: row, status: payload.status};
   } finally { lock.releaseLock(); }
 }
+
+function saveReviews(payload) {
+  if (!payload || !['accepted', 'rejected'].includes(payload.status) || !Array.isArray(payload.items) || !payload.items.length || payload.items.length > 50) {
+    throw new Error('批次審核資料不合法。');
+  }
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(REVIEW_SHEET);
+    const items = payload.items.map(item => {
+      const row = Number(item.rowNumber);
+      if (!Number.isInteger(row) || row < 2 || row > sheet.getLastRow()) throw new Error('找不到指定資料列。');
+      if (sheet.getRange(row, 7).getDisplayValue() !== item.sourceUrl) throw new Error('有資料列已變更，請重新整理後再批次審核。');
+      return { row, item };
+    });
+    const reviewer = Session.getActiveUser().getEmail() || 'Google 審核者';
+    const reviewedAt = new Date();
+    items.forEach(({ row, item }) => {
+      sheet.getRange(row, 8, 1, 12).setValues([[
+        payload.status,
+        item.summary || '', item.category || '', item.reason || '', item.confidence || '',
+        item.actor || '', item.actorType || '', item.office || '', item.policy || '',
+        item.note || '', reviewer, reviewedAt
+      ]]);
+    });
+    return { ok: true, status: payload.status, rowNumbers: items.map(({ row }) => row) };
+  } finally {
+    lock.releaseLock();
+  }
+}
