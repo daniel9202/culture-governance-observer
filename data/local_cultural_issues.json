@@ -58,6 +58,26 @@
       "source_type": "政府公開說明",
       "last_verified": "2026-09-14",
       "corrections": []
+    },
+    {
+      "id": "issue-tpe-temple-fire-safety-001",
+      "city": "臺北市",
+      "title": "宮廟消防安全與文資修繕機制",
+      "issue_type": "宗教文化與文資安全",
+      "topics": [
+        "宗教文化",
+        "文化資產",
+        "保存修復",
+        "公共安全"
+      ],
+      "summary": "臺北市議員洪婉臻指出，市內1905間宮廟中有不少歷史悠久或具文化資產身分；指南宮火災後，她要求市府協助災後復原，並全面檢視宮廟消防安全，建立跨局處的預防與協助機制。",
+      "related_actor": "臺北市議員洪婉臻；臺北市政府；臺北市宮廟",
+      "published_date": "2026-08-25",
+      "source_title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
+      "source_url": "https://tw.news.yahoo.com/%E6%8C%87%E5%8D%97%E5%AE%AE%E5%A4%A7%E7%81%AB%E6%95%B2%E9%9F%BF%E6%B6%88%E9%98%B2%E9%9A%B1%E6%86%82-%E6%B4%AA%E5%A9%89%E8%87%BB%E7%B1%B2%E6%AA%A2%E8%A6%96%E5%8C%97%E5%B8%821905%E9%96%93%E5%AF%BA%E5%BB%9F-094040065.html",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-14",
+      "corrections": []
     }
   ]
 }
