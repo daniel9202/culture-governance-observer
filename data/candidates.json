@@ -1187,6 +1187,59 @@
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。"
       ]
+    },
+    {
+      "id": "candidate-hualien-mayor-wei-chia-hsien-002",
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "candidate": "魏嘉賢",
+      "party": "無黨籍",
+      "topics": [
+        "原住民族文化",
+        "文化觀光",
+        "地方文化",
+        "文化治理"
+      ],
+      "summary": "主張花蓮聯合豐年節應尊重各部落與族群的文化主體性，將觀光展演與傳統祭儀清楚區分，並把資源投入部落自主文化發展與永續觀光。",
+      "policy_argument": "文化政策不應只辦短期大型活動，而要以部落主體性、文化傳承、青年留鄉與永續觀光為核心。",
+      "concrete_proposals": [
+        "檢視聯合豐年節的文化定位、辦理模式與名稱。",
+        "將嘉年華清楚定位為觀光展演，避免混淆不同族群祭儀。",
+        "支持部落自主發展文化旅遊與深度體驗。",
+        "將資源投入部落文化傳承、青年留鄉與地方觀光永續。"
+      ],
+      "related_statements": [
+        "主張讓文化與資源回到部落，建立以部落主體性為核心的文化治理。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "豐年節舉牌遭警帶走 魏嘉賢籲檢討活動定位、尊重原民主體性",
+            "url": "https://tw.news.yahoo.com/news/%E8%B1%90%E5%B9%B4%E7%AF%80%E8%88%89%E7%89%8C%E9%81%AD%E8%AD%A6%E5%B8%B6%E8%B5%B0-%E9%AD%8F%E5%98%89%E8%B3%A2%E7%B1%B2%E6%AA%A2%E8%A8%8E%E6%B4%BB%E5%8B%95%E5%AE%9A%E4%BD%8D-%E5%B0%8A%E9%87%8D%E5%8E%9F%E6%B0%91%E4%B8%BB%E9%AB%94%E6%80%A7-025436742.html"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "豐年節舉牌遭警帶走 魏嘉賢籲檢討活動定位、尊重原民主體性",
+            "url": "https://tw.news.yahoo.com/news/%E8%B1%90%E5%B9%B4%E7%AF%80%E8%88%89%E7%89%8C%E9%81%AD%E8%AD%A6%E5%B8%B6%E8%B5%B0-%E9%AD%8F%E5%98%89%E8%B3%A2%E7%B1%B2%E6%AA%A2%E8%A8%8E%E6%B4%BB%E5%8B%95%E5%AE%9A%E4%BD%8D-%E5%B0%8A%E9%87%8D%E5%8E%9F%E6%B0%91%E4%B8%BB%E9%AB%94%E6%80%A7-025436742.html"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "豐年節舉牌遭警帶走 魏嘉賢籲檢討活動定位、尊重原民主體性",
+            "url": "https://tw.news.yahoo.com/news/%E8%B1%90%E5%B9%B4%E7%AF%80%E8%88%89%E7%89%8C%E9%81%AD%E8%AD%A6%E5%B8%B6%E8%B5%B0-%E9%AD%8F%E5%98%89%E8%B3%A2%E7%B1%B2%E6%AA%A2%E8%A8%8E%E6%B4%BB%E5%8B%95%E5%AE%9A%E4%BD%8D-%E5%B0%8A%E9%87%8D%E5%8E%9F%E6%B0%91%E4%B8%BB%E9%AB%94%E6%80%A7-025436742.html"
+          }
+        ]
+      },
+      "published_date": "2026-07-20",
+      "source_title": "豐年節舉牌遭警帶走 魏嘉賢籲檢討活動定位、尊重原民主體性",
+      "source_url": "https://tw.news.yahoo.com/news/%E8%B1%90%E5%B9%B4%E7%AF%80%E8%88%89%E7%89%8C%E9%81%AD%E8%AD%A6%E5%B8%B6%E8%B5%B0-%E9%AD%8F%E5%98%89%E8%B3%A2%E7%B1%B2%E6%AA%A2%E8%A8%8E%E6%B4%BB%E5%8B%95%E5%AE%9A%E4%BD%8D-%E5%B0%8A%E9%87%8D%E5%8E%9F%E6%B0%91%E4%B8%BB%E9%AB%94%E6%80%A7-025436742.html",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由審核資料轉列候選人政見；原始收錄類型為民間政策訴求，經補查確認為候選人提出的具體文化政策主張。"
+      ]
     }
   ]
 }

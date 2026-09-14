@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-09-07",
+  "last_updated": "2026-09-14",
   "records": [
     {
       "id": "issue-tpe-dance-center-001",
@@ -19,6 +19,44 @@
       "source_url": "https://art.ltn.com.tw/article/breakingnews/5531027",
       "source_type": "新聞報導",
       "last_verified": "2026-09-02",
+      "corrections": []
+    },
+    {
+      "id": "issue-ntpc-magangk-village-001",
+      "city": "新北市",
+      "title": "馬崗漁村聚落建築群文資登錄重啟",
+      "issue_type": "文化資產保存與聚落居住",
+      "topics": [
+        "文化資產",
+        "海女文化",
+        "聚落保存"
+      ],
+      "summary": "馬崗漁村居民為保存百年石頭屋與海女文化申請登錄聚落建築群，歷經近七年行政訴訟後，法院撤銷新北市政府不予登錄處分；文化資產審議程序將重新啟動。",
+      "related_actor": "馬崗漁村居民；新北市三貂角文化發展協會；環境權保障基金會；新北市文化局",
+      "published_date": "2026-07-24",
+      "source_title": "海女文化、石頭屋迎轉機 馬岡聚落文資案爭訟七年獲勝訴",
+      "source_url": "https://e-info.org.tw/node/243687",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-14",
+      "corrections": []
+    },
+    {
+      "id": "issue-hualien-fuzhu-bridge-001",
+      "city": "花蓮縣",
+      "title": "福住橋暨第二福住橋移置修復",
+      "issue_type": "歷史建築保存與再利用",
+      "topics": [
+        "文化資產",
+        "歷史建築",
+        "保存修復"
+      ],
+      "summary": "花蓮縣政府說明，福住橋與第二福住橋為歷史建築，經文化資產審議同意暫置後，正依永久移置與修復計畫搬遷至南濱滯洪池預定地，並規劃保存其歷史風貌。",
+      "related_actor": "花蓮縣政府建設處；花蓮縣文化資產審議委員會",
+      "published_date": "2026-08-06",
+      "source_title": "澄清福住橋遭拆除誤解 縣府請民眾放心",
+      "source_url": "https://www.hl.gov.tw/News_Content.aspx?n=32725&s=214866&sms=25832",
+      "source_type": "政府公開說明",
+      "last_verified": "2026-09-14",
       "corrections": []
     }
   ]
