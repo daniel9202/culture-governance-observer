@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-09-07",
+  "last_updated": "2026-09-14",
   "records": [
     {
       "id": "candidate-khh-mayor-lai-jui-lung-001",
@@ -520,6 +520,673 @@
       "source_type": "候選人原文",
       "last_verified": "2026-09-06",
       "corrections": []
+    },
+    {
+      "id": "candidate-khh-mayor-lai-jui-lung-002",
+      "city": "高雄市",
+      "office": "縣市長",
+      "candidate": "賴瑞隆",
+      "party": "民主進步黨",
+      "topics": [
+        "社區文化",
+        "文化資產",
+        "傳統藝術",
+        "地方文史",
+        "表演藝術",
+        "文化產業",
+        "國際文化交流"
+      ],
+      "summary": "提出「文化高雄・世界舞台」七大政策，涵蓋圖書館生活圈、文化故事庫、傳統技藝、南方人文研究、表演人才、文化內容基地與國際共製。",
+      "policy_argument": "以文化生根、內容產製與國際共製，讓城市文化設施與地方故事轉化為作品及產業。",
+      "concrete_proposals": [
+        "以61座圖書館串起生活圈。",
+        "建置38區文化故事庫。",
+        "傳承傳統技藝並培育接班。",
+        "布局四大文化內容基地與國際共製。"
+      ],
+      "related_statements": [
+        "提出「文化高雄・世界舞台」作為整體文化政策方向。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
+            "url": "https://www.threads.com/share/FuJ7gG1iq/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
+            "url": "https://www.threads.com/share/FuJ7gG1iq/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
+            "url": "https://www.threads.com/share/FuJ7gG1iq/"
+          }
+        ]
+      },
+      "published_date": "2026-09-07",
+      "source_title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
+      "source_url": "https://www.threads.com/share/FuJ7gG1iq/",
+      "related_sources": [
+        "https://www.threads.com/share/FA5zqGs_j/"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入，與既有賴瑞隆卡片合併呈現。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-mayor-shen-boyang-002",
+      "city": "臺北市",
+      "office": "縣市長",
+      "candidate": "沈伯洋",
+      "party": "民主進步黨",
+      "topics": [
+        "文化觀光",
+        "文化資產",
+        "地方文化"
+      ],
+      "summary": "提出「首都文化徑及山林徑」，將產業、歷史、族群與人權民主等主題串為文化路徑，結合山林觀光。",
+      "policy_argument": "以城市文化路徑串聯歷史記憶與山林觀光，讓文化保存成為可近用的公共體驗。",
+      "concrete_proposals": [
+        "規劃首都文化徑及山林徑。",
+        "規劃三座登山觀光中心。",
+        "串連產業、歷史、族群與人權民主文化主題。"
+      ],
+      "related_statements": [
+        "以登山觀光中心串接文化路徑與山林旅遊。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "沈伯洋拋設登山觀光中心政見",
+            "url": "https://news.pts.org.tw/article/826016"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "沈伯洋拋設登山觀光中心政見",
+            "url": "https://news.pts.org.tw/article/826016"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "沈伯洋拋設登山觀光中心政見",
+            "url": "https://news.pts.org.tw/article/826016"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "沈伯洋拋設登山觀光中心政見",
+      "source_url": "https://news.pts.org.tw/article/826016",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入，與既有沈伯洋卡片合併呈現。"
+      ]
+    },
+    {
+      "id": "candidate-yilan-mayor-lin-kuo-chang-002",
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "candidate": "林國漳",
+      "party": "民主進步黨",
+      "topics": [
+        "文化教育",
+        "多元語言",
+        "地方文化"
+      ],
+      "summary": "提出建構「宜蘭學」，將地方特色與本土語言融入教材，從學校教育建立文化認同。",
+      "policy_argument": "讓地方知識與本土語言進入日常教育，將文化認同建立在認識家鄉的學習經驗上。",
+      "concrete_proposals": [
+        "建構「宜蘭學」。",
+        "將地方特色融入教材。",
+        "將本土語言融入教材。"
+      ],
+      "related_statements": [
+        "從認識家鄉建立文化認同。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "林國漳端教育政見～深耕「宜蘭學」從本土走向世界",
+            "url": "https://www.kamalan-news.com/political/22/18962"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "林國漳端教育政見～深耕「宜蘭學」從本土走向世界",
+            "url": "https://www.kamalan-news.com/political/22/18962"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "林國漳端教育政見～深耕「宜蘭學」從本土走向世界",
+            "url": "https://www.kamalan-news.com/political/22/18962"
+          }
+        ]
+      },
+      "published_date": "2026-09-10",
+      "source_title": "林國漳端教育政見～深耕「宜蘭學」從本土走向世界",
+      "source_url": "https://www.kamalan-news.com/political/22/18962",
+      "related_sources": [
+        "https://2026openchang.tw/"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入，與既有林國漳卡片合併呈現。"
+      ]
+    },
+    {
+      "id": "candidate-tc-councilor-liu-qin-yu-001",
+      "city": "臺中市",
+      "office": "縣市議員",
+      "candidate": "劉芩妤",
+      "party": "台灣民眾黨",
+      "topics": [
+        "圖書館與閱讀"
+      ],
+      "summary": "提出在捷運站與超商增設智慧還書箱，並以 App 預約與配送圖書，擴大公共圖書館服務的生活可近性。",
+      "policy_argument": "讓借還書服務從圖書館延伸到通勤與日常生活場景，降低使用門檻。",
+      "concrete_proposals": [
+        "在捷運站與超商增設智慧還書箱。",
+        "以 App 預約圖書並配送。"
+      ],
+      "related_statements": [
+        "主張以數位預約與生活據點提升閱讀服務。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜劉芩妤 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=167"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜劉芩妤 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=167"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜劉芩妤 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=167"
+          }
+        ]
+      },
+      "published_date": "2026-09-09",
+      "source_title": "台灣民眾黨｜劉芩妤 2026 候選人頁",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=167",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-tn-councilor-wu-yi-chieh-001",
+      "city": "臺南市",
+      "office": "縣市議員",
+      "candidate": "吳依潔",
+      "party": "台灣基進",
+      "topics": [
+        "多元語言",
+        "文化教育",
+        "文化與地方認同"
+      ],
+      "summary": "主張市政以本土文化與本土語言優先，並將設立台語委員會與轉型正義納入施政方向。",
+      "policy_argument": "以制度支持本土語言與文化認同，並處理城市中的威權遺緒。",
+      "concrete_proposals": [
+        "設立台語委員會專責相關事務。",
+        "市政以本土文化與本土語言優先。",
+        "落實轉型正義並去除威權遺緒。"
+      ],
+      "related_statements": [
+        "提出本土文化與本土語言優先的施政立場。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "吳依潔｜台灣基進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/wu-yi-chieh/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "吳依潔｜台灣基進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/wu-yi-chieh/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "吳依潔｜台灣基進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/wu-yi-chieh/"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "吳依潔｜台灣基進・市議員候選人｜台灣前進",
+      "source_url": "https://taiwangogo.tw/wu-yi-chieh/",
+      "related_sources": [],
+      "source_type": "候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-khh-councilor-yu-hsien-ling-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "于仙玲",
+      "party": "小民參政歐巴桑聯盟",
+      "topics": [
+        "多元語言",
+        "文化教育",
+        "文化與地方認同"
+      ],
+      "summary": "將語言文化納入育兒友善政策，主張推動台語幼兒園實驗班。",
+      "policy_argument": "將母語學習提前至幼兒教育，讓語言傳承成為公共育兒支持的一部分。",
+      "concrete_proposals": [
+        "推動台語幼兒園建置實驗班。"
+      ],
+      "related_statements": [
+        "將語言文化列為育兒友善政策的一環。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "于仙玲｜小歐盟・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/yu-hsien-ling/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "于仙玲｜小歐盟・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/yu-hsien-ling/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "于仙玲｜小歐盟・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/yu-hsien-ling/"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "于仙玲｜小歐盟・市議員候選人｜台灣前進",
+      "source_url": "https://taiwangogo.tw/yu-hsien-ling/",
+      "related_sources": [],
+      "source_type": "候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-hcc-councilor-li-mei-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "李玫",
+      "party": "台灣民眾黨",
+      "topics": [
+        "藝文活動",
+        "文化教育",
+        "地方文化與社區營造",
+        "文化場館"
+      ],
+      "summary": "主張增加校園藝文教育預算、支持南區在地藝術團體，並爭取常態藝術季與專業展演空間。",
+      "policy_argument": "透過教育投入、社區藝文活動與公共場館，補足南區藝術資源。",
+      "concrete_proposals": [
+        "增加各校藝文教育預算並定期辦理培育工作坊。",
+        "支持南區在地藝術團體。",
+        "每年固定在南區設置藝文活動並結合走讀。",
+        "規劃新竹市美術館大型專業展演空間。"
+      ],
+      "related_statements": [
+        "主張讓南區有可持續的藝文活動與展演資源。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜李玫 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜李玫 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜李玫 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "台灣民眾黨｜李玫 2026 候選人頁",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-cha-councilor-kao-tsai-ling-001",
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "candidate": "高采翎",
+      "party": "台灣民眾黨",
+      "topics": [
+        "原住民族文化",
+        "多元語言",
+        "文化教育"
+      ],
+      "summary": "提出「族語扎根傳承」，以教育與日常使用支持原住民族語言延續。",
+      "policy_argument": "讓族語傳承從單次活動走向長期的教育與生活支持。",
+      "concrete_proposals": [
+        "推動族語扎根傳承。"
+      ],
+      "related_statements": [
+        "將族語傳承列為政見。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜高采翎 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=212"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜高采翎 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=212"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜高采翎 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=212"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "台灣民眾黨｜高采翎 2026 候選人頁",
+      "source_url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=212",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-khh-councilor-lin-yu-kai-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "林于凱",
+      "party": "台灣民眾黨",
+      "topics": [
+        "客家文化",
+        "文化教育"
+      ],
+      "summary": "提出持續推動客語教育，支持客家語言的日常傳承。",
+      "policy_argument": "以教育作為客語傳承的長期基礎。",
+      "concrete_proposals": [
+        "持續推動客語教育。"
+      ],
+      "related_statements": [
+        "將客語教育列為政見。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜林于凱 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜林于凱 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜林于凱 2026 候選人頁",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "台灣民眾黨｜林于凱 2026 候選人頁",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-councilor-lin-hsiao-wei-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "林筱薇",
+      "party": "小民參政歐巴桑聯盟",
+      "topics": [
+        "原住民族文化",
+        "多元語言",
+        "文化教育",
+        "節慶與民俗文化"
+      ],
+      "summary": "主張都市原住民族政策不應只停留在文化活動或節慶補助，而要形成涵蓋居住、就業、語言、文化學習、照顧與決策參與的支持制度。",
+      "policy_argument": "以制度性資源支持都市原住民族文化學習、人才發展與公共參與。",
+      "concrete_proposals": [
+        "建立都市原住民發展支持系統。",
+        "推動都市原住民族多元人才規劃。",
+        "提高文化學習歷程在特殊選才的採計比重。",
+        "提供文化語言、藝術、音樂、影像與設計等領域升學與就業支持。"
+      ],
+      "related_statements": [
+        "強調都市原住民族政策須超越節慶補助。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "url": "https://www.imvlin.com/whatvdo"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "url": "https://www.imvlin.com/whatvdo"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "url": "https://www.imvlin.com/whatvdo"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+      "source_url": "https://www.imvlin.com/whatvdo",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-councilor-wu-hsin-tai-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "吳欣岱",
+      "party": "台灣基進",
+      "topics": [
+        "多元語言",
+        "文化教育",
+        "文化觀光"
+      ],
+      "summary": "提出「母語永傳承」，以台語實驗小學、本土語言優先的地名英譯與文化景點導覽，推動臺北市的母語公共使用。",
+      "policy_argument": "將母語帶入教育、城市命名與文化觀光資訊，擴大其公共可見度。",
+      "concrete_proposals": [
+        "成立第一所台語實驗小學。",
+        "在地英譯名以本土語言優先。",
+        "盤點文化景點並製作本土語言導覽資訊。"
+      ],
+      "related_statements": [
+        "以「母語永傳承」概括政策方向。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "吳欣岱｜台灣基進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/wu-hsin-tai/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "吳欣岱｜台灣基進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/wu-hsin-tai/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "吳欣岱｜台灣基進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/wu-hsin-tai/"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "吳欣岱｜台灣基進・市議員候選人｜台灣前進",
+      "source_url": "https://taiwangogo.tw/wu-hsin-tai/",
+      "related_sources": [],
+      "source_type": "候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-ntpc-councilor-chen-yu-chieh-001",
+      "city": "新北市",
+      "office": "縣市議員",
+      "candidate": "陳語倢",
+      "party": "台灣民眾黨",
+      "topics": [
+        "文化觀光",
+        "文化產業與文創",
+        "地方文化與社區營造"
+      ],
+      "summary": "提出整合北海岸觀光網、提升旅遊文化體驗，並以青年創業與社區文創活化地方特色。",
+      "policy_argument": "以文化觀光串連地方產業、青年創業與社區文創亮點。",
+      "concrete_proposals": [
+        "整合北海岸觀光網。",
+        "提升旅遊文化體驗。",
+        "輔導青年創業與新產業。",
+        "活化社區文創亮點。"
+      ],
+      "related_statements": [
+        "主張以北海岸觀光與文創帶動地方發展。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜陳語倢",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜陳語倢",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜陳語倢",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
+          }
+        ]
+      },
+      "published_date": "2026-09-09",
+      "source_title": "台灣民眾黨｜陳語倢",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
+    },
+    {
+      "id": "candidate-khh-councilor-hsueh-chao-chi-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "薛兆基",
+      "party": "台灣前進",
+      "topics": [
+        "文化觀光",
+        "宗教文化",
+        "多元語言"
+      ],
+      "summary": "主張串連半屏山、孔廟、蓮池潭與大小龜山，打造兼具宗教文化、夜間景觀與雙語導覽的文化觀光路線。",
+      "policy_argument": "以低擾民的燈光營造、交通改善與雙語導覽，提升傳統宗教景點的文化旅遊體驗。",
+      "concrete_proposals": [
+        "串連半屏山、孔廟、蓮池潭與大小龜山的夜間觀光路線。",
+        "於傳統宗教特色區進行低擾民燈光營造。",
+        "改善停車、交通、環境衛生及雙語導覽設施。"
+      ],
+      "related_statements": [
+        "以宗教文化景點串聯夜間觀光。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "薛兆基｜台灣前進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/hsueh-chao-chi/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "薛兆基｜台灣前進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/hsueh-chao-chi/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "薛兆基｜台灣前進・市議員候選人｜台灣前進",
+            "url": "https://taiwangogo.tw/hsueh-chao-chi/"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "薛兆基｜台灣前進・市議員候選人｜台灣前進",
+      "source_url": "https://taiwangogo.tw/hsueh-chao-chi/",
+      "related_sources": [],
+      "source_type": "候選人頁",
+      "last_verified": "2026-09-14",
+      "corrections": [
+        "2026-09-14｜由舊審核資料遷入。"
+      ]
     }
   ]
 }
