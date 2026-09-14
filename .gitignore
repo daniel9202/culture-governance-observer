@@ -1,6 +1,13 @@
 .DS_Store
 Thumbs.db
 dist/
+node_modules/
+.pnpm-store/
+tmp/
+.codex-remote-attachments/
+%SystemDrive%/
 __pycache__/
 *.pyc
 sources/
+.secrets/
+.tools/
