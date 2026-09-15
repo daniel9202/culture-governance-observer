@@ -11,3 +11,6 @@ __pycache__/
 sources/
 .secrets/
 .tools/
+
+# Local Apps Script deployment settings
+.clasp.json

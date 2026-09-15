@@ -1,1 +1,10 @@
-{"timeZone":"Asia/Taipei","dependencies":{},"exceptionLogging":"STACKDRIVER","runtimeVersion":"V8"}
+{
+  "timeZone": "Etc/GMT-8",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "webapp": {
+    "executeAs": "USER_DEPLOYING",
+    "access": "MYSELF"
+  }
+}
