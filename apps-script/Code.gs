@@ -44,7 +44,7 @@ function getDashboard(filters) {
     return item;
   });
   addDuplicateHints(rows);
-  const counts = {all: rows.length, pending: 0, accepted: 0, rejected: 0, published: 0};
+  const counts = {all: rows.length, pending: 0, accepted: 0, rejected: 0, published: 0, split: 0};
   rows.forEach(row => { if (Object.prototype.hasOwnProperty.call(counts, row['審核狀態'])) counts[row['審核狀態']] += 1; });
   filters = filters || {};
   const filtered = rows.filter(row => {
@@ -105,6 +105,65 @@ function saveReviews(payload) {
   } finally {
     lock.releaseLock();
   }
+}
+
+
+function ensureReviewStatusValidation_(sheet) {
+  const rule = SpreadsheetApp.newDataValidation()
+    .requireValueInList(['pending', 'accepted', 'rejected', 'published', 'split'], true)
+    .setAllowInvalid(false)
+    .build();
+  sheet.getRange(2, 8, Math.max(sheet.getMaxRows() - 1, 1), 1).setDataValidation(rule);
+}
+
+function splitReview(payload) {
+  if (!payload || !Array.isArray(payload.items) || payload.items.length < 2 || payload.items.length > 20) {
+    throw new Error('請至少建立 2 位候選人的拆分資料。');
+  }
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(REVIEW_SHEET);
+    const row = Number(payload.rowNumber);
+    if (!Number.isInteger(row) || row < 2 || row > sheet.getLastRow()) throw new Error('找不到指定資料列。');
+    if (sheet.getRange(row, 7).getDisplayValue() !== payload.sourceUrl) throw new Error('資料列已變更，請重新整理後再拆分。');
+    const source = sheet.getRange(row, 1, 1, HEADERS.length).getValues()[0];
+    const items = payload.items.map(item => ({
+      actor: String(item.actor || '').trim(), actorType: String(item.actorType || '').trim(),
+      office: String(item.office || '').trim(), summary: String(item.summary || '').trim(),
+      policy: String(item.policy || '').trim()
+    }));
+    if (items.some(item => !item.actor || !item.office || !item.policy)) {
+      throw new Error('每位候選人都必須填寫姓名、職務與政策線索。');
+    }
+    ensureReviewStatusValidation_(sheet);
+    const startRow = sheet.getLastRow() + 1;
+    const lastColumn = Math.max(sheet.getLastColumn(), HEADERS.length);
+    sheet.getRange(row, 1, 1, lastColumn).copyTo(sheet.getRange(startRow, 1, items.length, lastColumn), SpreadsheetApp.CopyPasteType.PASTE_FORMAT, false);
+    const reviewer = Session.getActiveUser().getEmail() || 'Google 審核者';
+    const reviewedAt = new Date();
+    const rows = items.map(item => {
+      const next = source.slice();
+      next[7] = 'accepted';
+      next[8] = item.summary || source[8] || '';
+      next[12] = item.actor;
+      next[13] = item.actorType || source[13] || '';
+      next[14] = item.office;
+      next[15] = item.policy;
+      next[16] = '由第 ' + row + ' 列拆分；與同批候選人共用此來源。';
+      next[17] = reviewer;
+      next[18] = reviewedAt;
+      next[19] = '';
+      return next;
+    });
+    sheet.getRange(startRow, 1, rows.length, HEADERS.length).setValues(rows);
+    sheet.getRange(row, 8, 1, 12).setValues([[
+      'split', source[8] || '', source[9] || '', source[10] || '', source[11] || '',
+      source[12] || '', source[13] || '', source[14] || '', source[15] || '',
+      '已拆分為第 ' + startRow + '–' + (startRow + rows.length - 1) + ' 列，原始綜合列不送整合。', reviewer, reviewedAt
+    ]]);
+    return {ok: true, sourceRow: row, newRows: rows.map((_, index) => startRow + index)};
+  } finally { lock.releaseLock(); }
 }
 
 const DRAFT_SHEET = '整合草稿';
