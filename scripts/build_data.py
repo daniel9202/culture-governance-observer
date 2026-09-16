@@ -103,13 +103,18 @@ def build_shared_policy_groups():
         if not any(row.values()):
             continue
         label = f"shared_policy_groups.csv row {index}"
-        required(row, ["id", "city", "office", "party", "candidates", "title", "summary", "published_date", "source_title", "source_url", "last_verified"], label)
+        required(row, ["id", "city", "office", "party", "title", "summary", "published_date", "source_title", "source_url", "last_verified"], label)
+        scope = (row.get("scope") or "regional").strip()
+        if scope not in {"party", "regional"}:
+            raise ValueError(f"{label}: scope must be party or regional")
+        if scope == "regional" and not row.get("candidates", "").strip():
+            raise ValueError(f"{label}: regional shared policies require candidates")
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
         records.append({
-            "id": row["id"], "city": row["city"], "office": row["office"], "party": row["party"],
-            "candidates": [x.strip() for x in row["candidates"].split("||") if x.strip()],
+            "id": row["id"], "scope": scope, "city": row["city"], "office": row["office"], "party": row["party"],
+            "candidates": [x.strip() for x in row.get("candidates", "").split("||") if x.strip()],
             "title": row["title"], "topics": [x.strip() for x in row.get("topics", "").split("|") if x.strip()],
             "summary": row["summary"], "concrete_proposals": [x.strip() for x in row.get("concrete_proposals", "").split("||") if x.strip()],
             "published_date": row["published_date"], "source_title": row["source_title"], "source_url": row["source_url"],

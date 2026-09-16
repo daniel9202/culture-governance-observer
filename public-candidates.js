@@ -21,7 +21,7 @@ const sourceEntries=record=>{
   });
   return entries;
 };
-const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],sources:[],published_dates:[],corrections:[],shared_policies:[]});
+const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
 // 候選人個人資料與多人共同提出的政見分開保存，但在同一張候選人卡片呈現。
 window.groupCandidateRecords=(records,sharedPolicies=[])=>{
@@ -43,17 +43,26 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     group.corrections.push(...record.corrections);
     if(String(record.last_verified||'')>String(group.last_verified||''))group.last_verified=record.last_verified;
   });
-  sharedPolicies.forEach(policy=>(policy.candidates||[]).forEach(candidate=>{
-    const group=ensureGroup({city:policy.city,office:policy.office,candidate,party:policy.party,last_verified:policy.last_verified});
-    group.party=group.party||policy.party;
-    group.topics.push(...(policy.topics||[]));
-    group.shared_policies.push(policy);
-    if(String(policy.last_verified||'')>String(group.last_verified||''))group.last_verified=policy.last_verified;
-  }));
+  [...sharedPolicies].sort((a,b)=>(a.scope==="party")-(b.scope==="party")).forEach(policy=>{
+    const scope=policy.scope||"regional";
+    const candidates=scope==="party"
+      ? [...groups.values()].filter(record=>record.party===policy.party&&record.office===policy.office)
+      : (policy.candidates||[]).map(candidate=>({city:policy.city,office:policy.office,candidate,party:policy.party,last_verified:policy.last_verified}));
+    candidates.forEach(candidate=>{
+      const group=ensureGroup(candidate);
+      group.party=group.party||policy.party;
+      group.topics.push(...(policy.topics||[]));
+      group.shared_policies.push(policy);
+      (scope==="party"?group.party_shared_policies:group.regional_shared_policies).push(policy);
+      if(String(policy.last_verified||'')>String(group.last_verified||''))group.last_verified=policy.last_verified;
+    });
+  });
   return [...groups.values()].map(group=>({...group,
     topics:uniqueValues(group.topics),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),
     sources:[...new Map(group.sources.map(source=>[source.url,source])).values()],published_dates:uniqueValues(group.published_dates).sort(),
     shared_policies:[...new Map(group.shared_policies.map(policy=>[policy.id,policy])).values()],
+    party_shared_policies:[...new Map(group.party_shared_policies.map(policy=>[policy.id,policy])).values()],
+    regional_shared_policies:[...new Map(group.regional_shared_policies.map(policy=>[policy.id,policy])).values()],
   }));
 };
 window.loadCandidateDataset=async()=>{
