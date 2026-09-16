@@ -10,7 +10,7 @@ function addDuplicateHints(rows) {
   const byTitleActorCity = {};
   rows.forEach(row => {
     const url = String(row['來源網址'] || '').trim().toLowerCase();
-    if (url) (byUrl[url] ||= []).push(row.rowNumber);
+    if (url) { if (!byUrl[url]) byUrl[url] = []; byUrl[url].push(row.rowNumber); }
     const title = duplicateText(row['來源標題']);
     const actor = duplicateText(row['候選人／提出者']);
     const city = duplicateText(row['縣市']);
