@@ -43,7 +43,7 @@ const siteFiles = [
   "regions.js", "region.html", "region.js",
 ];
 const dataFiles = [
-  "candidates.json", "civic_policy_calls.json", "governments.json",
+  "candidates.json", "shared_policy_groups.json", "civic_policy_calls.json", "governments.json",
   "local_cultural_issues.json", "pledge_fulfillment.json", "region_metrics.json",
 ];
 
