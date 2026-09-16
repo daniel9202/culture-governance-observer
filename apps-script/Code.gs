@@ -106,3 +106,43 @@ function saveReviews(payload) {
     lock.releaseLock();
   }
 }
+
+const DRAFT_SHEET = '整合草稿';
+const DRAFT_HEADERS = ['草稿ID','草稿狀態','資料類型','縣市','職務','候選人／提出者','政黨／提出者類型','政策論述','具體主張','相關發言','來源清單','整合依據','前台處理方式','建立時間','最後更新'];
+function integrationSheet_() {
+  const book = SpreadsheetApp.openById(SPREADSHEET_ID);
+  let sheet = book.getSheetByName(DRAFT_SHEET);
+  if (!sheet) { sheet = book.insertSheet(DRAFT_SHEET); sheet.getRange(1, 1, 1, DRAFT_HEADERS.length).setValues([DRAFT_HEADERS]); sheet.setFrozenRows(1); }
+  const headers = sheet.getRange(1, 1, 1, DRAFT_HEADERS.length).getDisplayValues()[0];
+  if (DRAFT_HEADERS.some((header, index) => headers[index] !== header)) throw new Error('整合草稿欄位與程式版本不符。');
+  return sheet;
+}
+function getIntegrationDashboard(filters) {
+  const sheet = integrationSheet_();
+  const values = sheet.getDataRange().getDisplayValues();
+  const rows = values.slice(1).filter(row => row.some(Boolean)).map((row, index) => {
+    const item = Object.fromEntries(DRAFT_HEADERS.map((header, column) => [header, row[column] || '']));
+    item.rowNumber = index + 2;
+    return item;
+  });
+  filters = filters || {};
+  const filtered = rows.filter(row => {
+    if (filters.status && filters.status !== 'all' && row['草稿狀態'] !== filters.status) return false;
+    if (filters.city && filters.city !== 'all' && row['縣市'] !== filters.city) return false;
+    const query = String(filters.query || '').trim().toLowerCase();
+    return !query || [row['候選人／提出者'], row['政策論述'], row['具體主張'], row['縣市']].join(' ').toLowerCase().includes(query);
+  });
+  const counts = {draft_ready: 0, rework: 0, published: 0};
+  rows.forEach(row => { if (Object.prototype.hasOwnProperty.call(counts, row['草稿狀態'])) counts[row['草稿狀態']] += 1; });
+  return {counts, items: filtered.slice(0, 100), cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
+}
+function saveIntegrationDecision(payload) {
+  if (!payload || !['published', 'rework'].includes(payload.status)) throw new Error('整合稿狀態不合法。');
+  const sheet = integrationSheet_();
+  const row = Number(payload.rowNumber);
+  if (!Number.isInteger(row) || row < 2 || row > sheet.getLastRow()) throw new Error('找不到整合稿。');
+  if (sheet.getRange(row, 1).getDisplayValue() !== payload.draftId) throw new Error('整合稿已變更，請重新整理。');
+  sheet.getRange(row, 2).setValue(payload.status);
+  sheet.getRange(row, 15).setValue(new Date());
+  return {ok: true, rowNumber: row, status: payload.status};
+}
