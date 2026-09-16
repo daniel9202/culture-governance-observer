@@ -97,6 +97,26 @@ def build_candidates():
         })
     return records
 
+def build_shared_policy_groups():
+    records = []
+    for index, row in enumerate(rows("shared_policy_groups.csv"), start=2):
+        if not any(row.values()):
+            continue
+        label = f"shared_policy_groups.csv row {index}"
+        required(row, ["id", "city", "office", "party", "candidates", "title", "summary", "published_date", "source_title", "source_url", "last_verified"], label)
+        valid_date(row["published_date"], label)
+        valid_date(row["last_verified"], label)
+        valid_url(row["source_url"], label)
+        records.append({
+            "id": row["id"], "city": row["city"], "office": row["office"], "party": row["party"],
+            "candidates": [x.strip() for x in row["candidates"].split("||") if x.strip()],
+            "title": row["title"], "topics": [x.strip() for x in row.get("topics", "").split("|") if x.strip()],
+            "summary": row["summary"], "concrete_proposals": [x.strip() for x in row.get("concrete_proposals", "").split("||") if x.strip()],
+            "published_date": row["published_date"], "source_title": row["source_title"], "source_url": row["source_url"],
+            "source_type": row.get("source_type", "共同政見記者會"), "last_verified": row["last_verified"],
+            "corrections": [x.strip() for x in row.get("correction_log", "").split("||") if x.strip()]
+        })
+    return records
 def build_local_issues():
     records = []
     for index, row in enumerate(rows("local_cultural_issues.csv"), start=2):
@@ -257,6 +277,7 @@ def write(name, records):
 
 if __name__ == "__main__":
     write("candidates.json", build_candidates())
+    write("shared_policy_groups.json", build_shared_policy_groups())
     write("local_cultural_issues.json", build_local_issues())
     write("civic_policy_calls.json", build_civic_calls())
     write("governments.json", build_governments())

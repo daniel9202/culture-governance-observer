@@ -199,3 +199,5 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 @media(max-width:1000px){.stats-grid,.hub-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.stats-grid,.support-card,.gov-card,.hub-grid{grid-template-columns:1fr}.support-card{gap:1rem}.stat-card{min-height:auto}.gov-card h3,.gov-card .metric,.gov-card p,.gov-card>a{grid-column:1;grid-row:auto}.finance-chart{padding:1.2rem}.finance-toolbar span{width:100%;margin-right:0}}
 @media(max-width:760px){.region-entry-grid{grid-template-columns:1fr}.region-entry-stat,.region-entry-link{min-height:180px}}
+
+.policy-shared{border-top:1px solid var(--line);padding-top:1rem}.shared-policy-item{padding:.8rem;background:#f4f0e7;border-left:3px solid var(--accent);margin-top:.55rem}.shared-policy-item h5{margin:0 0:.4rem;font-size:.95rem}.shared-policy-item p{font-size:.9rem}.shared-policy-item ul{margin:.45rem 0;padding-left:1.2rem}.shared-policy-item a{font-size:.84rem;font-weight:700}

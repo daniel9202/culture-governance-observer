@@ -21,3 +21,7 @@
 ## `pledge_fulfillment.csv`
 
 每筆記錄一項可查證的文化政策承諾，包含承諾內容、來源、職權範圍、查核狀態與證據。`status` 使用 `fulfilled`、`partial`、`in_progress`、`no_verified_progress`、`not_assessable` 五種值。主要證據填 `evidence_source_title` 與 `evidence_source_url`；同一筆若有多份佐證，填 `additional_evidence`，每筆格式為 `標題::網址`，多筆以 `||` 分隔。
+
+## `shared_policy_groups.csv`
+
+收錄由多位候選人共同提出、但不應誤認為任何一人單獨提出的政見。每筆以 `city`、`office`、`party` 與 `candidates`（多位姓名以 `||` 分隔）指定適用對象。前台會在每位候選人的個人卡片另外顯示「共同政見」欄位；個人政見、共同政見與來源維持分開。
