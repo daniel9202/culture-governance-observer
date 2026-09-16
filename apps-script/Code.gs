@@ -14,7 +14,7 @@ function addDuplicateHints(rows) {
     const title = duplicateText(row['來源標題']);
     const actor = duplicateText(row['候選人／提出者']);
     const city = duplicateText(row['縣市']);
-    if (title && actor && city) (byTitleActorCity[`${title}|${actor}|${city}`] ||= []).push(row.rowNumber);
+    if (title && actor && city) { const key = `${title}|${actor}|${city}`; if (!byTitleActorCity[key]) byTitleActorCity[key] = []; byTitleActorCity[key].push(row.rowNumber); }
   });
   rows.forEach(row => {
     const hints = [];
