@@ -1,5 +1,126 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-09-16",
-  "records": []
+  "last_updated": "2026-09-17",
+  "records": [
+    {
+      "id": "civic-tpe-temple-fire-safety-001",
+      "city": "臺北市",
+      "proposer": "洪婉臻",
+      "proposer_type": "臺北市議員／公共倡議者",
+      "topics": [
+        "宗教文化資產",
+        "公共安全"
+      ],
+      "summary": "洪婉臻指出指南宮火災暴露寺廟與文化資產的消防風險，要求市府全面盤點宮廟消防安全，並建立跨局處預防與協助機制。",
+      "requested_action": "全面檢視臺北市宮廟消防安全，特別納入具文化資產身分者。||建立文化、建管與消防等跨局處預防及協助機制。",
+      "published_date": "2026-08-25",
+      "source_title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
+      "source_url": "https://udn.com/news/story/7323/9712958?from=searchresult",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17：依來源補入寺廟消防與文化資產保存訴求。"
+      ]
+    },
+    {
+      "id": "civic-ntpc-magang-preservation-001",
+      "city": "新北市",
+      "proposer": "馬崗聚落居民與文資倡議團體",
+      "proposer_type": "民間團體／居民",
+      "topics": [
+        "聚落文化資產",
+        "海洋文化"
+      ],
+      "summary": "馬崗聚落居民與文資倡議團體要求重新啟動文化資產審議，將海女文化、百年石頭屋與漁村生活文化納入聚落建築群保存。",
+      "requested_action": "重新啟動馬崗聚落文化資產審議。||調查並保存海女文化、百年石頭屋與漁村生活文化。||爭取登錄為聚落建築群。",
+      "published_date": "2026-07-23",
+      "source_title": "海女文化、石頭屋迎轉機 馬岡聚落文資案爭訟七年獲勝訴",
+      "source_url": "https://e-info.org.tw/node/243687",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17：登錄仍須依法定文資審議程序辦理。"
+      ]
+    },
+    {
+      "id": "civic-ila-private-heritage-001",
+      "city": "宜蘭縣",
+      "proposer": "宜蘭文史工作者與文化團體",
+      "proposer_type": "民間團體／文史工作者",
+      "topics": [
+        "文化資產保存",
+        "私人產權"
+      ],
+      "summary": "宜蘭文史工作者與文化團體呼籲縣府正視私人文化資產的維護困境，透過與所有權人溝通、建立信任及協助擬定管理維護計畫，促成保存與修復。",
+      "requested_action": "協助私人文化資產擬定管理維護計畫。||在調查與修復過程中加強與所有權人溝通、建立信任。||由政府提供保存與修復協助。",
+      "published_date": "2026-08-11",
+      "source_title": "宜蘭私人文化資產難擬維護計畫 文史工作者建議以溝通建立信任",
+      "source_url": "https://news.pts.org.tw/article/821802",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17：本筆只收錄民間提出的制度性訴求。"
+      ]
+    },
+    {
+      "id": "civic-tao-guishan-cultural-ecology-001",
+      "city": "桃園市",
+      "proposer": "李宗豪",
+      "proposer_type": "桃園市議員／公共倡議者",
+      "topics": [
+        "地方走讀",
+        "文化生態"
+      ],
+      "summary": "李宗豪主張串聯龜山的地方文化資源與山林生態，規劃具地方特色的走讀路線，讓文化記憶、環境教育與社區參與結合。",
+      "requested_action": "提升對地方傳統文化團體的補助與輔導。||加速協和磚廠文資公園規劃並協調同步開放。||串聯憲光二村、眷村故事館、曹家洋樓與大棟山，規劃龜山文化生態走讀路線。",
+      "published_date": "2026-08-28",
+      "source_title": "龜山文化資源、山林生態豐富 李宗豪盼串聯打造特色走讀路線",
+      "source_url": "https://twline365.com/2026/08/1213470/",
+      "source_type": "議會質詢報導",
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17：依質詢內容補入傳統文化團體、文資公園與走讀路線訴求。"
+      ]
+    },
+    {
+      "id": "civic-hsc-hakka-development-001",
+      "city": "新竹縣",
+      "proposer": "新竹縣在地民間團體與連署參與者",
+      "proposer_type": "民間團體／居民",
+      "topics": [
+        "客家文化資產",
+        "開發保存"
+      ],
+      "summary": "在地民間團體與連署參與者憂心璞玉計畫及竹科三期開發衝擊客庄，呼籲在開發決策中納入客家聚落、文化資產與地方記憶的完整調查、保存及公眾參與。",
+      "requested_action": "在璞玉計畫與竹科三期開發中納入客庄文化資產調查與保存。||保障在地居民的資訊公開、參與及意見表達。||維護客家聚落與地方記憶。",
+      "published_date": "2026-09-08",
+      "source_title": "憂竹縣璞玉計畫與竹科三期開發 民團發起連署籲搶救客庄文化資產",
+      "source_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9lRENkWWs5RjkyT0M5cGdRRHJOcjlCdUpsQ2l6c3gtbGtaM0Z2U25KN3czY0k4M1F6SHRXbzJXSDFQTUJnWFlVZDhkb190WmVFcUFpb0VTSmIwTXB0eVpmc1FMTXjSAWpBVV95cUxOVXQ1ckN1UHVMdnRfSi1BazRiQ08tdHdVNXhEZm1PZjVia0k1RXJIa0hVLW1UckhEX0RZWmlmSnpkdTV5MWRUQ2RuSVRkbGg3OVdWOHVWOS1IR2NVNzlxTHJPMmxPS2hkN1pn?oc=5",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17：依連署報導整理；具體團體名稱與連署內容待後續補充。"
+      ]
+    },
+    {
+      "id": "civic-cyi-animal-memorial-001",
+      "city": "嘉義市",
+      "proposer": "嘉義地方文史人士與居民",
+      "proposer_type": "民間團體／居民",
+      "topics": [
+        "地方記憶",
+        "文化資產"
+      ],
+      "summary": "嘉義地方文史人士與居民希望保存北香湖公園的獸魂碑，呼籲市府啟動文資調查與評估，研議納入文化資產保存程序。",
+      "requested_action": "啟動北香湖獸魂碑的文資調查與價值評估。||研議將獸魂碑納入文化資產保存程序。||保存地方祭祀與生命倫理記憶。",
+      "published_date": "2026-08-26",
+      "source_title": "中元心願…大樹環抱北香湖公園88歲無主獸魂碑 嘉義人盼納文資保存",
+      "source_url": "https://udn.com/news/amp/story/7266/9714495",
+      "source_type": "新聞報導",
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17：原始報導指出此碑無正式管理單位；後續仍須依法定程序申請與審議。"
+      ]
+    }
+  ]
 }
