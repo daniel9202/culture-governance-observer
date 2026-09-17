@@ -10,14 +10,19 @@ const normaliseApprovedCandidate=record=>({
   corrections:Array.isArray(record.corrections)?record.corrections:[],
   source_type:record.source_type||'審核上架',
 });
+const sourceTitle=(title,url)=>{
+  const clean=String(title||'').trim();
+  if(clean&&!/^相關來源 \d+$/.test(clean)&&clean!=='來源')return clean;
+  try{return `延伸來源（${new URL(url).hostname.replace(/^www\./,'')}）`;}catch{return '延伸來源';}
+};
 const sourceEntries=record=>{
   const entries=[];
-  const add=(title,url)=>{if(typeof url==='string'&&url.trim())entries.push({title:(title||'來源').trim(),url:url.trim()})};
+  const add=(title,url)=>{if(typeof url==='string'&&url.trim())entries.push({title:sourceTitle(title,url.trim()),url:url.trim()})};
   add(record.source_title,record.source_url);
   Object.values(record.field_sources||{}).flat().forEach(source=>add(source?.title,source?.url));
   (record.related_sources||[]).forEach((source,index)=>{
-    if(typeof source==='string')add(`相關來源 ${index+1}`,source);
-    else add(source?.title||`相關來源 ${index+1}`,source?.url);
+    if(typeof source==='string')add('',source);
+    else add(source?.title,source?.url);
   });
   return entries;
 };

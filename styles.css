@@ -59,9 +59,13 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .policy-statements ul{margin:.2rem 0 0;padding-left:1.2rem}
 .policy-statements p{color:var(--muted);font-size:.9rem}
 .policy-sources{border-top:1px solid var(--line);padding-top:1rem}
-.source-list{margin:.2rem 0 0;padding-left:1.2rem;font-size:.86rem}
-.source-list li+li{margin-top:.4rem}
-.source-list a{font-weight:700}
+.source-list{list-style:none;margin:.2rem 0 0;padding:0;font-size:.86rem}
+.source-list li+li{margin-top:.42rem}
+.source-link{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;gap:.35rem;align-items:baseline;text-decoration:none}
+.source-link:hover .source-headline{text-decoration:underline}
+.source-date,.source-outlet{font-size:.74rem;color:var(--muted);white-space:nowrap}
+.source-outlet{font-weight:700}
+.source-headline{min-width:0;font-weight:700;overflow-wrap:anywhere}
 .source-row{border-top:1px solid var(--line);padding-top:1rem;margin-top:1rem;display:flex;justify-content:space-between;gap:1rem;font-size:.78rem}
 .source-row a{font-weight:700}
 .verification{color:var(--muted)}

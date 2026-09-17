@@ -7,7 +7,12 @@ const options=(id,values)=>{const el=document.getElementById(id);values.forEach(
 let platforms=[];
 const shouldShowSharedPolicies=document.body.dataset.officeScope==='councilor';
 const bulletList=(values,emptyText)=>values.length?`<ul>${values.map(value=>`<li>${escapeHtml(value)}</li>`).join('')}</ul>`:`<p>${escapeHtml(emptyText)}</p>`;
-const sourceList=record=>record.sources.length?`<ul class="source-list">${record.sources.map((source,index)=>`<li><a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener">${escapeHtml(source.title||`來源 ${index+1}`)} ↗</a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
+const sourceContent=(source,index)=>{
+  const title=String(source.title||`來源連結 ${index+1}`).trim(),parts=title.split('｜').map(part=>part.trim()).filter(Boolean);
+  if(/^\d{4}\/\d{1,2}\/\d{1,2}$/.test(parts[0]||'')&&parts.length>=3)return `<span class="source-date">${escapeHtml(parts[0])}</span><span class="source-outlet">${escapeHtml(parts[1])}</span><span class="source-headline">${escapeHtml(parts.slice(2).join('｜'))}</span>`;
+  return `<span class="source-headline">${escapeHtml(title)}</span>`;
+};
+const sourceList=record=>record.sources.length?`<ul class="source-list">${record.sources.map((source,index)=>`<li><a class="source-link" href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener">${sourceContent(source,index)}<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
 const sharedPolicyList=policies=>policies.map(policy=>`<section class="shared-policy-item"><h5>${escapeHtml(policy.title)}</h5><p>${escapeHtml(policy.summary)}</p>${bulletList(policy.concrete_proposals||[],'尚未收錄具體主張。')}<a href="${escapeHtml(safeUrl(policy.source_url))}" target="_blank" rel="noopener">${escapeHtml(policy.source_title||'查看共同政見來源')} ↗</a></section>`).join('');
 const sharedPolicySection=(title,policies)=>policies.length?`<div class="policy-layer policy-shared"><h4>${title}</h4>${sharedPolicyList(policies)}</div>`:'';
 function render(){
