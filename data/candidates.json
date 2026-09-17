@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-09-16",
+  "last_updated": "2026-09-17",
   "records": [
     {
       "id": "candidate-khh-mayor-lai-jui-lung-001",
@@ -173,17 +173,22 @@
       "topics": [
         "客家文化",
         "文化教育",
-        "文化場館"
+        "文化場館",
+        "文化觀光"
       ],
-      "summary": "提出客家文化傳承與創新政策，包括將客家社團補助提高至每班最高10萬元、朝完成15座哈客館推進，並提高客語教師待遇。",
-      "policy_argument": "以場館、社團與語言教育三條路徑，擴大都市客家文化的日常傳承。",
+      "summary": "除客家文化傳承政策外，也提出「新北職人 Passport」，以觀光工廠與產業文化館串連文化體驗、教育與地方觀光。",
+      "policy_argument": "以場館、社團與語言教育擴大客家文化傳承，並以產業文化館與觀光工廠打造職人文化體驗。",
       "concrete_proposals": [
         "將客家社團補助提高至每班最高10萬元。",
         "朝完成15座哈客館推進。",
-        "提高客語教師待遇。"
+        "提高客語教師待遇。",
+        "串連18家觀光工廠與產業文化館。",
+        "推出職人護照與集章探索。",
+        "將場館深化為職探、手作學習及銀髮健康參與場域。"
       ],
       "related_statements": [
-        "強調客家政策必須兼顧文化傳承與制度支持。"
+        "強調客家政策必須兼顧文化傳承與制度支持。",
+        "以職人 Passport 結合文化體驗、教育及地方觀光。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -208,10 +213,14 @@
       "published_date": "2026-06-17",
       "source_title": "搶客家票 李四川提6政見 加碼社團補助",
       "source_url": "https://udn.com/news/story/124652/9570752",
-      "related_sources": [],
+      "related_sources": [
+        "https://www.cna.com.tw/news/aloc/202607070391.aspx"
+      ],
       "source_type": "新聞報導",
-      "last_verified": "2026-09-06",
-      "corrections": []
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17｜整合已審核中央社來源：補入新北職人 Passport 政策。"
+      ]
     },
     {
       "id": "candidate-hcc-mayor-chuang-ching-cheng-001",
@@ -381,18 +390,23 @@
         "客家文化",
         "文化治理",
         "文化觀光",
-        "地方創生"
+        "地方創生",
+        "原住民族文化"
       ],
-      "summary": "發布《花蓮客家文化願景白皮書》，提出客語生活化與教育扎根、客庄產業創生、族群主流化、客庄文化生活廊道及客庄慢旅與文化觀光五項政策。",
-      "policy_argument": "讓客家文化從語言教育延伸至產業、空間、觀光及縣政治理。",
+      "summary": "除客家文化願景外，也提出以文化治理與部落共好為方向，整合醫療、長照、社福、原民與文化健康站資源，尊重原住民族文化自治與文化表達權。",
+      "policy_argument": "讓客家文化與原住民族文化都從語言、產業、空間與公共照顧進入縣政治理。",
       "concrete_proposals": [
         "推動客語生活化與教育扎根。",
         "支持客庄產業創生與族群主流化。",
         "建構客庄文化生活廊道。",
-        "發展客庄慢旅與文化觀光。"
+        "發展客庄慢旅與文化觀光。",
+        "整合醫療、長照、社福、原民及文化健康站資源。",
+        "尊重原住民族文化自治與文化表達權。",
+        "讓文化資源進入部落。"
       ],
       "related_statements": [
-        "以「文化新生帶動產業創生與地方發展」說明客家政策的整體定位。"
+        "以「文化新生帶動產業創生與地方發展」說明客家政策的整體定位。",
+        "以文化治理、部落共好說明原住民族部落照顧政策方向。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -417,10 +431,14 @@
       "published_date": "2026-08-24",
       "source_title": "游淑貞發布《花蓮客家文化願景白皮書》打造客庄花蓮！以文化新生帶動產業創生與地方發展",
       "source_url": "https://news.tvbs.com.tw/life/4011947",
-      "related_sources": [],
+      "related_sources": [
+        "https://www.cna.com.tw/news/aloc/202609130075.aspx"
+      ],
       "source_type": "新聞報導",
-      "last_verified": "2026-09-06",
-      "corrections": []
+      "last_verified": "2026-09-17",
+      "corrections": [
+        "2026-09-17｜整合已審核中央社來源：補入原住民族部落照顧與文化自治政策。"
+      ]
     },
     {
       "id": "candidate-hualien-mayor-chang-chun-001",
@@ -1350,16 +1368,22 @@
         "舊城活化",
         "城市文化",
         "新住民文化",
-        "多元文化"
+        "多元文化",
+        "表演藝術",
+        "文化產業"
       ],
-      "summary": "以中西區串聯與舊城復興，回應城市文化特色與都市發展。",
-      "policy_argument": "以中西區串聯與舊城復興，回應城市文化特色與都市發展。",
+      "summary": "以中西區串聯與舊城復興為基礎，並提出星光計畫、文化創投與人才孵化、巷弄文化小蜜蜂等文化政策。",
+      "policy_argument": "以中西區串聯與舊城復興，結合國際交流、文化創投、人才孵化與社區表演，回應城市文化特色與都市發展。",
       "concrete_proposals": [
         "推動台中舊城復興。",
-        "串聯中西區、找回城市文化特色。"
+        "串聯中西區、找回城市文化特色。",
+        "推動舊城星光計畫與國際交流。",
+        "建立文化創投與人才孵化機制。",
+        "推動巷弄文化小蜜蜂，將表演帶進社區與廟口廣場。"
       ],
       "related_statements": [
-        "以西區競選據點說明舊城復興藍圖。"
+        "以西區競選據點說明舊城復興藍圖。",
+        "官方政見頁將舊城活化、文化產業支持與社區表演列為文化面向。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -1385,12 +1409,14 @@
       "source_title": "2026/8/30｜匯流新聞網｜競總落腳西區 江啟臣拋舊城復興藍圖 - 匯流新聞網",
       "source_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBtQlhaQnBCTFZ3bFlCVnhOV09zUFhDX1pRUEtwU0ZXZkFSWmNQSl8xMFpISk5RU1pLcXppTXBNZE5waVhjT1l2R1ln?oc=5",
       "related_sources": [
-        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5tb2VNYmdFSkhsejdqVl9yN2JZcHc5UTI4ZUREZmZCcUQwU1lxOURUOVk3NFlORERjcVY1WFo2aWRRN3ZzZ1cxWFdRR3liaXItVHpaV1dLZUZ4TEw5SE9NWTlQWFRDU3Zl?oc=5"
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5tb2VNYmdFSkhsejdqVl9yN2JZcHc5UTI4ZUREZmZCcUQwU1lxOURUOVk3NFlORERjcVY1WFo2aWRRN3ZzZ1cxWFdRR3liaXItVHpaV1dLZUZ4TEw5SE9NWTlQWFRDU3Zl?oc=5",
+        "https://taichungway.tw/future"
       ],
       "source_type": "新聞報導",
-      "last_verified": "2026-09-16",
+      "last_verified": "2026-09-17",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-10 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-10 整合稿發布。",
+        "2026-09-17｜整合已審核官方政見頁：補入星光計畫、文化創投與巷弄文化小蜜蜂。"
       ]
     },
     {
