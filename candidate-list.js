@@ -7,9 +7,10 @@ const options=(id,values)=>{const el=document.getElementById(id);values.forEach(
 let platforms=[];
 const shouldShowSharedPolicies=document.body.dataset.officeScope==='councilor';
 const bulletList=(values,emptyText)=>values.length?`<ul>${values.map(value=>`<li>${escapeHtml(value)}</li>`).join('')}</ul>`:`<p>${escapeHtml(emptyText)}</p>`;
+const sourceHeadline=(headline,outlet)=>headline.replace(` - ${outlet}`,'').replace(/\s*-\s*(政治|地方|生活|社會|文化|財經|國際|娛樂|焦點)\s*$/,'').trim();
 const sourceContent=(source,index)=>{
   const title=String(source.title||`來源連結 ${index+1}`).trim(),parts=title.split('｜').map(part=>part.trim()).filter(Boolean);
-  if(/^\d{4}\/\d{1,2}\/\d{1,2}$/.test(parts[0]||'')&&parts.length>=3)return `<span class="source-date">${escapeHtml(parts[0])}</span><span class="source-outlet">${escapeHtml(parts[1])}</span><span class="source-headline">${escapeHtml(parts.slice(2).join('｜'))}</span>`;
+  if(/^\d{4}\/\d{1,2}\/\d{1,2}$/.test(parts[0]||'')&&parts.length>=3)return `<span class="source-date">${escapeHtml(parts[0])}</span><span class="source-outlet">${escapeHtml(parts[1])}</span><span class="source-headline">${escapeHtml(sourceHeadline(parts.slice(2).join('｜'),parts[1]))}</span>`;
   return `<span class="source-headline">${escapeHtml(title)}</span>`;
 };
 const sourceList=record=>record.sources.length?`<ul class="source-list">${record.sources.map((source,index)=>`<li><a class="source-link" href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener">${sourceContent(source,index)}<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
