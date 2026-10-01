@@ -127,13 +127,13 @@ npm run build
 | 修改中 | `apps-script/Index.html` | 在既有審核台加入「準備上架」工作區，以及審核後移除已處理卡片、避免逐筆整頁重載的介面調整。尚未 commit，需以實際 Apps Script 環境手動測試。 |
 | 修改中 | `data/candidates.json`、`civic_policy_calls.json`、`governments.json`、`local_cultural_issues.json`、`pledge_fulfillment.json`、`region_metrics.json`、`shared_policy_groups.json` | 皆為衍生 JSON；很可能對應當前建置輸出。未先確認來源 CSV 與 `npm run build` 前，不要單獨提交。 |
 | 未追蹤 | `backups/` | 含 `cloudflare-d1-20260914/` 的 D1 schema 與資料快照。視為本機備份，不應在未確認資料敏感性與需求前加入版本庫。 |
-| 新增（未 commit） | `map.html`、`map.js`、`map-geometry.json`、`scripts/build_map_geometry.py` | 文化政見地圖，見下方「文化政見地圖」一節。本機已測、`npm run build` 通過，**尚未 commit／push**。 |
-| 新增（未 commit） | `data/input/registered_candidates.csv`、`data/registered_candidates.json`、`scripts/import_cec_registrations.py` | 中選會登記名冊（1,583 筆）與轉檔腳本；`build_data.py` 已加驗證，`data/schema.md` 已補說明。 |
-| 修改（未 commit） | 9 個公開頁的導覽列、`index.html`、`app.js`、`candidate-list.js`、`styles.css`、`scripts/build-site.mjs`、`scripts/build_data.py`、`data/schema.md` | 地圖頁導覽連結、首頁橫幅卡片、`?city=` 篩選參數、地圖樣式、建置清單（加入 map 檔與 `registered_candidates.json`）、名冊驗證。 |
+| 已提交 | `map.html`、`map.js`、`map-geometry.json`、`scripts/build_map_geometry.py` | 文化政見地圖，見下方「文化政見地圖」一節。已提交（`d1ff182`）並推送至 `main`。 |
+| 已提交 | `data/input/registered_candidates.csv`、`data/registered_candidates.json`、`scripts/import_cec_registrations.py` | 中選會登記名冊（1,583 筆）與轉檔腳本（`529c357`）；`build_data.py` 已加驗證，`data/schema.md` 已補說明。 |
+| 已提交 | 9 個公開頁的導覽列、`index.html`、`app.js`、`candidate-list.js`、`styles.css`、`scripts/build-site.mjs`、`scripts/build_data.py`、`data/schema.md` | 地圖頁導覽連結、首頁橫幅卡片、`?city=` 篩選參數、地圖樣式、建置清單（加入 map 檔與 `registered_candidates.json`）、名冊驗證。 |
 
 > 2026-10-01 已確認：重新 `npm run build` 後，7 個 `data/*.json` 與 HEAD 的差異只有 `last_updated` 日期，屬可重現的建置產物。
 
-## 文化政見地圖（2026-10-01 進行中）
+## 文化政見地圖（2026-10-01 上線）
 
 頁面：`map.html`（導覽列「文化政見地圖」，首頁入口區最上方有橫幅卡片）。
 
