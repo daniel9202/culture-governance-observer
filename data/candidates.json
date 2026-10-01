@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-01",
+  "last_updated": "2026-10-02",
   "records": [
     {
       "id": "candidate-khh-mayor-lai-jui-lung-001",
@@ -63,6 +63,153 @@
       "corrections": [
         "2026-09-07｜查核賴瑞隆官方網站 https://zenolai.oen.tw/，未找到「文化高雄」、「世界舞台」或七項文化政策的同步頁面。"
       ]
+    },
+    {
+      "id": "candidate-hln-councilor-lin-zheng-fu-matai-lin-culture-001",
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "candidate": "林正福",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化空間",
+        "傳統藝術",
+        "文化產業"
+      ],
+      "summary": "主張馬太林文化園區成為南區部落文化藝術推動中心，並讓泰林部落族人與產業合作、傳承傳統技藝。",
+      "policy_argument": "馬太林文化園區應在文化與產業協作下，成為南區部落文化藝術推動中心，讓部落族人能從傳統技藝中受益。",
+      "concrete_proposals": [
+        "關注文化園區未來發展及文化藝術推動中心定位。",
+        "要求提出協助部落族人與產業合作的具體作法，讓傳統技藝相輔相成。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "花蓮縣議政報導：林正福盼望馬太林文化園區帶動產業",
+            "url": "https://www.hlcc.gov.tw/upfile/20241210142719-189.PDF"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "花蓮縣議政報導：林正福盼望馬太林文化園區帶動產業",
+            "url": "https://www.hlcc.gov.tw/upfile/20241210142719-189.PDF"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "花蓮縣議政報導：林正福盼望馬太林文化園區帶動產業",
+            "url": "https://www.hlcc.gov.tw/upfile/20241210142719-189.PDF"
+          }
+        ]
+      },
+      "published_date": "2024-12-10",
+      "source_title": "花蓮縣議政報導：林正福盼望馬太林文化園區帶動產業",
+      "source_url": "https://www.hlcc.gov.tw/upfile/20241210142719-189.PDF",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hln-councilor-hsiu-chi-saflo-193-culture-001",
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "candidate": "秀吉．撒夫洛",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化觀光",
+        "公共藝術",
+        "文化空間"
+      ],
+      "summary": "主張修復並更新193線沿線的馬太林文化園區入口與稻草藝術裝置，並研議合適區域規劃露營區，提升南區人文景觀的觀光吸引力。",
+      "policy_argument": "193線沿線的部落人文與產業景觀具觀光潛力，政府應補足維護與規劃，讓文化景點留得住遊客。",
+      "concrete_proposals": [
+        "修復馬太林文化園區入口及沿線稻草藝術裝置。",
+        "研議在合適區域規劃露營區，串聯193線人文景觀與觀光。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
+            "url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
+            "url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
+            "url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/"
+          }
+        ]
+      },
+      "published_date": "2026-06-08",
+      "source_title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
+      "source_url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hln-councilor-lin-yu-fen-193-arts-corridor-001",
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "candidate": "林玉芬",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化觀光",
+        "文化產業",
+        "地方創生"
+      ],
+      "summary": "主張以193藝文廊道串聯原住民部落，並由文化、觀光與原民等局處合作，導入更多遊客體驗、帶動在地原住民文化產業。",
+      "policy_argument": "193線應以原住民文化為核心打造藝文廊道，透過跨局處合作將文化景觀轉為部落就業與產業機會。",
+      "concrete_proposals": [
+        "比照馬太鞍部落豐羽計畫打造193亮點。",
+        "由文化、觀光與原民等局處合作，導入遊客認識體驗原住民文化並帶動文化產業。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "原住民族文化事業基金會：花縣評估193縣道藝文廊道，議員爭取興建文化園區",
+            "url": "https://index.ipcf.org.tw/zh-TW/Radio/Radio_News_Page?newsId=23051915150834904"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "原住民族文化事業基金會：花縣評估193縣道藝文廊道，議員爭取興建文化園區",
+            "url": "https://index.ipcf.org.tw/zh-TW/Radio/Radio_News_Page?newsId=23051915150834904"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "原住民族文化事業基金會：花縣評估193縣道藝文廊道，議員爭取興建文化園區",
+            "url": "https://index.ipcf.org.tw/zh-TW/Radio/Radio_News_Page?newsId=23051915150834904"
+          }
+        ]
+      },
+      "published_date": "2023-05-19",
+      "source_title": "原住民族文化事業基金會：花縣評估193縣道藝文廊道，議員爭取興建文化園區",
+      "source_url": "https://index.ipcf.org.tw/zh-TW/Radio/Radio_News_Page?newsId=23051915150834904",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
     },
     {
       "id": "candidate-tpe-mayor-shen-boyang-001",
