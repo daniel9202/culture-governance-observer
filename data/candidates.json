@@ -5221,6 +5221,57 @@
       "corrections": [
         "2026-10-02｜中選會名冊核對為新竹市第4選舉區時代力量候選人；候選人官方頁明列漁村與造船文化推廣及漁港觀光發展，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-ntpc-councilor-kan-chung-wei-cultural-landscape-001",
+      "city": "新北市",
+      "office": "縣市議員",
+      "candidate": "甘崇緯",
+      "party": "台灣綠黨",
+      "topics": [
+        "文化教育",
+        "文化地景",
+        "公共參與",
+        "青年教育"
+      ],
+      "summary": "提出以補助引導畢業旅行結合文化地景與公共議題，使學生旅行從形式化活動轉化為社會實踐與在地認識。",
+      "policy_argument": "學校旅行可透過文化地景及公共議題設計，讓青年在生活場域中理解地方並參與公共事務。",
+      "concrete_proposals": [
+        "透過補助引導畢業旅行結合文化地景與政策議題。",
+        "避免畢業旅行流於形式，使旅程轉化為社會實踐。"
+      ],
+      "related_statements": [
+        "政見未列補助資格、文化地景選擇原則、課程設計、經費規模與推動期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣綠黨：甘崇緯 2026政見",
+            "url": "https://web.greenparty.org.tw/posts/news/2026candidate/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣綠黨：甘崇緯 2026政見",
+            "url": "https://web.greenparty.org.tw/posts/news/2026candidate/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣綠黨：甘崇緯 2026政見",
+            "url": "https://web.greenparty.org.tw/posts/news/2026candidate/"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "台灣綠黨：甘崇緯 2026政見",
+      "source_url": "https://web.greenparty.org.tw/posts/news/2026candidate/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜中選會名冊核對為新北市第3選舉區台灣綠黨候選人；台灣綠黨2026候選人政見明列畢旅結合文化地景與公共議題，完成人工審核。"
+      ]
     }
   ]
 }
