@@ -18,7 +18,7 @@ const partyInfo=party=>{
 const partyStyle=info=>`--party:${info.color};--party-fill:${info.fill};--party-ring:${info.ring||'transparent'}`;
 const OFFICES={mayor:{label:'縣市長',page:'mayors.html',test:record=>!String(record.office).includes('議員')},councilor:{label:'縣市議員',page:'councilors.html',test:record=>String(record.office).includes('議員')}};
 // 附圖內的候選人圓點位置（避開島嶼輪廓）；align 為圓點排列方向
-const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:314,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
+const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:236,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
 const SVG_NS='http://www.w3.org/2000/svg';
 const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 const fillLevel=count=>count?1:0;

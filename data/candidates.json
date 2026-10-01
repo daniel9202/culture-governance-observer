@@ -2040,6 +2040,472 @@
       "corrections": [
         "2026-09-17｜由 Google Sheet draft-20260916-26 整合稿發布。"
       ]
+    },
+    {
+      "id": "candidate-tpe-mayor-shen-boyang-cultural-trails-002",
+      "city": "臺北市",
+      "office": "縣市長",
+      "candidate": "沈伯洋",
+      "party": "民主進步黨",
+      "topics": [
+        "文化資產",
+        "地方文史",
+        "產業文化",
+        "多元族群",
+        "文化觀光",
+        "文化場館"
+      ],
+      "summary": "提出台北文化徑×山林徑，以四大文化主題串聯文化場域與山林步道，並規劃三座登山觀光中心。",
+      "policy_argument": "將古蹟與文化場館由單點保存轉為可步行、導覽與交通串聯的文化網絡。",
+      "concrete_proposals": [
+        "規劃四大主題文化徑。",
+        "於北劍潭、東象山、南貓空設三座登山觀光中心。",
+        "提供裝備租借、四語導覽與即時步道資訊。",
+        "補足捷運站至登山口接駁與數位導覽。"
+      ],
+      "related_statements": [
+        "官方頁附2026年9月8日記者會簡報；本筆補充既有文化廊道資料的具體措施。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台北文化徑×山林徑 — 沈伯洋台北市長競選官方網站",
+            "url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台北文化徑×山林徑 — 沈伯洋台北市長競選官方網站",
+            "url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台北文化徑×山林徑 — 沈伯洋台北市長競選官方網站",
+            "url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "台北文化徑×山林徑 — 沈伯洋台北市長競選官方網站",
+      "source_url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-official-site-updates.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-ntpc-mayor-su-chiao-hui-indigenous-002",
+      "city": "新北市",
+      "office": "縣市長",
+      "candidate": "蘇巧慧",
+      "party": "民主進步黨",
+      "topics": [
+        "原住民族文化",
+        "族語傳承",
+        "部落文化",
+        "文化空間",
+        "青年文化"
+      ],
+      "summary": "提出提高原住民族文化預算與社團支持、擴大族語及祭儀傳承、興建部落聚會所等政策。",
+      "policy_argument": "以預算翻轉與常態化補助支持都會及原鄉原住民族文化扎根。",
+      "concrete_proposals": [
+        "原住民族人均預算加倍且只增不減。",
+        "持續選址興建部落聚會所。",
+        "提高社團補助並降低自籌款比例。",
+        "新增初級與中級族語認證獎勵。",
+        "擴大返鄉祭儀交通補助。",
+        "新增頭目文化傳承事務費。"
+      ],
+      "related_statements": [
+        "官方頁未標示發布日期；依人工核定日期登錄。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "三大原住民族政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+            "url": "https://chiao.tw/policies/%E4%B8%89%E5%A4%A7%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%94%BF%E8%A6%8B"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "三大原住民族政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+            "url": "https://chiao.tw/policies/%E4%B8%89%E5%A4%A7%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%94%BF%E8%A6%8B"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "三大原住民族政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+            "url": "https://chiao.tw/policies/%E4%B8%89%E5%A4%A7%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%94%BF%E8%A6%8B"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "三大原住民族政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+      "source_url": "https://chiao.tw/policies/%E4%B8%89%E5%A4%A7%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%94%BF%E8%A6%8B",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；官方頁無發布日期，依人工核定日期登錄；由 mayor-official-site-updates.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-hsinchu-mayor-gao-hong-an-culture-001",
+      "city": "新竹市",
+      "office": "縣市長",
+      "candidate": "高虹安",
+      "party": "無黨籍",
+      "topics": [
+        "客家文化",
+        "客語傳承",
+        "文化場館",
+        "社區營造"
+      ],
+      "summary": "表示將以語言扎根、文化推廣、館舍經營及跨域合作打造客語友善環境。",
+      "policy_argument": "讓客語在校園、家庭、社區及公共場域自然使用，使客家文化融入市民日常生活。",
+      "concrete_proposals": [
+        "辦理客語繪本、認證輔導班、親子共學與說故事。",
+        "推動客語社區營造補助。",
+        "辦理客家會館工藝展與講座。",
+        "推出兩款實境解謎遊戲及9場客庄小旅行。"
+      ],
+      "related_statements": [
+        "來源記錄候選人公開發言與已規劃措施。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+            "url": "https://www.cna.com.tw/postwrite/chi/438831"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+            "url": "https://www.cna.com.tw/postwrite/chi/438831"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+            "url": "https://www.cna.com.tw/postwrite/chi/438831"
+          }
+        ]
+      },
+      "published_date": "2026-07-13",
+      "source_title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+      "source_url": "https://www.cna.com.tw/postwrite/chi/438831",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-kinmen-mayor-chen-yu-zhen-film-001",
+      "city": "金門縣",
+      "office": "縣市長",
+      "candidate": "陳玉珍",
+      "party": "中國國民黨",
+      "topics": [
+        "影視文化",
+        "文化交流",
+        "文化場館",
+        "文化觀光"
+      ],
+      "summary": "主張以政府資源協助維持金門影城服務，並研議增加兩岸優質電影在金門放映的機會。",
+      "policy_argument": "將影城視為地方文化服務與文化交流的一環。",
+      "concrete_proposals": [
+        "與影城業者協調並研議政府資源協助。",
+        "研議增加兩岸優質電影放映。",
+        "活化台開園區空間。"
+      ],
+      "related_statements": [
+        "電影放映涉及兩岸配額及法令限制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳玉珍租車宣傳 拋台開活化與電影放映政見",
+            "url": "https://www.kmdn.gov.tw/1117/1271/1272/590202/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳玉珍租車宣傳 拋台開活化與電影放映政見",
+            "url": "https://www.kmdn.gov.tw/1117/1271/1272/590202/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳玉珍租車宣傳 拋台開活化與電影放映政見",
+            "url": "https://www.kmdn.gov.tw/1117/1271/1272/590202/"
+          }
+        ]
+      },
+      "published_date": "2026-09-16",
+      "source_title": "陳玉珍租車宣傳 拋台開活化與電影放映政見",
+      "source_url": "https://www.kmdn.gov.tw/1117/1271/1272/590202/",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-taoyuan-mayor-huang-shih-chieh-culture-001",
+      "city": "桃園市",
+      "office": "縣市長",
+      "candidate": "黃世杰",
+      "party": "民主進步黨",
+      "topics": [
+        "多元文化",
+        "表演藝術",
+        "文化產業"
+      ],
+      "summary": "提出促進族群文化多元發展，並以演唱會經濟吸引優質表演團隊至桃園。",
+      "policy_argument": "在城市發展與青年、產業政策中納入多元族群文化及表演團隊發展。",
+      "concrete_proposals": [
+        "規劃族群文化多元發展項目。",
+        "推動演唱會經濟並吸引表演團隊。"
+      ],
+      "related_statements": [
+        "報導未揭露預算、期程或執行機制；本站按來源收錄政策方向。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "民進黨行動中常會桃園舉行　黃世杰專題報告政策願景",
+            "url": "https://www.cna.com.tw/news/aipl/202609230177.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "民進黨行動中常會桃園舉行　黃世杰專題報告政策願景",
+            "url": "https://www.cna.com.tw/news/aipl/202609230177.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "民進黨行動中常會桃園舉行　黃世杰專題報告政策願景",
+            "url": "https://www.cna.com.tw/news/aipl/202609230177.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-09-23",
+      "source_title": "民進黨行動中常會桃園舉行　黃世杰專題報告政策願景",
+      "source_url": "https://www.cna.com.tw/news/aipl/202609230177.aspx",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-chiayi-mayor-zhang-chi-kai-culture-commerce-001",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "張啓楷",
+      "party": "台灣民眾黨",
+      "topics": [
+        "文化商圈",
+        "地方文化",
+        "城市再生"
+      ],
+      "summary": "提出嘉義市商圈2＋4布局，串聯既有兩大商圈與四個新興區域，回應文化商圈與諸羅街區發展趨緩問題。",
+      "policy_argument": "以商圈活化帶動地方消費與城市活力，並將文化商圈與諸羅街區納入政策脈絡。",
+      "concrete_proposals": [
+        "推動2＋4商圈構想，形成六大商圈發展格局。"
+      ],
+      "related_statements": [
+        "政策以商圈活化為主，文化元素為文化商圈與諸羅街區。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "2026嘉義市長選舉現首例「藍白合」張啓楷6大政策牛肉戰王美惠",
+            "url": "https://city.gvm.com.tw/article/129222"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "2026嘉義市長選舉現首例「藍白合」張啓楷6大政策牛肉戰王美惠",
+            "url": "https://city.gvm.com.tw/article/129222"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "2026嘉義市長選舉現首例「藍白合」張啓楷6大政策牛肉戰王美惠",
+            "url": "https://city.gvm.com.tw/article/129222"
+          }
+        ]
+      },
+      "published_date": "2026-04-07",
+      "source_title": "2026嘉義市長選舉現首例「藍白合」張啓楷6大政策牛肉戰王美惠",
+      "source_url": "https://city.gvm.com.tw/article/129222",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-yilan-mayor-wu-tsung-hsien-indigenous-001",
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "candidate": "吳宗憲",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化保存",
+        "原鄉建設"
+      ],
+      "summary": "表示將推動原鄉建設與文化保存。",
+      "policy_argument": "將原住民族文化保存與原鄉建設併列為政策方向。",
+      "concrete_proposals": [
+        "推動原鄉建設。",
+        "推動文化保存。"
+      ],
+      "related_statements": [
+        "公開說法未說明文化保存的對象、方法、預算或期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-05-10",
+      "source_title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+      "source_url": "https://www.cna.com.tw/news/aloc/202605100054.aspx",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-yilan-mayor-lin-kuo-chang-indigenous-001",
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "candidate": "林國漳",
+      "party": "民主進步黨",
+      "topics": [
+        "原住民族文化",
+        "傳統領域",
+        "族群參與"
+      ],
+      "summary": "主張尊重原住民族傳統領域土地權利並落實族人參與機制。",
+      "policy_argument": "以傳統領域土地權利及族人參與作為原住民族治理與文化尊重的原則。",
+      "concrete_proposals": [
+        "尊重傳統領域土地權利。",
+        "落實族人參與機制。"
+      ],
+      "related_statements": [
+        "本項涉及土地權利與族群治理，與文化治理相關。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-05-10",
+      "source_title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
+      "source_url": "https://www.cna.com.tw/news/aloc/202605100054.aspx",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
+    },
+    {
+      "id": "candidate-nantou-mayor-wen-shih-cheng-reading-001",
+      "city": "南投縣",
+      "office": "縣市長",
+      "candidate": "温世政",
+      "party": "民主進步黨",
+      "topics": [
+        "閱讀文化",
+        "公共圖書空間",
+        "青年回流"
+      ],
+      "summary": "官方網站提出每個鄉鎮設置一間閱讀空間，並連結青年創業、技職教育與在地產業。",
+      "policy_argument": "以在地閱讀空間作為教育文化與青年回流的公共基礎設施。",
+      "concrete_proposals": [
+        "每個鄉鎮設置一間閱讀空間。",
+        "青年創業最高補助30萬元與導師陪伴。",
+        "強化技職教育與在地產業連結。"
+      ],
+      "related_statements": [
+        "官方頁摘要未提供閱讀空間的選址、館藏、營運人力與預算。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "温世政｜温欸醫生縣長－教育文化青年回流",
+            "url": "https://wen-shih-cheng.com.tw/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "温世政｜温欸醫生縣長－教育文化青年回流",
+            "url": "https://wen-shih-cheng.com.tw/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "温世政｜温欸醫生縣長－教育文化青年回流",
+            "url": "https://wen-shih-cheng.com.tw/"
+          }
+        ]
+      },
+      "published_date": "2026-07-02",
+      "source_title": "温世政｜温欸醫生縣長－教育文化青年回流",
+      "source_url": "https://wen-shih-cheng.com.tw/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
+      ]
     }
   ]
 }
