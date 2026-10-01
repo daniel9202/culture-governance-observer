@@ -8,15 +8,14 @@ const REGIONS=[
 ];
 const CITY_ORDER=REGIONS.flatMap(([,cities])=>cities);
 const REGION_OF=Object.fromEntries(REGIONS.flatMap(([region,cities])=>cities.map(city=>[city,region])));
-const PARTIES={
-  '民主進步黨':{short:'民進黨',color:'#1b9431'},
-  '中國國民黨':{short:'國民黨',color:'#1f3a93'},
-  '台灣民眾黨':{short:'民眾黨',color:'#28b8c8'},
-  '台灣基進':{short:'台灣基進',color:'#a8432a'},
-  '小民參政歐巴桑聯盟':{short:'歐巴桑聯盟',color:'#d6478a'},
-  '無黨籍':{short:'無黨籍',color:'#8c8f84'},
+// 政黨色由 config/party_colors.json 經 build_data.py 輸出為 data/party_colors.json；未設定的政黨顯示為「其他政黨」。
+let PARTY_COLORS={parties:{},other:{short:'其他政黨',color:'#7D6F8F'}};
+const partyInfo=party=>{
+  const item=PARTY_COLORS.parties[party]||(party?{...PARTY_COLORS.other,short:party}:{short:'政黨待確認',color:'#8C8F84'});
+  // 圓點與小圖示：無黨籍為空心圈；淺色政黨（例：時代力量）加深色外框
+  return {...item,fill:item.hollow?'#ffffff':item.color,ring:item.hollow?'#55584e':(item.outline||'')};
 };
-const partyInfo=party=>PARTIES[party]||{short:party||'政黨待確認',color:'#8c8f84'};
+const partyStyle=info=>`--party:${info.color};--party-fill:${info.fill};--party-ring:${info.ring||'transparent'}`;
 const OFFICES={mayor:{label:'縣市長',page:'mayors.html',test:record=>!String(record.office).includes('議員')},councilor:{label:'縣市議員',page:'councilors.html',test:record=>String(record.office).includes('議員')}};
 // 附圖內的候選人圓點位置（避開島嶼輪廓）；align 為圓點排列方向
 const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:314,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
@@ -47,7 +46,7 @@ function groupByCity(records,shared,officeKey){
 
 function dots(candidates,x,y,align){
   const gap=13,width=(candidates.length-1)*gap,start=align==='start'?x:align==='end'?x-width:x-width/2;
-  return candidates.map((item,index)=>`<circle class="map-dot" cx="${start+index*gap}" cy="${y}" r="5.5" fill="${partyInfo(item.party).color}"><title>${esc(item.candidate)}（${esc(partyInfo(item.party).short)}）</title></circle>`).join('');
+  return candidates.map((item,index)=>`<circle class="map-dot" cx="${start+index*gap}" cy="${y}" r="5.5" fill="${partyInfo(item.party).fill}"${partyInfo(item.party).ring?` style="stroke:${partyInfo(item.party).ring};stroke-width:2.2px"`:''}><title>${esc(item.candidate)}（${esc(partyInfo(item.party).short)}）</title></circle>`).join('');
 }
 
 function drawMap(){
@@ -106,7 +105,7 @@ function hideTooltip(){document.getElementById('mapTooltip').hidden=true}
 function candidateCard(item){
   const party=partyInfo(item.party),summary=item.summary||item.policy_arguments[0]||'';
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
-  return `<article class="map-candidate" style="--party:${party.color}">
+  return `<article class="map-candidate" style="${partyStyle(party)}">
     <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span></div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
     ${summary?`<p>${esc(summary)}</p>`:''}
     <div class="map-topics">${item.topics.slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
@@ -140,7 +139,7 @@ function setOffice(next){
   drawMap();renderDetail();renderLegend();renderParties();
 }
 
-const chips=list=>list.length?list.map(item=>`<span class="compare-chip" style="--party:${partyInfo(item.party).color}"><i></i>${esc(item.candidate)}<small>${esc(partyInfo(item.party).short)}</small></span>`).join(''):'<span class="compare-none">尚未收錄</span>';
+const chips=list=>list.length?list.map(item=>`<span class="compare-chip" style="${partyStyle(partyInfo(item.party))}"><i></i>${esc(item.candidate)}<small>${esc(partyInfo(item.party).short)}</small></span>`).join(''):'<span class="compare-none">尚未收錄</span>';
 function renderCompare(){
   document.getElementById('compareList').innerHTML=REGIONS.map(([region,cities])=>`<div class="compare-region"><h3>${region}</h3>${cities.map(city=>{
     const mayors=byOffice.mayor.get(city)||[],councilors=byOffice.councilor.get(city)||[];
@@ -160,19 +159,19 @@ function partyTotals(){
 }
 function renderLegend(){
   const present=new Set([...byOffice[office].values()].flat().map(item=>item.party));
-  document.getElementById('partyLegend').innerHTML=partyTotals().filter(row=>present.has(row.party)).map(row=>`<span><i style="background:${partyInfo(row.party).color}"></i>${esc(partyInfo(row.party).short)}</span>`).join('');
+  document.getElementById('partyLegend').innerHTML=partyTotals().filter(row=>present.has(row.party)).map(row=>`<span style="${partyStyle(partyInfo(row.party))}"><i></i>${esc(partyInfo(row.party).short)}</span>`).join('');
 }
 function renderParties(){
   const rows=partyTotals(),max=Math.max(...rows.map(row=>row.mayor+row.councilor),1);
   document.getElementById('partyBars').innerHTML=`<div class="party-bar-key"><span><i class="solid"></i>縣市長候選人</span><span><i class="light"></i>議員候選人</span></div>`+rows.map(row=>{
     const info=partyInfo(row.party);
-    return `<div class="party-bar" style="--party:${info.color}"><span class="party-bar-name"><i></i>${esc(row.party)}</span><span class="party-bar-track"><span class="solid" style="width:${row.mayor/max*100}%"></span><span class="light" style="width:${row.councilor/max*100}%"></span></span><span class="party-bar-num">縣市長 <b>${row.mayor}</b>・議員 <b>${row.councilor}</b>・${row.cities.size} 縣市</span></div>`;
+    return `<div class="party-bar" style="${partyStyle(info)}"><span class="party-bar-name"><i></i>${esc(row.party)}</span><span class="party-bar-track"><span class="solid" style="width:${row.mayor/max*100}%"></span><span class="light" style="width:${row.councilor/max*100}%"></span></span><span class="party-bar-num">縣市長 <b>${row.mayor}</b>・議員 <b>${row.councilor}</b>・${row.cities.size} 縣市</span></div>`;
   }).join('');
 }
 
 const loadJson=(url,message)=>fetch(url).then(response=>{if(!response.ok)throw Error(message);return response.json()});
-Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset(),loadJson('data/registered_candidates.json','無法讀取登記名冊')]).then(([geo,data,roster])=>{
-  geometry=geo;registeredSource=roster.source;
+Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset(),loadJson('data/registered_candidates.json','無法讀取登記名冊'),loadJson('data/party_colors.json','無法讀取政黨色')]).then(([geo,data,roster,colors])=>{
+  geometry=geo;PARTY_COLORS=colors;registeredSource=roster.source;
   roster.records.forEach(record=>{
     const key=record.office==='縣市長'?'mayor':'councilor';
     if(!registered[key].has(record.city))registered[key].set(record.city,[]);

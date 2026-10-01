@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import csv
 import json
+import os
 import re
+import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
@@ -308,18 +310,90 @@ def build_registered_candidates():
     # 來源與名冊日期全表一致，只在檔案層級記錄一次，避免前台資料過大
     return records, (sources[0] if sources else None)
 
+def same_candidate(registered_name, name):
+    """中選會名冊可能在姓名後附原住民族傳統名字（例：林筱薇IcyangTamana），與 map.js 的比對規則一致。"""
+    return registered_name == name or registered_name.startswith(name)
+
+def normal_party(party):
+    return "無黨籍" if party.strip() in {"", "無", "無黨籍"} else party.strip()
+
+def check_against_registration(candidates, shared_groups, registered):
+    """候選人資料與中選會登記名冊交叉檢查。
+
+    錯誤（停止建置）：縣市或職務寫法不在清單內、政黨與中選會「推薦之政黨」不符。
+    警告（照常建置）：名冊中找不到該候選人，或比對到多人。
+    """
+    errors, warnings = [], []
+    roster = {}
+    for record in registered:
+        roster.setdefault((record["city"], record["office"]), []).append(record)
+    people = [(f"candidates.csv {c['id']}", c["city"], c["office"], c["candidate"], c["party"]) for c in candidates]
+    for group in shared_groups:
+        if group["scope"] == "party":
+            continue
+        people += [(f"shared_policy_groups.csv {group['id']}", group["city"], group["office"], name, group["party"]) for name in group["candidates"]]
+    checked = set()
+    for label, city, office, name, party in people:
+        if city not in CITIES:
+            errors.append(f"{label}: 縣市「{city}」不是 22 縣市的標準寫法（例：臺北市，不是台北市）")
+            continue
+        if office not in REGISTERED_OFFICES:
+            errors.append(f"{label}: 職務「{office}」必須是 縣市長 或 縣市議員")
+            continue
+        if (city, office, name, party) in checked:
+            continue
+        checked.add((city, office, name, party))
+        matches = [r for r in roster.get((city, office), []) if same_candidate(r["candidate"], name)]
+        if not matches:
+            warnings.append(f"{label}: {city}{office}「{name}」不在中選會登記名冊中，請確認姓名寫法或是否已登記參選")
+        elif len(matches) > 1:
+            warnings.append(f"{label}: {city}{office}「{name}」在名冊中比對到 {len(matches)} 人（{'、'.join(m['candidate'] for m in matches)}），請改用完整姓名")
+        elif normal_party(matches[0]["party"]) != normal_party(party):
+            errors.append(f"{label}: {city}{office}「{name}」政黨填「{party}」，中選會推薦之政黨為「{matches[0]['party']}」；政黨以中選會為準（未推薦請填 無黨籍）")
+    return errors, warnings
+
+HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
+
+def build_party_colors(candidates, shared_groups):
+    """讀 config/party_colors.json，檢查色碼，並對沒有政黨色的政黨發出警告。"""
+    config = json.loads((ROOT / "config" / "party_colors.json").read_text(encoding="utf-8"))
+    parties, other = config["parties"], config["_other"]
+    for name, item in [*parties.items(), ("_other", other)]:
+        for field in ("color", "outline"):
+            if field in item and not HEX_RE.match(item[field]):
+                raise ValueError(f"config/party_colors.json {name}: {field} must be #RRGGBB")
+        if not item.get("short"):
+            raise ValueError(f"config/party_colors.json {name}: missing short")
+    used = {c["party"] for c in candidates} | {g["party"] for g in shared_groups if g["scope"] == "regional"}
+    warnings = [f"政黨「{party}」沒有設定政黨色，地圖會顯示為「{other['short']}」；請確認公認色後補進 config/party_colors.json"
+                for party in sorted(used - parties.keys())]
+    return {"parties": parties, "other": other}, warnings
+
+def report_warnings(warnings):
+    for message in warnings:
+        # 在 GitHub Actions 中以 annotation 顯示，本機則印出到標準錯誤
+        print(f"::warning title=資料檢查::{message}" if os.environ.get("GITHUB_ACTIONS") else f"WARNING {message}", file=sys.stderr)
+
 def write(name, records, **meta):
     payload = {"schema_version": "1.1", "last_updated": date.today().isoformat(), **meta, "records": records}
     (OUTPUT / name).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 if __name__ == "__main__":
-    write("candidates.json", build_candidates())
-    write("shared_policy_groups.json", build_shared_policy_groups())
+    candidates = build_candidates()
+    shared_groups = build_shared_policy_groups()
+    registered, registered_source = build_registered_candidates()
+    errors, warnings = check_against_registration(candidates, shared_groups, registered)
+    party_colors, party_warnings = build_party_colors(candidates, shared_groups)
+    report_warnings(warnings + party_warnings)
+    if errors:
+        raise SystemExit("候選人資料與中選會登記名冊不符：\n" + "\n".join(f"- {message}" for message in errors))
+    write("candidates.json", candidates)
+    write("shared_policy_groups.json", shared_groups)
     write("local_cultural_issues.json", build_local_issues())
     write("civic_policy_calls.json", build_civic_calls())
     write("governments.json", build_governments())
     write("region_metrics.json", build_region_metrics())
     write("pledge_fulfillment.json", build_fulfillment())
-    registered, registered_source = build_registered_candidates()
     write("registered_candidates.json", registered, source=registered_source)
+    (OUTPUT / "party_colors.json").write_text(json.dumps({"schema_version": "1.1", "last_updated": date.today().isoformat(), **party_colors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("data validation passed")

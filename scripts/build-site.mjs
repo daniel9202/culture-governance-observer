@@ -44,7 +44,7 @@ const siteFiles = [
 ];
 const dataFiles = [
   "candidates.json", "shared_policy_groups.json", "civic_policy_calls.json", "governments.json",
-  "local_cultural_issues.json", "pledge_fulfillment.json", "region_metrics.json", "registered_candidates.json",
+  "local_cultural_issues.json", "pledge_fulfillment.json", "region_metrics.json", "registered_candidates.json", "party_colors.json",
 ];
 
 for (const file of siteFiles) cpSync(resolve(root, file), resolve(dist, file));
