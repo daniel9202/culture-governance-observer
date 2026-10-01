@@ -65,6 +65,55 @@
       ]
     },
     {
+      "id": "candidate-ttt-councilor-fang-hsien-jen-cultural-space-001",
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "candidate": "方賢仁",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化空間",
+        "地方文史",
+        "展覽策展"
+      ],
+      "summary": "主張台東博覽會的運動主題展納入阿美族運動員楊傳廣，並推動部落聚會所、馬亨亨雕像與石柱等文化意象及場域。",
+      "policy_argument": "台東的文化展示不應只聚焦單一棒球主題，應呈現不同運動與原住民族傑出人物，並補足部落聚會所等文化空間。",
+      "concrete_proposals": [
+        "建議以運動或體育專題特展取代僅以棒球為主題的展區，納入楊傳廣的傳奇事蹟。",
+        "要求盤點尚未建置聚會所的部落並優先推進，並規劃馬蘭部落馬亨亨雕像及石柱與馬當部落周邊環境改善。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "互傳媒：方賢仁關注台東博覽會與原民聚會所",
+            "url": "https://news.pchome.com.tw/politics/hoomedia/20260528/index-77990732561687344002.html"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "互傳媒：方賢仁關注台東博覽會與原民聚會所",
+            "url": "https://news.pchome.com.tw/politics/hoomedia/20260528/index-77990732561687344002.html"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "互傳媒：方賢仁關注台東博覽會與原民聚會所",
+            "url": "https://news.pchome.com.tw/politics/hoomedia/20260528/index-77990732561687344002.html"
+          }
+        ]
+      },
+      "published_date": "2026-05-28",
+      "source_title": "互傳媒：方賢仁關注台東博覽會與原民聚會所",
+      "source_url": "https://news.pchome.com.tw/politics/hoomedia/20260528/index-77990732561687344002.html",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-hln-councilor-lin-zheng-fu-matai-lin-culture-001",
       "city": "花蓮縣",
       "office": "縣市議員",
