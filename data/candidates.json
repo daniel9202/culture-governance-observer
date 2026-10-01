@@ -458,6 +458,55 @@
       "corrections": []
     },
     {
+      "id": "candidate-hsz-councilor-chang-tsu-yen-cultural-education-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "張祖琰",
+      "party": "中國國民黨",
+      "topics": [
+        "閱讀",
+        "文化教育",
+        "原住民族文化",
+        "傳統藝術"
+      ],
+      "summary": "主張監督新竹市總圖書館興建並增設圖書分館，且共同提案要求市府藝術教育納入更多原住民族傳統藝術課程，讓閱讀資源與多元文化教育同步發展。",
+      "policy_argument": "文化教育應兼顧公共閱讀資源與不同族群的傳統藝術，讓學校藝術課程反映在地多元文化。",
+      "concrete_proposals": [
+        "監督總圖書館興建進度並增設圖書分館。",
+        "共同提案要求市府藝術教育加入更多原住民族傳統藝術課程。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹市議會：張祖琰議員政見",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹市議會：原住民族傳統藝術教育提案",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
+      "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
