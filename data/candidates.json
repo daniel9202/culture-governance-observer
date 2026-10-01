@@ -3578,6 +3578,60 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第7選舉區、中國國民黨候選人；候選人官方網站以「再四年」列為服務政見並明列電影車措施，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-khh-councilor-zhong-yi-zhong-culture-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "鍾易仲",
+      "party": "中國國民黨",
+      "topics": [
+        "客家文化",
+        "族語傳承",
+        "音樂產業",
+        "表演藝術",
+        "文化空間"
+      ],
+      "summary": "主張深化客家語言傳承並扶植客家音樂與文化人才，同時打造流行音樂產業鏈、支持在地音樂創作與藝文特區發展。",
+      "policy_argument": "以客語傳承及客家文化人才培育結合流行音樂與表演藝術產業，擴大鳳山的文化創作與展演量能。",
+      "concrete_proposals": [
+        "獎勵客語認證並辦理客家族群節慶活動。",
+        "扶植客家音樂與文化人才並鼓勵客語歌曲創作。",
+        "打造流行音樂產業鏈並扶植在地音樂演唱及創作人才。",
+        "推動鳳山中城計畫納入藝文特區與藝術村。"
+      ],
+      "related_statements": [
+        "官方政策頁未列客語與音樂人才培育的經費、執行期程、場館分工及績效指標。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "鍾易仲｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2212&n=39&sms=9028"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "鍾易仲｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2212&n=39&sms=9028"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "鍾易仲｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2212&n=39&sms=9028"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "鍾易仲｜高雄市議會議員資訊",
+      "source_url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2212&n=39&sms=9028",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為高雄市第9選舉區、中國國民黨候選人；高雄市議會個人政策頁明列客家文化、流行音樂與藝文特區措施並完成人工審核。"
+      ]
     }
   ]
 }
