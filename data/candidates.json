@@ -2557,6 +2557,160 @@
       "corrections": [
         "2026-10-01｜中選會登記名冊核對為臺北市第1選舉區、中國國民黨候選人；候選人競選網站人工審核完成。"
       ]
+    },
+    {
+      "id": "candidate-hsinchu-councilor-li-mei-arts-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "李玫",
+      "party": "台灣民眾黨",
+      "topics": [
+        "藝術教育",
+        "表演藝術",
+        "文化場館",
+        "地方文史"
+      ],
+      "summary": "候選人政見提出「美學城市」方向：增加學校藝文教育預算與在地藝文培育，固定在南區辦理藝文活動與走讀文化，並規劃新竹市專屬美術館空間。",
+      "policy_argument": "將在地藝文培育與城市故事教育結合，透過常態活動和專業展演空間提升城市美學。",
+      "concrete_proposals": [
+        "增加各校藝文教育預算並定期辦理培育工作坊。",
+        "爭取藝文活動每年固定在南區設場，結合走讀文化。",
+        "規劃新竹市專屬美術館大空間，提供展演場域。"
+      ],
+      "related_statements": [
+        "官方頁未載明預算金額、美術館選址、規模與期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜李玫",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜李玫",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜李玫",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "台灣民眾黨｜李玫",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200",
+      "related_sources": [],
+      "source_type": "政黨官方候選人頁",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會登記名冊核對為新竹市第2選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
+      ]
+    },
+    {
+      "id": "candidate-changhua-councilor-kao-tsai-ling-language-001",
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "candidate": "高采翎",
+      "party": "台灣民眾黨",
+      "topics": [
+        "原住民族文化",
+        "族語",
+        "青年返鄉"
+      ],
+      "summary": "候選人將「族語扎根傳承」與「原青返鄉築夢」列入個人政見。",
+      "policy_argument": "以族語傳承與青年返鄉作為彰化縣山地原住民族文化延續的政策方向。",
+      "concrete_proposals": [
+        "推動族語扎根傳承。",
+        "支持原住民青年返鄉築夢。"
+      ],
+      "related_statements": [
+        "官方頁僅列政策標題，未說明授課、師資、經費、青年支持措施或期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜高采翎",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜高采翎",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜高采翎",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "台灣民眾黨｜高采翎",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212",
+      "related_sources": [],
+      "source_type": "政黨官方候選人頁",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會登記名冊核對為彰化縣第10選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
+      ]
+    },
+    {
+      "id": "candidate-ntpc-councilor-chen-yu-chieh-cultural-tourism-001",
+      "city": "新北市",
+      "office": "縣市議員",
+      "candidate": "陳語倢",
+      "party": "台灣民眾黨",
+      "topics": [
+        "文化觀光",
+        "文化產業",
+        "社區營造",
+        "傳統市場"
+      ],
+      "summary": "候選人提出整合北海岸觀光網提升旅遊文化體驗，並輔導青年創業與新產業、活化社區文創亮點，推動傳統市場轉型。",
+      "policy_argument": "將北海岸旅遊文化、社區文創與傳統市場轉型結合為在地發展策略。",
+      "concrete_proposals": [
+        "整合北海岸觀光網以提升旅遊文化體驗。",
+        "輔導青創與新產業並活化社區文創亮點。",
+        "推動傳統市場轉型。"
+      ],
+      "related_statements": [
+        "官方頁未說明文化觀光路線、文創扶植工具、預算或時程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "台灣民眾黨｜陳語倢",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "台灣民眾黨｜陳語倢",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "台灣民眾黨｜陳語倢",
+            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "台灣民眾黨｜陳語倢",
+      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161",
+      "related_sources": [],
+      "source_type": "政黨官方候選人頁",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會登記名冊核對為新北市第11選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
+      ]
     }
   ]
 }
