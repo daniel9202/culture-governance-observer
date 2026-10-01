@@ -36,7 +36,7 @@ rmSync(dist, { recursive: true, force: true });
 mkdirSync(resolve(dist, "data"), { recursive: true });
 
 const siteFiles = [
-  "index.html", "styles.css", "app.js", "nav.js", "cities.js", "mayors.html",
+  "index.html", "styles.css", "app.js", "nav.js", "cities.js", "mayors.html", "map.html", "map.js", "map-geometry.json",
   "councilors.html", "candidate-list.js", "public-candidates.js", "civic.html",
   "civic.js", "methodology.html", "updates.html", "review.html", "review.js",
   "fulfillment.html", "fulfillment.js", "regions.html",
@@ -44,7 +44,7 @@ const siteFiles = [
 ];
 const dataFiles = [
   "candidates.json", "shared_policy_groups.json", "civic_policy_calls.json", "governments.json",
-  "local_cultural_issues.json", "pledge_fulfillment.json", "region_metrics.json",
+  "local_cultural_issues.json", "pledge_fulfillment.json", "region_metrics.json", "registered_candidates.json",
 ];
 
 for (const file of siteFiles) cpSync(resolve(root, file), resolve(dist, file));
