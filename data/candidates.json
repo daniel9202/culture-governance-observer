@@ -2811,6 +2811,58 @@
       "corrections": [
         "2026-10-01｜中選會登記名冊核對為新北市第8選舉區、民主進步黨候選人；民進黨新北市黨部新聞記載彭一書提出該案並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tnn-councilor-yu-chu-ching-damujian-001",
+      "city": "臺南市",
+      "office": "縣市議員",
+      "candidate": "余柷青",
+      "party": "民主進步黨",
+      "topics": [
+        "文化資產",
+        "文化觀光",
+        "文化場館",
+        "地方文化"
+      ],
+      "summary": "主張全面盤點改善新化大目降文化園區，整體規劃武德殿、日式宿舍街區與周邊設施的修繕、安全、景觀及遊憩動線。",
+      "policy_argument": "文化資產維護不應僅作單點修繕，應結合建築修繕、通行安全、環境景觀與遊憩動線，形成完整文化觀光場域。",
+      "concrete_proposals": [
+        "全面盤點大目降文化園區。",
+        "改善武德殿漏水與園區步道隆起。",
+        "整合日式宿舍街區、廁所前廣場及周邊設施的修繕、安全與景觀。"
+      ],
+      "related_statements": [
+        "指出武德殿及日式宿舍群為重要文化資產，要求文化局與新化區公所逐項確認改善方式。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "重新點亮新化，擦亮新化文化大門！推動大目降文化園區全面盤點改善",
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=C9969289-4B16-4C32-8BE4-F7EA25C6BACC"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "重新點亮新化，擦亮新化文化大門！推動大目降文化園區全面盤點改善",
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=C9969289-4B16-4C32-8BE4-F7EA25C6BACC"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "重新點亮新化，擦亮新化文化大門！推動大目降文化園區全面盤點改善",
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=C9969289-4B16-4C32-8BE4-F7EA25C6BACC"
+          }
+        ]
+      },
+      "published_date": "2026-09-24",
+      "source_title": "重新點亮新化，擦亮新化文化大門！推動大目降文化園區全面盤點改善",
+      "source_url": "https://www.tncc.gov.tw/page.asp?mainid=C9969289-4B16-4C32-8BE4-F7EA25C6BACC",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺南市第5選舉區、民主進步黨候選人；臺南市議會 2026 年 9 月 24 日頁面記載其具體文化主張並完成人工審核。"
+      ]
     }
   ]
 }
