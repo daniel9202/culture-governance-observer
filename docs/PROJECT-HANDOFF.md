@@ -1,6 +1,6 @@
 # 文化治理觀察站｜專案交接文件
 
-更新日期：2026-10-01（Asia/Taipei；下午補上文化政見地圖進度）  
+更新日期：2026-10-01（Asia/Taipei；晚間補上地圖、中選會名冊、建置檢查與政黨色）  
 適用對象：接手本專案的另一台電腦、開發者或 AI。
 
 ## 專案目的
@@ -13,7 +13,7 @@
 - 文化政策承諾的實現追蹤；
 - 縣市文化資產、場館、活動與特定中央補助指標。
 
-公開網站由 GitHub Pages 部署；目前主要審核流程使用 Google Sheet 與 Google Apps Script。Cloudflare Worker／D1 是未來或 staging 架構，**不是目前日常資料發布入口**。
+公開網站由 GitHub Pages 部署；目前主要審核流程使用 Google Sheet 與 Google Apps Script。Cloudflare Worker／D1 是未來或 staging 架構，**不是目前日常資料發布入口**；2026-10-01 起前台已不再讀取其已核准資料 API（僅 `nav.js` 匿名造訪統計與舊的 `review.html` 仍連到 Cloudflare）。
 
 ## 快速開始（換電腦）
 
@@ -116,20 +116,25 @@ npm run build
 - `config/collector.json` 是候選人／民間訴求蒐集範圍設定；改名單、官方站點或查詢字詞前要先查證。
 - Cloudflare 所需的 `ALLOWED_EMAIL`、`INGEST_TOKEN` 等屬部署機密，僅在安全的服務設定中處理。
 
-## 目前 Git 與工作進度（2026-10-01）
+## 目前 Git 與工作進度（2026-10-01 晚間更新）
 
-分支：`main`，追蹤 `origin/main`；最新已提交版本為 `258b933 Revert "feat: add cultural policy map"`。
+分支：`main`，追蹤 `origin/main`，已全部推送。2026-10-01 推送的提交如下（舊到新）：
 
-**工作目錄目前不是乾淨狀態。接手者不得直接 pull、rebase、checkout 或丟棄變更。**
+| 提交 | 內容 |
+| --- | --- |
+| `529c357` | 中選會登記名冊（1,583 筆）、`scripts/import_cec_registrations.py`、`build_data.py` 名冊驗證；林筱薇、薛兆基政黨依中選會更正為無黨籍；衍生 JSON 重建 |
+| `d1ff182` | 文化政見地圖（`map.html`、`map.js`、`map-geometry.json`、`scripts/build_map_geometry.py`）、導覽列、首頁橫幅卡片、`?city=` 篩選 |
+| `683b9bb`、`f5343a4` | 交接文件 |
+| `5057a0e` | 建置時以中選會名冊檢查候選人（縣市、職務、政黨），政黨色集中到 `config/party_colors.json`，無黨籍改空心圈 |
+| `7904fde` | 前台停止讀取 Cloudflare 已核准資料 API，刪除 `updates.js` |
+| （本次） | 交接文件更新 |
 
-| 狀態 | 檔案／範圍 | 判讀 |
+**工作目錄仍有不屬於上述提交的變更。接手者不得直接 pull、rebase、checkout 或丟棄變更：**
+
+| 狀態 | 檔案 | 判讀 |
 | --- | --- | --- |
-| 修改中 | `apps-script/Index.html` | 在既有審核台加入「準備上架」工作區，以及審核後移除已處理卡片、避免逐筆整頁重載的介面調整。尚未 commit，需以實際 Apps Script 環境手動測試。 |
-| 修改中 | `data/candidates.json`、`civic_policy_calls.json`、`governments.json`、`local_cultural_issues.json`、`pledge_fulfillment.json`、`region_metrics.json`、`shared_policy_groups.json` | 皆為衍生 JSON；很可能對應當前建置輸出。未先確認來源 CSV 與 `npm run build` 前，不要單獨提交。 |
-| 未追蹤 | `backups/` | 含 `cloudflare-d1-20260914/` 的 D1 schema 與資料快照。視為本機備份，不應在未確認資料敏感性與需求前加入版本庫。 |
-| 已提交 | `map.html`、`map.js`、`map-geometry.json`、`scripts/build_map_geometry.py` | 文化政見地圖，見下方「文化政見地圖」一節。已提交（`d1ff182`）並推送至 `main`。 |
-| 已提交 | `data/input/registered_candidates.csv`、`data/registered_candidates.json`、`scripts/import_cec_registrations.py` | 中選會登記名冊（1,583 筆）與轉檔腳本（`529c357`）；`build_data.py` 已加驗證，`data/schema.md` 已補說明。 |
-| 已提交 | 9 個公開頁的導覽列、`index.html`、`app.js`、`candidate-list.js`、`styles.css`、`scripts/build-site.mjs`、`scripts/build_data.py`、`data/schema.md` | 地圖頁導覽連結、首頁橫幅卡片、`?city=` 篩選參數、地圖樣式、建置清單（加入 map 檔與 `registered_candidates.json`）、名冊驗證。 |
+| 修改中 | `apps-script/Index.html` | 在既有審核台加入「準備上架」工作區，並調整成審核後移除已處理卡片，避免每審一筆就整頁重新載入。尚未 commit，需在實際 Apps Script 環境手動測試。 |
+| 未追蹤 | `backups/` | 含 `cloudflare-d1-20260914/` 的 D1 schema 與資料快照。視為本機備份，在確認資料敏感性與需求前不要加入版本庫。 |
 
 > 2026-10-01 已確認：重新 `npm run build` 後，7 個 `data/*.json` 與 HEAD 的差異只有 `last_updated` 日期，屬可重現的建置產物。
 
@@ -180,17 +185,42 @@ npm run build
 - **待更新**：中選會 10/16 前完成資格審查、10/23 號次抽籤；審定名單公告後重跑轉檔並更新 `as_of`，`map.html` 統計口徑文字也一併改。
 - 已移除先前暫用的 `config/collector.json` 追蹤名單邏輯（建置也不再複製該檔）。
 
+### 候選人資料的自動檢查（2026-10-01 新增）
+
+`scripts/build_data.py` 的 `check_against_registration()` 會在每次 `npm run build`（本機發布前、`pages.yml` 部署前、`validate-data.yml` 的 PR 驗證）比對中選會名冊：
+
+- **錯誤**：縣市寫法、職務、政黨和中選會不符。
+- **警告**：名冊找不到該候選人，或比對到多人。在 GitHub Actions 會以 annotation 顯示。
+
+細節寫在 `docs/LOCAL-AI-REVIEW-AUTOMATION.md` 第 6 點。政黨色集中在 `config/party_colors.json`：`build_data.py` 會檢查色碼，輸出 `data/party_colors.json` 給地圖用。設定檔裡沒有的政黨，地圖一律顯示成「其他政黨」，建置時會跳警告。2026-10-01 與使用者確認的規則如下：
+
+- 顏色以英文維基百科 Module:Political party 的政黨色為準。民眾黨用 `#28C7C7`，國民黨用 `#000099`。
+- 無黨籍畫成空心圈，避免和民眾黨的青色搞混。
+- 歐巴桑聯盟依使用者指定，沿用粉紅 `#D6478A`。
+- 時代力量、新黨顏色偏淺，加深色外框。
+- 尚未設定顏色的政黨，新增前要先和使用者討論：
+  - 綠黨、台灣工黨、台灣麻將最大黨：顏色是綠色系，和民進黨相近
+  - 社民黨：粉紅色，和歐巴桑聯盟相近
+  - 勞動黨：維基只寫 red，沒有色碼
+  - 其他小黨：沒有公認的政黨色
+
+尚未處理的缺口：
+- Apps Script 審核台與「整合草稿」沒有名冊檢查，錯誤要等建置時才會發現。可以讓 Apps Script 用 `UrlFetchApp` 讀線上的 `data/registered_candidates.json`，在審核卡片上提示，但需要另外部署 Apps Script，並在實際環境測試。
+- 2026-10-01 已移除前台讀取 Cloudflare 已核准資料的程式碼，經使用者同意；移除前確認兩個 API 都是 0 筆：`public-candidates.js` 的 `/api/public/candidates`、`civic.js` 的 `/api/public/civic-calls`。`updates.js` 只用來插入 Cloudflare 資料，而且本來就沒列在建置清單裡，已一併刪除。現在前台只讀經過 `build_data.py` 驗證的 JSON。
+- 仍保留的 Cloudflare 相依：`nav.js` 的匿名造訪統計（`/api/public/visit`），以及舊的人工查核頁 `review.html`／`review-api.js`（首頁「人工查核 ↗」還連到這頁），兩者都還沒決定要不要移除。
+
 ### 地圖相關的提交建議
 
 只提交地圖與名冊相關檔案，與 `apps-script/Index.html`、`backups/` 分開；資料 JSON 可在同一次或另一次「建置產物」commit 處理。提交前再跑一次 `npm run build`。
 
-建議續作順序：
+## 建議續作順序（2026-10-01 晚間）
 
-1. 保存或建立目前變更的安全備份，避免與其他電腦同時處理同一工作目錄。
-2. 檢視 `apps-script/Index.html` 的變更；它目前在原 HTML 結尾追加覆寫式 script，需確認瀏覽器及 Apps Script 都能正常執行後，再考慮整理為單一腳本。
-3. 對照 `data/input/` 執行 `npm run build`，確認衍生 JSON 是否只是可重現產物。
-4. 若建置通過，分開提交「Apps Script 介面」與「資料建置產物／正式 CSV」；不要混入 `backups/`。
-5. push 後確認 GitHub Actions 的 Pages 部署結果與公開網站。
+1. **中選會審定名單**：10/16 前完成資格審查、10/23 號次抽籤。審定名單公告後，下載新的 PDF 重跑 `scripts/import_cec_registrations.py`，並更新 `--as-of` 與 `map.html` 底部「統計口徑」的人數和日期文字。
+2. **`apps-script/Index.html` 的變更**：它目前在原 HTML 結尾追加了一段覆寫式 script，要先在瀏覽器和 Apps Script 確認都能正常執行，再考慮整理成單一腳本。確認後單獨提交，不要混入 `backups/`。
+3. **還沒決定的 Cloudflare 相依**：`nav.js` 的匿名造訪統計，以及首頁「人工查核 ↗」連到的舊 Cloudflare 審核頁 `review.html`。
+4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
+5. **文件**：把 `docs/manual-update.md` 改成符合 Google Sheet／Apps Script 的現行流程（見下節）。
+6. **出現新政黨時**：若候選人資料出現 `config/party_colors.json` 沒有的政黨，建置會跳警告。補顏色前先和使用者確認。
 
 ## 文件一致性提醒
 
