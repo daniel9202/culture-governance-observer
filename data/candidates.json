@@ -3787,6 +3787,56 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為新竹縣第3選舉區、中國國民黨候選人；新竹縣議會個人政策頁及2026年縣府總質詢來源明列老街與客家文化措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-chw-councilor-bai-yu-ru-music-city-001",
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "candidate": "白玉如",
+      "party": "中國國民黨",
+      "topics": [
+        "音樂文化",
+        "表演藝術",
+        "文化近用"
+      ],
+      "summary": "主張將彰化打造為音樂之都，提供街頭藝人及在校學生音樂表演平台，擴大民眾與青年參與音樂文化的機會。",
+      "policy_argument": "以城市音樂品牌結合街頭與校園表演平台，讓藝文表演進入公共生活並支持青年展演。",
+      "concrete_proposals": [
+        "讓彰化成為音樂之都。",
+        "提供街頭藝人及在校學生音樂表演平台。"
+      ],
+      "related_statements": [
+        "官方政策頁未列表演平台的場地數量、申請制度、經費、辦理期程與青年支持措施。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "白玉如｜彰化縣議會議員資訊",
+            "url": "https://www.chcc.gov.tw/member/Details2.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C121%2C1%2C%2C%2C%2C%2C%2C%2C3525"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "白玉如｜彰化縣議會議員資訊",
+            "url": "https://www.chcc.gov.tw/member/Details2.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C121%2C1%2C%2C%2C%2C%2C%2C%2C3525"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "白玉如｜彰化縣議會議員資訊",
+            "url": "https://www.chcc.gov.tw/member/Details2.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C121%2C1%2C%2C%2C%2C%2C%2C%2C3525"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "白玉如｜彰化縣議會議員資訊",
+      "source_url": "https://www.chcc.gov.tw/member/Details2.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C121%2C1%2C%2C%2C%2C%2C%2C%2C3525",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為彰化縣第1選舉區、中國國民黨候選人；彰化縣議會個人政策頁明列音樂之都與街頭藝人、學生展演平台措施，完成人工審核。"
+      ]
     }
   ]
 }
