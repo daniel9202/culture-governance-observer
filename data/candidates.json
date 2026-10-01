@@ -163,6 +163,153 @@
       "corrections": []
     },
     {
+      "id": "candidate-lgn-councilor-tsao-cheng-chun-arts-island-001",
+      "city": "連江縣",
+      "office": "縣市議員",
+      "candidate": "曹丞君",
+      "party": "中國國民黨",
+      "topics": [
+        "公共藝術",
+        "文化活動",
+        "文化預算",
+        "文化觀光"
+      ],
+      "summary": "主張爭取馬祖國際藝術島活動經費，並要求至少一半由連江縣政府統籌使用，讓國際藝術島成為地方可掌握的文化活動與資源。",
+      "policy_argument": "國際藝術島的經費與執行應由地方政府取得足夠統籌空間，才能回應馬祖的文化與地方需求。",
+      "concrete_proposals": [
+        "爭取馬祖國際藝術島活動經費。",
+        "要求至少一半經費由縣府統籌使用。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "連江縣議會：曹丞君議員政見",
+            "url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "連江縣議會：曹丞君議員政見",
+            "url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "連江縣議會：曹丞君議員政見",
+            "url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "連江縣議會：曹丞君議員政見",
+      "source_url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-lgn-councilor-chen-shu-chien-arts-island-001",
+      "city": "連江縣",
+      "office": "縣市議員",
+      "candidate": "陳書建",
+      "party": "中國國民黨",
+      "topics": [
+        "公共藝術",
+        "文化空間",
+        "文化資產",
+        "文化觀光"
+      ],
+      "summary": "關注馬祖國際藝術島撤展後作品的場域管理，主張保留作品應設置完整告示與說明牌，並更新過時的觀光導覽及指示牌，讓作品背景、保存意義與旅遊資訊可被清楚理解。",
+      "policy_argument": "公共藝術撤展後若保留於地方，應有清楚的保存說明與導覽資訊，避免文化作品失去脈絡並提升旅遊環境品質。",
+      "concrete_proposals": [
+        "要求保留的藝術島作品設置完整告示及說明牌。",
+        "要求盤點並更新內容過時或不符現況的觀光導覽與指示牌。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "馬祖日報：陳書建關注國際藝術島作品管理與觀光導覽",
+            "url": "https://www.matsu-news.gov.tw/news/article/241884"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "馬祖日報：陳書建關注國際藝術島作品管理與觀光導覽",
+            "url": "https://www.matsu-news.gov.tw/news/article/241884"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "馬祖日報：陳書建關注國際藝術島作品管理與觀光導覽",
+            "url": "https://www.matsu-news.gov.tw/news/article/241884"
+          }
+        ]
+      },
+      "published_date": "2026-06-12",
+      "source_title": "馬祖日報：陳書建關注國際藝術島作品管理與觀光導覽",
+      "source_url": "https://www.matsu-news.gov.tw/news/article/241884",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-lgn-councilor-chen-yu-fa-mother-tongue-001",
+      "city": "連江縣",
+      "office": "縣市議員",
+      "candidate": "陳玉發",
+      "party": "中國國民黨",
+      "topics": [
+        "母語",
+        "文化傳承",
+        "地方文史",
+        "文化教育"
+      ],
+      "summary": "指出閩東語保存不應只停留在教學，應鎖定年輕世代並支持以母語創作的節目與創作者，使母語在日常生活中持續使用與傳承。",
+      "policy_argument": "母語保存須從課堂走入年輕人的日常生活，並透過母語創作與傳授延續語言文化。",
+      "concrete_proposals": [
+        "要求將母語保存對象鎖定年輕一代並生活化推廣。",
+        "建議輔導母語節目持續創作，並鼓勵在地教師持續傳授。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "連江縣議會：陳玉發關注閩東語生活化傳承",
+            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=109198&webaid="
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "連江縣議會：陳玉發關注閩東語生活化傳承",
+            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=109198&webaid="
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "連江縣議會：陳玉發關注閩東語生活化傳承",
+            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=109198&webaid="
+          }
+        ]
+      },
+      "published_date": "2023-11-16",
+      "source_title": "連江縣議會：陳玉發關注閩東語生活化傳承",
+      "source_url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=109198&webaid=",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
