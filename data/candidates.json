@@ -5170,6 +5170,57 @@
       "corrections": [
         "2026-10-02｜中選會名冊核對為新竹縣第3選舉區勞動黨候選人；新竹縣府公開質詢紀錄明列其要求修繕復原湖口裝甲新村，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-hsz-councilor-lin-yen-fu-fishing-village-culture-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "林彥甫",
+      "party": "時代力量",
+      "topics": [
+        "漁村文化",
+        "地方文化",
+        "文化觀光",
+        "產業文化"
+      ],
+      "summary": "主張推廣南寮漁村及造船文化，並協助漁港觀光發展，讓在地漁業與造船記憶成為文化與地方發展的基礎。",
+      "policy_argument": "漁村與造船文化應結合漁港觀光發展，讓在地產業記憶轉化為可參與的文化與地方經濟資源。",
+      "concrete_proposals": [
+        "推廣南寮漁村及造船文化。",
+        "協助發展漁港觀光。"
+      ],
+      "related_statements": [
+        "候選人頁未列文化調查保存方式、導覽或展示內容、執行經費與期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "林彥甫 2026候選人政見",
+            "url": "https://sites.google.com/npptw.org/yenfulin"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "林彥甫 新竹市議會個人政見",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=24&mid=39"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "林彥甫 2026候選人政見",
+            "url": "https://sites.google.com/npptw.org/yenfulin"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "林彥甫 2026候選人政見",
+      "source_url": "https://sites.google.com/npptw.org/yenfulin",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜中選會名冊核對為新竹市第4選舉區時代力量候選人；候選人官方頁明列漁村與造船文化推廣及漁港觀光發展，完成人工審核。"
+      ]
     }
   ]
 }
