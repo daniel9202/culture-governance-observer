@@ -3632,6 +3632,57 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第9選舉區、中國國民黨候選人；高雄市議會個人政策頁明列客家文化、流行音樂與藝文特區措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-khh-councilor-chiu-yu-hsuan-marine-culture-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "邱于軒",
+      "party": "中國國民黨",
+      "topics": [
+        "海洋文化",
+        "文化觀光",
+        "地方文化"
+      ],
+      "summary": "主張發揚林園海洋文化並規劃觀光路線，讓民眾認識大寮與林園的文化底蘊。",
+      "policy_argument": "以地方海洋文化結合觀光路線與在地物產，帶動居民認識及參與大寮林園的地方文化。",
+      "concrete_proposals": [
+        "發揚林園海洋文化。",
+        "規劃觀光路線讓民眾感受大寮林園文化底蘊。",
+        "發展大寮紅豆與林園洋蔥等在地物產觀光。"
+      ],
+      "related_statements": [
+        "官方政策頁未列路線範圍、文化據點、解說內容、經費、執行期程與居民參與機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "邱于軒｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2227&n=39&sms=9028"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "邱于軒｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2227&n=39&sms=9028"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "邱于軒｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2227&n=39&sms=9028"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "邱于軒｜高雄市議會議員資訊",
+      "source_url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2227&n=39&sms=9028",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為高雄市第11選舉區、中國國民黨候選人；高雄市議會個人政策頁明列林園海洋文化與文化觀光路線措施並完成人工審核。"
+      ]
     }
   ]
 }
