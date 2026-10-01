@@ -5013,6 +5013,60 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為屏東縣第3選舉區、中國國民黨候選人；聯合新聞網報導其在議會提出客語教育與客家民族教育法構想，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-cyc-city-councilor-cheng-kuang-hung-old-city-revival-001",
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "candidate": "鄭光宏",
+      "party": "中國國民黨",
+      "topics": [
+        "文化資產",
+        "歷史街區",
+        "文化觀光",
+        "文創產業",
+        "展覽策展"
+      ],
+      "summary": "提出以阿里山林鐵與嘉義舊城為文化觀光雙軸，串連北門車站、檜意森活村、嘉義舊監、舊菸葉廠、舊市公所與文化路商圈，並推進舊菸葉廠作為設計基地活化。",
+      "policy_argument": "以老建築修復活化連結展覽設計文創與步行導覽，讓舊城文化資產成為可親近的日常文化場域與城市再生動能。",
+      "concrete_proposals": [
+        "以林鐵與舊城串連六個文化節點。",
+        "推動老舊建築導入展覽設計餐飲及文創。",
+        "搭配步行導覽交通接駁與城市小旅行。",
+        "要求舊嘉義菸葉廠修復空間盡早開放並作為設計展覽及創意產業使用。"
+      ],
+      "related_statements": [
+        "官方網站未列六個節點的分期修復預算、營運權責與完整期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "鄭光宏 2026政見與問政紀錄",
+            "url": "https://jgh.tw/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "鄭光宏 八項重點政績",
+            "url": "https://jgh.tw/achievements/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "鄭光宏 2026政見與問政紀錄",
+            "url": "https://jgh.tw/"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "鄭光宏 2026政見與問政紀錄",
+      "source_url": "https://jgh.tw/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜中選會名冊核對為嘉義市第2選舉區中國國民黨候選人；候選人官方網站的2026政見與問政頁明列舊城文化節點串聯及嘉菸設計基地活化措施，完成人工審核。"
+      ]
     }
   ]
 }
