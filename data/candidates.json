@@ -3121,6 +3121,57 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為桃園市第1選舉區、中國國民黨候選人；2026年登記參選新聞記載具體文化主張並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tyc-councilor-huang-ching-ping-arts-center-001",
+      "city": "桃園市",
+      "office": "縣市議員",
+      "candidate": "黃敬平",
+      "party": "中國國民黨",
+      "topics": [
+        "文化場館",
+        "表演藝術",
+        "地方文化"
+      ],
+      "summary": "主張在平鎮高中南側開發中推動藝文展演中心，並與行政園區及社福設施共同形成新的藝文核心。",
+      "policy_argument": "以藝文展演中心結合平鎮南區的行政與交通建設，補足地方公共藝文空間。",
+      "concrete_proposals": [
+        "推動平鎮高中南側開發。",
+        "設置藝文展演中心。",
+        "結合南區行政園區與社福設施形成藝文核心。"
+      ],
+      "related_statements": [
+        "新聞未載明展演中心的用地範圍、設施規格、預算、營運方式與完成期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "黃敬平完成第4屆市議員登記　六大政見拚建設、拚交通、拚生活品質",
+            "url": "https://more-news.tw/711120/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "黃敬平完成第4屆市議員登記　六大政見拚建設、拚交通、拚生活品質",
+            "url": "https://more-news.tw/711120/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "黃敬平完成第4屆市議員登記　六大政見拚建設、拚交通、拚生活品質",
+            "url": "https://more-news.tw/711120/"
+          }
+        ]
+      },
+      "published_date": "2026-09-03",
+      "source_title": "黃敬平完成第4屆市議員登記　六大政見拚建設、拚交通、拚生活品質",
+      "source_url": "https://more-news.tw/711120/",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為桃園市第8選舉區、中國國民黨候選人；2026年登記參選新聞記載具體藝文展演中心主張並完成人工審核。"
+      ]
     }
   ]
 }
