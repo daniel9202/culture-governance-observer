@@ -654,6 +654,150 @@
       "corrections": []
     },
     {
+      "id": "candidate-hsz-councilor-huang-mei-hui-hakka-culture-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "黃美慧",
+      "party": "中國國民黨",
+      "topics": [
+        "客家文化",
+        "客語",
+        "文化傳承"
+      ],
+      "summary": "主張推動客家文化及客家語言發展，並在議會質詢要求市府跨局處合作、重視客家事務與活動規劃，促進客語文化推廣。",
+      "policy_argument": "客家事務與客語文化推廣需要市府跨局處合作及與社群充分溝通，讓文化活動回應參與者需求。",
+      "concrete_proposals": [
+        "推動客家文化及客家語言發展。",
+        "要求市府跨局處合作推動客家事務與客語文化。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹市議會：黃美慧議員政見",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹市議會：黃美慧客家事務質詢",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/41/2026042715370522739%E5%96%AE13-%E9%BB%83%E7%BE%8E%E6%85%A7.pdf"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹市議會：黃美慧議員政見與客家事務質詢",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹市議會：黃美慧議員政見與客家事務質詢",
+      "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hsz-councilor-wu-hsu-feng-arts-information-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "吳旭豐",
+      "party": "中國國民黨",
+      "topics": [
+        "藝文資訊",
+        "文化近用",
+        "文化活動"
+      ],
+      "summary": "共同提案要求改善文化局藝文活動紙本宣傳資訊，將資訊不足且不易閱讀的摺頁改善為易讀小冊子，讓市民更容易取得及規劃藝文活動。",
+      "policy_argument": "公共藝文資訊應清楚、完整且容易閱讀，才能提升市民取得文化活動資訊及參與的機會。",
+      "concrete_proposals": [
+        "共同提案要求文化局將藝文活動宣傳改善為易讀小冊子。",
+        "要求活動資訊完整彙整、分類與依時間排列。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹市議會：吳旭豐共同提案改善藝文活動宣傳",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹市議會：吳旭豐共同提案改善藝文活動宣傳",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹市議會：吳旭豐共同提案改善藝文活動宣傳",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹市議會：吳旭豐共同提案改善藝文活動宣傳",
+      "source_url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-hsz-councilor-chen-ching-ling-arts-information-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "陳慶齡",
+      "party": "中國國民黨",
+      "topics": [
+        "藝文資訊",
+        "文化近用",
+        "文化活動"
+      ],
+      "summary": "共同提案要求改善文化局藝文活動紙本宣傳資訊，將資訊不足且不易閱讀的摺頁改善為易讀小冊子，讓市民更容易取得及規劃藝文活動。",
+      "policy_argument": "公共藝文資訊應清楚、完整且容易閱讀，才能提升市民取得文化活動資訊及參與的機會。",
+      "concrete_proposals": [
+        "共同提案要求文化局將藝文活動宣傳改善為易讀小冊子。",
+        "要求活動資訊完整彙整、分類與依時間排列。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹市議會：陳慶齡共同提案改善藝文活動宣傳",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹市議會：陳慶齡共同提案改善藝文活動宣傳",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹市議會：陳慶齡共同提案改善藝文活動宣傳",
+            "url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹市議會：陳慶齡共同提案改善藝文活動宣傳",
+      "source_url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
