@@ -65,6 +65,55 @@
       ]
     },
     {
+      "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "candidate": "蔣爭光",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化教育",
+        "文化資產",
+        "文化空間"
+      ],
+      "summary": "以部落教育文化深耕為主軸，推動部落遺址維護與開闢回祖靈家的路徑，讓文化教育、歷史記憶與部落發展相互連結。",
+      "policy_argument": "原住民族部落發展應以文化為根基，透過教育、遺址維護與文化空間路徑，強化族人對土地與歷史的連結。",
+      "concrete_proposals": [
+        "推動部落教育文化深耕。",
+        "維護部落遺址並開闢回祖靈家的路徑。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "金峰鄉公所：鄉長專區",
+            "url": "https://ttjfng.gov.tw/home/index.php/township-chief-2"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "金峰鄉公所：鄉長專區",
+            "url": "https://ttjfng.gov.tw/home/index.php/township-chief-2"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "金峰鄉公所：鄉長專區",
+            "url": "https://ttjfng.gov.tw/home/index.php/township-chief-2"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "金峰鄉公所：鄉長專區",
+      "source_url": "https://ttjfng.gov.tw/home/index.php/township-chief-2",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-yang-chiu-chen-hunting-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
