@@ -2,6 +2,7 @@ const setStat=(name,value)=>{const el=document.querySelector(`[data-stat="${name
 Promise.all([loadCandidateDataset(),...['civic_policy_calls','pledge_fulfillment','region_metrics'].map(name=>fetch(`data/${name}.json`).then(r=>r.json()))]).then(([candidates,civic,fulfillment,regions])=>{
   const councilors=candidates.records.filter(x=>String(x.office).includes('議員'));
   setStat('mayors',candidates.records.length-councilors.length);
+  setStat('map-cities',new Set(candidates.records.filter(record=>!String(record.office).includes('議員')).map(record=>record.city)).size);
   setStat('councilors',councilors.length);
   setStat('regions',new Set(regions.records.map(x=>x.city)).size);
   setStat('fulfillment',fulfillment.records.length);
