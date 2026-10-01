@@ -3018,6 +3018,56 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第9選舉區、民主進步黨候選人；候選人官網收錄2026政見並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-hsc-councilor-lin-ying-che-art-space-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "林盈徹",
+      "party": "民主進步黨",
+      "topics": [
+        "表演藝術",
+        "文化觀光",
+        "地方文化"
+      ],
+      "summary": "主張於海山漁港週邊導入藝術展演空間，提升在地觀光量能與就業機會。",
+      "policy_argument": "以藝術展演空間串聯香山漁港地景、地方觀光與就業，讓文化活動成為地方發展的一環。",
+      "concrete_proposals": [
+        "於海山漁港週邊導入藝術展演空間。",
+        "結合藝術展演提升在地觀光量能與就業機會。"
+      ],
+      "related_statements": [
+        "候選人網站未列展演空間的場域範圍、期程、經費與營運機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "林盈徹2026政見：香山未來要盈",
+            "url": "https://2026.bigear.tw/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "林盈徹2026政見：香山未來要盈",
+            "url": "https://2026.bigear.tw/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "林盈徹2026政見：香山未來要盈",
+            "url": "https://2026.bigear.tw/"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "林盈徹2026政見：香山未來要盈",
+      "source_url": "https://2026.bigear.tw/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為新竹市第5選舉區、民主進步黨候選人；候選人2026競選網站明列藝術展演空間措施並完成人工審核。"
+      ]
     }
   ]
 }
