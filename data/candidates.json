@@ -65,6 +65,54 @@
       ]
     },
     {
+      "id": "candidate-ttt-councilor-yang-chiu-chen-hunting-culture-001",
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "candidate": "楊秋珍",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "傳統知識",
+        "文化教育"
+      ],
+      "summary": "主張加強原住民族合法自製獵槍的登記規則、資格與訓練課程宣導，讓東海岸族人能依法實踐與傳承狩獵文化。",
+      "policy_argument": "狩獵是原住民族文化的一部分；政府應讓族人充分理解合法持有自製獵槍的流程與條件，降低制度資訊落差。",
+      "concrete_proposals": [
+        "要求原民處全盤說明自製獵槍登記流程與資格。",
+        "爭取將自製獵槍訓練課程安排至東海岸地區辦理。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "互傳媒：楊秋珍爭取自製獵槍訓練課程在東海岸線辦理",
+            "url": "https://pchome.megatime.com.tw/m/news/cat8/20260523/77946984613219344001.html"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "互傳媒：楊秋珍爭取自製獵槍訓練課程在東海岸線辦理",
+            "url": "https://pchome.megatime.com.tw/m/news/cat8/20260523/77946984613219344001.html"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "互傳媒：楊秋珍爭取自製獵槍訓練課程在東海岸線辦理",
+            "url": "https://pchome.megatime.com.tw/m/news/cat8/20260523/77946984613219344001.html"
+          }
+        ]
+      },
+      "published_date": "2026-05-23",
+      "source_title": "互傳媒：楊秋珍爭取自製獵槍訓練課程在東海岸線辦理",
+      "source_url": "https://pchome.megatime.com.tw/m/news/cat8/20260523/77946984613219344001.html",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-fang-hsien-jen-cultural-space-001",
       "city": "臺東縣",
       "office": "縣市議員",
