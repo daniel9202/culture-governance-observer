@@ -1,4 +1,3 @@
-const APPROVED_CANDIDATES_API='https://culture-review-ingest-staging.b95302239.workers.dev/api/public/candidates';
 const uniqueValues=values=>[...new Set(values.filter(value=>typeof value==='string'&&value.trim()).map(value=>value.trim()))];
 const normaliseApprovedCandidate=record=>({
   ...record,
@@ -75,11 +74,6 @@ window.loadCandidateDataset=async()=>{
     fetch('data/candidates.json').then(response=>{if(!response.ok)throw Error('無法讀取候選人資料');return response.json()}),
     fetch('data/shared_policy_groups.json').then(response=>{if(!response.ok)throw Error('無法讀取共同政見資料');return response.json()}),
   ]);
-  try{
-    const approved=await fetch(APPROVED_CANDIDATES_API).then(response=>{if(!response.ok)throw Error('無法讀取已核准資料');return response.json()});
-    return {...staticData,records:[...staticData.records,...(approved.records||[]).map(normaliseApprovedCandidate)],shared_policy_groups:sharedData.records||[]};
-  }catch(error){
-    console.warn('已核准資料暫時無法載入',error);
-    return {...staticData,shared_policy_groups:sharedData.records||[]};
-  }
+  // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
+  return {...staticData,shared_policy_groups:sharedData.records||[]};
 };
