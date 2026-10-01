@@ -3272,6 +3272,111 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第12選舉區、中國國民黨候選人；官方政策頁明列巨蛋與大型演藝文化產業措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tcc-councilor-ku-hsiu-ying-culture-001",
+      "city": "臺中市",
+      "office": "縣市議員",
+      "candidate": "古秀英",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化空間",
+        "部落文化",
+        "族語傳承"
+      ],
+      "summary": "主張落實原民教育與文化傳承，增設文化據點促進世代對話，並推動部落社區營造與觀光發展。",
+      "policy_argument": "以原民教育、文化據點與部落社區營造，串聯文化傳承、世代對話與原鄉發展。",
+      "concrete_proposals": [
+        "強化原民教育並落實原教法。",
+        "推動文化傳承及增設文化據點，協助世代對話。",
+        "推動部落社區營造與部落觀光發展。"
+      ],
+      "related_statements": [
+        "官方政策頁未列文化據點的位置、數量、期程、經費與部落參與機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "古秀英｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno="
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "古秀英｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno="
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "古秀英｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno="
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "古秀英｜臺中市議會議員資訊",
+      "source_url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno=",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺中市第16選舉區、中國國民黨候選人；官方政策頁明列原民文化傳承與文化據點措施並完成人工審核。"
+      ]
+    },
+    {
+      "id": "candidate-tcc-councilor-chu-yuan-hung-indigenous-culture-001",
+      "city": "臺中市",
+      "office": "縣市議員",
+      "candidate": "朱元宏",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "表演藝術",
+        "文化空間",
+        "族語傳承",
+        "文化產業"
+      ],
+      "summary": "主張爭取原住民表演藝術人才的表演與專屬建設空間、增加原民商品曝光度，並強化族語保留傳承與原住民民族文化發展。",
+      "policy_argument": "以表演空間、原民商品、族語與民族文化發展，提升都會與原鄉原住民族文化的能見度與傳承。",
+      "concrete_proposals": [
+        "爭取原住民表演藝術人才的表演空間及原民專屬建設空間。",
+        "增加原民商品曝光度。",
+        "強化原住民族族語保留與傳承，並加強民族文化發展。"
+      ],
+      "related_statements": [
+        "官方政策頁未列空間位置、設施規格、經費、執行期程與族語傳承機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "朱元宏｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=65&uno="
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "朱元宏｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=65&uno="
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "朱元宏｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=65&uno="
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "朱元宏｜臺中市議會議員資訊",
+      "source_url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=65&uno=",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺中市第17選舉區、中國國民黨候選人；官方政策頁明列原民表演空間、族語與文化發展措施並完成人工審核。"
+      ]
     }
   ]
 }
