@@ -2965,6 +2965,59 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第4選舉區、民主進步黨候選人；2026年新聞記載具體文化觀光主張並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-khh-councilor-chen-hui-wen-fengshan-culture-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "陳慧文",
+      "party": "民主進步黨",
+      "topics": [
+        "文化觀光",
+        "地方文化",
+        "文化產業",
+        "傳統市場"
+      ],
+      "summary": "主張振興鳳山商圈與夜間經濟、推動傳統市場現代化與市場用地轉型，並發展鳳山文史觀光廊帶及青年創業扎根。",
+      "policy_argument": "以商圈、傳統市場、文史觀光與青年創業整合，提升鳳山的地方文化與經濟活力。",
+      "concrete_proposals": [
+        "振興鳳山商圈與夜間經濟。",
+        "推動傳統市場現代化與市場用地轉型新生。",
+        "發展鳳山文史觀光廊帶。",
+        "支援青年創業與扎根。"
+      ],
+      "related_statements": [
+        "官方頁明示尚未逐項列出量化目標、完成期限與執行分工。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳慧文2026政見與歷屆政見",
+            "url": "https://www.huiwen.tw/vision.html"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳慧文2026政見與歷屆政見",
+            "url": "https://www.huiwen.tw/vision.html"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳慧文2026政見與歷屆政見",
+            "url": "https://www.huiwen.tw/vision.html"
+          }
+        ]
+      },
+      "published_date": "2026-09-09",
+      "source_title": "陳慧文2026政見與歷屆政見",
+      "source_url": "https://www.huiwen.tw/vision.html",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為高雄市第9選舉區、民主進步黨候選人；候選人官網收錄2026政見並完成人工審核。"
+      ]
     }
   ]
 }
