@@ -310,6 +310,105 @@
       "corrections": []
     },
     {
+      "id": "candidate-lgn-councilor-chen-yi-pin-performing-arts-001",
+      "city": "連江縣",
+      "office": "縣市議員",
+      "candidate": "陳貽斌",
+      "party": "中國國民黨",
+      "topics": [
+        "表演藝術",
+        "文化空間",
+        "文化資產",
+        "文化觀光"
+      ],
+      "summary": "關注梅石藝文中心使用率，主張持續邀請閩劇團及多元表演團體到馬祖演出以活化場館，並關心神像修復與保存管理，以及國際藝術島宣傳時程。",
+      "policy_argument": "文化場館應透過在地及多元表演持續活化，宗教文物修復和藝術活動宣傳也應有長期管理與推廣。",
+      "concrete_proposals": [
+        "建議持續邀請閩劇團及多元表演團體到梅石藝文中心演出。",
+        "關注神像修復及保存管理。",
+        "要求國際藝術島提早展開宣傳以帶動觀光效益。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
+            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid="
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
+            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid="
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
+            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid="
+          }
+        ]
+      },
+      "published_date": "2026-05-28",
+      "source_title": "連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
+      "source_url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid=",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-lgn-councilor-chou-jui-kuo-traditional-architecture-001",
+      "city": "連江縣",
+      "office": "縣市議員",
+      "candidate": "周瑞國",
+      "party": "中國國民黨",
+      "topics": [
+        "文化資產",
+        "傳統建築",
+        "宗教文化",
+        "文化活動"
+      ],
+      "summary": "主張爭取芹壁社協辦公室及坂里大同二村的傳統建築保存與文化資產評估，並關注擺暝文化祭所需的中正堂整修與宮廟協調。",
+      "policy_argument": "傳統建築、社區空間與地方祭儀應及早納入保存、修繕及協調機制，以延續馬祖的地方文化。",
+      "concrete_proposals": [
+        "爭取芹壁社協辦公室及坂里大同二村的傳統建築保存與文化資產評估。",
+        "關注擺暝文化祭的中正堂整修並要求盡快與宮廟協調。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "馬祖日報：周瑞國關注傳統建築保存與擺暝文化祭",
+            "url": "https://www.matsu-news.gov.tw/news/article/236839"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "馬祖日報：周瑞國關注傳統建築保存與擺暝文化祭",
+            "url": "https://www.matsu-news.gov.tw/news/article/236839"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "馬祖日報：周瑞國關注傳統建築保存與擺暝文化祭",
+            "url": "https://www.matsu-news.gov.tw/news/article/236839"
+          }
+        ]
+      },
+      "published_date": "2025-11-21",
+      "source_title": "馬祖日報：周瑞國關注傳統建築保存與擺暝文化祭",
+      "source_url": "https://www.matsu-news.gov.tw/news/article/236839",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
