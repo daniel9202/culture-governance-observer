@@ -798,6 +798,56 @@
       "corrections": []
     },
     {
+      "id": "candidate-hsz-councilor-lin-tzu-ai-indigenous-culture-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "林慈愛",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "展覽策展",
+        "文化教育",
+        "文化健康"
+      ],
+      "summary": "主張將原住民族日策展納入新竹市總圖書館年度常態展覽並設為固定文化據點，且提出在萬聖節活動納入原住民族展演與文化體驗，以及增設文化健康站及文化安全培訓師資。",
+      "policy_argument": "原住民族文化應在城市公共文化場館、節慶活動及長者照顧服務中被持續看見與傳承。",
+      "concrete_proposals": [
+        "將原住民族日策展納入總圖書館年度常態展覽，設為固定原住民族文化據點。",
+        "在萬聖節系列活動納入原住民族特色展演與文化體驗。",
+        "增設文化健康站並引進文化安全培訓師資。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹市議會：林慈愛原住民族文化提案",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=36&mid=39"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹市議會：林慈愛原住民族文化提案",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=36&mid=39"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹市議會：林慈愛原住民族文化提案",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=36&mid=39"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹市議會：林慈愛原住民族文化提案",
+      "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=36&mid=39",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
