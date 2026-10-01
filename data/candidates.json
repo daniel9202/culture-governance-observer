@@ -3529,6 +3529,55 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第10選舉區、中國國民黨候選人；2026年候選人記者會明列文化中心改造升級措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-khh-councilor-huang-bo-lin-film-access-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "黃柏霖",
+      "party": "中國國民黨",
+      "topics": [
+        "藝文活動",
+        "文化近用",
+        "影視文化"
+      ],
+      "summary": "主張讓《美力台灣3D》電影車穿梭高雄，以行動放映提供市民接觸影像藝術與文化內容的機會。",
+      "policy_argument": "以移動式電影放映進入不同社區與校園，降低參與藝文活動的地理門檻。",
+      "concrete_proposals": [
+        "讓《美力台灣3D》電影車穿梭高雄。"
+      ],
+      "related_statements": [
+        "官方頁未列巡迴路線、場次、合作單位、經費與執行期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "黃柏霖市議員｜服務政見",
+            "url": "https://alin.ar.com.tw/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "黃柏霖市議員｜服務政見",
+            "url": "https://alin.ar.com.tw/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "黃柏霖市議員｜服務政見",
+            "url": "https://alin.ar.com.tw/"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "黃柏霖市議員｜服務政見",
+      "source_url": "https://alin.ar.com.tw/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為高雄市第7選舉區、中國國民黨候選人；候選人官方網站以「再四年」列為服務政見並明列電影車措施，完成人工審核。"
+      ]
     }
   ]
 }
