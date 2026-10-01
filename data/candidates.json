@@ -409,6 +409,55 @@
       "corrections": []
     },
     {
+      "id": "candidate-klg-councilor-sung-wei-li-sea-music-festival-001",
+      "city": "基隆市",
+      "office": "縣市議員",
+      "candidate": "宋瑋莉",
+      "party": "中國國民黨",
+      "topics": [
+        "音樂",
+        "文化活動",
+        "文化觀光",
+        "海洋文化"
+      ],
+      "summary": "主張爭取辦理外木山海洋音樂祭及休閒娛樂設施，結合基隆海岸資源、音樂活動與地方休閒觀光。",
+      "policy_argument": "海岸公共空間可透過音樂活動與休閒設施，成為基隆市民共享並帶動地方觀光的文化場域。",
+      "concrete_proposals": [
+        "爭取辦理外木山海洋音樂祭。",
+        "爭取外木山休閒娛樂設施。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "基隆市議會：宋瑋莉議員政見",
+            "url": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "基隆市議會：宋瑋莉議員政見",
+            "url": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "基隆市議會：宋瑋莉議員政見",
+            "url": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "基隆市議會：宋瑋莉議員政見",
+      "source_url": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
