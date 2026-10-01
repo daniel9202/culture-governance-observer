@@ -3837,6 +3837,56 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為彰化縣第1選舉區、中國國民黨候選人；彰化縣議會個人政策頁明列音樂之都與街頭藝人、學生展演平台措施，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-cyc-councilor-chien-chia-yi-arts-001",
+      "city": "嘉義縣",
+      "office": "縣市議員",
+      "candidate": "簡嘉億",
+      "party": "中國國民黨",
+      "topics": [
+        "藝文活動",
+        "音樂文化",
+        "文化扎根"
+      ],
+      "summary": "主張發展藝文體育活動，讓音樂藝術氛圍扎根，同時支持運動與體育發展。",
+      "policy_argument": "以藝文活動和音樂藝術扎根，擴大地方的文化參與與日常接觸。",
+      "concrete_proposals": [
+        "發展藝文體育活動。",
+        "推動音樂藝術氛圍扎根。"
+      ],
+      "related_statements": [
+        "官方政策頁未列藝文活動的辦理場域、參與對象、經費、期程與執行指標。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "簡嘉億｜嘉義縣議會議員資訊",
+            "url": "https://www.cyscc.gov.tw/Parliamentary_Content/315/14195/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "簡嘉億｜嘉義縣議會議員資訊",
+            "url": "https://www.cyscc.gov.tw/Parliamentary_Content/315/14195/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "簡嘉億｜嘉義縣議會議員資訊",
+            "url": "https://www.cyscc.gov.tw/Parliamentary_Content/315/14195/"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "簡嘉億｜嘉義縣議會議員資訊",
+      "source_url": "https://www.cyscc.gov.tw/Parliamentary_Content/315/14195/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為嘉義縣第2選舉區、中國國民黨候選人；嘉義縣議會個人政策頁明列藝文活動與音樂藝術扎根措施，完成人工審核。"
+      ]
     }
   ]
 }
