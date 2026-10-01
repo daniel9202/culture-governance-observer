@@ -15,6 +15,20 @@
 
 公開網站由 GitHub Pages 部署；目前主要審核流程使用 Google Sheet 與 Google Apps Script。Cloudflare Worker／D1 是未來或 staging 架構，**不是目前日常資料發布入口**；2026-10-01 起前台已不再讀取其已核准資料 API（僅 `nav.js` 匿名造訪統計與舊的 `review.html` 仍連到 Cloudflare）。
 
+## 工作分工（2026-10-01 起，使用者指定）
+
+目前有兩個工作端同時使用這個 repo：
+
+| 工作端 | 負責 | 可以提交的檔案 |
+| --- | --- | --- |
+| 設計端 | 前台外觀與互動 | `styles.css`、根目錄 `*.html`／`*.js`、`map-geometry.json`、`docs/` |
+| 資料端 | 新增與更正資料，並自行 push | `data/input/`、`data/*.json`、`data/research/` |
+
+- 不要提交對方負責的檔案；看到對方範圍的問題（例如政黨欄位不符），回報使用者，由負責的一端處理。
+- 提交時只 `git add` 自己範圍的檔案，不要 `git add .`。
+- push 前先 `git fetch`，遠端有新提交就先 `git pull --rebase`，避免覆蓋另一端的工作。
+- `apps-script/` 審核台目前由設計端修改，但需使用者在 Apps Script 環境部署實測後才提交。
+
 ## 快速開始（換電腦）
 
 ```powershell
