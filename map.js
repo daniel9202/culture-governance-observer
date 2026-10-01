@@ -21,7 +21,7 @@ const OFFICES={mayor:{label:'縣市長',page:'mayors.html',test:record=>!String(
 const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:314,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
 const SVG_NS='http://www.w3.org/2000/svg';
 const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-const fillLevel=count=>Math.min(count,3);
+const fillLevel=count=>count?1:0;
 
 let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCity='';
 // 參選人數取自中選會登記名冊（data/registered_candidates.json）。
