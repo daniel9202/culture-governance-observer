@@ -2711,6 +2711,55 @@
       "corrections": [
         "2026-10-01｜中選會登記名冊核對為新北市第11選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
       ]
+    },
+    {
+      "id": "candidate-ntpc-councilor-peng-yi-shu-arts-center-001",
+      "city": "新北市",
+      "office": "縣市議員",
+      "candidate": "彭一書",
+      "party": "民主進步黨",
+      "topics": [
+        "文化場館",
+        "表演藝術",
+        "地方文化"
+      ],
+      "summary": "提出在土城看守所搬遷後的現址打造「複合式國際運動藝文中心」。",
+      "policy_argument": "以大型複合場館承接土城轉型後的運動與藝文需求。",
+      "concrete_proposals": [
+        "利用土城看守所搬遷後現址打造複合式國際運動藝文中心。"
+      ],
+      "related_statements": [
+        "官方新聞未說明場館面積、藝文設施內容、預算來源、營運方式與完成期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
+            "url": "https://www.dppnt.org.tw/20260704news/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
+            "url": "https://www.dppnt.org.tw/20260704news/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
+            "url": "https://www.dppnt.org.tw/20260704news/"
+          }
+        ]
+      },
+      "published_date": "2026-07-04",
+      "source_title": "出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
+      "source_url": "https://www.dppnt.org.tw/20260704news/",
+      "related_sources": [],
+      "source_type": "政黨官方候選人新聞",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會登記名冊核對為新北市第8選舉區、民主進步黨候選人；民進黨新北市黨部新聞記載彭一書提出該案並完成人工審核。"
+      ]
     }
   ]
 }
