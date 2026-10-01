@@ -65,6 +65,55 @@
       ]
     },
     {
+      "id": "candidate-phh-councilor-hsu-kuo-cheng-cultural-market-001",
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "candidate": "許國政",
+      "party": "中國國民黨",
+      "topics": [
+        "文化產業",
+        "多元文化",
+        "文化空間",
+        "文化觀光"
+      ],
+      "summary": "主張設立市區觀光市場與文創農漁市集，並利用閒置空間成立新住民交流學習中心，讓文化創意、在地產業與多元族群交流成為澎湖旅遊及社區發展的一環。",
+      "policy_argument": "文化與地方產業應結合觀光動線及公共空間，讓青年創意、農漁產品與新住民文化都有被看見及交流的場域。",
+      "concrete_proposals": [
+        "設立市區觀光市場與文創農漁市集，打造澎南線旅遊動線特色品牌。",
+        "運用閒置空間成立新住民交流學習中心，促進多元文化融合發展。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "澎湖縣議會：許國政議員政見",
+            "url": "https://www.phcouncil.gov.tw/mop2.php?no=M24080011"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "澎湖縣議會：許國政議員政見",
+            "url": "https://www.phcouncil.gov.tw/mop2.php?no=M24080011"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "澎湖縣議會：許國政議員政見",
+            "url": "https://www.phcouncil.gov.tw/mop2.php?no=M24080011"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "澎湖縣議會：許國政議員政見",
+      "source_url": "https://www.phcouncil.gov.tw/mop2.php?no=M24080011",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
