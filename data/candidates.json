@@ -114,6 +114,55 @@
       "corrections": []
     },
     {
+      "id": "candidate-kmn-councilor-chou-tzu-chieh-cultural-exchange-001",
+      "city": "金門縣",
+      "office": "縣市議員",
+      "candidate": "周子傑",
+      "party": "中國國民黨",
+      "topics": [
+        "地方文化",
+        "宗教文化",
+        "文化交流",
+        "文化觀光"
+      ],
+      "summary": "主張提升金門地區特色文化，並推展兩岸文化、宗教與體育交流，讓地方文化特色成為對外交流及地方發展的基礎。",
+      "policy_argument": "金門應以地方特色文化為基礎，透過文化與宗教交流提升地方能見度並帶動發展。",
+      "concrete_proposals": [
+        "提升地區特色文化。",
+        "推展兩岸文化、宗教與體育交流。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "金門縣議會：周子傑議員政見",
+            "url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "金門縣議會：周子傑議員政見",
+            "url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "金門縣議會：周子傑議員政見",
+            "url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "金門縣議會：周子傑議員政見",
+      "source_url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
