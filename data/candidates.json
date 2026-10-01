@@ -604,6 +604,56 @@
       "corrections": []
     },
     {
+      "id": "candidate-hsz-councilor-hsu-hsiu-jui-cultural-heritage-001",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "許修睿",
+      "party": "中國國民黨",
+      "topics": [
+        "軍事文化",
+        "藝文活動",
+        "文化觀光",
+        "舊城文化"
+      ],
+      "summary": "主張延續國軍文化、活化前站舊城商圈，並以青草湖重現為目標推動藝文季與觀光行銷，讓地方記憶、文化活動與城市發展相互連結。",
+      "policy_argument": "城市發展應維繫在地歷史與國軍文化，並以舊城活化和藝文活動帶動公共參與及觀光。",
+      "concrete_proposals": [
+        "延續國軍文化傳承。",
+        "活化前站舊城商圈。",
+        "推動青草湖藝文季及觀光行銷。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹市議會：許修睿議員政見",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=3&mid=39"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹市議會：許修睿議員政見",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=3&mid=39"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹市議會：許修睿議員政見",
+            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=3&mid=39"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹市議會：許修睿議員政見",
+      "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=3&mid=39",
+      "related_sources": [
+        "https://web.cec.gov.tw/central/article/64709"
+      ],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
       "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
