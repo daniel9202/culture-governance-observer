@@ -3068,6 +3068,59 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為新竹市第5選舉區、民主進步黨候選人；候選人2026競選網站明列藝術展演空間措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tyc-councilor-lin-cheng-hsien-cultural-governance-001",
+      "city": "桃園市",
+      "office": "縣市議員",
+      "candidate": "林政賢",
+      "party": "中國國民黨",
+      "topics": [
+        "多元文化",
+        "地方文化",
+        "文化場館",
+        "傳統市場"
+      ],
+      "summary": "提出設置閩南事務處與新住民事務局、推動里里有特色，並改建南門市場。",
+      "policy_argument": "以閩南與新住民事務的制度設置、社區特色及傳統市場改建，將多元文化與地方生活空間納入城市發展。",
+      "concrete_proposals": [
+        "設置閩南事務處。",
+        "設置新住民事務局。",
+        "推動里里有特色。",
+        "改建南門市場。"
+      ],
+      "related_statements": [
+        "新聞未列組織權責、社區推動方式、市場文化定位、預算與期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "林政賢登記參選市議員拚連任 拋7大政見勾勒桃園未來",
+            "url": "https://tyenews.com/2026/09/1402151/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "林政賢登記參選市議員拚連任 拋7大政見勾勒桃園未來",
+            "url": "https://tyenews.com/2026/09/1402151/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "林政賢登記參選市議員拚連任 拋7大政見勾勒桃園未來",
+            "url": "https://tyenews.com/2026/09/1402151/"
+          }
+        ]
+      },
+      "published_date": "2026-09-02",
+      "source_title": "林政賢登記參選市議員拚連任 拋7大政見勾勒桃園未來",
+      "source_url": "https://tyenews.com/2026/09/1402151/",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為桃園市第1選舉區、中國國民黨候選人；2026年登記參選新聞記載具體文化主張並完成人工審核。"
+      ]
     }
   ]
 }
