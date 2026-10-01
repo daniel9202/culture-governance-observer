@@ -128,12 +128,12 @@ select{display:block;width:100%;border:0;background:transparent;font:700 1rem in
 .chart-readout{min-height:1.4em;margin:.5rem 0 0;color:var(--muted);font-size:.78rem}
 .hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .hub-card{background:var(--surface);padding:2rem;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;text-decoration:none;transition:background .15s}
-a.hub-card:hover,a.hub-card:focus-visible{background:var(--ink);color:var(--white)}
-a.hub-card:hover .kicker,a.hub-card:focus-visible .kicker{color:var(--lime)}
+a.hub-card:hover,a.hub-card:focus-visible{background:var(--tint)}
+a.hub-card:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+a.hub-card-primary:hover,a.hub-card-primary:focus-visible{background:var(--lime);filter:brightness(.94)}
 .hub-card h3{font-size:1.9rem;letter-spacing:-.03em;margin:.6rem 0 .8rem}
 .hub-card p{margin:0;font-size:.95rem}
 .hub-card>div>p:last-child{color:var(--muted)}
-a.hub-card:hover>div>p:last-child,a.hub-card:focus-visible>div>p:last-child{color:#c9ccc2}
 .hub-card-primary{background:var(--lime)}
 .hub-card-primary .kicker{color:var(--ink)}
 .hub-card-primary>div>p:last-child{color:#454b2d}
@@ -144,7 +144,7 @@ a.hub-card:hover>div>p:last-child,a.hub-card:focus-visible>div>p:last-child{colo
 .hub-card-note{background:var(--tint)}
 .hub-links{display:flex;flex-wrap:wrap;gap:.5rem}
 .hub-links a{border:1px solid var(--line);padding:.45rem .7rem;font-size:.78rem;font-weight:700;text-decoration:none;background:var(--surface)}
-.hub-links a:hover{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.hub-links a:hover{background:var(--tint)}
 .nav-links a[aria-current="page"]{color:var(--lime)}
 .region-entry-grid{display:grid;grid-template-columns:.7fr 1.4fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .region-entry-grid>*{background:var(--surface);padding:2rem}
@@ -297,9 +297,6 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .hub-card-map{grid-column:1/-1;min-height:220px}
 .hub-card-map h3{font-size:clamp(2rem,4vw,3rem)}
 .hub-card-map>div>p:last-child{max-width:640px}
-a.hub-card-map:hover,a.hub-card-map:focus-visible{background:var(--lime);color:var(--ink)}
-a.hub-card-map:hover .kicker,a.hub-card-map:focus-visible .kicker{color:var(--ink)}
-a.hub-card-map:hover>div>p:last-child,a.hub-card-map:focus-visible>div>p:last-child{color:#454b2d}
 .taiwan-map-wrap{position:relative}
 .map-tooltip{position:absolute;top:0;left:0;z-index:5;width:260px;background:var(--ink);color:var(--white);padding:.85rem 1rem;box-shadow:0 10px 24px #0004;pointer-events:none;font-size:.8rem;line-height:1.45}
 .map-tooltip[hidden]{display:none}
