@@ -3480,6 +3480,55 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第2選舉區、中國國民黨候選人；官方政策頁明列文化資產、文化觀光與藝文活動措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tnn-councilor-ou-cheng-hao-cultural-center-001",
+      "city": "臺南市",
+      "office": "縣市議員",
+      "candidate": "歐政豪",
+      "party": "中國國民黨",
+      "topics": [
+        "文化場館",
+        "城市再生",
+        "文化空間"
+      ],
+      "summary": "主張推動臺南文化中心改造升級，納入東區城市建設重點。",
+      "policy_argument": "將文化中心升級納入東區城市建設，提升既有文化場館功能。",
+      "concrete_proposals": [
+        "推動臺南文化中心改造升級。"
+      ],
+      "related_statements": [
+        "候選人尚未公布改造內容、期程、經費與營運方式。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "歐政豪青年軍成立：關注文化中心改造升級",
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=%7B34FAAE5C-E6EC-4541-8A71-0F9B9DD60C48%7D"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "歐政豪青年軍成立：關注文化中心改造升級",
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=%7B34FAAE5C-E6EC-4541-8A71-0F9B9DD60C48%7D"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "歐政豪青年軍成立：關注文化中心改造升級",
+            "url": "https://www.tncc.gov.tw/page.asp?mainid=%7B34FAAE5C-E6EC-4541-8A71-0F9B9DD60C48%7D"
+          }
+        ]
+      },
+      "published_date": "2026-02-10",
+      "source_title": "歐政豪青年軍成立：關注文化中心改造升級",
+      "source_url": "https://www.tncc.gov.tw/page.asp?mainid=%7B34FAAE5C-E6EC-4541-8A71-0F9B9DD60C48%7D",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺南市第10選舉區、中國國民黨候選人；2026年候選人記者會明列文化中心改造升級措施並完成人工審核。"
+      ]
     }
   ]
 }
