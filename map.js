@@ -49,6 +49,12 @@ function dots(candidates,x,y,align){
   return candidates.map((item,index)=>`<circle class="map-dot" cx="${start+index*gap}" cy="${y}" r="5.5" fill="${partyInfo(item.party).fill}"${partyInfo(item.party).ring?` style="stroke:${partyInfo(item.party).ring};stroke-width:2.2px"`:''}><title>${esc(item.candidate)}（${esc(partyInfo(item.party).short)}）</title></circle>`).join('');
 }
 
+// 議員模式只標總數：各政黨人數差異多半反映本站收錄進度，不宜在地圖上呈現
+function countBadge(list,x,y,align){
+  const n=list.length,w=Math.max(18,String(n).length*7+10),cx=align==='start'?x-5.5+w/2:align==='end'?x+5.5-w/2:x;
+  return `<g class="map-count"><rect x="${cx-w/2}" y="${y-8}" width="${w}" height="16" rx="8"/><text x="${cx}" y="${y+3.7}" text-anchor="middle">${n}</text><title>${n} 位議員候選人（本站已收錄）</title></g>`;
+}
+
 function drawMap(){
   const svg=document.getElementById('taiwanMap'),groups=byOffice[office];
   svg.setAttribute('viewBox',geometry.viewBox.join(' '));
@@ -57,15 +63,16 @@ function drawMap(){
     const count=(groups.get(county.name)||[]).length;
     return `<path class="county fill-${fillLevel(count)}${county.name===activeCity?' is-active':''}" d="${county.d}" data-city="${esc(county.name)}" tabindex="0" role="button" aria-label="${esc(county.name)}：${count?`${count} 位${OFFICES[office].label}候選人提出文化政策`:'尚未收錄'}"></path>`;
   }).join('');
+  const mark=office==='councilor'?countBadge:dots;
   const markers=geometry.counties.map(county=>{
     const list=groups.get(county.name)||[],inset=INSET_MARKERS[county.name];
-    if(inset)return list.length?`<g class="map-marker" data-city="${esc(county.name)}">${dots(list,inset.x,inset.y,inset.align)}</g>`:'';
+    if(inset)return list.length?`<g class="map-marker" data-city="${esc(county.name)}">${mark(list,inset.x,inset.y,inset.align)}</g>`:'';
     const [ax,ay]=county.anchor,[x,y]=county.callout||county.anchor;
     // 引線標註朝海面方向排列圓點與名稱，避免壓到陸地
     const align=county.callout?(x<ax?'end':'start'):'middle',textAnchor={start:'start',end:'end',middle:'middle'}[align];
     const leader=county.callout?`<line class="map-leader" x1="${ax}" y1="${ay}" x2="${x}" y2="${y+(list.length?0:-4)}"/><circle class="map-leader-end" cx="${ax}" cy="${ay}" r="1.8"/>`:'';
-    const labelY=list.length?y+17:y,labelX=align==='start'?x-5.5:align==='end'?x+5.5:x;
-    return `<g class="map-marker${list.length?'':' is-empty'}" data-city="${esc(county.name)}">${leader}${dots(list,x,y,align)}<text class="map-label" x="${labelX}" y="${labelY}" text-anchor="${textAnchor}">${esc(county.name)}</text></g>`;
+    const labelY=list.length?y+(office==='councilor'?19:17):y,labelX=align==='start'?x-5.5:align==='end'?x+5.5:x;
+    return `<g class="map-marker${list.length?'':' is-empty'}" data-city="${esc(county.name)}">${leader}${list.length?mark(list,x,y,align):''}<text class="map-label" x="${labelX}" y="${labelY}" text-anchor="${textAnchor}">${esc(county.name)}</text></g>`;
   }).join('');
   svg.innerHTML=`<title id="mapTitle">台灣各縣市${OFFICES[office].label}候選人文化政策提出情形</title>${insets}<g class="counties">${shapes}</g><g class="markers">${markers}</g>`;
   svg.querySelectorAll('.county').forEach(node=>{
@@ -158,6 +165,7 @@ function partyTotals(){
   return [...totals.values()].sort((a,b)=>(b.mayor+b.councilor)-(a.mayor+a.councilor)||b.mayor-a.mayor);
 }
 function renderLegend(){
+  if(office==='councilor'){document.getElementById('partyLegend').innerHTML='<span><b class="legend-count">7</b>數字＝本站已收錄、提出文化政策的議員人數；點選縣市可看政黨與名單</span>';return}
   const present=new Set([...byOffice[office].values()].flat().map(item=>item.party));
   document.getElementById('partyLegend').innerHTML=partyTotals().filter(row=>present.has(row.party)).map(row=>`<span style="${partyStyle(partyInfo(row.party))}"><i></i>${esc(partyInfo(row.party).short)}</span>`).join('');
 }

@@ -233,6 +233,10 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-marker .map-dot{pointer-events:auto;cursor:pointer;stroke:#fff;stroke-width:1.6}
 .map-label{fill:var(--ink);font:700 10.5px "Noto Sans TC","PingFang TC",sans-serif;paint-order:stroke;stroke:#ffffffcc;stroke-width:3px;stroke-linejoin:round}
 .map-marker.is-empty .map-label{fill:#8a8d82;font-weight:500}
+.map-count{pointer-events:auto;cursor:pointer}
+.map-count rect{fill:var(--ink);stroke:#fff;stroke-width:1.6}
+.map-count text{fill:#fff;font:800 10.5px "Noto Sans TC","PingFang TC",sans-serif}
+.legend-count{display:inline-grid;place-items:center;min-width:18px;height:16px;padding:0 5px;border-radius:8px;background:var(--ink);color:#fff;font-size:.68rem;margin-right:.1rem}
 .map-leader{stroke:#8a8d82;stroke-width:.8}
 .map-leader-end{fill:#8a8d82}
 .party-legend{display:flex;gap:.4rem 1rem;flex-wrap:wrap;font-size:.78rem;font-weight:700;border-top:1px solid var(--line);padding-top:.9rem}
