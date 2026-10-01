@@ -3887,6 +3887,56 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為嘉義縣第2選舉區、中國國民黨候選人；嘉義縣議會個人政策頁明列藝文活動與音樂藝術扎根措施，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-ptg-councilor-li-shih-kan-hakka-language-001",
+      "city": "屏東縣",
+      "office": "縣市議員",
+      "candidate": "李世淦",
+      "party": "中國國民黨",
+      "topics": [
+        "客家文化",
+        "族語傳承",
+        "文化教育"
+      ],
+      "summary": "主張從幼兒教育、家庭與師資培育推動客語向下扎根，並提出制定客家民族教育法的構想。",
+      "policy_argument": "以教育、家庭與師資培育連結，回應客語使用的世代斷層，支持客家文化傳承。",
+      "concrete_proposals": [
+        "從幼兒教育、家庭及師資培育向下扎根。",
+        "提出制定客家民族教育法構想。"
+      ],
+      "related_statements": [
+        "新聞未列教育法的法案內容、推動層級、經費、期程及師資培育執行方案。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+            "url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+            "url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+            "url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+      "source_url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為屏東縣第3選舉區、中國國民黨候選人；聯合新聞網報導其在議會提出客語教育與客家民族教育法構想，完成人工審核。"
+      ]
     }
   ]
 }
