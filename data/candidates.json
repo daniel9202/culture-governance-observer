@@ -3172,6 +3172,56 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為桃園市第8選舉區、中國國民黨候選人；2026年登記參選新聞記載具體藝文展演中心主張並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tcc-councilor-chiu-ai-shan-public-space-001",
+      "city": "臺中市",
+      "office": "縣市議員",
+      "candidate": "邱愛珊",
+      "party": "中國國民黨",
+      "topics": [
+        "文化場館",
+        "文化空間",
+        "城市規劃"
+      ],
+      "summary": "主張盤點老舊公有廳舍，依區位與地方需求導入公共、文化或社福機能，避免閒置並提升生活與商業機能。",
+      "policy_argument": "將老舊公有廳舍視為可依地方需求重新配置的公共資源，兼顧文化與社福使用。",
+      "concrete_proposals": [
+        "盤點老舊公有廳舍。",
+        "依區位與地方需求導入文化機能，避免閒置並提升公共空間使用。"
+      ],
+      "related_statements": [
+        "官方政策頁未列廳舍清單、執行期程、經費與營運機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "邱愛珊｜愛珊政見",
+            "url": "https://5423chiu.tw/policy-platform/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "邱愛珊｜愛珊政見",
+            "url": "https://5423chiu.tw/policy-platform/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "邱愛珊｜愛珊政見",
+            "url": "https://5423chiu.tw/policy-platform/"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "邱愛珊｜愛珊政見",
+      "source_url": "https://5423chiu.tw/policy-platform/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺中市第4選舉區、中國國民黨候選人；候選人官方政策頁明列導入文化機能措施並完成人工審核。"
+      ]
     }
   ]
 }
