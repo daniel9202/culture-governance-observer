@@ -2506,6 +2506,57 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
       ]
+    },
+    {
+      "id": "candidate-tpe-councilor-chang-szu-kang-cultural-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "張斯綱",
+      "party": "中國國民黨",
+      "topics": [
+        "文化資產",
+        "歷史建築",
+        "文化觀光",
+        "社區藝文"
+      ],
+      "summary": "候選人競選網站提出守護士林北投自然與歷史人文，爭取修繕及活化北投車站、士林官邸周邊等地方歷史建築，並推動社區藝文活動。",
+      "policy_argument": "以文化資產保存結合地方情感與永續觀光，讓歷史建築成為社區文化與觀光亮點。",
+      "concrete_proposals": [
+        "爭取經費修繕與活化北投車站及士林官邸周邊等地方歷史建築。",
+        "推動更多社區藝文活動。"
+      ],
+      "related_statements": [
+        "網站未載明修繕範圍、預算、完成期程或社區藝文活動的執行機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "張斯綱｜臺北市議員候選人小額募款專區",
+            "url": "https://careaboutyou.oen.tw/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "張斯綱｜臺北市議員候選人小額募款專區",
+            "url": "https://careaboutyou.oen.tw/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "張斯綱｜臺北市議員候選人小額募款專區",
+            "url": "https://careaboutyou.oen.tw/"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "張斯綱｜臺北市議員候選人小額募款專區",
+      "source_url": "https://careaboutyou.oen.tw/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會登記名冊核對為臺北市第1選舉區、中國國民黨候選人；候選人競選網站人工審核完成。"
+      ]
     }
   ]
 }
