@@ -3683,6 +3683,58 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第11選舉區、中國國民黨候選人；高雄市議會個人政策頁明列林園海洋文化與文化觀光路線措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-khh-councilor-wang-yi-hsiung-indigenous-culture-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "王義雄",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "族語傳承",
+        "文化教育",
+        "文化空間"
+      ],
+      "summary": "主張設置都會區原住民實驗學校，強化原住民文化復育及族語推廣，並設置原住民主題意象場域。",
+      "policy_argument": "以都會區原住民族教育、文化復育與公共意象場域，提升族語傳承及社會認同。",
+      "concrete_proposals": [
+        "設置都會區原住民實驗學校。",
+        "強化原住民文化復育與族語推廣。",
+        "設置原住民主題意象場域，強化原住民族社會認同。"
+      ],
+      "related_statements": [
+        "官方政策頁未列學校設置地點、課程規劃、族語推廣人力、場域位置、經費與執行期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "王義雄｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2230&n=76&sms=0"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "王義雄｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2230&n=76&sms=0"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "王義雄｜高雄市議會議員資訊",
+            "url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2230&n=76&sms=0"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "王義雄｜高雄市議會議員資訊",
+      "source_url": "https://www.kcc.gov.tw/MemberInfo_New.aspx?msn=2230&n=76&sms=0",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為高雄市第12選舉區、中國國民黨候選人；高雄市議會個人政策頁明列原住民文化復育、族語與意象場域措施並完成人工審核。"
+      ]
     }
   ]
 }
