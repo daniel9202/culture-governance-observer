@@ -3735,6 +3735,58 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第12選舉區、中國國民黨候選人；高雄市議會個人政策頁明列原住民文化復育、族語與意象場域措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-hcc-councilor-chen-bai-cheng-old-street-001",
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "candidate": "陳栢誠",
+      "party": "中國國民黨",
+      "topics": [
+        "地方文化",
+        "文化觀光",
+        "文化資產",
+        "客家文化"
+      ],
+      "summary": "主張營建湖口老街生機並延續畚箕窩溪沿岸觀光地帶，並在縣政總質詢提出客家獅文化扎根。",
+      "policy_argument": "以老街與沿岸文化觀光串聯湖口地方發展，並支持客家文化傳承。",
+      "concrete_proposals": [
+        "營建湖口老街生機。",
+        "延續畚箕窩溪沿岸觀光地帶。",
+        "推動湖口客家獅文化扎根。"
+      ],
+      "related_statements": [
+        "官方政策頁未列老街活化範圍、客家獅傳承方式、經費、期程與社區參與機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳栢誠｜新竹縣議會議員資訊",
+            "url": "https://www.hcc.gov.tw/member-detail?C=376&S=22&program=190"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳栢誠｜新竹縣議會議員資訊",
+            "url": "https://www.hcc.gov.tw/member-detail?C=376&S=22&program=190"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳栢誠｜新竹縣議會議員資訊",
+            "url": "https://www.hcc.gov.tw/member-detail?C=376&S=22&program=190"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "陳栢誠｜新竹縣議會議員資訊",
+      "source_url": "https://www.hcc.gov.tw/member-detail?C=376&S=22&program=190",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為新竹縣第3選舉區、中國國民黨候選人；新竹縣議會個人政策頁及2026年縣府總質詢來源明列老街與客家文化措施並完成人工審核。"
+      ]
     }
   ]
 }
