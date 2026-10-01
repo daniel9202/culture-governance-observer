@@ -276,8 +276,40 @@ def build_region_metrics():
         records.append(record)
     return records
 
-def write(name, records):
-    payload = {"schema_version": "1.1", "last_updated": date.today().isoformat(), "records": records}
+REGISTERED_OFFICES = {"縣市長", "縣市議員"}
+CITIES = {
+    "臺北市", "新北市", "桃園市", "臺中市", "臺南市", "高雄市", "基隆市", "新竹市", "嘉義市", "新竹縣", "苗栗縣",
+    "彰化縣", "南投縣", "雲林縣", "嘉義縣", "屏東縣", "宜蘭縣", "花蓮縣", "臺東縣", "澎湖縣", "金門縣", "連江縣",
+}
+
+def build_registered_candidates():
+    """中選會登記名冊（scripts/import_cec_registrations.py 產生），用於計算各縣市參選人數。"""
+    records, sources = [], []
+    for index, row in enumerate(rows("registered_candidates.csv"), start=2):
+        if not any(row.values()):
+            continue
+        label = f"registered_candidates.csv row {index}"
+        required(row, ["city", "office", "district", "candidate", "party", "registered_date", "source_title", "source_url", "as_of"], label)
+        if row["city"] not in CITIES:
+            raise ValueError(f"{label}: unknown city {row['city']}")
+        if row["office"] not in REGISTERED_OFFICES:
+            raise ValueError(f"{label}: office must be one of {', '.join(sorted(REGISTERED_OFFICES))}")
+        valid_date(row["registered_date"], label)
+        valid_date(row["as_of"], label)
+        valid_url(row["source_url"], label)
+        source = {"title": row["source_title"], "url": row["source_url"], "as_of": row["as_of"]}
+        if sources and source not in sources:
+            raise ValueError(f"{label}: all rows must share one source and as_of date")
+        sources = sources or [source]
+        records.append({
+            "city": row["city"], "office": row["office"], "district": row["district"], "candidate": row["candidate"],
+            "party": row["party"], "registered_date": row["registered_date"],
+        })
+    # 來源與名冊日期全表一致，只在檔案層級記錄一次，避免前台資料過大
+    return records, (sources[0] if sources else None)
+
+def write(name, records, **meta):
+    payload = {"schema_version": "1.1", "last_updated": date.today().isoformat(), **meta, "records": records}
     (OUTPUT / name).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 if __name__ == "__main__":
@@ -288,4 +320,6 @@ if __name__ == "__main__":
     write("governments.json", build_governments())
     write("region_metrics.json", build_region_metrics())
     write("pledge_fulfillment.json", build_fulfillment())
+    registered, registered_source = build_registered_candidates()
+    write("registered_candidates.json", registered, source=registered_source)
     print("data validation passed")

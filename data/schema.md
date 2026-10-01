@@ -25,3 +25,6 @@
 ## `shared_policy_groups.csv`
 
 收錄由多位候選人共同提出、但不應誤認為任何一人單獨提出的政見。以 `scope` 區分兩種適用範圍：`party` 為政黨共同政見，依 `party` 與 `office` 套用至已收錄的同黨候選人；`regional` 為區域共同政見，另以 `city`、`office`、`party` 與 `candidates`（多位姓名以 `||` 分隔）指定適用對象。前台會在候選人卡片分開顯示「政黨共同政見」與「區域共同政見」；個人政見與兩類共同政見的來源維持分開。
+## `registered_candidates.csv`
+
+中選會「候選人登記彙總表」的轉檔結果，用於計算各縣市參選人數，**不是本站查核的政見資料**。由 `scripts/import_cec_registrations.py` 從中選會 PDF 產生，請勿手動逐筆編輯。欄位：`city`、`office`（`縣市長` 或 `縣市議員`；直轄市長、直轄市議員分別併入）、`district`（選舉區，議員為「臺北市第1選舉區」等）、`candidate`（照名冊登錄，可能含原住民族傳統名字）、`party`（推薦之政黨，未推薦為「無」）、`registered_date`、`source_title`、`source_url`、`as_of`（名冊製表日期）。全表須共用同一來源與 `as_of`；輸出的 JSON 只在檔案層級記錄一次 `source`。
