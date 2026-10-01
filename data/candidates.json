@@ -2457,6 +2457,57 @@
       ]
     },
     {
+      "id": "candidate-tcc-councilor-shih-chih-chang-dajia-culture-001",
+      "city": "臺中市",
+      "office": "縣市議員",
+      "candidate": "施志昌",
+      "party": "民主進步黨",
+      "topics": [
+        "地方文化",
+        "傳統藝術",
+        "文化場館",
+        "文化資產"
+      ],
+      "summary": "主張評估籌設「大甲53庄文化館」，系統保存大甲、大安、外埔與后里地區的武館、獅頭及宗教文化。",
+      "policy_argument": "地方文化資源不應集中於市中心，應以專屬基地保存海線長期累積的武術與民俗文化生態。",
+      "concrete_proposals": [
+        "評估籌設大甲53庄文化館。",
+        "系統保存大甲、大安、外埔與后里四區的武館、獅頭及宗教文化。"
+      ],
+      "related_statements": [
+        "指出大甲53庄近兩百年文化因缺乏系統性保存而面臨凋零。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "市議員施志昌為「大甲53庄」請命 促建專屬文化基地 守護全台唯一的武術生態系",
+            "url": "https://www.peponews.tw/2026/04/20/248148/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "市議員施志昌為「大甲53庄」請命 促建專屬文化基地 守護全台唯一的武術生態系",
+            "url": "https://www.peponews.tw/2026/04/20/248148/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "市議員施志昌為「大甲53庄」請命 促建專屬文化基地 守護全台唯一的武術生態系",
+            "url": "https://www.peponews.tw/2026/04/20/248148/"
+          }
+        ]
+      },
+      "published_date": "2026-04-20",
+      "source_title": "市議員施志昌為「大甲53庄」請命 促建專屬文化基地 守護全台唯一的武術生態系",
+      "source_url": "https://www.peponews.tw/2026/04/20/248148/",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺中市第1選舉區、民主進步黨候選人；2026年新聞記載其具體文化主張並完成人工審核。"
+      ]
+    },
+    {
       "id": "candidate-nantou-mayor-wen-shih-cheng-reading-001",
       "city": "南投縣",
       "office": "縣市長",
