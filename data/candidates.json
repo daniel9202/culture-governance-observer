@@ -3377,6 +3377,109 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第17選舉區、中國國民黨候選人；官方政策頁明列原民表演空間、族語與文化發展措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tnn-councilor-tsai-yu-hui-library-001",
+      "city": "臺南市",
+      "office": "縣市議員",
+      "candidate": "蔡育輝",
+      "party": "中國國民黨",
+      "topics": [
+        "圖書館",
+        "文化設施",
+        "閱讀文化"
+      ],
+      "summary": "主張爭取設立國家圖書館南部分館，並監督其營運避免閒置。",
+      "policy_argument": "以國家級圖書館南部分館補足南部閱讀與文化設施，並要求後續營運有效使用。",
+      "concrete_proposals": [
+        "爭取設立國家圖書館南部分館。",
+        "監督其運作避免成為閒置設施。"
+      ],
+      "related_statements": [
+        "官方政策頁未列選址、館藏服務、經費、期程與營運模式。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "蔡育輝｜臺南市議會議員資訊",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=63ECF425-FD64-4636-A3D3-05B420A3924D"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "蔡育輝｜臺南市議會議員資訊",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=63ECF425-FD64-4636-A3D3-05B420A3924D"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "蔡育輝｜臺南市議會議員資訊",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=63ECF425-FD64-4636-A3D3-05B420A3924D"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "蔡育輝｜臺南市議會議員資訊",
+      "source_url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=63ECF425-FD64-4636-A3D3-05B420A3924D",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺南市第1選舉區、中國國民黨候選人；官方政策頁明列國圖南部分館措施並完成人工審核。"
+      ]
+    },
+    {
+      "id": "candidate-tnn-councilor-fang-i-feng-culture-001",
+      "city": "臺南市",
+      "office": "縣市議員",
+      "candidate": "方一峰",
+      "party": "中國國民黨",
+      "topics": [
+        "宗教文化",
+        "文化資產",
+        "文化觀光",
+        "藝文活動",
+        "地方文化"
+      ],
+      "summary": "主張傳承與保存宗教廟宇傳統文化資產，推廣大北門沿海漁港、潟湖與在地美食文化旅遊，並推動藝文活動。",
+      "policy_argument": "以宗教文化資產、沿海生活文化與藝文活動串聯地方觀光與居民參與。",
+      "concrete_proposals": [
+        "推動宗教廟宇傳統文化資產傳承與保存。",
+        "推廣大北門沿海漁港、潟湖觀光與在地美食文化。",
+        "推動藝文活動舉辦，提升藝術參與機會。"
+      ],
+      "related_statements": [
+        "官方政策頁未列文化資產清單、旅遊路線、活動場次、經費與期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "方一峰｜臺南市議會議員資訊",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=5ABA0B90-9FD2-4B3E-BA48-FA776C993C02"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "方一峰｜臺南市議會議員資訊",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=5ABA0B90-9FD2-4B3E-BA48-FA776C993C02"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "方一峰｜臺南市議會議員資訊",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=5ABA0B90-9FD2-4B3E-BA48-FA776C993C02"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "方一峰｜臺南市議會議員資訊",
+      "source_url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=5ABA0B90-9FD2-4B3E-BA48-FA776C993C02",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺南市第2選舉區、中國國民黨候選人；官方政策頁明列文化資產、文化觀光與藝文活動措施並完成人工審核。"
+      ]
     }
   ]
 }
