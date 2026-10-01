@@ -2863,6 +2863,57 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第5選舉區、民主進步黨候選人；臺南市議會 2026 年 9 月 24 日頁面記載其具體文化主張並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tnn-councilor-chen-chiu-ping-local-culture-001",
+      "city": "臺南市",
+      "office": "縣市議員",
+      "candidate": "陳秋萍",
+      "party": "民主進步黨",
+      "topics": [
+        "地方文化",
+        "社區營造",
+        "文化產業"
+      ],
+      "summary": "主張構築文化網絡系統，推動在地文化資源多元應用及創意加值，以發揚在地文化特色並形塑社區品牌。",
+      "policy_argument": "地方文化應透過網絡串連、資源應用與創意加值，轉化為社區的文化特色與品牌。",
+      "concrete_proposals": [
+        "構築文化網絡系統。",
+        "推動在地文化資源多元應用及創意加值。",
+        "發揚在地文化特色並形塑社區品牌。"
+      ],
+      "related_statements": [
+        "官方頁未載明參與對象、執行期程、補助工具或預算規模。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "臺南市議會｜陳秋萍",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "臺南市議會｜陳秋萍",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "臺南市議會｜陳秋萍",
+            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3"
+          }
+        ]
+      },
+      "published_date": "2026-07-30",
+      "source_title": "臺南市議會｜陳秋萍",
+      "source_url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺南市第7選舉區、民主進步黨候選人；臺南市議會於2026年更新的議員頁記載其文化主張並完成人工審核。"
+      ]
     }
   ]
 }
