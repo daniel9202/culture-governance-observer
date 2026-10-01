@@ -5119,6 +5119,57 @@
       "corrections": [
         "2026-10-02｜中選會名冊核對為宜蘭縣第12選舉區親民黨候選人；親民黨候選人頁明列部落文化體驗、傳統祭儀與文化健康站措施，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-hcc-councilor-lo-mei-wen-military-village-001",
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "candidate": "羅美文",
+      "party": "勞動黨",
+      "topics": [
+        "文化資產",
+        "眷村文化",
+        "文化空間",
+        "地方文史"
+      ],
+      "summary": "在縣政總質詢要求盡速修繕復原湖口裝甲新村，並促使縣府與中央依文化資產規定處理修復與再利用。",
+      "policy_argument": "裝甲新村具眷村歷史與地方記憶價值，修復與再利用應由地方政府積極協調中央並推進執行。",
+      "concrete_proposals": [
+        "要求盡速修繕復原湖口裝甲新村。",
+        "要求縣府依文化部規定與中央合作，推進裝甲新村修復再利用。"
+      ],
+      "related_statements": [
+        "公開紀錄未列修復經費、期程、後續營運模式及社區參與機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "新竹縣府：羅美文關心湖口裝甲新村修復",
+            "url": "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=255105"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "新竹縣府：羅美文關心湖口裝甲新村修復",
+            "url": "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=255105"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "新竹縣府：羅美文關心湖口裝甲新村修復",
+            "url": "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=255105"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "新竹縣府：羅美文關心湖口裝甲新村修復",
+      "source_url": "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=255105",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜中選會名冊核對為新竹縣第3選舉區勞動黨候選人；新竹縣府公開質詢紀錄明列其要求修繕復原湖口裝甲新村，完成人工審核。"
+      ]
     }
   ]
 }
