@@ -3222,6 +3222,56 @@
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第4選舉區、中國國民黨候選人；候選人官方政策頁明列導入文化機能措施並完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-tcc-councilor-huang-chia-tien-dome-001",
+      "city": "臺中市",
+      "office": "縣市議員",
+      "candidate": "黃佳恬",
+      "party": "中國國民黨",
+      "topics": [
+        "文化場館",
+        "表演藝術",
+        "文化產業"
+      ],
+      "summary": "主張加速推動台中巨蛋，並引進大型演藝文化產業。",
+      "policy_argument": "將巨蛋場館建設與大型演藝文化產業導入結合，以擴充臺中的大型展演量能。",
+      "concrete_proposals": [
+        "加速推動台中巨蛋。",
+        "引進大型演藝文化產業。"
+      ],
+      "related_statements": [
+        "官方政策頁未列巨蛋場館的時程、經費、營運方式及演藝產業引進機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "黃佳恬｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "黃佳恬｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "黃佳恬｜臺中市議會議員資訊",
+            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106"
+          }
+        ]
+      },
+      "published_date": "2026-10-01",
+      "source_title": "黃佳恬｜臺中市議會議員資訊",
+      "source_url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-01",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對為臺中市第12選舉區、中國國民黨候選人；官方政策頁明列巨蛋與大型演藝文化產業措施並完成人工審核。"
+      ]
     }
   ]
 }
