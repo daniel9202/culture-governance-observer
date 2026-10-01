@@ -28,8 +28,6 @@ loadCandidateDataset().then(data=>{
   options('cityFilter',uniq(platforms.map(x=>x.city)));
   options('partyFilter',uniq(platforms.map(x=>x.party)));
   options('topicFilter',uniq(platforms.flatMap(x=>x.topics)));
-  const requestedCity=new URLSearchParams(location.search).get('city');
-  if(requestedCity&&platforms.some(record=>record.city===requestedCity))cityFilter.value=requestedCity;
   ['cityFilter','partyFilter','topicFilter'].forEach(id=>document.getElementById(id).addEventListener('change',render));
   render();
 }).catch(()=>{count.textContent='資料載入失敗，請稍後再試。'});

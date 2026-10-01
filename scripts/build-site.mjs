@@ -36,7 +36,7 @@ rmSync(dist, { recursive: true, force: true });
 mkdirSync(resolve(dist, "data"), { recursive: true });
 
 const siteFiles = [
-  "index.html", "styles.css", "app.js", "nav.js", "cities.js", "mayors.html", "map.html", "map.js",
+  "index.html", "styles.css", "app.js", "nav.js", "cities.js", "mayors.html",
   "councilors.html", "candidate-list.js", "public-candidates.js", "civic.html",
   "civic.js", "methodology.html", "updates.html", "review.html", "review.js",
   "fulfillment.html", "fulfillment.js", "regions.html",
