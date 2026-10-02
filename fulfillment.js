@@ -32,3 +32,48 @@ const render=()=>{
 };
 
 fetch('data/pledge_fulfillment.json').then(r=>r.json()).then(data=>{records=(data.records||[]).sort(byCity);optionValues('city',document.getElementById('cityFilter'));optionValues('current_office',document.getElementById('officeFilter'));optionValues('status',document.getElementById('statusFilter'));document.querySelectorAll('select').forEach(x=>x.addEventListener('change',render));render()}).catch(()=>{document.getElementById('empty').hidden=false;document.getElementById('empty').innerHTML='<strong>資料尚未載入</strong><span>請稍後重新整理。</span>'});
+
+// 議員分頁：任內文化問政（非本屆政見），資料為 loadCandidateDataset() 的 incumbent_records；不評估實現狀態。
+let councilRecords=[];
+const councilCard=record=>`<article class="card pledge-card">
+  <div class="card-meta">${record.proposer_role==='推定現任議員'?'<span class="tag tag-status">推定現任議員</span>':''}<span class="tag">${escapeHtml(record.content_nature)}</span>${(record.topics||[]).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
+  <p class="summary">${escapeHtml(record.summary)}</p>
+  ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
+  <p class="role-evidence">判定依據：${escapeHtml(record.role_evidence)}</p>
+  <div class="source-row"><a href="${escapeHtml(safeUrl(record.source_url))}" target="_blank" rel="noopener">${escapeHtml(record.source_title||'原始來源')} ↗</a><span class="verification">查核 ${escapeHtml(record.last_verified)}</span></div>
+</article>`;
+const councilPerson=person=>{
+  const first=person.rows[0];
+  return `<article class="tracker-person">
+    <div class="tracker-person-head"><h3>${escapeHtml(first.candidate)}</h3><p class="party">${escapeHtml(first.party)} · ${escapeHtml(first.city)}議員參選人</p><span class="tracker-person-count">${person.rows.length} 筆問政紀錄</span></div>
+    <div class="cards">${person.rows.map(councilCard).join('')}</div>
+  </article>`;
+};
+const setQuery=(key,value)=>{const params=new URLSearchParams(location.search);value?params.set(key,value):params.delete(key);const query=params.toString();history.replaceState(null,'',query?`?${query}`:location.pathname)};
+const renderCouncil=()=>{
+  const city=document.getElementById('councilCityFilter').value;
+  const shown=councilRecords.filter(x=>!city||x.city===city);
+  const cities=groupBy(shown,row=>row.city),people=new Set(shown.map(row=>`${row.city}｜${row.candidate}`));
+  document.getElementById('councilCount').textContent=`共 ${shown.length} 筆問政紀錄 · ${cities.length} 個縣市 · ${people.size} 位議員`;
+  document.getElementById('councilEmpty').hidden=shown.length>0;
+  document.getElementById('councilCards').innerHTML=cities.map(group=>`<section class="tracker-city"><h2 class="tracker-city-name">${escapeHtml(group.key)}</h2>${groupBy(group.rows,row=>row.candidate).map(councilPerson).join('')}</section>`).join('');
+  if(!document.getElementById('councilPanel').hidden)setQuery('city',city);
+};
+const setTab=tab=>{
+  document.querySelectorAll('.tracker-switch button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.tab===tab)));
+  document.getElementById('mayorPanel').hidden=tab!=='mayor';
+  document.getElementById('councilPanel').hidden=tab!=='council';
+  setQuery('tab',tab==='council'?'council':'');
+  setQuery('city',tab==='council'?document.getElementById('councilCityFilter').value:'');
+};
+const initialQuery=new URLSearchParams(location.search);
+document.querySelectorAll('.tracker-switch button').forEach(button=>button.addEventListener('click',()=>setTab(button.dataset.tab)));
+loadCandidateDataset().then(data=>{
+  councilRecords=(data.incumbent_records||[]).slice().sort((a,b)=>cityRank(a.city)-cityRank(b.city)||String(a.candidate).localeCompare(String(b.candidate),'zh-Hant'));
+  const select=document.getElementById('councilCityFilter');
+  [...new Set(councilRecords.map(x=>x.city))].forEach(value=>{const option=document.createElement('option');option.value=value;option.textContent=value;select.append(option)});
+  if(councilRecords.some(x=>x.city===initialQuery.get('city')))select.value=initialQuery.get('city');
+  select.addEventListener('change',renderCouncil);
+  setTab(initialQuery.get('tab')==='council'?'council':'mayor');
+  renderCouncil();
+}).catch(()=>{document.getElementById('councilEmpty').hidden=false;document.getElementById('councilEmpty').innerHTML='<strong>資料尚未載入</strong><span>請稍後重新整理。</span>'});

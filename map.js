@@ -22,7 +22,7 @@ const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:2
 const SVG_NS='http://www.w3.org/2000/svg';
 const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
-let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCity='';
+let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCity='',incumbents=new Map;
 // 參選人數取自中選會登記名冊（data/registered_candidates.json）。
 // 名冊姓名可能附原住民族傳統名字（例：林筱薇IcyangTamana），因此以「名冊姓名以本站姓名開頭」比對。
 let registered={mayor:new Map,councilor:new Map},registeredSource=null;
@@ -124,10 +124,12 @@ function renderDetail(){
   const missing=unrecorded(office,city),total=registeredIn(office,city).length;
   const missingNote=missing.length?`<p class="map-detail-missing">${office==='mayor'?`尚未收錄文化政策：${nameList(missing,12)}`:`另有 ${missing.length} 位登記參選人尚未收錄文化政策`}</p>`:'';
   const switchLink=otherCount?`<button type="button" class="map-detail-switch" data-switch="${other}">此縣市另有 ${otherCount} 位${OFFICES[other].label}候選人 →</button>`:'';
+  const incumbentNote=incumbentLink((incumbents.get(city)||new Set).size,city,'map-detail-switch');
+  const foot=switchLink||incumbentNote?`<div class="map-detail-foot">${switchLink}${incumbentNote}</div>`:'';
   if(!city){detail.innerHTML='<p class="kicker">選擇縣市</p><h2>從地圖開始</h2><p class="map-detail-lead">點選地圖上的縣市，查看提出文化政策的候選人與政黨。</p>';return}
   detail.innerHTML=`<p class="kicker">${esc(REGION_OF[city]||'')} / ${OFFICES[office].label}</p><h2>${esc(city)}</h2>`+(list.length
     ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p><div class="map-candidates">${list.map(candidateCard).join('')}</div>${missingNote}<a class="map-detail-link" href="${OFFICES[office].page}?city=${encodeURIComponent(city)}">查看完整政見與來源 ↗</a>`
-    :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}`)+switchLink;
+    :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}`)+foot;
   detail.querySelector('[data-switch]')?.addEventListener('click',event=>setOffice(event.currentTarget.dataset.switch));
 }
 
@@ -178,7 +180,7 @@ function renderParties(){
 
 const loadJson=(url,message)=>fetch(url).then(response=>{if(!response.ok)throw Error(message);return response.json()});
 Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset(),loadJson('data/registered_candidates.json','無法讀取登記名冊'),loadJson('data/party_colors.json','無法讀取政黨色')]).then(([geo,data,roster,colors])=>{
-  geometry=geo;PARTY_COLORS=colors;registeredSource=roster.source;
+  geometry=geo;PARTY_COLORS=colors;registeredSource=roster.source;incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   roster.records.forEach(record=>{
     const key=record.office==='縣市長'?'mayor':'councilor';
     if(!registered[key].has(record.city))registered[key].set(record.city,[]);

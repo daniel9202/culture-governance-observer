@@ -69,11 +69,16 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     regional_shared_policies:[...new Map(group.regional_shared_policies.map(policy=>[policy.id,policy])).values()],
   }));
 };
+// 議員任內文化問政（非本屆政見）收在「現任追蹤」；地圖與議員頁依縣市計人數並連過去。
+window.incumbentNamesByCity=records=>records.reduce((map,record)=>map.set(record.city,(map.get(record.city)||new Set).add(record.candidate)),new Map);
+window.incumbentLink=(count,city,className='incumbent-link')=>count?`<a class="${className}" href="fulfillment.html?tab=council${city?`&city=${encodeURIComponent(city)}`:''}">${city?'本縣市':''}另有 ${count} 位議員的任內文化問政紀錄（非本屆政見）→</a>`:'';
 window.loadCandidateDataset=async()=>{
   const [staticData,sharedData]=await Promise.all([
     fetch('data/candidates.json').then(response=>{if(!response.ok)throw Error('無法讀取候選人資料');return response.json()}),
     fetch('data/shared_policy_groups.json').then(response=>{if(!response.ok)throw Error('無法讀取共同政見資料');return response.json()}),
   ]);
   // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
-  return {...staticData,shared_policy_groups:sharedData.records||[]};
+  // 前台的政見與統計只收「本屆競選政見」；現任議員個人頁內容與問政／提案另存 incumbent_records（依資料端的 content_nature 欄位）。
+  const records=staticData.records||[];
+  return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'),shared_policy_groups:sharedData.records||[]};
 };

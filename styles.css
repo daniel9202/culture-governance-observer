@@ -257,6 +257,11 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-detail-link{align-self:flex-start;margin-top:1.3rem;background:var(--lime);color:var(--ink);padding:.65rem 1rem;font-weight:800;text-decoration:none}
 .map-detail-switch{align-self:flex-start;margin-top:auto;padding:1.2rem 0 0;background:none;border:0;color:var(--muted);font:700 .85rem "Noto Sans TC","PingFang TC",sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .map-detail-switch:hover{color:var(--ink)}
+.map-detail-foot{margin-top:auto;padding-top:1.2rem;display:flex;flex-direction:column;align-items:flex-start;gap:.55rem}
+.map-detail-foot .map-detail-switch{margin-top:0;padding-top:0;text-align:left}
+.incumbent-note{margin:-.8rem 0 1.4rem;font-size:.85rem}
+.incumbent-note a{font-weight:700;color:var(--muted);text-underline-offset:3px}
+.incumbent-note a:hover{color:var(--ink)}
 .map-compare-section{padding-top:4rem}
 .compare-head,.compare-row{display:grid;grid-template-columns:9rem minmax(0,1.2fr) minmax(0,1fr);gap:1.2rem;align-items:center}
 .compare-head{font:700 .72rem ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);padding:0 1rem .6rem;border-bottom:2px solid var(--ink)}
@@ -311,3 +316,7 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .tip-source{display:block;border-top:1px solid #3c3f38;padding-top:.45rem;font-size:.68rem;color:#8a8d82}
 .compare-ratio{font:700 .78rem ui-monospace,monospace;color:var(--muted);min-width:3.4rem;padding-top:.3rem}
 .map-party i,.compare-chip i,.party-legend i,.party-bar-name i{background:var(--party-fill,var(--party));box-shadow:inset 0 0 0 2px var(--party-ring,transparent)}
+.tracker-switch{margin-bottom:3rem}
+.role-evidence{margin:.9rem 0 0;font-size:.78rem;color:var(--muted)}
+.filters-single{grid-template-columns:1fr;max-width:calc((100% - 2px)/3)}
+@media(max-width:760px){.filters-single{max-width:none}}

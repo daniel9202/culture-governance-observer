@@ -5,7 +5,7 @@ Promise.all([loadCandidateDataset(),...['civic_policy_calls','pledge_fulfillment
   setStat('map-cities',new Set(candidates.records.map(x=>x.city)).size);
   setStat('councilors',councilors.length);
   setStat('regions',new Set(regions.records.map(x=>x.city)).size);
-  setStat('fulfillment',fulfillment.records.length);
+  setStat('fulfillment',fulfillment.records.length+(candidates.incumbent_records||[]).length);
   setStat('civic',civic.records.length);
   updated.textContent=`最後更新 ${[candidates,civic,fulfillment,regions].map(x=>x.last_updated).sort().pop()}`;
 }).catch(()=>{updated.textContent='資料載入失敗，請稍後再試。'});
