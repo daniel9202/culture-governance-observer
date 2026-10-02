@@ -1,4 +1,8 @@
 source_csv,research_id,published_candidate_id,review_status,completed_at,notes
+councilor-official-site-discovery.csv,research-councilor-hlc-cheng-pao-hsiu-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣議會頁已核對；無可驗證本屆具體文化政見。
+councilor-official-site-discovery.csv,research-councilor-hlc-chang-chen-wei-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣選委會2026登記資料已核對；無可驗證候選人官方網站或具體文化政見。
+councilor-official-site-discovery.csv,research-councilor-hlc-peng-chien-hua-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣選委會2026登記資料已核對；無可驗證候選人官方網站或具體文化政見。
+councilor-official-site-discovery.csv,research-councilor-hlc-yang-wu-kung-20261002,,已審核暫不發布,2026-10-02,中選會名冊與2026年參選政見報導已核對；宗教文化定位未具體化為文化措施。
 councilor-official-site-discovery.csv,research-councilor-tpe-chang-szu-kang-20261001,candidate-tpe-councilor-chang-szu-kang-cultural-001,已審核並上架,2026-10-01,中選會名冊與候選人競選網站已核對。
 councilor-official-site-discovery.csv,research-councilor-hsinchu-li-mei-20261001,candidate-hsinchu-councilor-li-mei-arts-001,已審核並上架,2026-10-01,中選會名冊與民眾黨官方候選人頁已核對。
 councilor-official-site-discovery.csv,research-councilor-changhua-kao-tsai-ling-20261001,candidate-changhua-councilor-kao-tsai-ling-language-001,已審核並上架,2026-10-01,中選會名冊與民眾黨官方候選人頁已核對；政策細節不足已在公開條目註明。
