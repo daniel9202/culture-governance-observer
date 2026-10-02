@@ -217,15 +217,11 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-switch button{font:700 .9rem/1 "Noto Sans TC","PingFang TC",sans-serif;padding:.65rem 1.1rem;border:0;background:transparent;color:var(--ink);cursor:pointer}
 .map-switch button+button{border-left:1px solid var(--ink)}
 .map-switch button[aria-pressed="true"]{background:var(--ink);color:var(--lime)}
-.map-scale{display:flex;gap:.9rem;flex-wrap:wrap;font-size:.74rem;color:var(--muted);font-weight:700}
-.map-scale span{display:inline-flex;align-items:center;gap:.35rem}
-.map-scale i,.compare-city b{display:inline-block;width:14px;height:14px;border:1px solid #b9b7ac;flex:none}
 .taiwan-map-wrap{max-width:620px;width:100%;margin:0 auto}
 .taiwan-map{display:block;width:100%;height:auto;overflow:visible}
-.county{stroke:#fff;stroke-width:.9;stroke-linejoin:round;cursor:pointer;outline:none;transition:fill .15s}
-.fill-0{fill:#e1ddd2;background:#e1ddd2}
-.fill-1{fill:#c3bbd6;background:#c3bbd6}
-.county:hover{filter:brightness(.94)}
+.county{fill:#e6e2d7;stroke:#fff;stroke-width:.9;stroke-linejoin:round;cursor:pointer;outline:none;transition:fill .15s}
+.county:hover{fill:#dcd6ea}
+.county.is-active{fill:#c3bbd6}
 .county:focus-visible,.county.is-active{stroke:var(--ink);stroke-width:2.2}
 .inset-frame{fill:none;stroke:#b9b7ac;stroke-width:1;stroke-dasharray:3 3}
 .inset-label{fill:var(--muted);font:700 10.5px "Noto Sans TC","PingFang TC",sans-serif}

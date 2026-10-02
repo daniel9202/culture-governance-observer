@@ -21,7 +21,6 @@ const OFFICES={mayor:{label:'縣市長',page:'mayors.html',test:record=>!String(
 const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:236,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
 const SVG_NS='http://www.w3.org/2000/svg';
 const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-const fillLevel=count=>count?1:0;
 
 let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCity='';
 // 參選人數取自中選會登記名冊（data/registered_candidates.json）。
@@ -61,7 +60,7 @@ function drawMap(){
   const insets=geometry.insets.map(inset=>{const [x,y,w,h]=inset.box,[lx,ly,anchor]=inset.label_at;return `<rect class="inset-frame" x="${x}" y="${y}" width="${w}" height="${h}"/><text class="inset-label" x="${lx}" y="${ly}" text-anchor="${anchor}">${esc(inset.label)}</text>`}).join('');
   const shapes=geometry.counties.map(county=>{
     const count=(groups.get(county.name)||[]).length;
-    return `<path class="county fill-${fillLevel(count)}${county.name===activeCity?' is-active':''}" d="${county.d}" data-city="${esc(county.name)}" tabindex="0" role="button" aria-label="${esc(county.name)}：${count?`${count} 位${OFFICES[office].label}候選人提出文化政策`:'尚未收錄'}"></path>`;
+    return `<path class="county${county.name===activeCity?' is-active':''}" d="${county.d}" data-city="${esc(county.name)}" tabindex="0" role="button" aria-label="${esc(county.name)}：${count?`${count} 位${OFFICES[office].label}候選人提出文化政策`:'尚未收錄'}"></path>`;
   }).join('');
   const mark=office==='councilor'?countBadge:dots;
   const markers=geometry.counties.map(county=>{
@@ -150,7 +149,7 @@ const chips=list=>list.length?list.map(item=>`<span class="compare-chip" style="
 function renderCompare(){
   document.getElementById('compareList').innerHTML=REGIONS.map(([region,cities])=>`<div class="compare-region"><h3>${region}</h3>${cities.map(city=>{
     const mayors=byOffice.mayor.get(city)||[],councilors=byOffice.councilor.get(city)||[];
-    return `<button type="button" class="compare-row${mayors.length||councilors.length?'':' is-empty'}" data-city="${esc(city)}"><span class="compare-city"><b class="fill-${fillLevel(mayors.length)}"></b>${esc(city)}</span><span class="compare-cell" data-label="縣市長"><span class="compare-ratio">${mayors.length}/${registeredIn('mayor',city).length}</span>${chips(mayors)}</span><span class="compare-cell" data-label="議員"><span class="compare-ratio">${councilors.length}/${registeredIn('councilor',city).length}</span>${chips(councilors)}</span></button>`;
+    return `<button type="button" class="compare-row${mayors.length||councilors.length?'':' is-empty'}" data-city="${esc(city)}"><span class="compare-city">${esc(city)}</span><span class="compare-cell" data-label="縣市長"><span class="compare-ratio">${mayors.length}/${registeredIn('mayor',city).length}</span>${chips(mayors)}</span><span class="compare-cell" data-label="議員"><span class="compare-ratio">${councilors.length}/${registeredIn('councilor',city).length}</span>${chips(councilors)}</span></button>`;
   }).join('')}</div>`).join('');
   document.querySelectorAll('.compare-row').forEach(row=>row.addEventListener('click',()=>selectCity(row.dataset.city,{scroll:true})));
 }
