@@ -5963,6 +5963,61 @@
       "corrections": [
         "2026-10-02｜中選會名冊核對為新北市第3選舉區台灣綠黨候選人；台灣綠黨2026候選人政見明列畢旅結合文化地景與公共議題，完成人工審核。"
       ]
+    },
+    {
+      "id": "candidate-khh-councilor-hsueh-chao-chi-youth-arts-village-001",
+      "city": "高雄市",
+      "office": "縣市議員",
+      "candidate": "薛兆基",
+      "party": "無黨籍",
+      "topics": [
+        "眷村文化",
+        "青年藝術",
+        "漫畫文化",
+        "文化資產"
+      ],
+      "summary": "薛兆基提出以左營眷村保存為基礎，邀集漫畫家、藝術工作者及文史團體研議漫畫家駐村與戶外展演，打造青年藝術聚落。",
+      "policy_argument": "眷村保存應結合青年創作與在地文化工作者，讓歷史場域持續產生文化內容並成為青年創作基地。",
+      "concrete_proposals": [
+        "邀集漫畫家、藝術工作者、文史團體及相關單位研議青年藝術聚落。",
+        "推動漫畫家駐村構想。",
+        "推動戶外展演舞台構想。"
+      ],
+      "related_statements": [
+        "候選人提出持續研議及逐步落實的方向，未列主責機關、場址範圍、經費、期程或具體執行機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "高雄市左楠選區市議員參選人薛兆基與知名校園漫畫家林政德 共倡打造全台首座青年藝術聚落",
+            "url": "https://www.5ch.com.tw/news.php?act=view&id=81694"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "高雄市左楠選區市議員參選人薛兆基與知名校園漫畫家林政德 共倡打造全台首座青年藝術聚落",
+            "url": "https://www.5ch.com.tw/news.php?act=view&id=81694"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "高雄市左楠選區市議員參選人薛兆基與知名校園漫畫家林政德 共倡打造全台首座青年藝術聚落",
+            "url": "https://www.5ch.com.tw/news.php?act=view&id=81694"
+          }
+        ]
+      },
+      "published_date": "2026-07-08",
+      "source_title": "高雄市左楠選區市議員參選人薛兆基與知名校園漫畫家林政德 共倡打造全台首座青年藝術聚落",
+      "source_url": "https://www.5ch.com.tw/news.php?act=view&id=81694",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對薛兆基為高雄市第4選舉區無黨籍候選人；具名新聞記載其與漫畫家及文史團體討論眷村保存、漫畫家駐村與戶外展演等候選人主張。來源未提供預算與期程，已在條目中註明。"
+      ]
     }
   ]
 }
