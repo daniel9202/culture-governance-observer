@@ -12,6 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "data" / "input"
 OUTPUT = ROOT / "data"
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+PROPOSER_ROLES = {"候選人", "推定現任議員", "待判定"}
+CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任問政／提案"}
 
 def rows(name):
     with (INPUT / name).open(encoding="utf-8-sig", newline="") as f:
@@ -30,6 +32,10 @@ def valid_url(value, label):
     parsed = urlparse(value)
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         raise ValueError(f"{label}: invalid URL")
+
+def valid_choice(value, allowed, field, label):
+    if value not in allowed:
+        raise ValueError(f"{label}: {field} must be one of {', '.join(sorted(allowed))}")
 
 def field_sources(value, fallback_title, fallback_url, label):
     sources = []
@@ -75,10 +81,12 @@ def build_candidates():
         if not any(row.values()):
             continue
         label = f"candidates.csv row {index}"
-        required(row, ["id", "city", "office", "candidate", "party", "summary", "published_date", "source_title", "source_url", "last_verified"], label)
+        required(row, ["id", "city", "office", "candidate", "party", "summary", "published_date", "source_title", "source_url", "last_verified", "proposer_role", "content_nature", "role_evidence"], label)
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
+        valid_choice(row["proposer_role"], PROPOSER_ROLES, "proposer_role", label)
+        valid_choice(row["content_nature"], CONTENT_NATURES, "content_nature", label)
         related_sources = [x.strip() for x in (row.get("related_sources") or "").split("|") if x.strip()]
         for source in related_sources:
             valid_url(source, label)
@@ -95,6 +103,7 @@ def build_candidates():
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
             "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
+            "proposer_role": row["proposer_role"], "content_nature": row["content_nature"], "role_evidence": row["role_evidence"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })
     return records
