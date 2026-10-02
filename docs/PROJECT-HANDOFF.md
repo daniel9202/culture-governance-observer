@@ -23,12 +23,12 @@
 | 工作端 | 負責 | 可以提交的檔案 |
 | --- | --- | --- |
 | 設計端 | 前台外觀與互動 | `styles.css`、根目錄 `*.html`／`*.js`、`map-geometry.json`、`docs/` |
-| 資料端 | 新增與更正資料，並自行 push | `data/input/`、`data/*.json`、`data/research/` |
+| 資料端 | 新增與更正資料、Apps Script 審核台與蒐集後台，經使用者確認後 push | `data/input/`、`data/*.json`、`data/research/`、`apps-script/` |
 
 - 不要提交對方負責的檔案；看到對方範圍的問題（例如政黨欄位不符），回報使用者，由負責的一端處理。
 - 提交時只 `git add` 自己範圍的檔案，不要 `git add .`。
 - push 前先 `git fetch`，遠端有新提交就先 `git pull --rebase`，避免覆蓋另一端的工作。
-- `apps-script/` 審核台目前由設計端修改，但需使用者在 Apps Script 環境部署實測後才提交。
+- `apps-script/` 審核台由資料端負責並以 clasp 推送（2026-10-02 更正：先前誤寫為設計端）。設計端要改審核台介面時，寫成需求交給資料端。現行規則以根目錄 `AGENTS.md` 為準。
 
 ### 跨帳號協作規約（2026-10-02 新增）
 
@@ -177,11 +177,11 @@ npm run build
 | `07ea87d` | 地圖改成統一底色，滑過／選取才變色；移除填色圖例與比較表色塊 |
 | `711767c` | 前台只算本屆競選政見；「政見實現追蹤」改名「現任追蹤」並新增議員分頁；地圖側欄與議員頁連到議員分頁 |
 
-**工作目錄仍有未提交的變更。接手者不得直接丟棄：**
+**尚未合併或未追蹤的項目：**
 
 | 狀態 | 檔案 | 判讀 |
 | --- | --- | --- |
-| 修改中 | `apps-script/Index.html` | 審核台「準備上架」工作區與「審核後只移除該張卡片、不整頁重載」。2026-10-01 設計端用假的 `google.script.run` 在本機測過，並修正三點：在「準備上架」存檔後卡片不再消失、退回待審核時「準備上架」計數會扣、開頁讀試算表從 3 次減為 2 次。**仍需使用者在 Apps Script 環境部署實測後才提交。** |
+| 分支 `review-console-wip`（`b1a56f5`，已推上 GitHub） | `apps-script/Index.html` | 原本在資料端資料夾、未提交的審核台修改：「準備上架」工作區、審核後只移除該張卡片不整頁重載。設計端在本機以假的 `google.script.run` 測過並加上三項修正（在「準備上架」存檔後卡片不再消失、退回待審核時「準備上架」計數會扣、開頁讀試算表從 3 次減為 2 次）。**尚未部署到 Apps Script，也未合併進 `main`；由資料端接手**：合併後用 clasp 推測試部署，使用者實測，再正式部署。資料端資料夾裡的 `apps-script/Index.html` 是 `main` 上的舊版，合併前不要從那裡推 Apps Script。 |
 | 未追蹤 | `backups/` | 含 `cloudflare-d1-20260914/` 的 D1 schema 與資料快照。視為本機備份，在確認資料敏感性與需求前不要加入版本庫。 |
 
 前台資源版本參數（改檔時要同步更新各 HTML）：`styles.css?v=20261002-9`；`public-candidates.js`、`map.js`、`candidate-list.js`、`app.js`、`fulfillment.js` 為 `20261002-8`。
@@ -235,7 +235,7 @@ npm run build
 
 ### 地圖相關的提交建議
 
-設計端只提交前台檔案，與 `apps-script/Index.html`、`backups/` 分開；`data/*.json` 等建置產物由資料端提交（見「工作分工」）。提交前再跑一次 `npm run build`，並確認沒有把建置重產的 `data/` 檔案一起 stage。
+設計端只提交前台檔案，不碰 `apps-script/` 與 `backups/`；`data/*.json` 等建置產物由資料端提交（見「工作分工」）。提交前再跑一次 `npm run build`，並確認沒有把建置重產的 `data/` 檔案一起 stage。
 
 ## 建議續作順序（2026-10-01 晚間）
 
@@ -286,7 +286,7 @@ npm run build
 - 資料方法頁的「政見實現追蹤」小節標題（說明首長查核方法）未改；如要補充議員分頁的方法說明，另行處理。
 
 1. **中選會審定名單**：10/16 前完成資格審查、10/23 號次抽籤。審定名單公告後，下載新的 PDF 重跑 `scripts/import_cec_registrations.py`，並更新 `--as-of` 與 `map.html` 底部「統計口徑」的人數和日期文字。
-2. **`apps-script/Index.html` 的變更**：它在原 HTML 結尾追加了兩段覆寫式 script。設計端已在本機以假資料測過並修正（見「目前 Git 與工作進度」），剩下使用者在 Apps Script 部署實測；確認後再考慮整理成單一腳本，並單獨提交，不要混入 `backups/`。
+2. **審核台修改（資料端接手）**：`review-console-wip` 分支的 `apps-script/Index.html` 在原 HTML 結尾追加了兩段覆寫式 script，設計端已在本機以假資料測過並修正（見「目前 Git 與工作進度」）。資料端合併後用 clasp 推測試部署，使用者實測，再正式部署；之後可考慮整理成單一腳本。
 3. **還沒決定的 Cloudflare 相依**：`nav.js` 的匿名造訪統計，以及首頁「人工查核 ↗」連到的舊 Cloudflare 審核頁 `review.html`。
 4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
 5. **文件**：把 `docs/manual-update.md` 改成符合 Google Sheet／Apps Script 的現行流程（見下節）。

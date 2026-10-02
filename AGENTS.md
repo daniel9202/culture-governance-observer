@@ -25,8 +25,10 @@
 
 | 工作端 | 負責 | 只能提交 |
 | --- | --- | --- |
-| 設計端 | 前台外觀、互動、頁面架構 | `styles.css`、根目錄 `*.html`／`*.js`、`map-geometry.json`、`config/party_colors.json`、`apps-script/`（須使用者實測後）、`docs/`、本檔 |
-| 資料端 | 蒐集、新增、更正資料，並自行 push | `data/input/`、`data/*.json`、`data/research/`、`data/schema.md`、`scripts/build_data.py` 的驗證規則 |
+| 設計端 | 前台外觀、互動、頁面架構 | `styles.css`、根目錄 `*.html`／`*.js`、`map-geometry.json`、`config/party_colors.json`、`docs/`、本檔 |
+| 資料端 | 蒐集、新增、更正資料；Apps Script 審核台與蒐集後台；push | `data/input/`、`data/*.json`、`data/research/`、`data/schema.md`、`scripts/build_data.py` 的驗證規則、`apps-script/` |
+
+審核台介面若要調整，設計端寫成需求交給資料端，不直接修改 `apps-script/`。
 
 `scripts/` 其他檔案、`.github/workflows/`、`config/` 其他設定會影響兩端，修改前先問使用者。
 
@@ -47,7 +49,7 @@ git status --short --branch
 
 - **只 `git add` 自己範圍的檔案。** 禁止 `git add .`、`git reset --hard`、`git clean -fd`。
 - 跑 `npm run build`，確認通過。設計端要確認沒有把建置重產的 `data/` 檔案一起 stage。
-- 資料端：`git pull --rebase`，再 `git push origin main`。
+- 資料端：`git pull --rebase`，經使用者確認後 `git push origin main`。
 - 設計端：`git rebase origin/main`，再 `git push origin HEAD:main`。尚未完成的工作可以推到 `origin/design` 當備份，不會上線。
 - push 後回報固定格式的交接訊息：
 
@@ -61,14 +63,18 @@ git status --short --branch
 ```text
 Apps Script 自動蒐集 → Google Sheet「審核資料」
 → 使用者在 Apps Script 審核台核准（使用者核准前不得公開）
-→ 資料端 AI 讀取已核准資料 → 寫入 data/input/*.csv → npm run build → push
+→ 資料端 AI 讀取已核准資料 → 寫入 data/input/*.csv → npm run build
+→ 使用者手動確認 → push
 → GitHub Actions → GitHub Pages
 ```
+
+- **資料端 push 到 GitHub、推送 Apps Script 之前，都要先經使用者手動確認。**
 
 - `data/input/*.csv` 是唯一正式資料來源；Google Sheet 只是佇列與查核清單，不能反向覆蓋 CSV。
 - 同一筆資料同一時間只能由一個工作端處理，依 Google Sheet 的裝置與鎖定欄位判斷。
 - Sheet ID、部署網址、憑證（`.secrets/`、`.clasp.json`）不得寫進 git、文件或聊天。
-- Apps Script 的程式以 repo 的 `apps-script/` 為準。部署後在交接文件記下版本。
+- Apps Script 的程式以 repo 的 `apps-script/` 為準，由資料端用 clasp 推送：先推到測試部署，使用者實測後再正式部署，並在交接文件記下版本。不要直接在 Google 編輯器修改而不回寫 repo。
+- 尚未部署的審核台修改放在 `review-console-wip` 分支（「準備上架」工作區＋設計端的三項修正），由資料端接手；資料端資料夾裡的 `apps-script/Index.html` 是 `main` 上的舊版，**在合併這個分支之前，不要從資料端資料夾推送 Apps Script**，否則會蓋掉這份修改。
 - `MULTI-COMPUTER-WORKFLOW.md` 列出的舊流程（Cloudflare Worker／D1 發布、GitHub source-lead PR、Service Account 發布）不得啟用。
 
 ## 資料規則
