@@ -14,7 +14,7 @@
 - 文化政策承諾的實現追蹤；
 - 縣市文化資產、場館、活動與特定中央補助指標。
 
-公開網站由 GitHub Pages 部署；目前主要審核流程使用 Google Sheet 與 Google Apps Script。Cloudflare Worker／D1 是未來或 staging 架構，**不是目前日常資料發布入口**；2026-10-01 起前台已不再讀取其已核准資料 API（僅 `nav.js` 匿名造訪統計與舊的 `review.html` 仍連到 Cloudflare）。
+公開網站由 GitHub Pages 部署；目前主要審核流程使用 Google Sheet 與 Google Apps Script。Cloudflare Worker／D1 是未來或 staging 架構，**不是目前日常資料發布入口**；2026-10-01 起前台已不再讀取其已核准資料 API；2026-10-03 起前台已完全不連 Cloudflare（造訪統計與舊審核頁都已移除，見下方「尚未處理的缺口」）。
 
 ## 工作分工（2026-10-01 起，使用者指定）
 
@@ -184,7 +184,7 @@ npm run build
 | 分支 `review-console-wip`（`b1a56f5`，已推上 GitHub） | `apps-script/Index.html` | 原本在資料端資料夾、未提交的審核台修改：「準備上架」工作區、審核後只移除該張卡片不整頁重載。設計端在本機以假的 `google.script.run` 測過並加上三項修正（在「準備上架」存檔後卡片不再消失、退回待審核時「準備上架」計數會扣、開頁讀試算表從 3 次減為 2 次）。**尚未部署到 Apps Script，也未合併進 `main`；由資料端接手**：合併後用 clasp 推測試部署，使用者實測，再正式部署。資料端資料夾裡的 `apps-script/Index.html` 是 `main` 上的舊版，合併前不要從那裡推 Apps Script。 |
 | 未追蹤 | `backups/` | 含 `cloudflare-d1-20260914/` 的 D1 schema 與資料快照。視為本機備份，在確認資料敏感性與需求前不要加入版本庫。 |
 
-前台資源版本參數（改檔時要同步更新各 HTML）：`styles.css?v=20261002-9`；`public-candidates.js`、`map.js`、`candidate-list.js`、`app.js`、`fulfillment.js` 為 `20261002-8`。
+前台資源版本參數（改檔時要同步更新各 HTML）：`styles.css?v=20261002-9`；`nav.js` 為 `20261003-1`；`public-candidates.js`、`map.js`、`candidate-list.js`、`app.js`、`fulfillment.js` 為 `20261002-8`。
 
 ## 文化政見地圖（2026-10-01 上線）
 
@@ -231,7 +231,8 @@ npm run build
 尚未處理的缺口：
 - Apps Script 審核台與「整合草稿」沒有名冊檢查，錯誤要等建置時才會發現。可以讓 Apps Script 用 `UrlFetchApp` 讀線上的 `data/registered_candidates.json`，在審核卡片上提示，但需要另外部署 Apps Script，並在實際環境測試。
 - 2026-10-01 已移除前台讀取 Cloudflare 已核准資料的程式碼，經使用者同意；移除前確認兩個 API 都是 0 筆：`public-candidates.js` 的 `/api/public/candidates`、`civic.js` 的 `/api/public/civic-calls`。`updates.js` 只用來插入 Cloudflare 資料，而且本來就沒列在建置清單裡，已一併刪除。現在前台只讀經過 `build_data.py` 驗證的 JSON。
-- 仍保留的 Cloudflare 相依：`nav.js` 的匿名造訪統計（`/api/public/visit`），以及舊的人工查核頁 `review.html`／`review-api.js`（首頁「人工查核 ↗」還連到這頁），兩者都還沒決定要不要移除。
+- 2026-10-03 依使用者指示移除前台剩下的 Cloudflare 相依：`nav.js` 的匿名造訪統計（`/api/public/visit`）、各頁 CSP `connect-src` 裡的 Worker 網址、首頁「人工查核 ↗」連結，並刪除 `review.html`、`review.js`、`review-api.js`（建置清單同步移除）。原本的造訪統計只寫進 Cloudflare D1，從未接到 Apps Script 或任何使用者看得到的介面，移除沒有實際損失；目前網站沒有造訪統計。`review.html` 當時是一個轉址到 Google Apps Script 審核台的頁面，等於把審核台的部署網址公開在網站上，移除後已不再出現（git 歷史中仍有）。
+- `cloudflare/` 資料夾（Worker 原始碼）與 Cloudflare 帳號上的 Worker、D1 資料庫沒有動；是否刪除或停用由使用者決定。
 
 ### 地圖相關的提交建議
 
@@ -287,7 +288,7 @@ npm run build
 
 1. **中選會審定名單**：10/16 前完成資格審查、10/23 號次抽籤。審定名單公告後，下載新的 PDF 重跑 `scripts/import_cec_registrations.py`，並更新 `--as-of` 與 `map.html` 底部「統計口徑」的人數和日期文字。
 2. **審核台修改（資料端接手）**：`review-console-wip` 分支的 `apps-script/Index.html` 在原 HTML 結尾追加了兩段覆寫式 script，設計端已在本機以假資料測過並修正（見「目前 Git 與工作進度」）。資料端合併後用 clasp 推測試部署，使用者實測，再正式部署；之後可考慮整理成單一腳本。
-3. **還沒決定的 Cloudflare 相依**：`nav.js` 的匿名造訪統計，以及首頁「人工查核 ↗」連到的舊 Cloudflare 審核頁 `review.html`。
+3. **Cloudflare**：前台相依已於 2026-10-03 移除。剩下 `cloudflare/` 資料夾與帳號上的 Worker、D1 是否刪除或停用，待使用者決定。若日後需要造訪統計，要另選方案並更新各頁 CSP。
 4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
 5. **文件**：把 `docs/manual-update.md` 改成符合 Google Sheet／Apps Script 的現行流程（見下節）。
 6. **出現新政黨時**：若候選人資料出現 `config/party_colors.json` 沒有的政黨，建置會跳警告。補顏色前先和使用者確認。
