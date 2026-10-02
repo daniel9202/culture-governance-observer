@@ -3,6 +3,159 @@
   "last_updated": "2026-10-02",
   "records": [
     {
+      "id": "candidate-miaoli-mayor-chen-pin-an-hakka-culture-001",
+      "city": "苗栗縣",
+      "office": "縣市長",
+      "candidate": "陳品安",
+      "party": "民主進步黨",
+      "topics": [
+        "客家文化",
+        "地方文化",
+        "文化傳承",
+        "文化參與"
+      ],
+      "summary": "陳品安表示未來將持續推動貼近生活、扎根地方的文化行動，讓客庄文化融入現代生活並深化多元族群文化。",
+      "policy_argument": "以日常參與與地方扎根推動客庄文化傳承，讓傳統生活智慧能在當代持續被理解與實作。",
+      "concrete_proposals": [
+        "持續推動貼近生活與扎根地方的文化行動。",
+        "透過手作和生活體驗傳承客庄文化。",
+        "讓客庄文化融入現代生活。"
+      ],
+      "related_statements": [
+        "來源未揭露後續文化行動的預算、期程或執行機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "客庄午後香包製造所登場",
+            "url": "https://www.dpp.org.tw/content_print/media/11615"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "客庄午後香包製造所登場",
+            "url": "https://www.dpp.org.tw/content_print/media/11615"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "客庄午後香包製造所登場",
+            "url": "https://www.dpp.org.tw/content_print/media/11615"
+          }
+        ]
+      },
+      "published_date": "2026-06-07",
+      "source_title": "客庄午後香包製造所登場",
+      "source_url": "https://www.dpp.org.tw/content_print/media/11615",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對苗栗縣縣市長候選人身分；民進黨官方新聞稿具名記載候選人未來文化承諾。措施尚未提供預算與期程，已在條目中註明。"
+      ]
+    },
+    {
+      "id": "candidate-pingtung-mayor-su-ching-chuan-ritual-center-001",
+      "city": "屏東縣",
+      "office": "縣市長",
+      "candidate": "蘇清泉",
+      "party": "中國國民黨",
+      "topics": [
+        "原住民族文化",
+        "文化場館",
+        "祭儀文化",
+        "文化產業"
+      ],
+      "summary": "蘇清泉承諾若當選屏東縣長將立即推動興建獅子鄉生活祭儀中心，作為部落祭儀與文化活動空間，並支援農特產品通路發展。",
+      "policy_argument": "以實用的祭儀中心作為原鄉文化傳承與部落長期發展的公共基礎設施。",
+      "concrete_proposals": [
+        "推動興建獅子鄉生活祭儀中心。",
+        "中心供部落祭儀與文化活動使用。",
+        "兼顧農特產品通路與部落長期發展。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "獅子鄉小米收穫祭熱鬧登場",
+            "url": "https://news.m.pchome.com.tw/living/newstaiwandigi/20260823/index-78745508175417279009.html"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "獅子鄉小米收穫祭熱鬧登場",
+            "url": "https://news.m.pchome.com.tw/living/newstaiwandigi/20260823/index-78745508175417279009.html"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "獅子鄉小米收穫祭熱鬧登場",
+            "url": "https://news.m.pchome.com.tw/living/newstaiwandigi/20260823/index-78745508175417279009.html"
+          }
+        ]
+      },
+      "published_date": "2026-08-23",
+      "source_title": "獅子鄉小米收穫祭熱鬧登場",
+      "source_url": "https://news.m.pchome.com.tw/living/newstaiwandigi/20260823/index-78745508175417279009.html",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對屏東縣縣市長候選人身分；報導具名記載候選人承諾當選後立即推動工程。地方提出的計畫預算約1200萬元，非候選人已承諾之預算。"
+      ]
+    },
+    {
+      "id": "candidate-pingtung-mayor-chou-chun-mi-cultural-corridor-001",
+      "city": "屏東縣",
+      "office": "縣市長",
+      "candidate": "周春米",
+      "party": "民主進步黨",
+      "topics": [
+        "文化場館",
+        "表演藝術",
+        "文化觀光",
+        "文化資產"
+      ],
+      "summary": "周春米在2026屏東政策說明會提出以屏東縣立美術館、東港王船文化館、恆春文化中心等三大文化建設，串聯公園、圖書館與文化觀光廊帶。",
+      "policy_argument": "以分布屏北、屏中、屏南的文化設施串聯城鄉文化服務與觀光，提升城市文化競爭力。",
+      "concrete_proposals": [
+        "打造屏東縣立美術館。",
+        "打造東港王船文化館。",
+        "打造恆春文化中心。",
+        "串聯三大文化建設與公園、滯洪池、圖書館形成文化觀光廊帶。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "民進黨台灣好生活宣講 高科技農漁交通屏東齊發",
+            "url": "https://www.cna.com.tw/news/aloc/202606130167.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "民進黨台灣好生活宣講 高科技農漁交通屏東齊發",
+            "url": "https://www.cna.com.tw/news/aloc/202606130167.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "民進黨台灣好生活宣講 高科技農漁交通屏東齊發",
+            "url": "https://www.cna.com.tw/news/aloc/202606130167.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-06-13",
+      "source_title": "民進黨台灣好生活宣講 高科技農漁交通屏東齊發",
+      "source_url": "https://www.cna.com.tw/news/aloc/202606130167.aspx",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對屏東縣縣市長候選人身分；中央社報導具名記載候選人於2026政策說明會提出的文化建設與廊帶規劃。"
+      ]
+    },
+    {
       "id": "candidate-hualien-councilor-liu-ching-wen-multicultural-001",
       "city": "花蓮縣",
       "office": "縣市議員",
