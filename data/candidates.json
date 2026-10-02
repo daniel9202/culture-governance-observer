@@ -3,6 +3,58 @@
   "last_updated": "2026-10-02",
   "records": [
     {
+      "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
+      "city": "嘉義縣",
+      "office": "縣市長",
+      "candidate": "蔡易餘",
+      "party": "民主進步黨",
+      "topics": [
+        "林業文化",
+        "鐵道文化",
+        "文化觀光",
+        "地方文化"
+      ],
+      "summary": "蔡易餘提出以觀光串聯嘉義山海資源，行駛阿里山林鐵區間車推廣大阿里山林業文化，並規劃布袋與東石漁港特色觀光及多元觀光路線。",
+      "policy_argument": "以阿里山林鐵與林業文化為核心，串聯山海文化資源與地方觀光，將文化內容納入縣政觀光發展。",
+      "concrete_proposals": [
+        "行駛阿里山林鐵區間車推廣大阿里山林業文化。",
+        "發展布袋與東石漁港特色觀光。",
+        "開發中埔溫泉及建設梅山至太平雲梯纜車等多元觀光路線。"
+      ],
+      "related_statements": [
+        "政見未列林鐵區間車營運班次、文化詮釋內容、觀光路線經費、期程與跨機關分工。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "綠嘉義縣長初選政見會 蔡易餘提邁向下個黃金10年",
+            "url": "https://www.cna.com.tw/news/aipl/202601040117.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "綠嘉義縣長初選政見會 蔡易餘提邁向下個黃金10年",
+            "url": "https://www.cna.com.tw/news/aipl/202601040117.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "綠嘉義縣長初選政見會 蔡易餘提邁向下個黃金10年",
+            "url": "https://www.cna.com.tw/news/aipl/202601040117.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-01-04",
+      "source_title": "綠嘉義縣長初選政見會 蔡易餘提邁向下個黃金10年",
+      "source_url": "https://www.cna.com.tw/news/aipl/202601040117.aspx",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對蔡易餘為嘉義縣縣市長民主進步黨候選人；中央社報導其在2026年嘉義縣長提名政見會提出阿里山林鐵區間車與林業文化推廣措施。來源未提供預算與期程，已在條目中註明。"
+      ]
+    },
+    {
       "id": "candidate-miaoli-mayor-chen-pin-an-hakka-culture-001",
       "city": "苗栗縣",
       "office": "縣市長",
