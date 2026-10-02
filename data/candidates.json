@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-02",
+  "last_updated": "2026-10-03",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -177,8 +177,7 @@
       "topics": [
         "原住民族文化",
         "文化場館",
-        "祭儀文化",
-        "文化產業"
+        "祭儀文化"
       ],
       "summary": "蘇清泉承諾若當選屏東縣長將立即推動興建獅子鄉生活祭儀中心，作為部落祭儀與文化活動空間，並支援農特產品通路發展。",
       "policy_argument": "以實用的祭儀中心作為原鄉文化傳承與部落長期發展的公共基礎設施。",
@@ -218,7 +217,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-02｜已依中選會登記名冊核對屏東縣縣市長候選人身分；報導具名記載候選人承諾當選後立即推動工程。地方提出的計畫預算約1200萬元，非候選人已承諾之預算。"
+        "2026-10-02｜已依中選會登記名冊核對屏東縣縣市長候選人身分；報導具名記載候選人承諾當選後立即推動工程。地方提出的計畫預算約1200萬元，非候選人已承諾之預算。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -394,7 +394,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-07｜查核賴瑞隆官方網站 https://zenolai.oen.tw/，未找到「文化高雄」、「世界舞台」或七項文化政策的同步頁面。"
+        "2026-09-07｜查核賴瑞隆官方網站 https://zenolai.oen.tw/，未找到「文化高雄」、「世界舞台」或七項文化政策的同步頁面。",
+        "2026-10-03｜合併 candidate-khh-mayor-lai-jui-lung-002 的同一套「文化高雄・世界舞台」政策；保留既有 ID，原筆已含較完整的七大政策內容。"
       ]
     },
     {
@@ -2150,121 +2151,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-khh-mayor-lai-jui-lung-002",
-      "city": "高雄市",
-      "office": "縣市長",
-      "candidate": "賴瑞隆",
-      "party": "民主進步黨",
-      "topics": [
-        "社區文化",
-        "文化資產",
-        "傳統藝術",
-        "地方文史",
-        "表演藝術",
-        "文化產業",
-        "國際文化交流"
-      ],
-      "summary": "提出「文化高雄・世界舞台」七大政策，涵蓋圖書館生活圈、文化故事庫、傳統技藝、南方人文研究、表演人才、文化內容基地與國際共製。",
-      "policy_argument": "以文化生根、內容產製與國際共製，讓城市文化設施與地方故事轉化為作品及產業。",
-      "concrete_proposals": [
-        "以61座圖書館串起生活圈。",
-        "建置38區文化故事庫。",
-        "傳承傳統技藝並培育接班。",
-        "布局四大文化內容基地與國際共製。"
-      ],
-      "related_statements": [
-        "提出「文化高雄・世界舞台」作為整體文化政策方向。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
-            "url": "https://www.threads.com/share/FuJ7gG1iq/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
-            "url": "https://www.threads.com/share/FuJ7gG1iq/"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
-            "url": "https://www.threads.com/share/FuJ7gG1iq/"
-          }
-        ]
-      },
-      "published_date": "2026-09-07",
-      "source_title": "賴瑞隆 Threads：文化高雄・世界舞台（7大政策、18項計畫）",
-      "source_url": "https://www.threads.com/share/FuJ7gG1iq/",
-      "related_sources": [
-        "https://www.threads.com/share/FA5zqGs_j/"
-      ],
-      "source_type": "候選人原文",
-      "last_verified": "2026-09-14",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-09-14｜由舊審核資料遷入，與既有賴瑞隆卡片合併呈現。"
-      ]
-    },
-    {
-      "id": "candidate-tpe-mayor-shen-boyang-002",
-      "city": "臺北市",
-      "office": "縣市長",
-      "candidate": "沈伯洋",
-      "party": "民主進步黨",
-      "topics": [
-        "文化觀光",
-        "文化資產",
-        "地方文化"
-      ],
-      "summary": "提出「首都文化徑及山林徑」，將產業、歷史、族群與人權民主等主題串為文化路徑，結合山林觀光。",
-      "policy_argument": "以城市文化路徑串聯歷史記憶與山林觀光，讓文化保存成為可近用的公共體驗。",
-      "concrete_proposals": [
-        "規劃首都文化徑及山林徑。",
-        "規劃三座登山觀光中心。",
-        "串連產業、歷史、族群與人權民主文化主題。"
-      ],
-      "related_statements": [
-        "以登山觀光中心串接文化路徑與山林旅遊。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "沈伯洋拋設登山觀光中心政見",
-            "url": "https://news.pts.org.tw/article/826016"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "沈伯洋拋設登山觀光中心政見",
-            "url": "https://news.pts.org.tw/article/826016"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "沈伯洋拋設登山觀光中心政見",
-            "url": "https://news.pts.org.tw/article/826016"
-          }
-        ]
-      },
-      "published_date": "2026-09-08",
-      "source_title": "沈伯洋拋設登山觀光中心政見",
-      "source_url": "https://news.pts.org.tw/article/826016",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-09-14",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-09-14｜由舊審核資料遷入，與既有沈伯洋卡片合併呈現。"
-      ]
-    },
-    {
       "id": "candidate-yilan-mayor-lin-kuo-chang-002",
       "city": "宜蘭縣",
       "office": "縣市長",
@@ -2379,7 +2265,7 @@
       "party": "台灣基進",
       "topics": [
         "多元語言",
-        "文化教育",
+        "文化治理",
         "文化與地方認同"
       ],
       "summary": "主張市政以本土文化與本土語言優先，並將設立台語委員會與轉型正義納入施政方向。",
@@ -2422,7 +2308,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -2487,7 +2374,8 @@
         "藝文活動",
         "文化教育",
         "地方文化與社區營造",
-        "文化場館"
+        "文化場館",
+        "視覺藝術"
       ],
       "summary": "主張增加校園藝文教育預算、支持南區在地藝術團體，並爭取常態藝術季與專業展演空間。",
       "policy_argument": "透過教育投入、社區藝文活動與公共場館，補足南區藝術資源。",
@@ -2530,7 +2418,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-10-03｜合併 candidate-hsinchu-councilor-li-mei-arts-001 的重複官方候選人頁內容；保留既有 ID，補「視覺藝術」細標籤，不以場地描述標示為美術館。"
       ]
     },
     {
@@ -2542,15 +2431,17 @@
       "topics": [
         "原住民族文化",
         "多元語言",
-        "文化教育"
+        "文化教育",
+        "青年返鄉"
       ],
-      "summary": "提出「族語扎根傳承」，以教育與日常使用支持原住民族語言延續。",
-      "policy_argument": "讓族語傳承從單次活動走向長期的教育與生活支持。",
+      "summary": "提出「族語扎根傳承」與「原青返鄉築夢」，以教育、日常使用與青年返鄉支持原住民族語言及文化延續。",
+      "policy_argument": "讓族語傳承從單次活動走向長期的教育與生活支持，並支持原住民青年返鄉發展。",
       "concrete_proposals": [
-        "推動族語扎根傳承。"
+        "推動族語扎根傳承。",
+        "支持原住民青年返鄉築夢。"
       ],
       "related_statements": [
-        "將族語傳承列為政見。"
+        "將族語傳承與原青返鄉築夢列為政見。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -2582,7 +2473,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-10-03｜合併 candidate-changhua-councilor-kao-tsai-ling-language-001 的同一官方候選人頁內容；保留既有 ID，補入原青返鄉築夢。"
       ]
     },
     {
@@ -2756,15 +2648,17 @@
       "topics": [
         "文化觀光",
         "文化產業與文創",
-        "地方文化與社區營造"
+        "地方文化與社區營造",
+        "傳統市場"
       ],
-      "summary": "提出整合北海岸觀光網、提升旅遊文化體驗，並以青年創業與社區文創活化地方特色。",
+      "summary": "提出整合北海岸觀光網、提升旅遊文化體驗，並以青年創業與社區文創活化地方特色，推動傳統市場轉型。",
       "policy_argument": "以文化觀光串連地方產業、青年創業與社區文創亮點。",
       "concrete_proposals": [
         "整合北海岸觀光網。",
         "提升旅遊文化體驗。",
         "輔導青年創業與新產業。",
-        "活化社區文創亮點。"
+        "活化社區文創亮點。",
+        "推動傳統市場轉型。"
       ],
       "related_statements": [
         "主張以北海岸觀光與文創帶動地方發展。"
@@ -2799,7 +2693,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-10-03｜合併 candidate-ntpc-councilor-chen-yu-chieh-cultural-tourism-001 的同一官方候選人頁內容；保留既有 ID，補入傳統市場轉型措施。"
       ]
     },
     {
@@ -2810,8 +2705,7 @@
       "party": "無黨籍",
       "topics": [
         "文化觀光",
-        "宗教文化",
-        "多元語言"
+        "宗教觀光"
       ],
       "summary": "主張串連半屏山、孔廟、蓮池潭與大小龜山，打造兼具宗教文化、夜間景觀與雙語導覽的文化觀光路線。",
       "policy_argument": "以低擾民的燈光營造、交通改善與雙語導覽，提升傳統宗教景點的文化旅遊體驗。",
@@ -2854,7 +2748,8 @@
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
-        "2026-10-01｜政黨由「台灣前進」更正為「無黨籍」：依中選會115年地方公職人員選舉候選人登記名冊，高雄市第4選舉區登記姓名「薛兆基」、推薦之政黨為「無」。「台灣前進」為小黨與無黨籍候選人的聯合，並非中選會登記的推薦政黨；政黨欄位以中選會推薦紀錄為準。"
+        "2026-10-01｜政黨由「台灣前進」更正為「無黨籍」：依中選會115年地方公職人員選舉候選人登記名冊，高雄市第4選舉區登記姓名「薛兆基」、推薦之政黨為「無」。「台灣前進」為小黨與無黨籍候選人的聯合，並非中選會登記的推薦政黨；政黨欄位以中選會推薦紀錄為準。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -2936,25 +2831,25 @@
         "policy_argument": [
           {
             "title": "2026/9/11｜鏡報｜務實建設翻轉鄉鎮治理 鄭朝方上任推「特色圖書館」延伸全新竹縣 - 鏡報",
-            "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBPaU5mOEkzNnZxMEx4WWtQaFp5NnI4Xy10UnNiejYxWUpBbkNKcWh4TEFMNXpjbmxiMmFQRmM3cng1bW5zcll0MVdPaVhzM0pmcVE?oc=5"
+            "url": "https://tw.news.yahoo.com/%E5%8B%99%E5%AF%A6%E5%BB%BA%E8%A8%AD%E7%BF%BB%E8%BD%89%E9%84%89%E9%8E%AE%E6%B2%BB%E7%90%86-%E9%84%AD%E6%9C%9D%E6%96%B9-%E7%99%BC%E5%B1%95%E7%89%B9%E8%89%B2%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%BB%B6%E4%BC%B8%E5%85%A8%E7%AB%B9%E7%B8%A3-083000132.html"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/9/11｜鏡報｜務實建設翻轉鄉鎮治理 鄭朝方上任推「特色圖書館」延伸全新竹縣 - 鏡報",
-            "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBPaU5mOEkzNnZxMEx4WWtQaFp5NnI4Xy10UnNiejYxWUpBbkNKcWh4TEFMNXpjbmxiMmFQRmM3cng1bW5zcll0MVdPaVhzM0pmcVE?oc=5"
+            "url": "https://tw.news.yahoo.com/%E5%8B%99%E5%AF%A6%E5%BB%BA%E8%A8%AD%E7%BF%BB%E8%BD%89%E9%84%89%E9%8E%AE%E6%B2%BB%E7%90%86-%E9%84%AD%E6%9C%9D%E6%96%B9-%E7%99%BC%E5%B1%95%E7%89%B9%E8%89%B2%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%BB%B6%E4%BC%B8%E5%85%A8%E7%AB%B9%E7%B8%A3-083000132.html"
           }
         ],
         "related_statements": [
           {
             "title": "2026/9/11｜鏡報｜務實建設翻轉鄉鎮治理 鄭朝方上任推「特色圖書館」延伸全新竹縣 - 鏡報",
-            "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBPaU5mOEkzNnZxMEx4WWtQaFp5NnI4Xy10UnNiejYxWUpBbkNKcWh4TEFMNXpjbmxiMmFQRmM3cng1bW5zcll0MVdPaVhzM0pmcVE?oc=5"
+            "url": "https://tw.news.yahoo.com/%E5%8B%99%E5%AF%A6%E5%BB%BA%E8%A8%AD%E7%BF%BB%E8%BD%89%E9%84%89%E9%8E%AE%E6%B2%BB%E7%90%86-%E9%84%AD%E6%9C%9D%E6%96%B9-%E7%99%BC%E5%B1%95%E7%89%B9%E8%89%B2%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%BB%B6%E4%BC%B8%E5%85%A8%E7%AB%B9%E7%B8%A3-083000132.html"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-09-11",
       "source_title": "2026/9/11｜鏡報｜務實建設翻轉鄉鎮治理 鄭朝方上任推「特色圖書館」延伸全新竹縣 - 鏡報",
-      "source_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBPaU5mOEkzNnZxMEx4WWtQaFp5NnI4Xy10UnNiejYxWUpBbkNKcWh4TEFMNXpjbmxiMmFQRmM3cng1bW5zcll0MVdPaVhzM0pmcVE?oc=5",
+      "source_url": "https://tw.news.yahoo.com/%E5%8B%99%E5%AF%A6%E5%BB%BA%E8%A8%AD%E7%BF%BB%E8%BD%89%E9%84%89%E9%8E%AE%E6%B2%BB%E7%90%86-%E9%84%AD%E6%9C%9D%E6%96%B9-%E7%99%BC%E5%B1%95%E7%89%B9%E8%89%B2%E5%9C%96%E6%9B%B8%E9%A4%A8%E5%BB%B6%E4%BC%B8%E5%85%A8%E7%AB%B9%E7%B8%A3-083000132.html",
       "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-16",
@@ -2962,7 +2857,9 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-07 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-07 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-11。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3005,7 +2902,7 @@
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-08-07",
       "source_title": "2026/8/7｜LINE TODAY｜何欣純提「舊城創新」主張 盼活化翻轉老城區 | 自由電子報 - LINE TODAY",
       "source_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA2U2pjTlMyRHFLMnpMbGoxUnBvdUtKMko1QmZMUWhWMGRRMV9NVWFlWUpMalRISzVvclJvYkRLNnI5YjMxbWlpZ0xyMVM0UUR4T3NfbWJ3?oc=5",
       "related_sources": [],
@@ -3015,7 +2912,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-09 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-09 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-07。"
       ]
     },
     {
@@ -3027,10 +2925,9 @@
       "topics": [
         "舊城活化",
         "城市文化",
-        "新住民文化",
-        "多元文化",
         "表演藝術",
-        "文化產業"
+        "文化產業",
+        "國際文化交流"
       ],
       "summary": "以中西區串聯與舊城復興為基礎，並提出星光計畫、文化創投與人才孵化、巷弄文化小蜜蜂等文化政策。",
       "policy_argument": "以中西區串聯與舊城復興，結合國際交流、文化創投、人才孵化與社區表演，回應城市文化特色與都市發展。",
@@ -3049,25 +2946,25 @@
         "policy_argument": [
           {
             "title": "2026/8/30｜匯流新聞網｜競總落腳西區 江啟臣拋舊城復興藍圖 - 匯流新聞網",
-            "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBtQlhaQnBCTFZ3bFlCVnhOV09zUFhDX1pRUEtwU0ZXZkFSWmNQSl8xMFpISk5RU1pLcXppTXBNZE5waVhjT1l2R1ln?oc=5"
+            "url": "https://tw.news.yahoo.com/%E7%AB%B6%E7%B8%BD%E8%90%BD%E8%85%B3%E8%A5%BF%E5%8D%80-%E6%B1%9F%E5%95%9F%E8%87%A3%E6%8B%8B%E8%88%8A%E5%9F%8E%E5%BE%A9%E8%88%88%E8%97%8D%E5%9C%96-014040727.html"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/30｜匯流新聞網｜競總落腳西區 江啟臣拋舊城復興藍圖 - 匯流新聞網",
-            "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBtQlhaQnBCTFZ3bFlCVnhOV09zUFhDX1pRUEtwU0ZXZkFSWmNQSl8xMFpISk5RU1pLcXppTXBNZE5waVhjT1l2R1ln?oc=5"
+            "url": "https://tw.news.yahoo.com/%E7%AB%B6%E7%B8%BD%E8%90%BD%E8%85%B3%E8%A5%BF%E5%8D%80-%E6%B1%9F%E5%95%9F%E8%87%A3%E6%8B%8B%E8%88%8A%E5%9F%8E%E5%BE%A9%E8%88%88%E8%97%8D%E5%9C%96-014040727.html"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/30｜匯流新聞網｜競總落腳西區 江啟臣拋舊城復興藍圖 - 匯流新聞網",
-            "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBtQlhaQnBCTFZ3bFlCVnhOV09zUFhDX1pRUEtwU0ZXZkFSWmNQSl8xMFpISk5RU1pLcXppTXBNZE5waVhjT1l2R1ln?oc=5"
+            "url": "https://tw.news.yahoo.com/%E7%AB%B6%E7%B8%BD%E8%90%BD%E8%85%B3%E8%A5%BF%E5%8D%80-%E6%B1%9F%E5%95%9F%E8%87%A3%E6%8B%8B%E8%88%8A%E5%9F%8E%E5%BE%A9%E8%88%88%E8%97%8D%E5%9C%96-014040727.html"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-08-30",
       "source_title": "2026/8/30｜匯流新聞網｜競總落腳西區 江啟臣拋舊城復興藍圖 - 匯流新聞網",
-      "source_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBtQlhaQnBCTFZ3bFlCVnhOV09zUFhDX1pRUEtwU0ZXZkFSWmNQSl8xMFpISk5RU1pLcXppTXBNZE5waVhjT1l2R1ln?oc=5",
+      "source_url": "https://tw.news.yahoo.com/%E7%AB%B6%E7%B8%BD%E8%90%BD%E8%85%B3%E8%A5%BF%E5%8D%80-%E6%B1%9F%E5%95%9F%E8%87%A3%E6%8B%8B%E8%88%8A%E5%9F%8E%E5%BE%A9%E8%88%88%E8%97%8D%E5%9C%96-014040727.html",
       "related_sources": [
         "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5tb2VNYmdFSkhsejdqVl9yN2JZcHc5UTI4ZUREZmZCcUQwU1lxOURUOVk3NFlORERjcVY1WFo2aWRRN3ZzZ1cxWFdRR3liaXItVHpaV1dLZUZ4TEw5SE9NWTlQWFRDU3Zl?oc=5",
         "https://taichungway.tw/future"
@@ -3079,7 +2976,10 @@
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-10 整合稿發布。",
-        "2026-09-17｜整合已審核官方政見頁：補入星光計畫、文化創投與巷弄文化小蜜蜂。"
+        "2026-09-17｜整合已審核官方政見頁：補入星光計畫、文化創投與巷弄文化小蜜蜂。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-30。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -3089,8 +2989,6 @@
       "candidate": "江啟臣",
       "party": "中國國民黨",
       "topics": [
-        "舊城活化",
-        "城市文化",
         "新住民文化",
         "多元文化"
       ],
@@ -3108,25 +3006,25 @@
         "policy_argument": [
           {
             "title": "2026/9/8｜中華新聞雲／中華日報｜江啟臣提新住民四大政策 讓多元文化成為青年走向世界的優勢 - 中華新聞雲／中華日報",
-            "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE80cVNMajVxR01JV2tjV1cwVEc0QTN4ZUdTYnVIajdtcHBTWE0tYzJaWEExdWN4VGNiS0pvXzFwb212b1UtRjhzQUQ1ZDN3eGdXSEE?oc=5"
+            "url": "https://udn.com/vote2026/story/124652/9741344"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/9/8｜中華新聞雲／中華日報｜江啟臣提新住民四大政策 讓多元文化成為青年走向世界的優勢 - 中華新聞雲／中華日報",
-            "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE80cVNMajVxR01JV2tjV1cwVEc0QTN4ZUdTYnVIajdtcHBTWE0tYzJaWEExdWN4VGNiS0pvXzFwb212b1UtRjhzQUQ1ZDN3eGdXSEE?oc=5"
+            "url": "https://udn.com/vote2026/story/124652/9741344"
           }
         ],
         "related_statements": [
           {
             "title": "2026/9/8｜中華新聞雲／中華日報｜江啟臣提新住民四大政策 讓多元文化成為青年走向世界的優勢 - 中華新聞雲／中華日報",
-            "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE80cVNMajVxR01JV2tjV1cwVEc0QTN4ZUdTYnVIajdtcHBTWE0tYzJaWEExdWN4VGNiS0pvXzFwb212b1UtRjhzQUQ1ZDN3eGdXSEE?oc=5"
+            "url": "https://udn.com/vote2026/story/124652/9741344"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-09-08",
       "source_title": "2026/9/8｜中華新聞雲／中華日報｜江啟臣提新住民四大政策 讓多元文化成為青年走向世界的優勢 - 中華新聞雲／中華日報",
-      "source_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE80cVNMajVxR01JV2tjV1cwVEc0QTN4ZUdTYnVIajdtcHBTWE0tYzJaWEExdWN4VGNiS0pvXzFwb212b1UtRjhzQUQ1ZDN3eGdXSEE?oc=5",
+      "source_url": "https://udn.com/vote2026/story/124652/9741344",
       "related_sources": [
         "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBVSF93SVNFcFRGYzJZWWxXVzktZzZZZ2FyVS1jZUVCcVU5WWxvYWZWRUZmbGRBbTQ2eUVsTW54WnlFc1NmNFR5eHRn?oc=5",
         "https://news.google.com/rss/articles/CBMibkFVX3lxTFBzd3YtbFUzUHpwOUxpYmxBWUR6bWMtS1RpM0w0TDh3OFFhMVhoUWxYV2E3bUVmamNvd2h5dDZjelJvdFItT2EwbWNBT1ZmUTR1TlpPblhwcGV0aFBhX1FYZHRTemVIeElKY1RLRlNn?oc=5"
@@ -3137,7 +3035,10 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-11 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-11 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-08。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -3163,25 +3064,25 @@
         "policy_argument": [
           {
             "title": "2026/8/20｜匯流新聞網｜一天連跑4場政策說明會 魏平政串聯4鄉鎮打造「吃玩在南彰」 - 匯流新聞網",
-            "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1vTzc1SWdJMk5GbHVqQ0JlOWhBdHBCWFducVBYVTh0RE83ZGJhamU0MzJjdkwxamM0c2xYRXpLTkVGbHBOT0J3QWV3?oc=5"
+            "url": "https://cnews.com.tw/237260820a04/"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/20｜匯流新聞網｜一天連跑4場政策說明會 魏平政串聯4鄉鎮打造「吃玩在南彰」 - 匯流新聞網",
-            "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1vTzc1SWdJMk5GbHVqQ0JlOWhBdHBCWFducVBYVTh0RE83ZGJhamU0MzJjdkwxamM0c2xYRXpLTkVGbHBOT0J3QWV3?oc=5"
+            "url": "https://cnews.com.tw/237260820a04/"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/20｜匯流新聞網｜一天連跑4場政策說明會 魏平政串聯4鄉鎮打造「吃玩在南彰」 - 匯流新聞網",
-            "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1vTzc1SWdJMk5GbHVqQ0JlOWhBdHBCWFducVBYVTh0RE83ZGJhamU0MzJjdkwxamM0c2xYRXpLTkVGbHBOT0J3QWV3?oc=5"
+            "url": "https://cnews.com.tw/237260820a04/"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-08-20",
       "source_title": "2026/8/20｜匯流新聞網｜一天連跑4場政策說明會 魏平政串聯4鄉鎮打造「吃玩在南彰」 - 匯流新聞網",
-      "source_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1vTzc1SWdJMk5GbHVqQ0JlOWhBdHBCWFducVBYVTh0RE83ZGJhamU0MzJjdkwxamM0c2xYRXpLTkVGbHBOT0J3QWV3?oc=5",
+      "source_url": "https://cnews.com.tw/237260820a04/",
       "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-16",
@@ -3189,7 +3090,9 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-13 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-13 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-20。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3217,25 +3120,25 @@
         "policy_argument": [
           {
             "title": "2026/9/1｜勁報｜民進黨臺南市長參選人陳亭妃發表「五大觀光軸」AI政見 串聯37區打造「值得多住一天」的臺南 - 勁報",
-            "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lOENOeUw3c0ZxWmNiMUVSaVlUMGNteU9hOFBRT3I1RmhXS0xYcTlMTzdOLVRmMmRhbnROU3NtUjZyWUJaQi1uMkx4cENWUlozSWF4M3gxVnRVV3BZZFpaWQ?oc=5"
+            "url": "https://twpowernews.com/news_pagein.php?iType=1010&n_id=295240"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/9/1｜勁報｜民進黨臺南市長參選人陳亭妃發表「五大觀光軸」AI政見 串聯37區打造「值得多住一天」的臺南 - 勁報",
-            "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lOENOeUw3c0ZxWmNiMUVSaVlUMGNteU9hOFBRT3I1RmhXS0xYcTlMTzdOLVRmMmRhbnROU3NtUjZyWUJaQi1uMkx4cENWUlozSWF4M3gxVnRVV3BZZFpaWQ?oc=5"
+            "url": "https://twpowernews.com/news_pagein.php?iType=1010&n_id=295240"
           }
         ],
         "related_statements": [
           {
             "title": "2026/9/1｜勁報｜民進黨臺南市長參選人陳亭妃發表「五大觀光軸」AI政見 串聯37區打造「值得多住一天」的臺南 - 勁報",
-            "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lOENOeUw3c0ZxWmNiMUVSaVlUMGNteU9hOFBRT3I1RmhXS0xYcTlMTzdOLVRmMmRhbnROU3NtUjZyWUJaQi1uMkx4cENWUlozSWF4M3gxVnRVV3BZZFpaWQ?oc=5"
+            "url": "https://twpowernews.com/news_pagein.php?iType=1010&n_id=295240"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-09-01",
       "source_title": "2026/9/1｜勁報｜民進黨臺南市長參選人陳亭妃發表「五大觀光軸」AI政見 串聯37區打造「值得多住一天」的臺南 - 勁報",
-      "source_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lOENOeUw3c0ZxWmNiMUVSaVlUMGNteU9hOFBRT3I1RmhXS0xYcTlMTzdOLVRmMmRhbnROU3NtUjZyWUJaQi1uMkx4cENWUlozSWF4M3gxVnRVV3BZZFpaWQ?oc=5",
+      "source_url": "https://twpowernews.com/news_pagein.php?iType=1010&n_id=295240",
       "related_sources": [
         "https://news.google.com/rss/articles/CBMiWEFVX3lxTE43aDZhQklvTnhZTk5hSEd3ZXNNb3pXd1JxRllsNkJGZ3phbFpTNHNoNWpWS3JVQWFQOFVNSUhkMHNyWE5xREpDYWFVUDN2YnB1Y2tJQThrV0Q?oc=5"
       ],
@@ -3245,7 +3148,9 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-18 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-18 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-01。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3271,25 +3176,25 @@
         "policy_argument": [
           {
             "title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE14cDR1X3VHbEZvd2VnWnNZcEw5OWNyTVJJTzdydXNWa0hHYWpBbFkyVXZxQVdXYS13QWN0ZTZxMkQxRF9MX2ZDYUo4OE9Cb2h1WDBuN0szTjdTQnhVTzNIMVRORWQ2MGY3ZkE?oc=5"
+            "url": "https://www.nownews.com/news/6868109"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE14cDR1X3VHbEZvd2VnWnNZcEw5OWNyTVJJTzdydXNWa0hHYWpBbFkyVXZxQVdXYS13QWN0ZTZxMkQxRF9MX2ZDYUo4OE9Cb2h1WDBuN0szTjdTQnhVTzNIMVRORWQ2MGY3ZkE?oc=5"
+            "url": "https://www.nownews.com/news/6868109"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE14cDR1X3VHbEZvd2VnWnNZcEw5OWNyTVJJTzdydXNWa0hHYWpBbFkyVXZxQVdXYS13QWN0ZTZxMkQxRF9MX2ZDYUo4OE9Cb2h1WDBuN0szTjdTQnhVTzNIMVRORWQ2MGY3ZkE?oc=5"
+            "url": "https://www.nownews.com/news/6868109"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-08-21",
       "source_title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
-      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE14cDR1X3VHbEZvd2VnWnNZcEw5OWNyTVJJTzdydXNWa0hHYWpBbFkyVXZxQVdXYS13QWN0ZTZxMkQxRF9MX2ZDYUo4OE9Cb2h1WDBuN0szTjdTQnhVTzNIMVRORWQ2MGY3ZkE?oc=5",
+      "source_url": "https://www.nownews.com/news/6868109",
       "related_sources": [
         "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9EeUQ2dG9ZOEhsY1h0c1lNTHhfdGE0ZWxCcUZzR0dLUHU5S1ZNVVBOV1JaTDh3dVQya2dKYmxpS1I2Mzd0ZnM4cVFfejdGaE93WTVDU2tSdEl0RlNFZjdJ?oc=5"
       ],
@@ -3299,7 +3204,9 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-19 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-19 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-21。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3327,25 +3234,25 @@
         "policy_argument": [
           {
             "title": "2026/8/10｜dpp.org.tw｜台東新住民客廳會 陳瑩公布四大新住民政見 - dpp.org.tw",
-            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5BNHowMmRyQU02Vnd5RDVyczgzelpmd2dkTENzYkhWR1ViempVVms0MUVpTGFOZGhKa1JWbkx1U2xmQlJRY2R6V0FaSzJmRlkzd3hvOUFR?oc=5"
+            "url": "https://www.dpp.org.tw/content_print/media/11709"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/10｜dpp.org.tw｜台東新住民客廳會 陳瑩公布四大新住民政見 - dpp.org.tw",
-            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5BNHowMmRyQU02Vnd5RDVyczgzelpmd2dkTENzYkhWR1ViempVVms0MUVpTGFOZGhKa1JWbkx1U2xmQlJRY2R6V0FaSzJmRlkzd3hvOUFR?oc=5"
+            "url": "https://www.dpp.org.tw/content_print/media/11709"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/10｜dpp.org.tw｜台東新住民客廳會 陳瑩公布四大新住民政見 - dpp.org.tw",
-            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5BNHowMmRyQU02Vnd5RDVyczgzelpmd2dkTENzYkhWR1ViempVVms0MUVpTGFOZGhKa1JWbkx1U2xmQlJRY2R6V0FaSzJmRlkzd3hvOUFR?oc=5"
+            "url": "https://www.dpp.org.tw/content_print/media/11709"
           }
         ]
       },
-      "published_date": "2026-09-16",
+      "published_date": "2026-08-10",
       "source_title": "2026/8/10｜dpp.org.tw｜台東新住民客廳會 陳瑩公布四大新住民政見 - dpp.org.tw",
-      "source_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5BNHowMmRyQU02Vnd5RDVyczgzelpmd2dkTENzYkhWR1ViempVVms0MUVpTGFOZGhKa1JWbkx1U2xmQlJRY2R6V0FaSzJmRlkzd3hvOUFR?oc=5",
+      "source_url": "https://www.dpp.org.tw/content_print/media/11709",
       "related_sources": [
         "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sSlJxTlRLeUpsSElYRFhxZUhFb0pVX1J0Qml3bG8zOWhic3NmcFYxZnBqQlpPS3ZqNnRoMS1QX1pLb2NyRWZXOTZQZmRSS0FNWjFjUk1CSzdoQdIBX0FVX3lxTE9uTHRQUEdtMnBTSWxCUkszX003ZWpnMUd2ZzcwcWRyMVBqYU1ERjJvUUR3MENMZXVXeUsxQTJoZ2dGRjdUQndnSUU5am1GdUh4ZmRQMmk0Qi16ejZPREdV?oc=5"
       ],
@@ -3355,7 +3262,9 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-25 整合稿發布。"
+        "2026-09-16｜由 Google Sheet draft-20260916-25 整合稿發布。",
+        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-10。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3383,25 +3292,25 @@
         "policy_argument": [
           {
             "title": "2026/8/30｜UDN｜出席客家義民嘉年華 童子瑋：擔任市長成立族群關係處、力推母語扎根",
-            "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9BeG93MlRPMHZRNVNoUTgzZWVyd3pkYldsRzlwZ0ZtWlFVcnpLWERKb1B0QjhUS0duQXZZUVBBVEhITHRtT2RaRWgtRDhUTDF40gFWQVVfeXFMTUxKNGdmVE12akJwSllQVkR2MXVsSmFuVzEyRENJSnloLXJ3V1puTGpDenFyMGxVenQ0aWVDanpOVDhVdzFmbmdQWkxwLWliLXRRTDlkOWc?oc=5"
+            "url": "https://udn.com/news/story/7328/9723333?from=udn-catebreaknews_ch2"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/30｜UDN｜出席客家義民嘉年華 童子瑋：擔任市長成立族群關係處、力推母語扎根",
-            "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9BeG93MlRPMHZRNVNoUTgzZWVyd3pkYldsRzlwZ0ZtWlFVcnpLWERKb1B0QjhUS0duQXZZUVBBVEhITHRtT2RaRWgtRDhUTDF40gFWQVVfeXFMTUxKNGdmVE12akJwSllQVkR2MXVsSmFuVzEyRENJSnloLXJ3V1puTGpDenFyMGxVenQ0aWVDanpOVDhVdzFmbmdQWkxwLWliLXRRTDlkOWc?oc=5"
+            "url": "https://udn.com/news/story/7328/9723333?from=udn-catebreaknews_ch2"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/30｜UDN｜出席客家義民嘉年華 童子瑋：擔任市長成立族群關係處、力推母語扎根",
-            "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9BeG93MlRPMHZRNVNoUTgzZWVyd3pkYldsRzlwZ0ZtWlFVcnpLWERKb1B0QjhUS0duQXZZUVBBVEhITHRtT2RaRWgtRDhUTDF40gFWQVVfeXFMTUxKNGdmVE12akJwSllQVkR2MXVsSmFuVzEyRENJSnloLXJ3V1puTGpDenFyMGxVenQ0aWVDanpOVDhVdzFmbmdQWkxwLWliLXRRTDlkOWc?oc=5"
+            "url": "https://udn.com/news/story/7328/9723333?from=udn-catebreaknews_ch2"
           }
         ]
       },
       "published_date": "2026-08-30",
       "source_title": "2026/8/30｜UDN｜出席客家義民嘉年華 童子瑋：擔任市長成立族群關係處、力推母語扎根",
-      "source_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9BeG93MlRPMHZRNVNoUTgzZWVyd3pkYldsRzlwZ0ZtWlFVcnpLWERKb1B0QjhUS0duQXZZUVBBVEhITHRtT2RaRWgtRDhUTDF40gFWQVVfeXFMTUxKNGdmVE12akJwSllQVkR2MXVsSmFuVzEyRENJSnloLXJ3V1puTGpDenFyMGxVenQ0aWVDanpOVDhVdzFmbmdQWkxwLWliLXRRTDlkOWc?oc=5",
+      "source_url": "https://udn.com/news/story/7328/9723333?from=udn-catebreaknews_ch2",
       "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-17",
@@ -3409,7 +3318,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-01 整合稿發布。"
+        "2026-09-17｜由 Google Sheet draft-20260916-01 整合稿發布。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3420,7 +3330,6 @@
       "party": "中國國民黨",
       "topics": [
         "原住民族文化",
-        "多元族群文化",
         "文化治理"
       ],
       "summary": "謝國樑表示將增加原住民相關經費，打造基隆為原住民第二故鄉，並從生活、文化與社福面向提供支持。",
@@ -3437,25 +3346,25 @@
         "policy_argument": [
           {
             "title": "2026/8/29｜自由時報｜基隆原住民豐年祭童子瑋、謝國樑同台提原民政見",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1HTU56UW9VT1pVeml1VllSV2taUWdMVGpBbExiV2w3WjBEamh4MTJoWTZXc0UteTZ6eWo5TURZTmdjNEVtTjhaV1BPbXhxTFVQa3dFN0h3MUJJOEVjeE5wd181eWtaM2JzUmc?oc=5"
+            "url": "https://tw.news.yahoo.com/%E5%9F%BA%E9%9A%86%E5%8E%9F%E4%BD%8F%E6%B0%91%E8%B1%90%E5%B9%B4%E7%A5%AD-%E7%AB%A5%E5%AD%90%E7%91%8B-%E8%AC%9D%E5%9C%8B%E6%A8%91%E5%90%8C%E5%8F%B0%E6%8F%90%E5%8E%9F%E6%B0%91%E6%94%BF%E8%A6%8B-050905950.html"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/29｜自由時報｜基隆原住民豐年祭童子瑋、謝國樑同台提原民政見",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1HTU56UW9VT1pVeml1VllSV2taUWdMVGpBbExiV2w3WjBEamh4MTJoWTZXc0UteTZ6eWo5TURZTmdjNEVtTjhaV1BPbXhxTFVQa3dFN0h3MUJJOEVjeE5wd181eWtaM2JzUmc?oc=5"
+            "url": "https://tw.news.yahoo.com/%E5%9F%BA%E9%9A%86%E5%8E%9F%E4%BD%8F%E6%B0%91%E8%B1%90%E5%B9%B4%E7%A5%AD-%E7%AB%A5%E5%AD%90%E7%91%8B-%E8%AC%9D%E5%9C%8B%E6%A8%91%E5%90%8C%E5%8F%B0%E6%8F%90%E5%8E%9F%E6%B0%91%E6%94%BF%E8%A6%8B-050905950.html"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/29｜自由時報｜基隆原住民豐年祭童子瑋、謝國樑同台提原民政見",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1HTU56UW9VT1pVeml1VllSV2taUWdMVGpBbExiV2w3WjBEamh4MTJoWTZXc0UteTZ6eWo5TURZTmdjNEVtTjhaV1BPbXhxTFVQa3dFN0h3MUJJOEVjeE5wd181eWtaM2JzUmc?oc=5"
+            "url": "https://tw.news.yahoo.com/%E5%9F%BA%E9%9A%86%E5%8E%9F%E4%BD%8F%E6%B0%91%E8%B1%90%E5%B9%B4%E7%A5%AD-%E7%AB%A5%E5%AD%90%E7%91%8B-%E8%AC%9D%E5%9C%8B%E6%A8%91%E5%90%8C%E5%8F%B0%E6%8F%90%E5%8E%9F%E6%B0%91%E6%94%BF%E8%A6%8B-050905950.html"
           }
         ]
       },
       "published_date": "2026-08-29",
       "source_title": "2026/8/29｜自由時報｜基隆原住民豐年祭童子瑋、謝國樑同台提原民政見",
-      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1HTU56UW9VT1pVeml1VllSV2taUWdMVGpBbExiV2w3WjBEamh4MTJoWTZXc0UteTZ6eWo5TURZTmdjNEVtTjhaV1BPbXhxTFVQa3dFN0h3MUJJOEVjeE5wd181eWtaM2JzUmc?oc=5",
+      "source_url": "https://tw.news.yahoo.com/%E5%9F%BA%E9%9A%86%E5%8E%9F%E4%BD%8F%E6%B0%91%E8%B1%90%E5%B9%B4%E7%A5%AD-%E7%AB%A5%E5%AD%90%E7%91%8B-%E8%AC%9D%E5%9C%8B%E6%A8%91%E5%90%8C%E5%8F%B0%E6%8F%90%E5%8E%9F%E6%B0%91%E6%94%BF%E8%A6%8B-050905950.html",
       "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-17",
@@ -3463,7 +3372,9 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-02 整合稿發布。"
+        "2026-09-17｜由 Google Sheet draft-20260916-02 整合稿發布。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -3490,25 +3401,25 @@
         "policy_argument": [
           {
             "title": "2026/8/30｜Yahoo新聞｜客家鄉親挺巧慧後援會成立 蘇巧慧拋AI客語政見",
-            "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNMVBHbkwySFBlVks3Nmp0RnNMVmNuZ1daZThTTG44Y0pqdDIxZ2F1TENxRDluM0J0bC1aWGkwZVVnVlRVRDNRSGtUY3lMeWZSYkp4UkxtZ0hvTzB4QWt6M0pnU2xwTjE2NGE3NmlqdnJrc3F2RTRFek4zTmkya3RqREFRTjN2WTBKN3ducFV4ZzhUNVM2ZVJDM1E1b0tzczNZamhFMXgwU2F4bHppZGU4RHhVZEhnVDU3anRtcFFwc3Y4b2V0MzNTVlhiazk1OUhPODVtdTJwN2M1MHVkMTF2SUoxS05ZbVRwa3g2aHJrU20yYWxCN1hZTjc5Z2QwYlZyMUthMFpxOXIzWU5EclBfUzZneDhnTGJ2YzBOMC1Lc1lzc19JckRDY2WBSzdsaXFzcTZLdUhQak41TGduUmUtdkhoTFZRNXM?oc=5"
+            "url": "https://taipeipost.org/387340/"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/8/30｜Yahoo新聞｜客家鄉親挺巧慧後援會成立 蘇巧慧拋AI客語政見",
-            "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNMVBHbkwySFBlVks3Nmp0RnNMVmNuZ1daZThTTG44Y0pqdDIxZ2F1TENxRDluM0J0bC1aWGkwZVVnVlRVRDNRSGtUY3lMeWZSYkp4UkxtZ0hvTzB4QWt6M0pnU2xwTjE2NGE3NmlqdnJrc3F2RTRFek4zTmkya3RqREFRTjN2WTBKN3ducFV4ZzhUNVM2ZVJDM1E1b0tzczNZamhFMXgwU2F4bHppZGU4RHhVZEhnVDU3anRtcFFwc3Y4b2V0MzNTVlhiazk1OUhPODVtdTJwN2M1MHVkMTF2SUoxS05ZbVRwa3g2aHJrU20yYWxCN1hZTjc5Z2QwYlZyMUthMFpxOXIzWU5EclBfUzZneDhnTGJ2YzBOMC1Lc1lzc19JckRDY2WBSzdsaXFzcTZLdUhQak41TGduUmUtdkhoTFZRNXM?oc=5"
+            "url": "https://taipeipost.org/387340/"
           }
         ],
         "related_statements": [
           {
             "title": "2026/8/30｜Yahoo新聞｜客家鄉親挺巧慧後援會成立 蘇巧慧拋AI客語政見",
-            "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNMVBHbkwySFBlVks3Nmp0RnNMVmNuZ1daZThTTG44Y0pqdDIxZ2F1TENxRDluM0J0bC1aWGkwZVVnVlRVRDNRSGtUY3lMeWZSYkp4UkxtZ0hvTzB4QWt6M0pnU2xwTjE2NGE3NmlqdnJrc3F2RTRFek4zTmkya3RqREFRTjN2WTBKN3ducFV4ZzhUNVM2ZVJDM1E1b0tzczNZamhFMXgwU2F4bHppZGU4RHhVZEhnVDU3anRtcFFwc3Y4b2V0MzNTVlhiazk1OUhPODVtdTJwN2M1MHVkMTF2SUoxS05ZbVRwa3g2aHJrU20yYWxCN1hZTjc5Z2QwYlZyMUthMFpxOXIzWU5EclBfUzZneDhnTGJ2YzBOMC1Lc1lzc19JckRDY2WBSzdsaXFzcTZLdUhQak41TGduUmUtdkhoTFZRNXM?oc=5"
+            "url": "https://taipeipost.org/387340/"
           }
         ]
       },
       "published_date": "2026-08-30",
       "source_title": "2026/8/30｜Yahoo新聞｜客家鄉親挺巧慧後援會成立 蘇巧慧拋AI客語政見",
-      "source_url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNMVBHbkwySFBlVks3Nmp0RnNMVmNuZ1daZThTTG44Y0pqdDIxZ2F1TENxRDluM0J0bC1aWGkwZVVnVlRVRDNRSGtUY3lMeWZSYkp4UkxtZ0hvTzB4QWt6M0pnU2xwTjE2NGE3NmlqdnJrc3F2RTRFek4zTmkya3RqREFRTjN2WTBKN3ducFV4ZzhUNVM2ZVJDM1E1b0tzczNZamhFMXgwU2F4bHppZGU4RHhVZEhnVDU3anRtcFFwc3Y4b2V0MzNTVlhiazk1OUhPODVtdTJwN2M1MHVkMTF2SUoxS05ZbVRwa3g2aHJrU20yYWxCN1hZTjc5Z2QwYlZyMUthMFpxOXIzWU5EclBfUzZneDhnTGJ2YzBOMC1Lc1lzc19JckRDY2WBSzdsaXFzcTZLdUhQak41TGduUmUtdkhoTFZRNXM?oc=5",
+      "source_url": "https://taipeipost.org/387340/",
       "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-17",
@@ -3516,7 +3427,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-04 整合稿發布。"
+        "2026-09-17｜由 Google Sheet draft-20260916-04 整合稿發布。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3547,25 +3459,25 @@
         "policy_argument": [
           {
             "title": "2026/9/8｜自由時報｜徐欣瑩推講客新竹 四大政策打造客語生活化",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtV3VfaFl6OWJfdDJSVllxZHdDOC1rUEJvOFdIenNQT2VDNERtRVBCZGJHakRybkxDU0E4WXVLWVhvVzhMMWlPQnE3SERabDE3UWl0UFU5T05kOEtJMEllc1RNMDR6RmZqX2fSAW9BVV95cUxPRG9ZNkhLMDRqTThteVloUUgta01EQWZLWVNXMHM5SDBzUTdjMXl2VWVvNVZMeDVaOXJRVnBNYWFBUGVZeDJyZHQ1bEZ4dDdpQnBUMVYwMk1XN016ZW83NWhqcDFxWk1FRWlnVnJZVEU?oc=5"
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5566445"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/9/8｜自由時報｜徐欣瑩推講客新竹 四大政策打造客語生活化",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtV3VfaFl6OWJfdDJSVllxZHdDOC1rUEJvOFdIenNQT2VDNERtRVBCZGJHakRybkxDU0E4WXVLWVhvVzhMMWlPQnE3SERabDE3UWl0UFU5T05kOEtJMEllc1RNMDR6RmZqX2fSAW9BVV95cUxPRG9ZNkhLMDRqTThteVloUUgta01EQWZLWVNXMHM5SDBzUTdjMXl2VWVvNVZMeDVaOXJRVnBNYWFBUGVZeDJyZHQ1bEZ4dDdpQnBUMVYwMk1XN016ZW83NWhqcDFxWk1FRWlnVnJZVEU?oc=5"
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5566445"
           }
         ],
         "related_statements": [
           {
             "title": "2026/9/8｜自由時報｜徐欣瑩推講客新竹 四大政策打造客語生活化",
-            "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtV3VfaFl6OWJfdDJSVllxZHdDOC1rUEJvOFdIenNQT2VDNERtRVBCZGJHakRybkxDU0E4WXVLWVhvVzhMMWlPQnE3SERabDE3UWl0UFU5T05kOEtJMEllc1RNMDR6RmZqX2fSAW9BVV95cUxPRG9ZNkhLMDRqTThteVloUUgta01EQWZLWVNXMHM5SDBzUTdjMXl2VWVvNVZMeDVaOXJRVnBNYWFBUGVZeDJyZHQ1bEZ4dDdpQnBUMVYwMk1XN016ZW83NWhqcDFxWk1FRWlnVnJZVEU?oc=5"
+            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5566445"
           }
         ]
       },
       "published_date": "2026-09-08",
       "source_title": "2026/9/8｜自由時報｜徐欣瑩推講客新竹 四大政策打造客語生活化",
-      "source_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtV3VfaFl6OWJfdDJSVllxZHdDOC1rUEJvOFdIenNQT2VDNERtRVBCZGJHakRybkxDU0E4WXVLWVhvVzhMMWlPQnE3SERabDE3UWl0UFU5T05kOEtJMEllc1RNMDR6RmZqX2fSAW9BVV95cUxPRG9ZNkhLMDRqTThteVloUUgta01EQWZLWVNXMHM5SDBzUTdjMXl2VWVvNVZMeDVaOXJRVnBNYWFBUGVZeDJyZHQ1bEZ4dDdpQnBUMVYwMk1XN016ZW83NWhqcDFxWk1FRWlnVnJZVEU?oc=5",
+      "source_url": "https://news.ltn.com.tw/news/politics/breakingnews/5566445",
       "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-17",
@@ -3573,7 +3485,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-08 整合稿發布。"
+        "2026-09-17｜由 Google Sheet draft-20260916-08 整合稿發布。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3599,25 +3512,25 @@
         "policy_argument": [
           {
             "title": "2026/9/10｜臺中市長候選人江啟臣｜從東豐快到文化觀光 江啟臣擘劃山城願景：把建設做到底",
-            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5dUFtZWZ6bm9fREw3Zm9YTnNpMjBsRWlRdFlfb3hnQURDRndCcnM4Yk5xRzIxY0tqN3p5TWQyc0xIV1lpZEJ0eFZnN0l2eUxrNWlrZnh2NDVGX3hUeG5tVkZjNDlyNHNuaDNUT25n?oc=5"
+            "url": "https://taichungway.tw/future"
           }
         ],
         "concrete_proposals": [
           {
             "title": "2026/9/10｜臺中市長候選人江啟臣｜從東豐快到文化觀光 江啟臣擘劃山城願景：把建設做到底",
-            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5dUFtZWZ6bm9fREw3Zm9YTnNpMjBsRWlRdFlfb3hnQURDRndCcnM4Yk5xRzIxY0tqN3p5TWQyc0xIV1lpZEJ0eFZnN0l2eUxrNWlrZnh2NDVGX3hUeG5tVkZjNDlyNHNuaDNUT25n?oc=5"
+            "url": "https://taichungway.tw/future"
           }
         ],
         "related_statements": [
           {
             "title": "2026/9/10｜臺中市長候選人江啟臣｜從東豐快到文化觀光 江啟臣擘劃山城願景：把建設做到底",
-            "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5dUFtZWZ6bm9fREw3Zm9YTnNpMjBsRWlRdFlfb3hnQURDRndCcnM4Yk5xRzIxY0tqN3p5TWQyc0xIV1lpZEJ0eFZnN0l2eUxrNWlrZnh2NDVGX3hUeG5tVkZjNDlyNHNuaDNUT25n?oc=5"
+            "url": "https://taichungway.tw/future"
           }
         ]
       },
       "published_date": "2026-09-10",
       "source_title": "2026/9/10｜臺中市長候選人江啟臣｜從東豐快到文化觀光 江啟臣擘劃山城願景：把建設做到底",
-      "source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA5dUFtZWZ6bm9fREw3Zm9YTnNpMjBsRWlRdFlfb3hnQURDRndCcnM4Yk5xRzIxY0tqN3p5TWQyc0xIV1lpZEJ0eFZnN0l2eUxrNWlrZnh2NDVGX3hUeG5tVkZjNDlyNHNuaDNUT25n?oc=5",
+      "source_url": "https://taichungway.tw/future",
       "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-09-17",
@@ -3625,7 +3538,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-12 整合稿發布。"
+        "2026-09-17｜由 Google Sheet draft-20260916-12 整合稿發布。",
+        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。"
       ]
     },
     {
@@ -3786,14 +3700,17 @@
       "published_date": "2026-09-08",
       "source_title": "台北文化徑×山林徑 — 沈伯洋台北市長競選官方網站",
       "source_url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91",
-      "related_sources": [],
+      "related_sources": [
+        "https://news.pts.org.tw/article/826016"
+      ],
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-official-site-updates.csv 上架。"
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-official-site-updates.csv 上架。",
+        "2026-10-03｜合併 candidate-tpe-mayor-shen-boyang-002 的同一文化徑×山林徑政策；保留候選人官網完整版，公共媒體報導改列附屬來源。"
       ]
     },
     {
@@ -4340,169 +4257,6 @@
       ]
     },
     {
-      "id": "candidate-hsinchu-councilor-li-mei-arts-001",
-      "city": "新竹市",
-      "office": "縣市議員",
-      "candidate": "李玫",
-      "party": "台灣民眾黨",
-      "topics": [
-        "藝術教育",
-        "表演藝術",
-        "文化場館",
-        "地方文史"
-      ],
-      "summary": "候選人政見提出「美學城市」方向：增加學校藝文教育預算與在地藝文培育，固定在南區辦理藝文活動與走讀文化，並規劃新竹市專屬美術館空間。",
-      "policy_argument": "將在地藝文培育與城市故事教育結合，透過常態活動和專業展演空間提升城市美學。",
-      "concrete_proposals": [
-        "增加各校藝文教育預算並定期辦理培育工作坊。",
-        "爭取藝文活動每年固定在南區設場，結合走讀文化。",
-        "規劃新竹市專屬美術館大空間，提供展演場域。"
-      ],
-      "related_statements": [
-        "官方頁未載明預算金額、美術館選址、規模與期程。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "台灣民眾黨｜李玫",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "台灣民眾黨｜李玫",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "台灣民眾黨｜李玫",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200"
-          }
-        ]
-      },
-      "published_date": "2026-10-01",
-      "source_title": "台灣民眾黨｜李玫",
-      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200",
-      "related_sources": [],
-      "source_type": "政黨官方候選人頁",
-      "last_verified": "2026-10-01",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-10-01｜中選會登記名冊核對為新竹市第2選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
-      ]
-    },
-    {
-      "id": "candidate-changhua-councilor-kao-tsai-ling-language-001",
-      "city": "彰化縣",
-      "office": "縣市議員",
-      "candidate": "高采翎",
-      "party": "台灣民眾黨",
-      "topics": [
-        "原住民族文化",
-        "族語",
-        "青年返鄉"
-      ],
-      "summary": "候選人將「族語扎根傳承」與「原青返鄉築夢」列入個人政見。",
-      "policy_argument": "以族語傳承與青年返鄉作為彰化縣山地原住民族文化延續的政策方向。",
-      "concrete_proposals": [
-        "推動族語扎根傳承。",
-        "支持原住民青年返鄉築夢。"
-      ],
-      "related_statements": [
-        "官方頁僅列政策標題，未說明授課、師資、經費、青年支持措施或期程。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "台灣民眾黨｜高采翎",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "台灣民眾黨｜高采翎",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "台灣民眾黨｜高采翎",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212"
-          }
-        ]
-      },
-      "published_date": "2026-10-01",
-      "source_title": "台灣民眾黨｜高采翎",
-      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=212",
-      "related_sources": [],
-      "source_type": "政黨官方候選人頁",
-      "last_verified": "2026-10-01",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-10-01｜中選會登記名冊核對為彰化縣第10選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
-      ]
-    },
-    {
-      "id": "candidate-ntpc-councilor-chen-yu-chieh-cultural-tourism-001",
-      "city": "新北市",
-      "office": "縣市議員",
-      "candidate": "陳語倢",
-      "party": "台灣民眾黨",
-      "topics": [
-        "文化觀光",
-        "文化產業",
-        "社區營造",
-        "傳統市場"
-      ],
-      "summary": "候選人提出整合北海岸觀光網提升旅遊文化體驗，並輔導青年創業與新產業、活化社區文創亮點，推動傳統市場轉型。",
-      "policy_argument": "將北海岸旅遊文化、社區文創與傳統市場轉型結合為在地發展策略。",
-      "concrete_proposals": [
-        "整合北海岸觀光網以提升旅遊文化體驗。",
-        "輔導青創與新產業並活化社區文創亮點。",
-        "推動傳統市場轉型。"
-      ],
-      "related_statements": [
-        "官方頁未說明文化觀光路線、文創扶植工具、預算或時程。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "台灣民眾黨｜陳語倢",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "台灣民眾黨｜陳語倢",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "台灣民眾黨｜陳語倢",
-            "url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161"
-          }
-        ]
-      },
-      "published_date": "2026-10-01",
-      "source_title": "台灣民眾黨｜陳語倢",
-      "source_url": "https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161",
-      "related_sources": [],
-      "source_type": "政黨官方候選人頁",
-      "last_verified": "2026-10-01",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-10-01｜中選會登記名冊核對為新北市第11選舉區、台灣民眾黨候選人；官方候選人頁人工審核完成。"
-      ]
-    },
-    {
       "id": "candidate-ntpc-councilor-peng-yi-shu-arts-center-001",
       "city": "新北市",
       "office": "縣市議員",
@@ -4835,7 +4589,6 @@
       "topics": [
         "多元文化",
         "地方文化",
-        "文化場館",
         "傳統市場"
       ],
       "summary": "提出設置閩南事務處與新住民事務局、推動里里有特色，並改建南門市場。",
@@ -4879,7 +4632,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為桃園市第1選舉區、中國國民黨候選人；2026年登記參選新聞記載具體文化主張並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為桃園市第1選舉區、中國國民黨候選人；2026年登記參選新聞記載具體文化主張並完成人工審核。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -5374,7 +5128,7 @@
       "party": "中國國民黨",
       "topics": [
         "客家文化",
-        "族語傳承",
+        "客語傳承",
         "音樂產業",
         "表演藝術",
         "文化空間"
@@ -5420,7 +5174,8 @@
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為高雄市第9選舉區、中國國民黨候選人；高雄市議會個人政策頁明列客家文化、流行音樂與藝文特區措施並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為高雄市第9選舉區、中國國民黨候選人；高雄市議會個人政策頁明列客家文化、流行音樂與藝文特區措施並完成人工審核。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
@@ -5701,7 +5456,7 @@
       "party": "中國國民黨",
       "topics": [
         "客家文化",
-        "族語傳承",
+        "客語傳承",
         "文化教育"
       ],
       "summary": "主張從幼兒教育、家庭與師資培育推動客語向下扎根，並提出制定客家民族教育法的構想。",
@@ -5743,7 +5498,8 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為屏東縣第3選舉區、中國國民黨候選人；聯合新聞網報導其在議會提出客語教育與客家民族教育法構想，完成人工審核。"
+        "2026-10-01｜中選會名冊核對為屏東縣第3選舉區、中國國民黨候選人；聯合新聞網報導其在議會提出客語教育與客家民族教育法構想，完成人工審核。",
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
       ]
     },
     {
