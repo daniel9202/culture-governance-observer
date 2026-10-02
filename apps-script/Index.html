@@ -14,7 +14,7 @@ window.setView = function(next) {
   $('draftsTab').classList.toggle('active', next === 'drafts');
   const status = $('status'); status.disabled = false;
   if (next === 'sources') {
-    status.innerHTML = '<option value="pending">待審核</option><option value="rejected">已拒絕</option><option value="split">已拆分</option><option value="published">已發布</option><option value="all">全部原始資料</option>';
+    status.innerHTML = '<option value="pending">待審核</option>'; status.disabled = true;
     $('hint').textContent = '確認每則原始來源是否值得收錄；接受後會移到「準備上架」，不會直接公開。';
   } else if (next === 'prepublish') {
     status.innerHTML = '<option value="accepted">已接受，等待整理與發布</option>'; status.disabled = true;
@@ -38,21 +38,46 @@ window.sourceCard = function(x) {
 };
 window.review = function(row, status) {
   const el = $('r' + row), x = state.items.find(item => item.rowNumber === row);
+  if (!el || el.dataset.saving === 'true') return;
   const p = {rowNumber:row,status,sourceUrl:x['來源網址'],summary:el.querySelector('[data-k=summary]').value,category:x['AI分類'],reason:x['AI判斷理由'],confidence:x['AI信心分數'],actor:el.querySelector('[data-k=actor]').value,actorType:x['政黨／提出者類型'],office:el.querySelector('[data-k=office]').value,policy:el.querySelector('[data-k=policy]').value,note:x['人工備註']};
+  el.dataset.saving = 'true';
+  el.querySelectorAll('button').forEach(button => button.disabled = true);
   google.script.run.withSuccessHandler(() => {
-    if (status === 'accepted' && view === 'sources') { $('message').innerHTML = '<div class="notice">已移至「準備上架」。它尚未公開，會先整理成整合稿再發布。</div>'; setView('prepublish'); }
-    else { $('message').innerHTML = '<div class="notice">已儲存。</div>'; load(); }
-  }).withFailureHandler(e => alert(e.message || e)).saveReview(p);
+    const from = x['審核狀態'];
+    // Saving edits in 準備上架 keeps the item accepted, so it stays in this workspace.
+    if (status === from) {
+      Object.assign(x, {'AI摘要': p.summary, '候選人／提出者': p.actor, '職務': p.office, '政策主張／具體訴求': p.policy});
+      el.dataset.saving = '';
+      el.querySelectorAll('button').forEach(button => button.disabled = false);
+      $('message').innerHTML = '<div class="notice">已儲存。</div>';
+      return;
+    }
+    // Do not reload the entire spreadsheet after every decision: leave the next
+    // cards interactive and remove only the card that was just saved.
+    state.items = state.items.filter(item => item.rowNumber !== row);
+    if (state.counts[from] !== undefined) state.counts[from] -= 1;
+    if (state.counts[status] !== undefined) state.counts[status] += 1;
+    el.remove();
+    $('message').innerHTML = '<div class="notice">' + (status === 'accepted' ? '已移至「準備上架」。可直接繼續處理下一筆。' : '已儲存。可直接繼續處理下一筆。') + '</div>';
+    renderStats(state.counts);
+    if (!$('list').children.length) $('list').innerHTML = '<div class="empty">這個工作區目前沒有資料。</div>';
+  }).withFailureHandler(e => {
+    el.dataset.saving = '';
+    el.querySelectorAll('button').forEach(button => button.disabled = false);
+    alert(e.message || e);
+  }).saveReview(p);
 };
-setView('sources');
 </script>
 <script>
+window.renderStats = function(counts) {
+  $('stats').innerHTML = Object.entries(counts).map(([k,v]) => '<div class="stat"><span>' + esc({pending:'待審核',accepted:'準備上架',rejected:'已拒絕',split:'已拆分',draft_ready:'待發布整合稿',rework:'退回重整',published:'已發布'}[k] || k) + '</span><b>' + v + '</b></div>').join('');
+};
 window.render = function(data) {
   state = data;
-  $('stats').innerHTML = Object.entries(data.counts).map(([k,v]) => '<div class="stat"><span>' + esc({pending:'待審核',accepted:'準備上架',rejected:'已拒絕',split:'已拆分',draft_ready:'待發布整合稿',rework:'退回重整',published:'已發布'}[k] || k) + '</span><b>' + v + '</b></div>').join('');
+  renderStats(data.counts);
   $('city').innerHTML = '<option value="all">全部縣市</option>' + data.cities.map(c => '<option>' + esc(c) + '</option>').join('');
   $('list').className = '';
   $('list').innerHTML = data.items.length ? data.items.map(view === 'drafts' ? draftCard : sourceCard).join('') : '<div class="empty">這個工作區目前沒有資料。</div>';
 };
 setView('sources');
-</script>
+</script>
