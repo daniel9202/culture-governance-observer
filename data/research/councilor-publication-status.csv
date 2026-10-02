@@ -1,4 +1,8 @@
 source_csv,research_id,published_candidate_id,review_status,completed_at,notes
+councilor-official-site-discovery.csv,research-councilor-hlc-liu-ching-wen-20261002,candidate-hualien-councilor-liu-ching-wen-multicultural-001,已審核並上架,2026-10-02,中選會名冊與2026年參選聲明已核對；文化主張具體對象可驗證但未載執行細節，已於公開條目註記。
+councilor-official-site-discovery.csv,research-councilor-hlc-cheng-chien-lung-20261002,,已審核暫不發布,2026-10-02,中選會名冊與議會質詢資料已核對；僅有既有宗教文化場域關切，未找到可驗證本屆方案。
+councilor-official-site-discovery.csv,research-councilor-hlc-huang-ling-lan-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣議會頁已核對；無可驗證本屆具體文化政見。
+councilor-official-site-discovery.csv,research-councilor-hlc-lin-hung-hsi-20261002,,已審核暫不發布,2026-10-02,中選會名冊與2026年參選公告已核對；無可驗證本屆具體文化政見。
 councilor-official-site-discovery.csv,research-councilor-hlc-cheng-pao-hsiu-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣議會頁已核對；無可驗證本屆具體文化政見。
 councilor-official-site-discovery.csv,research-councilor-hlc-chang-chen-wei-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣選委會2026登記資料已核對；無可驗證候選人官方網站或具體文化政見。
 councilor-official-site-discovery.csv,research-councilor-hlc-peng-chien-hua-20261002,,已審核暫不發布,2026-10-02,中選會名冊與花蓮縣選委會2026登記資料已核對；無可驗證候選人官方網站或具體文化政見。

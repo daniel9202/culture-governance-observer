@@ -3,6 +3,60 @@
   "last_updated": "2026-10-02",
   "records": [
     {
+      "id": "candidate-hualien-councilor-liu-ching-wen-multicultural-001",
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "candidate": "劉靜文",
+      "party": "無黨籍",
+      "topics": [
+        "多元文化",
+        "客家文化",
+        "閩南文化",
+        "原住民族文化",
+        "文化教育"
+      ],
+      "summary": "劉靜文在2026年參選花蓮縣議員第三選區的聲明中提出推廣客家、閩南及原住民族文化，並結合教育與地方特色傳承多元文化。",
+      "policy_argument": "以教育和地方特色作為文化傳承的結合點，推廣花蓮多族群文化並促進族群融合。",
+      "concrete_proposals": [
+        "推廣客家文化。",
+        "推廣閩南文化。",
+        "推廣原住民族文化。",
+        "結合教育與地方特色傳承多元文化。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "劉靜文轉換跑道參選花蓮縣議員第三選區",
+            "url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "劉靜文轉換跑道參選花蓮縣議員第三選區",
+            "url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "劉靜文轉換跑道參選花蓮縣議員第三選區",
+            "url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
+          }
+        ]
+      },
+      "published_date": "2026-08-31",
+      "source_title": "劉靜文轉換跑道參選花蓮縣議員第三選區",
+      "source_url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/",
+      "related_sources": [
+        "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
+      ],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對花蓮縣縣市議員第三選舉區候選人身分；來源具名記載候選人文化主張。政策未載預算、期程或執行機制，已於摘要保留其概括性。"
+      ]
+    },
+    {
       "id": "candidate-khh-mayor-lai-jui-lung-001",
       "city": "高雄市",
       "office": "縣市長",
@@ -63,6 +117,108 @@
       "corrections": [
         "2026-09-07｜查核賴瑞隆官方網站 https://zenolai.oen.tw/，未找到「文化高雄」、「世界舞台」或七項文化政策的同步頁面。"
       ]
+    },
+    {
+      "id": "candidate-tpe-councilor-miao-po-ya-taiwanese-revival-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "苗博雅",
+      "party": "社會民主黨",
+      "topics": [
+        "語言文化",
+        "文化平權",
+        "城市文化",
+        "觀光文化"
+      ],
+      "summary": "加入跨黨派台語復振連線，推動台語友善城市環境與日常使用，並把台語發展為城市觀光文化的一部分。",
+      "policy_argument": "台語應在城市日常與公共環境中被使用與看見，讓語言復振成為文化平權及城市文化的一環。",
+      "concrete_proposals": [
+        "參與台北市議會台語復振連線。",
+        "與民團合作創造台語友善城市環境。",
+        "鼓勵市民使用台語並讓台語成為城市觀光文化的一部分。"
+      ],
+      "related_statements": [
+        "社會民主黨市議員苗博雅響應台語復振連線。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "中央社：北市議會成立台語復振連線",
+            "url": "https://www.cna.com.tw/news/aloc/202605060163.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "中央社：北市議會成立台語復振連線",
+            "url": "https://www.cna.com.tw/news/aloc/202605060163.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "中央社：北市議會成立台語復振連線",
+            "url": "https://www.cna.com.tw/news/aloc/202605060163.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-05-06",
+      "source_title": "中央社：北市議會成立台語復振連線",
+      "source_url": "https://www.cna.com.tw/news/aloc/202605060163.aspx",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "corrections": []
+    },
+    {
+      "id": "candidate-tpe-councilor-chen-li-hsin-old-city-culture-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "陳力新",
+      "party": "無黨籍",
+      "topics": [
+        "地方文史",
+        "文化資產",
+        "社區文化",
+        "文化觀光",
+        "文化產業"
+      ],
+      "summary": "以萬華歷史街區為基礎，串連廟宇、市場、歷史行業與街區故事，發展文化結合科技的導覽體驗，讓文化保存帶動在地經濟。",
+      "policy_argument": "老城區應保留自身特色並讓日常生活改善；文化保存需要和地方店家及觀光動線結合，才有持續的經濟基礎。",
+      "concrete_proposals": [
+        "串連艋舺歷史、信仰與街區故事。",
+        "連結在地店家與觀光動線。",
+        "推動文化結合科技的導覽體驗。",
+        "把文化保存轉化為在地經濟的長期支撐。"
+      ],
+      "related_statements": [
+        "主張讓萬華的故事被好好說給世界聽。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳力新官方網站：觀光文化・在地經濟",
+            "url": "https://www.lishin.taipei/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳力新官方網站：觀光文化・在地經濟",
+            "url": "https://www.lishin.taipei/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳力新官方網站：觀光文化・在地經濟",
+            "url": "https://www.lishin.taipei/"
+          }
+        ]
+      },
+      "published_date": "2026-10-02",
+      "source_title": "陳力新官方網站：觀光文化・在地經濟",
+      "source_url": "https://www.lishin.taipei/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-02",
+      "corrections": []
     },
     {
       "id": "candidate-phh-councilor-hsu-kuo-cheng-cultural-market-001",
