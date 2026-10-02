@@ -6018,6 +6018,62 @@
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對薛兆基為高雄市第4選舉區無黨籍候選人；具名新聞記載其與漫畫家及文史團體討論眷村保存、漫畫家駐村與戶外展演等候選人主張。來源未提供預算與期程，已在條目中註明。"
       ]
+    },
+    {
+      "id": "candidate-tyc-councilor-chang-shuo-fang-cultural-governance-001",
+      "city": "桃園市",
+      "office": "縣市議員",
+      "candidate": "張碩芳",
+      "party": "中國國民黨",
+      "topics": [
+        "公共藝術",
+        "文化資產",
+        "兒童藝文",
+        "客語",
+        "文化教育"
+      ],
+      "summary": "張碩芳在桃園市議會文化局與客家事務局工作報告中，要求地景藝術節作品建立永續維護管理，並關注兒童藝文資源、青年藝文活動與客語向幼托扎根。",
+      "policy_argument": "公共藝術和藝文資源不應只停留在節慶展出，應有作品後續管理、兒童近用及母語教育的長期機制。",
+      "concrete_proposals": [
+        "要求地景藝術節作品建立後續維護管理機制。",
+        "爭取桃園區兒童藝文資源及青年藝文活動規劃。",
+        "要求客語教育向幼托機構扎根。"
+      ],
+      "related_statements": [
+        "公開報導未列作品維護的責任分工、預算、兒童藝文資源配置、幼托客語師資及推動期程。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "關心地景藝術作品生命週期　桃議員張碩芳爭取桃園多元藝文與客語幼托扎根",
+            "url": "https://news.pchome.com.tw/public/taiwanhot/20260828/index-78791007766950221016.html"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "關心地景藝術作品生命週期　桃議員張碩芳爭取桃園多元藝文與客語幼托扎根",
+            "url": "https://news.pchome.com.tw/public/taiwanhot/20260828/index-78791007766950221016.html"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "關心地景藝術作品生命週期　桃議員張碩芳爭取桃園多元藝文與客語幼托扎根",
+            "url": "https://news.pchome.com.tw/public/taiwanhot/20260828/index-78791007766950221016.html"
+          }
+        ]
+      },
+      "published_date": "2026-08-28",
+      "source_title": "關心地景藝術作品生命週期　桃議員張碩芳爭取桃園多元藝文與客語幼托扎根",
+      "source_url": "https://news.pchome.com.tw/public/taiwanhot/20260828/index-78791007766950221016.html",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "proposer_role": "待判定",
+      "content_nature": "現任問政／提案",
+      "role_evidence": "具名新聞列為桃園市議員；非議會個人頁",
+      "corrections": [
+        "2026-10-02｜已依中選會名冊核對張碩芳為桃園市第1選舉區中國國民黨候選人；來源報導其以現任桃園市議員身分在文化局、客家局工作報告提出質詢。因非議會個人頁，依現行規則列「待判定／現任問政或提案」，於議員任內問政分頁呈現，不計入本屆競選政見。"
+      ]
     }
   ]
 }
