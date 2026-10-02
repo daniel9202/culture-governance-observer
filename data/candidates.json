@@ -58,6 +58,62 @@
       ]
     },
     {
+      "id": "candidate-npc-councilor-chen-jun-yen-old-new-banqiao-001",
+      "city": "新北市",
+      "office": "縣市議員",
+      "candidate": "陳俊諺",
+      "party": "民主進步黨",
+      "topics": [
+        "地方文化",
+        "歷史文化",
+        "閒置空間再利用",
+        "藝文空間",
+        "文化活動"
+      ],
+      "summary": "陳俊諺提出「古今板橋文化生活圈」，以人文歷史、數位科技與商圈經濟為核心，規劃將閒置空間轉型為青創基地和藝文工作室，並串聯古蹟、商圈與市集及音樂展演。",
+      "policy_argument": "以閒置空間再利用及古蹟、商圈、展演串聯，讓板橋的歷史文化結合青年創業與日常文化活動。",
+      "concrete_proposals": [
+        "盤點閒置空間並轉型為青創基地和藝文工作室。",
+        "串聯古蹟與周邊商圈。",
+        "舉辦市集、音樂展演等活動。"
+      ],
+      "related_statements": [
+        "來源未說明閒置空間盤點範圍、轉型場址、經費、期程、主責機關及文化保存機制。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "民進黨在地子弟陳俊諺登記 提六大安心政見改革板橋",
+            "url": "https://udn.com/news/story/124652/9727600"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "民進黨在地子弟陳俊諺登記 提六大安心政見改革板橋",
+            "url": "https://udn.com/news/story/124652/9727600"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "民進黨在地子弟陳俊諺登記 提六大安心政見改革板橋",
+            "url": "https://udn.com/news/story/124652/9727600"
+          }
+        ]
+      },
+      "published_date": "2026-09-01",
+      "source_title": "民進黨在地子弟陳俊諺登記 提六大安心政見改革板橋",
+      "source_url": "https://udn.com/news/story/124652/9727600",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "候選人具名新聞來源",
+      "corrections": [
+        "2026-10-02｜已依中選會登記名冊核對陳俊諺為新北市第5選舉區縣市議員民主進步黨候選人；聯合報報導其完成登記並提出古今板橋文化生活圈。來源未提供場址、預算、期程與執行機制，已在條目中註明。"
+      ]
+    },
+    {
       "id": "candidate-miaoli-mayor-chen-pin-an-hakka-culture-001",
       "city": "苗栗縣",
       "office": "縣市長",
