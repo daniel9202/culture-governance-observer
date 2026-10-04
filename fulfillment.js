@@ -39,6 +39,7 @@ const councilCard=record=>`<article class="card pledge-card">
   <div class="card-meta">${record.proposer_role==='推定現任議員'?'<span class="tag tag-status">推定現任議員</span>':''}<span class="tag">${escapeHtml(record.content_nature)}</span>${(record.topics||[]).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
   <p class="summary">${escapeHtml(record.summary)}</p>
   ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
+  ${(record.editor_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${record.editor_notes.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
   <p class="role-evidence">判定依據：${escapeHtml(record.role_evidence)}</p>
   <div class="source-row"><a href="${escapeHtml(safeUrl(record.source_url))}" target="_blank" rel="noopener">${escapeHtml(record.source_title||'原始來源')} ↗</a><span class="verification">查核 ${escapeHtml(record.last_verified)}</span></div>
 </article>`;
