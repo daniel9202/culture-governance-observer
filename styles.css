@@ -321,3 +321,4 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .filters-single{grid-template-columns:1fr;max-width:calc((100% - 2px)/3)}
 @media(max-width:760px){.filters-single{max-width:none}}
 .policy-shared>summary{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;cursor:pointer;list-style:none}.policy-shared>summary::-webkit-details-marker{display:none}.policy-shared>summary h4{margin:0}.shared-toggle{font-size:.8rem;color:var(--muted);white-space:nowrap}.shared-toggle::after{content:'・展開 ▾'}.policy-shared[open] .shared-toggle::after{content:'・收合 ▴'}.policy-shared>summary:hover .shared-toggle{color:var(--ink)}
+.policy-editor-note{border-top:1px dashed var(--line);padding-top:.8rem}.policy-editor-note ul{margin:0;padding-left:1.1rem;font-size:.86rem;color:var(--muted)}

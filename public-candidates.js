@@ -5,6 +5,7 @@ const normaliseApprovedCandidate=record=>({
   policy_argument:record.policy_argument||record.summary||'',
   concrete_proposals:Array.isArray(record.concrete_proposals)?record.concrete_proposals:[record.summary].filter(Boolean),
   related_statements:Array.isArray(record.related_statements)?record.related_statements:[],
+  editor_notes:Array.isArray(record.editor_notes)?record.editor_notes:[],
   related_sources:Array.isArray(record.related_sources)?record.related_sources:[],
   corrections:Array.isArray(record.corrections)?record.corrections:[],
   source_type:record.source_type||'審核上架',
@@ -25,7 +26,7 @@ const sourceEntries=record=>{
   });
   return entries;
 };
-const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
+const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
 // 候選人個人資料與多人共同提出的政見分開保存，但在同一張候選人卡片呈現。
 window.groupCandidateRecords=(records,sharedPolicies=[])=>{
@@ -42,6 +43,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     group.policy_arguments.push(record.policy_argument||record.summary);
     group.concrete_proposals.push(...(record.concrete_proposals.length?record.concrete_proposals:[record.summary]));
     group.related_statements.push(...record.related_statements);
+    group.editor_notes.push(...record.editor_notes);
     group.sources.push(...sourceEntries(record));
     if(record.published_date)group.published_dates.push(record.published_date);
     group.corrections.push(...record.corrections);
@@ -62,7 +64,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     });
   });
   return [...groups.values()].map(group=>({...group,
-    topics:uniqueValues(group.topics),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),
+    topics:uniqueValues(group.topics),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),editor_notes:uniqueValues(group.editor_notes),
     sources:[...new Map(group.sources.map(source=>[source.url,source])).values()],published_dates:uniqueValues(group.published_dates).sort(),
     shared_policies:[...new Map(group.shared_policies.map(policy=>[policy.id,policy])).values()],
     party_shared_policies:[...new Map(group.party_shared_policies.map(policy=>[policy.id,policy])).values()],
