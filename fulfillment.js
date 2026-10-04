@@ -36,7 +36,7 @@ fetch('data/pledge_fulfillment.json').then(r=>r.json()).then(data=>{records=(dat
 // 議員分頁：任內文化問政（非本屆政見），資料為 loadCandidateDataset() 的 incumbent_records；不評估實現狀態。
 let councilRecords=[];
 const councilCard=record=>`<article class="card pledge-card">
-  <div class="card-meta">${record.proposer_role==='推定現任議員'?'<span class="tag tag-status">推定現任議員</span>':''}<span class="tag">${escapeHtml(record.content_nature)}</span>${(record.topics||[]).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
+  <div class="card-meta">${pendingReviewTag(record)}${record.proposer_role==='推定現任議員'?'<span class="tag tag-status">推定現任議員</span>':''}<span class="tag">${escapeHtml(record.content_nature)}</span>${(record.topics||[]).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
   <p class="summary">${escapeHtml(record.summary)}</p>
   ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
   ${(record.editor_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${record.editor_notes.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}

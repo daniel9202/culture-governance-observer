@@ -9,7 +9,11 @@ const normaliseApprovedCandidate=record=>({
   related_sources:Array.isArray(record.related_sources)?record.related_sources:[],
   corrections:Array.isArray(record.corrections)?record.corrections:[],
   source_type:record.source_type||'審核上架',
+  review_status:record.review_status||'人工審核',
 });
+// 先行上架、尚待人工複核的資料（資料方法：AI 初審，人工複核）。
+window.isPendingReview=record=>record?.review_status==='AI初審待複核';
+window.pendingReviewTag=record=>record?.pending_review||isPendingReview(record)?'<span class="tag tag-pending" title="由 AI 初審先行上架，每週由人工複核">AI 初審・待複核</span>':'';
 const sourceTitle=(title,url)=>{
   const clean=String(title||'').trim();
   if(clean&&!/^相關來源 \d+$/.test(clean)&&clean!=='來源')return clean;
@@ -26,7 +30,7 @@ const sourceEntries=record=>{
   });
   return entries;
 };
-const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
+const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],pending_review:false,sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
 // 候選人個人資料與多人共同提出的政見分開保存，但在同一張候選人卡片呈現。
 window.groupCandidateRecords=(records,sharedPolicies=[])=>{
@@ -44,6 +48,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     group.concrete_proposals.push(...(record.concrete_proposals.length?record.concrete_proposals:[record.summary]));
     group.related_statements.push(...record.related_statements);
     group.editor_notes.push(...record.editor_notes);
+    if(isPendingReview(record))group.pending_review=true;
     group.sources.push(...sourceEntries(record));
     if(record.published_date)group.published_dates.push(record.published_date);
     group.corrections.push(...record.corrections);
