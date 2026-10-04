@@ -15,7 +15,7 @@ const sourceContent=(source,index)=>{
 };
 const sourceList=record=>record.sources.length?`<ul class="source-list">${record.sources.map((source,index)=>`<li><a class="source-link" href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener">${sourceContent(source,index)}<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
 const sharedPolicyList=policies=>policies.map(policy=>`<section class="shared-policy-item"><h5>${escapeHtml(policy.title)}</h5><p>${escapeHtml(policy.summary)}</p>${bulletList(policy.concrete_proposals||[],'尚未收錄具體主張。')}<a href="${escapeHtml(safeUrl(policy.source_url))}" target="_blank" rel="noopener">${escapeHtml(policy.source_title||'查看共同政見來源')} ↗</a></section>`).join('');
-const sharedPolicySection=(title,policies)=>policies.length?`<div class="policy-layer policy-shared"><h4>${title}</h4>${sharedPolicyList(policies)}</div>`:'';
+const sharedPolicySection=(title,policies)=>policies.length?`<details class="policy-layer policy-shared"><summary><h4>${title}</h4><span class="shared-toggle">${policies.length} 項</span></summary>${sharedPolicyList(policies)}</details>`:'';
 function render(){
   const city=cityFilter.value,party=partyFilter.value,topic=topicFilter.value;
   const rows=platforms.filter(x=>(!city||x.city===city)&&(!party||x.party===party)&&(!topic||x.topics.includes(topic)));
@@ -30,7 +30,7 @@ function render(){
 loadCandidateDataset().then(data=>{
   platforms=groupCandidateRecords(data.records.filter(inScope),data.shared_policy_groups||[]).filter(inScope);
   incumbents=incumbentNamesByCity(data.incumbent_records||[]);
-  options('cityFilter',uniq(platforms.map(x=>x.city)));
+  options('cityFilter',uniq(platforms.map(x=>x.city)).sort((a,b)=>cityRank(a)-cityRank(b)));
   options('partyFilter',uniq(platforms.map(x=>x.party)));
   options('topicFilter',uniq(platforms.flatMap(x=>x.topics)));
   const requestedCity=new URLSearchParams(location.search).get('city');

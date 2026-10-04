@@ -1,7 +1,7 @@
 const statusLabels={fulfilled:'已實現',partial:'部分實現',in_progress:'執行中',no_verified_progress:'未找到可驗證進度',not_assessable:'不適合評估'};let records=[];
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 const safeUrl=url=>{try{const parsed=new URL(url);return ['http:','https:'].includes(parsed.protocol)?parsed.href:'#'}catch{return '#'}};
-const optionValues=(key,el)=>{[...new Set(records.map(x=>x[key]).filter(Boolean))].sort().forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=key==='status'?statusLabels[v]:v;el.append(o)})};
+const optionValues=(key,el)=>{[...new Set(records.map(x=>x[key]).filter(Boolean))].sort(key==='city'?(a,b)=>cityRank(a)-cityRank(b):undefined).forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=key==='status'?statusLabels[v]:v;el.append(o)})};
 const byCity=(a,b)=>cityRank(a.city)-cityRank(b.city)||String(a.person).localeCompare(String(b.person),'zh-Hant')||String(a.pledge_date).localeCompare(String(b.pledge_date));
 const groupBy=(rows,key)=>rows.reduce((groups,row)=>{const value=key(row),group=groups.find(item=>item.key===value);(group||groups[groups.push({key:value,rows:[]})-1]).rows.push(row);return groups},[]);
 
