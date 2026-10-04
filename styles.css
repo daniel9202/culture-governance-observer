@@ -324,3 +324,4 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .policy-editor-note{border-top:1px dashed var(--line);padding-top:.8rem}.policy-editor-note ul{margin:0;padding-left:1.1rem;font-size:.86rem;color:var(--muted)}
 .tag-pending{border-style:dashed;border-color:var(--ink);background:var(--surface);color:var(--ink)}
 .mayor-gov{margin-top:4rem}
+.report-link{color:var(--muted);text-decoration:underline;text-underline-offset:2px}.report-link:hover{color:var(--ink)}

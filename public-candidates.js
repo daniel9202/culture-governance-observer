@@ -30,7 +30,7 @@ const sourceEntries=record=>{
   });
   return entries;
 };
-const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],pending_review:false,sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
+const emptyCandidateGroup=record=>({...record,topics:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],pending_review:false,ids:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
 // 候選人個人資料與多人共同提出的政見分開保存，但在同一張候選人卡片呈現。
 window.groupCandidateRecords=(records,sharedPolicies=[])=>{
@@ -49,6 +49,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     group.related_statements.push(...record.related_statements);
     group.editor_notes.push(...record.editor_notes);
     if(isPendingReview(record))group.pending_review=true;
+    if(record.id)group.ids.push(record.id);
     group.sources.push(...sourceEntries(record));
     if(record.published_date)group.published_dates.push(record.published_date);
     group.corrections.push(...record.corrections);
@@ -69,7 +70,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     });
   });
   return [...groups.values()].map(group=>({...group,
-    topics:uniqueValues(group.topics),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),editor_notes:uniqueValues(group.editor_notes),
+    topics:uniqueValues(group.topics),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),editor_notes:uniqueValues(group.editor_notes),ids:uniqueValues(group.ids),
     sources:[...new Map(group.sources.map(source=>[source.url,source])).values()],published_dates:uniqueValues(group.published_dates).sort(),
     shared_policies:[...new Map(group.shared_policies.map(policy=>[policy.id,policy])).values()],
     party_shared_policies:[...new Map(group.party_shared_policies.map(policy=>[policy.id,policy])).values()],

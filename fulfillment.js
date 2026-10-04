@@ -10,7 +10,7 @@ const pledgeCard=pledge=>`<article class="card pledge-card">
   <h4>${escapeHtml(pledge.pledge_title)}</h4>
   <p class="summary">${escapeHtml(pledge.pledge_summary)}</p>
   <div class="policy-layer policy-actions"><h4>查核判斷</h4><p>${escapeHtml(pledge.evidence_summary)}</p></div>
-  <div class="source-row"><a href="${escapeHtml(safeUrl(pledge.pledge_source_url))}" target="_blank" rel="noopener">${escapeHtml(pledge.pledge_source_type||'原始政見')} ↗</a>${pledge.evidence_source_url?`<a href="${escapeHtml(safeUrl(pledge.evidence_source_url))}" target="_blank" rel="noopener">實現情形 ↗</a>`:''}${(pledge.additional_evidence||[]).map(item=>`<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener" title="${escapeHtml(item.title)}">${escapeHtml(item.title)} ↗</a>`).join('')}<span class="verification">查核 ${escapeHtml(pledge.last_verified)}</span></div>
+  <div class="source-row"><a href="${escapeHtml(safeUrl(pledge.pledge_source_url))}" target="_blank" rel="noopener">${escapeHtml(pledge.pledge_source_type||'原始政見')} ↗</a>${pledge.evidence_source_url?`<a href="${escapeHtml(safeUrl(pledge.evidence_source_url))}" target="_blank" rel="noopener">實現情形 ↗</a>`:''}${(pledge.additional_evidence||[]).map(item=>`<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener" title="${escapeHtml(item.title)}">${escapeHtml(item.title)} ↗</a>`).join('')}<span class="verification">查核 ${escapeHtml(pledge.last_verified)} · ${reportLink(pledge.id,`${pledge.city} ${pledge.person}：${pledge.pledge_title}（政見實現追蹤）`)}</span></div>
 </article>`;
 
 const personBlock=person=>{
@@ -41,7 +41,7 @@ const councilCard=record=>`<article class="card pledge-card">
   ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
   ${(record.editor_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${record.editor_notes.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
   ${record.role_evidence?`<p class="role-evidence">判定依據：${escapeHtml(record.role_evidence)}</p>`:''}
-  <div class="source-row"><a href="${escapeHtml(safeUrl(record.source_url))}" target="_blank" rel="noopener">${escapeHtml(record.source_title||'原始來源')} ↗</a><span class="verification">查核 ${escapeHtml(record.last_verified)}</span></div>
+  <div class="source-row"><a href="${escapeHtml(safeUrl(record.source_url))}" target="_blank" rel="noopener">${escapeHtml(record.source_title||'原始來源')} ↗</a><span class="verification">查核 ${escapeHtml(record.last_verified)} · ${reportLink(record.id,`${record.city} ${record.candidate}（現任紀錄）`)}</span></div>
 </article>`;
 const councilPerson=person=>{
   const first=person.rows[0];
