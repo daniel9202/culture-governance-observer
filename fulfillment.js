@@ -40,7 +40,7 @@ const councilCard=record=>`<article class="card pledge-card">
   <p class="summary">${escapeHtml(record.summary)}</p>
   ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
   ${(record.editor_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${record.editor_notes.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
-  <p class="role-evidence">判定依據：${escapeHtml(record.role_evidence)}</p>
+  ${record.role_evidence?`<p class="role-evidence">判定依據：${escapeHtml(record.role_evidence)}</p>`:''}
   <div class="source-row"><a href="${escapeHtml(safeUrl(record.source_url))}" target="_blank" rel="noopener">${escapeHtml(record.source_title||'原始來源')} ↗</a><span class="verification">查核 ${escapeHtml(record.last_verified)}</span></div>
 </article>`;
 const councilPerson=person=>{
@@ -70,7 +70,10 @@ const setTab=tab=>{
 const initialQuery=new URLSearchParams(location.search);
 document.querySelectorAll('.tracker-switch button').forEach(button=>button.addEventListener('click',()=>setTab(button.dataset.tab)));
 loadCandidateDataset().then(data=>{
-  councilRecords=(data.incumbent_records||[]).slice().sort((a,b)=>cityRank(a.city)-cityRank(b.city)||String(a.candidate).localeCompare(String(b.candidate),'zh-Hant'));
+  const isMayorRecord=record=>record.office==='縣市長';
+  const mayorGov=(data.incumbent_records||[]).filter(isMayorRecord).sort((a,b)=>cityRank(a.city)-cityRank(b.city)||String(a.candidate).localeCompare(String(b.candidate),'zh-Hant'));
+  if(mayorGov.length){document.getElementById('mayorGov').hidden=false;document.getElementById('mayorGovCards').innerHTML=groupBy(mayorGov,row=>row.city).map(group=>`<section class="tracker-city"><h2 class="tracker-city-name">${escapeHtml(group.key)}</h2>${groupBy(group.rows,row=>row.candidate).map(person=>`<article class="tracker-person"><div class="tracker-person-head"><h3>${escapeHtml(person.key)}</h3><p class="party">${escapeHtml(person.rows[0].party)} · 現任${escapeHtml(group.key)}長，2026 參選連任</p><span class="tracker-person-count">${person.rows.length} 筆施政紀錄</span></div><div class="cards">${person.rows.map(councilCard).join('')}</div></article>`).join('')}</section>`).join('')}
+  councilRecords=(data.incumbent_records||[]).filter(record=>!isMayorRecord(record)).sort((a,b)=>cityRank(a.city)-cityRank(b.city)||String(a.candidate).localeCompare(String(b.candidate),'zh-Hant'));
   const select=document.getElementById('councilCityFilter');
   [...new Set(councilRecords.map(x=>x.city))].forEach(value=>{const option=document.createElement('option');option.value=value;option.textContent=value;select.append(option)});
   if(councilRecords.some(x=>x.city===initialQuery.get('city')))select.value=initialQuery.get('city');
