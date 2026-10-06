@@ -292,6 +292,7 @@ npm run build
 4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
 5. **文件**：把 `docs/manual-update.md` 改成符合 Google Sheet／Apps Script 的現行流程（見下節）。
 6. **出現新政黨時**：若候選人資料出現 `config/party_colors.json` 沒有的政黨，建置會跳警告。補顏色前先和使用者確認。
+7. **Apps Script 欄位讀寫**：`apps-script/Code.gs` 目前以固定欄位位置讀寫 A:T；重建流程時改為依標題名稱讀寫。在完成前，不要在 A:T 中間插入欄位。
 
 ## 文件一致性提醒
 

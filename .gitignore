@@ -4,6 +4,7 @@ dist/
 node_modules/
 .pnpm-store/
 tmp/
+backups/
 .codex-remote-attachments/
 %SystemDrive%/
 __pycache__/

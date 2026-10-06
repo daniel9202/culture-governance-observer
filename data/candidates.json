@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-03",
+  "last_updated": "2026-10-07",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -8,6 +8,11 @@
       "office": "縣市長",
       "candidate": "蔡易餘",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：營運班次、文化詮釋內容、觀光路線經費、期程、跨機關分工"
+      ],
       "topics": [
         "林業文化",
         "鐵道文化",
@@ -21,9 +26,7 @@
         "發展布袋與東石漁港特色觀光。",
         "開發中埔溫泉及建設梅山至太平雲梯纜車等多元觀光路線。"
       ],
-      "related_statements": [
-        "政見未列林鐵區間車營運班次、文化詮釋內容、觀光路線經費、期程與跨機關分工。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -63,6 +66,11 @@
       "office": "縣市議員",
       "candidate": "陳俊諺",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：盤點範圍、轉型場址、經費、期程、主責機關、文化保存機制"
+      ],
       "topics": [
         "地方文化",
         "歷史文化",
@@ -77,9 +85,7 @@
         "串聯古蹟與周邊商圈。",
         "舉辦市集、音樂展演等活動。"
       ],
-      "related_statements": [
-        "來源未說明閒置空間盤點範圍、轉型場址、經費、期程、主責機關及文化保存機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -119,6 +125,11 @@
       "office": "縣市長",
       "candidate": "陳品安",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：預算、期程、執行機制"
+      ],
       "topics": [
         "客家文化",
         "地方文化",
@@ -132,9 +143,7 @@
         "透過手作和生活體驗傳承客庄文化。",
         "讓客庄文化融入現代生活。"
       ],
-      "related_statements": [
-        "來源未揭露後續文化行動的預算、期程或執行機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -174,6 +183,9 @@
       "office": "縣市長",
       "candidate": "蘇清泉",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化場館",
@@ -227,6 +239,9 @@
       "office": "縣市長",
       "candidate": "周春米",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化場館",
         "表演藝術",
@@ -281,6 +296,9 @@
       "office": "縣市議員",
       "candidate": "劉靜文",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "多元文化",
         "客家文化",
@@ -320,9 +338,7 @@
       "published_date": "2026-08-31",
       "source_title": "劉靜文轉換跑道參選花蓮縣議員第三選區",
       "source_url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/",
-      "related_sources": [
-        "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
@@ -338,6 +354,9 @@
       "office": "縣市長",
       "candidate": "賴瑞隆",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "社區文化",
         "文化資產",
@@ -359,8 +378,7 @@
         "國際交陪：從國際邀演走向策展共製，讓高雄作品進入國際市場。"
       ],
       "related_statements": [
-        "表示藝術工作者以專業帶給觀眾感動，政治工作者也應以專業讓市民生活得更好。",
-        "主張讓高雄的場館、活動與城市故事轉化成更多屬於高雄的作品與文化內容。"
+        "表示藝術工作者以專業帶給觀眾感動，政治工作者也應以專業讓市民生活得更好。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -404,6 +422,9 @@
       "office": "縣市議員",
       "candidate": "苗博雅",
       "party": "社會民主黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "語言文化",
         "文化平權",
@@ -417,9 +438,7 @@
         "與民團合作創造台語友善城市環境。",
         "鼓勵市民使用台語並讓台語成為城市觀光文化的一部分。"
       ],
-      "related_statements": [
-        "社會民主黨市議員苗博雅響應台語復振連線。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -447,9 +466,12 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "corrections": [
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+      ]
     },
     {
       "id": "candidate-tpe-councilor-chen-li-hsin-old-city-culture-001",
@@ -457,6 +479,9 @@
       "office": "縣市議員",
       "candidate": "陳力新",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "地方文史",
         "文化資產",
@@ -512,6 +537,9 @@
       "office": "縣市議員",
       "candidate": "許國政",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化產業",
         "多元文化",
@@ -548,9 +576,7 @@
       "published_date": "2026-10-02",
       "source_title": "澎湖縣議會：許國政議員政見",
       "source_url": "https://www.phcouncil.gov.tw/mop2.php?no=M24080011",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -564,6 +590,9 @@
       "office": "縣市議員",
       "candidate": "周子傑",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "地方文化",
         "宗教文化",
@@ -600,9 +629,7 @@
       "published_date": "2026-10-02",
       "source_title": "金門縣議會：周子傑議員政見",
       "source_url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -616,6 +643,9 @@
       "office": "縣市議員",
       "candidate": "曹丞君",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "公共藝術",
         "文化活動",
@@ -652,9 +682,7 @@
       "published_date": "2026-10-02",
       "source_title": "連江縣議會：曹丞君議員政見",
       "source_url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -668,6 +696,9 @@
       "office": "縣市議員",
       "candidate": "陳書建",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "公共藝術",
         "文化空間",
@@ -704,15 +735,16 @@
       "published_date": "2026-06-12",
       "source_title": "馬祖日報：陳書建關注國際藝術島作品管理與觀光導覽",
       "source_url": "https://www.matsu-news.gov.tw/news/article/241884",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "corrections": [
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+      ]
     },
     {
       "id": "candidate-lgn-councilor-chen-yu-fa-mother-tongue-001",
@@ -720,6 +752,9 @@
       "office": "縣市議員",
       "candidate": "陳玉發",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "母語",
         "文化傳承",
@@ -756,9 +791,7 @@
       "published_date": "2023-11-16",
       "source_title": "連江縣議會：陳玉發關注閩東語生活化傳承",
       "source_url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=109198&webaid=",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -772,6 +805,9 @@
       "office": "縣市議員",
       "candidate": "陳貽斌",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "表演藝術",
         "文化空間",
@@ -809,9 +845,7 @@
       "published_date": "2026-05-28",
       "source_title": "連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
       "source_url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid=",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -825,6 +859,9 @@
       "office": "縣市議員",
       "candidate": "周瑞國",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化資產",
         "傳統建築",
@@ -861,15 +898,16 @@
       "published_date": "2025-11-21",
       "source_title": "馬祖日報：周瑞國關注傳統建築保存與擺暝文化祭",
       "source_url": "https://www.matsu-news.gov.tw/news/article/236839",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "corrections": [
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+      ]
     },
     {
       "id": "candidate-klg-councilor-sung-wei-li-sea-music-festival-001",
@@ -877,6 +915,9 @@
       "office": "縣市議員",
       "candidate": "宋瑋莉",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "音樂",
         "文化活動",
@@ -913,15 +954,15 @@
       "published_date": "2026-10-02",
       "source_title": "基隆市議會：宋瑋莉議員政見",
       "source_url": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
-      "source_type": "候選人原文",
+      "related_sources": [],
+      "source_type": "議會個人頁",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "content_nature": "現任議員個人頁內容",
+      "role_evidence": "基隆市議會宋瑋莉議員個人政見頁；屬現任議員個人頁內容，非本屆競選網站。",
+      "corrections": [
+        "2026-10-04｜經查為基隆市議會現任議員個人政見頁，改列現任議員個人頁內容。"
+      ]
     },
     {
       "id": "candidate-hsz-councilor-chang-tsu-yen-cultural-education-001",
@@ -929,6 +970,9 @@
       "office": "縣市議員",
       "candidate": "張祖琰",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "閱讀",
         "文化教育",
@@ -965,9 +1009,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
       "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -981,6 +1023,9 @@
       "office": "縣市議員",
       "candidate": "徐美惠",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "地方文史",
         "文化產業",
@@ -1017,9 +1062,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：徐美惠議員政見",
       "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=18&mid=39",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -1033,6 +1076,9 @@
       "office": "縣市議員",
       "candidate": "鍾淑英",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "藝文資訊",
         "文化近用",
@@ -1068,9 +1114,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：鍾淑英共同提案改善藝文活動宣傳",
       "source_url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "待判定",
@@ -1084,6 +1128,9 @@
       "office": "縣市議員",
       "candidate": "許修睿",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "軍事文化",
         "藝文活動",
@@ -1121,9 +1168,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：許修睿議員政見",
       "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=3&mid=39",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -1137,6 +1182,9 @@
       "office": "縣市議員",
       "candidate": "黃美慧",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "客語",
@@ -1172,9 +1220,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：黃美慧議員政見與客家事務質詢",
       "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -1188,6 +1234,9 @@
       "office": "縣市議員",
       "candidate": "吳旭豐",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "藝文資訊",
         "文化近用",
@@ -1223,9 +1272,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：吳旭豐共同提案改善藝文活動宣傳",
       "source_url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "待判定",
@@ -1239,6 +1286,9 @@
       "office": "縣市議員",
       "candidate": "陳慶齡",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "藝文資訊",
         "文化近用",
@@ -1274,9 +1324,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：陳慶齡共同提案改善藝文活動宣傳",
       "source_url": "https://www.hsinchu-cc.gov.tw/upload/79/2026042310011641337%E6%96%B0%E7%AB%B9%E5%B8%82%E8%AD%B0%E6%9C%83-%E7%AC%AC11%E5%B1%86%E7%AC%AC18%E6%AC%A1%E8%87%A8%E6%99%82%E6%9C%83.pdf",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "待判定",
@@ -1290,6 +1338,9 @@
       "office": "縣市議員",
       "candidate": "林慈愛",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "展覽策展",
@@ -1327,9 +1378,7 @@
       "published_date": "2026-10-02",
       "source_title": "新竹市議會：林慈愛原住民族文化提案",
       "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=36&mid=39",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
@@ -1338,63 +1387,14 @@
       "corrections": []
     },
     {
-      "id": "candidate-ttt-councilor-jiang-cheng-kuang-tribal-culture-001",
-      "city": "臺東縣",
-      "office": "縣市議員",
-      "candidate": "蔣爭光",
-      "party": "中國國民黨",
-      "topics": [
-        "原住民族文化",
-        "文化教育",
-        "文化資產",
-        "文化空間"
-      ],
-      "summary": "以部落教育文化深耕為主軸，推動部落遺址維護與開闢回祖靈家的路徑，讓文化教育、歷史記憶與部落發展相互連結。",
-      "policy_argument": "原住民族部落發展應以文化為根基，透過教育、遺址維護與文化空間路徑，強化族人對土地與歷史的連結。",
-      "concrete_proposals": [
-        "推動部落教育文化深耕。",
-        "維護部落遺址並開闢回祖靈家的路徑。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "金峰鄉公所：鄉長專區",
-            "url": "https://ttjfng.gov.tw/home/index.php/township-chief-2"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "金峰鄉公所：鄉長專區",
-            "url": "https://ttjfng.gov.tw/home/index.php/township-chief-2"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "金峰鄉公所：鄉長專區",
-            "url": "https://ttjfng.gov.tw/home/index.php/township-chief-2"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "金峰鄉公所：鄉長專區",
-      "source_url": "https://ttjfng.gov.tw/home/index.php/township-chief-2",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
-      "source_type": "候選人原文",
-      "last_verified": "2026-10-02",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
-    },
-    {
       "id": "candidate-ttt-councilor-yang-chiu-chen-hunting-culture-001",
       "city": "臺東縣",
       "office": "縣市議員",
       "candidate": "楊秋珍",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "傳統知識",
@@ -1430,15 +1430,16 @@
       "published_date": "2026-05-23",
       "source_title": "互傳媒：楊秋珍爭取自製獵槍訓練課程在東海岸線辦理",
       "source_url": "https://pchome.megatime.com.tw/m/news/cat8/20260523/77946984613219344001.html",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "corrections": [
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+      ]
     },
     {
       "id": "candidate-ttt-councilor-fang-hsien-jen-cultural-space-001",
@@ -1446,6 +1447,9 @@
       "office": "縣市議員",
       "candidate": "方賢仁",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化空間",
@@ -1482,15 +1486,16 @@
       "published_date": "2026-05-28",
       "source_title": "互傳媒：方賢仁關注台東博覽會與原民聚會所",
       "source_url": "https://news.pchome.com.tw/politics/hoomedia/20260528/index-77990732561687344002.html",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "corrections": [
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+      ]
     },
     {
       "id": "candidate-hln-councilor-lin-zheng-fu-matai-lin-culture-001",
@@ -1498,6 +1503,9 @@
       "office": "縣市議員",
       "candidate": "林正福",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化空間",
@@ -1534,9 +1542,7 @@
       "published_date": "2024-12-10",
       "source_title": "花蓮縣議政報導：林正福盼望馬太林文化園區帶動產業",
       "source_url": "https://www.hlcc.gov.tw/upfile/20241210142719-189.PDF",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "待判定",
@@ -1550,6 +1556,9 @@
       "office": "縣市議員",
       "candidate": "秀吉．撒夫洛",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -1586,9 +1595,7 @@
       "published_date": "2026-06-08",
       "source_title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
       "source_url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
@@ -1602,6 +1609,9 @@
       "office": "縣市議員",
       "candidate": "林玉芬",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -1638,15 +1648,16 @@
       "published_date": "2023-05-19",
       "source_title": "原住民族文化事業基金會：花縣評估193縣道藝文廊道，議員爭取興建文化園區",
       "source_url": "https://index.ipcf.org.tw/zh-TW/Radio/Radio_News_Page?newsId=23051915150834904",
-      "related_sources": [
-        "https://web.cec.gov.tw/central/article/64709"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": []
+      "corrections": [
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+      ]
     },
     {
       "id": "candidate-tpe-mayor-shen-boyang-001",
@@ -1654,6 +1665,9 @@
       "office": "縣市長",
       "candidate": "沈伯洋",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "文化資產",
         "地方文史",
@@ -1665,9 +1679,7 @@
         "建立可持續的文化資產保存機制。",
         "以台北記憶倉庫串聯西門町、北門、淡水河與大稻埕，形成文化廊道。"
       ],
-      "related_statements": [
-        "提出應讓在地故事被世界看見，並把文化資產保存轉化為可持續的城市路徑。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -1705,6 +1717,9 @@
       "office": "縣市長",
       "candidate": "蘇巧慧",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化場館",
         "影視文化",
@@ -1760,6 +1775,9 @@
       "office": "縣市長",
       "candidate": "李四川",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "文化教育",
@@ -1777,7 +1795,6 @@
         "將場館深化為職探、手作學習及銀髮健康參與場域。"
       ],
       "related_statements": [
-        "強調客家政策必須兼顧文化傳承與制度支持。",
         "以職人 Passport 結合文化體驗、教育及地方觀光。"
       ],
       "field_sources": {
@@ -1821,6 +1838,9 @@
       "office": "縣市長",
       "candidate": "莊競程",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "文化治理",
@@ -1834,9 +1854,7 @@
         "結合產業與大學進行數位文化保存及智慧導覽。",
         "活化文化空間並連結地方創生。"
       ],
-      "related_statements": [
-        "以「科技客家」概括文化保存、智慧應用與產業合作的政策方向。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -1874,6 +1892,9 @@
       "office": "縣市長",
       "candidate": "林國漳",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化治理",
         "文化教育",
@@ -1889,9 +1910,7 @@
         "制定文化政策白皮書。",
         "串聯設計展、影展與博物館家族。"
       ],
-      "related_statements": [
-        "以「從文化立縣走向文化治縣」說明政策不只舉辦活動，也要建立治理制度。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -1931,6 +1950,9 @@
       "office": "縣市長",
       "candidate": "張嘉郡",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "文化場館",
         "藝術教育",
@@ -1943,9 +1965,7 @@
         "讓場館兼具藝術展覽、美感教育、地方文化與觀光功能。",
         "串聯各地文化資源形成文化廊帶。"
       ],
-      "related_statements": [
-        "將雲林美術館定位為文化新地標，並納入接續地方重大建設的政策藍圖。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -1988,6 +2008,9 @@
       "office": "縣市長",
       "candidate": "游淑貞",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "文化治理",
@@ -2006,10 +2029,7 @@
         "尊重原住民族文化自治與文化表達權。",
         "讓文化資源進入部落。"
       ],
-      "related_statements": [
-        "以「文化新生帶動產業創生與地方發展」說明客家政策的整體定位。",
-        "以文化治理、部落共好說明原住民族部落照顧政策方向。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2051,6 +2071,9 @@
       "office": "縣市長",
       "candidate": "張峻",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "藝文資源",
         "文化平權",
@@ -2104,6 +2127,9 @@
       "office": "縣市長",
       "candidate": "魏嘉賢",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化資產",
         "戰爭記憶",
@@ -2156,6 +2182,9 @@
       "office": "縣市長",
       "candidate": "林國漳",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "文化教育",
         "多元語言",
@@ -2168,9 +2197,7 @@
         "將地方特色融入教材。",
         "將本土語言融入教材。"
       ],
-      "related_statements": [
-        "從認識家鄉建立文化認同。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2212,6 +2239,9 @@
       "office": "縣市議員",
       "candidate": "劉芩妤",
       "party": "台灣民眾黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "圖書館與閱讀"
       ],
@@ -2221,9 +2251,7 @@
         "在捷運站與超商增設智慧還書箱。",
         "以 App 預約圖書並配送。"
       ],
-      "related_statements": [
-        "主張以數位預約與生活據點提升閱讀服務。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2263,6 +2291,9 @@
       "office": "縣市議員",
       "candidate": "吳依潔",
       "party": "台灣基進",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "多元語言",
         "文化治理",
@@ -2275,9 +2306,7 @@
         "市政以本土文化與本土語言優先。",
         "落實轉型正義並去除威權遺緒。"
       ],
-      "related_statements": [
-        "提出本土文化與本土語言優先的施政立場。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2318,6 +2347,9 @@
       "office": "縣市議員",
       "candidate": "于仙玲",
       "party": "小民參政歐巴桑聯盟",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "多元語言",
         "文化教育",
@@ -2328,9 +2360,7 @@
       "concrete_proposals": [
         "推動台語幼兒園建置實驗班。"
       ],
-      "related_statements": [
-        "將語言文化列為育兒友善政策的一環。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2370,6 +2400,9 @@
       "office": "縣市議員",
       "candidate": "李玫",
       "party": "台灣民眾黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "藝文活動",
         "文化教育",
@@ -2385,9 +2418,7 @@
         "每年固定在南區設置藝文活動並結合走讀。",
         "規劃新竹市美術館大型專業展演空間。"
       ],
-      "related_statements": [
-        "主張讓南區有可持續的藝文活動與展演資源。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2428,6 +2459,9 @@
       "office": "縣市議員",
       "candidate": "高采翎",
       "party": "台灣民眾黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "多元語言",
@@ -2440,9 +2474,7 @@
         "推動族語扎根傳承。",
         "支持原住民青年返鄉築夢。"
       ],
-      "related_statements": [
-        "將族語傳承與原青返鄉築夢列為政見。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2483,6 +2515,9 @@
       "office": "縣市議員",
       "candidate": "林于凱",
       "party": "台灣民眾黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "文化教育"
@@ -2492,9 +2527,7 @@
       "concrete_proposals": [
         "持續推動客語教育。"
       ],
-      "related_statements": [
-        "將客語教育列為政見。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2534,6 +2567,9 @@
       "office": "縣市議員",
       "candidate": "林筱薇",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "多元語言",
@@ -2548,9 +2584,7 @@
         "提高文化學習歷程在特殊選才的採計比重。",
         "提供文化語言、藝術、音樂、影像與設計等領域升學與就業支持。"
       ],
-      "related_statements": [
-        "強調都市原住民族政策須超越節慶補助。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2591,6 +2625,9 @@
       "office": "縣市議員",
       "candidate": "吳欣岱",
       "party": "台灣基進",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "多元語言",
         "文化教育",
@@ -2645,6 +2682,9 @@
       "office": "縣市議員",
       "candidate": "陳語倢",
       "party": "台灣民眾黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "文化觀光",
         "文化產業與文創",
@@ -2660,9 +2700,7 @@
         "活化社區文創亮點。",
         "推動傳統市場轉型。"
       ],
-      "related_statements": [
-        "主張以北海岸觀光與文創帶動地方發展。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2703,6 +2741,9 @@
       "office": "縣市議員",
       "candidate": "薛兆基",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化觀光",
         "宗教觀光"
@@ -2714,9 +2755,7 @@
         "於傳統宗教特色區進行低擾民燈光營造。",
         "改善停車、交通、環境衛生及雙語導覽設施。"
       ],
-      "related_statements": [
-        "以宗教文化景點串聯夜間觀光。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2758,6 +2797,9 @@
       "office": "縣市長",
       "candidate": "魏嘉賢",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -2772,9 +2814,7 @@
         "支持部落自主發展文化旅遊與深度體驗。",
         "將資源投入部落文化傳承、青年留鄉與地方觀光永續。"
       ],
-      "related_statements": [
-        "主張讓文化與資源回到部落，建立以部落主體性為核心的文化治理。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2814,6 +2854,9 @@
       "office": "縣市長",
       "candidate": "鄭朝方",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "圖書館",
         "文化設施",
@@ -2824,9 +2867,7 @@
       "concrete_proposals": [
         "推動特色圖書館延伸至全新竹縣。"
       ],
-      "related_statements": [
-        "媒體報導其提出上任後推動特色圖書館。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2868,6 +2909,11 @@
       "office": "縣市長",
       "candidate": "何欣純",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "待查：Google 新聞轉址尚未確認原始報導網址。"
+      ],
       "topics": [
         "舊城活化",
         "文化資產",
@@ -2879,9 +2925,7 @@
         "推動「舊城創新」。",
         "活化並翻轉台中老城區。"
       ],
-      "related_statements": [
-        "提出舊城創新主張。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2922,6 +2966,12 @@
       "office": "縣市長",
       "candidate": "江啟臣",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "官方政見頁將舊城活化、文化產業支持與社區表演列為文化面向。",
+        "待查：Google 新聞轉址尚未確認原始報導網址。"
+      ],
       "topics": [
         "舊城活化",
         "城市文化",
@@ -2938,10 +2988,7 @@
         "建立文化創投與人才孵化機制。",
         "推動巷弄文化小蜜蜂，將表演帶進社區與廟口廣場。"
       ],
-      "related_statements": [
-        "以西區競選據點說明舊城復興藍圖。",
-        "官方政見頁將舊城活化、文化產業支持與社區表演列為文化面向。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -2988,6 +3035,12 @@
       "office": "縣市長",
       "candidate": "江啟臣",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "同一場新住民政策發布由多家媒體報導。",
+        "待查：Google 新聞轉址尚未確認原始報導網址。"
+      ],
       "topics": [
         "新住民文化",
         "多元文化"
@@ -2999,9 +3052,7 @@
         "協助新住民及其子女在台中扎根。",
         "支持以技能／手藝創造經濟機會。"
       ],
-      "related_statements": [
-        "同一場新住民政策發布由多家媒體報導。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3047,6 +3098,9 @@
       "office": "縣市長",
       "candidate": "魏平政",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "文化觀光",
         "地方創生"
@@ -3057,9 +3111,7 @@
         "串聯南彰化四鄉鎮。",
         "打造「吃玩在南彰」觀光品牌。"
       ],
-      "related_statements": [
-        "在政策說明會提出南彰觀光構想。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3101,6 +3153,11 @@
       "office": "縣市長",
       "candidate": "陳亭妃",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "同一場政見發布由勁報與聯合報報導。"
+      ],
       "topics": [
         "文化觀光",
         "地方創生",
@@ -3113,9 +3170,7 @@
         "運用 AI 串聯台南 37 區。",
         "目標讓旅客在台南多住一天。"
       ],
-      "related_statements": [
-        "同一場政見發布由勁報與聯合報報導。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3140,7 +3195,7 @@
       "source_title": "2026/9/1｜勁報｜民進黨臺南市長參選人陳亭妃發表「五大觀光軸」AI政見 串聯37區打造「值得多住一天」的臺南 - 勁報",
       "source_url": "https://twpowernews.com/news_pagein.php?iType=1010&n_id=295240",
       "related_sources": [
-        "https://news.google.com/rss/articles/CBMiWEFVX3lxTE43aDZhQklvTnhZTk5hSEd3ZXNNb3pXd1JxRllsNkJGZ3phbFpTNHNoNWpWS3JVQWFQOFVNSUhkMHNyWE5xREpDYWFVUDN2YnB1Y2tJQThrV0Q?oc=5"
+        "https://udn.com/news/story/124652/9726801?from=udn-relatednews_ch2"
       ],
       "source_type": "新聞報導",
       "last_verified": "2026-09-16",
@@ -3159,6 +3214,9 @@
       "office": "縣市長",
       "candidate": "賴瑞隆",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "文化觀光"
@@ -3169,9 +3227,7 @@
         "提出三項政策打造高雄客家文化城。",
         "打造客庄觀光廊帶。"
       ],
-      "related_statements": [
-        "在客家後援會相關場合提出客家政策。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3195,9 +3251,7 @@
       "published_date": "2026-08-21",
       "source_title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
       "source_url": "https://www.nownews.com/news/6868109",
-      "related_sources": [
-        "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9EeUQ2dG9ZOEhsY1h0c1lNTHhfdGE0ZWxCcUZzR0dLUHU5S1ZNVVBOV1JaTDh3dVQya2dKYmxpS1I2Mzd0ZnM4cVFfejdGaE93WTVDU2tSdEl0RlNFZjdJ?oc=5"
-      ],
+      "related_sources": [],
       "source_type": "新聞報導",
       "last_verified": "2026-09-16",
       "proposer_role": "候選人",
@@ -3215,6 +3269,12 @@
       "office": "縣市長",
       "candidate": "陳瑩",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "黨部與經濟日報均有報導。",
+        "待查：Google 新聞轉址尚未確認原始報導網址。"
+      ],
       "topics": [
         "新住民文化",
         "多元文化",
@@ -3227,9 +3287,7 @@
         "推動參與式預算。",
         "公布四大新住民政見。"
       ],
-      "related_statements": [
-        "在新住民座談公布政策；黨部與經濟日報均有報導。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3273,6 +3331,9 @@
       "office": "縣市長",
       "candidate": "童子瑋",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "多元族群文化",
         "原住民族文化",
@@ -3285,9 +3346,7 @@
         "成立族群關係處，統籌原住民、客家與新住民事務。",
         "推動母語教育向下扎根。"
       ],
-      "related_statements": [
-        "在原民豐年祭與客家義民嘉年華提出上述主張。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3328,6 +3387,9 @@
       "office": "縣市長",
       "candidate": "謝國樑",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "原住民族文化",
         "文化治理"
@@ -3339,9 +3401,7 @@
         "從生活、文化與社福面向支持原住民族。",
         "打造基隆為原住民族第二故鄉。"
       ],
-      "related_statements": [
-        "在基隆原住民豐年祭場合提出相關主張。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3383,6 +3443,9 @@
       "office": "縣市長",
       "candidate": "蘇巧慧",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "多元語言",
@@ -3394,9 +3457,7 @@
         "運用AI推動客語學習。",
         "支持客語保存與傳承。"
       ],
-      "related_statements": [
-        "在客家鄉親後援會成立場合提出相關主張。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3437,6 +3498,9 @@
       "office": "縣市長",
       "candidate": "徐欣瑩",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "客家文化",
         "多元語言",
@@ -3452,9 +3516,7 @@
         "建構客家文化廊道與客庄旅遊。",
         "以校園音樂會與競賽增加客語使用。"
       ],
-      "related_statements": [
-        "提出「講客新竹」四大政策。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3495,6 +3557,11 @@
       "office": "縣市長",
       "candidate": "江啟臣",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "候選人官方政策頁以東豐快速道路與文化觀光描述山城願景；細節以來源頁為準。"
+      ],
       "topics": [
         "文化觀光",
         "地方發展",
@@ -3505,9 +3572,7 @@
       "concrete_proposals": [
         "串接山城交通建設、文化觀光與地方產業發展。"
       ],
-      "related_statements": [
-        "候選人官方政策頁以東豐快速道路與文化觀光描述山城願景；細節以來源頁為準。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3548,6 +3613,9 @@
       "office": "縣市長",
       "candidate": "柯志恩",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
       "topics": [
         "文化觀光",
         "文化產業",
@@ -3561,7 +3629,7 @@
         "推動郵輪經濟與銀髮友善旅遊路線，擴大文化觀光消費與就業。"
       ],
       "related_statements": [
-        "另於原住民族日提出五大原民政策願景，訴求城鄉共好與文化共榮。"
+        "訴求城鄉共好與文化共榮。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -3587,7 +3655,7 @@
       "source_title": "2026/8/1｜柯志恩2026政策網｜文化觀光",
       "source_url": "https://kochihen2026.tw/policy/%E6%96%87%E5%8C%96%E8%A7%80%E5%85%89",
       "related_sources": [
-        "https://news.google.com/rss/articles/CBMiTkFVX3lxTE54M3JDWl9zMmZlbWQyMDFndWJHZVhReDlhZ244MW5iVXVmM1RYMDhtbGt4SXFRQkNNQnJlRTFRY01yU19YYmYzc0I4eUEtdw?oc=5"
+        "https://newtalk.tw/news/view/2026-08-01/1050761"
       ],
       "source_type": "候選人原文",
       "last_verified": "2026-09-17",
@@ -3599,65 +3667,16 @@
       ]
     },
     {
-      "id": "candidate-sheet-draft-20260916-26",
-      "city": "嘉義市",
-      "office": "縣市長",
-      "candidate": "王美惠",
-      "party": "民主進步黨",
-      "topics": [
-        "原住民族文化",
-        "多元語言",
-        "文化教育"
-      ],
-      "summary": "補足原住民族重點學校師資、擴大公費師資培育，以保障族語學習與語言文化傳承。",
-      "policy_argument": "補足原住民族重點學校師資、擴大公費師資培育，以保障族語學習與語言文化傳承。",
-      "concrete_proposals": [
-        "補足原住民族重點學校師資。",
-        "擴大公費師資培育。",
-        "保障族語學習與語言文化傳承。"
-      ],
-      "related_statements": [
-        "針對原住民族重點學校師資與族語學習權提出呼籲。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "2026/8/19｜台灣新聞雲｜王美惠籲補足原住民族重點學校師資 擴大公費師資培育保障族語學習權",
-            "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE95MW50cnhYOXJGU09vU3hNRDFnd1Q1VUNVOVA5eGloNks1UFFQUF85THItak9DejdwQ3g0cFBZNVdRclktSFJR?oc=5"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "2026/8/19｜台灣新聞雲｜王美惠籲補足原住民族重點學校師資 擴大公費師資培育保障族語學習權",
-            "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE95MW50cnhYOXJGU09vU3hNRDFnd1Q1VUNVOVA5eGloNks1UFFQUF85THItak9DejdwQ3g0cFBZNVdRclktSFJR?oc=5"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "2026/8/19｜台灣新聞雲｜王美惠籲補足原住民族重點學校師資 擴大公費師資培育保障族語學習權",
-            "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE95MW50cnhYOXJGU09vU3hNRDFnd1Q1VUNVOVA5eGloNks1UFFQUF85THItak9DejdwQ3g0cFBZNVdRclktSFJR?oc=5"
-          }
-        ]
-      },
-      "published_date": "2026-08-19",
-      "source_title": "2026/8/19｜台灣新聞雲｜王美惠籲補足原住民族重點學校師資 擴大公費師資培育保障族語學習權",
-      "source_url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE95MW50cnhYOXJGU09vU3hNRDFnd1Q1VUNVOVA5eGloNks1UFFQUF85THItak9DejdwQ3g0cFBZNVdRclktSFJR?oc=5",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-09-17",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-26 整合稿發布。"
-      ]
-    },
-    {
       "id": "candidate-tpe-mayor-shen-boyang-cultural-trails-002",
       "city": "臺北市",
       "office": "縣市長",
       "candidate": "沈伯洋",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "官方頁附2026年9月8日記者會簡報；本筆補充既有文化廊道資料的具體措施。"
+      ],
       "topics": [
         "文化資產",
         "地方文史",
@@ -3674,9 +3693,7 @@
         "提供裝備租借、四語導覽與即時步道資訊。",
         "補足捷運站至登山口接駁與數位導覽。"
       ],
-      "related_statements": [
-        "官方頁附2026年9月8日記者會簡報；本筆補充既有文化廊道資料的具體措施。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3719,6 +3736,11 @@
       "office": "縣市長",
       "candidate": "蘇巧慧",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "官方頁未標示發布日期，依人工核定日期登錄。"
+      ],
       "topics": [
         "原住民族文化",
         "族語傳承",
@@ -3736,9 +3758,7 @@
         "擴大返鄉祭儀交通補助。",
         "新增頭目文化傳承事務費。"
       ],
-      "related_statements": [
-        "官方頁未標示發布日期；依人工核定日期登錄。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3773,67 +3793,16 @@
       ]
     },
     {
-      "id": "candidate-hsinchu-mayor-gao-hong-an-culture-001",
-      "city": "新竹市",
-      "office": "縣市長",
-      "candidate": "高虹安",
-      "party": "無黨籍",
-      "topics": [
-        "客家文化",
-        "客語傳承",
-        "文化場館",
-        "社區營造"
-      ],
-      "summary": "表示將以語言扎根、文化推廣、館舍經營及跨域合作打造客語友善環境。",
-      "policy_argument": "讓客語在校園、家庭、社區及公共場域自然使用，使客家文化融入市民日常生活。",
-      "concrete_proposals": [
-        "辦理客語繪本、認證輔導班、親子共學與說故事。",
-        "推動客語社區營造補助。",
-        "辦理客家會館工藝展與講座。",
-        "推出兩款實境解謎遊戲及9場客庄小旅行。"
-      ],
-      "related_statements": [
-        "來源記錄候選人公開發言與已規劃措施。"
-      ],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-            "url": "https://www.cna.com.tw/postwrite/chi/438831"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-            "url": "https://www.cna.com.tw/postwrite/chi/438831"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-            "url": "https://www.cna.com.tw/postwrite/chi/438831"
-          }
-        ]
-      },
-      "published_date": "2026-07-13",
-      "source_title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-      "source_url": "https://www.cna.com.tw/postwrite/chi/438831",
-      "related_sources": [],
-      "source_type": "候選人原文",
-      "last_verified": "2026-10-01",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。"
-      ]
-    },
-    {
       "id": "candidate-kinmen-mayor-chen-yu-zhen-film-001",
       "city": "金門縣",
       "office": "縣市長",
       "candidate": "陳玉珍",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "電影放映涉及兩岸配額及法令限制。"
+      ],
       "topics": [
         "影視文化",
         "文化交流",
@@ -3847,9 +3816,7 @@
         "研議增加兩岸優質電影放映。",
         "活化台開園區空間。"
       ],
-      "related_statements": [
-        "電影放映涉及兩岸配額及法令限制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3889,6 +3856,11 @@
       "office": "縣市長",
       "candidate": "黃世杰",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：預算、期程、執行機制"
+      ],
       "topics": [
         "多元文化",
         "表演藝術",
@@ -3900,9 +3872,7 @@
         "規劃族群文化多元發展項目。",
         "推動演唱會經濟並吸引表演團隊。"
       ],
-      "related_statements": [
-        "報導未揭露預算、期程或執行機制；本站按來源收錄政策方向。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3942,6 +3912,11 @@
       "office": "縣市長",
       "candidate": "張啓楷",
       "party": "台灣民眾黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "政策以商圈活化為主，文化元素為文化商圈與諸羅街區。"
+      ],
       "topics": [
         "文化商圈",
         "地方文化",
@@ -3952,9 +3927,7 @@
       "concrete_proposals": [
         "推動2＋4商圈構想，形成六大商圈發展格局。"
       ],
-      "related_statements": [
-        "政策以商圈活化為主，文化元素為文化商圈與諸羅街區。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -3994,6 +3967,11 @@
       "office": "縣市長",
       "candidate": "吳宗憲",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：文化保存對象、方法、預算、期程"
+      ],
       "topics": [
         "原住民族文化",
         "文化保存",
@@ -4005,9 +3983,7 @@
         "推動原鄉建設。",
         "推動文化保存。"
       ],
-      "related_statements": [
-        "公開說法未說明文化保存的對象、方法、預算或期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4047,6 +4023,11 @@
       "office": "縣市長",
       "candidate": "林國漳",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "本項涉及土地權利與族群治理，與文化治理相關。"
+      ],
       "topics": [
         "原住民族文化",
         "傳統領域",
@@ -4058,9 +4039,7 @@
         "尊重傳統領域土地權利。",
         "落實族人參與機制。"
       ],
-      "related_statements": [
-        "本項涉及土地權利與族群治理，與文化治理相關。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4100,6 +4079,9 @@
       "office": "縣市議員",
       "candidate": "施志昌",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "地方文化",
         "傳統藝術",
@@ -4142,10 +4124,12 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
+      "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為臺中市第1選舉區、民主進步黨候選人；2026年新聞記載其具體文化主張並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為臺中市第1選舉區、民主進步黨候選人；2026年新聞記載其具體文化主張並完成人工審核。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
+        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
       ]
     },
     {
@@ -4154,6 +4138,11 @@
       "office": "縣市長",
       "candidate": "温世政",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：閱讀空間選址、館藏、營運人力、預算"
+      ],
       "topics": [
         "閱讀文化",
         "公共圖書空間",
@@ -4166,9 +4155,7 @@
         "青年創業最高補助30萬元與導師陪伴。",
         "強化技職教育與在地產業連結。"
       ],
-      "related_statements": [
-        "官方頁摘要未提供閱讀空間的選址、館藏、營運人力與預算。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4208,6 +4195,11 @@
       "office": "縣市議員",
       "candidate": "張斯綱",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：修繕範圍、預算、完成期程、社區藝文活動執行機制"
+      ],
       "topics": [
         "文化資產",
         "歷史建築",
@@ -4220,9 +4212,7 @@
         "爭取經費修繕與活化北投車站及士林官邸周邊等地方歷史建築。",
         "推動更多社區藝文活動。"
       ],
-      "related_statements": [
-        "網站未載明修繕範圍、預算、完成期程或社區藝文活動的執行機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4262,6 +4252,11 @@
       "office": "縣市議員",
       "candidate": "彭一書",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：場館面積、藝文設施內容、預算來源、營運方式、完成期程"
+      ],
       "topics": [
         "文化場館",
         "表演藝術",
@@ -4272,9 +4267,7 @@
       "concrete_proposals": [
         "利用土城看守所搬遷後現址打造複合式國際運動藝文中心。"
       ],
-      "related_statements": [
-        "官方新聞未說明場館面積、藝文設施內容、預算來源、營運方式與完成期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4314,6 +4307,9 @@
       "office": "縣市議員",
       "candidate": "余柷青",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [],
       "topics": [
         "文化資產",
         "文化觀光",
@@ -4369,6 +4365,11 @@
       "office": "縣市議員",
       "candidate": "陳秋萍",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：參與對象、執行期程、補助工具、預算規模"
+      ],
       "topics": [
         "地方文化",
         "社區營造",
@@ -4381,9 +4382,7 @@
         "推動在地文化資源多元應用及創意加值。",
         "發揚在地文化特色並形塑社區品牌。"
       ],
-      "related_statements": [
-        "官方頁未載明參與對象、執行期程、補助工具或預算規模。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4423,6 +4422,11 @@
       "office": "縣市議員",
       "candidate": "張以理",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：導覽執行單位、活動頻率、經費來源、成效指標"
+      ],
       "topics": [
         "文化觀光",
         "地方文化",
@@ -4435,9 +4439,7 @@
         "推廣左營歷史人物與地方記憶。",
         "以在地歷史文化帶動文化觀光發展。"
       ],
-      "related_statements": [
-        "新聞未載明導覽執行單位、活動頻率、經費來源或成效指標。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4477,6 +4479,11 @@
       "office": "縣市議員",
       "candidate": "陳慧文",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "官方頁尚未逐項列出量化目標、完成期限與執行分工。"
+      ],
       "topics": [
         "文化觀光",
         "地方文化",
@@ -4491,9 +4498,7 @@
         "發展鳳山文史觀光廊帶。",
         "支援青年創業與扎根。"
       ],
-      "related_statements": [
-        "官方頁明示尚未逐項列出量化目標、完成期限與執行分工。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4533,6 +4538,11 @@
       "office": "縣市議員",
       "candidate": "林盈徹",
       "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：展演空間範圍、期程、經費、營運機制"
+      ],
       "topics": [
         "表演藝術",
         "文化觀光",
@@ -4544,9 +4554,7 @@
         "於海山漁港週邊導入藝術展演空間。",
         "結合藝術展演提升在地觀光量能與就業機會。"
       ],
-      "related_statements": [
-        "候選人網站未列展演空間的場域範圍、期程、經費與營運機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4586,6 +4594,11 @@
       "office": "縣市議員",
       "candidate": "林政賢",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：組織權責、社區推動方式、市場文化定位、預算、期程"
+      ],
       "topics": [
         "多元文化",
         "地方文化",
@@ -4599,9 +4612,7 @@
         "推動里里有特色。",
         "改建南門市場。"
       ],
-      "related_statements": [
-        "新聞未列組織權責、社區推動方式、市場文化定位、預算與期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4642,6 +4653,11 @@
       "office": "縣市議員",
       "candidate": "黃敬平",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：用地範圍、設施規格、預算、營運方式、完成期程"
+      ],
       "topics": [
         "文化場館",
         "表演藝術",
@@ -4654,9 +4670,7 @@
         "設置藝文展演中心。",
         "結合南區行政園區與社福設施形成藝文核心。"
       ],
-      "related_statements": [
-        "新聞未載明展演中心的用地範圍、設施規格、預算、營運方式與完成期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4696,6 +4710,11 @@
       "office": "縣市議員",
       "candidate": "邱愛珊",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：廳舍清單、執行期程、經費、營運機制"
+      ],
       "topics": [
         "文化場館",
         "文化空間",
@@ -4707,9 +4726,7 @@
         "盤點老舊公有廳舍。",
         "依區位與地方需求導入文化機能，避免閒置並提升公共空間使用。"
       ],
-      "related_statements": [
-        "官方政策頁未列廳舍清單、執行期程、經費與營運機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4749,6 +4766,11 @@
       "office": "縣市議員",
       "candidate": "黃佳恬",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：場館時程、經費、營運方式、演藝產業引進機制"
+      ],
       "topics": [
         "文化場館",
         "表演藝術",
@@ -4760,9 +4782,7 @@
         "加速推動台中巨蛋。",
         "引進大型演藝文化產業。"
       ],
-      "related_statements": [
-        "官方政策頁未列巨蛋場館的時程、經費、營運方式及演藝產業引進機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4802,6 +4822,11 @@
       "office": "縣市議員",
       "candidate": "古秀英",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：文化據點位置與數量、期程、經費、部落參與機制"
+      ],
       "topics": [
         "原住民族文化",
         "文化空間",
@@ -4815,9 +4840,7 @@
         "推動文化傳承及增設文化據點，協助世代對話。",
         "推動部落社區營造與部落觀光發展。"
       ],
-      "related_statements": [
-        "官方政策頁未列文化據點的位置、數量、期程、經費與部落參與機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4857,6 +4880,11 @@
       "office": "縣市議員",
       "candidate": "朱元宏",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：空間位置、設施規格、經費、執行期程、族語傳承機制"
+      ],
       "topics": [
         "原住民族文化",
         "表演藝術",
@@ -4871,9 +4899,7 @@
         "增加原民商品曝光度。",
         "強化原住民族族語保留與傳承，並加強民族文化發展。"
       ],
-      "related_statements": [
-        "官方政策頁未列空間位置、設施規格、經費、執行期程與族語傳承機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4913,6 +4939,11 @@
       "office": "縣市議員",
       "candidate": "蔡育輝",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：選址、館藏服務、經費、期程、營運模式"
+      ],
       "topics": [
         "圖書館",
         "文化設施",
@@ -4924,9 +4955,7 @@
         "爭取設立國家圖書館南部分館。",
         "監督其運作避免成為閒置設施。"
       ],
-      "related_statements": [
-        "官方政策頁未列選址、館藏服務、經費、期程與營運模式。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -4966,6 +4995,11 @@
       "office": "縣市議員",
       "candidate": "方一峰",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：文化資產清單、旅遊路線、活動場次、經費、期程"
+      ],
       "topics": [
         "宗教文化",
         "文化資產",
@@ -4980,9 +5014,7 @@
         "推廣大北門沿海漁港、潟湖觀光與在地美食文化。",
         "推動藝文活動舉辦，提升藝術參與機會。"
       ],
-      "related_statements": [
-        "官方政策頁未列文化資產清單、旅遊路線、活動場次、經費與期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5022,6 +5054,11 @@
       "office": "縣市議員",
       "candidate": "歐政豪",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：改造內容、期程、經費、營運方式"
+      ],
       "topics": [
         "文化場館",
         "城市再生",
@@ -5032,9 +5069,7 @@
       "concrete_proposals": [
         "推動臺南文化中心改造升級。"
       ],
-      "related_statements": [
-        "候選人尚未公布改造內容、期程、經費與營運方式。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5074,6 +5109,11 @@
       "office": "縣市議員",
       "candidate": "黃柏霖",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：巡迴路線、場次、合作單位、經費、執行期程"
+      ],
       "topics": [
         "藝文活動",
         "文化近用",
@@ -5084,9 +5124,7 @@
       "concrete_proposals": [
         "讓《美力台灣3D》電影車穿梭高雄。"
       ],
-      "related_statements": [
-        "官方頁未列巡迴路線、場次、合作單位、經費與執行期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5126,6 +5164,11 @@
       "office": "縣市議員",
       "candidate": "鍾易仲",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：客語與音樂人才培育經費、期程、場館分工、績效指標"
+      ],
       "topics": [
         "客家文化",
         "客語傳承",
@@ -5141,9 +5184,7 @@
         "打造流行音樂產業鏈並扶植在地音樂演唱及創作人才。",
         "推動鳳山中城計畫納入藝文特區與藝術村。"
       ],
-      "related_statements": [
-        "官方政策頁未列客語與音樂人才培育的經費、執行期程、場館分工及績效指標。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5184,6 +5225,11 @@
       "office": "縣市議員",
       "candidate": "邱于軒",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：路線範圍、文化據點、解說內容、經費、期程、居民參與機制"
+      ],
       "topics": [
         "海洋文化",
         "文化觀光",
@@ -5196,9 +5242,7 @@
         "規劃觀光路線讓民眾感受大寮林園文化底蘊。",
         "發展大寮紅豆與林園洋蔥等在地物產觀光。"
       ],
-      "related_statements": [
-        "官方政策頁未列路線範圍、文化據點、解說內容、經費、執行期程與居民參與機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5238,6 +5282,11 @@
       "office": "縣市議員",
       "candidate": "王義雄",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：學校地點、課程規劃、族語推廣人力、場域位置、經費、期程"
+      ],
       "topics": [
         "原住民族文化",
         "族語傳承",
@@ -5251,9 +5300,7 @@
         "強化原住民文化復育與族語推廣。",
         "設置原住民主題意象場域，強化原住民族社會認同。"
       ],
-      "related_statements": [
-        "官方政策頁未列學校設置地點、課程規劃、族語推廣人力、場域位置、經費與執行期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5293,6 +5340,11 @@
       "office": "縣市議員",
       "candidate": "陳栢誠",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：老街活化範圍、客家獅傳承方式、經費、期程、社區參與機制"
+      ],
       "topics": [
         "地方文化",
         "文化觀光",
@@ -5306,9 +5358,7 @@
         "延續畚箕窩溪沿岸觀光地帶。",
         "推動湖口客家獅文化扎根。"
       ],
-      "related_statements": [
-        "官方政策頁未列老街活化範圍、客家獅傳承方式、經費、期程與社區參與機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5348,6 +5398,11 @@
       "office": "縣市議員",
       "candidate": "白玉如",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：表演平台場地數量、申請制度、經費、辦理期程、青年支持措施"
+      ],
       "topics": [
         "音樂文化",
         "表演藝術",
@@ -5359,9 +5414,7 @@
         "讓彰化成為音樂之都。",
         "提供街頭藝人及在校學生音樂表演平台。"
       ],
-      "related_statements": [
-        "官方政策頁未列表演平台的場地數量、申請制度、經費、辦理期程與青年支持措施。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5401,6 +5454,11 @@
       "office": "縣市議員",
       "candidate": "簡嘉億",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：藝文活動場域、參與對象、經費、期程、執行指標"
+      ],
       "topics": [
         "藝文活動",
         "音樂文化",
@@ -5412,9 +5470,7 @@
         "發展藝文體育活動。",
         "推動音樂藝術氛圍扎根。"
       ],
-      "related_statements": [
-        "官方政策頁未列藝文活動的辦理場域、參與對象、經費、期程與執行指標。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5454,6 +5510,11 @@
       "office": "縣市議員",
       "candidate": "李世淦",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：教育法案內容、推動層級、經費、期程、師資培育方案"
+      ],
       "topics": [
         "客家文化",
         "客語傳承",
@@ -5465,9 +5526,7 @@
         "從幼兒教育、家庭及師資培育向下扎根。",
         "提出制定客家民族教育法構想。"
       ],
-      "related_statements": [
-        "新聞未列教育法的法案內容、推動層級、經費、期程及師資培育執行方案。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5495,11 +5554,12 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "content_nature": "現任問政／提案",
+      "role_evidence": "聯合新聞網報導明載李世淦於屏東縣議會業務報告與質詢中提出客語教育主張。",
       "corrections": [
         "2026-10-01｜中選會名冊核對為屏東縣第3選舉區、中國國民黨候選人；聯合新聞網報導其在議會提出客語教育與客家民族教育法構想，完成人工審核。",
-        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。",
+        "2026-10-04｜經查來源記載為縣議會質詢，改列現任問政／提案，非本屆競選政見。"
       ]
     },
     {
@@ -5508,6 +5568,11 @@
       "office": "縣市議員",
       "candidate": "鄭光宏",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：六個節點分期修復預算、營運權責、完整期程"
+      ],
       "topics": [
         "文化資產",
         "歷史街區",
@@ -5523,9 +5588,7 @@
         "搭配步行導覽交通接駁與城市小旅行。",
         "要求舊嘉義菸葉廠修復空間盡早開放並作為設計展覽及創意產業使用。"
       ],
-      "related_statements": [
-        "官方網站未列六個節點的分期修復預算、營運權責與完整期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5565,6 +5628,11 @@
       "office": "縣市議員",
       "candidate": "陳傑麟",
       "party": "親民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：部落旅遊路線、祭儀補助額度、文化詮釋、社區參與機制、期程"
+      ],
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -5578,9 +5646,7 @@
         "爭取縣府經費協助鄉公所擴大辦理傳統祭儀。",
         "協助文化健康站爭取長照經費並改善基礎設施及社區關懷據點。"
       ],
-      "related_statements": [
-        "候選人頁未列部落旅遊路線、祭儀補助額度、文化詮釋與社區參與機制及執行期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5620,6 +5686,11 @@
       "office": "縣市議員",
       "candidate": "羅美文",
       "party": "勞動黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "未載明：修復經費、期程、後續營運模式、社區參與機制"
+      ],
       "topics": [
         "文化資產",
         "眷村文化",
@@ -5632,9 +5703,7 @@
         "要求盡速修繕復原湖口裝甲新村。",
         "要求縣府依文化部規定與中央合作，推進裝甲新村修復再利用。"
       ],
-      "related_statements": [
-        "公開紀錄未列修復經費、期程、後續營運模式及社區參與機制。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5659,13 +5728,14 @@
       "source_title": "新竹縣府：羅美文關心湖口裝甲新村修復",
       "source_url": "https://www.hsinchu.gov.tw/News_Content.aspx?n=153&s=255105",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "政府質詢紀錄",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "content_nature": "現任問政／提案",
+      "role_evidence": "新竹縣政府公布縣政總質詢內容，記載羅美文以議員身分提出湖口裝甲新村修復要求。",
       "corrections": [
-        "2026-10-02｜中選會名冊核對為新竹縣第3選舉區勞動黨候選人；新竹縣府公開質詢紀錄明列其要求修繕復原湖口裝甲新村，完成人工審核。"
+        "2026-10-02｜中選會名冊核對為新竹縣第3選舉區勞動黨候選人；新竹縣府公開質詢紀錄明列其要求修繕復原湖口裝甲新村，完成人工審核。",
+        "2026-10-04｜經查來源為縣政總質詢紀錄，改列現任問政／提案。"
       ]
     },
     {
@@ -5674,6 +5744,11 @@
       "office": "縣市議員",
       "candidate": "林彥甫",
       "party": "時代力量",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：文化調查保存方式、導覽或展示內容、執行經費、期程"
+      ],
       "topics": [
         "漁村文化",
         "地方文化",
@@ -5686,9 +5761,7 @@
         "推廣南寮漁村及造船文化。",
         "協助發展漁港觀光。"
       ],
-      "related_statements": [
-        "候選人頁未列文化調查保存方式、導覽或展示內容、執行經費與期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5728,6 +5801,11 @@
       "office": "縣市議員",
       "candidate": "甘崇緯",
       "party": "台灣綠黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：補助資格、文化地景選擇原則、課程設計、經費規模、推動期程"
+      ],
       "topics": [
         "文化教育",
         "文化地景",
@@ -5740,9 +5818,7 @@
         "透過補助引導畢業旅行結合文化地景與政策議題。",
         "避免畢業旅行流於形式，使旅程轉化為社會實踐。"
       ],
-      "related_statements": [
-        "政見未列補助資格、文化地景選擇原則、課程設計、經費規模與推動期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5782,6 +5858,11 @@
       "office": "縣市議員",
       "candidate": "薛兆基",
       "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：主責機關、場址範圍、經費、期程、具體執行機制"
+      ],
       "topics": [
         "眷村文化",
         "青年藝術",
@@ -5796,7 +5877,7 @@
         "推動戶外展演舞台構想。"
       ],
       "related_statements": [
-        "候選人提出持續研議及逐步落實的方向，未列主責機關、場址範圍、經費、期程或具體執行機制。"
+        "候選人提出持續研議及逐步落實的方向。"
       ],
       "field_sources": {
         "policy_argument": [
@@ -5837,6 +5918,11 @@
       "office": "縣市議員",
       "candidate": "張碩芳",
       "party": "中國國民黨",
+      "publish_id": "",
+      "review_status": "AI初審待複核",
+      "editor_notes": [
+        "未載明：作品維護責任分工、預算、兒童藝文資源配置、幼托客語師資、推動期程"
+      ],
       "topics": [
         "公共藝術",
         "文化資產",
@@ -5851,9 +5937,7 @@
         "爭取桃園區兒童藝文資源及青年藝文活動規劃。",
         "要求客語教育向幼托機構扎根。"
       ],
-      "related_statements": [
-        "公開報導未列作品維護的責任分工、預算、兒童藝文資源配置、幼托客語師資及推動期程。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -5885,6 +5969,173 @@
       "role_evidence": "具名新聞列為桃園市議員；非議會個人頁",
       "corrections": [
         "2026-10-02｜已依中選會名冊核對張碩芳為桃園市第1選舉區中國國民黨候選人；來源報導其以現任桃園市議員身分在文化局、客家局工作報告提出質詢。因非議會個人頁，依現行規則列「待判定／現任問政或提案」，於議員任內問政分頁呈現，不計入本屆競選政見。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-councilor-hung-wan-chen-temple-fire-safety-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "洪婉臻",
+      "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
+      "topics": [
+        "宗教文化資產",
+        "公共安全"
+      ],
+      "summary": "洪婉臻指出指南宮火災暴露寺廟與文化資產的消防風險，要求市府全面盤點宮廟消防安全，並建立跨局處預防與協助機制。",
+      "policy_argument": "宮廟消防安全應納入文化資產風險管理，並由市府跨局處建立預防與協助機制。",
+      "concrete_proposals": [
+        "全面檢視臺北市宮廟消防安全，特別納入具文化資產身分者。",
+        "建立文化、建管與消防等跨局處預防及協助機制。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
+            "url": "https://udn.com/news/story/7323/9712958?from=searchresult"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
+            "url": "https://udn.com/news/story/7323/9712958?from=searchresult"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
+            "url": "https://udn.com/news/story/7323/9712958?from=searchresult"
+          }
+        ]
+      },
+      "published_date": "2026-08-25",
+      "source_title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
+      "source_url": "https://udn.com/news/story/7323/9712958?from=searchresult",
+      "related_sources": [],
+      "source_type": "新聞報導",
+      "last_verified": "2026-10-04",
+      "proposer_role": "推定現任議員",
+      "content_nature": "現任問政／提案",
+      "role_evidence": "依中選會本屆名冊與議會個人頁推定為現任議員；此推定並非議會官方認證。",
+      "corrections": [
+        "2026-10-04｜由 civic_policy_calls.csv 既有資料遷入；原資料ID civic-tpe-temple-fire-safety-001；發布ID留空，沿用既有資料例外。"
+      ]
+    },
+    {
+      "id": "candidate-tyc-councilor-li-tsung-hao-guishan-cultural-walk-001",
+      "city": "桃園市",
+      "office": "縣市議員",
+      "candidate": "李宗豪",
+      "party": "民主進步黨",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
+      "topics": [
+        "地方走讀",
+        "文化生態"
+      ],
+      "summary": "李宗豪於議會質詢要求串聯龜山地方文化資源與山林生態，規劃特色走讀路線，結合文化記憶、環境教育與社區參與。",
+      "policy_argument": "龜山地方文化與山林生態可透過走讀路線串聯，並結合環境教育及社區參與。",
+      "concrete_proposals": [
+        "盤點並串聯龜山地方文化資源與山林生態。",
+        "規劃具地方特色的文化生態走讀路線。",
+        "結合環境教育與社區參與。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "龜山文化資源、山林生態豐富 李宗豪盼串聯打造特色走讀路線",
+            "url": "https://twline365.com/2026/08/1213470/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "龜山文化資源、山林生態豐富 李宗豪盼串聯打造特色走讀路線",
+            "url": "https://twline365.com/2026/08/1213470/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "龜山文化資源、山林生態豐富 李宗豪盼串聯打造特色走讀路線",
+            "url": "https://twline365.com/2026/08/1213470/"
+          }
+        ]
+      },
+      "published_date": "2026-08-28",
+      "source_title": "龜山文化資源、山林生態豐富 李宗豪盼串聯打造特色走讀路線",
+      "source_url": "https://twline365.com/2026/08/1213470/",
+      "related_sources": [],
+      "source_type": "議會質詢報導",
+      "last_verified": "2026-10-04",
+      "proposer_role": "推定現任議員",
+      "content_nature": "現任問政／提案",
+      "role_evidence": "依中選會本屆名冊與議會個人頁推定為現任議員；此推定並非議會官方認證。",
+      "corrections": [
+        "2026-10-04｜由 civic_policy_calls.csv 既有資料遷入；原資料ID civic-tao-guishan-cultural-ecology-001；發布ID留空，沿用既有資料例外。"
+      ]
+    },
+    {
+      "id": "candidate-hsinchu-mayor-gao-hong-an-culture-001",
+      "city": "新竹市",
+      "office": "縣市長",
+      "candidate": "高虹安",
+      "party": "無黨籍",
+      "publish_id": "",
+      "review_status": "人工審核",
+      "editor_notes": [],
+      "topics": [
+        "客家文化",
+        "客語傳承",
+        "文化場館",
+        "社區營造"
+      ],
+      "summary": "表示將以語言扎根、文化推廣、館舍經營及跨域合作打造客語友善環境。",
+      "policy_argument": "讓客語在校園、家庭、社區及公共場域自然使用，使客家文化融入市民日常生活。",
+      "concrete_proposals": [
+        "辦理客語繪本、認證輔導班、親子共學與說故事。",
+        "推動客語社區營造補助。",
+        "辦理客家會館工藝展與講座。",
+        "推出兩款實境解謎遊戲及9場客庄小旅行。"
+      ],
+      "related_statements": [
+        "來源記錄候選人公開發言與已規劃措施。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+            "url": "https://www.cna.com.tw/postwrite/chi/438831"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+            "url": "https://www.cna.com.tw/postwrite/chi/438831"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+            "url": "https://www.cna.com.tw/postwrite/chi/438831"
+          }
+        ]
+      },
+      "published_date": "2026-07-13",
+      "source_title": "深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
+      "source_url": "https://www.cna.com.tw/postwrite/chi/438831",
+      "related_sources": [],
+      "source_type": "政府新聞稿",
+      "last_verified": "2026-10-01",
+      "proposer_role": "候選人",
+      "content_nature": "現任首長施政",
+      "role_evidence": "現任新竹市長，2026 登記參選連任",
+      "corrections": [
+        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。",
+        "2026-10-04｜依使用者核定保留並改列現任首長施政。"
       ]
     }
   ]
