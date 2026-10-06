@@ -10,6 +10,9 @@
     "親民黨": {"short": "親民黨", "color": "#FF6310"},
     "新黨": {"short": "新黨", "color": "#FFD700", "outline": "#6B6248"},
     "台聯黨": {"short": "台聯", "color": "#C69E6A"},
+    "台灣綠黨": {"short": "綠黨", "color": "#3AB483"},
+    "社會民主黨": {"short": "社民黨", "color": "#FF3366"},
+    "勞動黨": {"short": "勞動黨", "color": "#FF0000", "note": "維基政黨色只標 red，取純紅"},
     "無黨籍": {"short": "無黨籍", "color": "#8C8F84", "hollow": true, "note": "無政黨色，以空心圈表示，避免與民眾黨的青色混淆"}
   },
   "_other": {"short": "其他政黨", "color": "#7D6F8F"}
