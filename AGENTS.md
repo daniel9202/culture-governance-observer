@@ -10,14 +10,17 @@
 
 ## 工作環境
 
-- **唯一工作機是 Danasus。** 其他電腦或手機一律用遠端連線（Remote Control 等）連到 Danasus 上的 session。不要在其他裝置 clone，也**不要用 OneDrive 或 Google Drive 同步 repo**：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。
-- 兩個工作端在 Danasus 上各用一個工作目錄，共用同一個 `.git`：
+- **主要工作機是 Danasus，其他電腦也可以直接 clone 工作；同步只透過 GitHub。** 不要用 OneDrive 或 Google Drive 同步 repo：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。手機一律用遠端連線。
+- **同一時間只在一台電腦工作。** 換電腦前，把兩端的工作都 commit 並 push；還沒完成、不能上線的推到備份分支（設計端 `origin/design`、資料端 `origin/data-wip`），不要推 `main`。到另一台開工先 `git fetch origin`，再 rebase 到 `origin/main` 或取回備份分支。
+- **只在 Danasus 做的事**：Codex 的排程自動化（Sheet 補資料）、Apps Script 觸發器、clasp 推送與部署。憑證與本機檔案（`.secrets/`、`.clasp.json`、`backups/`、`.claude/`）不進 git，也不要複製到其他電腦，避免兩台同時跑自動化或推送 Apps Script。
+- Danasus 上兩個工作端各用一個工作目錄，共用同一個 `.git`：
 
   | 工作端 | 目錄 | 分支 |
   | --- | --- | --- |
   | 資料端 | `D:\Projects\文化治理觀察站` | `main` |
   | 設計端 | `D:\Projects\文化治理觀察站-design`（git worktree） | `design` |
 
+  其他電腦照同樣分法：資料端在 `main`，設計端用 `git worktree add -b design ../文化治理觀察站-design origin/main` 開第二個目錄（已有 `origin/design` 備份時改從它開）；只用一個 AI 的話，一個 clone 也可以，但開工前要確認目前在哪個分支。
 - 不要刪除對方的工作目錄，也不要在自己的目錄切到對方的分支。
 - 建置只需要 Node 和 Python：`npm run build`（驗證 CSV、重建 `data/*.json` 與 `dist/`）。
 
