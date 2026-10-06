@@ -49,8 +49,5 @@ const dataFiles = [
 
 for (const file of siteFiles) cpSync(resolve(root, file), resolve(dist, file));
 for (const file of dataFiles) cpSync(resolve(root, "data", file), resolve(dist, "data", file));
-if (existsSync(resolve(root, "data", "inbox"))) {
-  cpSync(resolve(root, "data", "inbox"), resolve(dist, "data", "inbox"), { recursive: true });
-}
 
 console.log("site build passed");
