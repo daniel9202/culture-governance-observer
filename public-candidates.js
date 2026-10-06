@@ -78,7 +78,8 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
   }));
 };
 // 議員任內文化問政（非本屆政見）收在「現任追蹤」；地圖與議員頁依縣市計人數並連過去。
-window.incumbentNamesByCity=records=>records.reduce((map,record)=>map.set(record.city,(map.get(record.city)||new Set).add(record.candidate)),new Map);
+// 只算議員；縣市長的任內施政另列在現任追蹤首長分頁。
+window.incumbentNamesByCity=records=>records.filter(record=>record.office!=='縣市長').reduce((map,record)=>map.set(record.city,(map.get(record.city)||new Set).add(record.candidate)),new Map);
 window.incumbentLink=(count,city,className='incumbent-link')=>count?`<a class="${className}" href="fulfillment.html?tab=council${city?`&city=${encodeURIComponent(city)}`:''}">${city?'本縣市':''}另有 ${count} 位議員的任內文化問政紀錄（非本屆政見）→</a>`:'';
 window.loadCandidateDataset=async()=>{
   const [staticData,sharedData]=await Promise.all([
