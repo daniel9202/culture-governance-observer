@@ -40,7 +40,7 @@ const siteFiles = [
   "councilors.html", "candidate-list.js", "public-candidates.js", "civic.html",
   "civic.js", "methodology.html", "updates.html",
   "fulfillment.html", "fulfillment.js", "regions.html",
-  "regions.js", "region.html", "region.js",
+  "regions.js", "region.html", "region.js", "candidate.html", "candidate.js",
 ];
 const dataFiles = [
   "candidates.json", "shared_policy_groups.json", "civic_policy_calls.json", "governments.json",

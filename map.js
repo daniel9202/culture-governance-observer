@@ -16,7 +16,7 @@ const partyInfo=party=>{
   return {...item,fill:item.hollow?'#ffffff':item.color,ring:item.hollow?'#55584e':(item.outline||'')};
 };
 const partyStyle=info=>`--party:${info.color};--party-fill:${info.fill};--party-ring:${info.ring||'transparent'}`;
-const OFFICES={mayor:{label:'縣市長',page:'mayors.html',test:record=>!String(record.office).includes('議員')},councilor:{label:'縣市議員',page:'councilors.html',test:record=>String(record.office).includes('議員')}};
+const OFFICES={mayor:{label:'縣市長',test:record=>!String(record.office).includes('議員')},councilor:{label:'縣市議員',test:record=>String(record.office).includes('議員')}};
 // 附圖內的候選人圓點位置（避開島嶼輪廓）；align 為圓點排列方向
 const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:236,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
 const SVG_NS='http://www.w3.org/2000/svg';
@@ -111,11 +111,12 @@ function hideTooltip(){document.getElementById('mapTooltip').hidden=true}
 function candidateCard(item){
   const party=partyInfo(item.party),summary=item.summary||item.policy_arguments[0]||'';
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
-  return `<article class="map-candidate" style="${partyStyle(party)}">
+  return `<a class="map-candidate" href="${esc(candidateUrl(item))}" style="${partyStyle(party)}">
     <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span></div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
     ${summary?`<p>${esc(summary)}</p>`:''}
     <div class="map-topics">${item.topics.slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
-  </article>`;
+    <span class="map-candidate-more">看政見與來源 →</span>
+  </a>`;
 }
 
 function renderDetail(){
@@ -125,11 +126,12 @@ function renderDetail(){
   const missingNote=missing.length?`<p class="map-detail-missing">${office==='mayor'?`尚未收錄文化政策：${nameList(missing,12)}`:`另有 ${missing.length} 位登記參選人尚未收錄文化政策`}</p>`:'';
   const switchLink=otherCount?`<button type="button" class="map-detail-switch" data-switch="${other}">此縣市另有 ${otherCount} 位${OFFICES[other].label}候選人 →</button>`:'';
   const incumbentNote=incumbentLink((incumbents.get(city)||new Set).size,city,'map-detail-switch');
+  const regionLink=`<a class="map-detail-link" href="${regionUrl(city)}">${esc(city)}地方頁：預算、統計與全部候選人 →</a>`;
   const foot=switchLink||incumbentNote?`<div class="map-detail-foot">${switchLink}${incumbentNote}</div>`:'';
   if(!city){detail.innerHTML='<p class="kicker">選擇縣市</p><h2>從地圖開始</h2><p class="map-detail-lead">點選地圖上的縣市，查看提出文化政策的候選人與政黨。</p>';return}
   detail.innerHTML=`<p class="kicker">${esc(REGION_OF[city]||'')} / ${OFFICES[office].label}</p><h2>${esc(city)}</h2>`+(list.length
-    ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p><div class="map-candidates">${list.map(candidateCard).join('')}</div>${missingNote}<a class="map-detail-link" href="${OFFICES[office].page}?city=${encodeURIComponent(city)}">查看完整政見與來源 ↗</a>`
-    :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}`)+foot;
+    ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p><div class="map-candidates">${list.map(candidateCard).join('')}</div>${missingNote}${regionLink}`
+    :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}${regionLink}`)+foot;
   detail.querySelector('[data-switch]')?.addEventListener('click',event=>setOffice(event.currentTarget.dataset.switch));
 }
 
@@ -147,13 +149,14 @@ function setOffice(next){
   drawMap();renderDetail();renderLegend();renderParties();
 }
 
-const chips=list=>list.length?list.map(item=>`<span class="compare-chip" style="${partyStyle(partyInfo(item.party))}"><i></i>${esc(item.candidate)}<small>${esc(partyInfo(item.party).short)}</small></span>`).join(''):'<span class="compare-none">尚未收錄</span>';
+const chips=list=>list.length?list.map(item=>`<a class="compare-chip" href="${esc(candidateUrl(item))}" style="${partyStyle(partyInfo(item.party))}"><i></i>${esc(item.candidate)}<small>${esc(partyInfo(item.party).short)}</small></a>`).join(''):'<span class="compare-none">尚未收錄</span>';
 function renderCompare(){
   document.getElementById('compareList').innerHTML=REGIONS.map(([region,cities])=>`<div class="compare-region"><h3>${region}</h3>${cities.map(city=>{
     const mayors=byOffice.mayor.get(city)||[],councilors=byOffice.councilor.get(city)||[];
-    return `<button type="button" class="compare-row${mayors.length||councilors.length?'':' is-empty'}" data-city="${esc(city)}"><span class="compare-city">${esc(city)}</span><span class="compare-cell" data-label="縣市長"><span class="compare-ratio">${mayors.length}/${registeredIn('mayor',city).length}</span>${chips(mayors)}</span><span class="compare-cell" data-label="議員"><span class="compare-ratio">${councilors.length}/${registeredIn('councilor',city).length}</span>${chips(councilors)}</span></button>`;
+    // 縣市名稱在地圖上選取；姓名連到候選人頁（連結不能放在按鈕裡，所以整列不再是按鈕）
+    return `<div class="compare-row${mayors.length||councilors.length?'':' is-empty'}" data-city="${esc(city)}"><button type="button" class="compare-city" data-city="${esc(city)}" aria-label="在地圖上查看${esc(city)}">${esc(city)}<span aria-hidden="true">↑</span></button><span class="compare-cell" data-label="縣市長"><span class="compare-ratio">${mayors.length}/${registeredIn('mayor',city).length}</span>${chips(mayors)}</span><span class="compare-cell" data-label="議員"><span class="compare-ratio">${councilors.length}/${registeredIn('councilor',city).length}</span>${chips(councilors)}</span></div>`;
   }).join('')}</div>`).join('');
-  document.querySelectorAll('.compare-row').forEach(row=>row.addEventListener('click',()=>selectCity(row.dataset.city,{scroll:true})));
+  document.querySelectorAll('.compare-city').forEach(button=>button.addEventListener('click',()=>selectCity(button.dataset.city,{scroll:true})));
 }
 
 function partyTotals(){

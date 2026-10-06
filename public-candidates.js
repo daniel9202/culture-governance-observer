@@ -90,3 +90,27 @@ window.loadCandidateDataset=async()=>{
   const records=staticData.records||[];
   return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'),shared_policy_groups:sharedData.records||[]};
 };
+// 候選人卡片與網址：縣市長／議員列表、地方頁、候選人頁共用。
+// 包在區塊內，避免和各頁自己宣告的 escapeHtml 等常數撞名。
+{
+  const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+  const safe=url=>{try{const parsed=new URL(url);return ['http:','https:'].includes(parsed.protocol)?parsed.href:'#'}catch{return '#'}};
+  const bullets=(values,emptyText)=>values.length?`<ul>${values.map(value=>`<li>${esc(value)}</li>`).join('')}</ul>`:`<p>${esc(emptyText)}</p>`;
+  const sourceHeadline=(headline,outlet)=>headline.replace(` - ${outlet}`,'').replace(/\s*-\s*(政治|地方|生活|社會|文化|財經|國際|娛樂|焦點)\s*$/,'').trim();
+  const sourceContent=(source,index)=>{
+    const title=String(source.title||`來源連結 ${index+1}`).trim(),parts=title.split('｜').map(part=>part.trim()).filter(Boolean);
+    if(/^\d{4}\/\d{1,2}\/\d{1,2}$/.test(parts[0]||'')&&parts.length>=3)return `<span class="source-date">${esc(parts[0])}</span><span class="source-outlet">${esc(parts[1])}</span><span class="source-headline">${esc(sourceHeadline(parts.slice(2).join('｜'),parts[1]))}</span>`;
+    return `<span class="source-headline">${esc(title)}</span>`;
+  };
+  const sourceList=record=>record.sources.length?`<ul class="source-list">${record.sources.map((source,index)=>`<li><a class="source-link" href="${esc(safe(source.url))}" target="_blank" rel="noopener">${sourceContent(source,index)}<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
+  const sharedPolicyList=policies=>policies.map(policy=>`<section class="shared-policy-item"><h5>${esc(policy.title)}</h5><p>${esc(policy.summary)}</p>${bullets(policy.concrete_proposals||[],'尚未收錄具體主張。')}<a href="${esc(safe(policy.source_url))}" target="_blank" rel="noopener">${esc(policy.source_title||'查看共同政見來源')} ↗</a></section>`).join('');
+  const sharedPolicySection=(title,policies,open=false)=>policies.length?`<details class="policy-layer policy-shared"${open?' open':''}><summary><h4>${title}</h4><span class="shared-toggle">${policies.length} 項</span></summary>${sharedPolicyList(policies)}</details>`:'';
+  window.officeKey=office=>String(office).includes('議員')?'councilor':'mayor';
+  window.candidateUrl=record=>`candidate.html?${new URLSearchParams({city:record.city,office:officeKey(record.office),name:record.candidate})}`;
+  window.regionUrl=city=>`region.html?city=${encodeURIComponent(city)}`;
+  window.renderCandidateCard=(x,{showCity=true,linkName=true,openShared=false}={})=>{
+    const name=linkName?`<a class="candidate-name-link" href="${esc(candidateUrl(x))}">${esc(x.candidate)}</a>`:esc(x.candidate);
+    const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
+    return `<article class="card candidate-card"><div class="card-meta">${pendingReviewTag(x)}${showCity?`<span class="tag">${esc(x.city)}</span>`:''}<span class="tag">${esc(x.office)}</span>${x.topics.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span><div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'待查核')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+  };
+}
