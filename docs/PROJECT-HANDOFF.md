@@ -181,7 +181,7 @@ npm run build
 
 | 狀態 | 檔案 | 判讀 |
 | --- | --- | --- |
-| 分支 `review-console-wip`（`b1a56f5`，已推上 GitHub） | `apps-script/Index.html` | 原本在資料端資料夾、未提交的審核台修改：「準備上架」工作區、審核後只移除該張卡片不整頁重載。設計端在本機以假的 `google.script.run` 測過並加上三項修正（在「準備上架」存檔後卡片不再消失、退回待審核時「準備上架」計數會扣、開頁讀試算表從 3 次減為 2 次）。**尚未部署到 Apps Script，也未合併進 `main`；由資料端接手**：合併後用 clasp 推測試部署，使用者實測，再正式部署。資料端資料夾裡的 `apps-script/Index.html` 是 `main` 上的舊版，合併前不要從那裡推 Apps Script。 |
+| 已合併並推送測試程式（2026-10-07；main commit `460b90e`） | `apps-script/Code.gs`、`apps-script/Index.html` | 包含「準備上架」工作區、只看事後補審篩選，以及統計卡片「全部」標籤。2026-10-07 已以 clasp push 測試程式；正式部署未變更，待使用者實測後再決定是否更新正式部署。 |
 | 未追蹤 | `backups/` | 含 `cloudflare-d1-20260914/` 的 D1 schema 與資料快照。視為本機備份，在確認資料敏感性與需求前不要加入版本庫。 |
 
 前台資源版本參數（改檔時要同步更新各 HTML）：`styles.css?v=20261002-9`；`nav.js` 為 `20261003-1`；`public-candidates.js`、`map.js`、`candidate-list.js`、`app.js`、`fulfillment.js` 為 `20261002-8`。
@@ -287,7 +287,7 @@ npm run build
 - 資料方法頁的「政見實現追蹤」小節標題（說明首長查核方法）未改；如要補充議員分頁的方法說明，另行處理。
 
 1. **中選會審定名單**：10/16 前完成資格審查、10/23 號次抽籤。審定名單公告後，下載新的 PDF 重跑 `scripts/import_cec_registrations.py`，並更新 `--as-of` 與 `map.html` 底部「統計口徑」的人數和日期文字。
-2. **審核台修改（資料端接手）**：`review-console-wip` 分支的 `apps-script/Index.html` 在原 HTML 結尾追加了兩段覆寫式 script，設計端已在本機以假資料測過並修正（見「目前 Git 與工作進度」）。資料端合併後用 clasp 推測試部署，使用者實測，再正式部署；之後可考慮整理成單一腳本。
+2. **審核台修改**：已於 2026-10-07 合併 `review-console-wip` 並以 clasp 推送測試程式，來源 main commit `460b90e`；使用者實測「全部」標籤及事後補審篩選後，再決定是否正式部署。之後可考慮整理成單一腳本。
 3. **Cloudflare**：前台相依已於 2026-10-03 移除。剩下 `cloudflare/` 資料夾與帳號上的 Worker、D1 是否刪除或停用，待使用者決定。若日後需要造訪統計，要另選方案並更新各頁 CSP。
 4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
 5. **文件**：把 `docs/manual-update.md` 改成符合 Google Sheet／Apps Script 的現行流程（見下節）。
