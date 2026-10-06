@@ -31,7 +31,9 @@ function addDuplicateHints(rows) {
 }
 
 function doGet() {
-  return HtmlService.createHtmlOutputFromFile('Index').setTitle('文化治理觀察站｜雲端審核台').addMetaTag('viewport', 'width=device-width, initial-scale=1');
+  const page = HtmlService.createHtmlOutputFromFile('Index');
+  page.append('<script>(function(){const select=document.createElement("select");select.id="manualNoteFilter";select.setAttribute("aria-label","人工備註篩選");select.add(new Option("全部人工備註","all"));select.add(new Option("只看事後補審","backfill"));document.querySelector(".filters").appendChild(select);let previousQuery="";select.addEventListener("change",function(){const query=document.getElementById("query");if(select.value==="backfill"){previousQuery=query.value;query.value="事後補審";query.disabled=true;}else{query.value=previousQuery;query.disabled=false;}query.dispatchEvent(new Event("input",{bubbles:true}));});})();</script>');
+  return page.setTitle('文化治理觀察站｜雲端審核台').addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
 
 function getDashboard(filters) {
@@ -52,7 +54,7 @@ function getDashboard(filters) {
     if (filters.city && filters.city !== 'all' && row['縣市'] !== filters.city) return false;
     if (filters.kind && filters.kind !== 'all' && row['資料類型'] !== filters.kind) return false;
     const query = String(filters.query || '').toLowerCase().trim();
-    return !query || [row['來源標題'], row['AI摘要'], row['候選人／提出者'], row['縣市']].join(' ').toLowerCase().includes(query);
+    return !query || [row['來源標題'], row['AI摘要'], row['候選人／提出者'], row['縣市'], row['人工備註']].join(' ').toLowerCase().includes(query);
   });
   return {counts, items: filtered.slice(0, 200), cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
 }
