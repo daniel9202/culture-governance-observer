@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import csv
+import io
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -18,6 +20,25 @@ CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任�
 def rows(name):
     with (INPUT / name).open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
+
+def baseline_candidate_ids():
+    """Load committed candidate IDs so only newly added rows require publish_id immediately."""
+    try:
+        result = subprocess.run(
+            ["git", "show", "HEAD:data/input/candidates.csv"],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8-sig",
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise ValueError("無法讀取 Git HEAD 的 candidates.csv，不能區分既有與新增資料") from exc
+    return {
+        (row.get("id") or "").strip()
+        for row in csv.DictReader(io.StringIO(result.stdout))
+        if (row.get("id") or "").strip()
+    }
 
 def required(row, fields, label):
     missing = [field for field in fields if not row.get(field, "").strip()]
@@ -77,11 +98,25 @@ def ratio(part, total):
 
 def build_candidates():
     records = []
+    baseline_ids = baseline_candidate_ids()
+    missing_legacy_publish_ids = []
+    seen_publish_ids = set()
     for index, row in enumerate(rows("candidates.csv"), start=2):
         if not any(row.values()):
             continue
         label = f"candidates.csv row {index}"
         required(row, ["id", "city", "office", "candidate", "party", "summary", "published_date", "source_title", "source_url", "last_verified", "proposer_role", "content_nature", "role_evidence"], label)
+        if "publish_id" not in row:
+            raise ValueError("candidates.csv: missing publish_id column")
+        publish_id = (row.get("publish_id") or "").strip()
+        if publish_id:
+            if publish_id in seen_publish_ids:
+                raise ValueError(f"{label}: duplicate publish_id {publish_id}")
+            seen_publish_ids.add(publish_id)
+        elif row["id"] not in baseline_ids and not (row.get("correction_log", "") or "").startswith("2026-10-04｜由 civic_policy_calls.csv 既有資料遷入；"):
+            raise ValueError(f"{label}: new record requires publish_id")
+        else:
+            missing_legacy_publish_ids.append(index)
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
