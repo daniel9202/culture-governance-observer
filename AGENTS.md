@@ -12,7 +12,12 @@
 
 - **主要工作機是 Danasus，其他電腦也可以直接 clone 工作；同步只透過 GitHub。** 不要用 OneDrive 或 Google Drive 同步 repo：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。手機一律用遠端連線。
 - **同一時間只在一台電腦工作。** 換電腦前，把兩端的工作都 commit 並 push；還沒完成、不能上線的推到備份分支（設計端 `origin/design`、資料端 `origin/data-wip`），不要推 `main`。到另一台開工先 `git fetch origin`，再 rebase 到 `origin/main` 或取回備份分支。
-- **只在 Danasus 做的事**：Codex 的排程自動化（Sheet 補資料）、Apps Script 觸發器、clasp 推送與部署。憑證與本機檔案（`.secrets/`、`.clasp.json`、`backups/`、`.claude/`）不進 git，也不要複製到其他電腦，避免兩台同時跑自動化或推送 Apps Script。
+- **只在 Danasus 做的事**：Codex 的排程自動化（Sheet 補資料）、建立 Apps Script 觸發器。`backups/`、`.claude/` 只留在 Danasus，不進 git，也不要複製到其他電腦。
+- **兩台都可以用 clasp 推審核台**，但 `clasp push` 會整份覆蓋 Google 上的程式，不會合併，所以：
+  1. 推之前先 `git pull`，只從 `main`（或使用者指定、比 `main` 更新的分支）推。
+  2. 審核台的修改一律先 commit 進 git 再推，不在 Google 編輯器直接改。
+  3. 每次推送或部署都記在 `docs/PROJECT-HANDOFF.md`：commit、推到測試還是正式、部署版本號；推之前先對照最近一筆。
+  4. 每台電腦自己 `clasp login`、自己建 `.clasp.json`；scriptId 與憑證不進 git、不寫進文件或聊天，也不從別台複製憑證檔。
 - Danasus 上兩個工作端各用一個工作目錄，共用同一個 `.git`：
 
   | 工作端 | 目錄 | 分支 |
