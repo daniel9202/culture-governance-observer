@@ -1,32 +1,13 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-03",
+  "last_updated": "2026-10-07",
   "records": [
-    {
-      "id": "civic-tpe-temple-fire-safety-001",
-      "city": "臺北市",
-      "proposer": "洪婉臻",
-      "proposer_type": "臺北市議員／公共倡議者",
-      "topics": [
-        "宗教文化資產",
-        "公共安全"
-      ],
-      "summary": "洪婉臻指出指南宮火災暴露寺廟與文化資產的消防風險，要求市府全面盤點宮廟消防安全，並建立跨局處預防與協助機制。",
-      "requested_action": "全面檢視臺北市宮廟消防安全，特別納入具文化資產身分者。||建立文化、建管與消防等跨局處預防及協助機制。",
-      "published_date": "2026-08-25",
-      "source_title": "指南宮大火敲響消防隱憂　洪婉臻籲檢視北市1905間寺廟",
-      "source_url": "https://udn.com/news/story/7323/9712958?from=searchresult",
-      "source_type": "新聞報導",
-      "last_verified": "2026-09-17",
-      "corrections": [
-        "2026-09-17：依來源補入寺廟消防與文化資產保存訴求。"
-      ]
-    },
     {
       "id": "civic-ntpc-magang-preservation-001",
       "city": "新北市",
       "proposer": "馬崗聚落居民與文資倡議團體",
       "proposer_type": "民間團體／居民",
+      "review_status": "人工審核",
       "topics": [
         "聚落文化資產",
         "海洋文化"
@@ -47,6 +28,7 @@
       "city": "宜蘭縣",
       "proposer": "宜蘭文史工作者與文化團體",
       "proposer_type": "民間團體／文史工作者",
+      "review_status": "人工審核",
       "topics": [
         "文化資產保存",
         "私人產權"
@@ -63,30 +45,11 @@
       ]
     },
     {
-      "id": "civic-tao-guishan-cultural-ecology-001",
-      "city": "桃園市",
-      "proposer": "李宗豪",
-      "proposer_type": "桃園市議員／公共倡議者",
-      "topics": [
-        "地方走讀",
-        "文化生態"
-      ],
-      "summary": "李宗豪主張串聯龜山的地方文化資源與山林生態，規劃具地方特色的走讀路線，讓文化記憶、環境教育與社區參與結合。",
-      "requested_action": "提升對地方傳統文化團體的補助與輔導。||加速協和磚廠文資公園規劃並協調同步開放。||串聯憲光二村、眷村故事館、曹家洋樓與大棟山，規劃龜山文化生態走讀路線。",
-      "published_date": "2026-08-28",
-      "source_title": "龜山文化資源、山林生態豐富 李宗豪盼串聯打造特色走讀路線",
-      "source_url": "https://twline365.com/2026/08/1213470/",
-      "source_type": "議會質詢報導",
-      "last_verified": "2026-09-17",
-      "corrections": [
-        "2026-09-17：依質詢內容補入傳統文化團體、文資公園與走讀路線訴求。"
-      ]
-    },
-    {
       "id": "civic-hsc-hakka-development-001",
       "city": "新竹縣",
       "proposer": "新竹縣在地民間團體與連署參與者",
       "proposer_type": "民間團體／居民",
+      "review_status": "人工審核",
       "topics": [
         "客家文化資產",
         "開發保存"
@@ -107,6 +70,7 @@
       "city": "嘉義市",
       "proposer": "嘉義地方文史人士與居民",
       "proposer_type": "民間團體／居民",
+      "review_status": "人工審核",
       "topics": [
         "地方記憶",
         "文化資產"
