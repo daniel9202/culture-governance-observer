@@ -4,13 +4,13 @@
 
 ## `candidates.csv`
 
-每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`proposer_role`、`content_nature`、`role_evidence`、`correction_log`、`related_sources`。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄訪談、記者會或其他可核實但未必構成承諾的相關發言。後兩欄多項皆以 `||` 分隔。`office` 目前使用 `縣市長` 與 `縣市議員` 兩種值，網站據此分別呈現於首頁與議員政見頁。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。
+每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`publish_id`、`review_status`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`editor_notes`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`proposer_role`、`content_nature`、`role_evidence`、`correction_log`、`related_sources`。`publish_id` 對應「審核資料」中的發布ID與「發布紀錄」中的發布ID；新資料必填，既有資料暫缺時建置會警告，從其他正式資料表遷入的既有資料亦適用舊資料警告規則。`review_status` 可為 `人工審核` 或 `AI初審待複核`；空值等同 `人工審核`。`editor_notes` 記錄本站的檢核與編輯備註，與候選人發言分開呈現；多項以 `||` 分隔，建置輸出為陣列。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄候選人或團隊可核實、但未必構成承諾的公開說法。上述多項欄位皆以 `||` 分隔。`office` 目前使用 `縣市長` 與 `縣市議員` 兩種值，網站據此分別呈現於首頁與議員政見頁。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。
 
-`proposer_role` 供前台標示來源中的提出身分，只能使用 `候選人`、`推定現任議員`、`待判定`。`content_nature` 區分資料語境，只能使用 `本屆競選政見`、`現任議員個人頁內容`、`現任問政／提案`。`role_evidence` 必須說明判定依據；「推定現任議員」僅適用於同時核對到中選會本屆名冊與議會個人頁者，並非議會提供的現任身分保證。
+`proposer_role` 供前台標示來源中的提出身分，只能使用 `候選人`、`推定現任議員`、`待判定`。`content_nature` 區分資料語境，可使用 `本屆競選政見`、`現任議員個人頁內容`、`現任問政／提案`；`現任首長施政` 僅適用於 `office＝縣市長`，呈現現任首長任內文化施政，不計入本屆競選政見。`role_evidence` 必須說明判定依據；「推定現任議員」僅適用於同時核對到中選會本屆名冊與議會個人頁者，並非議會提供的現任身分保證。
 
 ## `civic_policy_calls.csv`
 
-每筆記錄包含：`id`、`city`、`proposer`、`proposer_type`、`topics`、`summary`、`requested_action`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`correction_log`。此類資料記錄地方居民或團體的政策訴求，不代表候選人立場。
+每筆記錄包含：`id`、`city`、`proposer`、`proposer_type`、`review_status`、`topics`、`summary`、`requested_action`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`correction_log`。`review_status` 可為 `人工審核` 或 `AI初審待複核`；空值等同 `人工審核`。此類資料記錄地方居民或團體的政策訴求，不代表候選人立場。
 
 ## `governments.csv`
 

@@ -15,7 +15,8 @@ INPUT = ROOT / "data" / "input"
 OUTPUT = ROOT / "data"
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PROPOSER_ROLES = {"候選人", "推定現任議員", "待判定"}
-CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任問政／提案"}
+CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任問政／提案", "現任首長施政"}
+REVIEW_STATUSES = {"人工審核", "AI初審待複核"}
 
 def rows(name):
     with (INPUT / name).open(encoding="utf-8-sig", newline="") as f:
@@ -122,6 +123,10 @@ def build_candidates():
         valid_url(row["source_url"], label)
         valid_choice(row["proposer_role"], PROPOSER_ROLES, "proposer_role", label)
         valid_choice(row["content_nature"], CONTENT_NATURES, "content_nature", label)
+        if row["content_nature"] == "現任首長施政" and row["office"] != "縣市長":
+            raise ValueError(f"{label}: 現任首長施政 is only valid when office is 縣市長")
+        review_status = (row.get("review_status") or "").strip() or "人工審核"
+        valid_choice(review_status, REVIEW_STATUSES, "review_status", label)
         related_sources = [x.strip() for x in (row.get("related_sources") or "").split("|") if x.strip()]
         for source in related_sources:
             valid_url(source, label)
@@ -129,6 +134,7 @@ def build_candidates():
         argument = (row.get("policy_argument") or "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
         proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()] or [row["summary"]]
         statements = [x.strip() for x in (row.get("related_statements") or "").split("||") if x.strip()]
+        editor_notes = [x.strip() for x in (row.get("editor_notes") or "").split("||") if x.strip()]
         sources = {
             "policy_argument": field_sources(row.get("policy_argument_sources"), row["source_title"], row["source_url"], label),
             "concrete_proposals": field_sources(row.get("concrete_proposal_sources"), row["source_title"], row["source_url"], label),
@@ -136,11 +142,20 @@ def build_candidates():
         }
         records.append({
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
+            "publish_id": publish_id,
+            "review_status": review_status, "editor_notes": editor_notes,
             "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "proposer_role": row["proposer_role"], "content_nature": row["content_nature"], "role_evidence": row["role_evidence"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })
+    if missing_legacy_publish_ids:
+        examples = ", ".join(str(index) for index in missing_legacy_publish_ids[:8])
+        suffix = "…" if len(missing_legacy_publish_ids) > 8 else ""
+        print(
+            f"WARNING candidates.csv: {len(missing_legacy_publish_ids)} 筆既有資料尚無 publish_id（資料列 {examples}{suffix}）",
+            file=sys.stderr,
+        )
     return records
 
 def build_shared_policy_groups():
@@ -197,8 +212,11 @@ def build_civic_calls():
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
+        review_status = (row.get("review_status") or "").strip() or "人工審核"
+        valid_choice(review_status, REVIEW_STATUSES, "review_status", label)
         records.append({
             "id": row["id"], "city": row["city"], "proposer": row["proposer"], "proposer_type": row["proposer_type"],
+            "review_status": review_status,
             "topics": [x.strip() for x in row["topics"].split("|") if x.strip()], "summary": row["summary"], "requested_action": row["requested_action"],
             "published_date": row["published_date"], "source_title": row["source_title"], "source_url": row["source_url"],
             "source_type": row["source_type"], "last_verified": row["last_verified"],
