@@ -290,18 +290,17 @@ npm run build
 2. **審核台修改**：已於 2026-10-07 合併 `review-console-wip` 並以 clasp 推送測試程式，來源 main commit `460b90e`；使用者實測「全部」標籤及事後補審篩選後，再決定是否正式部署。之後可考慮整理成單一腳本。
 3. **Cloudflare**：前台相依 2026-10-03 移除，`cloudflare/` 資料夾 2026-10-08 移除。只剩帳號上的 Worker 與 D1 待使用者在 Cloudflare 後台停用或刪除（見「尚未處理的缺口」）。若日後需要造訪統計，要另選方案並更新各頁 CSP。
 4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
-5. **文件**：把 `docs/manual-update.md` 改成符合 Google Sheet／Apps Script 的現行流程（見下節）。
+5. **文件**：`docs/manual-update.md` 已於 2026-10-08 改寫成 Google Sheet／Apps Script 現行流程，並列出所有已停用的舊做法與各 CSV 的現行欄位契約。剩下的問題是 `scripts/local_review.py`、`data/inbox/`、`config/collector.json` 三個舊流程遺留檔要不要刪——屬 `scripts/` 與 `config/` 共用範圍，待使用者決定。
 6. **出現新政黨時**：若候選人資料出現 `config/party_colors.json` 沒有的政黨，建置會跳警告。補顏色前先和使用者確認。
 7. **Apps Script 欄位讀寫**：`apps-script/Code.gs` 目前以固定欄位位置讀寫 A:T；重建流程時改為依標題名稱讀寫。在完成前，不要在 A:T 中間插入欄位。
 
 ## 文件一致性提醒
 
-下列文件含有歷史流程，不能單獨當作現行操作規範：
+下列文件的定位與優先度（含歷史流程的不能單獨當作現行操作規範）：
 
-- `docs/manual-update.md` 仍提及 `local_review.py`、`data/inbox/`、每日 GitHub 蒐集等舊做法。
 - `docs/LOCAL-AI-REVIEW-AUTOMATION.md` 與 `docs/MULTI-COMPUTER-WORKFLOW.md` 明確把 Google Sheet／Apps Script 作為現行流程，優先度較高。
-
-接手後建議第一個文件維護工作是把 `manual-update.md` 改成與 Google Sheet／Apps Script 現況一致，避免 AI 或人員誤啟用舊流程。
+- `docs/manual-update.md` 2026-10-08 已改寫成現行流程，可以當操作規範；它同時列出已停用的舊做法，避免 AI 或人員誤啟用。
+- `docs/google-sheets-review-automation.md` 只是保留檔名的舊版說明。
 
 ## 交接前檢查清單
 
