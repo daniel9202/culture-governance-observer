@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-07",
+  "last_updated": "2026-10-08",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -13,6 +13,7 @@
       "editor_notes": [
         "未載明：營運班次、文化詮釋內容、觀光路線經費、期程、跨機關分工"
       ],
+      "policy_title": "",
       "topics": [
         "林業文化",
         "鐵道文化",
@@ -71,6 +72,7 @@
       "editor_notes": [
         "未載明：盤點範圍、轉型場址、經費、期程、主責機關、文化保存機制"
       ],
+      "policy_title": "",
       "topics": [
         "地方文化",
         "歷史文化",
@@ -130,6 +132,7 @@
       "editor_notes": [
         "未載明：預算、期程、執行機制"
       ],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "地方文化",
@@ -186,6 +189,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化場館",
@@ -242,6 +246,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "表演藝術",
@@ -299,6 +304,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "多元文化",
         "客家文化",
@@ -357,6 +363,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "社區文化",
         "文化資產",
@@ -425,6 +432,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "語言文化",
         "文化平權",
@@ -482,6 +490,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "地方文史",
         "文化資產",
@@ -540,6 +549,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化產業",
         "多元文化",
@@ -593,6 +603,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "地方文化",
         "宗教文化",
@@ -646,6 +657,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "公共藝術",
         "文化活動",
@@ -699,6 +711,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "公共藝術",
         "文化空間",
@@ -755,6 +768,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "母語",
         "文化傳承",
@@ -808,6 +822,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "表演藝術",
         "文化空間",
@@ -862,6 +877,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "傳統建築",
@@ -918,6 +934,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "音樂",
         "文化活動",
@@ -973,6 +990,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "閱讀",
         "文化教育",
@@ -1026,6 +1044,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "地方文史",
         "文化產業",
@@ -1079,6 +1098,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "藝文資訊",
         "文化近用",
@@ -1131,6 +1151,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "軍事文化",
         "藝文活動",
@@ -1185,6 +1206,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "客語",
@@ -1237,6 +1259,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "藝文資訊",
         "文化近用",
@@ -1289,6 +1312,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "藝文資訊",
         "文化近用",
@@ -1341,6 +1365,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "展覽策展",
@@ -1395,6 +1420,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "傳統知識",
@@ -1450,6 +1476,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化空間",
@@ -1506,6 +1533,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化空間",
@@ -1559,6 +1587,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -1612,6 +1641,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -1668,6 +1698,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "地方文史",
@@ -1720,6 +1751,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "影視文化",
@@ -1778,6 +1810,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "文化教育",
@@ -1841,6 +1874,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "文化治理",
@@ -1895,6 +1929,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化治理",
         "文化教育",
@@ -1953,6 +1988,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "藝術教育",
@@ -2011,6 +2047,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "文化治理",
@@ -2074,6 +2111,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "藝文資源",
         "文化平權",
@@ -2130,6 +2168,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "戰爭記憶",
@@ -2185,6 +2224,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化教育",
         "多元語言",
@@ -2242,6 +2282,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "圖書館與閱讀"
       ],
@@ -2294,6 +2335,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "多元語言",
         "文化治理",
@@ -2350,6 +2392,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "多元語言",
         "文化教育",
@@ -2403,6 +2446,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "藝文活動",
         "文化教育",
@@ -2462,6 +2506,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "多元語言",
@@ -2518,6 +2563,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "文化教育"
@@ -2570,6 +2616,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "多元語言",
@@ -2628,6 +2675,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "多元語言",
         "文化教育",
@@ -2685,6 +2733,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "文化產業與文創",
@@ -2744,6 +2793,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "宗教觀光"
@@ -2800,6 +2850,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -2857,6 +2908,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "圖書館",
         "文化設施",
@@ -2914,6 +2966,7 @@
       "editor_notes": [
         "待查：Google 新聞轉址尚未確認原始報導網址。"
       ],
+      "policy_title": "",
       "topics": [
         "舊城活化",
         "文化資產",
@@ -2972,6 +3025,7 @@
         "官方政見頁將舊城活化、文化產業支持與社區表演列為文化面向。",
         "待查：Google 新聞轉址尚未確認原始報導網址。"
       ],
+      "policy_title": "",
       "topics": [
         "舊城活化",
         "城市文化",
@@ -3041,6 +3095,7 @@
         "同一場新住民政策發布由多家媒體報導。",
         "待查：Google 新聞轉址尚未確認原始報導網址。"
       ],
+      "policy_title": "",
       "topics": [
         "新住民文化",
         "多元文化"
@@ -3101,6 +3156,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "地方創生"
@@ -3158,6 +3214,7 @@
       "editor_notes": [
         "同一場政見發布由勁報與聯合報報導。"
       ],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "地方創生",
@@ -3217,6 +3274,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "文化觀光"
@@ -3275,6 +3333,7 @@
         "黨部與經濟日報均有報導。",
         "待查：Google 新聞轉址尚未確認原始報導網址。"
       ],
+      "policy_title": "",
       "topics": [
         "新住民文化",
         "多元文化",
@@ -3334,6 +3393,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "多元族群文化",
         "原住民族文化",
@@ -3390,6 +3450,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化治理"
@@ -3446,6 +3507,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "多元語言",
@@ -3501,6 +3563,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "多元語言",
@@ -3562,6 +3625,7 @@
       "editor_notes": [
         "候選人官方政策頁以東豐快速道路與文化觀光描述山城願景；細節以來源頁為準。"
       ],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "地方發展",
@@ -3616,6 +3680,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "文化產業",
@@ -3677,6 +3742,7 @@
       "editor_notes": [
         "官方頁附2026年9月8日記者會簡報；本筆補充既有文化廊道資料的具體措施。"
       ],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "地方文史",
@@ -3741,6 +3807,7 @@
       "editor_notes": [
         "官方頁未標示發布日期，依人工核定日期登錄。"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "族語傳承",
@@ -3803,6 +3870,7 @@
       "editor_notes": [
         "電影放映涉及兩岸配額及法令限制。"
       ],
+      "policy_title": "",
       "topics": [
         "影視文化",
         "文化交流",
@@ -3861,6 +3929,7 @@
       "editor_notes": [
         "未載明：預算、期程、執行機制"
       ],
+      "policy_title": "",
       "topics": [
         "多元文化",
         "表演藝術",
@@ -3917,6 +3986,7 @@
       "editor_notes": [
         "政策以商圈活化為主，文化元素為文化商圈與諸羅街區。"
       ],
+      "policy_title": "",
       "topics": [
         "文化商圈",
         "地方文化",
@@ -3972,6 +4042,7 @@
       "editor_notes": [
         "未載明：文化保存對象、方法、預算、期程"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化保存",
@@ -4028,6 +4099,7 @@
       "editor_notes": [
         "本項涉及土地權利與族群治理，與文化治理相關。"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "傳統領域",
@@ -4082,6 +4154,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "地方文化",
         "傳統藝術",
@@ -4143,6 +4216,7 @@
       "editor_notes": [
         "未載明：閱讀空間選址、館藏、營運人力、預算"
       ],
+      "policy_title": "",
       "topics": [
         "閱讀文化",
         "公共圖書空間",
@@ -4200,6 +4274,7 @@
       "editor_notes": [
         "未載明：修繕範圍、預算、完成期程、社區藝文活動執行機制"
       ],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "歷史建築",
@@ -4257,6 +4332,7 @@
       "editor_notes": [
         "未載明：場館面積、藝文設施內容、預算來源、營運方式、完成期程"
       ],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "表演藝術",
@@ -4310,6 +4386,7 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "文化觀光",
@@ -4370,6 +4447,7 @@
       "editor_notes": [
         "未載明：參與對象、執行期程、補助工具、預算規模"
       ],
+      "policy_title": "",
       "topics": [
         "地方文化",
         "社區營造",
@@ -4427,6 +4505,7 @@
       "editor_notes": [
         "未載明：導覽執行單位、活動頻率、經費來源、成效指標"
       ],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "地方文化",
@@ -4484,6 +4563,7 @@
       "editor_notes": [
         "官方頁尚未逐項列出量化目標、完成期限與執行分工。"
       ],
+      "policy_title": "",
       "topics": [
         "文化觀光",
         "地方文化",
@@ -4543,6 +4623,7 @@
       "editor_notes": [
         "未載明：展演空間範圍、期程、經費、營運機制"
       ],
+      "policy_title": "",
       "topics": [
         "表演藝術",
         "文化觀光",
@@ -4599,6 +4680,7 @@
       "editor_notes": [
         "未載明：組織權責、社區推動方式、市場文化定位、預算、期程"
       ],
+      "policy_title": "",
       "topics": [
         "多元文化",
         "地方文化",
@@ -4658,6 +4740,7 @@
       "editor_notes": [
         "未載明：用地範圍、設施規格、預算、營運方式、完成期程"
       ],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "表演藝術",
@@ -4715,6 +4798,7 @@
       "editor_notes": [
         "未載明：廳舍清單、執行期程、經費、營運機制"
       ],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "文化空間",
@@ -4771,6 +4855,7 @@
       "editor_notes": [
         "未載明：場館時程、經費、營運方式、演藝產業引進機制"
       ],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "表演藝術",
@@ -4827,6 +4912,7 @@
       "editor_notes": [
         "未載明：文化據點位置與數量、期程、經費、部落參與機制"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化空間",
@@ -4885,6 +4971,7 @@
       "editor_notes": [
         "未載明：空間位置、設施規格、經費、執行期程、族語傳承機制"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "表演藝術",
@@ -4944,6 +5031,7 @@
       "editor_notes": [
         "未載明：選址、館藏服務、經費、期程、營運模式"
       ],
+      "policy_title": "",
       "topics": [
         "圖書館",
         "文化設施",
@@ -5000,6 +5088,7 @@
       "editor_notes": [
         "未載明：文化資產清單、旅遊路線、活動場次、經費、期程"
       ],
+      "policy_title": "",
       "topics": [
         "宗教文化",
         "文化資產",
@@ -5059,6 +5148,7 @@
       "editor_notes": [
         "未載明：改造內容、期程、經費、營運方式"
       ],
+      "policy_title": "",
       "topics": [
         "文化場館",
         "城市再生",
@@ -5114,6 +5204,7 @@
       "editor_notes": [
         "未載明：巡迴路線、場次、合作單位、經費、執行期程"
       ],
+      "policy_title": "",
       "topics": [
         "藝文活動",
         "文化近用",
@@ -5169,6 +5260,7 @@
       "editor_notes": [
         "未載明：客語與音樂人才培育經費、期程、場館分工、績效指標"
       ],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "客語傳承",
@@ -5230,6 +5322,7 @@
       "editor_notes": [
         "未載明：路線範圍、文化據點、解說內容、經費、期程、居民參與機制"
       ],
+      "policy_title": "",
       "topics": [
         "海洋文化",
         "文化觀光",
@@ -5287,6 +5380,7 @@
       "editor_notes": [
         "未載明：學校地點、課程規劃、族語推廣人力、場域位置、經費、期程"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "族語傳承",
@@ -5345,6 +5439,7 @@
       "editor_notes": [
         "未載明：老街活化範圍、客家獅傳承方式、經費、期程、社區參與機制"
       ],
+      "policy_title": "",
       "topics": [
         "地方文化",
         "文化觀光",
@@ -5403,6 +5498,7 @@
       "editor_notes": [
         "未載明：表演平台場地數量、申請制度、經費、辦理期程、青年支持措施"
       ],
+      "policy_title": "",
       "topics": [
         "音樂文化",
         "表演藝術",
@@ -5459,6 +5555,7 @@
       "editor_notes": [
         "未載明：藝文活動場域、參與對象、經費、期程、執行指標"
       ],
+      "policy_title": "",
       "topics": [
         "藝文活動",
         "音樂文化",
@@ -5515,6 +5612,7 @@
       "editor_notes": [
         "未載明：教育法案內容、推動層級、經費、期程、師資培育方案"
       ],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "客語傳承",
@@ -5573,6 +5671,7 @@
       "editor_notes": [
         "未載明：六個節點分期修復預算、營運權責、完整期程"
       ],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "歷史街區",
@@ -5633,6 +5732,7 @@
       "editor_notes": [
         "未載明：部落旅遊路線、祭儀補助額度、文化詮釋、社區參與機制、期程"
       ],
+      "policy_title": "",
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -5691,6 +5791,7 @@
       "editor_notes": [
         "未載明：修復經費、期程、後續營運模式、社區參與機制"
       ],
+      "policy_title": "",
       "topics": [
         "文化資產",
         "眷村文化",
@@ -5749,6 +5850,7 @@
       "editor_notes": [
         "未載明：文化調查保存方式、導覽或展示內容、執行經費、期程"
       ],
+      "policy_title": "",
       "topics": [
         "漁村文化",
         "地方文化",
@@ -5806,6 +5908,7 @@
       "editor_notes": [
         "未載明：補助資格、文化地景選擇原則、課程設計、經費規模、推動期程"
       ],
+      "policy_title": "",
       "topics": [
         "文化教育",
         "文化地景",
@@ -5863,6 +5966,7 @@
       "editor_notes": [
         "未載明：主責機關、場址範圍、經費、期程、具體執行機制"
       ],
+      "policy_title": "",
       "topics": [
         "眷村文化",
         "青年藝術",
@@ -5923,6 +6027,7 @@
       "editor_notes": [
         "未載明：作品維護責任分工、預算、兒童藝文資源配置、幼托客語師資、推動期程"
       ],
+      "policy_title": "",
       "topics": [
         "公共藝術",
         "文化資產",
@@ -5980,6 +6085,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "宗教文化資產",
         "公共安全"
@@ -6033,6 +6139,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "地方走讀",
         "文化生態"
@@ -6087,6 +6194,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [],
+      "policy_title": "",
       "topics": [
         "客家文化",
         "客語傳承",

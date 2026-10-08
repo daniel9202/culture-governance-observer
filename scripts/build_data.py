@@ -132,7 +132,7 @@ def build_candidates():
             valid_url(source, label)
         topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
         argument = (row.get("policy_argument") or "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
-        proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()] or [row["summary"]]
+        proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()]
         statements = [x.strip() for x in (row.get("related_statements") or "").split("||") if x.strip()]
         editor_notes = [x.strip() for x in (row.get("editor_notes") or "").split("||") if x.strip()]
         sources = {
@@ -144,6 +144,7 @@ def build_candidates():
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
             "publish_id": publish_id,
             "review_status": review_status, "editor_notes": editor_notes,
+            "policy_title": row.get("policy_title") or "",
             "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "proposer_role": row["proposer_role"], "content_nature": row["content_nature"], "role_evidence": row["role_evidence"],
