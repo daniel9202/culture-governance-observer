@@ -73,14 +73,16 @@ function drawMap(){
     const labelY=list.length?y+(office==='councilor'?19:17):y,labelX=align==='start'?x-5.5:align==='end'?x+5.5:x;
     return `<g class="map-marker${list.length?'':' is-empty'}" data-city="${esc(county.name)}">${leader}${list.length?mark(list,x,y,align):''}<text class="map-label" x="${labelX}" y="${labelY}" text-anchor="${textAnchor}">${esc(county.name)}</text></g>`;
   }).join('');
-  svg.innerHTML=`<title id="mapTitle">台灣各縣市${OFFICES[office].label}候選人文化政策提出情形</title>${insets}<g class="counties">${shapes}</g><g class="markers">${markers}</g>`;
+  svg.innerHTML=`<title id="mapTitle">台灣各縣市${OFFICES[office].label}候選人文化政策提出情形</title>${insets}<g class="counties">${shapes}</g><path class="county-outline county-outline-hover" d=""/><path class="county-outline county-outline-active" d="${esc(geometry.counties.find(county=>county.name===activeCity)?.d||'')}"/><g class="markers">${markers}</g>`;
   svg.querySelectorAll('.county').forEach(node=>{
     const choose=()=>selectCity(node.dataset.city);
     node.addEventListener('click',choose);
     node.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();choose()}});
-    node.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')showTooltip(node.dataset.city,event)});
+    // 外框另畫一層蓋在所有縣市上面，避免相鄰縣市的白邊蓋住一半，造成邊線粗細不一。
+    const hoverOutline=svg.querySelector('.county-outline-hover');
+    node.addEventListener('pointerenter',event=>{hoverOutline.setAttribute('d',node.getAttribute('d'));if(event.pointerType!=='touch')showTooltip(node.dataset.city,event)});
     node.addEventListener('pointermove',event=>{if(event.pointerType!=='touch')moveTooltip(event)});
-    node.addEventListener('pointerleave',hideTooltip);
+    node.addEventListener('pointerleave',()=>{hoverOutline.setAttribute('d','');hideTooltip()});
     node.addEventListener('focus',()=>{const box=node.getBoundingClientRect();showTooltip(node.dataset.city,{clientX:box.left+box.width/2,clientY:box.top+box.height/2})});
     node.addEventListener('blur',hideTooltip);
   });
@@ -138,6 +140,7 @@ function renderDetail(){
 function selectCity(city,{scroll=false}={}){
   activeCity=city;
   document.querySelectorAll('#taiwanMap .county').forEach(node=>node.classList.toggle('is-active',node.dataset.city===city));
+  document.querySelector('#taiwanMap .county-outline-active')?.setAttribute('d',document.querySelector(`#taiwanMap .county[data-city="${CSS.escape(city)}"]`)?.getAttribute('d')||'');
   document.querySelectorAll('.compare-row').forEach(node=>node.classList.toggle('is-active',node.dataset.city===city));
   renderDetail();
   if(scroll)document.getElementById('map').scrollIntoView({behavior:'smooth',block:'start'});

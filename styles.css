@@ -222,7 +222,7 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .county{fill:#e6e2d7;stroke:#fff;stroke-width:.9;stroke-linejoin:round;cursor:pointer;outline:none;transition:fill .15s}
 .county:hover{fill:#dcd6ea}
 .county.is-active{fill:#c3bbd6}
-.county:focus-visible,.county.is-active{stroke:var(--ink);stroke-width:2.2}
+.county:focus-visible{stroke:var(--ink);stroke-width:2.2}.county-outline{fill:none;pointer-events:none;stroke-linejoin:round}.county-outline-hover{stroke:#8f86a8;stroke-width:1.4}.county-outline-active{stroke:var(--ink);stroke-width:2}
 .inset-frame{fill:none;stroke:#b9b7ac;stroke-width:1;stroke-dasharray:3 3}
 .inset-label{fill:var(--muted);font:700 10.5px "Noto Sans TC","PingFang TC",sans-serif}
 .markers{pointer-events:none}
