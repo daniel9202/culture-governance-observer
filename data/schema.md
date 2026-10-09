@@ -2,6 +2,8 @@
 
 正式資料請編輯 `data/input/` 內的 CSV；JSON 由部署流程自動產生，不要直接修改。
 
+各資料的 `topics` 保留原細標籤；建置依 `config/topic_categories.csv` 產生 `topic_categories`（大類陣列）與 `topic_subcategories`（子類別陣列）。適用於 `candidates`、`civic_policy_calls`、`pledge_fulfillment`、`local_cultural_issues`、`shared_policy_groups`。目前唯一子類別值為 `文化資產／保存`。細標籤未出現在對照表時建置會警告；對照表含 24 類以外的大類時建置會報錯。
+
 ## `candidates.csv`
 
 每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`publish_id`、`review_status`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`editor_notes`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`proposer_role`、`content_nature`、`role_evidence`、`correction_log`、`related_sources`、`policy_title`。`publish_id` 對應「審核資料」中的發布ID與「發布紀錄」中的發布ID；新資料必填，既有資料暫缺時建置會警告，從其他正式資料表遷入的既有資料亦適用舊資料警告規則。`review_status` 可為 `人工審核` 或 `AI初審待複核`；空值等同 `人工審核`。`editor_notes` 記錄本站的檢核與編輯備註，與候選人發言分開呈現；多項以 `||` 分隔，建置輸出為陣列。`policy_title` 為選填欄位，照來源原文記錄候選人自己的政策名稱；沒有明確名稱時留空，建置輸出空字串。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄候選人或團隊可核實、但未必構成承諾的公開說法。上述多項欄位皆以 `||` 分隔。候選人資料一列代表候選人自己的單一政策單元；同一政策被多則報導提到時盡量合併一列，其他來源放入 `related_sources`，避免重複收錄。`concrete_proposals` 依來源原順序與用詞以 `||` 分隔；來源有編號時保留順序但不需重複加編號。子項下的細項暫與該子項寫在一起，不另拆列或自創層級。原始資料無法細分時，`concrete_proposals` 留空，只填 `summary` 與 `policy_argument`，不得為了湊分點而硬拆。`topics` 僅作本站篩選與標籤，不用來拆解或重組候選人政策結構。`office` 目前使用 `縣市長` 與 `縣市議員` 兩種值，網站據此分別呈現於首頁與議員政見頁。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。

@@ -17,10 +17,67 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PROPOSER_ROLES = {"候選人", "推定現任議員", "待判定"}
 CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任問政／提案", "現任首長施政"}
 REVIEW_STATUSES = {"人工審核", "AI初審待複核"}
+TOPIC_CATEGORY_NAMES = {
+    "文化治理與預算", "文化資產", "文化場館", "表演藝術", "視覺藝術", "博物館與地方文化館",
+    "閱讀與圖書館", "影視與流行音樂", "文化產業與文創", "地方文化與社區營造", "民俗節慶",
+    "藝文節慶", "原住民族文化", "客家文化", "語言與族群", "文化教育", "文化平權與參與",
+    "高齡與世代共融", "永續與ESG", "數位文化與科技", "文化觀光", "文化空間與城市再生",
+    "國際與兩岸交流", "青年"
+}
+TOPIC_CATEGORY_CONFIG = ROOT / "config" / "topic_categories.csv"
+ISSUE_TAGS_CONFIG = ROOT / "config" / "issue_tags.json"
+_TOPIC_CATEGORY_MAP = None
+TOPIC_WARNINGS = []
 
 def rows(name):
     with (INPUT / name).open(encoding="utf-8-sig", newline="") as f:
         return list(csv.DictReader(f))
+
+def topic_category_map():
+    global _TOPIC_CATEGORY_MAP
+    if _TOPIC_CATEGORY_MAP is not None:
+        return _TOPIC_CATEGORY_MAP
+    issue_tags = json.loads(ISSUE_TAGS_CONFIG.read_text(encoding="utf-8"))
+    if set(issue_tags) != TOPIC_CATEGORY_NAMES:
+        missing = sorted(TOPIC_CATEGORY_NAMES - set(issue_tags))
+        extra = sorted(set(issue_tags) - TOPIC_CATEGORY_NAMES)
+        raise ValueError(f"config/issue_tags.json 必須正好包含 24 個大類；缺少={missing}，多出={extra}")
+    mapping = {}
+    with TOPIC_CATEGORY_CONFIG.open(encoding="utf-8-sig", newline="") as f:
+        for row in csv.DictReader(f):
+            tag = (row.get("tag") or "").strip()
+            if not tag:
+                continue
+            categories = [x.strip() for x in (row.get("categories") or "").split("|") if x.strip()]
+            invalid = sorted(set(categories) - TOPIC_CATEGORY_NAMES)
+            if invalid:
+                raise ValueError(f"config/topic_categories.csv 標籤「{tag}」含 24 類以外的大類：{'、'.join(invalid)}")
+            if tag in mapping:
+                raise ValueError(f"config/topic_categories.csv 細標籤重複：{tag}")
+            subcategory = (row.get("subcategory") or "").strip()
+            mapping[tag] = (categories, subcategory)
+    _TOPIC_CATEGORY_MAP = mapping
+    return mapping
+
+def classify_topics(topics, label):
+    mapping = topic_category_map()
+    categories, subcategories = [], []
+    for topic in topics:
+        entry = mapping.get(topic)
+        if entry is None:
+            warning = f"{label}: topics 標籤「{topic}」不在 config/topic_categories.csv 對照表中"
+            if warning not in TOPIC_WARNINGS:
+                TOPIC_WARNINGS.append(warning)
+            continue
+        mapped_categories, subcategory = entry
+        for category in mapped_categories:
+            if category not in categories:
+                categories.append(category)
+            if subcategory:
+                subcategory_label = f"{category}／{subcategory}"
+                if subcategory_label not in subcategories:
+                    subcategories.append(subcategory_label)
+    return categories, subcategories
 
 def baseline_candidate_ids():
     """Load committed candidate IDs so only newly added rows require publish_id immediately."""
@@ -131,6 +188,7 @@ def build_candidates():
         for source in related_sources:
             valid_url(source, label)
         topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
+        topic_categories, topic_subcategories = classify_topics(topics, label)
         argument = (row.get("policy_argument") or "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
         proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()]
         statements = [x.strip() for x in (row.get("related_statements") or "").split("||") if x.strip()]
@@ -145,7 +203,8 @@ def build_candidates():
             "publish_id": publish_id,
             "review_status": review_status, "editor_notes": editor_notes,
             "policy_title": row.get("policy_title") or "",
-            "topics": topics, "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
+            "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
+            "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "proposer_role": row["proposer_role"], "content_nature": row["content_nature"], "role_evidence": row["role_evidence"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
@@ -174,10 +233,12 @@ def build_shared_policy_groups():
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
+        topics = [x.strip() for x in row.get("topics", "").split("|") if x.strip()]
+        topic_categories, topic_subcategories = classify_topics(topics, label)
         records.append({
             "id": row["id"], "scope": scope, "city": row["city"], "office": row["office"], "party": row["party"],
             "candidates": [x.strip() for x in row.get("candidates", "").split("||") if x.strip()],
-            "title": row["title"], "topics": [x.strip() for x in row.get("topics", "").split("|") if x.strip()],
+            "title": row["title"], "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
             "summary": row["summary"], "concrete_proposals": [x.strip() for x in row.get("concrete_proposals", "").split("||") if x.strip()],
             "published_date": row["published_date"], "source_title": row["source_title"], "source_url": row["source_url"],
             "source_type": row.get("source_type", "共同政見記者會"), "last_verified": row["last_verified"],
@@ -194,9 +255,11 @@ def build_local_issues():
         valid_date(row["published_date"], label)
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
+        topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
+        topic_categories, topic_subcategories = classify_topics(topics, label)
         records.append({
             "id": row["id"], "city": row["city"], "title": row["title"], "issue_type": row["issue_type"],
-            "topics": [x.strip() for x in row["topics"].split("|") if x.strip()], "summary": row["summary"],
+            "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories, "summary": row["summary"],
             "related_actor": row["related_actor"], "published_date": row["published_date"], "source_title": row["source_title"],
             "source_url": row["source_url"], "source_type": row["source_type"], "last_verified": row["last_verified"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
@@ -215,10 +278,13 @@ def build_civic_calls():
         valid_url(row["source_url"], label)
         review_status = (row.get("review_status") or "").strip() or "人工審核"
         valid_choice(review_status, REVIEW_STATUSES, "review_status", label)
+        topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
+        topic_categories, topic_subcategories = classify_topics(topics, label)
         records.append({
             "id": row["id"], "city": row["city"], "proposer": row["proposer"], "proposer_type": row["proposer_type"],
             "review_status": review_status,
-            "topics": [x.strip() for x in row["topics"].split("|") if x.strip()], "summary": row["summary"], "requested_action": row["requested_action"],
+            "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
+            "summary": row["summary"], "requested_action": row["requested_action"],
             "published_date": row["published_date"], "source_title": row["source_title"], "source_url": row["source_url"],
             "source_type": row["source_type"], "last_verified": row["last_verified"],
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
@@ -252,11 +318,13 @@ def build_fulfillment():
                 raise ValueError(f"{label}: additional_evidence must be 標題::網址")
             valid_url(url.strip(), label)
             additional_evidence.append({"title": title.strip(), "url": url.strip()})
+        topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
+        topic_categories, topic_subcategories = classify_topics(topics, label)
         records.append({
             "id": row["id"], "city": row["city"], "person": row["person"], "party": row["party"],
             "current_office": row["current_office"], "term": row["term"], "election": row["election"],
             "reelection_status": row["reelection_status"],
-            "topics": [x.strip() for x in row["topics"].split("|") if x.strip()],
+            "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
             "pledge_title": row["pledge_title"], "pledge_summary": row["pledge_summary"], "pledge_date": row["pledge_date"],
             "pledge_source_type": row["pledge_source_type"], "pledge_source_title": row["pledge_source_title"], "pledge_source_url": row["pledge_source_url"],
             "responsibility": row["responsibility"], "status": row["status"], "evidence_summary": row["evidence_summary"],
@@ -444,19 +512,22 @@ def write(name, records, **meta):
 if __name__ == "__main__":
     candidates = build_candidates()
     shared_groups = build_shared_policy_groups()
+    local_issues = build_local_issues()
+    civic_calls = build_civic_calls()
+    fulfillment = build_fulfillment()
     registered, registered_source = build_registered_candidates()
     errors, warnings = check_against_registration(candidates, shared_groups, registered)
     party_colors, party_warnings = build_party_colors(candidates, shared_groups)
-    report_warnings(warnings + party_warnings)
+    report_warnings(warnings + party_warnings + TOPIC_WARNINGS)
     if errors:
         raise SystemExit("候選人資料與中選會登記名冊不符：\n" + "\n".join(f"- {message}" for message in errors))
     write("candidates.json", candidates)
     write("shared_policy_groups.json", shared_groups)
-    write("local_cultural_issues.json", build_local_issues())
-    write("civic_policy_calls.json", build_civic_calls())
+    write("local_cultural_issues.json", local_issues)
+    write("civic_policy_calls.json", civic_calls)
     write("governments.json", build_governments())
     write("region_metrics.json", build_region_metrics())
-    write("pledge_fulfillment.json", build_fulfillment())
+    write("pledge_fulfillment.json", fulfillment)
     write("registered_candidates.json", registered, source=registered_source)
     (OUTPUT / "party_colors.json").write_text(json.dumps({"schema_version": "1.1", "last_updated": date.today().isoformat(), **party_colors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("data validation passed")
