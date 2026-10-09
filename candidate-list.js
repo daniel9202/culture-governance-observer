@@ -6,7 +6,7 @@ let platforms=[],incumbents=new Map;
 const isCouncilorPage=document.body.dataset.officeScope==='councilor';
 function render(){
   const city=cityFilter.value,party=partyFilter.value,topic=topicFilter.value;
-  const rows=platforms.filter(x=>(!city||x.city===city)&&(!party||x.party===party)&&(!topic||x.topics.includes(topic)));
+  const rows=platforms.filter(x=>(!city||x.city===city)&&(!party||x.party===party)&&(!topic||recordTopicCategories(x).includes(topic)));
   count.textContent=`顯示 ${rows.length} 位候選人`;
   if(isCouncilorPage){
     const note=document.getElementById('incumbentNote')||count.insertAdjacentElement('afterend',Object.assign(document.createElement('p'),{id:'incumbentNote',className:'incumbent-note'}));
@@ -20,7 +20,7 @@ loadCandidateDataset().then(data=>{
   incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   options('cityFilter',uniq(platforms.map(x=>x.city)).sort((a,b)=>cityRank(a)-cityRank(b)));
   options('partyFilter',uniq(platforms.map(x=>x.party)));
-  options('topicFilter',uniq(platforms.flatMap(x=>x.topics)));
+  options('topicFilter',uniq(platforms.flatMap(recordTopicCategories)).sort((a,b)=>topicCategoryRank(a)-topicCategoryRank(b)));
   const requestedCity=new URLSearchParams(location.search).get('city');
   if(requestedCity&&platforms.some(record=>record.city===requestedCity))cityFilter.value=requestedCity;
   ['cityFilter','partyFilter','topicFilter'].forEach(id=>document.getElementById(id).addEventListener('change',render));

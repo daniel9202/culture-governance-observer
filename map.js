@@ -114,7 +114,7 @@ function candidateCard(item){
   return `<a class="map-candidate" href="${esc(candidateUrl(item))}" style="${partyStyle(party)}">
     <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span></div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
     ${summary?`<p>${esc(summary)}</p>`:''}
-    <div class="map-topics">${item.topics.slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
+    <div class="map-topics">${topicTagList(item).slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
     <span class="map-candidate-more">看政見與來源 →</span>
   </a>`;
 }

@@ -6,7 +6,7 @@ const byCity=(a,b)=>cityRank(a.city)-cityRank(b.city)||String(a.person).localeCo
 const groupBy=(rows,key)=>rows.reduce((groups,row)=>{const value=key(row),group=groups.find(item=>item.key===value);(group||groups[groups.push({key:value,rows:[]})-1]).rows.push(row);return groups},[]);
 
 const pledgeCard=pledge=>`<article class="card pledge-card">
-  <div class="card-meta"><span class="tag tag-status status-${escapeHtml(pledge.status)}">${escapeHtml(statusLabels[pledge.status]||'')}</span>${pledge.topics.map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
+  <div class="card-meta"><span class="tag tag-status status-${escapeHtml(pledge.status)}">${escapeHtml(statusLabels[pledge.status]||'')}</span>${topicTagList(pledge).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
   <h4>${escapeHtml(pledge.pledge_title)}</h4>
   <p class="summary">${escapeHtml(pledge.pledge_summary)}</p>
   <div class="policy-layer policy-actions"><h4>查核判斷</h4><p>${escapeHtml(pledge.evidence_summary)}</p></div>
@@ -36,7 +36,7 @@ fetch('data/pledge_fulfillment.json').then(r=>r.json()).then(data=>{records=(dat
 // 議員分頁：任內文化問政（非本屆政見），資料為 loadCandidateDataset() 的 incumbent_records；不評估實現狀態。
 let councilRecords=[];
 const councilCard=record=>`<article class="card pledge-card">
-  <div class="card-meta">${pendingReviewTag(record)}${record.proposer_role==='推定現任議員'?'<span class="tag tag-status">推定現任議員</span>':''}<span class="tag">${escapeHtml(record.content_nature)}</span>${(record.topics||[]).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
+  <div class="card-meta">${pendingReviewTag(record)}${record.proposer_role==='推定現任議員'?'<span class="tag tag-status">推定現任議員</span>':''}<span class="tag">${escapeHtml(record.content_nature)}</span>${topicTagList(record).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
   <p class="summary">${escapeHtml(record.summary)}</p>
   ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
   ${(record.editor_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${record.editor_notes.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
