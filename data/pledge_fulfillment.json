@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-07",
+  "last_updated": "2026-10-10",
   "records": [
     {
       "id": "taipei-chiang-2022-trendy-taipei",
@@ -16,6 +16,12 @@
         "文化節慶",
         "文化產業"
       ],
+      "topic_categories": [
+        "影視與流行音樂",
+        "藝文節慶",
+        "文化產業與文創"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "舉辦臺北國際潮流音樂節",
       "pledge_summary": "借鏡 SXSW，整合臺北流行音樂中心、臺北表演藝術中心及臺北市文化基金會等資源，舉辦跨界大型複合式節慶展演活動。",
       "pledge_date": "2022-10-20",
@@ -45,6 +51,10 @@
         "投資",
         "文創"
       ],
+      "topic_categories": [
+        "文化產業與文創"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "設置文化創意產業投資基金",
       "pledge_summary": "設置投資基金，聚焦藝文展演、文化科技、永續設計、出版發行、影視音產品及 IP 品牌等領域。",
       "pledge_date": "2022-10-20",
@@ -73,6 +83,10 @@
         "文化預算",
         "文化治理"
       ],
+      "topic_categories": [
+        "文化治理與預算"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "四年內將文化局及所屬機構預算提升至總預算4%",
       "pledge_summary": "以機關別的文化局及所屬機關／機構預算占市府總預算比例為口徑，從競選時所稱2.62%逐年提升，四年內達到4%。",
       "pledge_date": "2022-10-20",
@@ -104,6 +118,11 @@
         "展演空間",
         "法規"
       ],
+      "topic_categories": [
+        "文化場館",
+        "文化治理與預算"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "增加多元替代空間與藝文展演空間",
       "pledge_summary": "盤點更多元空間，透過法規鬆綁、行政支持與政策誘因，鼓勵民間社團及企業提供藝術與展演空間，擴大文化廊帶。",
       "pledge_date": "2022-10-20",
@@ -140,6 +159,11 @@
         "文化旅遊",
         "社區營造"
       ],
+      "topic_categories": [
+        "地方文化與社區營造",
+        "文化觀光"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "推出100條臺北文化、生態小旅行路線",
       "pledge_summary": "結合社區營造、地方創生、城市行銷與觀光旅遊，推出100條文化、生態小旅行路線，並擴大培訓文史與生態導覽人才。",
       "pledge_date": "2022-10-20",
@@ -169,6 +193,11 @@
         "地方歷史",
         "地方創生"
       ],
+      "topic_categories": [
+        "文化觀光",
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "推動結合地方歷史的深度文化旅遊",
       "pledge_summary": "整合自然地景、地方歷史、運動觀光與特色產業，推動多元主題深度旅遊。",
       "pledge_date": "2022-11-26",
@@ -198,6 +227,13 @@
         "新住民",
         "多元文化"
       ],
+      "topic_categories": [
+        "文化資產",
+        "語言與族群"
+      ],
+      "topic_subcategories": [
+        "文化資產／保存"
+      ],
       "pledge_title": "保存地方歷史與多族群文化",
       "pledge_summary": "保留在地歷史文化，並保存原住民、閩南、客家、新住民等多族群的歷史文化。",
       "pledge_date": "2022-11-26",
@@ -226,6 +262,10 @@
         "藝文活動",
         "文化參與"
       ],
+      "topic_categories": [
+        "文化平權與參與"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "擴大舉辦藝文活動",
       "pledge_summary": "選舉公報「重振藝文風」項下的總體方向，提出擴大舉辦藝文活動。",
       "pledge_date": "2022-11-26",
@@ -255,6 +295,11 @@
         "終身學習",
         "高齡文化"
       ],
+      "topic_categories": [
+        "文化教育",
+        "高齡與世代共融"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "透過社區大學與長照場域推動終身藝術教育",
       "pledge_summary": "以社區大學及長照場域為據點，推動面向各年齡層的終身藝術教育。",
       "pledge_date": "2022-11-26",
@@ -284,6 +329,12 @@
         "場地租借",
         "法規"
       ],
+      "topic_categories": [
+        "表演藝術",
+        "文化場館",
+        "文化治理與預算"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "鬆綁藝文團體租借場地法規",
       "pledge_summary": "鬆綁藝文團體租借場地的相關規定，降低團體使用場地的門檻。",
       "pledge_date": "2022-11-26",
@@ -313,6 +364,12 @@
         "表演藝術",
         "空間活化"
       ],
+      "topic_categories": [
+        "文化場館",
+        "表演藝術",
+        "文化空間與城市再生"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "參考韓國「劇場一條街」打造更多展演空間",
       "pledge_summary": "參考韓國「劇場一條街」的模式，在臺北打造更多展演空間。",
       "pledge_date": "2022-11-26",
@@ -349,6 +406,12 @@
         "文學",
         "文化治理"
       ],
+      "topic_categories": [
+        "文化場館",
+        "閱讀與圖書館",
+        "文化治理與預算"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "積極推動臺北文學館的設立",
       "pledge_summary": "積極推動臺北文學館的設立。",
       "pledge_date": "2022-11-26",
@@ -378,6 +441,12 @@
         "青年",
         "空間活化"
       ],
+      "topic_categories": [
+        "文化場館",
+        "青年",
+        "文化空間與城市再生"
+      ],
+      "topic_subcategories": [],
       "pledge_title": "打造青年練舞據點並釋出閒置公有空間",
       "pledge_summary": "打造適合青少年練舞的據點，加速釋出閒置公有空間供青少年課餘活動使用，並以臺北通 app 建立預約平台。",
       "pledge_date": "2022-11-26",
