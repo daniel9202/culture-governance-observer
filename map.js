@@ -27,6 +27,8 @@ let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCit
 // 名冊姓名可能附原住民族傳統名字（例：林筱薇IcyangTamana），因此以「名冊姓名以本站姓名開頭」比對。
 let registered={mayor:new Map,councilor:new Map},registeredSource=null;
 const registeredIn=(key,city)=>registered[key].get(city)||[];
+// 現任縣市長登記連任（名冊 incumbent＝是，資料端依中選會名冊判定）
+const incumbentMayor=city=>registeredIn('mayor',city).find(record=>record.incumbent==='是');
 const sameCandidate=(registeredName,name)=>registeredName===name||registeredName.startsWith(name);
 const unrecorded=(key,city)=>{const proposed=(byOffice[key].get(city)||[]).map(item=>item.candidate);return registeredIn(key,city).filter(item=>!proposed.some(name=>sameCandidate(item.candidate,name)))};
 const nameList=(items,limit)=>items.length>limit?`${items.slice(0,limit).map(item=>esc(item.candidate)).join('、')} 等 ${items.length} 位`:items.map(item=>esc(item.candidate)).join('、');
@@ -60,7 +62,7 @@ function drawMap(){
   const insets=geometry.insets.map(inset=>{const [x,y,w,h]=inset.box,[lx,ly,anchor]=inset.label_at;return `<rect class="inset-frame" x="${x}" y="${y}" width="${w}" height="${h}"/><text class="inset-label" x="${lx}" y="${ly}" text-anchor="${anchor}">${esc(inset.label)}</text>`}).join('');
   const shapes=geometry.counties.map(county=>{
     const count=(groups.get(county.name)||[]).length;
-    return `<path class="county${county.name===activeCity?' is-active':''}" d="${county.d}" data-city="${esc(county.name)}" tabindex="0" role="button" aria-label="${esc(county.name)}：${count?`${count} 位${OFFICES[office].label}候選人提出文化政策`:'尚未收錄'}"></path>`;
+    return `<path class="county${county.name===activeCity?' is-active':''}${office==='mayor'&&incumbentMayor(county.name)?' is-incumbent':''}" d="${county.d}" data-city="${esc(county.name)}" tabindex="0" role="button" aria-label="${esc(county.name)}：${count?`${count} 位${OFFICES[office].label}候選人提出文化政策`:'尚未收錄'}"></path>`;
   }).join('');
   const mark=office==='councilor'?countBadge:dots;
   const markers=geometry.counties.map(county=>{
@@ -97,7 +99,8 @@ function tooltipRow(key,city,label){
 }
 function showTooltip(city,event){
   const tip=document.getElementById('mapTooltip');
-  tip.innerHTML=`<strong>${esc(city)}</strong>${tooltipRow('mayor',city,'縣市長')}${tooltipRow('councilor',city,'議員')}<span class="tip-source">參選人數：中選會登記名冊</span>`;
+  const incumbent=incumbentMayor(city);
+  tip.innerHTML=`<strong>${esc(city)}</strong>${incumbent?`<span class="tip-incumbent">現任縣市長 ${esc(incumbent.candidate)} 登記連任</span>`:''}${tooltipRow('mayor',city,'縣市長')}${tooltipRow('councilor',city,'議員')}<span class="tip-source">參選人數：中選會登記名冊</span>`;
   tip.hidden=false;moveTooltip(event);
 }
 function moveTooltip(event){
@@ -174,7 +177,7 @@ function partyTotals(){
 function renderLegend(){
   if(office==='councilor'){document.getElementById('partyLegend').innerHTML='<span><b class="legend-count">7</b>數字＝本站已收錄、提出文化政策的議員人數；點選縣市可看政黨與名單</span>';return}
   const present=new Set([...byOffice[office].values()].flat().map(item=>item.party));
-  document.getElementById('partyLegend').innerHTML=partyTotals().filter(row=>present.has(row.party)).map(row=>`<span style="${partyStyle(partyInfo(row.party))}"><i></i>${esc(partyInfo(row.party).short)}</span>`).join('');
+  document.getElementById('partyLegend').innerHTML=partyTotals().filter(row=>present.has(row.party)).map(row=>`<span style="${partyStyle(partyInfo(row.party))}"><i></i>${esc(partyInfo(row.party).short)}</span>`).join('')+([...registered.mayor.keys()].some(incumbentMayor)?'<span class="legend-incumbent"><i></i>現任縣市長登記連任</span>':'');
 }
 function renderParties(){
   const rows=partyTotals(),max=Math.max(...rows.map(row=>row.mayor+row.councilor),1);

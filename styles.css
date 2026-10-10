@@ -347,3 +347,4 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .candidate-chip:hover{background:var(--tint)}
 @media(max-width:760px){.compare-chip{padding:.4rem .65rem}}
 .policy-titles{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0}.policy-titles span{font-weight:700;font-size:.95rem}.policy-titles span::before{content:'「'}.policy-titles span::after{content:'」'}
+:root{--incumbent-fill:#d3dce3}.county.is-incumbent{fill:var(--incumbent-fill)}.county.is-incumbent:hover{fill:#dcd6ea}.county.is-incumbent.is-active{fill:#c3bbd6}.legend-incumbent i{display:inline-block;width:14px;height:10px;margin-right:.35rem;background:var(--incumbent-fill);border:1px solid #fff;outline:1px solid var(--line);vertical-align:-1px}.tip-incumbent{display:block;margin:.15rem 0 .35rem;font-size:.78rem;color:var(--lime)}
