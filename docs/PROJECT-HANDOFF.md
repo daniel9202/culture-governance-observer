@@ -290,13 +290,12 @@ npm run build
 
 1. **中選會審定名單**：10/16 前完成資格審查、10/23 號次抽籤。審定名單公告後，下載新的 PDF 重跑 `scripts/import_cec_registrations.py`，並更新 `--as-of` 與 `map.html` 底部「統計口徑」的人數和日期文字。
 2. **審核台修改**：已於 2026-10-07 合併 `review-console-wip` 並以 clasp 推送測試程式，來源 main commit `460b90e`；使用者實測「全部」標籤及事後補審篩選後，再決定是否正式部署。之後可考慮整理成單一腳本。
+   - **新增「審核資料」列**：使用會自動擴充列數的附加列方式（append）；若需指定列號寫入，先檢查工作表列數並加開足夠列數，避免發生 `exceeds grid limits`。
 3. **Cloudflare**：前台相依 2026-10-03 移除，`cloudflare/` 資料夾 2026-10-08 移除。只剩帳號上的 Worker 與 D1 待使用者在 Cloudflare 後台停用或刪除（見「尚未處理的缺口」）。若日後需要造訪統計，要另選方案並更新各頁 CSP。
 4. **審核當下就檢查**：可以讓 Apps Script 審核台讀線上的 `data/registered_candidates.json`，在審核卡片上提示政黨或姓名與中選會不符。需要另外部署 Apps Script。
 5. **文件**：`docs/manual-update.md` 已於 2026-10-08 改寫成 Google Sheet／Apps Script 現行流程，並列出所有已停用的舊做法與各 CSV 的現行欄位契約。剩下的問題是 `scripts/local_review.py`、`data/inbox/`、`config/collector.json` 三個舊流程遺留檔要不要刪——屬 `scripts/` 與 `config/` 共用範圍，待使用者決定。
 6. **出現新政黨時**：若候選人資料出現 `config/party_colors.json` 沒有的政黨，建置會跳警告。補顏色前先和使用者確認。
 7. **Apps Script 欄位讀寫**：`apps-script/Code.gs` 目前以固定欄位位置讀寫 A:T；重建流程時改為依標題名稱讀寫。在完成前，不要在 A:T 中間插入欄位。
-8. **待補寫 Sheet（2026-10-10）**：因無法連線寫入「審核資料」，已將撤下資料完整備份於本機 `backups/withdrawn-2026-10-10.csv`（不進 git），並自 `data/input/candidates.csv` 移除。連線恢復後，需寫回「審核資料」，審核狀態設為 `pending`：張啓楷、魏平政的人工備註為「依原文不屬文化政策，2026-10-10 下架」；温世政，以及宋瑋莉、鍾淑英、吳旭豐、陳慶齡、楊秋珍、林正福、林玉芬、林盈徹、邱愛珊、簡嘉億的人工備註為「來源待確認，2026-10-10 下架」。新竹市鍾淑英、吳旭豐、陳慶齡的提案 PDF 曾可讀取、現為 404，後續應優先尋找議會的新網址以恢復資料。
-
 ## 文件一致性提醒
 
 下列文件的定位與優先度（含歷史流程的不能單獨當作現行操作規範）：
