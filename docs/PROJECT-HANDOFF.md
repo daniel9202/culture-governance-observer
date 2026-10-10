@@ -295,6 +295,7 @@ npm run build
 5. **文件**：`docs/manual-update.md` 已於 2026-10-08 改寫成 Google Sheet／Apps Script 現行流程，並列出所有已停用的舊做法與各 CSV 的現行欄位契約。剩下的問題是 `scripts/local_review.py`、`data/inbox/`、`config/collector.json` 三個舊流程遺留檔要不要刪——屬 `scripts/` 與 `config/` 共用範圍，待使用者決定。
 6. **出現新政黨時**：若候選人資料出現 `config/party_colors.json` 沒有的政黨，建置會跳警告。補顏色前先和使用者確認。
 7. **Apps Script 欄位讀寫**：`apps-script/Code.gs` 目前以固定欄位位置讀寫 A:T；重建流程時改為依標題名稱讀寫。在完成前，不要在 A:T 中間插入欄位。
+8. **待補寫 Sheet（2026-10-10）**：因無法連線寫入「審核資料」，已將撤下的張啓楷、魏平政、温世政完整備份於本機 `backups/withdrawn-2026-10-10.csv`（不進 git），並自 `data/input/candidates.csv` 移除。連線恢復後，需寫回「審核資料」，審核狀態設為 `pending`，人工備註分別為「依原文不屬文化政策，2026-10-10 下架」或「來源待確認，2026-10-10 下架」。
 
 ## 文件一致性提醒
 
