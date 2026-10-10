@@ -28,7 +28,13 @@ SOURCE_TITLE = "中央選舉委員會：115年地方公職人員選舉候選人�
 SOURCE_URL = "https://web.cec.gov.tw/central/article/64709"
 FILES = [("1-1.pdf", "縣市長"), ("3-1.pdf", "縣市長"), ("2-1.pdf", "縣市議員"), ("4-1.pdf", "縣市議員")]
 EXPECTED = {"1-1.pdf": 23, "2-1.pdf": 610, "3-1.pdf": 58, "4-1.pdf": 892}  # 中選會 115.09.07 新聞稿
-FIELDS = ["city", "office", "district", "candidate", "party", "registered_date", "source_title", "source_url", "as_of"]
+FIELDS = ["city", "office", "district", "candidate", "party", "registered_date", "incumbent", "source_title", "source_url", "as_of"]
+
+# 僅作地圖樣式使用：依 2026-10-10 的現任職務與中選會登記名冊判定。
+INCUMBENT_MAYORS = {
+    "臺北市": "蔣萬安", "桃園市": "張善政", "基隆市": "謝國樑", "新竹市": "高虹安",
+    "苗栗縣": "鍾東錦", "南投縣": "許淑華", "屏東縣": "周春米", "連江縣": "王忠銘",
+}
 
 
 def roc_date(value):
@@ -59,13 +65,15 @@ def main():
         if name in EXPECTED and len(rows) != EXPECTED[name]:
             raise SystemExit(f"{name}: 解析出 {len(rows)} 筆，與中選會公布的 {EXPECTED[name]} 筆不符")
         for district, registered, candidate, party, *_ in rows:
+            city = re.sub(r"第\d+選舉區$", "", district)
             records.append({
-                "city": re.sub(r"第\d+選舉區$", "", district),
+                "city": city,
                 "office": office,
                 "district": district,
                 "candidate": candidate,
                 "party": party,
                 "registered_date": roc_date(registered),
+                "incumbent": "是" if office == "縣市長" and INCUMBENT_MAYORS.get(city) == candidate else "",
                 "source_title": SOURCE_TITLE,
                 "source_url": SOURCE_URL,
                 "as_of": args.as_of,

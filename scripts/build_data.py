@@ -427,6 +427,10 @@ def build_registered_candidates():
             raise ValueError(f"{label}: unknown city {row['city']}")
         if row["office"] not in REGISTERED_OFFICES:
             raise ValueError(f"{label}: office must be one of {', '.join(sorted(REGISTERED_OFFICES))}")
+        if row.get("incumbent", "") not in {"", "是"}:
+            raise ValueError(f"{label}: incumbent must be blank or 是")
+        if row.get("incumbent") == "是" and row["office"] != "縣市長":
+            raise ValueError(f"{label}: incumbent may only be 是 for 縣市長")
         valid_date(row["registered_date"], label)
         valid_date(row["as_of"], label)
         valid_url(row["source_url"], label)
@@ -437,6 +441,7 @@ def build_registered_candidates():
         records.append({
             "city": row["city"], "office": row["office"], "district": row["district"], "candidate": row["candidate"],
             "party": row["party"], "registered_date": row["registered_date"],
+            "incumbent": row.get("incumbent", ""),
         })
     # 來源與名冊日期全表一致，只在檔案層級記錄一次，避免前台資料過大
     return records, (sources[0] if sources else None)
