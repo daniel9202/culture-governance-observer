@@ -3390,14 +3390,14 @@
       "field_sources": {
         "policy_argument": [
           {
-            "title": "2026/8/7｜LINE TODAY｜何欣純提「舊城創新」主張 盼活化翻轉老城區 | 自由電子報 - LINE TODAY",
-            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA2U2pjTlMyRHFLMnpMbGoxUnBvdUtKMko1QmZMUWhWMGRRMV9NVWFlWUpMalRISzVvclJvYkRLNnI5YjMxbWlpZ0xyMVM0UUR4T3NfbWJ3?oc=5"
+            "title": "何欣純官方網站｜未來政策",
+            "url": "https://a-chun.tw/future"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "2026/8/7｜LINE TODAY｜何欣純提「舊城創新」主張 盼活化翻轉老城區 | 自由電子報 - LINE TODAY",
-            "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA2U2pjTlMyRHFLMnpMbGoxUnBvdUtKMko1QmZMUWhWMGRRMV9NVWFlWUpMalRISzVvclJvYkRLNnI5YjMxbWlpZ0xyMVM0UUR4T3NfbWJ3?oc=5"
+            "title": "何欣純官方網站｜未來政策",
+            "url": "https://a-chun.tw/future"
           }
         ],
         "related_statements": [
@@ -3420,7 +3420,8 @@
         "2026-09-16｜由 Google Sheet draft-20260916-09 整合稿發布。",
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-07。",
         "2026-10-10｜依原文修正。",
-        "依原文修正（2026-10-10）"
+        "依原文修正（2026-10-10）",
+        "2026-10-10｜移除 Google 新聞轉址，改用候選人官方頁。"
       ]
     },
     {
@@ -3502,8 +3503,7 @@
       "publish_id": "",
       "review_status": "人工審核",
       "editor_notes": [
-        "同一場新住民政策發布由多家媒體報導。",
-        "待查：Google 新聞轉址尚未確認原始報導網址。"
+        "同一場新住民政策發布由多家媒體報導。"
       ],
       "policy_title": "",
       "topics": [
@@ -3547,8 +3547,8 @@
       "source_title": "2026/9/8｜中華新聞雲／中華日報｜江啟臣提新住民四大政策 讓多元文化成為青年走向世界的優勢 - 中華新聞雲／中華日報",
       "source_url": "https://udn.com/vote2026/story/124652/9741344",
       "related_sources": [
-        "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBVSF93SVNFcFRGYzJZWWxXVzktZzZZZ2FyVS1jZUVCcVU5WWxvYWZWRUZmbGRBbTQ2eUVsTW54WnlFc1NmNFR5eHRn?oc=5",
-        "https://news.google.com/rss/articles/CBMibkFVX3lxTFBzd3YtbFUzUHpwOUxpYmxBWUR6bWMtS1RpM0w0TDh3OFFhMVhoUWxYV2E3bUVmamNvd2h5dDZjelJvdFItT2EwbWNBT1ZmUTR1TlpPblhwcGV0aFBhX1FYZHRTemVIeElKY1RLRlNn?oc=5"
+        "https://newtalk.tw/news/view/2026-09-08/1058547",
+        "https://news.st-media.com.tw/news/62564"
       ],
       "source_type": "新聞報導",
       "last_verified": "2026-10-10",
@@ -3560,7 +3560,8 @@
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-08。",
         "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
         "2026-10-03｜依資料稽核修正與內容不符的細標籤。",
-        "2026-10-10｜依原文修正。"
+        "2026-10-10｜依原文修正。",
+        "2026-10-10｜Google 新聞轉址改為原始報導網址。"
       ]
     },
     {
