@@ -18,6 +18,14 @@
   2. 審核台的修改一律先 commit 進 git 再推，不在 Google 編輯器直接改。
   3. 每次推送或部署都記在 `docs/PROJECT-HANDOFF.md`：commit、推到測試還是正式、部署版本號；推之前先對照最近一筆。
   4. 每台電腦自己 `clasp login`、自己建 `.clasp.json`；scriptId 與憑證不進 git、不寫進文件或聊天，也不從別台複製憑證檔。
+  5. 動手前先 `clasp list-deployments`，與交接文件最近一筆對照；不一致就停下來回報使用者。兩台電腦不要同時推送或部署。
+  6. 測試部署（@HEAD）與正式部署讀寫**同一張 Google Sheet**：測試時的審核動作會真的寫入資料，要用真正要處理的資料實測。
+  7. 正式部署的做法：`clasp create-version "<說明>"` 建新版本，再把**既有的正式部署**改指向該版本（`clasp update-deployment <正式部署 ID> -V <版本號>`）。不新增部署，正式網址才不會變。出問題時把正式部署指回前一個版本號即可還原；舊版本不要刪。
+- **標示來源電腦**：每一筆變更都要看得出是哪台電腦做的。
+  - Git commit：每台電腦在 `.git/hooks/commit-msg` 裝本機 hook，自動在訊息尾端加上 `Machine: <電腦名稱>`（取自 `%COMPUTERNAME%`）。hook 不進版本庫，換電腦或重新 clone 後要重裝。
+  - Google Sheet 的「處理者／裝置」欄：一律填 `<電腦名稱>-<AI>`，例如 `DANASUS-Codex`、`HPDAN-Claude`；不要再用 `本機-Codex` 這類看不出電腦的寫法。Codex 排程的提示詞也要照此填寫。
+  - Apps Script：`clasp create-version` 的說明以電腦名稱開頭，例如 `HPDAN｜審核台：人工備註篩選`；交接文件的部署紀錄也寫上電腦名稱。
+- **其他電腦（例：HPdan）可以做**：人工審核、把已核准資料寫入 CSV 並建置、經使用者確認後 push，以及依上述程序推送與部署審核台。
 - Danasus 上兩個工作端各用一個工作目錄，共用同一個 `.git`：
 
   | 工作端 | 目錄 | 分支 |
@@ -82,7 +90,7 @@ Apps Script 自動蒐集 → Google Sheet「審核資料」
 - 同一筆資料同一時間只能由一個工作端處理，依 Google Sheet 的裝置與鎖定欄位判斷。
 - Sheet ID、部署網址、憑證（`.secrets/`、`.clasp.json`）不得寫進 git、文件或聊天。
 - Apps Script 的程式以 repo 的 `apps-script/` 為準，由資料端用 clasp 推送：先推到測試部署，使用者實測後再正式部署，並在交接文件記下版本。不要直接在 Google 編輯器修改而不回寫 repo。
-- 尚未部署的審核台修改放在 `review-console-wip` 分支（「準備上架」工作區＋設計端的三項修正），由資料端接手；資料端資料夾裡的 `apps-script/Index.html` 是 `main` 上的舊版，**在合併這個分支之前，不要從資料端資料夾推送 Apps Script**，否則會蓋掉這份修改。
+- `review-console-wip` 分支的審核台修改已進入 `main`（與 `main` 只差統計列的「全部」標籤），以 `main` 為準。2026-10-13 查核：測試部署 @HEAD 與 `main` 的 `apps-script/` 相同；正式部署仍為第 11 版，尚未包含 `main` 的人工備註篩選與單卡移除修正，待使用者實測後再升級。
 - `MULTI-COMPUTER-WORKFLOW.md` 列出的舊流程（Cloudflare Worker／D1 發布、GitHub source-lead PR、Service Account 發布）不得啟用。
 
 ## 資料規則
