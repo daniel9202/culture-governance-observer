@@ -117,7 +117,7 @@ function candidateCard(item){
   const party=partyInfo(item.party),summary=item.summary||item.policy_arguments[0]||'';
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
   return `<a class="map-candidate" href="${esc(candidateUrl(item))}" style="${partyStyle(party)}">
-    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span></div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
+    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
     ${summary?`<p>${esc(summary)}</p>`:''}
     <div class="map-topics">${topicTagList(item).slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
     <span class="map-candidate-more">看政見與來源 →</span>
@@ -188,7 +188,10 @@ function renderParties(){
 }
 
 const loadJson=(url,message)=>fetch(url).then(response=>{if(!response.ok)throw Error(message);return response.json()});
-Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset(),loadJson('data/registered_candidates.json','無法讀取登記名冊'),loadJson('data/party_colors.json','無法讀取政黨色')]).then(([geo,data,roster,colors])=>{
+// 名冊由 loadCandidateDataset 一併載入（同時供議員選區查詢），不另外重複讀取。
+Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset({districts:true}),loadJson('data/party_colors.json','無法讀取政黨色')]).then(([geo,data,colors])=>{
+  const roster=data.registered_candidates;
+  if(!roster)throw Error('無法讀取登記名冊');
   geometry=geo;PARTY_COLORS=colors;registeredSource=roster.source;incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   roster.records.forEach(record=>{
     const key=record.office==='縣市長'?'mayor':'councilor';

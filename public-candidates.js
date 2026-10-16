@@ -86,7 +86,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
       if(String(policy.last_verified||'')>String(group.last_verified||''))group.last_verified=policy.last_verified;
     });
   });
-  return [...groups.values()].map(group=>({...group,
+  return [...groups.values()].map(group=>({...group,district:councilDistrict(group),
     topics:uniqueValues(group.topics),topic_categories:uniqueValues(group.topic_categories),topic_subcategories:uniqueValues(group.topic_subcategories),policy_titles:uniqueValues(group.policy_titles),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),editor_notes:uniqueValues(group.editor_notes),ids:uniqueValues(group.ids),
     sources:[...new Map(group.sources.map(source=>[source.url,source])).values()],published_dates:uniqueValues(group.published_dates).sort(),
     shared_policies:[...new Map(group.shared_policies.map(policy=>[policy.id,policy])).values()],
@@ -98,15 +98,33 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
 // 只算議員；縣市長的任內施政另列在現任追蹤首長分頁。
 window.incumbentNamesByCity=records=>records.filter(record=>record.office!=='縣市長').reduce((map,record)=>map.set(record.city,(map.get(record.city)||new Set).add(record.candidate)),new Map);
 window.incumbentLink=(count,city,className='incumbent-link')=>count?`<a class="${className}" href="fulfillment.html?tab=council${city?`&city=${encodeURIComponent(city)}`:''}">${city?'本縣市':''}另有 ${count} 位議員的任內文化問政紀錄（非本屆政見）→</a>`:'';
-window.loadCandidateDataset=async()=>{
-  const [staticData,sharedData]=await Promise.all([
+// 議員選區：資料本身有 district 欄位（資料端日後新增）就用資料的值；
+// 沒有時依中選會名冊（registered_candidates.json）以「縣市＋姓名」查詢，姓名比對規則同地圖（名冊姓名可能附原住民族傳統名字）。
+// 名冊同縣市有兩位以上符合時不猜，留空。名冊約 400 KB，只有需要選區的頁面才以 loadCandidateDataset({districts:true}) 載入。
+let councilRoster=[];
+window.councilDistrict=record=>{
+  if(record?.district)return record.district;
+  if(!String(record?.office).includes('議員'))return '';
+  const inCity=councilRoster.filter(item=>item.city===record.city);
+  const exact=inCity.filter(item=>item.candidate===record.candidate);
+  const matches=exact.length?exact:inCity.filter(item=>item.candidate.startsWith(record.candidate));
+  return matches.length===1?matches[0].district:'';
+};
+// 「新北市第5選舉區」→「第5選舉區」
+window.districtLabel=record=>{const district=record?.district||'';return record?.city&&district.startsWith(record.city)?district.slice(record.city.length):district};
+window.districtNumber=district=>Number(String(district).match(/第(\d+)選舉區/)?.[1]||Infinity);
+window.loadCandidateDataset=async({districts=false}={})=>{
+  const [staticData,sharedData,roster]=await Promise.all([
     fetch('data/candidates.json').then(response=>{if(!response.ok)throw Error('無法讀取候選人資料');return response.json()}),
     fetch('data/shared_policy_groups.json').then(response=>{if(!response.ok)throw Error('無法讀取共同政見資料');return response.json()}),
+    // 名冊讀取失敗時只是不顯示選區，不影響政見本身
+    districts?fetch('data/registered_candidates.json').then(response=>response.ok?response.json():null).catch(()=>null):null,
   ]);
+  if(roster)councilRoster=(roster.records||[]).filter(record=>record.office==='縣市議員');
   // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
   // 前台的政見與統計只收「本屆競選政見」；現任議員個人頁內容與問政／提案另存 incumbent_records（依資料端的 content_nature 欄位）。
   const records=staticData.records||[];
-  return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'),shared_policy_groups:sharedData.records||[]};
+  return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'),shared_policy_groups:sharedData.records||[],registered_candidates:roster};
 };
 // 候選人卡片與網址：縣市長／議員列表、地方頁、候選人頁共用。
 // 包在區塊內，避免和各頁自己宣告的 escapeHtml 等常數撞名。
@@ -129,6 +147,6 @@ window.loadCandidateDataset=async()=>{
   window.renderCandidateCard=(x,{showCity=true,linkName=true,openShared=false}={})=>{
     const name=linkName?`<a class="candidate-name-link" href="${esc(candidateUrl(x))}">${esc(x.candidate)}</a>`:esc(x.candidate);
     const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
-    return `<article class="card candidate-card"><div class="card-meta">${pendingReviewTag(x)}${showCity?`<span class="tag">${esc(x.city)}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span>${(x.policy_titles||[]).length?`<p class="policy-titles">${x.policy_titles.map(t=>`<span>${esc(t)}</span>`).join('')}</p>`:''}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'待查核')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+    return `<article class="card candidate-card"><div class="card-meta">${pendingReviewTag(x)}${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span>${(x.policy_titles||[]).length?`<p class="policy-titles">${x.policy_titles.map(t=>`<span>${esc(t)}</span>`).join('')}</p>`:''}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'待查核')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
 }

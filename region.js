@@ -50,7 +50,7 @@ const renderFinanceSection=records=>{
   draw('all');
 };
 
-Promise.all([loadCandidateDataset(),...['governments','local_cultural_issues','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))]).then(([p,g,i,m])=>{
+Promise.all([loadCandidateDataset({districts:true}),...['governments','local_cultural_issues','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))]).then(([p,g,i,m])=>{
   const rawPolicies=p.records.filter(x=>x.city===city),P=groupCandidateRecords(rawPolicies,(p.shared_policy_groups||[]).filter(x=>x.city===city)).sort((a,b)=>(a.office==='縣市長'?0:1)-(b.office==='縣市長'?0:1)),G=g.records.filter(x=>x.city===city),I=i.records.filter(x=>x.city===city),M=m.records.find(x=>x.city===city),topics=[...new Set(P.flatMap(x=>x.topics))];
   document.title=`${city}文化儀表板｜文化治理觀察站`;
   title.textContent=city+'文化儀表板';
