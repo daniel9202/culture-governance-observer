@@ -46,6 +46,20 @@
 5. **固定交接訊息**：每次 push 後都回報「commit hash、筆數變化、欄位是否變動、內容分類、待辦／風險」。例如：`4053324｜新增 1 筆｜無欄位變動｜蔡易餘：本屆競選政見｜未載預算與期程`。
 6. **開始與結束**：開始前先 `git fetch` 與檢查工作目錄；若遠端已有他端提交，先處理 rebase。結束前只 stage 自己範圍、執行適用驗證、commit、push，再交接。看見對方範圍的問題只回報，不直接修改。
 
+### 雲端 session 的例外（2026-10-23）
+
+這天的工作是在 claude.ai 的雲端 session（Claude Code on the web）做的，與 AGENTS.md 的常規流程有三點不同，**屬一次性例外，不是新規則**：
+
+- 工作分支是系統指派的 `claude/sweet-curie-3o472b`，不是 `main`／`design`／`data-wip`。推這條分支不會部署；上線一律另外快轉合併進 `main` 再推。
+- 單一 commit 同時含資料端與設計端的檔案（選舉區對照表、`scripts/build_data.py`、`data/schema.md`，以及 `map.js`、`styles.css`、各 HTML），經使用者同意「當特例處理」，沒有依分工拆開。
+- commit 的來源標記寫 `Machine: CloudSession-Claude`。雲端容器沒有 `%COMPUTERNAME%`，也沒有本機的 commit-msg hook，與「標示來源電腦」規則的寫法不同。
+
+另外，雲端容器的網路政策擋掉 `web.cec.gov.tw` 與 `data.gov.tw`，所以中選會公告與圖資都是由使用者下載後上傳到 session，不是 AI 自己抓的。
+
+### 跨帳號的 GitHub 權限（2026-10-23 發現，待決定）
+
+兩台電腦各自登入兩個 Claude 帳號（個人與辦公室），辦公室帳號連接的 GitHub 是 `chunjen-paa`，對本倉庫沒有寫入權，push 會得到 403。待使用者決定：只用 `daniel9202` 推（本機用 per-repo 憑證、雲端只在個人帳號開 session），或把 `chunjen-paa` 加為 collaborator（則 `Machine:` 標記要同時標帳號）。
+
 ### 設計端可用的資料介面（2026-10-02）
 
 提交 `68aae0a` 已將下列欄位輸出到 `data/candidates.json`；設計端可直接讀取，無須從來源標題或內文自行判斷：
@@ -202,12 +216,31 @@ npm run build
 - **設計端備忘（2026-10-10 使用者指定，待做）**：縣市長模式下，**現任縣市長登記參選連任的縣市改用另一個底色**；該縣市候選人都不是現任者就維持現狀（暖灰底）。需要資料端先提供「誰是現任縣市長、有沒有登記連任」的欄位（前台不得自行推斷身分，見 AGENTS.md 欄位契約），再加圖例說明。
 - **數字**：會隨資料端更新變動，以線上頁面為準，不再在此維護逐縣市表格。2026-10-02 `711767c` 時為縣市長 31/81 位、議員 43/1,502 位（只算本屆競選政見）、21/22 縣市有人提出（澎湖目前只有現任議員內容）。
 
+### 議員選舉區與圖資流程（2026-10-23 上線）
+
+選舉區劃分依中選會 115 年 8 月 20 日公告（中選務字第1153150253號，<https://web.cec.gov.tw/central/article/63625>），全國 221 個議員選舉區。
+
+| 用途 | 原始圖資／檔案 | 解壓或存放位置 | 腳本 | 產出（須提交） |
+| --- | --- | --- | --- | --- |
+| 縣市底圖 | 直轄市、縣市界線 COUNTY_MOI_1140318（<https://data.gov.tw/dataset/7442>） | `tmp/admin-map/source/` | `scripts/build_map_geometry.py` | `map-geometry.json` |
+| 選舉區範圍對照 | 中選會選舉區劃分公告 PDF | 任意資料夾（傳給腳本） | `scripts/import_cec_districts.py <PDF> --as-of 2026-08-20` | `config/election_districts.csv` → `data/election_districts.json` |
+| 選舉區界線 | 鄉鎮市區界線 TOWN_MOI_1140318（<https://data.gov.tw/dataset/7441>） | `tmp/admin-map/town/` | `scripts/build_district_geometry.py` | `district-geometry.json` |
+| 新竹市與竹北市的選舉區 | 村里界圖 VILLAGE_NLSC_1150817（<https://data.gov.tw/dataset/7438>） | `tmp/admin-map/village/` | 同上 | 同上 |
+
+- `tmp/` 已被 `.gitignore` 忽略，**原始 shapefile 與 PDF 都不進版本庫**，換電腦要重新下載。
+- 鄉鎮市區那份壓縮檔另含 `Town_Majia_Sanhe`（屏東瑪家鄉三和村飛地），不要放進 `tmp/admin-map/town/`，腳本是用 `glob("*.shp")` 取第一個檔。
+- 選舉區界線的作法：把同一選舉區內部、被兩個鄉鎮市區（或村里）共用的邊去掉，剩下的邊接成外框，所以是真正的合併輪廓。投影與離島附圖沿用 `build_map_geometry.py`，可直接疊在縣市底圖上。
+- **221 區中有 155 個有圖形**。沒有圖形的：60 個原住民選舉區（依身分別劃分、範圍與區域選舉區重疊，畫不成互斥的面，改用圖層切換以人數徽章呈現）、6 個所屬離島未繪入底圖（屏東第7 琉球鄉、臺東第6 綠島鄉、澎湖第5 望安、第6 七美、連江第3 莒光、第4 東引）。
+- 外島不能用面積門檻排除（琉球鄉 22 px²、永和區 22.7 px²，一樣大），改為判斷圖形是否落在縣市底圖已繪出的範圍內。
+- 新竹市與竹北市的「未編定村里」（軍事用地）不屬於任何選舉區，公告也沒列，圖上留空。
+- 若沒有放村里圖資，新竹市 5 區與新竹縣第1、2選舉區會退回整個鄉鎮市區、共用一塊並標記 `approximate`，不是錯誤呈現。
+
 ### 中選會登記名冊
 
 - 來源：<https://web.cec.gov.tw/central/article/64709>（115.09.07 製表）；新聞稿 <https://web.cec.gov.tw/central/article/64711>。解析筆數與新聞稿一致：直轄市長 23、直轄市議員 610、縣（市）長 58、縣（市）議員 892。
 - 2026-10-01 已取得使用者同意並下載 1-1、2-1、3-1、4-1 四份 PDF（存於當時 session 的暫存資料夾，未進版本庫）。更新時重新下載後執行：`py -3 scripts/import_cec_registrations.py <PDF 資料夾> --as-of YYYY-MM-DD`（需 `pdfplumber`；腳本會檢查筆數）。
 - **已更正（2026-10-01，使用者確認以中選會為準）**：政黨欄位一律以中選會登記名冊的「推薦之政黨」為準。林筱薇（臺北市第7選舉區，登記為「林筱薇IcyangTamana」）原標小民參政歐巴桑聯盟，她是該黨發言人，但不是該黨推薦的候選人；薛兆基（高雄市第4選舉區）原標「台灣前進」，那是小黨與無黨籍候選人的聯合，不是政黨。兩人都改成「無黨籍」，`correction_log` 有記錄。其餘 29 位候選人的政黨與中選會一致。地圖的政黨色表也已移除「台灣前進」。
-- **待更新**：中選會 10/16 前完成資格審查、10/23 號次抽籤；審定名單公告後重跑轉檔並更新 `as_of`，`map.html` 統計口徑文字也一併改。
+- **已更新（2026-10-23，`4b53d50`）**：中選會 10/16 公告候選人資格審定結果（<https://web.cec.gov.tw/central/article/65213>），直轄市議員與縣（市）議員各有 5 人不符規定，共 10 人。該公告只列不符規定者、不是完整名冊，所以**不重跑轉檔**，而是直接從 `data/input/registered_candidates.csv` 刪除這 10 筆，全表的 `source_title`／`source_url`／`as_of` 改為審定公告；不記不符規定的事由。議員 1,502→1,492，縣市長 81 不變。**重跑 `import_cec_registrations.py` 會依 9/7 名冊把這 10 人還原**，腳本開頭已加警語。這 10 人都沒有收錄文化政見，`candidates.csv` 未受影響。
 - 已移除先前暫用的 `config/collector.json` 追蹤名單邏輯（建置也不再複製該檔）。
 
 ### 候選人資料的自動檢查（2026-10-01 新增）
