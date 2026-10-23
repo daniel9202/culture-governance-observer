@@ -251,6 +251,15 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-district-head span{font-weight:600;font-size:.78rem;color:var(--muted)}
 .map-district-group .map-candidates{border-top:0}
 .map-district-note{margin:1rem 0 .2rem;font-size:.8rem;color:var(--muted)}
+.map-layer-switch{font-size:.85rem}
+.map-layer-switch button{padding:.5rem .85rem;font-size:.82rem}
+.map-district-shape{fill:none;stroke:#7f7c6e;stroke-width:.5;stroke-linejoin:round;cursor:pointer}
+.map-district-shape.has-records{fill:var(--lime);fill-opacity:.5;stroke:#5f6833;stroke-width:.7}
+.map-district-shape.is-approximate{stroke-dasharray:2.5 2}
+.map-district-shape:hover{fill:var(--lime);fill-opacity:.75}
+.party-legend .legend-district i{width:12px;height:9px;border-radius:2px;background:var(--lime);box-shadow:inset 0 0 0 1px #5f6833}
+/* 顯示選舉區界線時，選取的縣市改回中性底色，顏色留給選舉區 */
+.taiwan-map.shows-districts .county.is-active{fill:#eae7dc}
 .map-candidate{display:block;background:var(--surface);color:inherit;text-decoration:none;padding:1.1rem 0 1.1rem 1rem;border-left:4px solid var(--party)}
 .map-candidate:hover{background:var(--paper)}
 .map-candidate-more{display:block;margin-top:.75rem;font-size:.8rem;font-weight:700;color:var(--muted)}
