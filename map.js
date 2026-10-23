@@ -153,14 +153,36 @@ function renderDistrictLabels(){
   if(!layer)return;
   const svg=document.getElementById('taiwanMap'),zoom=Number(svg.style.getPropertyValue('--zoom'))||1;
   if(office!=='councilor'||districtLayer!=='region'||!activeCity||zoom<=1.2){layer.innerHTML='';return}
-  layer.innerHTML=[...districtShapes.values()].filter(shape=>shape.city===activeCity).map(shape=>{
-    // 太小的選舉區標不下（臺中市區那一帶會疊成一團），略過標籤，改由滑過查看
+  // 太小的選舉區（臺中市區、永和、臺南東區等）標籤放不進去，比照小型市的做法引線標註在旁邊
+  const shapes=[...districtShapes.values()].filter(shape=>shape.city===activeCity);
+  const inside=[],callout=[];
+  shapes.forEach(shape=>{
     const box=pathBox(shape.d);
-    if(!box||(box[2]-box[0])*zoom<34||(box[3]-box[1])*zoom<16)return '';
+    if(!box)return;
+    ((box[2]-box[0])*zoom<34||(box[3]-box[1])*zoom<16?callout:inside).push({shape,box});
+  });
+  const view=(document.getElementById('taiwanMap').getAttribute('viewBox')||'').split(' ').map(Number);
+  const text=({shape,at,anchor='middle'})=>{
     const count=shapeCandidates(shape).length;
-    const label=shapeLabel(shape).replace('選舉區','');
-    return `<text class="district-label${count?' has-records':''}" x="${shape.anchor[0]}" y="${shape.anchor[1]}" text-anchor="middle" style="font-size:${(11/zoom).toFixed(2)}px">${esc(label)}</text>`;
-  }).join('');
+    return `<text class="district-label${count?' has-records':''}" x="${at[0]}" y="${at[1]}" text-anchor="${anchor}" style="font-size:${(11/zoom).toFixed(2)}px">${esc(shapeLabel(shape).replace('選舉區',''))}</text>`;
+  };
+  let marks=inside.map(item=>text({shape:item.shape,at:item.shape.anchor})).join('');
+  if(callout.length&&view.length===4){
+    // 排到整個縣市外框之外（西側多半是海），不然會壓到鄰近選舉區的標籤
+    const county=pathBox(geometry.counties.find(item=>item.name===activeCity)?.d||'')||[0,0,0,0];
+    const gap=10/zoom,step=15/zoom,margin=34/zoom;
+    const left=county[0]-gap-margin>view[0];
+    const right=!left&&county[2]+gap+margin<view[0]+view[2];
+    const x=left?county[0]-gap:right?county[2]+gap:county[0]-gap;
+    const sorted=callout.slice().sort((a,b)=>a.shape.anchor[1]-b.shape.anchor[1]);
+    const mid=sorted.reduce((sum,item)=>sum+item.shape.anchor[1],0)/sorted.length;
+    marks+=sorted.map((item,index)=>{
+      const y=mid+(index-(sorted.length-1)/2)*step;
+      return `<line class="district-leader" x1="${item.shape.anchor[0]}" y1="${item.shape.anchor[1]}" x2="${x}" y2="${y-step*0.28}"/>`
+        +text({shape:item.shape,at:[x+(right?step*0.25:-step*0.25),y],anchor:right?'start':'end'});
+    }).join('');
+  }
+  layer.innerHTML=marks;
 }
 
 function districtShapesFor(city){
@@ -178,6 +200,8 @@ function renderDistricts(){
   layer.innerHTML=districtShapesFor(activeCity);
   document.getElementById('taiwanMap').classList.toggle('shows-districts',Boolean(layer.childElementCount));
   layer.querySelectorAll('.map-district-shape').forEach(node=>{
+    // 選區圖形蓋在縣市上面，沒有這個處理的話，回到全國後再點該縣市會沒有反應
+    node.addEventListener('click',()=>selectCity(districtShapes.get(node.dataset.shape).city));
     node.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')showDistrictTooltip(node.dataset.shape,event)});
     node.addEventListener('pointermove',event=>{if(event.pointerType!=='touch')moveTooltip(event)});
     node.addEventListener('pointerleave',hideTooltip);
