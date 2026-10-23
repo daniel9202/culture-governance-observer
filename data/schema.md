@@ -29,6 +29,9 @@
 ## `shared_policy_groups.csv`
 
 收錄由多位候選人共同提出、但不應誤認為任何一人單獨提出的政見。以 `scope` 區分兩種適用範圍：`party` 為政黨共同政見，依 `party` 與 `office` 套用至已收錄的同黨候選人；`regional` 為區域共同政見，另以 `city`、`office`、`party` 與 `candidates`（多位姓名以 `||` 分隔）指定適用對象。前台會在候選人卡片分開顯示「政黨共同政見」與「區域共同政見」；個人政見與兩類共同政見的來源維持分開。
+## `config/election_districts.csv`
+
+中選會選舉區劃分公告（115年8月20日中選務字第1153150253號）的轉檔結果，由 `scripts/import_cec_districts.py` 產生，請勿手動逐筆編輯；公告 PDF 不納入版本庫。全國 221 個議員選舉區，欄位：`city`、`district`（選舉區全名，與 `registered_candidates.csv` 的 `district` 一致）、`district_type`（`區域`、`平地原住民`、`山地原住民`）、`scope`（公告原文的範圍敘述）、`scope_prefix`（以村里劃分時的鄉鎮市名，例如竹北市）、`units`（區域選舉區的鄉鎮市區或村里，以 `|` 分隔）、`unit_level`（`鄉鎮市區` 或 `村里`）、`seats`（應選名額）、`source_title`、`source_url`、`as_of`（公告發文日期）。區域選舉區 161 個，其中新竹市 5 個與新竹縣第1、2選舉區（竹北市）以村里劃分；原住民選舉區 60 個依身分別劃分，範圍與區域選舉區重疊，不拆 `units`。全表須共用同一來源與 `as_of`；輸出的 JSON 只在檔案層級記錄一次 `source`。
 ## `registered_candidates.csv`
 
 中選會「候選人登記彙總表」的轉檔結果，用於計算各縣市參選人數，**不是本站查核的政見資料**。由 `scripts/import_cec_registrations.py` 從中選會 PDF 產生，請勿手動逐筆編輯。欄位：`city`、`office`（`縣市長` 或 `縣市議員`；直轄市長、直轄市議員分別併入）、`district`（選舉區，議員為「臺北市第1選舉區」等）、`candidate`（照名冊登錄，可能含原住民族傳統名字）、`party`（推薦之政黨，未推薦為「無」）、`registered_date`、`incumbent`（僅用「是」或留空；標示現任縣市長，依 2026-10-10 的現任職務與中選會登記名冊判定，僅供地圖樣式使用）、`source_title`、`source_url`、`as_of`（名冊製表日期）。全表須共用同一來源與 `as_of`；輸出的 JSON 只在檔案層級記錄一次 `source`。

@@ -246,6 +246,11 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-detail h2{font-size:clamp(2.2rem,3.5vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin:.4rem 0 .6rem}
 .map-detail-lead{color:var(--muted);margin:0 0 1.2rem}
 .map-candidates{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.map-district-group+.map-district-group{margin-top:.1rem}
+.map-district-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem;margin:0;padding:.65rem .9rem;background:var(--tint);font:800 .95rem/1.4 "Noto Sans TC","PingFang TC",sans-serif;color:var(--ink)}
+.map-district-head span{font-weight:600;font-size:.78rem;color:var(--muted)}
+.map-district-group .map-candidates{border-top:0}
+.map-district-note{margin:1rem 0 .2rem;font-size:.8rem;color:var(--muted)}
 .map-candidate{display:block;background:var(--surface);color:inherit;text-decoration:none;padding:1.1rem 0 1.1rem 1rem;border-left:4px solid var(--party)}
 .map-candidate:hover{background:var(--paper)}
 .map-candidate-more{display:block;margin-top:.75rem;font-size:.8rem;font-weight:700;color:var(--muted)}

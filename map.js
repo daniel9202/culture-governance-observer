@@ -94,8 +94,15 @@ function drawMap(){
 function tooltipRow(key,city,label){
   const proposed=(byOffice[key].get(city)||[]).length,total=registeredIn(key,city).length,missing=unrecorded(key,city);
   const bar=`<span class="tip-bar"><span style="width:${Math.min(proposed/Math.max(total,1),1)*100}%"></span></span>`;
-  const note=!total?'名冊無資料':!missing.length?'登記參選人皆已收錄':key==='mayor'?`未收錄：${nameList(missing,6)}`:`未收錄 ${missing.length} 位`;
+  const note=!total?'名冊無資料':!missing.length?'登記參選人皆已收錄':key==='mayor'?`未收錄：${nameList(missing,6)}`:`未收錄 ${missing.length} 位${districtNote(city)}`;
   return `<div class="tip-row${key===office?' is-current':''}"><span class="tip-office">${label}</span><span class="tip-count"><b>${proposed}</b> / ${total} 位已提出</span>${bar}<span class="tip-note">${note}</span></div>`;
+}
+// 議員：該縣市共幾個選舉區、其中幾個已有收錄的候選人（選舉區數含原住民選舉區）
+function districtNote(city){
+  const all=cityDistricts(city).length;
+  if(!all)return '';
+  const covered=new Set((byOffice.councilor.get(city)||[]).map(item=>item.district).filter(Boolean)).size;
+  return `・${covered}／${all} 個選舉區有收錄`;
 }
 function showTooltip(city,event){
   const tip=document.getElementById('mapTooltip');
@@ -113,15 +120,37 @@ function moveTooltip(event){
 }
 function hideTooltip(){document.getElementById('mapTooltip').hidden=true}
 
-function candidateCard(item){
+function candidateCard(item,{district=true}={}){
   const party=partyInfo(item.party),summary=item.summary||item.policy_arguments[0]||'';
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
   return `<a class="map-candidate" href="${esc(candidateUrl(item))}" style="${partyStyle(party)}">
-    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
+    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${district&&item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
     ${summary?`<p>${esc(summary)}</p>`:''}
     <div class="map-topics">${topicTagList(item).slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
     <span class="map-candidate-more">看政見與來源 →</span>
   </a>`;
+}
+
+// 議員依選舉區分組：區域選舉區照號次，原住民選舉區另成一段（範圍與區域選舉區重疊），
+// 查不到選舉區的（名冊有同名候選人）排在最後。
+function districtGroups(list,city){
+  const groups=new Map;
+  list.forEach(item=>groups.set(item.district||'',[...(groups.get(item.district||'')||[]),item]));
+  const section=key=>{
+    const detail=districtDetail(key);
+    // 涵蓋全縣市的原住民選舉區不重複寫縣市名（標題已經是「平地原住民選區」）
+    const towns=districtScope(key).replace(/之(平地|山地)原住民$/,'');
+    const note=[towns===city?'':towns,detail?`應選 ${detail.seats} 席`:''].filter(Boolean).join('・');
+    const head=key
+      ?`<h3 class="map-district-head">${esc(districtLabel({city,district:key}))}${note?`<span>${esc(note)}</span>`:''}</h3>`
+      :'<h3 class="map-district-head">選舉區待確認<span>中選會名冊中有同名候選人，本站未推定其選舉區</span></h3>';
+    return `<div class="map-district-group">${head}<div class="map-candidates">${groups.get(key).map(item=>candidateCard(item,{district:false})).join('')}</div></div>`;
+  };
+  const keys=[...groups.keys()].sort((a,b)=>districtNumber(a)-districtNumber(b));
+  const indigenous=keys.filter(key=>key&&indigenousDistrict(key));
+  return keys.filter(key=>key&&!indigenousDistrict(key)).map(section).join('')
+    +(indigenous.length?`<p class="map-district-note">原住民選舉區依身分別劃分，範圍與區域選舉區重疊。</p>${indigenous.map(section).join('')}`:'')
+    +keys.filter(key=>!key).map(section).join('');
 }
 
 function renderDetail(){
@@ -135,7 +164,7 @@ function renderDetail(){
   const foot=switchLink||incumbentNote?`<div class="map-detail-foot">${switchLink}${incumbentNote}</div>`:'';
   if(!city){detail.innerHTML='<p class="kicker">選擇縣市</p><h2>從地圖開始</h2><p class="map-detail-lead">點選地圖上的縣市，查看提出文化政策的候選人與政黨。</p>';return}
   detail.innerHTML=`<p class="kicker">${esc(REGION_OF[city]||'')} / ${OFFICES[office].label}</p><h2>${esc(city)}</h2>`+(list.length
-    ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p><div class="map-candidates">${list.map(candidateCard).join('')}</div>${missingNote}${regionLink}`
+    ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p>${office==='councilor'?districtGroups(list,city):`<div class="map-candidates">${list.map(candidateCard).join('')}</div>`}${missingNote}${regionLink}`
     :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}${regionLink}`)+foot;
   detail.querySelector('[data-switch]')?.addEventListener('click',event=>setOffice(event.currentTarget.dataset.switch));
 }
@@ -175,7 +204,7 @@ function partyTotals(){
   return [...totals.values()].sort((a,b)=>(b.mayor+b.councilor)-(a.mayor+a.councilor)||b.mayor-a.mayor);
 }
 function renderLegend(){
-  if(office==='councilor'){document.getElementById('partyLegend').innerHTML='<span><b class="legend-count">7</b>數字＝本站已收錄、提出文化政策的議員人數；點選縣市可看政黨與名單</span>';return}
+  if(office==='councilor'){document.getElementById('partyLegend').innerHTML='<span><b class="legend-count">7</b>數字＝本站已收錄、提出文化政策的議員人數；點選縣市可看各選舉區的候選人與政黨</span>';return}
   const present=new Set([...byOffice[office].values()].flat().map(item=>item.party));
   document.getElementById('partyLegend').innerHTML=partyTotals().filter(row=>present.has(row.party)).map(row=>`<span style="${partyStyle(partyInfo(row.party))}"><i></i>${esc(partyInfo(row.party).short)}</span>`).join('')+([...registered.mayor.keys()].some(incumbentMayor)?'<span class="legend-incumbent"><i></i>現任縣市長登記連任</span>':'');
 }

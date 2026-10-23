@@ -446,6 +446,50 @@ def build_registered_candidates():
     # 來源與名冊日期全表一致，只在檔案層級記錄一次，避免前台資料過大
     return records, (sources[0] if sources else None)
 
+DISTRICT_TYPES = {"區域", "平地原住民", "山地原住民"}
+ELECTION_DISTRICTS_CONFIG = ROOT / "config" / "election_districts.csv"
+
+def build_election_districts(registered):
+    """中選會選舉區劃分公告（scripts/import_cec_districts.py 產生）。
+
+    區域選舉區帶鄉鎮市區（新竹市與新竹縣竹北市是村里）清單；原住民選舉區涵蓋全縣市或
+    跨多個鄉鎮市區，與區域選舉區重疊，只保留公告原文的範圍敘述。
+    """
+    records, sources = [], []
+    with ELECTION_DISTRICTS_CONFIG.open(encoding="utf-8-sig", newline="") as handle:
+        for index, row in enumerate(csv.DictReader(handle), start=2):
+            if not any(row.values()):
+                continue
+            label = f"config/election_districts.csv row {index}"
+            required(row, ["city", "district", "district_type", "scope", "seats", "source_title", "source_url", "as_of"], label)
+            if row["city"] not in CITIES:
+                raise ValueError(f"{label}: unknown city {row['city']}")
+            if row["district_type"] not in DISTRICT_TYPES:
+                raise ValueError(f"{label}: district_type must be one of {', '.join(sorted(DISTRICT_TYPES))}")
+            if not row["district"].startswith(row["city"]):
+                raise ValueError(f"{label}: district {row['district']} must start with {row['city']}")
+            if not row["seats"].isdigit():
+                raise ValueError(f"{label}: seats must be a number")
+            valid_date(row["as_of"], label)
+            valid_url(row["source_url"], label)
+            source = {"title": row["source_title"], "url": row["source_url"], "as_of": row["as_of"]}
+            if sources and source not in sources:
+                raise ValueError(f"{label}: all rows must share one source and as_of date")
+            sources = sources or [source]
+            records.append({
+                "city": row["city"], "district": row["district"], "district_type": row["district_type"],
+                "scope": row["scope"], "scope_prefix": row.get("scope_prefix", ""),
+                "units": [unit for unit in row.get("units", "").split("|") if unit],
+                "unit_level": row.get("unit_level", ""), "seats": int(row["seats"]),
+            })
+    # 選舉區名稱必須與候選人名冊一致，否則前台查不到候選人的選區
+    listed = {record["district"] for record in records}
+    registered_districts = {row["district"] for row in registered if row["office"] == "縣市議員"}
+    missing = registered_districts - listed
+    if missing:
+        raise ValueError(f"config/election_districts.csv 缺少名冊中的選舉區：{'、'.join(sorted(missing))}")
+    return records, (sources[0] if sources else None)
+
 def same_candidate(registered_name, name):
     """中選會名冊可能在姓名後附原住民族傳統名字（例：林筱薇IcyangTamana），與 map.js 的比對規則一致。"""
     return registered_name == name or registered_name.startswith(name)
@@ -521,6 +565,7 @@ if __name__ == "__main__":
     civic_calls = build_civic_calls()
     fulfillment = build_fulfillment()
     registered, registered_source = build_registered_candidates()
+    districts, districts_source = build_election_districts(registered)
     errors, warnings = check_against_registration(candidates, shared_groups, registered)
     party_colors, party_warnings = build_party_colors(candidates, shared_groups)
     report_warnings(warnings + party_warnings + TOPIC_WARNINGS)
@@ -534,5 +579,6 @@ if __name__ == "__main__":
     write("region_metrics.json", build_region_metrics())
     write("pledge_fulfillment.json", fulfillment)
     write("registered_candidates.json", registered, source=registered_source)
+    write("election_districts.json", districts, source=districts_source)
     (OUTPUT / "party_colors.json").write_text(json.dumps({"schema_version": "1.1", "last_updated": date.today().isoformat(), **party_colors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("data validation passed")

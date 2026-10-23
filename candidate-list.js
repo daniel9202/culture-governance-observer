@@ -11,7 +11,7 @@ function fillDistricts(selected=''){
   const city=cityFilter.value;
   districtFilter.length=1;
   const districts=city?uniq(platforms.filter(x=>x.city===city).map(x=>x.district)).sort((a,b)=>districtNumber(a)-districtNumber(b)):[];
-  options('districtFilter',districts,district=>districtLabel({city,district}));
+  options('districtFilter',districts,district=>districtFullLabel({city,district}));
   districtFilter.disabled=!districts.length;
   districtFilter.value=districts.includes(selected)?selected:'';
 }

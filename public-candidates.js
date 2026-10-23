@@ -110,17 +110,47 @@ window.councilDistrict=record=>{
   const matches=exact.length?exact:inCity.filter(item=>item.candidate.startsWith(record.candidate));
   return matches.length===1?matches[0].district:'';
 };
-// 「新北市第5選舉區」→「第5選舉區」
-window.districtLabel=record=>{const district=record?.district||'';return record?.city&&district.startsWith(record.city)?district.slice(record.city.length):district};
-window.districtNumber=district=>Number(String(district).match(/第(\d+)選舉區/)?.[1]||Infinity);
+// 中選會選舉區劃分公告（data/election_districts.json）：選舉區的範圍與類別。
+// 原住民選舉區涵蓋全縣市或跨多個鄉鎮市區，與區域選舉區重疊，標籤不用「第N選舉區」。
+let districtScopes=new Map;
+window.districtDetail=district=>districtScopes.get(district)||null;
+window.cityDistricts=city=>[...districtScopes.values()].filter(record=>record.city===city);
+window.indigenousDistrict=district=>districtDetail(district)?.district_type.includes('原住民')||false;
+// 「新北市第5選舉區」→「第5選舉區」；原住民選舉區→「平地原住民選區」
+window.districtLabel=record=>{
+  const district=record?.district||'';
+  const detail=districtDetail(district);
+  if(detail&&detail.district_type!=='區域')return `${detail.district_type}選區`;
+  return record?.city&&district.startsWith(record.city)?district.slice(record.city.length):district;
+};
+// 選舉區範圍：區域選舉區列鄉鎮市區；新竹市與竹北市以村里劃分，只報里數；原住民選舉區照公告原文。
+window.districtScope=district=>{
+  const detail=districtDetail(district);
+  if(!detail)return '';
+  if(detail.district_type!=='區域')return detail.scope;
+  if(detail.unit_level==='村里')return `${detail.scope_prefix}${detail.units.length} 個里`;
+  return detail.units.join('、');
+};
+// 標籤加上範圍：「第1選舉區（北投區、士林區）」；原住民選舉區涵蓋全縣市時不重複寫縣市名
+window.districtFullLabel=record=>{
+  const label=districtLabel(record),scope=districtScope(record?.district);
+  if(!scope)return label;
+  if(!indigenousDistrict(record?.district))return `${label}（${scope}）`;
+  const towns=scope.replace(/之(平地|山地)原住民$/,'');
+  return towns===record?.city?label:`${label}（${towns}）`;
+};
+// 原住民選舉區排在區域選舉區之後
+window.districtNumber=district=>(indigenousDistrict(district)?1e6:0)+Number(String(district).match(/第(\d+)選舉區/)?.[1]||Infinity);
 window.loadCandidateDataset=async({districts=false}={})=>{
-  const [staticData,sharedData,roster]=await Promise.all([
+  const [staticData,sharedData,roster,districtTable]=await Promise.all([
     fetch('data/candidates.json').then(response=>{if(!response.ok)throw Error('無法讀取候選人資料');return response.json()}),
     fetch('data/shared_policy_groups.json').then(response=>{if(!response.ok)throw Error('無法讀取共同政見資料');return response.json()}),
     // 名冊讀取失敗時只是不顯示選區，不影響政見本身
     districts?fetch('data/registered_candidates.json').then(response=>response.ok?response.json():null).catch(()=>null):null,
+    districts?fetch('data/election_districts.json').then(response=>response.ok?response.json():null).catch(()=>null):null,
   ]);
   if(roster)councilRoster=(roster.records||[]).filter(record=>record.office==='縣市議員');
+  if(districtTable)districtScopes=new Map((districtTable.records||[]).map(record=>[record.district,record]));
   // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
   // 前台的政見與統計只收「本屆競選政見」；現任議員個人頁內容與問政／提案另存 incumbent_records（依資料端的 content_nature 欄位）。
   const records=staticData.records||[];
@@ -147,6 +177,6 @@ window.loadCandidateDataset=async({districts=false}={})=>{
   window.renderCandidateCard=(x,{showCity=true,linkName=true,openShared=false}={})=>{
     const name=linkName?`<a class="candidate-name-link" href="${esc(candidateUrl(x))}">${esc(x.candidate)}</a>`:esc(x.candidate);
     const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
-    return `<article class="card candidate-card"><div class="card-meta">${pendingReviewTag(x)}${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span>${(x.policy_titles||[]).length?`<p class="policy-titles">${x.policy_titles.map(t=>`<span>${esc(t)}</span>`).join('')}</p>`:''}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'待查核')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+    return `<article class="card candidate-card"><div class="card-meta">${pendingReviewTag(x)}${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtFullLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span>${(x.policy_titles||[]).length?`<p class="policy-titles">${x.policy_titles.map(t=>`<span>${esc(t)}</span>`).join('')}</p>`:''}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'待查核')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
 }
