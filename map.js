@@ -254,7 +254,8 @@ function districtNote(city){
 function showTooltip(city,event){
   const tip=document.getElementById('mapTooltip');
   const incumbent=incumbentMayor(city);
-  tip.innerHTML=`<strong>${esc(city)}</strong>${incumbent?`<span class="tip-incumbent">現任縣市長 ${esc(incumbent.candidate)} 登記連任</span>`:''}${tooltipRow('mayor',city,'縣市長')}${tooltipRow('councilor',city,'議員')}<span class="tip-source">參選人數：中選會登記名冊</span>`;
+  // 只顯示目前切換的職務；兩者並陳在下方的「縣市比較」表與各縣市地方頁
+  tip.innerHTML=`<strong>${esc(city)}</strong>${office==='mayor'&&incumbent?`<span class="tip-incumbent">現任縣市長 ${esc(incumbent.candidate)} 登記連任</span>`:''}${tooltipRow(office,city,office==='councilor'?`${districtLayer==='indigenous'?'原住民':'區域'}選舉區議員`:OFFICES[office].label)}<span class="tip-source">參選人數：中選會登記名冊・縣市長與議員並陳見下方「縣市比較」</span>`;
   tip.hidden=false;moveTooltip(event);
 }
 function moveTooltip(event){
