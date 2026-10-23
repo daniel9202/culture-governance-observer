@@ -13,7 +13,9 @@ PDF 不納入版本庫。執行（需 pdfplumber）：
 
     py -3 scripts/import_cec_registrations.py <PDF 資料夾> --as-of 2026-09-07
 
-資格審查（10/16）與號次抽籤（10/23）後，若中選會公布審定名單，改用新檔案重跑並更新 --as-of 與 SOURCE_URL。
+115/10/16 中選會審定公告後，已直接從 data/input/registered_candidates.csv 刪除 10 位不符規定者，
+並把全表的來源改為審定公告（2026-10-16）。**重跑此腳本會依 9/7 登記名冊還原那 10 人**，
+若要重跑，請改用中選會的審定名冊，或重跑後再依審定公告刪除一次。
 """
 from pathlib import Path
 import argparse

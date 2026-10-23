@@ -1,10 +1,10 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-10",
+  "last_updated": "2026-10-23",
   "source": {
-    "title": "中央選舉委員會：115年地方公職人員選舉候選人登記名冊",
-    "url": "https://web.cec.gov.tw/central/article/64709",
-    "as_of": "2026-09-07"
+    "title": "中央選舉委員會：115年地方公職人員選舉候選人登記名冊，依115年10月16日審定公告更新",
+    "url": "https://web.cec.gov.tw/central/article/65213",
+    "as_of": "2026-10-16"
   },
   "records": [
     {
@@ -1460,15 +1460,6 @@
       "city": "臺北市",
       "office": "縣市議員",
       "district": "臺北市第6選舉區",
-      "candidate": "游智彬",
-      "party": "新黨",
-      "registered_date": "2026-09-02",
-      "incumbent": ""
-    },
-    {
-      "city": "臺北市",
-      "office": "縣市議員",
-      "district": "臺北市第6選舉區",
       "candidate": "耿葳",
       "party": "中國國民黨",
       "registered_date": "2026-09-02",
@@ -2422,15 +2413,6 @@
     {
       "city": "新北市",
       "office": "縣市議員",
-      "district": "新北市第10選舉區",
-      "candidate": "林正峰",
-      "party": "中國國民黨",
-      "registered_date": "2026-09-03",
-      "incumbent": ""
-    },
-    {
-      "city": "新北市",
-      "office": "縣市議員",
       "district": "新北市第11選舉區",
       "candidate": "張錦豪",
       "party": "民主進步黨",
@@ -2686,15 +2668,6 @@
       "district": "桃園市第1選舉區",
       "candidate": "許孟祥",
       "party": "勞動黨",
-      "registered_date": "2026-09-01",
-      "incumbent": ""
-    },
-    {
-      "city": "桃園市",
-      "office": "縣市議員",
-      "district": "桃園市第1選舉區",
-      "candidate": "蕭湘瀚",
-      "party": "無",
       "registered_date": "2026-09-01",
       "incumbent": ""
     },
@@ -4412,15 +4385,6 @@
       "city": "臺中市",
       "office": "縣市議員",
       "district": "臺中市第13選舉區",
-      "candidate": "鄭伯其",
-      "party": "無",
-      "registered_date": "2026-09-02",
-      "incumbent": ""
-    },
-    {
-      "city": "臺中市",
-      "office": "縣市議員",
-      "district": "臺中市第13選舉區",
       "candidate": "鄒明諺",
       "party": "時代力量",
       "registered_date": "2026-09-02",
@@ -4873,15 +4837,6 @@
       "district": "臺南市第7選舉區",
       "candidate": "周宏昌",
       "party": "中國國民黨",
-      "registered_date": "2026-08-31",
-      "incumbent": ""
-    },
-    {
-      "city": "臺南市",
-      "office": "縣市議員",
-      "district": "臺南市第7選舉區",
-      "candidate": "曹暐國",
-      "party": "無",
       "registered_date": "2026-08-31",
       "incumbent": ""
     },
@@ -9029,15 +8984,6 @@
       "city": "雲林縣",
       "office": "縣市議員",
       "district": "雲林縣第4選舉區",
-      "candidate": "鍾任明",
-      "party": "中國國民黨",
-      "registered_date": "2026-09-02",
-      "incumbent": ""
-    },
-    {
-      "city": "雲林縣",
-      "office": "縣市議員",
-      "district": "雲林縣第4選舉區",
       "candidate": "廖庭輝",
       "party": "無",
       "registered_date": "2026-09-03",
@@ -9732,15 +9678,6 @@
       "office": "縣市議員",
       "district": "嘉義縣第6選舉區",
       "candidate": "莊竣傑",
-      "party": "無",
-      "registered_date": "2026-09-02",
-      "incumbent": ""
-    },
-    {
-      "city": "嘉義縣",
-      "office": "縣市議員",
-      "district": "嘉義縣第6選舉區",
-      "candidate": "何博倫",
       "party": "無",
       "registered_date": "2026-09-02",
       "incumbent": ""
@@ -11476,15 +11413,6 @@
     {
       "city": "花蓮縣",
       "office": "縣市議員",
-      "district": "花蓮縣第5選舉區",
-      "candidate": "周駿宥",
-      "party": "無",
-      "registered_date": "2026-09-04",
-      "incumbent": ""
-    },
-    {
-      "city": "花蓮縣",
-      "office": "縣市議員",
       "district": "花蓮縣第6選舉區",
       "candidate": "邱福順Kacaw．Folaw",
       "party": "無",
@@ -12512,15 +12440,6 @@
       "city": "金門縣",
       "office": "縣市議員",
       "district": "金門縣第1選舉區",
-      "candidate": "石永城",
-      "party": "無",
-      "registered_date": "2026-09-02",
-      "incumbent": ""
-    },
-    {
-      "city": "金門縣",
-      "office": "縣市議員",
-      "district": "金門縣第1選舉區",
       "candidate": "許玉仙",
       "party": "無",
       "registered_date": "2026-09-02",
@@ -13045,15 +12964,6 @@
       "district": "基隆市第3選舉區",
       "candidate": "曾維祥",
       "party": "中國國民黨",
-      "registered_date": "2026-09-02",
-      "incumbent": ""
-    },
-    {
-      "city": "基隆市",
-      "office": "縣市議員",
-      "district": "基隆市第3選舉區",
-      "candidate": "張芳麗",
-      "party": "無",
       "registered_date": "2026-09-02",
       "incumbent": ""
     },
