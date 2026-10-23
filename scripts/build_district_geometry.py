@@ -131,7 +131,7 @@ def main():
 
     basemap = {county["name"]: county_rings(county["d"])
                for county in json.loads((ROOT / "map-geometry.json").read_text(encoding="utf-8"))["counties"]}
-    districts, undrawn = [], []
+    districts, undrawn, merged = [], [], {}
     for row in csv.DictReader(DISTRICTS.open(encoding="utf-8")):
         if row["district_type"] != "區域":
             undrawn.append({"district": row["district"], "reason": "原住民選舉區依身分別劃分，與區域選舉區重疊"})
@@ -166,11 +166,23 @@ def main():
         largest = max(rings, key=area)
         rings = [ring for ring in rings if ring is largest or area(ring) >= 4]
         cx, cy = centroid(largest)
-        districts.append({
-            "district": row["district"], "city": row["city"],
-            "seats": int(row["seats"]), "approximate": row["unit_level"] == "村里",
+        approximate = row["unit_level"] == "村里"
+        shape = {
+            "id": row["district"], "city": row["city"], "districts": [row["district"]],
+            "seats": int(row["seats"]), "approximate": approximate,
             "d": to_path(rings), "anchor": [round(cx, 1), round(cy, 1)],
-        })
+        }
+        if approximate:
+            # 同一個鄉鎮市區拆成好幾個選舉區時，圖形完全一樣，合併成一塊，
+            # 否則疊在一起會變成實心色塊，也標不出是哪一區
+            key = (row["city"], row["scope_prefix"])
+            if key in merged:
+                merged[key]["districts"].append(row["district"])
+                merged[key]["seats"] += int(row["seats"])
+                merged[key]["id"] = "+".join(merged[key]["districts"])
+                continue
+            merged[key] = shape
+        districts.append(shape)
 
     data = {
         "source": "內政部國土測繪中心 鄉鎮市區界線（TWD97 經緯度）TOWN_MOI_1140318",
@@ -181,8 +193,9 @@ def main():
         "undrawn": undrawn,
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"寫入 {OUT.name}：{len(districts)} 個選舉區有圖形，{len(undrawn)} 個沒有"
-          f"（其中以村里劃分 {sum(1 for d in districts if d['approximate'])} 個以整個鄉鎮市區呈現）")
+    drawn = sum(len(shape["districts"]) for shape in districts)
+    print(f"寫入 {OUT.name}：{drawn} 個選舉區有圖形（{len(districts)} 塊，以村里劃分的已併成同一塊），"
+          f"{len([u for u in undrawn if '離島' in u['reason']])} 個因外島未繪入底圖沒有圖形")
 
 
 if __name__ == "__main__":

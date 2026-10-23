@@ -251,7 +251,19 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-district-head span{font-weight:600;font-size:.78rem;color:var(--muted)}
 .map-district-group .map-candidates{border-top:0}
 .map-district-note{margin:1rem 0 .2rem;font-size:.8rem;color:var(--muted)}
+/* hidden 屬性的 display:none 會被 .map-switch 的 display 蓋掉，要明確寫回來 */
+.map-switch[hidden],.map-zoom-out[hidden]{display:none}
 .map-layer-switch{font-size:.85rem}
+.map-zoom-out{font:700 .82rem/1 "Noto Sans TC","PingFang TC",sans-serif;padding:.5rem .85rem;border:1px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.map-zoom-out:hover{background:var(--tint)}
+/* 放大後線寬不跟著放大，標籤改以 --zoom 反向縮小 */
+.county,.county-outline,.map-district-shape{vector-effect:non-scaling-stroke}
+/* 底圖平時 overflow:visible（引線標註會超出 viewBox）；放大後必須裁切，
+   否則 viewBox 外的縣市會畫到工具列上 */
+.taiwan-map.is-zoomed{overflow:hidden}
+.taiwan-map.is-zoomed .markers,.taiwan-map.is-zoomed .inset-frame,.taiwan-map.is-zoomed .inset-label{display:none}
+.district-label{fill:var(--muted);font-family:"Noto Sans TC","PingFang TC",sans-serif;font-weight:700;pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:2.5px;stroke-linejoin:round}
+.district-label.has-records{fill:var(--ink)}
 .map-layer-switch button{padding:.5rem .85rem;font-size:.82rem}
 .map-district-shape{fill:none;stroke:#7f7c6e;stroke-width:.5;stroke-linejoin:round;cursor:pointer}
 .map-district-shape.has-records{fill:var(--lime);fill-opacity:.5;stroke:#5f6833;stroke-width:.7}
