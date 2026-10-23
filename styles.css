@@ -265,6 +265,9 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .district-label{fill:var(--muted);font-family:"Noto Sans TC","PingFang TC",sans-serif;font-weight:700;pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:2.5px;stroke-linejoin:round}
 .district-label.has-records{fill:var(--ink)}
 .district-leader{stroke:#9b9887;stroke-width:.7;vector-effect:non-scaling-stroke}
+.map-district-shape.is-active{stroke:var(--ink);stroke-width:1.6}
+.map-detail-scope{margin:.2rem 0 .1rem;font-size:.82rem;color:var(--muted)}
+.map-detail [data-back]{margin-top:0;padding:.35rem 0 1rem}
 .map-layer-switch button{padding:.5rem .85rem;font-size:.82rem}
 .map-district-shape{fill:none;stroke:#7f7c6e;stroke-width:.5;stroke-linejoin:round;cursor:pointer}
 .map-district-shape.has-records{fill:var(--lime);fill-opacity:.5;stroke:#5f6833;stroke-width:.7}

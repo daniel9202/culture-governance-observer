@@ -26,7 +26,7 @@ let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCit
 // 議員模式的地圖圖層：region＝區域選舉區界線（點選縣市後才畫），indigenous＝原住民選舉區。
 // 原住民選舉區依身分別劃分、涵蓋全縣市或跨多個鄉鎮市區，與區域選舉區重疊，畫不成互斥的面，
 // 所以該圖層不畫界線，改以縣市整體與人數徽章呈現。
-let districtShapes=new Map,shapeOfDistrict=new Map,districtLayer='region';
+let districtShapes=new Map,shapeOfDistrict=new Map,districtLayer='region',activeDistrict='';
 // 議員模式點選縣市後放大到該縣市；縣市長模式不放大也不畫選舉區。
 let zoomFrame=0,zoomOff=false;
 const layerMatches=item=>districtLayer==='indigenous'?indigenousDistrict(item.district):!indigenousDistrict(item.district);
@@ -189,11 +189,22 @@ function districtShapesFor(city){
   if(office!=='councilor'||districtLayer!=='region'||!city)return '';
   return [...districtShapes.values()].filter(shape=>shape.city===city).map(shape=>{
     const count=shapeCandidates(shape).length;
-    return `<path class="map-district-shape${count?' has-records':''}${shape.approximate?' is-approximate':''}" d="${shape.d}" data-shape="${esc(shape.id)}" aria-label="${esc(shapeLabel(shape))}：${count?`${count} 位候選人提出文化政策`:'尚未收錄'}"></path>`;
+    return `<path class="map-district-shape${count?' has-records':''}${shape.approximate?' is-approximate':''}${shape.id===activeDistrict?' is-active':''}" d="${shape.d}" data-shape="${esc(shape.id)}" aria-label="${esc(shapeLabel(shape))}：${count?`${count} 位候選人提出文化政策`:'尚未收錄'}"></path>`;
   }).join('');
 }
 
 // selectCity 不重畫整張地圖，所以選舉區層單獨更新
+// 點選舉區：右側只看該選舉區的候選人；再點一次或按返回鍵回到整個縣市
+function selectDistrict(id){
+  const shape=districtShapes.get(id);
+  if(!shape)return;
+  if(shape.city!==activeCity){selectCity(shape.city);activeDistrict=id}
+  else activeDistrict=activeDistrict===id?'':id;
+  // 在全國尺度點選區時一併放大，否則選到的區塊小到看不出來
+  if(activeDistrict&&zoomOff){zoomOff=false;applyZoom(activeCity)}
+  renderDistricts();renderDetail();
+}
+
 function renderDistricts(){
   const layer=document.querySelector('#taiwanMap .districts');
   if(!layer)return;
@@ -201,7 +212,7 @@ function renderDistricts(){
   document.getElementById('taiwanMap').classList.toggle('shows-districts',Boolean(layer.childElementCount));
   layer.querySelectorAll('.map-district-shape').forEach(node=>{
     // 選區圖形蓋在縣市上面，沒有這個處理的話，回到全國後再點該縣市會沒有反應
-    node.addEventListener('click',()=>selectCity(districtShapes.get(node.dataset.shape).city));
+    node.addEventListener('click',()=>selectDistrict(node.dataset.shape));
     node.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')showDistrictTooltip(node.dataset.shape,event)});
     node.addEventListener('pointermove',event=>{if(event.pointerType!=='touch')moveTooltip(event)});
     node.addEventListener('pointerleave',hideTooltip);
@@ -294,22 +305,32 @@ function districtGroups(list,city){
 
 function renderDetail(){
   const detail=document.getElementById('mapDetail'),city=activeCity;
-  const list=office==='councilor'?layerList(city):(byOffice[office].get(city)||[]);
+  const shape=activeDistrict?districtShapes.get(activeDistrict):null;
+  const list=shape?shapeCandidates(shape):office==='councilor'?layerList(city):(byOffice[office].get(city)||[]);
   const other=office==='mayor'?'councilor':'mayor',otherCount=(byOffice[other].get(city)||[]).length;
-  const missing=unrecorded(office,city),total=layerRegistered(office,city).length;
-  const missingNote=missing.length?`<p class="map-detail-missing">${office==='mayor'?`尚未收錄文化政策：${nameList(missing,12)}`:`另有 ${missing.length} 位登記參選人尚未收錄文化政策`}</p>`:'';
+  const inShape=shape?registeredIn('councilor',city).filter(item=>shape.districts.includes(item.district)):[];
+  const missing=shape?inShape.filter(item=>!list.some(x=>sameCandidate(item.candidate,x.candidate))):unrecorded(office,city);
+  const total=shape?inShape.length:layerRegistered(office,city).length;
+  const missingNote=missing.length?`<p class="map-detail-missing">${office==='mayor'?`尚未收錄文化政策：${nameList(missing,12)}`:(shape?`本選舉區另有 ${missing.length} 位登記參選人尚未收錄文化政策：${nameList(missing,12)}`:`另有 ${missing.length} 位登記參選人尚未收錄文化政策`)}</p>`:'';
   const switchLink=otherCount?`<button type="button" class="map-detail-switch" data-switch="${other}">此縣市另有 ${otherCount} 位${OFFICES[other].label}候選人 →</button>`:'';
   const incumbentNote=incumbentLink((incumbents.get(city)||new Set).size,city,'map-detail-switch');
   const regionLink=`<a class="map-detail-link" href="${regionUrl(city)}">${esc(city)}地方頁：預算、統計與全部候選人 →</a>`;
   const foot=switchLink||incumbentNote?`<div class="map-detail-foot">${switchLink}${incumbentNote}</div>`:'';
   if(!city){detail.innerHTML='<p class="kicker">選擇縣市</p><h2>從地圖開始</h2><p class="map-detail-lead">點選地圖上的縣市，查看提出文化政策的候選人與政黨。</p>';return}
-  detail.innerHTML=`<p class="kicker">${esc(REGION_OF[city]||'')} / ${OFFICES[office].label}</p><h2>${esc(city)}</h2>`+(list.length
-    ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p>${office==='councilor'?districtGroups(list,city):`<div class="map-candidates">${list.map(candidateCard).join('')}</div>`}${missingNote}${regionLink}`
+  const head=shape
+    ?`<p class="kicker">${esc(city)} / ${OFFICES[office].label}</p><h2>${esc(shapeLabel(shape))}</h2>`
+      +`<p class="map-detail-scope">${esc(shape.districts.length===1?districtScope(shape.districts[0]):`${shape.districts.length} 個選舉區`)}・應選 ${shape.seats} 席</p>`
+      +`<button type="button" class="map-detail-switch" data-back="1">← 回到${esc(city)}全部選舉區</button>`
+    :`<p class="kicker">${esc(REGION_OF[city]||'')} / ${OFFICES[office].label}</p><h2>${esc(city)}</h2>`;
+  detail.innerHTML=head+(list.length
+    ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p>${office==='councilor'&&!shape?districtGroups(list,city):`<div class="map-candidates">${list.map(item=>candidateCard(item,{district:!shape})).join('')}</div>`}${missingNote}${regionLink}`
     :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}${regionLink}`)+foot;
-  detail.querySelector('[data-switch]')?.addEventListener('click',event=>setOffice(event.currentTarget.dataset.switch));
+  detail.querySelector('[data-back]')?.addEventListener('click',()=>{activeDistrict='';renderDistricts();renderDetail()});
+  detail.querySelector('[data-switch]:not([data-back])')?.addEventListener('click',event=>setOffice(event.currentTarget.dataset.switch));
 }
 
 function selectCity(city,{scroll=false}={}){
+  if(city!==activeCity)activeDistrict='';
   activeCity=city;
   document.querySelectorAll('#taiwanMap .county').forEach(node=>node.classList.toggle('is-active',node.dataset.city===city));
   document.querySelector('#taiwanMap .county-outline-active')?.setAttribute('d',document.querySelector(`#taiwanMap .county[data-city="${CSS.escape(city)}"]`)?.getAttribute('d')||'');
@@ -319,14 +340,14 @@ function selectCity(city,{scroll=false}={}){
 }
 
 function setOffice(next){
-  office=next;
+  office=next;activeDistrict='';
   document.querySelectorAll('[data-office]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.office===office)));
   document.getElementById('layerSwitch').hidden=office!=='councilor';
   drawMap();applyZoom(activeCity);renderDetail();renderLegend();renderParties();
 }
 
 function setLayer(next){
-  districtLayer=next;
+  districtLayer=next;activeDistrict='';
   document.querySelectorAll('[data-layer]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.layer===districtLayer)));
   drawMap();applyZoom(activeCity);renderDetail();renderLegend();
 }
