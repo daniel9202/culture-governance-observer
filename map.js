@@ -120,7 +120,9 @@ function zoomTarget(city){
   const box=pathBox(geometry.counties.find(county=>county.name===city)?.d||'');
   if(!box)return geometry.viewBox;
   // 留白後維持畫面比例，避免 preserveAspectRatio 把縣市擠到一邊
-  const pad=18,[x0,y0,x1,y1]=box,w=x1-x0+pad*2,h=y1-y0+pad*2;
+  // 留白按縣市大小等比例，固定值會讓新竹市、嘉義市這類小縣市只占畫面一半
+  const [x0,y0,x1,y1]=box,pad=Math.max(6,Math.max(x1-x0,y1-y0)*0.08);
+  const w=x1-x0+pad*2,h=y1-y0+pad*2;
   const ratio=svg.clientWidth&&svg.clientHeight?svg.clientWidth/svg.clientHeight:geometry.viewBox[2]/geometry.viewBox[3];
   const width=Math.max(w,h*ratio),height=Math.max(h,w/ratio);
   return [x0-pad-(width-w)/2,y0-pad-(height-h)/2,width,height];

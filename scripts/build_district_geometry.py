@@ -12,8 +12,9 @@ https://data.gov.tw/dataset/7441 （TOWN_MOI_1140318）
     py -3 scripts/build_district_geometry.py
 
 畫不出來的選舉區會列在輸出的 undrawn：
-- 新竹市 5 區與新竹縣第1、2選舉區以村里劃分，需要村里界圖資（data.gov.tw/dataset/7438）；
-  這兩處改以整個鄉鎮市區範圍呈現，不細分。
+- 新竹市 5 區與新竹縣第1、2選舉區以村里劃分，需要村里界圖資（data.gov.tw/dataset/7438，
+  解壓後放在 tmp/admin-map/village/）。沒放村里圖資時，這兩處退回整個鄉鎮市區的範圍，
+  同鎮市的選舉區共用一塊並標記 approximate。
 - 原住民選舉區依身分別劃分，範圍與區域選舉區重疊，本來就不是互斥的區塊，不畫。
 - 連江縣莒光鄉、東引鄉等未繪入底圖的離島，對應選舉區同樣沒有圖形。
 """
@@ -31,12 +32,29 @@ from build_map_geometry import (  # noqa: E402  共用投影、附圖與簡化�
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "tmp" / "admin-map" / "town"
+VILLAGE_SOURCE = ROOT / "tmp" / "admin-map" / "village"
 # 附圖的保留門檻是依縣市整體的多邊形訂的，換成鄉鎮市區後面積變小，澎湖要放寬；
 # 放寬後保留的仍是馬公、湖西、白沙、西嶼（不含望安、七美），與縣市底圖一致。
 # 連江（只留南北竿）與金門（排除烏坵）的門檻在鄉鎮市區層級仍然正確，不調整。
 TOWN_KEEP = {"澎湖縣": lambda lon, lat, a: a > 1e-3}
 DISTRICTS = ROOT / "config" / "election_districts.csv"
 OUT = ROOT / "district-geometry.json"
+
+
+def load_villages():
+    """村里界圖（data.gov.tw/dataset/7438），只有以村里劃分的選舉區用得到；沒放就退回整個鄉鎮市區。"""
+    dbf = next(VILLAGE_SOURCE.glob("*.dbf"), None)
+    if not dbf:
+        return {}
+    rows = dbf_rows(dbf)
+    shapes = shp_rows(next(VILLAGE_SOURCE.glob("*.shp")))
+    villages = collections.defaultdict(list)
+    for row, parts in zip(rows, shapes):
+        # 未編定村里（軍事用地、港口、河道等）不屬於任何選舉區，公告也沒列，略過
+        if row["VILLNAME"]:
+            villages[(row["COUNTYNAME"], row["TOWNNAME"], row["VILLNAME"])].extend(parts)
+            villages[(row["COUNTYNAME"], "", row["VILLNAME"])].extend(parts)
+    return villages
 
 
 def outline(parts):
@@ -121,6 +139,7 @@ def main():
     rows = dbf_rows(next(SOURCE.glob("*.dbf")))
     shapes = shp_rows(next(SOURCE.glob("*.shp")))
     towns = {(row["COUNTYNAME"], row["TOWNNAME"]): parts for row, parts in zip(rows, shapes)}
+    villages = load_villages()
     by_county = collections.defaultdict(list)
     for (county, _), parts in towns.items():
         by_county[county].extend(parts)
@@ -136,14 +155,19 @@ def main():
         if row["district_type"] != "區域":
             undrawn.append({"district": row["district"], "reason": "原住民選舉區依身分別劃分，與區域選舉區重疊"})
             continue
-        if row["unit_level"] == "村里":
-            # 以村里劃分：沒有村里圖資，改用整個鄉鎮市區的範圍，不細分
-            names = [row["scope_prefix"]] if row["scope_prefix"] else [
-                name for (county, name) in towns if county == row["city"]]
-            undrawn.append({"district": row["district"], "reason": "以村里劃分，缺村里界圖資，與同鎮市其他選舉區共用範圍"})
+        village_level = row["unit_level"] == "村里"
+        parts = []
+        if village_level:
+            parts = [ring for name in row["units"].split("|")
+                     for ring in villages.get((row["city"], row["scope_prefix"], name), [])]
+            if not parts:
+                # 沒有村里圖資時退回整個鄉鎮市區，同鎮市的幾個選舉區會共用一塊
+                names = [row["scope_prefix"]] if row["scope_prefix"] else [
+                    name for (county, name) in towns if county == row["city"]]
+                parts = [ring for name in names for ring in towns.get((row["city"], name), [])]
+                undrawn.append({"district": row["district"], "reason": "以村里劃分，缺村里界圖資，與同鎮市其他選舉區共用範圍"})
         else:
-            names = row["units"].split("|")
-        parts = [ring for name in names for ring in towns.get((row["city"], name), [])]
+            parts = [ring for name in row["units"].split("|") for ring in towns.get((row["city"], name), [])]
         if not parts:
             continue
         inset = town_inset.get(row["city"])
@@ -166,7 +190,7 @@ def main():
         largest = max(rings, key=area)
         rings = [ring for ring in rings if ring is largest or area(ring) >= 4]
         cx, cy = centroid(largest)
-        approximate = row["unit_level"] == "村里"
+        approximate = village_level and any(u["district"] == row["district"] for u in undrawn)
         shape = {
             "id": row["district"], "city": row["city"], "districts": [row["district"]],
             "seats": int(row["seats"]), "approximate": approximate,
@@ -194,8 +218,10 @@ def main():
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     drawn = sum(len(shape["districts"]) for shape in districts)
-    print(f"寫入 {OUT.name}：{drawn} 個選舉區有圖形（{len(districts)} 塊，以村里劃分的已併成同一塊），"
-          f"{len([u for u in undrawn if '離島' in u['reason']])} 個因外島未繪入底圖沒有圖形")
+    approximate = sum(1 for shape in districts if shape["approximate"])
+    print(f"寫入 {OUT.name}：{drawn} 個選舉區有圖形（{len(districts)} 塊"
+          + (f"，其中 {approximate} 塊缺村里圖資、由同鎮市的選舉區共用" if approximate else "")
+          + f"），{len([u for u in undrawn if '離島' in u['reason']])} 個因外島未繪入底圖沒有圖形")
 
 
 if __name__ == "__main__":
