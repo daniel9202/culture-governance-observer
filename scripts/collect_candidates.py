@@ -12,6 +12,8 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from google_news_urls import resolve as resolve_google_news_url
+
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "collector.json"
 SOURCE_REGISTRY = ROOT / "config" / "candidate_official_sources.csv"
@@ -69,12 +71,15 @@ def fetch(city, terms, limit, candidate="", site=""):
         root = ET.fromstring(response.read())
     for item in root.findall("./channel/item")[:limit]:
         source = item.find("source")
+        news_url = item.findtext("link", "").strip()
+        resolution = resolve_google_news_url(news_url)
         yield {
             "city": city,
             "published_date": iso_date(item.findtext("pubDate", "")),
             "source_name": (source.text or "").strip() if source is not None else "",
             "source_title": item.findtext("title", "").strip(),
-            "source_url": item.findtext("link", "").strip(),
+            "source_url": resolution.url,
+            "resolution_error": resolution.error,
         }
 
 def collect(config, collection):
@@ -109,7 +114,10 @@ def collect(config, collection):
                         int(collection.get("max_items_per_query", candidate_limit)),
                     )
                     for item in fetch(city, collection["query_terms"], query_limit, query_candidate, query_site):
-                        if not item["source_url"] or item["source_url"] in known_urls:
+                        if not item["source_url"]:
+                            print(f"warning: Google News 網址解析失敗，略過：{item['resolution_error']}")
+                            continue
+                        if item["source_url"] in known_urls:
                             continue
                         if duplicate_title(city, item["source_title"], known_titles, threshold):
                             skipped_duplicates += 1
