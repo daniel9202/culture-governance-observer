@@ -50,7 +50,7 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
                 "category": {"type": "string"}, "reason": {"type": "string"},
                 "confidence": {"type": "number", "minimum": 0, "maximum": 1},
                 "actor": {"type": "string"}, "actor_type": {"type": "string"},
-                "office": {"type": "string"}, "policy_or_request": {"type": "string"}
+                "office": {"type": "string", "enum": ["縣市長", "縣市議員", "不適用"]}, "policy_or_request": {"type": "string"}
             },
             "required": ["is_relevant", "summary", "category", "reason", "confidence", "actor", "actor_type", "office", "policy_or_request"]
         }}},

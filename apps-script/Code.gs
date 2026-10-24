@@ -1,4 +1,5 @@
 const SPREADSHEET_ID = '1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k';
+const BUILD = '2026-10-24-1';
 const REVIEW_SHEET = '審核資料';
 const HEADERS = ['資料類型','收集時間','縣市','發布日期','來源名稱','來源標題','來源網址','審核狀態','AI摘要','AI分類','AI判斷理由','AI信心分數','候選人／提出者','政黨／提出者類型','職務','政策主張／具體訴求','人工備註','審核者','審核時間','發布ID'];
 function duplicateText(value) {
@@ -31,17 +32,25 @@ function addDuplicateHints(rows) {
 }
 
 function doGet() {
-  const page = HtmlService.createHtmlOutputFromFile('Index');
-  page.append('<script>(function(){const select=document.createElement("select");select.id="manualNoteFilter";select.setAttribute("aria-label","人工備註篩選");select.add(new Option("全部人工備註","all"));select.add(new Option("只看事後補審","backfill"));document.querySelector(".filters").appendChild(select);let previousQuery="";select.addEventListener("change",function(){const query=document.getElementById("query");if(select.value==="backfill"){previousQuery=query.value;query.value="事後補審";query.disabled=true;}else{query.value=previousQuery;query.disabled=false;}query.dispatchEvent(new Event("input",{bubbles:true}));});})();</script>');
-  return page.setTitle('文化治理觀察站｜雲端審核台').addMetaTag('viewport', 'width=device-width, initial-scale=1');
+  return HtmlService.createHtmlOutputFromFile('Index').setTitle('文化治理觀察站｜雲端審核台').addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+function getBuildInfo() {
+  return {build: BUILD, url: ScriptApp.getService().getUrl() || ''};
 }
 
 function getDashboard(filters) {
   const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(REVIEW_SHEET);
-  const values = sheet.getDataRange().getDisplayValues();
-  if (!values.length || HEADERS.some((header, index) => values[0][index] !== header)) throw new Error('審核資料欄位與程式版本不符。');
-  const rows = values.slice(1).map((row, index) => {
-    const item = Object.fromEntries(HEADERS.map((header, column) => [header, row[column] || '']));
+  const lastRow = sheet.getLastRow();
+  const headers = sheet.getRange(1, 1, 1, HEADERS.length).getDisplayValues()[0];
+  if (HEADERS.some((header, index) => headers[index] !== header)) throw new Error('審核資料欄位與程式版本不符。');
+  const rowCount = Math.max(lastRow - 1, 0);
+  const statusValues = rowCount ? sheet.getRange(2, 8, rowCount, 1).getDisplayValues() : [];
+  const leftValues = rowCount ? sheet.getRange(2, 1, rowCount, 7).getDisplayValues() : [];
+  const detailValues = rowCount ? sheet.getRange(2, 9, rowCount, 9).getDisplayValues() : [];
+  const rows = leftValues.map((left, index) => {
+    const row = left.concat([statusValues[index][0]], detailValues[index]);
+    const item = Object.fromEntries(HEADERS.slice(0, 17).map((header, column) => [header, row[column] || '']));
     item.rowNumber = index + 2;
     return item;
   });
@@ -56,11 +65,16 @@ function getDashboard(filters) {
     const query = String(filters.query || '').toLowerCase().trim();
     return !query || [row['來源標題'], row['AI摘要'], row['候選人／提出者'], row['縣市'], row['人工備註']].join(' ').toLowerCase().includes(query);
   });
-  return {counts, items: filtered.slice(0, 200), cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
+  const direction = filters.sort === 'oldest' ? 1 : -1;
+  filtered.sort((a, b) => direction * String(a['收集時間']).localeCompare(String(b['收集時間']), 'zh-Hant', {numeric: true}));
+  const offset = Math.max(0, Number(filters.offset) || 0);
+  const limit = Math.min(200, Math.max(1, Number(filters.limit) || 200));
+  return {counts, items: filtered.slice(offset, offset + limit), totalFiltered: filtered.length, cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
 }
 
 function saveReview(payload) {
   if (!payload || !['pending', 'accepted', 'rejected'].includes(payload.status)) throw new Error('審核狀態不合法。');
+  if (!['縣市長', '縣市議員', '不適用'].includes(String(payload.office || '').trim())) throw new Error('職務／提出者身分不合法。');
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
@@ -135,6 +149,7 @@ function splitReview(payload) {
       office: String(item.office || '').trim(), summary: String(item.summary || '').trim(),
       policy: String(item.policy || '').trim()
     }));
+    if (items.some(item => !['縣市長', '縣市議員', '不適用'].includes(item.office))) throw new Error('職務／提出者身分不合法。');
     if (items.some(item => !item.actor || !item.office || !item.policy)) {
       throw new Error('每位候選人都必須填寫姓名、職務與政策線索。');
     }
