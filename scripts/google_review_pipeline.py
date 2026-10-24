@@ -6,10 +6,13 @@ import argparse
 import csv
 import json
 import os
+import time
+from datetime import datetime
 from pathlib import Path
 from urllib.request import Request, urlopen
 
 import gspread
+from gspread.exceptions import APIError
 from openai import OpenAI
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +20,9 @@ SHEET_NAME = os.environ.get("GOOGLE_REVIEW_SHEET_NAME", "審核資料")
 SPREADSHEET_ID = os.environ.get("GOOGLE_REVIEW_SPREADSHEET_ID", "")
 HEADERS = ["資料類型", "收集時間", "縣市", "發布日期", "來源名稱", "來源標題", "來源網址", "審核狀態", "AI摘要", "AI分類", "AI判斷理由", "AI信心分數", "候選人／提出者", "政黨／提出者類型", "職務", "政策主張／具體訴求", "人工備註", "審核者", "審核時間", "發布ID"]
 KIND_LABELS = {"candidate": "候選人政見", "civic_call": "民間政策訴求"}
+SKIPPED_REANALYZE_LABELS = {"公民政策倡議"}
+REANALYZE_BATCH_SIZE = 50
+SHEETS_MAX_RETRIES = 5
 
 
 def worksheet():
@@ -83,20 +89,51 @@ def inbox_rows():
                     yield kind, row
 
 
+def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
+    for attempt in range(SHEETS_MAX_RETRIES + 1):
+        try:
+            ws.batch_update(updates, value_input_option="USER_ENTERED")
+            return
+        except APIError as exc:
+            status = getattr(getattr(exc, "response", None), "status_code", None)
+            if status != 429 or attempt >= SHEETS_MAX_RETRIES:
+                raise
+            delay = 2 ** attempt
+            print(f"Google Sheets 429; retrying in {delay}s ({attempt + 1}/{SHEETS_MAX_RETRIES})")
+            time.sleep(delay)
+
+
 def reanalyze_sheet(ws, client: OpenAI, limit: int | None) -> None:
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
     columns = {name: index for index, name in enumerate(values[0])}
-    required = set(HEADERS) | {"AI處理狀態", "AI錯誤"}
+    required = set(HEADERS) | {"AI處理狀態", "處理者／裝置", "AI完成時間", "AI錯誤"}
     missing = sorted(required - columns.keys())
     if missing:
         raise SystemExit(f"Google Sheet 缺少欄位：{', '.join(missing)}")
     kind_by_label = {label: kind for kind, label in KIND_LABELS.items()}
-    attempted = completed = failed = 0
+    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    attempted = completed = failed = skipped = 0
+    pending_updates = []
+    pending_results = []
+
+    def flush_updates() -> None:
+        nonlocal pending_updates, pending_results
+        if not pending_updates:
+            return
+        sheets_batch_update_with_retry(ws, pending_updates)
+        for number, status, error in pending_results:
+            print(f"row={number} {status}" + (f" error={error}" if error else ""))
+        pending_updates = []
+        pending_results = []
+
     for number, current in enumerate(values[1:], start=2):
         current += [""] * (len(values[0]) - len(current))
         if current[columns["審核狀態"]] != "pending" or current[columns["AI摘要"]].strip():
+            continue
+        if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
+            skipped += 1
             continue
         if limit is not None and attempted >= limit:
             break
@@ -113,21 +150,28 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None) -> None:
             row["_article_text"] = fetch_article_text(row["source_url"])
             ai = analyze(client, kind, row)
             note = current[columns["人工備註"]] or ("AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else "")
-            ws.batch_update([
+            completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
+            pending_updates.extend([
                 {"range": f"I{number}:Q{number}", "values": [[ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note]]},
-                {"range": f"U{number}", "values": [["completed"]]},
-                {"range": f"Y{number}", "values": [[""]]},
-            ], value_input_option="USER_ENTERED")
+                {"range": f"U{number}:V{number}", "values": [["complete", device]]},
+                {"range": f"X{number}:Y{number}", "values": [[completed_at, ""]]},
+            ])
+            pending_results.append((number, "complete", ""))
             completed += 1
         except Exception as exc:
             error = f"{type(exc).__name__}: {exc}"
-            ws.batch_update([
-                {"range": f"U{number}", "values": [["error"]]},
-                {"range": f"Y{number}", "values": [[error]]},
-            ], value_input_option="USER_ENTERED")
+            completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
+            pending_updates.extend([
+                {"range": f"I{number}:Q{number}", "values": [[""] * 9]},
+                {"range": f"U{number}:V{number}", "values": [["error", device]]},
+                {"range": f"X{number}:Y{number}", "values": [[completed_at, error]]},
+            ])
+            pending_results.append((number, "error", error))
             failed += 1
-            print(f"row={number} error={error}")
-    print(f"Google review sheet reanalyze: attempted={attempted}, completed={completed}, failed={failed}")
+        if len(pending_results) >= REANALYZE_BATCH_SIZE:
+            flush_updates()
+    flush_updates()
+    print(f"Google review sheet reanalyze: attempted={attempted}, completed={completed}, failed={failed}, skipped={skipped}")
 
 
 def main():
