@@ -7,8 +7,10 @@ import csv
 import json
 import os
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 import gspread
@@ -22,7 +24,19 @@ HEADERS = ["資料類型", "收集時間", "縣市", "發布日期", "來源名�
 KIND_LABELS = {"candidate": "候選人政見", "civic_call": "民間政策訴求"}
 SKIPPED_REANALYZE_LABELS = {"公民政策倡議"}
 REANALYZE_BATCH_SIZE = 50
+REANALYZE_WORKERS = 10
 SHEETS_MAX_RETRIES = 5
+GOOGLE_NEWS_HOSTS = {"news.google.com", "news.google.com.tw"}
+GOOGLE_NEWS_ENTRY_MARKERS = (
+    "default_DotsSplashUi",
+    "data-n-a-sg=",
+    "garturlreq",
+    "Copyright The Closure Library Authors",
+)
+
+
+class ArticleFetchError(ValueError):
+    pass
 
 
 def worksheet():
@@ -42,6 +56,15 @@ def fetch_article_text(url: str) -> str:
     if not text:
         raise ValueError("正文擷取結果為空")
     return text
+
+
+def validate_reanalyze_source(url: str, text: str | None = None) -> None:
+    if urlparse(url).hostname in GOOGLE_NEWS_HOSTS:
+        raise ArticleFetchError("網址未解析，待解析後重抓")
+    if text is None:
+        return
+    if len(text.strip()) < 200 or any(marker in text for marker in GOOGLE_NEWS_ENTRY_MARKERS):
+        raise ArticleFetchError("正文過短，疑為入口頁或付費牆")
 
 
 def article_text(url: str) -> str:
@@ -100,11 +123,11 @@ def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
             if status != 429 or attempt >= SHEETS_MAX_RETRIES:
                 raise
             delay = 2 ** attempt
-            print(f"Google Sheets 429; retrying in {delay}s ({attempt + 1}/{SHEETS_MAX_RETRIES})")
+            print(f"Google Sheets 429; retrying in {delay}s ({attempt + 1}/{SHEETS_MAX_RETRIES})", flush=True)
             time.sleep(delay)
 
 
-def reanalyze_sheet(ws, client: OpenAI, limit: int | None) -> None:
+def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None) -> None:
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
@@ -125,12 +148,15 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None) -> None:
             return
         sheets_batch_update_with_retry(ws, pending_updates)
         for number, status, error in pending_results:
-            print(f"row={number} {status}" + (f" error={error}" if error else ""))
+            print(f"row={number} {status}" + (f" error={error}" if error else ""), flush=True)
         pending_updates = []
         pending_results = []
 
+    candidates = []
     for number, current in enumerate(values[1:], start=2):
         current += [""] * (len(values[0]) - len(current))
+        if row_numbers is not None and number not in row_numbers:
+            continue
         if current[columns["審核狀態"]] != "pending" or current[columns["AI摘要"]].strip():
             continue
         if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
@@ -145,49 +171,74 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None) -> None:
             "source_title": current[columns["來源標題"]],
             "source_url": current[columns["來源網址"]],
         }
+        candidates.append((number, current, kind, row))
+
+    def process_candidate(candidate):
+        number, current, kind, row = candidate
         try:
             if not kind:
                 raise ValueError(f"不支援的資料類型：{current[columns['資料類型']] or '空白'}")
+            validate_reanalyze_source(row["source_url"])
             row["_article_text"] = fetch_article_text(row["source_url"])
+            validate_reanalyze_source(row["source_url"], row["_article_text"])
             ai = analyze(client, kind, row)
             note = current[columns["人工備註"]] or ("AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else "")
             completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
-            pending_updates.extend([
+            updates = [
                 {"range": f"I{number}:Q{number}", "values": [[ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note]]},
                 {"range": f"U{number}:V{number}", "values": [["complete", device]]},
                 {"range": f"X{number}:Y{number}", "values": [[completed_at, ""]]},
-            ])
-            pending_results.append((number, "complete", ""))
-            completed += 1
+            ]
+            return number, "complete", "", updates
         except Exception as exc:
-            error = f"{type(exc).__name__}: {exc}"
+            error = str(exc) if isinstance(exc, ArticleFetchError) else f"{type(exc).__name__}: {exc}"
             completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
-            pending_updates.extend([
+            updates = [
                 {"range": f"I{number}:Q{number}", "values": [[""] * 9]},
                 {"range": f"U{number}:V{number}", "values": [["error", device]]},
                 {"range": f"X{number}:Y{number}", "values": [[completed_at, error]]},
-            ])
-            pending_results.append((number, "error", error))
-            failed += 1
-        if len(pending_results) >= REANALYZE_BATCH_SIZE:
-            flush_updates()
+            ]
+            return number, "error", error, updates
+
+    if candidates:
+        with ThreadPoolExecutor(max_workers=min(REANALYZE_WORKERS, len(candidates))) as executor:
+            futures = [executor.submit(process_candidate, candidate) for candidate in candidates]
+            for future in as_completed(futures):
+                number, status, error, updates = future.result()
+                pending_updates.extend(updates)
+                pending_results.append((number, status, error))
+                if status == "complete":
+                    completed += 1
+                else:
+                    failed += 1
+                if len(pending_results) >= REANALYZE_BATCH_SIZE:
+                    flush_updates()
     flush_updates()
-    print(f"Google review sheet reanalyze: attempted={attempted}, completed={completed}, failed={failed}, skipped={skipped}")
+    print(f"Google review sheet reanalyze: attempted={attempted}, completed={completed}, failed={failed}, skipped={skipped}", flush=True)
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reanalyze", action="store_true", help="重新分析 Sheet 上待審且 AI 摘要為空的既有列")
     parser.add_argument("--limit", type=int, help="最多處理幾列（僅適用 --reanalyze）")
+    parser.add_argument("--rows", help="只處理指定 Sheet 列號，以逗號分隔（僅適用 --reanalyze）")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit 必須大於 0")
     if args.limit is not None and not args.reanalyze:
         parser.error("--limit 只能搭配 --reanalyze")
+    if args.rows and not args.reanalyze:
+        parser.error("--rows 只能搭配 --reanalyze")
+    try:
+        row_numbers = {int(value) for value in args.rows.split(",")} if args.rows else None
+    except ValueError:
+        parser.error("--rows 必須是以逗號分隔的整數列號")
+    if row_numbers and min(row_numbers) < 2:
+        parser.error("--rows 列號必須大於等於 2")
     ws = worksheet()
     client = OpenAI()
     if args.reanalyze:
-        reanalyze_sheet(ws, client, args.limit)
+        reanalyze_sheet(ws, client, args.limit, row_numbers)
         return
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:

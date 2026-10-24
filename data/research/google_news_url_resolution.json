@@ -1,107 +1,107 @@
 {
   "target_count": 582,
-  "success_count": 411,
-  "failure_count": 171,
-  "applied_to_inbox": true,
+  "success_count": 581,
+  "failure_count": 1,
+  "applied_to_sheet": true,
   "results": [
     {
-      "row_number": 398,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA5eXNMSnR1ZXFCRWxfeWtSMUpsRTdkdFRwSnJSaXV5c1djc21aYTB0TW9QN001aHV0WUVaMXRsekgyMDBnZ0ozLVZUZkt1eV9Ba2lCbE44T2s?oc=5",
       "city": "新北市",
       "title": "挺進烏來挺原民李四川拋四大原力政見有專屬社宅、提高全原運獎金| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9758324",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 398
     },
     {
-      "row_number": 399,
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0wZjB4OUU3aDFENWJoakc3VzZubjZIUUM3cWlpaFpZalhMbmRodmVrMHUtVDkxaEJMeXFnT0VNbnJ6YmsyT3ZzYktJMUtpVmxDNnBDYjVyQy1SNS1MSzFfS1VHN1MtcVBYaU9OLU9oSGdTSzA?oc=5",
       "city": "新北市",
       "title": "參選半年講到失聲 李四川笑喊「60年的份」 烏來拚四大原力 - 翻爆",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://turnnewsapp.com/livenews/politicsv3/20260916003331-260407",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 399
     },
     {
-      "row_number": 400,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE13dmw4S2taUXZHcm5BaUhuc1NBX1liZkRGY1lNSVYwM0hJTHI5NkUzbS01UnFMb3ZlTlhrb3VCbEdGRDdsS3UyN2EzYkQxUERkY0E?oc=5",
       "city": "新竹市",
       "title": "力挺林盈徹連任 莊競程承諾捷運延伸香山串聯竹南 - n.yam.com",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260919420945",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 400
     },
     {
-      "row_number": 401,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBIU1pxTDcyYjdtNDdOYVQ1UktIeVFWWUNGbnk4RjI1V1FaY1Z6cWJwaU40RkJBQTJ6eHh2MEpOUGQ1ZDJSUEhxRWV4SlNTcEFCckdXQzVqZ1hDaVRDQWttTnJpQndLY0UxWWRoQ3VyNNIBb0FVX3lxTFBIU1pxTDcyYjdtNDdOYVQ1UktIeVFWWUNGbnk4RjI1V1FaY1Z6cWJwaU40RkJBQTJ6eHh2MEpOUGQ1ZDJSUEhxRWV4SlNTcEFCckdXQzVqZ1hDaVRDQWttTnJpQndLY0UxWWRoQ3VyNA?oc=5",
       "city": "新竹市",
       "title": "莊競程挺新竹隊林盈徹議員連任 再承諾捷運4年動工、延伸香山 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5579188",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 401
     },
     {
-      "row_number": 402,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vUE1lZV9VblIzbS1OMW0zUFcyUm1DUkQwYjhYVzRaX1BGTGtYSHUtaXVaRlZIYkZWNjFDa21YT0F3MWRDVnhhS2t1T2ZWeEk1dGFhZ1pR?oc=5",
       "city": "新竹市",
       "title": "莊競程為何追不上墊底高虹安？ 學者林健正點出競選策略誤闖主戰場 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/GgwejX6",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 402
     },
     {
-      "row_number": 403,
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBUWmhabXNCTldrT2lNZi1RTFlyM1p5RVB5Vkl1Qmo3ek1JMWt1bERtbmN2UGhNVW9MMFBsV0ZPc214ZllnVzBQZnRVZndDT0NoMnlTdVdMR1NkUmo4QW44?oc=5",
       "city": "新竹縣",
       "title": "鄭朝方提尖石原鄉政見聚焦道路教育與產業發展| 地方 - 中央社 CNA",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cna.com.tw/news/aloc/202609170259.aspx",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 403
     },
     {
-      "row_number": 404,
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyUHVDbDB4MmpzV0NtamZXbmMtR0NxT25wenVVOHQ0QnRhdjh5eVFBckF0Z0N5YkpXcFNTb21UZlFOc05CbTRoeENBUUNhNkdfMGthTFYweGpKVzA?oc=5",
       "city": "新竹縣",
       "title": "深入尖石前後山！鄭朝方拋「尖石燈」：點亮族人平安回家的路| 政治 - Newtalk新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://newtalk.tw/news/view/2026-09-17/1060412",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 404
     },
     {
-      "row_number": 405,
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1DVm1EZko3ZzRPeG1OZEJhd0NFZXZDcmNlYXJqbk8xeGxMUWlkYzcybkV2TUtTa19pQXN0aUc5eDhhZDhHS016aEZCNWlkNVAtbVl2NkJpcmppVU9GdGY2cEpCQ0dxQQ?oc=5",
       "city": "苗栗縣",
       "title": "快新聞／陳品安提苗栗文資五大行動！設企業單一窗口、「小壞快修」防老屋惡化 - 民視財經網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://finance.ftvnews.com.tw/news/detail/2026920W0362",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 405
     },
     {
-      "row_number": 406,
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9GN3BpeUczYUo4cXFsdGQ0VVA2b05qUk9yNHpHSHg4dVd6WHU0T3JNcDlfalRiLXNBQ2RlSklGVk00Wk45clZlRXRUcklSTVFYQkhxYXdfSy01M1otNi0tczJWRTg1QdIBZkFVX3lxTE9GN3BpeUczYUo4cXFsdGQ0VVA2b05qUk9yNHpHSHg4dVd6WHU0T3JNcDlfalRiLXNBQ2RlSklGVk00Wk45clZlRXRUcklSTVFYQkhxYXdfSy01M1otNi0tczJWRTg1QQ?oc=5",
       "city": "苗栗縣",
       "title": "國家古蹟日 陳品安提苗栗文化資產五大行動政策 - 大纪元",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.epochtimes.com/b5/26/9/20/n14853179.htm/amp",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 406
     },
     {
-      "row_number": 407,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE45ZDVTSC1FTGk1VkM1QjdwYzBydGQwY09ELVg5dnBxNjZyZV8wek00bm1wTk4wSjZxSG5fX3dyTDVuNnBkV2x2d1Z1TFBFeGhFaHVGanJMeTB3Q2EzUjFKZDJ0aUd6UXA3cVHSAW9BVV95cUxOMkJ0NTBWaHY3TnNhcXBpZVllQm1OczZfTW1rZW51TGdEQ2ZUalY0QjRrUDJLcDZKV2lHOWo0Z29YMGZNOU1UbUdIRFpXZFBob3RwS0ZyemdpSHdqYjFTdWtUN3BSUk54amtSN2FuSVk?oc=5",
       "city": "苗栗縣",
       "title": "國家古蹟日 苗縣長參選人陳品安提文資5大行動 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5580280",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 407
     },
     {
-      "row_number": 408,
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPeWRITExCV045SHhhZDltazRycklIbUlaZUJ3YklYaVBSQm1KVld4QXZUczR2bGtNNVlRSlV2c1lYVGZzQl9wOE5XNnY2YmxBemFLeXFpRk9NTW1xZ0Y3MkRvYnI3M0M5cWZqakZuYk5SYVYtVno2bTZTa202MXdiU0NkMTNaLWxENUlndnh4Y0M2b0RNS2VnODZab3JmbW9L?oc=5",
       "city": "苗栗縣",
       "title": "從修老屋到留住文化！陳品安提苗栗文資五大行動 推動故事、技藝與青年接棒 - 報新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.contentplatform.info/articles/516490/chen-pin-an-miaoli-cultural-heritage-five-actions/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 408
     },
     {
       "row_number": 409,
@@ -116,49 +116,49 @@
       "inbox_row": 348
     },
     {
-      "row_number": 411,
       "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxNeWhDYXU2Tko2OW1fVHBtUjh4emNKUFlWVTR4U1V4V1Myd01LRE1yU3lmYnBnSjhjOW1kQ19rM0dMa3ZDWFZLWW1sSXlfc2VYVUtCZm5JYm53S2N0Tk5icFgwTUNSM1BobTVUanlRUVE3c0NHejlQTDlCRnFfVHlndGJQM005T3I3X0toSUlCSlRxQXJMZTZ2bFA4N2RMMkUyYXdRem9RQWNTeS1iZWkxR3hmWTVETkpaWWdxUS16djNpY3M0MmN1ZHREcHpiSkRLRHpaemdvd0diUkJoRExLVDZNSkV0OTB3Zm80eWhHM1ZmN3VQYkUzT0FDWDdiWGVjVkNDMV95eTBHQkdGYWNtMW8taWhZcm5RbFExRnQzaUpkQXc3LW5BenUxMTBHWUVISmdRQndNVlMxWEZZVE1QWTY3LWZzeUdUMDkxYXctNkFCa1RZNkFidVg1QjN2alk?oc=5",
       "city": "臺中市",
       "title": "何欣純端「六星新屯區」政見 聚焦軌道路網與產業升級 - Yahoo新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://tw.news.yahoo.com/%E4%BD%95%E6%AC%A3%E7%B4%94%E7%AB%AF-%E5%85%AD%E6%98%9F%E6%96%B0%E5%B1%AF%E5%8D%80-%E6%94%BF%E8%A6%8B-%E8%81%9A%E7%84%A6%E8%BB%8C%E9%81%93%E8%B7%AF%E7%B6%B2%E8%88%87%E7%94%A2%E6%A5%AD%E5%8D%87%E7%B4%9A-073225526.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 411
     },
     {
-      "row_number": 412,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1VYjJpUWVBNXBYVl9DS2FDdE1ySUZLSzVwUTBFYWdqSWhIb2I2V2NnM25qWjZ4T1ZuSWdWSVFqSU9ZYnFtOGQ1WEF3?oc=5",
       "city": "臺中市",
       "title": "「六星新屯區」 政策何欣純盼帶動大台中均衡繁榮 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/237260918a05/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 412
     },
     {
-      "row_number": 413,
       "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxPNmFIZjcwWHdoUFNoMUs4dHlwaFZqVDg3dk02SUg2LVViRDJpRjZoRmY3Qnk0a19HU2J0R240RmVqQUNCVG9FcjFMNzNKVXhORlN5djNqNm91TjVMYzFnTEpXM1NUNXc2U1hadmFnZjlQOGdGWTBqSWN4ME1SMkNBMmpGSlBKaG04VldzRFNDQnNUMUVPVXpHa2k0U3VUemxhVldCcV9xbWtqSExxZmlaaTcwOEFFOWJEX1gyMm5Zb2RUVlFWQ29NSjFybGZPM3hRRjhWUHQ1RUZIRGpfVUNxNlZTVFhDQkNsLU5rWUlSVm9NMWxnbmlwOE9yZzctVzVCSVdiUnlwanNIaTRVN2dzX1Y2MkN1a1NZSzMtaUJHZzlKQTUwZkp1OURGeGdTM0dUdVBUcGhMdXVqNThLUWV6aDlBUV9pVGJfR000RzZoUjNscDdCY0FhWFlxTlpKM3dlcXhZTlJSaWNxZnJFOUZ2SHVZN2Q3SGZrNEJsZV96aGQwSGY5ajhUQjd3dFA4eDZpNWNRQ2EzZGUtZ3VfUDN3ZUln?oc=5",
       "city": "臺中市",
       "title": "拋中市文化產業投資平台 江啟臣要讓創作者能生存、青年能留下 - 台灣好新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.taiwanhot.net/news/1148850/%E6%8B%8B%E4%B8%AD%E5%B8%82%E6%96%87%E5%8C%96%E7%94%A2%E6%A5%AD%E6%8A%95%E8%B3%87%E5%B9%B3%E5%8F%B0+%E6%B1%9F%E5%95%9F%E8%87%A3%E8%A6%81%E8%AE%93%E5%89%B5%E4%BD%9C%E8%80%85%E8%83%BD%E7%94%9F%E5%AD%98%E3%80%81%E9%9D%92%E5%B9%B4%E8%83%BD%E7%95%99%E4%B8%8B",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 413
     },
     {
-      "row_number": 414,
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1qNmo0WThfb0Jnd1I0MTI3QllqMW40ckI3UVh0c2FVMXRwVmhaVlk2em5wSU1fNGRZU2tYUWNQMGxTR2xTX1d6ZXFodjdrVWphSmt4Qmlhbw?oc=5",
       "city": "臺中市",
       "title": "台中市長選戰／江啟臣提文化政見 盼打造文化產業生態系 - rti.org.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.rti.org.tw/news?uid=3&pid=233139",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 414
     },
     {
-      "row_number": 415,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBiT0tMLVNXdktuSEZBZFNhdWZYbXpoLVJTVUQzTWVLZXEweWk5d3Zxb0ctWUZWLU1aTW5mSU04MW85ZkNIQlJUNGRKcTh2a05kMkE?oc=5",
       "city": "臺中市",
       "title": "江啟臣推「文化旗艦」15項政見 讓舊城成為「會呼吸的城市博物館」 - n.yam.com",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260921843978",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 415
     },
     {
       "row_number": 416,
@@ -173,40 +173,40 @@
       "inbox_row": 626
     },
     {
-      "row_number": 417,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBWR2I5Z0NzRkJ3N1F0R0NKbzY0djBQZ2lTRmpud1FyUTAwQzlOZ0E1R2hSVzVDbHFPa190S3NnN2VMNV9WNFJaME52c3ptdDgzTFVKdDNn?oc=5",
       "city": "彰化縣",
       "title": "魏平政拋政策願景藍圖 邀陳素月公開政策辯論 | 台灣好新聞 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/VxpBnBL",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 417
     },
     {
-      "row_number": 418,
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FZjZHSExpZ2FvSUhEWEtYdm44Q0E3TXphYkl3S3lzRmNrcFpGUmVHQ091N2xWakdJWk1xMWIyY2p6UElZSU1FMVItcVlScVBB?oc=5",
       "city": "彰化縣",
       "title": "陳素月提消防制度升級主張超勤加班費常態結算、各大隊增副大隊長| 桃竹苗| 地方 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/7324/9768662",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 418
     },
     {
-      "row_number": 419,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE83blVnMXR6WTAxR2RsVThudUI3a3dXUTk5V0pYRlBDbm5LVXlub0QtRW9EOGlRcWFYTnM0ZDljc0VvMVh5US03Z0g3dDU3cWRaYnBDMUg2Um9KWm5VQXlZOXlHc0pCYXlEOFUyRVJOd9IBb0FVX3lxTE83blVnMXR6WTAxR2RsVThudUI3a3dXUTk5V0pYRlBDbm5LVXlub0QtRW9EOGlRcWFYTnM0ZDljc0VvMVh5US03Z0g3dDU3cWRaYnBDMUg2Um9KWm5VQXlZOXlHc0pCYXlEOFUyRVJOdw?oc=5",
       "city": "彰化縣",
       "title": "誰怕誰！魏平政下戰帖邀請陳素月辯論 她4個字回應！ - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5581292",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 419
     },
     {
-      "row_number": 420,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IRUxxLXBTUEQzMFpZczJza0IzVGpmeDBZaXo1S21SUlBQZGdfQlBEZEt6UjdEUy02azkwdnpweDdNSmdKYlpOcENYSWQ0QVVFOGc?oc=5",
       "city": "彰化縣",
       "title": "魏平政發表彰化打造第7都政策 - 中華新聞雲／中華日報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cdns.com.tw/articles/1463641",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 420
     },
     {
       "row_number": 421,
@@ -221,40 +221,40 @@
       "inbox_row": 361
     },
     {
-      "row_number": 424,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wUG05ZGFTS2pxREVBemlzb3hVLTRRY0VuSktmZ3pNU3k0LUJIelI2LUE0S1dfZmdOaThkR1o0MmVoVTRWZkh4Qjd4UHF4eW9yWGFPM1Jn?oc=5",
       "city": "南投縣",
       "title": "總統級金曲之夜明19時北平東路登場 演出卡司金光閃閃 紀念好禮限量發放 - dpp.org.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.dpp.org.tw/media/contents/11773",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 424
     },
     {
-      "row_number": 425,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE44MG1yeU03LWV1S29rbjJLbzlvWjFiTVZzMnJsYXI1ejB4Vkd3X2l5bzg4SHFfblE0bnhQTTlSQjcyNTNMX01QZjBxRTBCanFjTEFuSHlR?oc=5",
       "city": "南投縣",
       "title": "民進黨與自民黨舉行第7次政策交換會 深化安保、海纜與文化全方位合作 - dpp.org.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.dpp.org.tw/media/contents/11768",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 425
     },
     {
-      "row_number": 426,
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9aQ0VjUDV2SnQzNUNIZGVEOUkxS0NXM05yckJfU3lVbjZCb0YyNHFEYnhrclFHd1F6VmpOWExJOTNOMHR2S0VtWVlyY3UtNVBrVFFyaHJseTJTSE44Z1dlZnloR0E?oc=5",
       "city": "雲林縣",
       "title": "討論牆 | 江啟臣提5政見 擘劃客家文化藍圖 張嘉郡發表競選小物 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/posts/list/article/ML7xJVD",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 426
     },
     {
-      "row_number": 427,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBIMXc1QTNsT2Z1T2FWVkFRQW9iMW05ejloRjFoR1IxMDh1bk5hT2NKZ05MS0pSWTktUU5JS0t6MHBqVHZPR2p1M3JHZERyQ0syV3F6dWlMeWNUd0pndlBoVGppRjhxckpBdmI3MkNR?oc=5",
       "city": "雲林縣",
       "title": "劉建國赴台南取經拚交通 喊「幸福巴士2.0」照顧偏鄉 - yuanfengmedia.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.yuanfengmedia.tw/detail.php?type=lastest&id=60976",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 427
     },
     {
       "row_number": 430,
@@ -269,22 +269,22 @@
       "inbox_row": 477
     },
     {
-      "row_number": 431,
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45MUlLRGVIQnNKR3VadmRnZmRxcTdqaXJ2SjNjeDZSR0JDVnZfSVpLNnV5dTRJUTB5MWdPRlZjc2FaRC1XRkQ3Z2FGX0lmM3c0MG5NTjR1VVg2c2pjQUdmNmZFSUQzMWp6RXZvQw?oc=5",
       "city": "臺南市",
       "title": "蔡英文走訪陳亭妃總部│肯定設計融合台南城市特色 - 229119.com.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://229119.com.tw/uninews_view.php?new_sn=143039&lang=TS",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 431
     },
     {
-      "row_number": 432,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBMeS1fMDQ1MGpLa3piVDdIdUhvVUpRRXlSQzNKdGVzdm1PWS1fU2h0cWtZV20yeDJOd2FyRnJ6WWtUa1A5WThuMlJub3Rmc1A2MHc?oc=5",
       "city": "臺南市",
       "title": "蔡英文走訪陳亭妃競總 肯定創新設計：期待延續28年拚勁爭取市民信任 - n.yam.com",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260916459357",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 432
     },
     {
       "row_number": 433,
@@ -299,31 +299,31 @@
       "inbox_row": 398
     },
     {
-      "row_number": 434,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjVEJheU1ZNXdua2JhaWstUEk1MEZLQXdQTWtpVWs1Y25NSGZHUGFuaUFNOXFrOHFDdTRwNVpFVHFWOG9mVTZSdXpzQm9xMXBMd1kyN1ZWQzg?oc=5",
       "city": "高雄市",
       "title": "高雄客家政策成選戰議題 柯志恩、賴瑞隆各提文化發展方案 - Taiwan News",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.taiwannews.com.tw/zh/news/6443759",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 434
     },
     {
-      "row_number": 435,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xNl95RmgxckxOTm5jUWtEYmo0cjdzWWQ0N05ScGF3VDJxUzB3QzFPMnZ2dUNMbVJrVjFURWhrSVYzT1M4RTkwcHZEVjEwcEdFUmVxVDMzXy0zUFRKdi1mc1JNOFhwVWVsM3Naclp3?oc=5",
       "city": "高雄市",
       "title": "搶客家票！柯志恩端200萬青年創業金 賴瑞隆打女婿牌推文化城 - 中時新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.chinatimes.com/realtimenews/20260921003107-260407",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 435
     },
     {
-      "row_number": 436,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uMV9hYUNNbDhvN2JPMm1MMXlhUkdxa1k3Qi1RTFpSZGwwQm5aYXNZRUZmbkhLNWEwWDdaRUNTb3VwMEYtOExSMGt3OVJrenJLdFBFWEZBQWplNkx4M3lLVjA3cGc5Sjl5ckHSAW9BVV95cUxPN0JncWI3SHVibk5Ccnl2RnVEWnIxdmMwd20zWXE0X3ZtaXU0cEYxQVNWLXFlS2RqVFdFNU1yMnFlN19VRnRNeDNEX2xLZmd6NkUxcUVGS3lTRzU0ZUpZeGJINHBFZFBkWGFBNFV5RHM?oc=5",
       "city": "高雄市",
       "title": "重量級領袖齊聚高雄挺客家女婿 賴瑞隆3政策打造客家文化城 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5580479",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 436
     },
     {
       "row_number": 437,
@@ -338,22 +338,22 @@
       "inbox_row": 399
     },
     {
-      "row_number": 438,
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBDcHYtRkJyYWNJcHl2Z01HM2RRZGRsYVduQ1VZMTdwNzhLamxMY1YyZzdteDhiZEZIOEZiN3QyZmUweUVOVmVmX0dnN1VjcWRSajd3bTFQSkNMR0Y2TEdvUmJEbDI5MUU?oc=5",
       "city": "高雄市",
       "title": "柯志恩力搶客家票 推出五大政策 - 中國評論新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "http://www.crntt.com/doc/7_0_160270834_1_0921173440.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 438
     },
     {
-      "row_number": 439,
       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9wQjVhMDNBOFBQTm1zZHRrMVhFVXU3LWoyRXdWanZnM2I5SFlCU2dwM3ZKS2VKYWRSZ1Jfd3ZqY29ZalBLM0JSU0drQXVUdw?oc=5",
       "city": "高雄市",
       "title": "柯志恩題五大客家政策！200萬挺青年創業、500元好客券拚旅遊打造「南方客家文化首都」 | 徐炳文 | 地方新聞 - 風傳媒",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.storm.mg/article/11166591",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 439
     },
     {
       "row_number": 440,
@@ -380,94 +380,94 @@
       "inbox_row": 478
     },
     {
-      "row_number": 442,
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1odDNweVlhcEQzU1R5YkE1U0VuUE5vT192YW1adXgzVHR3V3dpN3dYbHg5Q0dEUzM5bnNpRWcwRklUZ3ZUakNwc2VlTDVsLURYeHVONDhBYi13eFU?oc=5",
       "city": "屏東縣",
       "title": "南國設計沙龍登場 周春米、聶永真談城市品牌實踐美學 - 信吉衛視+",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.sjtv.com.tw/articles/107471?lang=en",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 442
     },
     {
-      "row_number": 443,
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBHb1NidzZwSi13a3VySXBfTks4NVN3U1RhbGtTVjRWY0lCQl81cWVNcU9SZTRRUEQydFdZX2JrVnBmQnhieUozdWRjZDdwdVJXUmpVZUN3T1E4dkFlSU9LQVNiZjh5OXQyWUVR0gFrQVVfeXFMUEdvU2J3NnBKLXdrdXJJcF9OSzg1U3dTVGFsa1NWNFZjSUJCXzVxZU1xT1JlNFFQRDJ0V1lfYmtWcGZCeGJ5SjN1ZGNkN3B1UldSalVlQ3dPUTh2QWVJT0tBU2JmOHk5dDJZRVE?oc=5",
       "city": "宜蘭縣",
       "title": "國民黨質疑替性侵犯辯護 林國漳競辦反擊妖魔化法扶制度 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/Yilan/breakingnews/5580939",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 443
     },
     {
-      "row_number": 444,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1vOGhvNzl2cEVIMmZ0NzFtRlFPNlU0YWZLekdqUW9KYW85dW9CdUwyNDZPZW5QWmFOYXloUU44MzRGM2lTbjR2S1dn?oc=5",
       "city": "花蓮縣",
       "title": "游淑貞深入走訪萬榮6村 依不同需求提10 年發展政見 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/248260918a05/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 444
     },
     {
-      "row_number": 445,
       "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNU1NHT1ZXQWtpVV81VW5YVUp3TkRKUk5wWUxqMFRLV0dpTmZHQklILU13Sy0zNUR5WDhiR0E3RTlpUHdDaFJnZXhPd05OVXBhQUNTVDdIcUVLS21UbzFiSEdUVTFNMHMyM1QwSjNYYjFyM3F1YTRnNGl3aTYxUUdyUFQzX015OTctck14RjNYMXFfYmV1SDJUUTlNYlBoQURRVGx6SnB1bTI1eW9EVjBQcklZRW9vMzU1N0tjVmZhcUhzNVJNcWlpZk1CUWFYVXNuUGpWaDRyWmtFdnB0Wm9vZ0VJS242UnYybHIxUWFBb1pEYTlfRmFjejl1SkppUTF4ck1RVA?oc=5",
       "city": "花蓮縣",
       "title": "游淑貞光復掃街談災後重建 ! 主張「全流域治水」結合產業再生 重返榮景 - 花蓮最速報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.hsnews.com.tw/political-news/you-shu-zhen-guang-fu-sao-jie-tan-zai-hou-zhong-jian-zhu-zhang-quan-liu-yu-zhi-shui-jie-he-chan-ye-zai-sheng-zhong-fan-rong-jing.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 445
     },
     {
-      "row_number": 446,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XY1pUS0F6cVVLQ0o3Y19GRjRHZXNRVFFJSUVDTGZfdTRMQ0k2Y0F2dDJaYWp0OFNUWUxVbW5fVV9vcmI0Sk9kbjlxdnJnYjJwZl9yZjJTU19ydzVJMFZVVW1Hb1ZsTm5sSWFhS19Hd9IBb0FVX3lxTE9XY1pUS0F6cVVLQ0o3Y19GRjRHZXNRVFFJSUVDTGZfdTRMQ0k2Y0F2dDJaYWp0OFNUWUxVbW5fVV9vcmI0Sk9kbjlxdnJnYjJwZl9yZjJTU19ydzVJMFZVVW1Hb1ZsTm5sSWFhS19Hdw?oc=5",
       "city": "臺東縣",
       "title": "賴清德台東力挺陳瑩 宣布中央背書全部政見 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5580557",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 446
     },
     {
-      "row_number": 447,
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9XTkVmNWVuWEJRWVJJQk9pTVAyQkVXVi04NTZldXZPaUVxOGEyd0ZRSnBSai1iOTREVVBpRHVkRFlVdw?oc=5",
       "city": "臺東縣",
       "title": "關鍵十字路口 「陳瑩接棒」台東繼續向前 台東縣長候選人陳瑩競選總部成立 - 墨新聞-MORE News",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://more-news.tw/724859/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 447
     },
     {
-      "row_number": 448,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5tekhXV0pEYTRXeUY3My1UUFRodDZaYVF2UUNvOHBHVldNUWJhRDZWTm9NVTkwOVlBN0ZvUVE1c0pKOXZpNFdGSzZ3R1NEWlBGWUE?oc=5",
       "city": "臺東縣",
       "title": "吳秀華拋「一心二軸三共好」 打造台東下一個十年 - n.yam.com",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260916429793",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 448
     },
     {
-      "row_number": 449,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5aaTFEdHB2cVRtYzg2MXZ5eEFidjJRckZkX0hna1dHZm1GZFhPYXA3MjVKdU9CLUtKTndBSWdsMV9fWDFzOE85Qm91Sm5abDJQUUwwODcwNHJGZmlOMXAzN0MzbGZpVXZheUHSAW9BVV95cUxQenBua2o2UGM3ZlZ2SkVFRTJTQS1OSGlPQUdqYjNxTDhjWHNtbS0zY2hVTEdxZURnZ0xnZ0lzaEM5c0VKXzlrWEZ6NFlHMmZ1MVNfdTRYZmlramFXWGJZSkFMZ1htRFU4bExQdHEwSEk?oc=5",
       "city": "澎湖縣",
       "title": "蘇巧慧合體吳淑瑾成立澎湖同鄉會 拋「新北澎湖共好」4大合作政策 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5580079",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 449
     },
     {
-      "row_number": 450,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9Ebi04WWl2NTZfTzJUSkR3QWNIN1JvUW1zd3J3WGRWQU02YXkxWEdIQ1RvVU9kZ2dBTG1mSTVTemFtZmFSV081Tkw5ZHdXNG9ueVNNLUtiTWRhZDF0bUl4X1FsNnMxeGY1enfSAW9BVV95cUxPMUZfWGtMZXhNUXVkc2VuU240WnJYZklzblM5NEEwOXM5dHdiVVdUUkFPM0xMRmtYVTFTTXlGRW53dkIxT0pJd2FhMEVQZUM2dWNXb2dHeUdQU2ZCOE5aLTVEUmVfTy1HdFlrSkpWeGM?oc=5",
       "city": "澎湖縣",
       "title": "陳振中提離島建設條例修法 機船票5折優惠 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5578251",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 450
     },
     {
-      "row_number": 451,
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5Iam9qMVU3bFFtV1hhTTI1aS12ZVlfTFZQek9UM1BtOHphTnRKQ3BIeHhPMkVnN0RLV0F0RS1vUjFSci1iR1I2Vm1McWowdjRITmZPRkx4WW9zQzlFZ0NwWUgyTWNTUk0?oc=5",
       "city": "澎湖縣",
       "title": "盧秀燕力挺陳振中 喊話組成「輔選列車」前進澎湖 - 新華報導",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://ccss3172.blogspot.com/2026/09/blog-post_849.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 451
     },
     {
       "row_number": 452,
@@ -482,13 +482,13 @@
       "inbox_row": 436
     },
     {
-      "row_number": 453,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBqTmloXzU0dVYyVU9ZdU5ER3VieDdocVlMTlRzN01yaVB0REtheGNGS2pjcHJHQUhON19qa2lFT003Y1pBXzFVZk5zcVdoaUNtVzhTZUs5VXhVODkzZ195RWl4bXRaUlhsNFZSYVF30gFuQVVfeXFMUGpOaWhfNTR1VjJVT1l1TkRHdWJ4N2hxWUxOVHM3TXJpUHRES2F4Y0ZLamNwckdBSE43X2praUVPTTdjWkFfMVVmTnNxV2hpQ21XOFNlSzlVeFU4OTNnX3lFaXhtdFpSWGw0VlJhUXc?oc=5",
       "city": "基隆市",
       "title": "謝國樑稱期待首場電視辯論 童子瑋：辯論一直進行中但沒回答市民問題 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/Keelung/breakingnews/5580309",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 453
     },
     {
       "row_number": 454,
@@ -515,13 +515,13 @@
       "inbox_row": 203
     },
     {
-      "row_number": 456,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE96ODh3cllrSHFPVkJFbk5xQktRTWNXU0NJaXR6WUs0LTNmUFdqbDRZRXBULURYbkItR3ppT2tjVWcxU202WEU0a2ZNaVRPa3M3SXc?oc=5",
       "city": "新北市",
       "title": "族人高喊「阿美族媳婦加油！」蘇巧慧出席原民文化活動 承諾預算加倍、生活文化全面照顧 - 放言Fount Media",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.fountmedia.io/article/423806",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 456
     },
     {
       "row_number": 457,
@@ -536,22 +536,22 @@
       "inbox_row": 207
     },
     {
-      "row_number": 458,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9TUEwzRmJ1NUUyU1NjRzZXVjJhRWtzUG1XYVBHODFWbHNVZG0yTEtmZURGZ1lzbG9WdnJMdWczcXdWa19ZSVRHU09R?oc=5",
       "city": "新竹縣",
       "title": "鄭朝方步行登記參選新竹縣長 用竹北成績直攻縣政2 大痛點 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/247260902a09/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 458
     },
     {
-      "row_number": 459,
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5IZ2R4LW42QkpQV1JZR1BxSGtHTDlxeDJZZkd1MVdPeTJDNG15NVZrX0VTMXVlOVNLdk9ZamNLdmhYeFk1MXc4eDZkX2w0WVBoaE9JM3RXa2NWMHdYalkwbg?oc=5",
       "city": "新竹縣",
       "title": "出席國小校園音樂會 徐欣瑩提「講客新竹」願景帶動客家文化傳承 - 勁報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://twpowernews.com/news_pagein.php?n_id=295468",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 459
     },
     {
       "row_number": 460,
@@ -590,49 +590,49 @@
       "inbox_row": 367
     },
     {
-      "row_number": 465,
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5RYUhuSm56NzJVVlM5c0hUNDJ4TzhZcDV2MjhsNWdEV1lEZDhEQUhGTkJndVUtX2w5RWZXdnVibEJ6TldxZ2tSNVZiNkJSYnZqWW4tVw?oc=5",
       "city": "嘉義市",
       "title": "深度專欄 /王美惠立委團隊，想當市長請告訴我嘉市的未來願景及藍圖在哪裡？/劉治強 - 臺灣導報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://taiwanreports.com/archives/1012392",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 465
     },
     {
-      "row_number": 466,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpdDdMOUdmNHd6cEFHUDM0RWotdFNSUnZKNEhZSDBDbHBwMVJHaFFrcllKVThCVGxYZkpiZUkyaFVSQVZCT2E5US14V2JlX3pSdzdjTUFGRVVOSFctSWg1ZUxyekFLN1FGYUHSAW9BVV95cUxNMTVMRHB2V0FhMHBkV2NJWW9sVVRteXloWU55Q1VDM3ZZX0FIQTlXYTBKMHNDYzNPal92TzVFSU95cXVlb19uZEwtbmVnTkxpTHNHa19LbmVObUxxNmM4Y1NPTklWdnBZZDhaX2Y2V28?oc=5",
       "city": "臺南市",
       "title": "竹市7白營議員參選人組團隊出擊 推藝文遍竹市再升級政見 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5568245",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 466
     },
     {
-      "row_number": 467,
       "url": "https://news.google.com/rss/articles/CBMiOkFVX3lxTE1VZlpYRWVtQWZLbVhUNkpUR244Z2Nma3ZreHB6UnZoRDlfdkxWRTQ3eXNGcWxkd2tWTXc?oc=5",
       "city": "臺南市",
       "title": "張嘉郡西螺廟口開講 許淑華、謝龍介到場談中台灣合作 - ENN台灣電報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://enn.tw/778559/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 467
     },
     {
-      "row_number": 468,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5NT2lITGF0UGdscmgtVEdGUTdvbEQ3TW9kNUx0Qkt2YThhWmRhVmdVdVBDM0xUR3A5bVZOd3pYemZ3d21vNkRvZzN3dTJzS0NyUnl2eDJ0aU4?oc=5",
       "city": "臺南市",
       "title": "陳亭妃化身「妃熊隊長」 同步推出「妃熊」文創競選小物| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9736477",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 468
     },
     {
-      "row_number": 469,
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1EUDdfZEduME94ZWpKYXdwNExVck41MHJET0YxY2p6TUpCd0MwZGpfOE04bm5KLWYyUUI3VjhjRC1OMjNfWGpBZ3Z5RGZwRkhXTElIeUJFWjBUd0pldFVRYUdB0gFnQVVfeXFMTjVFOHRxQTlMY0F5UVhmdmd6NE1vazVkdEZUOUNxc3E5Sl9Pd2d6Y3pVbnUtQ1ljd2tIbDNXa2RoWG1vS3dTekpjbXNTQ1VVeGsyUERUdVptblZKanF1VjBXQWFSNHZHVQ?oc=5",
       "city": "高雄市",
       "title": "賴瑞隆獲客家領袖相挺 柯志恩續辦世界客博會 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/Kaohsiung/paper/1771650",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 469
     },
     {
       "row_number": 470,
@@ -671,13 +671,13 @@
       "inbox_row": 258
     },
     {
-      "row_number": 475,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8wM1ZkM1NFWmxPUzJqWWp6Y0VWSzF1eXl6ZnZEbHdwVkJSU1J3VlJtTTFrWGl2LUJ3V0RqbkJ1WlhIcDF5dzAyYjRULVd6TnFqU2c?oc=5",
       "city": "花蓮縣",
       "title": "從風災馳援到再訪部落與卓溪一路同行》游淑貞：守護安居、傳承文化讓建設與數位資源走進每個部落 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260921129755",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 475
     },
     {
       "row_number": 476,
@@ -692,13 +692,13 @@
       "inbox_row": 266
     },
     {
-      "row_number": 477,
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBoYkt5UHhfUWRYdXVJbmhGQjFEeGpjdlZWWTUyNTliSVF3STQ2T193UDZaaTVPaHlCcDBxVzFxUnJHSUN3R1p3dUYwRUF0UkF4enJnczZjUEFnd3RvZHljbG5lcE9EOENPbVBoOEQ1Q3FQaXc?oc=5",
       "city": "臺東縣",
       "title": "藍綠聚焦音樂政策 陳瑩拋「台東音樂基地」 吳秀華籲走台東的路 - 翻爆",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://turnnewsapp.com/livenews/politicsv3/20260912002827-260407",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 477
     },
     {
       "row_number": 478,
@@ -725,13 +725,13 @@
       "inbox_row": 270
     },
     {
-      "row_number": 480,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1WbWZ4SGFFYm52WFd1Mzd2M2hhbWhtTTJOTElNMFRTWnNVZ293Q25tTE96VU5jOUU2THRzXzdUUXNwR25CUk8yNTk2Y3ctSmVaTTBz0gFYQVVfeXFMTXZWV0d1a1NBYURKTW9DQ3l3X09WVHNaV2w5My1hT0tiSS1MNENFcC1XYzFNLVZ0NFNNckJGdEFGWDh4VjJOOWRQUEdtSk5kcXRidjY4VE1NZg?oc=5",
       "city": "臺東縣",
       "title": "陳瑩提音樂原創基地 吳秀華：別複製北高模式、要考量台東條件 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9750552",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 480
     },
     {
       "row_number": 481,
@@ -782,22 +782,22 @@
       "inbox_row": 114
     },
     {
-      "row_number": 488,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Ta2RlM2FpOGE1aUs2RXpFTjNaZm9xQkJSblJoU0lYSzZ2RGFYa3RKangwNUJ1SWduQlFOaGdMcU9CcGowOUVLTkVrQXJ2dVhpNGJNNXhn?oc=5",
       "city": "基隆市",
       "title": "和平島地質公園 獲地域振興大賞獎 | 中華日報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/gzR0qGz",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 488
     },
     {
-      "row_number": 489,
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE10Z215ZkxlZ0w3ZEo1SmwzYlZlRTZqcDVmbDlBWGdjVE90WGlpck13YnFoc09hTzEwN1JYMzJ1cURsc1F1d3Bxc29JcHhvVU5kdlhpM2RVNG5HQ0Z6QVZ0QjJR?oc=5",
       "city": "臺北市",
       "title": "北中南文資團體齊聚│籲強化保存審議與跨部會協調 - 民安救護車",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://229119.com.tw/uninews_view.php?new_sn=143298",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 489
     },
     {
       "row_number": 490,
@@ -836,13 +836,13 @@
       "inbox_row": 135
     },
     {
-      "row_number": 493,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LczU5T0pzOER5eXhkTl90NVFCLW9ZNDJSWEs4NFpxR2xrVkRJZ0d5ajdrTWdIX0FXMFN3Um9JU0xpb21KM3NsMGt0eHEybVlxN3E2Rk93?oc=5",
       "city": "桃園市",
       "title": "桃園娘惹文化節虎頭山登場！長桌宴、傳統童玩熱鬧體驗| 桃園電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/YaRNlw8",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 493
     },
     {
       "row_number": 494,
@@ -869,13 +869,13 @@
       "inbox_row": 164
     },
     {
-      "row_number": 496,
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1XUVpFRU5UNUhxaEVDU3dMWEVOUnNKZUF2VlB6QTBhOGRjLTVNMjZKRWVJVVdyWkdVYzEtSENFaFBXT0t1VjBVRGtUZERaTTJ5ZHdTQldXNA?oc=5",
       "city": "臺中市",
       "title": "台日攜手防災經驗 中市消防局2026台日災害防救研討會 深化城市韌性 - 觀傳媒",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.watchmedia01.com/archives/551830",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 496
     },
     {
       "row_number": 497,
@@ -914,13 +914,13 @@
       "inbox_row": 123
     },
     {
-      "row_number": 500,
       "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxPU2N3TER6V09BMTdVTnFsdVJ4M3plUVh2VHNLZHZWYWNfTFdFMzNJTG1ra0pXV2x3V013a1ZQaE1zNHNmbVVXZVotM3dZZHBwcHMtV1UzMHBENTVLZUROTUJwRkFMSG1QdVk5ekFXbWQzSWhKU25tSTJRSnVXMlJqc0dUZWFWNTRuUzA0dHFFNzR0SHlGa1JvRHhKR3RjNUd2clVtbnFVLUZLdmNqQTlMWm1GcHhadVJFYjhJQjFPTk16bm9GZ1pGZlR0RnpWZE52dFE5QWtFS0VSRWt5NnlzbERsZ2hTSlpSaWMtdXI3SVctNDYwVGxQRm5LSkNxMkpaa3BBaVF6MVNHZnVCYjAwTGIwOEloRldYN0l4RXlVejhLVURvYjlQa0s3cUZVbFMxd2JTa3lZRFhlam9RbVFjNkNDVTBhSWtCc1VzUnQwaW9pdk9TZEdqOU4tcklaZXVHWkdzeDBFc3U3aWxuM0NiNW8tOVdXUEJjaUJqSzY0TUFHMFI3YXlUU1hLWFpwajE0Vkh0cDRhLVNFQmVFWkxXa2hOdUduV1FaMlgzNGZQaDM?oc=5",
       "city": "花蓮縣",
       "title": "憂竹縣璞玉計畫與竹科三期開發 民團發起連署籲搶救客庄文化資產 - Yahoo新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://tw.news.yahoo.com/%E6%86%82%E7%AB%B9%E7%B8%A3%E7%92%9E%E7%8E%89%E8%A8%88%E7%95%AB%E8%88%87%E7%AB%B9%E7%A7%91%E4%B8%89%E6%9C%9F%E9%96%8B%E7%99%BC-%E6%B0%91%E5%9C%98%E7%99%BC%E8%B5%B7%E9%80%A3%E7%BD%B2%E7%B1%B2%E6%90%B6%E6%95%91%E5%AE%A2%E5%BA%84%E6%96%87%E5%8C%96%E8%B3%87%E7%94%A2-085153558.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 500
     },
     {
       "row_number": 501,
@@ -935,22 +935,22 @@
       "inbox_row": 148
     },
     {
-      "row_number": 504,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5kdkhRTmJIRU5JbDJ0ZTlnVjlpOG5kSkdaR0lDUHFyMjJrSm8ybFJtenNiczZHaENfSGtLc1loSFQ5dVY2N1JybDN0ZEROdFhITFE0MWpYdm8?oc=5",
       "city": "基隆市",
       "title": "基隆港灣觀光 童子瑋推水上計程車 謝國樑陣營批雙標 - Taiwan News",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.taiwannews.com.tw/zh/news/6443601",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 504
     },
     {
-      "row_number": 505,
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAyMFlnb2czVzdYcVhZeVQwQjhGMFc5bDBEeU5NMUJ1aGFIWnotdE10VTlFbUF4cE5lRVFDS1BmWU1sWXJNREg1OVlXOA?oc=5",
       "city": "基隆市",
       "title": "強打基隆多元文化 童子瑋：未來成立族群關係處 - FTNN 新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.ftnn.com.tw/news/574537",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 505
     },
     {
       "row_number": 507,
@@ -965,13 +965,13 @@
       "inbox_row": 278
     },
     {
-      "row_number": 510,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1UNWVBTFBXSFd2LVZYd05ib0d5NS1KSjdtLVk4a29mQ19pSmdZTVRGQWZKWHFkeHZzNkJpQ0pRWnhNbXc3UmJpN3NtRnBYdE45aHYydGd6RTI?oc=5",
       "city": "臺中市",
       "title": "「洋流」周日到台中何欣純：我們很多政見不謀而合| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9775158",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 510
     },
     {
       "row_number": 512,
@@ -986,22 +986,22 @@
       "inbox_row": 468
     },
     {
-      "row_number": 513,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ESEFETk5sY29hMEt6TzZiWEhhN0tuWktxNm5sZ0k4Wlc2Vjk1ZDNINkxNTmJ1VFFmVjRrVnRHdmNqUGctMlZ3enVQaExnOTdQUjlIQ2VuY09DbDRNWjBkLVpvX2NaMnVFTEHSAW9BVV95cUxNLU1oRDdCMTJUV2pMWlZUM0RQcHpRM3dXZllwbU5oOXVIT3E5UW82eDVyM2FzTUlrdzk0SzRGUTJKZnI4amwwbjk4eGwtcy1mWEQ2aUp1OE5pV2FyZ2dqcXREZzlOUWxPZ0lTcXJ2RDQ?oc=5",
       "city": "臺中市",
       "title": "江啟臣公布文化政見 落實城市美學及文化平權等五大面向 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5580930",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 513
     },
     {
-      "row_number": 516,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1zd0lvVi1BQnU2WlY3dFZ4dHBNdFdKTG1vUGdqZDVQTjdLZXR1WEY0ZUpnbkdPZVF3V0hIMFBhR2o3X1FnMmZxd1o1aEVzZXN1N1dn?oc=5",
       "city": "高雄市",
       "title": "柯志恩拋五大客家政策 搶攻東九區觀光、青年創業最高補助200萬元 - 台灣好報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://newstaiwan.net/2026/09/21/481994/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 516
     },
     {
       "row_number": 517,
@@ -1028,13 +1028,13 @@
       "inbox_row": 640
     },
     {
-      "row_number": 519,
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAxUm5aMEZSWlJUSWNVZWo0VlE2SS0tZXFmRlRRU0I0RU1Zdk85NTJQSm5jQVloQ3VIOFVNZHk3MWJ6RVFUd0RIZ2NCWk9XYlZTbjYwV3o5VDNqNGd5UXlDckg1NmlBYllxMzZn?oc=5",
       "city": "臺東縣",
       "title": "原民事典誤載 吳秀華、陳瑩籲更正 - 中時新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.chinatimes.com/newspapers/20260924000731-260107",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 519
     },
     {
       "row_number": 520,
@@ -1085,40 +1085,40 @@
       "inbox_row": 546
     },
     {
-      "row_number": 524,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9MQVFwNjl4WTlKdmFmeU1ZbkluOGlVZHB3YkI1WVVUQ3oybUdUblpaZDZuZ3dxanpsUDlBNVE2SG0zaVlkOG5RY3pR?oc=5",
       "city": "彰化縣",
       "title": "魏平政發表「彰化第七都」 願景邀陳素月公開辯論 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/237260921a03/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 524
     },
     {
-      "row_number": 525,
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1QTEx2WE9nQ1NxMzltd2poYW9TUVZjMGMydmZ3MlV5WVByb0RsckNFVWVYYTM1ZWR6U0RqZ1NRNF9VNXlkT3pONGxxaE1uQnFyc2RIc20tVkI5bS04am9uQ9IBYEFVX3lxTE1QTEx2WE9nQ1NxMzltd2poYW9TUVZjMGMydmZ3MlV5WVByb0RsckNFVWVYYTM1ZWR6U0RqZ1NRNF9VNXlkT3pONGxxaE1uQnFyc2RIc20tVkI5bS04am9uQw?oc=5",
       "city": "嘉義縣",
       "title": "加速嘉科三期 蔡易餘提「活力產業」政策 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/life/paper/1772071",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 525
     },
     {
-      "row_number": 526,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBZbG9nUE1jWVZxM0JPRVZXNElEWjdKajVSZVlzeUtCbjAxNm5NQzA1SEJFSy13YW83SVR1Tml4MWxNclRqbmZORVJn?oc=5",
       "city": "高雄市",
       "title": "打造高雄為南客文化首都 柯志恩公布5 政見並調升客語認證獎勵金 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/235260921a07/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 526
     },
     {
-      "row_number": 529,
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KX2hJSS1KNExBY0NlS215Z1laOEctZlFrenRZLUgzVkhIVENidE01ZzQwaUdXSWF1dF9iTUZWZ01XQWpVem1UREdzMU5zVjZKRlVNdEY3NUNlNk5femlB?oc=5",
       "city": "基隆市",
       "title": "謝國樑提公辦政見會辯論童子瑋反批未回應市民意見| 政治 - cna.com.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cna.com.tw/news/aipl/202609200138.aspx",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 529
     },
     {
       "row_number": 530,
@@ -1133,76 +1133,76 @@
       "inbox_row": 319
     },
     {
-      "row_number": 531,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBwREtwSFpWNS1GRURxV1N4UV9oX1lWOFBpTEJxdmlQNmJEakhudmJHSHNzS3dxNGFBcExfeWM0SmxJTUpzSmZXQ1hvekliNkVobV94RXpn?oc=5",
       "city": "臺北市",
       "title": "曝李四端訪問「3問題」最刁鑽！沈榮欽指沈伯洋回答超「厚道」 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/pepvxn7",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 531
     },
     {
-      "row_number": 532,
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9HS1oxUkVQRUlGOUpQc2NDUFFFZlFPZHhoNXg4bUtlRmZyY3ZTcDNzOXg1dkZIem9MeXNpT3dJWDRXNzNyejZUa1lRRE1mRURXS1J1ZVdOeDJyMHdxUW1LMjJkYU1uTDJDUlQxbmtnTnIxMkhQ?oc=5",
       "city": "臺北市",
       "title": "影片標籤：運動文化 - puma.taipei",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://puma.taipei/video/tag/%E9%81%8B%E5%8B%95%E6%96%87%E5%8C%96",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 532
     },
     {
-      "row_number": 533,
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE54S2pNRmQ4MHNoUlhTcXhLNkxMLW9Dc2luYUZUejViYW5wQlZtb0JCMGY3b0RLa3FhZDQ2VVVUdGIySTY4bjd6ckhSSnZDTTRKS1ZidXlXX2hDdnJKVnl6N3BR0gFnQVVfeXFMTU44eTI4c0JVdmIwbWZrTXJKdVJGc3RXVHBWUGxsdzZjWVh5VWRnNGdNZ2VHUDR1S01WR25uS2huZDZ6NXk1bjdyRkRVLWtTcDJoN2plQlJ1Z3VGVTMyWE50NGJGVkxhaw?oc=5",
       "city": "臺北市",
       "title": "自由開講》蔣萬安借來的梵谷 說不了台北的故事 - 自由評論網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://talk.ltn.com.tw/article/breakingnews/5586305",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 533
     },
     {
-      "row_number": 534,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9wQjRtRGQySDFfU1VxVlljY0dBTWNsQk5FN0RTVXhUeXFoLV9iNnpoQ2tDcFQ4eHl6QjdrSG1zMWs3XzZUNmNiei1hbFgtQWvSAVRBVV95cUxNSXczTnF5eVBMbFVXN1JGMEFFYXQ0LTF3QkxhNko5SS05dEpMOFd4QXJET0lpNjhXUldLSjdPOHhIZG1jU1pmS3d6MzA1Z1VlcTQtWkY?oc=5",
       "city": "臺北市",
       "title": "台北滿城故事別只剩梵谷　陳培瑜籲蔣萬安找回土地主角 | 政治 | CTWANT - ctwant.com",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.ctwant.com/article/499811/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 534
     },
     {
-      "row_number": 535,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE45V3JtQkdzZlRyZ2xIbll2YlF3d2ptZGsybDNobzJnMGI0SEJ6Z2k2dVFqWXF2VTRQMUxxOFVYZHc1Tk9Lbkc2VkhWVTBvY0hKWmVF?oc=5",
       "city": "新北市",
       "title": "文化政見比拚…李四川推文化幣蘇巧慧打大平台| 縣市長議員選戰| 要聞 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9779283",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 535
     },
     {
-      "row_number": 536,
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeEN2VTlfeXFabjZnamdWaXA2dnpqWW10SVBDQTE0b3lvZVpqOUhGYXZPNWNNRm1rMmx3TEtBd3RYbHJrbWNhRVdKbVUyczNzY1lSdEpMZVl0enFPazVNVTFOYVlXYVdETUZHVnprbkZPb3lubkFjUXBoTHM0dUZ5Qk0xMVA?oc=5",
       "city": "新北市",
       "title": "李四川拋「文化三策」 蘇巧慧：當立委時就推政策 | EBC 東森新聞 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/VxpqLDV?view=topic&referral=TOPIC-Election",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 536
     },
     {
-      "row_number": 537,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBJa3NhTXBwaGxDczZWZjBQWkRKN0o0cDFGVWVSeFNzT2NLVENOOHZiZzZCZmN2NEJWbzNnNHB3UGI0Y1dPNjVEaGtqU0lpd1AwSjA5WWlPOEJSN3RtRDBkVFdZSFBsa0E1ZkEyOGl3?oc=5",
       "city": "新北市",
       "title": "李四川今拋文化政見！蘇巧慧喊打造文化大平台、串聯各區特色 - 中時新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.chinatimes.com/realtimenews/20260926001135-260407",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 537
     },
     {
-      "row_number": 538,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBjcU01ems5TkNxWS1CdS02WEJwckxBeXFfWHEwMlo4aUZ6YzNQekplSTFhR3UzeHpicE5kZUJHRTlNdnhnMzBqRUR5bkVQNHN2YlI00gFYQVVfeXFMUGc3OWVndWFjb3VqWlpGaDRUeUlVbjJ6ZGhzWHNWRUE0clpXVnVYS2FmTGdNdVN6cmJDR1A3UDhra3RRTEJfWlNGZ2xkYk8yc1RVS0FCNTEtTA?oc=5",
       "city": "新北市",
       "title": "李四川今公布文化政策 新北發六百元文化幣、創作免場租 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9778812",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 538
     },
     {
       "row_number": 540,
@@ -1217,67 +1217,67 @@
       "inbox_row": 496
     },
     {
-      "row_number": 543,
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE15bExTbEdobWVRVWFLamNMTjdMdVpaYTNFM0NUZUxzYnh3Z19mTENEaDVuSEhyQjVMV2dJc1NOYnh3dnJHR2F3R24yU3ZPd3V4?oc=5",
       "city": "新竹市",
       "title": "莊競程籲攤開政績檢驗 高虹安列施政成果回應 - 信吉衛視+",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.sjtv.com.tw/articles/109964",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 543
     },
     {
-      "row_number": 544,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE41Q3lyZWdlUFhhV0JXNjZpdVVUell5VkJldmFRRG00LS1mRFZHUlB4a0NoNmtTRGVreWJSdzM3eFYwS3g1VVBZY1VwVVpoYlVKNWJN0gFYQVVfeXFMTkdYQjB2QkdjM3RiMkswMGtVOVFHdTR4N25nU3NncDdqQXg4akF6dnpwdzNVUEV3cjRCYUtycFJoNjVCVENOQkRmTHFGZkFKZTE1MWpUT2lGcA?oc=5",
       "city": "新竹市",
       "title": "莊競程喊政見公開檢驗 高虹安競辦反擊：7成滿意度就是成績單 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9778893",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 544
     },
     {
-      "row_number": 545,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1WdVFxbzJIdk5ZNlk3bWpQeEZlSWJ4alEtd1lqUktPbDZObUJJOVdqV2FRcXk3TjFvQllWNjVOdDcyNkFQWnpXbGJ2LVlLZ3lON1Jr0gFYQVVfeXFMT1lHU21nc29USU5PTmVZTDZ5TVRkTDBPM3JFNWpfdl9lRm8zREUtNVNRZ0IybE12WmprTHVrZmluSE8weTI3RGs0T21FSGVSNmdTS3I4aHpQcQ?oc=5",
       "city": "新竹縣",
       "title": "中秋北埔「茶金」地景開唱 鄭朝方提客庄深旅文創政策 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9778623",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 545
     },
     {
-      "row_number": 546,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5wcmZfdk9BTTRsVWg4amhaVjhIRHdCTjV1anJVc2NaWnJ1RlMwNGZiWlFSWEVvWm1nbzFjbmN3dmgwbjJBR3VXNFln?oc=5",
       "city": "新竹縣",
       "title": "鄭朝方開金嗓拋客庄深旅政策 同台陳永淘、 米莎重現金曲 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/247260926a06/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 546
     },
     {
-      "row_number": 547,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5CaWZDZkZueTZrTE8ybTBNUTAyczlSQXVZTDdicHRVS1B2NHotQUJzMTQyQWhPbGdOSkpyOEN0N1FseVBzYjI3ZFBFb2RndVVHVGc?oc=5",
       "city": "新竹縣",
       "title": "中秋夜開金嗓獻唱〈髻鬃花〉 鄭朝方拋客庄深旅文創產業政策 - 鏡報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.mirrordaily.news/story/87999",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 547
     },
     {
-      "row_number": 548,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB3ZFNRVUJXQUdweU5aWnhneExiYzZJV1F3VUJXX2VjYjdYSUhoREdPOGcxRmdqbW04V25PczJXMEJZcGM0MVFmU0d2dUx3NzFCd3VtTzBR?oc=5",
       "city": "新竹縣",
       "title": "延續鄭朝方竹北市政建設與藝文能量 曾聖凱：不負「善待竹北」懇託 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/aGpqYL8",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 548
     },
     {
-      "row_number": 550,
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1odjFfQTlJYkFmSHpQQktqV1pqX1JHWkU3ZmFZOVRBaVZjamFrcmFhTEVPRTNjWWF6YVVBLUc3U0Y5NDlFb01ueA?oc=5",
       "city": "新竹縣",
       "title": "徐欣瑩出席竹仁國小校園音樂會提「講客新竹」願景帶動客家文化傳承| 品觀點的貼文| 鉅亨號| Anue鉅亨 - 鉅亨號",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://hao.cnyes.com/post/266470",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 550
     },
     {
       "row_number": 551,
@@ -1292,13 +1292,13 @@
       "inbox_row": 344
     },
     {
-      "row_number": 552,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1BOUV0TVVSczc3b3ZrQUlyVUFoYS14VkFzb2pyUENoX2drbjgtWUhBMWFQY195bzJZVlR3UU1lS090MEhLVmNCN3E3VEY2WDNFWEVRUWV5RERVVHNsUC1MSWV2WWFzSV96emcxWmE5d9IBb0FVX3lxTE1BOUV0TVVSczc3b3ZrQUlyVUFoYS14VkFzb2pyUENoX2drbjgtWUhBMWFQY195bzJZVlR3UU1lS090MEhLVmNCN3E3VEY2WDNFWEVRUWV5RERVVHNsUC1MSWV2WWFzSV96emcxWmE5dw?oc=5",
       "city": "苗栗縣",
       "title": "陳品安拋青年4D政策：讓青年參與預算決策 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5588222",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 552
     },
     {
       "row_number": 553,
@@ -1325,76 +1325,76 @@
       "inbox_row": 596
     },
     {
-      "row_number": 555,
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9xZXMwMzlaTnFVUGVIUndydk9mb3B1QWM2QnVmNHhfTlFxUlJNSlE0b1lxdmlWOXJuQXhSbWRPWFRFM3hGME94U0VzSXY0MmhzQmluV0FJZnJXTlR1NVAwSGU4d0lZNndlazc0?oc=5",
       "city": "臺中市",
       "title": "中秋霧峰爵士夜登場！何欣純拋「台中版松菸」 盼大里菸葉廠變文創基地 - 警政時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.tcpttw.com/other/other_local/2026/09/27/314727/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 555
     },
     {
-      "row_number": 556,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9DUFUteHFheXVpanhkYWVQamhFcUhOWm5rcTZrY2tpQ1E5OG56Wk5PWlROY003WlBLbkEwbEx5cHloekhwX0pUY1BZQ2ZndW5mZTc40gFYQVVfeXFMT1M3WGZjZ2w0S3VVWi1EUWJ0QkZfOTQwc1kxUVQtUkl1cjdTSG1XbDBMTU55SmRrc25pSDlDZHR4OTA2MzJFSk9zOFk5QjdLZzg4S3pTc1RyRw?oc=5",
       "city": "臺中市",
       "title": "中市選戰 江啟臣、何欣純端創業政策 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9779328",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 556
     },
     {
-      "row_number": 558,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE45ZXRqenhTdEtHdEZzTTh3T1FuZnlCU0I0ckhOcTRQZFItOHBpdWxhZWl0T2JTeEgzZTVOd2ZXempYQWNvSWpLTklJcnlqWjU3Z1pfb083czBxRkF4MW91ak91a2EyRUFvSE91bTBhd9IBb0FVX3lxTE45ZXRqenhTdEtHdEZzTTh3T1FuZnlCU0I0ckhOcTRQZFItOHBpdWxhZWl0T2JTeEgzZTVOd2ZXempYQWNvSWpLTklJcnlqWjU3Z1pfb083czBxRkF4MW91ak91a2EyRUFvSE91bTBhdw?oc=5",
       "city": "彰化縣",
       "title": "不讓老師孤軍奮戰！陳素月拋政見：推教育法律專業支援 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5588737",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 558
     },
     {
-      "row_number": 559,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9jV3l3cUZxNV9vdDVBQmM3UkpqLXlxTlZSMUx6YTZPSC1TMVJkVUhlRUpyeW5YY3FyLU9zTmJ0NGFMX3Mzdk5SeDg1cjBoUzJZRzNF?oc=5",
       "city": "彰化縣",
       "title": "直搗王惠美本命區！蕭美琴合體陳素月拋重磅政見 - 中天新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://ctinews.com/news/items/4bnbkJXKWP",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 559
     },
     {
-      "row_number": 562,
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5TzJ6dUNGNFBXcTRfSlB1Si1pcTJCc25RWGVtZkk2M2VFX3BRejB0NkpySm5BMktrdEhZR0F6OWtxUXppRUFPX2syMFFsaW1ENHFCZUpRNVotdkJGbWprLWNNb2JHcktGbUU3SdIBbEFVX3lxTFB5TzJ6dUNGNFBXcTRfSlB1Si1pcTJCc25RWGVtZkk2M2VFX3BRejB0NkpySm5BMktrdEhZR0F6OWtxUXppRUFPX2syMFFsaW1ENHFCZUpRNVotdkJGbWprLWNNb2JHcktGbUU3SQ?oc=5",
       "city": "南投縣",
       "title": "南投參香造勢聲援温世政 蕭美琴談焚化爐爭議：務必守護茶產業 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/Nantou/breakingnews/5589533",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 562
     },
     {
-      "row_number": 564,
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5QdENJZE9SR3pQRmF0WXhQTDN4YU11V2szWEJRMVNQS0RxSi1uc2lMVDZvNGtDZFJaRS0wSW0xVmJoSWNMdDVTUDlMQXh3RzhBY09FbXQzUDhJcHJzYmpN?oc=5",
       "city": "雲林縣",
       "title": "劉建國提青年三好政策張嘉郡推廣農特產品| 政治 - cna.com.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cna.com.tw/news/aipl/202609230222.aspx",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 564
     },
     {
-      "row_number": 565,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nbUtwQV9DNTB0Z2dvSURqams1Qmg3aHJDVm04QlJkMTJuQUZDSEJ5ajFOb1o1MkxtTmhJa0JFWEhWX2Z4aFdPMXN6MlN1VzU5a1JuaUpyWlN5aWZUSUJjeWU4U08xdlNFa1dQWlRJRdIBb0FVX3lxTE5nbUtwQV9DNTB0Z2dvSURqams1Qmg3aHJDVm04QlJkMTJuQUZDSEJ5ajFOb1o1MkxtTmhJa0JFWEhWX2Z4aFdPMXN6MlN1VzU5a1JuaUpyWlN5aWZUSUJjeWU4U08xdlNFa1dQWlRJRQ?oc=5",
       "city": "嘉義市",
       "title": "張啓楷競選總部教師節成立，鄭麗文輔選喊教育部長下台 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5588381",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 565
     },
     {
-      "row_number": 568,
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ITHJ3cTNuUm44T0NrVXBHTm1SUDNVbWtyTXJYM2tLZlhJVGJtbWRWXzRRanplanh0OE1UWFRmYmlQWHNxQTJiT2VfRFp5V2h1QVYwRWNxV1d2Q0p1aTRoTFpnMGFLZjBBd2h4M0l2Qld2Z9IBckFVX3lxTE1ITHJ3cTNuUm44T0NrVXBHTm1SUDNVbWtyTXJYM2tLZlhJVGJtbWRWXzRRanplanh0OE1UWFRmYmlQWHNxQTJiT2VfRFp5V2h1QVYwRWNxV1d2Q0p1aTRoTFpnMGFLZjBBd2h4M0l2Qld2Zw?oc=5",
       "city": "嘉義市",
       "title": "王美惠拋「社會婚育宅」願景 嘉義市社宅政策再升級 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/ChiayiCity/breakingnews/5590763",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 568
     },
     {
       "row_number": 569,
@@ -1409,58 +1409,58 @@
       "inbox_row": 380
     },
     {
-      "row_number": 571,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1rdkNaUUFHTlFnNFdndFRmLWVTbHRCWHRWV2phNVAzcUlGWEx0UlRZaGNQNmxyZXdwTEt5OHVhbXZtYnRBc0Y3eFh2TkFQcGlzenE00gFYQVVfeXFMTmtTYnF4Z3JEdC1OOUkySFRJNmJxckR4Z1UzMXlCTDFXcEZDeEktdG8xNVBQSVctcmktSjhRUU1SU2xSRjZHLVhOb2JESmxHUFVic3JpalJkQg?oc=5",
       "city": "嘉義縣",
       "title": "賴總統力挺蔡易餘 重申蔡英文這句稱讚「胖子不是重點、重點是靈活」 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9780296",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 571
     },
     {
-      "row_number": 572,
       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFAybS16N1Z6R2FPbnlWY2Q0bFJraWc0dlJUVVpDb1gwVl9La3hMWFBFcjFzbksxTllYTU8xNks1bWdUQWVVM3A0?oc=5",
       "city": "嘉義縣",
       "title": "賴清德來嘉力挺黃金十年 蔡易餘、王如經聯合競選總部成立 - 台灣新聞雲",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://886.news/archives/363995",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 572
     },
     {
-      "row_number": 573,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAxcVdrUVJKaVRTbFFQdUU2NGZNUFR2dmh0dFBmLW9lR1pTQU4zNk9nVUVMSjZTaU9salRiYlpiNW1EXzU5dlFiUXZ6Zm5VTTFqQ3c?oc=5",
       "city": "嘉義縣",
       "title": "蔡易餘、王如經成立聯合競總 賴清德嘉義站台力挺「黃金10年」 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260928601652",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 573
     },
     {
-      "row_number": 574,
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1VVnFVaWFOaWhjM0lSRnlwNmh1QTFtUU1pRE0tdlVickpscEh3bzBCYnFhNzVHZDM2Qng4QmtKaENaSG1pdkJFZ0h4bXVGaVFsOVpTREF1b19fUHFIb2FtcXJjMXV5RTdCT1RoVk43NFRld9IBckFVX3lxTE1VVnFVaWFOaWhjM0lSRnlwNmh1QTFtUU1pRE0tdlVickpscEh3bzBCYnFhNzVHZDM2Qng4QmtKaENaSG1pdkJFZ0h4bXVGaVFsOVpTREF1b19fUHFIb2FtcXJjMXV5RTdCT1RoVk43NFRldw?oc=5",
       "city": "嘉義縣",
       "title": "南下輔選蔡易餘 賴清德：政府普發1萬 嘉義還會加碼 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/ChiayiCity/breakingnews/5587880",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 574
     },
     {
-      "row_number": 575,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8yUUVablduMUFsZ1VYWmdwaUFSV1ZvMG4tWWlOd3VSaGU2aFBNV0tJcEdITkVHX1gyTzByU045dTNNbGtkel9uLTJJclpWb2xILXVHN2dn?oc=5",
       "city": "臺南市",
       "title": "謝龍介勝安宮拜廟 拋福利政策 | 中華日報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/BEmZJ7w",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 575
     },
     {
-      "row_number": 576,
       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE11TzZJWTh1ZHItTmNwMHl3LWNiYlBhdERqS1FVTlM2NWZWZ0d4eHhwTHZFbmQzSjZGZHJkVlNKS1RLTHR3QUFRYlBDR3o?oc=5",
       "city": "臺南市",
       "title": "謝龍介陪童小芸拜票 勝安宮廟埕宣講福利與成家政策 - 樂上新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news111.com.tw/news/47/13176",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 576
     },
     {
       "row_number": 577,
@@ -1475,13 +1475,13 @@
       "inbox_row": 388
     },
     {
-      "row_number": 579,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9wc0NIbG5KemMzVXhSVXNsaWxVdld0TlVELWJkcURQNmxfd1JtMEllTjR0aDBIRFAwdGhlZzZkWV9iMWlWcTI0Z0ktS3Zpd2ljVjM40gFYQVVfeXFMTktHNkpVRDQyQ3VUTnRsN0FPNWh1VDI0QjZWaVIxT21vWVVaYjhHRUxUWUQ5aERtX21NbTYxR01FWmZTQjU1YjRURWxZN2dRak5feDFwSWV0Mg?oc=5",
       "city": "臺南市",
       "title": "陳亭妃「交通七彩行」AI動畫曝光 四橫三縱、軌道串聯 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9770764",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 579
     },
     {
       "row_number": 580,
@@ -1496,22 +1496,22 @@
       "inbox_row": 391
     },
     {
-      "row_number": 582,
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1vaWR1TWhCOFRCM0gxd1dlXzVEX2V4YTU1ekUwUDNXXzJDcnpEY2hQbUZRUDdGVUZ5RWxtajgtWmVzMVJQVkoxYnlLU1FKdEhpbmNqSkl0QmlmXzNDYXpJLUN3MjhNVVBZblJ2cEd4Zmt5UQ?oc=5",
       "city": "高雄市",
       "title": "搶高雄演唱會經濟柯志恩.賴瑞隆各拋政見較勁- 政治 - news.cts.com.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.cts.com.tw/cts/politics/202609/202609293084057.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 582
     },
     {
-      "row_number": 586,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE15X25yNk9BZmQ2bXQ0UTIyTkQ3ODJjVlNYRklOWGY5ZUJhc096TFh5b210OWdvcWlXWGs3V2d1T29GUWwxd1gxUnk3clI1MkZDTEtJ?oc=5",
       "city": "屏東縣",
       "title": "中秋掃街周春米建國市場問候攤商蘇清泉恆春關注國旅| 縣市長議員選戰| 要聞 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9778004",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 586
     },
     {
       "row_number": 587,
@@ -1550,31 +1550,31 @@
       "inbox_row": 453
     },
     {
-      "row_number": 590,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0zcDRuaVVWMFBXWm1UbkEwYjlVTHJWSlJ1bTJJbG95Tm1pWl9jOWlwZloybzRiOFVaeTVHdkpOV1BsQzdqbC1ZTS1OaXJtT1ZILXBkY1Z1a0pvdFBtYnc3d1RsUGlEUVBPM0IyanJn?oc=5",
       "city": "宜蘭縣",
       "title": "蘇巧慧衝宜蘭輔選！力挺吳亞蓁、林國漳 喊「宜蘭一起贏」 - 中時新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.chinatimes.com/realtimenews/20260922002287-260407",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 590
     },
     {
-      "row_number": 591,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE90eUhSMU1PRlpFWFFiVE93OVAzVHJWbFYtMUFndUFNZkktQ1BqTHdxaEpoSFR5OVYxQmtIM1NKVkdvNl9jRUExalV3?oc=5",
       "city": "花蓮縣",
       "title": "從有機大縣走向幸福台灣 游淑貞簽署「學校午餐升級」承諾 提出在地食育、原民文化與防災備援新構想 - 更生新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.ksnews.com.tw/e/144512",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 591
     },
     {
-      "row_number": 592,
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5UVFBaQkxHLWNEa3EwNGFXX09FSmF1eE9maWNmMHVSd0ZrQ2d1VFk5dGZ0QWVYZ2dWdFRUbGVqRDZDS3hvU3Y3SzZTZFUwUFpobjRfZGxNa1Z5WFFTZUE?oc=5",
       "city": "花蓮縣",
       "title": "「有機大縣走向幸福台灣」游淑貞簽學校午餐升級承諾 推在地食育、原民文化與防災備援 - 上報Up Media",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.upmedia.mg/tw/lifestyle/policy/269925",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 592
     },
     {
       "row_number": 593,
@@ -1589,22 +1589,22 @@
       "inbox_row": 267
     },
     {
-      "row_number": 594,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB1MlhoN0Z0RGczd1JsYmo1emdLYldHQm9fUl9RbnVVWFQ1TFVhV2ZQaEZvekVvcDhDTTBDV0cyTVhYZ29JX3FoM1MwbU5xaXI3V3ByX0RqSlRpS1ZVYjVIRlhFR3RoMTZTWTZGMFRn0gFuQVVfeXFMUHUyWGg3RnREZzN3UmxiajV6Z0tiV0dCb19SX1FudVVYVDVMVWFXZlBoRm96RW9wOENNMENXRzJNWFhnb0lfcWgzUzBtTnFpcjdXcHJfRGpKVGlLVlViNUhGWEVHdGgxNlNZNkYwVGc?oc=5",
       "city": "臺東縣",
       "title": "台東地景「消逝的船」有望不消逝 吳秀華協調爭取保留守住公共藝術 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/Taitung/breakingnews/5589377",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 594
     },
     {
-      "row_number": 596,
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPY2JqS2t1bU1ETnZKcHJYek1MMWE0QjF2WmdxTVlRVEhtVW5wTHlYNHF3S1hkRzVkSzNqXzNOWURIUUpyVW9YOVVMY2dvN1ZzbGw0c1EyWnJ2SHlYNWFOMDlIS09yOHVqZ0F1NlFVMEtFdy1aTFZ5UDhkTWZneWxDbThqanQ?oc=5",
       "city": "澎湖縣",
       "title": "「澎湖媳婦」周春米跨海助選吳淑瑾 鎖定婦女、新住民票喊強化屏澎交流 | Newtalk - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/BEmZWow?view=topic&referral=TOPIC-Election",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 596
     },
     {
       "row_number": 597,
@@ -1619,58 +1619,58 @@
       "inbox_row": 456
     },
     {
-      "row_number": 598,
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBnU2wycEk0WkVOeFUwcFR6ejhLWGhJckZjZ25rc0VMb1JwdjVGNHNrRTVEVF9FRHV1UnZlMnpnYU4yWFZLMERVOEZkeEdycGJQUkFzTmJUaGZyenBtZExz?oc=5",
       "city": "澎湖縣",
       "title": "談澎湖縣長選舉吳淑瑾：有信心最後勝利| 地方 - cna.com.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cna.com.tw/news/aloc/202608180111.aspx",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 598
     },
     {
-      "row_number": 599,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4WWNraHZvbGFjWkdLSDM2QVBlMk11YnI3T1Zhc0U0ajR2VmhlLVlPRTlQN0I5XzY3Q2xneWRNa2RIZDhZOHREZ0FnOXNqVUllUnQ00gFYQVVfeXFMTkZkWUhRZlgzSU5GNjR5N3ZwN0hPX2JQNUthR25Xc0s3clFISTRDdkpVSjc5Z3FuY01YUmdpOVFKLU1fR1B5TElRUGZpQ2QxUjJDWURwLUQwdw?oc=5",
       "city": "澎湖縣",
       "title": "人物側寫／陳振中深耕30年 盼打通穩定回家路 - udn",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9747403",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 599
     },
     {
-      "row_number": 600,
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE8xaEFLRmpVVUNKUFpaRDFFdmpSQldDdWpEYmY2ZDZVc3g1b1dFUHhZSnNJSmZpM3o3YXFicmVYV01fZw?oc=5",
       "city": "金門縣",
       "title": "陳玉珍教師節提八項教育政見 推「敬師三好」打造金門精緻教育 - 墨新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://more-news.tw/730436/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 600
     },
     {
-      "row_number": 601,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1hX2xGVUNlRkttVHRHYVZXSGlDdUoxT0EtSlRmMkU5VG5nLU0zTDhEWjE3Wm45REtKNHhNTXNBZ0pkNDFhMjBfRTI5WFh3RF8tMHc?oc=5",
       "city": "新竹市",
       "title": "振道捐款2萬 支持智障協會暑期照護課程 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260818837870",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 601
     },
     {
-      "row_number": 602,
       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE8xXzhBZkRYenhaWmVHRm5NNGdFTFR3MlhsMGlnRVlBWi02OGtfNGlvV2o4cnppaC1hc1VORlM2aXVhc2ZhOVNR?oc=5",
       "city": "嘉義縣",
       "title": "鹿麻產車站活化獲地域振興獎 - 1658tw.com",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.1658tw.com/?p=196478",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 602
     },
     {
-      "row_number": 603,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KQ3M2UGg1SC1ITmRTNU5LWGhTbExFVzhWNXFnRVpmR3p1V1l5V1RaMk1fcWFrUXgxM2V3Q3MzTVI2aWVVWkFzVkZBTVNOVGVnS0E?oc=5",
       "city": "高雄市",
       "title": "桃市文化資產新篇章 頒發原民文資登錄證書齊心守護泰雅薪火 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260818693281",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 603
     },
     {
       "row_number": 604,
@@ -1685,49 +1685,49 @@
       "inbox_row": 152
     },
     {
-      "row_number": 605,
       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE03OHZBZHVYcm12dnlfUUFiTW1hSlVJeHM4N2NORXY5RzZFZ1FZVVJRMnE1Z1VoTVNuSEIzRFBtZHprM0EzUEd3?oc=5",
       "city": "連江縣",
       "title": "全國古蹟日走讀馬祖26據點 連江縣文化處用心推動 文化保存成果豐碩 - 台灣新聞雲",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://886.news/archives/362496",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 605
     },
     {
-      "row_number": 684,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBFNjU0ZFdBMTNHdkktNVBaUk4wZE82TDRZdDZOMUVaOVVqYkNzV2dyS1RkOU93WnYxSUVZMGlGeGRLOE9MQlFfejl4akhRNzc0anc4WWJnVkTSAV5BVV95cUxOSUJ4a085eHV4S1lTUUR1UW95cHo2VmhiSENmRVktWmJKN2VIcDFPRGxIaXUyb2htakZ6aE9VeTRZcWhzWFp5OHV0MEpZN2lwWFRvdExxM2Nwc28wNUF3?oc=5",
       "city": "臺北市",
       "title": "蔣悄改學歷被抓包？　巧川「文化政策」交鋒2／修改立院學歷掀爭議　蔣萬安：自己提供的資料正確 - 鏡新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.mnews.tw/story/20260926sot1820001",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 684
     },
     {
-      "row_number": 685,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKQ3laOFRvd0poZmsyQ0p2dGhXd21uUFdCeThPY2tkaXBZeldzeU9WbjJRcDRfdUUzajZJc3hQQm1pR08yNkNodTFRQ0ZhbW1lQlE?oc=5",
       "city": "新北市",
       "title": "李四川拋三大性平政見 育嬰留停薪資補足100% - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20261003324126",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 685
     },
     {
-      "row_number": 686,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBvWXZmN21iWS1ra1VjdGk3MTNCRVhVN3IxbExCRml4X3hIOW52c2tldWtCVmNjdUszb2VmM1RKTmRfLVhhdHJId3BkV3dweFNNaENzWktyaHpxb3poZWRnaDMwZ3V0TG9hNWfSAW9BVV95cUxObUZlc3Q4VEJJYmtJVHIxR1dMY2RIa292UkVWOTFfWVJqU1Naai1tV2V2VUtJT3ZfUzJNSkxxLWdTUEloOW5vcmJuZDFOb2hSbzk4ZTNzaUJIZnVtczQ0SUo4MUtPVkwzcmFYOTRtUmM?oc=5",
       "city": "新竹市",
       "title": "莊競程鄭朝方合體 5千人擠爆關埔「神火百藝」 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5593744",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 686
     },
     {
-      "row_number": 687,
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1aSWV1SEFKRzItdHdKRDZHN1pLby1SR042Q0tZaXVwOFJuYmVJYVdRRFZSTlV1NjlSNXFla0dKNFZEZWt0amszM21MOU5HM0xwSjByZGhMUUxaWlViQW1wZtIBYEFVX3lxTE1aSWV1SEFKRzItdHdKRDZHN1pLby1SR042Q0tZaXVwOFJuYmVJYVdRRFZSTlV1NjlSNXFla0dKNFZEZWt0amszM21MOU5HM0xwSjByZGhMUUxaWlViQW1wZg?oc=5",
       "city": "南投縣",
       "title": "温世政提帶狀疱疹疫苗補助 投縣府研擬弱勢優先 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/life/paper/1773074",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 687
     },
     {
       "row_number": 688,
@@ -1742,13 +1742,13 @@
       "inbox_row": 366
     },
     {
-      "row_number": 690,
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9zeUdhaUNrVnh6bE1QLVhZTHplRWxfWE1oRjM5dVNlZ0tHbURCUTFEaEEyclBVWmdUTl9keEtzTjQ4ZWpOTHBiUWRVQjNKSjllbHZGbm4yTkZxc2ZtZzY0?oc=5",
       "city": "新北市",
       "title": "蘇巧慧盼看守所遷移後打造複合式國際運動藝文中心| 地方 - 中央社 CNA",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cna.com.tw/news/aloc/202610030096.aspx",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 690
     },
     {
       "row_number": 691,
@@ -1763,22 +1763,22 @@
       "inbox_row": 566
     },
     {
-      "row_number": 693,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1oNHZJMFlkbDRzejRKMWFKdDVZeEFXSDRXRllpLWRxR0tiQlhxQWtkZkppRUNvSm9IYVZYS0tkTHVULUFTdGNLaXRhaHNheWVzLWc?oc=5",
       "city": "新北市",
       "title": "客家後援會成立 李四川：效法硬頸精神全力拚 - 中華新聞雲",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cdns.com.tw/articles/1469368",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 693
     },
     {
-      "row_number": 694,
       "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOajA3bGNsa2dmUllmVkt4Q0ZLWE5ua0lLLTAwRGtEQ3luLVQ0WmtXTDhxbzEtdFl1aFIzZmw0X09RWThiUEFFWGwtY3dhdDFlMjc4U3J1RWtpZWdMRk85WnhHVGpfdktldmZlZlNNTFo4WndtbWlXQlpRYi1ibndxQm1vNERTbVpuNTZLMnVkX2xuVVQtNmctUWpXeXRvX2RlWExYMlZsTzNVWkU2SUhaZlRrbENkanlfQ3lfOVo5R3U2Q2NhN2d6VWtPVWZRaUdLdnNsNUlrcmtkVXdYeWFROTRhU3RKWlQyUDBWVHpfN1R3Z1pVOEJZZ0tWQUtYUmpiZlJGSlpMYWJoUzU2d3podmR0blpYVDJERkdUZ2lza19XWlg2Y0V4NGN3ZnRkakZQWktfd0djbDk2TzdWcU4tSmRkRDdudw?oc=5",
       "city": "新北市",
       "title": "李四川提客家政見 允優化客語教育師資環境 (圖) - Yahoo新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://tw.news.yahoo.com/%E6%9D%8E%E5%9B%9B%E5%B7%9D%E6%8F%90%E5%AE%A2%E5%AE%B6%E6%94%BF%E8%A6%8B-%E5%85%81%E5%84%AA%E5%8C%96%E5%AE%A2%E8%AA%9E%E6%95%99%E8%82%B2%E5%B8%AB%E8%B3%87%E7%92%B0%E5%A2%83-%E5%9C%96-122859033.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 694
     },
     {
       "row_number": 695,
@@ -1793,13 +1793,13 @@
       "inbox_row": 334
     },
     {
-      "row_number": 696,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE81R2duMXVwS3JiUHN1c09UUV9rUVBub2FYRFVNejhuNEItREdzdWxIWDZxcm9zbXRHWHR6MXd0UzdOb3RHUjlNaF85X0IyWkQ5R1FnTU03THI?oc=5",
       "city": "新竹市",
       "title": "關埔湧5千人看火舞！莊競程吞火合體鄭朝方喊大新竹藝文接力| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9792452",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 696
     },
     {
       "row_number": 697,
@@ -1814,22 +1814,22 @@
       "inbox_row": 346
     },
     {
-      "row_number": 698,
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5SZUQ2Mk4zMlBBLWhvWmtXMmZVVXZPekNNOUhQQjRpSnlpUE56LVhfN2xjMWRYcmk4V243b3BfWk8zSWVxdW9nR0xpRWJnc3R2eEoyd3YtMzVKb0hDZjA0?oc=5",
       "city": "苗栗縣",
       "title": "鍾東錦拚連任苗栗縣長成立競總鄭麗文、柯文哲力挺| 政治 - 中央社 CNA",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.cna.com.tw/news/aipl/202609130197.aspx",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 698
     },
     {
-      "row_number": 699,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1HdVdoTUtQekY3bl91S1UtOGVaeVQzZU1jeGN6bEVWdkNEdXZuSklYQzdQZHZwN2VqaVRHTHZsczZZbXdHV2hhRUVLdTBQNEY1MEJqcVRKS3E?oc=5",
       "city": "臺中市",
       "title": "影／江啟臣提出客家文化五大政見爭取客家票源| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9758267",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 699
     },
     {
       "row_number": 700,
@@ -1844,31 +1844,31 @@
       "inbox_row": 368
     },
     {
-      "row_number": 701,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9nOHdQWEpBVTFES3BONUxPVzBMSDlJSnBUZk5CQWJlamRPclhnU2I5UmYzdkZ3WkxaZldNeU1DUWpfQnlHRnNlSVRvcmlaVkZkb0E?oc=5",
       "city": "雲林縣",
       "title": "雲林動漫影展拚國際 張嘉郡提文化、青年、產學合作發展方向 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20261004853635",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 701
     },
     {
-      "row_number": 702,
       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBKRktMeE5kaFhaUF8yWlNHbnlrYjNZOXk5d0J2N0hxZHdtNkU3ZzFDY3JFREtZYnRnUUF3XzhVNXlGVkZLRzlGUExPTVBEUQ?oc=5",
       "city": "雲林縣",
       "title": "西螺競選總部今成立張嘉郡、蕭德恕端地方建設政見– 地方 - 創新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://pronews.tw/2026/10/01/316578/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 702
     },
     {
-      "row_number": 703,
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYjByZ08xNnNZeTZzRnFlUWFGTXlkbXd3VFFJSVpXdEpmc0hSUEllYXVTNVp4cE40RGxLMkhPcHBHT19TUWRUYTcwdEVxWVZTQ0VyQlZjYlFnWmRvUEtDVHAtc3pwN0FNS0pIaHV2ZVE2V0owdVNsbExIQXJNV1V3TFdNemVZNVgtZ0FJ?oc=5",
       "city": "嘉義市",
       "title": "接棒施政對決全齡照顧王美惠張啓楷角逐嘉義市長- 社會新聞 - PChome Online新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pchome.com.tw/society/news586/20260902/index-78835354467633290002.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 703
     },
     {
       "row_number": 704,
@@ -1883,40 +1883,40 @@
       "inbox_row": 629
     },
     {
-      "row_number": 705,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5ZVUdyb1JYYWw0QUVSMlBTVnhOZDR6MElTNFljeG9OTGVPM2JFU2xGV1drZXJKeHFSQnZsQ1NqZGhQeUU1QWpha2ttNTN6SDFtQ3ZmRE9wcFVKeEtILVJvQnh6b2F5NGFqUmc?oc=5",
       "city": "嘉義市",
       "title": "深耕嘉義落實「好生活」！王美惠：爭取逾十億經費要做全民市長- 政治 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/politics/breakingnews/5549622",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 705
     },
     {
-      "row_number": 706,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1KMkRCOFlWZHRSVUNJRE5RdWI2UGlHbjQyMnVlUFk2aW1vc1RJU01mZnM4ZkZzVWVxM29OVW5KT19BUldWNXZnX0pzdjhlQ0xRWXZz0gFYQVVfeXFMT0dxWXRiUDFtMXBVQmFuUGlWVmY1bTdMMXFFVFZqY2FlVzRPTmFWUnBpLUVRS3JVUVpPeG1JTHBhbWFPNzlsa1FlOXRWMmhraHdBN1l6VjFDTw?oc=5",
       "city": "嘉義縣",
       "title": "蔡易餘、王如經聯合競總成立 端政策拚嘉義「黃金10年」 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9780376",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 706
     },
     {
-      "row_number": 707,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81TkxRRlBTNGdiLVFxYTZldzRhT012RVoxMldFVUR3bmxpbl83WGxRaTJrQU9MR21FTHNQNjNEQ2JraUtlcmpYZXRCRmViVFhLazZjZktCT21zd1JUS0Y2UkQtU2JRekJhd1hCVzgzc9IBb0FVX3lxTE81TkxRRlBTNGdiLVFxYTZldzRhT012RVoxMldFVUR3bmxpbl83WGxRaTJrQU9MR21FTHNQNjNEQ2JraUtlcmpYZXRCRmViVFhLazZjZktCT21zd1JUS0Y2UkQtU2JRekJhd1hCVzgzcw?oc=5",
       "city": "臺南市",
       "title": "陳亭妃新住民後援會成立 蕭美琴：台灣與世界連結需要大家努力 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5594383",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 707
     },
     {
-      "row_number": 708,
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPbjhxTXZ6NjU2LWZQM1BTLXl2U3NRZF9RQW9Xb1NKeUg2dWh0M2ZvTmNmMEpwUWtKal9qckx3dFdZZElYUTlGeHl1VTdxNHAwbWJXZXAxU0JZLXpaUlU4b3B2NTVFQ3ptR1FOa09fRFBqcjFoR0lFWTEyZmZIbDBrNEFyd0E?oc=5",
       "city": "宜蘭縣",
       "title": "藍營掛看板咬派系！林國漳批非君子 吳宗憲自嘆遭抹黑半年 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/Nv56wQ1?view=topic&referral=TOPIC-Election",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 708
     },
     {
       "row_number": 709,
@@ -1955,22 +1955,22 @@
       "inbox_row": 416
     },
     {
-      "row_number": 714,
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPa2IzYU9Kek5DUGE4bVBNM0xuZFlkZlNQcUgyelNad0IxNXRDdEVUMUdFNkt4WGZyWHM2WDI1Ni1WbGlkcExBSjdhOTg3Wmo5WkpEMXhOaEpzeVdNSnpBMjBYMktqcmhvV2tab3JCVjNyeWpEODJQWkRyQ0J1RFNoUw?oc=5",
       "city": "桃園市",
       "title": "北中南文資團體齊聚│籲強化保存審議與跨部會協調 - 視傳媒",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://nvns.net/news_view.php?new_sn=143298&new_csn=1467%C3%A6%CB%9C%C2%AF",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 714
     },
     {
-      "row_number": 715,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5PcHljN0oxYWI3VDB2aTRhT2hrSzNEbXdlRVF4ZHBkWEV1MWpsNDlnZ1hUX2F4blVTUHBxdm45bEpJb0ZLR2x2ODR4cGtleklHa0E?oc=5",
       "city": "新竹縣",
       "title": "推動濱海永續觀光！ 竹縣新豐健走登場 逾600人走訪百年石滬 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20260913501413",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 715
     },
     {
       "row_number": 716,
@@ -1997,31 +1997,31 @@
       "inbox_row": 120
     },
     {
-      "row_number": 718,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1aTmFiY3lZTnBmMm91S0pXOE9PVXBWWi1uYncwa1hPZ09ZeVBHbndnbXFUenpkVzBEQ0I2eF9GeU9jRUVOOFBvNjlOcmRsRzQ?oc=5",
       "city": "宜蘭縣",
       "title": "舊蘭陽鐵公路橋遭廢除文資身分 文化部指程序有違失 - 你的公共電視",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pts.org.tw/article/765371",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 718
     },
     {
-      "row_number": 719,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAzek1nSzVDWkNaQzRGekZZWEc2alVCVS1uOWRaY0pKd3U0SUFzY2ZRejY5Z3JtdU40RGk5dlg0SWFvQWR3SFMwMGp3X0xzdUE?oc=5",
       "city": "宜蘭縣",
       "title": "宜蘭頭城搶孤今登場 12隊選手競技拚奪冠 - 你的公共電視",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pts.org.tw/article/656843",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 719
     },
     {
-      "row_number": 720,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1FQzJxLXZhcWhMaFlTN1NQTndRTno0VzlXU20zQzU0Rk9nMnVZOVRsVk9aSjhTRGRlM2czNnYyam9nU2xucmt2dGN2VXBYa1E?oc=5",
       "city": "宜蘭縣",
       "title": "宜蘭礁溪二龍競渡傳承227年 船身無龍頭、不划輸贏 - 你的公共電視",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pts.org.tw/article/752019",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 720
     },
     {
       "row_number": 721,
@@ -2048,22 +2048,22 @@
       "inbox_row": 140
     },
     {
-      "row_number": 723,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QdDJwYVJKOGU0eVhwVVJIVlQ0cnc5Y0Q5aC14TjBHSFhsZnhHVjNvd2ROenN2akNJbEtZcjktaEdKTHpHYVlnRnBxTzJ4NUE?oc=5",
       "city": "雲林縣",
       "title": "雲林「五湖四海宴」展現傳統工藝之美 - 你的公共電視",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pts.org.tw/article/446126",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 723
     },
     {
-      "row_number": 724,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1PMEkxRnZXU1d3cW94VlVyTk92WmphWEhwM2NqbXNSNXVyczdVWXRxbmFhVGdycjJEQllQV0o3VUVCZm9ZWTI4cEpCVTJiOVU?oc=5",
       "city": "宜蘭縣",
       "title": "陳土金醫師宅兼容台日洋風格 宜縣府擬異地重建引文化界不滿 - 你的公共電視",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pts.org.tw/article/695538",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 724
     },
     {
       "row_number": 725,
@@ -2090,31 +2090,31 @@
       "inbox_row": 308
     },
     {
-      "row_number": 743,
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQTjFRa2lqdDYyUDRLdkpBaW51QlhhdXFSeTAtMTRvV1djXzMyOXNybW0xV2s1ckpwUGVHWTlGbnhoUDdSMnVEbmpzMTRlT0xJWWtuSVAyRUphQnhaX0JLd2dHcE1wNGxtRjM5QzU4UkJuaW15R01BWHNrX0ZUQUdINDMxY18?oc=5",
       "city": "臺北市",
       "title": "肥皂箱的勝算！沈伯洋：不斷講政見、傳遞正向選舉文化 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/vXLpJeQ?view=topic&referral=TOPIC-Election",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 987
     },
     {
-      "row_number": 744,
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDb1pxUzJ2UjJkbnJGYjBPY0puYlN2QlVKb2VjSy1NZGlBVTIwNDNNeG10ZXJDc3NvdUtxT01NcFplbWdnMlZkZmVuZktTMzVycUlDdEZrN1c3dXM?oc=5",
       "city": "臺北市",
       "title": "沈伯洋捷運站發《順報》盼讓民眾更了解台北 6條跑者秘徑、12步道全公開 - 上報Up Media",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.upmedia.mg/tw/focus/politics/270670",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 988
     },
     {
-      "row_number": 745,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE42WGxBdXdZd0wyVkN6ZmlPRmFmaFkxMkZObG50VHlOdndESTVDLXgweU1KUEtHUU1uT041cHBuNG8xVEZWMFlyWkthZFhwZVBjcVE?oc=5",
       "city": "臺北市",
       "title": "《順報》是什麼？沈伯洋私房跑者秘徑曝光 細數35處文化徑找回台北老故事 - 鏡報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.mirrordaily.news/story/89880",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 989
     },
     {
       "row_number": 746,
@@ -2141,31 +2141,31 @@
       "inbox_row": 438
     },
     {
-      "row_number": 748,
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE10bmR1QmlpREJhTjc4bHdKdU5fVUVpS1A0WDlsQ24tZXBQcXdldG0yT0VxN0JZMTRpSUI0ZkRYLTJZUWg3UlFTMTdrZE4tb1pqanh0alZoRUpRNTM5c1JRdW5jRG1IQdIBZkFVX3lxTE10bmR1QmlpREJhTjc4bHdKdU5fVUVpS1A0WDlsQ24tZXBQcXdldG0yT0VxN0JZMTRpSUI0ZkRYLTJZUWg3UlFTMTdrZE4tb1pqanh0alZoRUpRNTM5c1JRdW5jRG1IQQ?oc=5",
       "city": "新北市",
       "title": "蘇巧慧提友善寵物政見 李四川推交通建設 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/paper/1773829",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 992
     },
     {
-      "row_number": 749,
       "url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxQbjdDRmR0WGdfTEI0SzVwcjRLWmJMSVpKeUZoNnlBTlNxb1dfeWhFdEo3ZHlyYVpwQXZLMU5kTmVZdGIyQ01DREUwUTV1RFhmbnU0V0dDa0ktaWFibDhHYTRvZExpZXFobFM0clFhUFdYRldXMEJ0Nk1vYmQ0cWI1N1dEb3pDUGtkLWRuZVNrRm8zblAxWG55OG15VmpIdXM5ek15UzV2R0FNc084MTQ1WllETFAtSUMxSHFCNWlkVnp4ZS1pU1dSalVGM25vSkF3aldXUUszdm5Eb0Q5LW9ldEUzbTlNOWFEZk9kQVktRGEwQVpjUWxwNVZpT2U5dENDNmpxQ05WMmcwSFNoYndMOEE1VkRxcVhVZnpOX3l0UnJpbjUxeFBmMWVPMlpsUG9xd3FNb1BURkVZMHlKTjIyeGxBNktjQkpkOVFGODdleEtjSWRTS1NuOTU3c2F1bE5iT0U0Y1JRcUk0a2xyeXZ5RjF1OV9wVEJCNV81V2lLRGRsUQ?oc=5",
       "city": "新北市",
       "title": "新莊慈祐宮建廟340周年 李四川承諾推動地方建設助產業升級 - 台灣好新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.taiwanhot.net/news/1150490/%E6%96%B0%E8%8E%8A%E6%85%88%E7%A5%90%E5%AE%AE%E5%BB%BA%E5%BB%9F340%E5%91%A8%E5%B9%B4+%E6%9D%8E%E5%9B%9B%E5%B7%9D%E6%89%BF%E8%AB%BE%E6%8E%A8%E5%8B%95%E5%9C%B0%E6%96%B9%E5%BB%BA%E8%A8%AD%E5%8A%A9%E7%94%A2%E6%A5%AD%E5%8D%87%E7%B4%9A",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 993
     },
     {
-      "row_number": 750,
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBncm1NZUVNRXVGd1dFVkNqYlAyRzdVeEpLV2RyQzJ5SkU0Q0pWbFJPZE1fOHFFYWhxX1l6alNCdXNJNlFYcUJBOWllcw?oc=5",
       "city": "新北市",
       "title": "新莊慈祐宮建廟340周年 李四川赴感恩餐會承諾推動在地三大建設 - FTNN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.ftnn.com.tw/news/585680",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 994
     },
     {
       "row_number": 751,
@@ -2192,22 +2192,22 @@
       "inbox_row": 329
     },
     {
-      "row_number": 753,
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5qYVFwWjJGY2RKODlUWjZtWGhOYmtnbjh0TWZUUlJXWElFaDZycXhYQnhBUGxkNEpQOVN4ZkpxbC1oc1N4NndEclZzR2tlR051VHd1QndHMUppNU5QUk5yTnVtNWFqcktyTmfSAWpBVV95cUxOamFRcFoyRmNkSjg5VFo2bVhoTmJrZ244dE1mVFJSV1hJRWg2cnF4WEJ4QVBsZDRKUDlTeGZKcWwtaHNTeDZ3RHJWc0drZUdOdVR3dUJ3RzFKaTVOUFJOck51bTVhanJLck5n?oc=5",
       "city": "新竹市",
       "title": "《論壇獨缺高虹安》莊競程提4政策 把青年留在新竹 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/HsinchuCity/paper/1773715",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 997
     },
     {
-      "row_number": 754,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9qRFF0MkxXMk9WcElseHQzWVZyZ1Q1bEdBZkxjMzFhUnBubEFXbnd6Q0FoT2dOVjlfMHVsQ1FqMVNjV1JDbF9HNXY0WFBNNXkwUXNNanFPOU95TjdyUjJRLTlTTGdrTU5jaklfaWx3?oc=5",
       "city": "新竹縣",
       "title": "鄭朝方推竹北F4參選團隊盼跨領域人才投入政治- 地方 - 華視新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.cts.com.tw/cna/local/202610/202610093088051.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 998
     },
     {
       "row_number": 755,
@@ -2222,13 +2222,13 @@
       "inbox_row": 339
     },
     {
-      "row_number": 756,
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUXRUdjIzNHBYaFRveF90S3MtNVRHa01iV0Z4X0gxZS0xaC1HX3NzNlpKbElWVGVpeXc0V2RfcnA3ZWhNeExmcU1RWkhUZGthbnhjM1R4NjhZdDNnYzZxcE0yYnVJcVNBZDRHU2ZKNlhYaGRtLXpwVk4zbGN3V2EzQi1iRW53UFE4Vkk5RVNqa2N4SHowZ08zd2M0SHFwcUJZWFlMZWcySHdhQVdUb2FxZ1lMQV9zaWxYazNqb1UzQ2Y?oc=5",
       "city": "新竹縣",
       "title": "鄭朝方提藝文政策 (圖) - Yahoo新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://tw.news.yahoo.com/%E9%84%AD%E6%9C%9D%E6%96%B9%E6%8F%90%E8%97%9D%E6%96%87%E6%94%BF%E7%AD%96-%E5%9C%96-040919510.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1000
     },
     {
       "row_number": 757,
@@ -2291,40 +2291,40 @@
       "inbox_row": 354
     },
     {
-      "row_number": 762,
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5yNW5BNGxFcUxzaGliQ2RNeVBPenZSdGNKRTlHXy1HbWVtczZLWncweEZPaHVaV0FXUVRXRHN6SmEweGdyVk5OdWtWZHRLakZfNV9FelZpRWg4YnPSAWBBVV95cUxQUkNfRlZLZWdVRVFKSjlWcURlR21QT2tVNmo4MTllT3dHWWo1Q29YU3NNV3B2WDdhN1J2dXZ1LXhmWDFvWWt0RXlWVVY2am95dFhYYTVsSVdZVjlFcUx6UHk?oc=5",
       "city": "彰化縣",
       "title": "陳素月提6文化加速對策 藝文界相挺 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/news/life/paper/1773341",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1006
     },
     {
-      "row_number": 763,
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1LZ3hUN21UcWp4MlZ4WkZXeXE3aWVLVFlFZXI3ZUJoU0p5RXpVTDNRNUgxYTJ5d2ZwU3ZnN2hRSkxwSEFkOVgwZUZVWVppMU9iX3NxVzNob3VPYWM2SFZ3TEtwNkU2Z092bW9FaEJR?oc=5",
       "city": "彰化縣",
       "title": "7年前彰化放棄不辦 陳素月承諾當選爭取舉辦台灣燈會 - 中時新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.chinatimes.com/realtimenews/20261004002019-260407",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1007
     },
     {
-      "row_number": 764,
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kaGU4V2MyRkxYODdFT1pDdVl5Ym1WMkJxMHFyR2hmSjJUa2JZd1p1RGR6RExBVWRwVTViWlBTMmpwSU5RRFVObFBlMEVpTmtvX3RtUUNFMzFLYVRYRzI3VWNvVXh0U3BfeVVEdtIBbEFVX3lxTE9kaGU4V2MyRkxYODdFT1pDdVl5Ym1WMkJxMHFyR2hmSjJUa2JZd1p1RGR6RExBVWRwVTViWlBTMmpwSU5RRFVObFBlMEVpTmtvX3RtUUNFMzFLYVRYRzI3VWNvVXh0U3BfeVVEdg?oc=5",
       "city": "南投縣",
       "title": "強碰柯P、縣長許淑華！温世政提「雞尾酒療法」垃圾去化多贏方案 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/Nantou/breakingnews/5600262",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1008
     },
     {
-      "row_number": 765,
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1mNU1VUVVhN0dBY0loR1RxVkpQR09IZDU3UXdGUVhoRkQtbUdKTW03SXVQS0RocHdKb2Qyc0dVdm9PdkFpZTF4M3hRSy1KdnpLNzRlV0h3?oc=5",
       "city": "南投縣",
       "title": "複製花193經驗？蕭美琴温世政同訪投139縣道推低碳旅遊 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/mWpPQ6e",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1009
     },
     {
       "row_number": 766,
@@ -2339,31 +2339,31 @@
       "inbox_row": 371
     },
     {
-      "row_number": 767,
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5DMnVHNlVINVJva2VFeldVTERoZGd4aTFFcDdJNFp1MWh6dDZYX2tJaTJSY2xTNElUWjh5VElKcXdZRFZkQXA1dmZONC1qVnlOcXpyZlJpcVpZYnNSRktlU3h0NkY1NGFC?oc=5",
       "city": "雲林縣",
       "title": "劉建國拋教育大紅包！教師行政4年砍半 國小課照、午餐喊免費 - 元丰傳媒",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://yuanfengmedia.tw/detail.php?type=lastest&id=61681",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1011
     },
     {
-      "row_number": 768,
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4yTXdER3dkQWQzMG5wdXowNEFzYlBTR3p0a3pYb0Q0SzVFOTlnRW12VWVsOWZIaW8xOUhZQWUtZ1JlcTVUeGtscDBSY1ZsUVNJaVpyMXUtZw?oc=5",
       "city": "雲林縣",
       "title": "劉建國四湖、崙背競總成立 拋AI農業與高齡照護政策 - 觀傳媒",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.watchmedia01.com/archives/555884",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1012
     },
     {
-      "row_number": 769,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4yYUludnBBNkFLb012RE9CNXdsYTdlRUN0T3Zmb0lRVlg4RHZva1ZkYlNQTmF1RmlJZUxzbm41M1hJQUg3LVJqTjRRWTVUYjNBNDRFaS1uWjl6Q09sNlp1RXhyNUUxaGNjc1phOXo2WdIBb0FVX3lxTE4yYUludnBBNkFLb012RE9CNXdsYTdlRUN0T3Zmb0lRVlg4RHZva1ZkYlNQTmF1RmlJZUxzbm41M1hJQUg3LVJqTjRRWTVUYjNBNDRFaS1uWjl6Q09sNlp1RXhyNUUxaGNjc1phOXo2WQ?oc=5",
       "city": "嘉義市",
       "title": "張啓楷推四大政見 主打壯世代福利與就業 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5599843",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1013
     },
     {
       "row_number": 770,
@@ -2426,13 +2426,13 @@
       "inbox_row": 450
     },
     {
-      "row_number": 775,
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOdmFSLVdZalVmam1wRFVoUVhxZ0gxMHJZVmdGN1dTTjBkX2pvWmpHX1lQdmRGQmYzajRsWUFBRTJJMTdUWXpfWDNpbUppb1dyb3U2ZFh4ald6VVUzNlJkbEF5TzVKbHZJTDhSbWxCYUFFS0NjOTV2M0xDaFZEWVA2LVJ2MA?oc=5",
       "city": "高雄市",
       "title": "賴瑞隆專訪2｜政壇模範生「沒記憶點」 提升自己！賴瑞隆：走出自己的路 - 壹蘋新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.nextapple.com/politics/20261008/1191C52D69BD036275447719F01D61D5",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1019
     },
     {
       "row_number": 776,
@@ -2447,13 +2447,13 @@
       "inbox_row": 400
     },
     {
-      "row_number": 777,
       "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9FcDlaT05MZVZpSDJ6UjY3QjBvM3lodS1qRTVyaHlYMHIxU1RaZkE4eHBTS2FZbHhJbEFqeU1IdUM?oc=5",
       "city": "高雄市",
       "title": "好物組合｜加倍相挺 - OEN 應援科技",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://zenolai.oen.tw/good",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1021
     },
     {
       "row_number": 778,
@@ -2492,13 +2492,13 @@
       "inbox_row": 409
     },
     {
-      "row_number": 781,
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE0yLXh6dF9MMXBrd2FJbVNVVGlieURwQ3pYemNLY3psVHpzWmhJX2R6RGxIdlY4LUFzVzNhTUktaUFrTlktRnM3S0Rn?oc=5",
       "city": "宜蘭縣",
       "title": "林國漳羅東掃街提「翻新市鎮、升級交通」 願景黃適超聚焦生活機能提升 - 匯流新聞網",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://cnews.com.tw/250261006a03/",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1025
     },
     {
       "row_number": 782,
@@ -2513,13 +2513,13 @@
       "inbox_row": 422
     },
     {
-      "row_number": 783,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBrVVJkNDhUQVBjaUhNZ284TGs3QW8wenBjVG9rNmVVV1VQcXhXOVVqc3Z6c01sZzV1aGRXS0dEN3hwTUFHaWM2d25uUnFyUE5tcEE?oc=5",
       "city": "臺東縣",
       "title": "吳秀華出席台東農業推廣展 承諾整合各路產業成農友後盾 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20261007233330",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1027
     },
     {
       "row_number": 784,
@@ -2582,49 +2582,49 @@
       "inbox_row": 432
     },
     {
-      "row_number": 789,
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE42LTNERHdLUUd6MU1aMy1OZWdEMW1sLTNGcWhsWUdfMTJrcGNfaUxrcjBhcGUtdWpwOTM2WXdLVS1EdjFScTBzQ1NQclVHcW8?oc=5",
       "city": "雲林縣",
       "title": "笨港如性振玄堂八家將 雲林共列做無形文資 - 你的公共電視",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pts.org.tw/article/689526",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1033
     },
     {
-      "row_number": 790,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBlVmZZSG9qQVZ0NTRtTnpyR29VVTNLdkQzLUt6RlBxbXJtMGJxUk43ZWJsbU5HWlBCU3B6aHhra05neWNZMGswUFJaS1IyQ1pONVE?oc=5",
       "city": "臺東縣",
       "title": "金峰鄉衛生所獲第16屆金所獎佳作 全國首批導入VLR機制 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20261009946391",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1034
     },
     {
-      "row_number": 791,
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9iMDVfU1E5X1dSN0xqTGFTUUpwOGlqSVdzdXBWWGhIcTJpUF9RREFuZjZZeDFHcEN1RkRvc3lhWHZJdmJydkNBbHBOWDFpbHl1M2lnM05BaUVfLUk5Q212X2VLQzg5NFBxQWFYZnBsNFY?oc=5",
       "city": "連江縣",
       "title": "傳承金門傳統傀儡戲 嘉禮風華-校園巡演連江縣5校 - 大成報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://greatnews.com.tw/news_pagein.php?iType=1003&n_id=314971",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1035
     },
     {
-      "row_number": 792,
       "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQOTg1eXBhTkVORU9qSjJjUVEyOGhYNGdSdXZUd0Rvejl4blZxRmJGTFE2LU1YMEZ6ZmoyODF6c0JiWktTZVMxamRxdGhlN1NGY1ZxYTNNdXJIV0dFcllEa1dsbVkxZUdYS25IZi10aXRNbjRyblRGU3h3bzBsbWtpWTlpdmpIREtTaS1pNXczLUs0WUxKOHpQcDRsZG1ta2EtSGpmT0VONGY4VU54eUxUQkdvbmV3OEpjWXlfVTlYVTN4RjQxRE16akVjX29MZmM2VWhMczlhNnh4blliaHlJZVVEYjlqN0ZMdV9DYjRZZWtGaDljRnRjYWhGeG1ycVI1TGMyZjNnZEFXQnVPRGloeDRLdWZmc0U?oc=5",
       "city": "桃園市",
       "title": "客庄「無共樣」 黃世杰4政見打造客家願景 - Yahoo新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://tw.news.yahoo.com/%E5%AE%A2%E5%BA%84-%E7%84%A1%E5%85%B1%E6%A8%A3-%E9%BB%83%E4%B8%96%E6%9D%B04%E6%94%BF%E8%A6%8B%E6%89%93%E9%80%A0%E5%AE%A2%E5%AE%B6%E9%A1%98%E6%99%AF-213000808.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1036
     },
     {
-      "row_number": 793,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0wYTRNSFYyS3lrYzFPaG9MdjlxamdtZWU3VFdvVEZfTVdxWjh0X0p2eENLMjlVeGN0QlQtMVdMNkVOOWpfTl9kclJ1SDhqNG01Q01wcHA1QVU?oc=5",
       "city": "新竹市",
       "title": "莊競程喊政見公開檢驗高虹安競辦反擊：7成滿意度就是成績單| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9778893",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1037
     },
     {
       "row_number": 794,
@@ -2699,34 +2699,31 @@
       "inbox_row": 384
     },
     {
-      "row_number": 800,
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE01SG5KZXp2b1JrTUZEZTBnb1ctSDZRSUFsODZibHo3VDJTby1nT1N4eDVhaVlQQklKNDV4dmN0Wk82bzdTUGxIYmtkOTdFSzJwQWtz?oc=5",
       "city": "宜蘭縣",
       "title": "宜蘭選戰…林國漳羅東拜票傾聽心聲吳宗憲宣布媽祖文化節發壓轎金| 縣市長議員選戰| 要聞 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/news/story/124652/9783521",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1044
     },
     {
-      "row_number": 801,
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQ1hRMDdHVHU0VEp0TzlGSV9zUlZ5RkZFZk8yN0h0Y3Y0MzdRMnlTTEtqXzdGeF9LRzVENmFlQzJ2UFBLT0pDVExTM2cwWllQX0lMUmdvNlpndHczM2Rvd0dBZzNEMmNNdEd0MHptTkphNkRmUThBN0JTVF82dEpqZENsQmw?oc=5",
       "city": "澎湖縣",
       "title": "蔣萬安拋遷建松機 藍營澎湖縣長參選人「堅決反對」原因曝 | 太報 - LINE TODAY",
       "new_url": "",
       "method": "failed",
       "error": "redirect: HTTP 最終網址仍是 Google News；base64: base64 內容沒有明文網址；batchexecute: 回應中沒有原始新聞網址",
-      "match_method": "city_title",
-      "inbox_file": "candidate_sources.csv",
-      "inbox_row": 487
+      "row_number": 1045
     },
     {
-      "row_number": 803,
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPVVFXS0dpYmJaMjZ4WTVWaW8yamk1UDNBbnpJU3o4NDFVdjQtRzJTWnB1V2EtSUEyZ0pKU2F0ZS1HekRIMkxxS2dqWERud0s0dWk0cVo4MjR6SnVOVFRnUzZvY3ZrRUJGUTZadkZQNm1tZzI4TzBrTmFwSTR4ZFdDZ3B4Tmk4VUE?oc=5",
       "city": "新北市",
       "title": "三大長照政見 - chiao.tw",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://chiao.tw/policies/%E4%B8%89%E5%A4%A7%E9%95%B7%E7%85%A7%E6%94%BF%E8%A6%8B",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1047
     },
     {
       "row_number": 804,
@@ -2741,22 +2738,22 @@
       "inbox_row": 326
     },
     {
-      "row_number": 805,
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWFRQdTFJSk1WZVJ4TG5DTEpFaFRibnhMM0Z6a1cyRUJBX0pGQW83UlpKWlJkd2pSOVRTNy1WcF9QR3VoejRmQk50aTBkRGFhdUtwY3dONHJLYzU4XzYxTElTVUI5cVpQU0hBN2ktdm45aUU3cGNrTjNqYjZSbHhCOVNSLUU?oc=5",
       "city": "新北市",
       "title": "出席新莊原住民歲時祭儀受歡迎 李四川重申「四大原力」政見 | 自由電子報 - LINE TODAY",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://today.line.me/tw/v3/article/1DPZjOE?view=topic&referral=TOPIC-Election",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1049
     },
     {
-      "row_number": 806,
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBsRmtXZF80X3dieFNJRDE5NFAxTWhUcVFBYTN1cUltQlFvWW5USTE3d3pFYnFQbnpsd0Y1RkFYQnFWbmFSa0ZTZ2pJZnNOQkpsNWl5REY1OGo?oc=5",
       "city": "新竹縣",
       "title": "沈伯洋掀起「洋流」…鄭朝方戰新竹縣長「朝流」從湖口出發| 2026九合一選舉 - UDN",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://udn.com/vote2026/story/124652/9806577",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1050
     },
     {
       "row_number": 807,
@@ -2783,13 +2780,13 @@
       "inbox_row": 340
     },
     {
-      "row_number": 809,
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1nVnVjWXNkYXNHY3ZuX29KMmd3azZUYUxsWlN4aHh1UG56NEZzR3dRSmtsNVdVanl2NlNWX1E5NUdNVGc5WlVLODVvTG1rdG9nWTdfeXRTMjN6TGdlNWoxNlNiZTFZbVpzUlFRUjZvUdIBb0FVX3lxTE1nVnVjWXNkYXNHY3ZuX29KMmd3azZUYUxsWlN4aHh1UG56NEZzR3dRSmtsNVdVanl2NlNWX1E5NUdNVGc5WlVLODVvTG1rdG9nWTdfeXRTMjN6TGdlNWoxNlNiZTFZbVpzUlFRUjZvUQ?oc=5",
       "city": "苗栗縣",
       "title": "端政策牛肉！陳品安攜手葉忠倫、邱毓興 拚開創苗栗新局 - 自由時報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.ltn.com.tw/amp/news/politics/breakingnews/5601958",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1053
     },
     {
       "row_number": 810,
@@ -2816,31 +2813,31 @@
       "inbox_row": 471
     },
     {
-      "row_number": 812,
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOaU9YNDgzT0o2U3EzVFo0NWczMVlqTC03R1Y0UzdBWUxmSUYzcHYyVzE1Yl9RUGJ6Zl8yWWJoWEc2YzJiai16OUx4VDM2S0Q0bXFYOW1rQnI0akZrdFdpTHRDaTJ6cVh4Zl84N0t5VlIxdnl5dFB5MFFuOUJpdlI5N3FMbnhXbWszeEpvN3Vpdlh4ajg?oc=5",
       "city": "雲林縣",
       "title": "六大行動再造崙背風華 張嘉郡全方位升級地方建設與教育產業 - PChome Online 新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://news.pchome.com.tw/living/newstaiwandigi/20261006/index-79124147354886279009.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1056
     },
     {
-      "row_number": 813,
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE11Smh2VlNCaVJsOTJMTThYNVpVX2hTdGdpNVhRbU9GNU52Um1XOUhySUU2WG1KVGRZQ2R6YVlSOTdxWl9Sa1VaSWZjVHFETXctTmc?oc=5",
       "city": "高雄市",
       "title": "眷村文化薪火相傳 賴瑞隆現身左營嘉年華 肯定榮民前輩為高雄奠定深厚根基 - 蕃新聞",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://n.yam.com/Article/20261010536467",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1057
     },
     {
-      "row_number": 814,
       "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxOMGR0dGc2UzR3RUl1UGJsOGF1WnZMXzF4djFHbC1jOWc4eWQxVXhUTVlnWXJ4VFJEVnFiQURqcnV5aGFIUUp6aHFfOUhuTjd3U2pxQWRxNk9IWldETy1MUUlWM1VqSHdjNl9aT2Zna3VRSHJpa3kxUmt5UV9CNnBUWGpKSWdaQUxiLVozZkhjMU5NdXNaRllPQUdkbjY3aXc3LXVSeXVPNHpTSUpaSXBrQVlzQTNKNy1lWFFETXRacmJyMnRkZ1kzWUNEM0lMUkpkbHA0Nmk2U3RZUEljZ3hjOFduYWlaVXlaY1pXNURBTlVlS3RMcGdOZFBqNUIwN3ZhMTlJY0k1bnNDS0J5QmZ1UFdWREhfV2VEVWQ0b0hOamtmNFYtSURsTkdHZmpfVVBsZzViUzFRVzZWNXRDUVJScHJNc2FiZDNpVFlCTFRSQVhXMHMxbUkyU243VV92SDlQU3E1QVNmU1FhREc1djZ2UjM5T3FzREdOUGVPWTd5aC1TbEJQZlNHYi1FNA?oc=5",
       "city": "花蓮縣",
       "title": "游淑貞出席秀林Mgay Bari感恩祭提文化復振、族語扎根與部落產業任內推族語認證、祭儀影像保存及聚會所建設盼文化傳承與青年返鄉並進 - 花蓮最速報",
-      "new_url": "",
-      "method": "failed",
-      "error": "inbox 匹配 0 筆，必須為 1"
+      "new_url": "https://www.hsnews.com.tw/political-news/you-shu-zhen-chu-xi-xiu-linmgay-bari-gan-en-ji-ti-wen-hua-fu-zhen-zu-yu-zha-gen-yu-bu-luo-chan-ye-ren-nei-tui-zu-yu-ren-zheng-ji-yi-ying-xiang-bao-cun-ji-ju-hui-suo-jian-she-pan-wen-hua-chuan-cheng-yu-qing-nian-fan-xiang-bing-jin.html",
+      "method": "batchexecute",
+      "error": "",
+      "row_number": 1058
     },
     {
       "row_number": 815,
