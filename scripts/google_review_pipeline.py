@@ -62,6 +62,7 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
 - 原文若列出具體項目（例如「六大文化政見」「三項計畫」「四大主張」），summary 必須把那幾項逐一列出，不得只寫「提出六大文化政見」而略過項目內容。
 - policy_or_request 逐項列出具體主張，照抄原句，每項之間用 || 分隔（前台會依 || 拆成多條）。
 - 含預算金額、期程、地點、場館或計畫名稱的句子不得省略或改寫。
+- 一則報導若包含兩位以上候選人或提出者的政見，actor 只填主要對象，summary 與 policy_or_request 只寫該對象的內容，不要把其他人的政見併進來；並在 reason 開頭寫「本則另含：○○、○○」，提醒審核者使用拆分功能。
 """
     response = client.responses.create(
         model=os.environ.get("OPENAI_REVIEW_MODEL", "gpt-5-mini"),
