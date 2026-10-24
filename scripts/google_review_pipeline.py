@@ -39,6 +39,12 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
     prompt = f"""你是臺灣地方文化政策資料編輯。只根據提供的標題與正文整理，不得臆測。
 資料類型：{kind}\n縣市：{row['city']}\n標題：{row['source_title']}\n網址：{row['source_url']}\n正文：{article_text(row['source_url'])}
 判斷是否為具體的候選人文化政策，或民間／團體向政府提出的文化政策訴求。一般活動、事故、純藝文新聞、中央層級且無地方主張者應判為非政策。
+
+撰寫 summary 與 policy_or_request 時：
+- 沿用原文的用詞與句子，不改寫、不調語序，不補原文沒有的效果或形容。
+- 原文若列出具體項目（例如「六大文化政見」「三項計畫」「四大主張」），summary 必須把那幾項逐一列出，不得只寫「提出六大文化政見」而略過項目內容。
+- policy_or_request 逐項列出具體主張，照抄原句，每項之間用 || 分隔（前台會依 || 拆成多條）。
+- 含預算金額、期程、地點、場館或計畫名稱的句子不得省略或改寫。
 """
     response = client.responses.create(
         model=os.environ.get("OPENAI_REVIEW_MODEL", "gpt-5-mini"),
