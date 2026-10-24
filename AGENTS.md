@@ -91,7 +91,7 @@ Apps Script 自動蒐集 → Google Sheet「審核資料」
 - 憑證（`.secrets/`、`.clasp.json`、scriptId）不得寫進 git、文件或聊天；部署網址也不寫（不是機密，是避免散落多份對不起來）。
 - 審核用的 Google Sheet 由使用者設為「知道連結的人可檢視」，Sheet ID 寫在 `apps-script/Code.gs`、隨這個公開 repo 一起公開，**屬既定決定，不要當成外洩去「修正」**。連帶的事實：待審與已拒絕的內容、AI 判斷理由、審核者 email 在該表上都看得到。前一條的「核准前不得公開」指的是本站網頁與 `data/input/`，不是那張佇列表。
 - Apps Script 的程式以 repo 的 `apps-script/` 為準，由資料端用 clasp 推送：先推到測試部署，使用者實測後再正式部署，並在交接文件記下版本。不要直接在 Google 編輯器修改而不回寫 repo。
-- `review-console-wip` 分支的審核台修改已進入 `main`（與 `main` 只差統計列的「全部」標籤），以 `main` 為準。2026-10-24 查核：正式部署仍為第 11 版（2026-09-24 建立），不含 `main` 的「準備上架工作區／審核後只移除單卡」（`b1a56f5`，10-02）與「人工備註篩選」（`dadb27c`，10-07）。該部署的說明寫「審核後立即移除卡片」，描述的是當時的意圖而非實際內容，**不要以部署說明判斷版本**。
+- `review-console-wip` 分支的審核台修改已進入 `main`（與 `main` 只差統計列的「全部」標籤），以 `main` 為準。2026-10-24：正式部署已更新為第 12 版（commit `7767270`，BUILD `2026-10-24-1`），先前長期停留的第 11 版（2026-09-24）不含 `b1a56f5` 與 `dadb27c`。**不要以部署說明判斷版本**——第 11 版的說明寫「審核後立即移除卡片」，描述的是意圖而非內容；要看版本就看頁首的 BUILD。
 - 審核台頁面必須顯示版本資訊（`Code.gs` 的 `BUILD` 常數，以及測試／正式部署的辨識）；commit 訊息、交接文件的部署紀錄要用同一個版本字串，三者對得起來。
 - `MULTI-COMPUTER-WORKFLOW.md` 列出的舊流程（Cloudflare Worker／D1 發布、GitHub source-lead PR、Service Account 發布）不得啟用。
 
