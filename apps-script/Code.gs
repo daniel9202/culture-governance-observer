@@ -1,5 +1,5 @@
 const SPREADSHEET_ID = '1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k';
-const BUILD = '2026-10-24-1';
+const BUILD = '2026-10-24-2';
 const REVIEW_SHEET = '審核資料';
 const HEADERS = ['資料類型','收集時間','縣市','發布日期','來源名稱','來源標題','來源網址','審核狀態','AI摘要','AI分類','AI判斷理由','AI信心分數','候選人／提出者','政黨／提出者類型','職務','政策主張／具體訴求','人工備註','審核者','審核時間','發布ID'];
 function duplicateText(value) {
@@ -72,9 +72,29 @@ function getDashboard(filters) {
   return {counts, items: filtered.slice(offset, offset + limit), totalFiltered: filtered.length, cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
 }
 
+const OFFICE_VALUES = ['縣市長', '縣市議員', '不適用'];
+// 舊資料的「職務」是 AI 自由填的，先把寫法不同但意思明確的對應回三個選項；
+// 對應不到的保持原樣，由審核者在介面上重新選。
+const OFFICE_ALIASES = {
+  '議員': '縣市議員', '市議員': '縣市議員', '縣議員': '縣市議員', '縣市議員': '縣市議員',
+  '直轄市議員': '縣市議員', '市議員候選人': '縣市議員', '議員候選人': '縣市議員',
+  '市長': '縣市長', '縣長': '縣市長', '縣市長': '縣市長', '直轄市長': '縣市長',
+  '縣市長候選人': '縣市長', '市長候選人': '縣市長',
+  '不適用': '不適用', '無': '不適用', '民間團體': '不適用', '公民團體': '不適用',
+};
+function normalizeOffice(value) {
+  const text = String(value || '').trim();
+  return OFFICE_ALIASES[text] || text;
+}
+
 function saveReview(payload) {
   if (!payload || !['pending', 'accepted', 'rejected'].includes(payload.status)) throw new Error('審核狀態不合法。');
-  if (!['縣市長', '縣市議員', '不適用'].includes(String(payload.office || '').trim())) throw new Error('職務／提出者身分不合法。');
+  // 拒絕或退回待審核都不該先要求把資料分類好；只有「接受並送準備上架」才檢查。
+  const office = normalizeOffice(payload.office);
+  if (payload.status === 'accepted' && !OFFICE_VALUES.includes(office)) {
+    throw new Error('請先選擇職務／提出者身分再接受這筆資料。');
+  }
+  payload.office = office;
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
@@ -149,7 +169,8 @@ function splitReview(payload) {
       office: String(item.office || '').trim(), summary: String(item.summary || '').trim(),
       policy: String(item.policy || '').trim()
     }));
-    if (items.some(item => !['縣市長', '縣市議員', '不適用'].includes(item.office))) throw new Error('職務／提出者身分不合法。');
+    items.forEach(item => { item.office = normalizeOffice(item.office); });
+    if (items.some(item => !OFFICE_VALUES.includes(item.office))) throw new Error('請為每位候選人選擇職務／提出者身分。');
     if (items.some(item => !item.actor || !item.office || !item.policy)) {
       throw new Error('每位候選人都必須填寫姓名、職務與政策線索。');
     }
