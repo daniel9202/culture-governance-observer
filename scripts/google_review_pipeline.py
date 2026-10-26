@@ -106,6 +106,36 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
     return json.loads(response.output_text)
 
 
+def append_to_sheet(ws, values, output):
+    """寫入新列並讀回驗證。
+
+    不用 ws.append_rows()：那張工作表有大量預先格式化的空白列（2026-10-26 時
+    資料到第 1398 列、工作表有 1605 列），append API 判斷「表格結尾」會出錯，
+    回報成功、列數增加，但資料沒有落在任何一列，是會靜默掉資料的寫法。
+    改成自己算出第一個空白列，寫固定範圍，再讀回確認網址真的在表上。
+    """
+    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
+    # 一般模式原本不填 U/V/X，審核台會看到空白的處理狀態；一併補上。
+    rows = [list(row) + ["complete", device, "", completed_at, "", ""] for row in output]
+    # 以「最後一列有網址的資料列」為準，不用 len(values)：尾端的空白列也會被算進去
+    last = max((number for number, row in enumerate(values[1:], start=2) if len(row) > 6 and row[6].strip()), default=1)
+    start = last + 1
+    end = start + len(rows) - 1
+    needed = end - ws.row_count
+    if needed > 0:
+        ws.add_rows(needed)
+    # gspread 5 與 6 的參數順序不同，一律用關鍵字呼叫
+    ws.update(range_name=f"A{start}:Z{end}", values=rows, value_input_option="USER_ENTERED")
+    written = ws.get(f"G{start}:G{end}")
+    landed = {row[0].strip() for row in written if row and row[0].strip()}
+    expected = {row[6].strip() for row in output}
+    missing = expected - landed
+    if missing:
+        raise SystemExit(f"寫入後驗證失敗：{len(missing)} 筆未落在 A{start}:Z{end}，請勿重跑前先檢查工作表")
+    print(f"已寫入並驗證 A{start}:Z{end}（{len(rows)} 列）")
+
+
 def inbox_rows():
     for filename, kind in (("candidate_sources.csv", "candidate"), ("civic_policy_calls.csv", "civic_call")):
         with (ROOT / "data" / "inbox" / filename).open(encoding="utf-8-sig", newline="") as source:
@@ -268,7 +298,7 @@ def main():
     if backfill:
         ws.batch_update(backfill, value_input_option="USER_ENTERED")
     if output:
-        ws.append_rows(output, value_input_option="USER_ENTERED")
+        append_to_sheet(ws, values, output)
     print(f"Google review sheet: appended={len(output)}, AI_backfilled={len(backfill)}, already_complete={skipped}")
 
 
