@@ -29,10 +29,15 @@ EXTRA_HEADERS = ["政見名稱", "政策論述", "分組鍵", "原文對照", "�
 EXTRA_FIRST_COLUMN = "AA"
 EXTRA_LAST_COLUMN = "AE"
 TOPIC_TAGS_FILE = ROOT / "config" / "topic_categories.csv"
+# docs/TOPIC-TAXONOMY.md 2026-10-25 定案取消「文化治理與預算」這個大類：
+# 文化治理是「政府綜合運用各種工具」的總稱，不該與文化資產、表演藝術並列，
+# 實際資料裡它多半被當成總論型政見的通用標籤。這幾個細標籤要重新歸類，
+# 在重新歸類完成前先不讓 AI 選，否則總論型政見又會一律掛上去。
+EXCLUDED_TOPIC_TAGS = {"文化治理", "文化預算", "法規", "公共參與", "公民參與", "文化生態"}
 # 正文與模型結果的本機快取（tmp/ 不進版本庫）。同一則資料重跑時不再重抓、不再重付費；
 # 提示詞或 schema 改版時把 PROMPT_VERSION 加一，快取自然失效。
 CACHE_DIR = ROOT / "tmp" / "pipeline-cache"
-PROMPT_VERSION = "2026-10-26-3"
+PROMPT_VERSION = "2026-10-26-4"
 KIND_LABELS = {"candidate": "候選人政見", "civic_call": "民間政策訴求"}
 SKIPPED_REANALYZE_LABELS = {"公民政策倡議"}
 REANALYZE_BATCH_SIZE = 50
@@ -75,7 +80,8 @@ def topic_tags():
     只出現過一次（族語／族語傳承、圖書館／圖書館與閱讀這類同義分歧）。
     """
     with TOPIC_TAGS_FILE.open(encoding="utf-8-sig", newline="") as source:
-        return [row["tag"] for row in csv.DictReader(source) if int(row["uses"] or 0) >= 2]
+        return [row["tag"] for row in csv.DictReader(source)
+                if int(row["uses"] or 0) >= 2 and row["tag"] not in EXCLUDED_TOPIC_TAGS]
 
 
 class ArticleFetchError(ValueError):
