@@ -122,16 +122,8 @@ def article_text(url: str) -> str:
     return text
 
 
-def analyze(client: OpenAI, kind: str, row: dict[str, str], use_cache: bool = True) -> dict:
-    body = row.get("_article_text") or article_text(row["source_url"])
-    tags = topic_tags()
-    # 同一篇正文、同一版提示詞只付一次錢；中途失敗或重跑都直接讀快取
-    key = "\n".join([PROMPT_VERSION, kind, row["source_url"], hashlib.sha256(body.encode("utf-8")).hexdigest()])
-    if use_cache:
-        cached = cache_read("analysis", key)
-        if cached:
-            return cached
-    prompt = f"""你是臺灣地方文化政策資料編輯。只根據提供的標題與正文整理，不得臆測。
+def analysis_prompt(kind, row, body, tags):
+    return f"""你是臺灣地方文化政策資料編輯。只根據提供的標題與正文整理，不得臆測。
 資料類型：{kind}\n縣市：{row['city']}\n標題：{row['source_title']}\n網址：{row['source_url']}\n正文：{body}
 判斷是否為具體的候選人文化政策，或民間／團體向政府提出的文化政策訴求。一般活動、事故、純藝文新聞、中央層級且無地方主張者應判為非政策。
 
@@ -151,6 +143,18 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str], use_cache: bool = Tr
 - topics 從下列清單挑 1 至 5 個，不得自創：{'、'.join(tags)}。
 - office 只能填「縣市長」「縣轄市長」「縣市議員」「不適用」。「縣轄市長」指竹北、頭份、苗栗、彰化、員林、南投、斗六、太保、朴子、屏東、宜蘭、花蓮、臺東、馬公 14 個縣轄市的市長；鄉長、鎮長與鄉鎮市民代表不在收錄範圍，office 填「不適用」並在 reason 寫明實際職務。
 """
+
+
+def analyze(client: OpenAI, kind: str, row: dict[str, str], use_cache: bool = True) -> dict:
+    body = row.get("_article_text") or article_text(row["source_url"])
+    tags = topic_tags()
+    # 同一篇正文、同一版提示詞只付一次錢；中途失敗或重跑都直接讀快取
+    key = "\n".join([PROMPT_VERSION, kind, row["source_url"], hashlib.sha256(body.encode("utf-8")).hexdigest()])
+    if use_cache:
+        cached = cache_read("analysis", key)
+        if cached:
+            return cached
+    prompt = analysis_prompt(kind, row, body, tags)
     response = client.responses.create(
         model=os.environ.get("OPENAI_REVIEW_MODEL", "gpt-5-mini"),
         input=prompt,
@@ -264,6 +268,129 @@ def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
             time.sleep(delay)
 
 
+REQUIRED_RESULT_FIELDS = ("is_relevant", "summary", "reason", "confidence", "actor", "actor_type", "office",
+                          "policy_title", "policy_argument", "concrete_proposals", "source_sentences",
+                          "topics", "event_key", "nature")
+OFFICE_VALUES = ("縣市長", "縣轄市長", "縣市議員", "不適用")
+NATURE_VALUES = ("本屆競選政見", "現任施政成果", "其他")
+EXPORT_BODY_LIMIT = 3000
+
+
+def pending_candidates(values, columns, row_numbers, force, offset, limit):
+    """挑出要分析的列：待審、且（摘要空白或 --force）。回傳 (列號, 該列, kind, row)。"""
+    kind_by_label = {label: kind for kind, label in KIND_LABELS.items()}
+    picked, matched = [], 0
+    for number, current in enumerate(values[1:], start=2):
+        current = current + [""] * (len(values[0]) - len(current))
+        if row_numbers is not None and number not in row_numbers:
+            continue
+        if current[columns["審核狀態"]] != "pending":
+            continue
+        if not force and current[columns["AI摘要"]].strip():
+            continue
+        if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
+            continue
+        matched += 1
+        if matched <= offset:
+            continue
+        if limit is not None and len(picked) >= limit:
+            break
+        picked.append((number, current, kind_by_label.get(current[columns["資料類型"]]), {
+            "city": current[columns["縣市"]],
+            "source_title": current[columns["來源標題"]],
+            "source_url": current[columns["來源網址"]],
+        }))
+    return picked, matched
+
+
+def export_pending(ws, path: Path, row_numbers, force, offset, limit):
+    """把待分析的列連同正文寫成 JSONL，交給不經 OpenAI API 的分析者（例如 Codex）。"""
+    values = ws.get_all_values()
+    columns = {name: index for index, name in enumerate(values[0])}
+    picked, matched = pending_candidates(values, columns, row_numbers, force, offset, limit)
+    tags = topic_tags()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as out:
+        for number, _current, kind, row in picked:
+            body = article_text(row["source_url"])[:EXPORT_BODY_LIMIT]
+            out.write(json.dumps({"row": number, "kind": kind, "city": row["city"],
+                                  "source_title": row["source_title"], "source_url": row["source_url"],
+                                  "article_text": body}, ensure_ascii=False) + "\n")
+    rules = path.with_suffix(".prompt.md")
+    sample = picked[0] if picked else (0, [], "candidate", {"city": "", "source_title": "", "source_url": ""})
+    rules.write_text(
+        "# 分析規則（由 scripts/google_review_pipeline.py 產生，與 API 版本同一份）\n\n"
+        "逐列讀 JSONL，每列輸出一個 JSON 物件，欄位與規則如下；輸出另存成 JSONL，每行一個物件，"
+        "並保留原本的 row 欄位。\n\n```\n"
+        + analysis_prompt(sample[2] or "candidate", sample[3], "（這裡會放每一列的 article_text）", tags)
+        + "\n```\n\n必填欄位：" + "、".join(REQUIRED_RESULT_FIELDS) + "、row。\n"
+        "- concrete_proposals 與 source_sentences 必須等長。\n"
+        "- topics 只能從上面清單選，1 到 5 個。\n"
+        "- office 只能是：" + "、".join(OFFICE_VALUES) + "。\n"
+        "- nature 只能是：" + "、".join(NATURE_VALUES) + "。\n"
+        "- confidence 是 0 到 1 的數字。\n", encoding="utf-8")
+    print(f"已匯出 {len(picked)} 列到 {path}（符合條件共 {matched} 列），規則寫在 {rules.name}", flush=True)
+
+
+def validate_result(item, tags):
+    missing = [field for field in REQUIRED_RESULT_FIELDS if field not in item]
+    if missing:
+        return f"缺欄位：{'、'.join(missing)}"
+    if not isinstance(item["concrete_proposals"], list) or not isinstance(item["source_sentences"], list):
+        return "concrete_proposals 與 source_sentences 必須是陣列"
+    if len(item["concrete_proposals"]) != len(item["source_sentences"]):
+        return f"concrete_proposals（{len(item['concrete_proposals'])}）與 source_sentences（{len(item['source_sentences'])}）長度不一致"
+    unknown = [tag for tag in item["topics"] if tag not in tags]
+    if unknown:
+        return f"topics 不在清單內：{'、'.join(unknown)}"
+    if item["office"] not in OFFICE_VALUES:
+        return f"office 不合法：{item['office']}"
+    if item["nature"] not in NATURE_VALUES:
+        return f"nature 不合法：{item['nature']}"
+    return ""
+
+
+def import_results(ws, path: Path):
+    """把外部分析結果寫回 Sheet；先全部驗證，有一列不合格就整批不寫。"""
+    values = ws.get_all_values()
+    columns = {name: index for index, name in enumerate(values[0])}
+    tags = set(topic_tags())
+    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
+    items, problems = [], []
+    for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        if not line.strip():
+            continue
+        try:
+            item = json.loads(line)
+        except json.JSONDecodeError as exc:
+            problems.append(f"第 {line_number} 行不是合法 JSON：{exc}")
+            continue
+        number = item.get("row")
+        if not isinstance(number, int) or number < 2 or number > len(values):
+            problems.append(f"第 {line_number} 行的 row 不合法：{number}")
+            continue
+        error = validate_result(item, tags)
+        if error:
+            problems.append(f"列 {number}：{error}")
+            continue
+        items.append((number, item))
+    if problems:
+        raise SystemExit("驗證未通過，整批不寫入：\n" + "\n".join(problems))
+    updates = []
+    for number, ai in items:
+        current = values[number - 1] + [""] * (len(values[0]) - len(values[number - 1]))
+        note = current[columns["人工備註"]] or ("AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else "")
+        topics, proposals, extra = ai_columns(ai)
+        updates.append({"range": f"I{number}:Q{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], proposals, note]]})
+        updates.append({"range": f"U{number}:V{number}", "values": [["complete", device]]})
+        updates.append({"range": f"X{number}:Y{number}", "values": [[completed_at, ""]]})
+        updates.append({"range": f"{EXTRA_FIRST_COLUMN}{number}:{EXTRA_LAST_COLUMN}{number}", "values": [extra]})
+    if updates:
+        sheets_batch_update_with_retry(ws, updates)
+    print(f"已寫回 {len(items)} 列（{path.name}）", flush=True)
+
+
 def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None, force: bool = False, offset: int = 0) -> None:
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
@@ -369,20 +496,24 @@ def main():
     parser.add_argument("--rows", help="只處理指定 Sheet 列號，以逗號分隔，可用區間如 1399-1418（僅適用 --reanalyze）")
     parser.add_argument("--force", action="store_true", help="連 AI 摘要已填的列也重跑（僅適用 --reanalyze，換提示詞後重新分析用）")
     parser.add_argument("--offset", type=int, default=0, help="跳過前幾列符合條件的列再開始（僅適用 --reanalyze，搭配 --limit 分批）")
+    parser.add_argument("--export-pending", metavar="FILE", help="把待分析的列連同正文匯出成 JSONL，交給不經 OpenAI API 的分析者")
+    parser.add_argument("--import-results", metavar="FILE", help="把外部分析結果（JSONL）驗證後寫回 Sheet")
     parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit 必須大於 0")
-    if args.limit is not None and not args.reanalyze:
+    if args.limit is not None and not (args.reanalyze or args.export_pending):
         parser.error("--limit 只能搭配 --reanalyze")
-    if args.rows and not args.reanalyze:
+    if args.rows and not (args.reanalyze or args.export_pending):
         parser.error("--rows 只能搭配 --reanalyze")
-    if args.force and not args.reanalyze:
+    if args.force and not (args.reanalyze or args.export_pending):
         parser.error("--force 只能搭配 --reanalyze")
     if args.chunk < 1:
         parser.error("--chunk 必須大於 0")
-    if args.offset and not args.reanalyze:
-        parser.error("--offset 只能搭配 --reanalyze")
+    if args.offset and not (args.reanalyze or args.export_pending):
+        parser.error("--offset 只能搭配 --reanalyze 或 --export-pending")
+    if args.export_pending and args.import_results:
+        parser.error("--export-pending 與 --import-results 不能同時使用")
     if args.offset < 0:
         parser.error("--offset 不可為負數")
     def parse_rows(text):
@@ -408,6 +539,14 @@ def main():
     if row_numbers and min(row_numbers) < 2:
         parser.error("--rows 列號必須大於等於 2")
     ws = worksheet()
+    # 匯出／匯入完全不碰模型，不要求 OPENAI_API_KEY
+    if args.export_pending:
+        export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit)
+        return
+    if args.import_results:
+        ensure_extra_headers(ws, ws.get_all_values())
+        import_results(ws, Path(args.import_results))
+        return
     client = OpenAI()
     if args.reanalyze:
         ensure_extra_headers(ws, ws.get_all_values())
