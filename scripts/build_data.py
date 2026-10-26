@@ -187,8 +187,9 @@ def build_candidates():
         valid_url(row["source_url"], label)
         valid_choice(row["proposer_role"], PROPOSER_ROLES, "proposer_role", label)
         valid_choice(row["content_nature"], CONTENT_NATURES, "content_nature", label)
-        if row["content_nature"] == "現任首長施政" and row["office"] != "縣市長":
-            raise ValueError(f"{label}: 現任首長施政 is only valid when office is 縣市長")
+        # 縣轄市長也是該市的民選首長，任內施政與縣市長同類，前台也同樣呈現在首長頁
+        if row["content_nature"] == "現任首長施政" and row["office"] not in {"縣市長", "縣轄市長"}:
+            raise ValueError(f"{label}: 現任首長施政 is only valid when office is 縣市長 or 縣轄市長")
         review_status = (row.get("review_status") or "").strip() or "人工審核"
         valid_choice(review_status, REVIEW_STATUSES, "review_status", label)
         related_sources = [x.strip() for x in (row.get("related_sources") or "").split("|") if x.strip()]
