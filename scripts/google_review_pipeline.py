@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import hashlib
 import os
 import re
 import time
@@ -28,6 +29,10 @@ EXTRA_HEADERS = ["政見名稱", "政策論述", "分組鍵", "原文對照", "�
 EXTRA_FIRST_COLUMN = "AA"
 EXTRA_LAST_COLUMN = "AE"
 TOPIC_TAGS_FILE = ROOT / "config" / "topic_categories.csv"
+# 正文與模型結果的本機快取（tmp/ 不進版本庫）。同一則資料重跑時不再重抓、不再重付費；
+# 提示詞或 schema 改版時把 PROMPT_VERSION 加一，快取自然失效。
+CACHE_DIR = ROOT / "tmp" / "pipeline-cache"
+PROMPT_VERSION = "2026-10-26-2"
 KIND_LABELS = {"candidate": "候選人政見", "civic_call": "民間政策訴求"}
 SKIPPED_REANALYZE_LABELS = {"公民政策倡議"}
 REANALYZE_BATCH_SIZE = 50
@@ -40,6 +45,27 @@ GOOGLE_NEWS_ENTRY_MARKERS = (
     "garturlreq",
     "Copyright The Closure Library Authors",
 )
+
+
+def cache_path(kind, key):
+    digest = hashlib.sha256(key.encode("utf-8")).hexdigest()[:16]
+    return CACHE_DIR / kind / f"{digest}.json"
+
+
+def cache_read(kind, key):
+    path = cache_path(kind, key)
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def cache_write(kind, key, value):
+    path = cache_path(kind, key)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False), encoding="utf-8")
 
 
 def topic_tags():
@@ -85,15 +111,26 @@ def validate_reanalyze_source(url: str, text: str | None = None) -> None:
 
 
 def article_text(url: str) -> str:
+    cached = cache_read("article", url)
+    if cached:
+        return cached["text"]
     try:
-        return fetch_article_text(url)
+        text = fetch_article_text(url)
     except Exception as exc:
         return f"（正文擷取失敗：{type(exc).__name__}；請依標題與網址初判）"
+    cache_write("article", url, {"text": text})
+    return text
 
 
-def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
+def analyze(client: OpenAI, kind: str, row: dict[str, str], use_cache: bool = True) -> dict:
     body = row.get("_article_text") or article_text(row["source_url"])
     tags = topic_tags()
+    # 同一篇正文、同一版提示詞只付一次錢；中途失敗或重跑都直接讀快取
+    key = "\n".join([PROMPT_VERSION, kind, row["source_url"], hashlib.sha256(body.encode("utf-8")).hexdigest()])
+    if use_cache:
+        cached = cache_read("analysis", key)
+        if cached:
+            return cached
     prompt = f"""你是臺灣地方文化政策資料編輯。只根據提供的標題與正文整理，不得臆測。
 資料類型：{kind}\n縣市：{row['city']}\n標題：{row['source_title']}\n網址：{row['source_url']}\n正文：{body}
 判斷是否為具體的候選人文化政策，或民間／團體向政府提出的文化政策訴求。一般活動、事故、純藝文新聞、中央層級且無地方主張者應判為非政策。
@@ -139,7 +176,9 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
                          "source_sentences", "topics", "event_key", "nature"]
         }}},
     )
-    return json.loads(response.output_text)
+    result = json.loads(response.output_text)
+    cache_write("analysis", key, result)
+    return result
 
 
 def ai_columns(ai):
