@@ -225,7 +225,7 @@ def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
             time.sleep(delay)
 
 
-def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None, force: bool = False) -> None:
+def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None, force: bool = False, offset: int = 0) -> None:
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
@@ -236,7 +236,7 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
         raise SystemExit(f"Google Sheet 缺少欄位：{', '.join(missing)}")
     kind_by_label = {label: kind for kind, label in KIND_LABELS.items()}
     device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
-    attempted = completed = failed = skipped = 0
+    attempted = completed = failed = skipped = matched = 0
     pending_updates = []
     pending_results = []
 
@@ -260,6 +260,11 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
             continue
         if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
             skipped += 1
+            continue
+        # --offset：--force 之後「摘要已填」不再是排除條件，只靠 --limit 每次都會挑到同一批，
+        # 要用 offset 位移才能分批把全部跑完（或改用 --rows 指定區間）。
+        matched += 1
+        if matched <= offset:
             continue
         if limit is not None and attempted >= limit:
             break
@@ -315,15 +320,16 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
                 if len(pending_results) >= REANALYZE_BATCH_SIZE:
                     flush_updates()
     flush_updates()
-    print(f"Google review sheet reanalyze: attempted={attempted}, completed={completed}, failed={failed}, skipped={skipped}", flush=True)
+    print(f"Google review sheet reanalyze: matched={matched}, offset={offset}, attempted={attempted}, completed={completed}, failed={failed}, skipped={skipped}", flush=True)
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--reanalyze", action="store_true", help="重新分析 Sheet 上待審且 AI 摘要為空的既有列")
     parser.add_argument("--limit", type=int, help="最多處理幾列（僅適用 --reanalyze）")
-    parser.add_argument("--rows", help="只處理指定 Sheet 列號，以逗號分隔（僅適用 --reanalyze）")
+    parser.add_argument("--rows", help="只處理指定 Sheet 列號，以逗號分隔，可用區間如 1399-1418（僅適用 --reanalyze）")
     parser.add_argument("--force", action="store_true", help="連 AI 摘要已填的列也重跑（僅適用 --reanalyze，換提示詞後重新分析用）")
+    parser.add_argument("--offset", type=int, default=0, help="跳過前幾列符合條件的列再開始（僅適用 --reanalyze，搭配 --limit 分批）")
     parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
@@ -336,17 +342,37 @@ def main():
         parser.error("--force 只能搭配 --reanalyze")
     if args.chunk < 1:
         parser.error("--chunk 必須大於 0")
+    if args.offset and not args.reanalyze:
+        parser.error("--offset 只能搭配 --reanalyze")
+    if args.offset < 0:
+        parser.error("--offset 不可為負數")
+    def parse_rows(text):
+        numbers = set()
+        for part in text.split(","):
+            part = part.strip()
+            if not part:
+                continue
+            if "-" in part:  # 區間：1399-1418
+                start, _, end = part.partition("-")
+                first, last = int(start), int(end)
+                if last < first:
+                    raise ValueError(part)
+                numbers.update(range(first, last + 1))
+            else:
+                numbers.add(int(part))
+        return numbers
+
     try:
-        row_numbers = {int(value) for value in args.rows.split(",")} if args.rows else None
+        row_numbers = parse_rows(args.rows) if args.rows else None
     except ValueError:
-        parser.error("--rows 必須是以逗號分隔的整數列號")
+        parser.error("--rows 必須是列號或區間，以逗號分隔（例 1399,1401,1410-1420）")
     if row_numbers and min(row_numbers) < 2:
         parser.error("--rows 列號必須大於等於 2")
     ws = worksheet()
     client = OpenAI()
     if args.reanalyze:
         ensure_extra_headers(ws, ws.get_all_values())
-        reanalyze_sheet(ws, client, args.limit, row_numbers, force=args.force)
+        reanalyze_sheet(ws, client, args.limit, row_numbers, force=args.force, offset=args.offset)
         return
     chunk = args.chunk
     values = ws.get_all_values()
