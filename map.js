@@ -29,6 +29,8 @@ let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCit
 // 原住民選舉區依身分別劃分、涵蓋全縣市或跨多個鄉鎮市區，與區域選舉區重疊，畫不成互斥的面，
 // 所以該圖層不畫界線，改以縣市整體與人數徽章呈現。
 let districtShapes=new Map,shapeOfDistrict=new Map,districtLayer='region',activeDistrict='';
+// 縣轄市圖層（township-geometry.json）：只在縣市長模式、且該縣有縣轄市時畫。
+let townshipShapes=new Map,activeTownship='';
 // 議員模式點選縣市後放大到該縣市；縣市長模式不放大也不畫選舉區。
 let zoomFrame=0,zoomOff=false;
 const layerMatches=item=>districtLayer==='indigenous'?indigenousDistrict(item.district):!indigenousDistrict(item.district);
@@ -41,9 +43,14 @@ const registeredIn=(key,city)=>registered[key].get(city)||[];
 const incumbentMayor=city=>registeredIn('mayor',city).find(record=>record.incumbent==='是');
 // 縣轄市長不畫在地圖上（縣轄市在縣以下，底圖沒有對應範圍），但地圖是進站入口，
 // 所以縣市長模式的側欄要有一行把人帶到「縣市長政見」頁的該縣市。
-let township={recorded:new Map,registered:new Map};
+let township={byCity:new Map,registered:new Map};
+const townshipIn=city=>township.byCity.get(city)||[];
+const townshipRegisteredIn=city=>township.registered.get(city)||[];
+const hasTownship=city=>Boolean(city)&&townshipRegisteredIn(city).length>0;
+const townshipCandidates=shape=>townshipIn(shape.city).filter(item=>item.district===shape.town);
+const townshipRegistered=shape=>townshipRegisteredIn(shape.city).filter(item=>item.district===shape.town);
 const townshipNote=city=>{
-  const recorded=township.recorded.get(city)||0,registered=township.registered.get(city)||0;
+  const recorded=townshipIn(city).length,registered=townshipRegisteredIn(city).length;
   if(!registered)return '';
   return recorded
     ?`<a class="map-detail-switch" href="mayors.html?city=${encodeURIComponent(city)}">本縣另有 ${recorded} 位縣轄市長候選人提出文化政策 →</a>`
@@ -128,7 +135,7 @@ function pathBox(d){
 
 function zoomTarget(city){
   const svg=document.getElementById('taiwanMap');
-  if(office!=='councilor'||!city||zoomOff)return geometry.viewBox;
+  if((office!=='councilor'&&!hasTownship(city))||!city||zoomOff)return geometry.viewBox;
   const box=pathBox(geometry.counties.find(county=>county.name===city)?.d||'');
   if(!box)return geometry.viewBox;
   // 留白後維持畫面比例，避免 preserveAspectRatio 把縣市擠到一邊
@@ -143,7 +150,7 @@ function zoomTarget(city){
 function applyZoom(city,{animate=true}={}){
   const svg=document.getElementById('taiwanMap'),to=zoomTarget(city);
   const from=(svg.getAttribute('viewBox')||geometry.viewBox.join(' ')).split(' ').map(Number);
-  const zoomed=office==='councilor'&&Boolean(city)&&!zoomOff;
+  const zoomed=(office==='councilor'||hasTownship(city))&&Boolean(city)&&!zoomOff;
   svg.classList.toggle('is-zoomed',zoomed);
   document.getElementById('zoomOut').hidden=!zoomed;
   // 線寬與文字不跟著放大：路徑用 non-scaling-stroke，標籤依縮放倍率反向縮小
@@ -164,6 +171,14 @@ function renderDistrictLabels(){
   const layer=document.querySelector('#taiwanMap .district-labels');
   if(!layer)return;
   const svg=document.getElementById('taiwanMap'),zoom=Number(svg.style.getPropertyValue('--zoom'))||1;
+  if(office==='mayor'){
+    const towns=[...townshipShapes.values()].filter(shape=>shape.city===activeCity);
+    layer.innerHTML=zoom>1.2?towns.map(shape=>{
+      const count=townshipCandidates(shape).length;
+      return `<text class="district-label${count?' has-records':''}" x="${shape.anchor[0]}" y="${shape.anchor[1]}" text-anchor="middle" style="font-size:${(11/zoom).toFixed(2)}px">${esc(shape.town)}</text>`;
+    }).join(''):'';
+    return;
+  }
   if(office!=='councilor'||districtLayer!=='region'||!activeCity||zoom<=1.2){layer.innerHTML='';return}
   // 太小的選舉區（臺中市區、永和、臺南東區等）標籤放不進去，比照小型市的做法引線標註在旁邊
   const shapes=[...districtShapes.values()].filter(shape=>shape.city===activeCity);
@@ -197,6 +212,14 @@ function renderDistrictLabels(){
   layer.innerHTML=marks;
 }
 
+function townshipShapesFor(city){
+  if(office!=='mayor'||!city)return '';
+  return [...townshipShapes.values()].filter(shape=>shape.city===city).map(shape=>{
+    const count=townshipCandidates(shape).length;
+    return `<path class="map-district-shape is-township${count?' has-records':''}${shape.id===activeTownship?' is-active':''}" d="${shape.d}" data-township="${esc(shape.id)}" aria-label="${esc(shape.town)}：${count?`${count} 位縣轄市長候選人提出文化政策`:'尚未收錄'}"></path>`;
+  }).join('');
+}
+
 function districtShapesFor(city){
   if(office!=='councilor'||districtLayer!=='region'||!city)return '';
   return [...districtShapes.values()].filter(shape=>shape.city===city).map(shape=>{
@@ -217,12 +240,39 @@ function selectDistrict(id){
   renderDistricts();renderDetail();
 }
 
+// 點縣轄市：右側只看該市的縣轄市長候選人；再點一次回到整個縣
+function selectTownship(id){
+  const shape=townshipShapes.get(id);
+  if(!shape)return;
+  if(shape.city!==activeCity){selectCity(shape.city);activeTownship=id}
+  else activeTownship=activeTownship===id?'':id;
+  if(activeTownship&&zoomOff){zoomOff=false;applyZoom(activeCity)}
+  renderDistricts();renderDetail();
+}
+
+function showTownshipTooltip(id,event){
+  const tip=document.getElementById('mapTooltip'),shape=townshipShapes.get(id);
+  if(!shape)return;
+  const list=townshipCandidates(shape),total=townshipRegistered(shape).length;
+  tip.innerHTML=`<strong>${esc(shape.city)}${esc(shape.town)}</strong>`
+    +`<span class="tip-source">縣轄市・不屬於縣市長選舉</span>`
+    +`<div class="tip-row is-current"><span class="tip-office">縣轄市長</span><span class="tip-count"><b>${list.length}</b> / ${total} 位已提出</span>`
+    +`<span class="tip-note">${list.length?nameList(list,6):'本市尚未收錄文化政策'}</span></div>`;
+  tip.hidden=false;moveTooltip(event);
+}
+
 function renderDistricts(){
   const layer=document.querySelector('#taiwanMap .districts');
   if(!layer)return;
-  layer.innerHTML=districtShapesFor(activeCity);
+  layer.innerHTML=districtShapesFor(activeCity)+townshipShapesFor(activeCity);
   document.getElementById('taiwanMap').classList.toggle('shows-districts',Boolean(layer.childElementCount));
-  layer.querySelectorAll('.map-district-shape').forEach(node=>{
+  layer.querySelectorAll('.map-district-shape.is-township').forEach(node=>{
+    node.addEventListener('click',()=>selectTownship(node.dataset.township));
+    node.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')showTownshipTooltip(node.dataset.township,event)});
+    node.addEventListener('pointermove',event=>{if(event.pointerType!=='touch')moveTooltip(event)});
+    node.addEventListener('pointerleave',hideTooltip);
+  });
+  layer.querySelectorAll('.map-district-shape:not(.is-township)').forEach(node=>{
     // 選區圖形蓋在縣市上面，沒有這個處理的話，回到全國後再點該縣市會沒有反應
     node.addEventListener('click',()=>selectDistrict(node.dataset.shape));
     node.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')showDistrictTooltip(node.dataset.shape,event)});
@@ -319,19 +369,25 @@ function districtGroups(list,city){
 function renderDetail(){
   const detail=document.getElementById('mapDetail'),city=activeCity;
   const shape=activeDistrict?districtShapes.get(activeDistrict):null;
-  const list=shape?shapeCandidates(shape):office==='councilor'?layerList(city):(byOffice[office].get(city)||[]);
+  const town=office==='mayor'&&activeTownship?townshipShapes.get(activeTownship):null;
+  const list=town?townshipCandidates(town):shape?shapeCandidates(shape):office==='councilor'?layerList(city):(byOffice[office].get(city)||[]);
   const other=office==='mayor'?'councilor':'mayor',otherCount=(byOffice[other].get(city)||[]).length;
   const inShape=shape?registeredIn('councilor',city).filter(item=>shape.districts.includes(item.district)):[];
-  const missing=shape?inShape.filter(item=>!list.some(x=>sameCandidate(item.candidate,x.candidate))):unrecorded(office,city);
-  const total=shape?inShape.length:layerRegistered(office,city).length;
+  const missing=town?townshipRegistered(town).filter(item=>!list.some(x=>sameCandidate(item.candidate,x.candidate)))
+    :shape?inShape.filter(item=>!list.some(x=>sameCandidate(item.candidate,x.candidate))):unrecorded(office,city);
+  const total=town?townshipRegistered(town).length:shape?inShape.length:layerRegistered(office,city).length;
   const missingNote=missing.length?`<p class="map-detail-missing">${office==='mayor'?`尚未收錄文化政策：${nameList(missing,12)}`:(shape?`本選舉區另有 ${missing.length} 位登記參選人尚未收錄文化政策：${nameList(missing,12)}`:`另有 ${missing.length} 位登記參選人尚未收錄文化政策`)}</p>`:'';
   const switchLink=otherCount?`<button type="button" class="map-detail-switch" data-switch="${other}">此縣市另有 ${otherCount} 位${OFFICES[other].label}候選人 →</button>`:'';
   const incumbentNote=incumbentLink((incumbents.get(city)||new Set).size,city,'map-detail-switch');
-  const townshipLine=office==='mayor'&&!shape?townshipNote(city):'';
+  const townshipLine=office==='mayor'&&!shape&&!town?townshipNote(city):'';
   const regionLink=`<a class="map-detail-link" href="${regionUrl(city)}">${esc(city)}地方頁：預算、統計與全部候選人 →</a>`;
   const foot=switchLink||incumbentNote||townshipLine?`<div class="map-detail-foot">${switchLink}${townshipLine}${incumbentNote}</div>`:'';
   if(!city){detail.innerHTML='<p class="kicker">選擇縣市</p><h2>從地圖開始</h2><p class="map-detail-lead">點選地圖上的縣市，查看提出文化政策的候選人與政黨。</p>';return}
-  const head=shape
+  const head=town
+    ?`<p class="kicker">${esc(city)} / 縣轄市長</p><h2>${esc(town.town)}</h2>`
+      +`<p class="map-detail-scope">縣轄市，不屬於縣市長選舉</p>`
+      +`<button type="button" class="map-detail-switch" data-back="1">← 回到${esc(city)}</button>`
+    :shape
     ?`<p class="kicker">${esc(city)} / ${OFFICES[office].label}</p><h2>${esc(shapeLabel(shape))}</h2>`
       +`<p class="map-detail-scope">${esc(shape.districts.length===1?districtScope(shape.districts[0]):`${shape.districts.length} 個選舉區`)}・應選 ${shape.seats} 席</p>`
       +`<button type="button" class="map-detail-switch" data-back="1">← 回到${esc(city)}全部選舉區</button>`
@@ -339,12 +395,12 @@ function renderDetail(){
   detail.innerHTML=head+(list.length
     ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p>${office==='councilor'&&!shape?districtGroups(list,city):`<div class="map-candidates">${list.map(item=>candidateCard(item,{district:!shape})).join('')}</div>`}${missingNote}${regionLink}`
     :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}${regionLink}`)+foot;
-  detail.querySelector('[data-back]')?.addEventListener('click',()=>{activeDistrict='';renderDistricts();renderDetail()});
+  detail.querySelector('[data-back]')?.addEventListener('click',()=>{activeDistrict='';activeTownship='';renderDistricts();renderDetail()});
   detail.querySelector('[data-switch]:not([data-back])')?.addEventListener('click',event=>setOffice(event.currentTarget.dataset.switch));
 }
 
 function selectCity(city,{scroll=false}={}){
-  if(city!==activeCity)activeDistrict='';
+  if(city!==activeCity){activeDistrict='';activeTownship=''}
   activeCity=city;
   document.querySelectorAll('#taiwanMap .county').forEach(node=>node.classList.toggle('is-active',node.dataset.city===city));
   document.querySelector('#taiwanMap .county-outline-active')?.setAttribute('d',document.querySelector(`#taiwanMap .county[data-city="${CSS.escape(city)}"]`)?.getAttribute('d')||'');
@@ -354,10 +410,11 @@ function selectCity(city,{scroll=false}={}){
 }
 
 function setOffice(next){
-  office=next;activeDistrict='';
+  office=next;activeDistrict='';activeTownship='';
   document.querySelectorAll('[data-office]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.office===office)));
   document.getElementById('layerSwitch').hidden=office!=='councilor';
-  drawMap();applyZoom(activeCity);renderDetail();renderLegend();renderParties();
+  // drawMap 會重建整張 svg（含空的圖層群組），兩個圖層都要重畫
+  drawMap();renderDistricts();applyZoom(activeCity);renderDetail();renderLegend();renderParties();
 }
 
 function setLayer(next){
@@ -406,15 +463,21 @@ const loadJson=(url,message)=>fetch(url).then(response=>{if(!response.ok)throw E
 // 名冊由 loadCandidateDataset 一併載入（同時供議員選區查詢），不另外重複讀取。
 Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset({districts:true}),loadJson('data/party_colors.json','無法讀取政黨色'),
   // 選舉區界線讀不到時只是沒有界線，不影響其餘地圖
-  fetch('district-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null)]).then(([geo,data,colors,shapes])=>{
+  fetch('district-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null),
+  // 縣轄市界線讀不到時只是沒有那一層，不影響其餘地圖
+  fetch('township-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null)]).then(([geo,data,colors,shapes,towns])=>{
   if(shapes){districtShapes=new Map(shapes.districts.map(shape=>[shape.id,shape]));
     shapes.districts.forEach(shape=>shape.districts.forEach(name=>shapeOfDistrict.set(name,shape)));}
+  if(towns)townshipShapes=new Map(towns.townships.map(shape=>[shape.id,shape]));
   const roster=data.registered_candidates;
   if(!roster)throw Error('無法讀取登記名冊');
   geometry=geo;PARTY_COLORS=colors;registeredSources=roster.sources||(roster.source?[roster.source]:[]);incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   roster.records.forEach(record=>{
     // 縣轄市長不進地圖的圓點與人數統計，只記每縣的登記人數，供側欄的導向連結使用
-    if(record.office==='縣轄市長'){township.registered.set(record.city,(township.registered.get(record.city)||0)+1);return}
+    if(record.office==='縣轄市長'){
+      if(!township.registered.has(record.city))township.registered.set(record.city,[]);
+      township.registered.get(record.city).push(record);return;
+    }
     const key=record.office==='縣市長'?'mayor':record.office==='縣市議員'?'councilor':'';
     if(!key)return;
     if(!registered[key].has(record.city))registered[key].set(record.city,[]);
@@ -422,8 +485,10 @@ Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDat
   });
   const shared=data.shared_policy_groups||[];
   byOffice={mayor:groupByCity(data.records,shared,'mayor'),councilor:groupByCity(data.records,shared,'councilor')};
-  groupCandidateRecords(data.records.filter(record=>record.office==='縣轄市長'),shared)
-    .forEach(item=>township.recorded.set(item.city,(township.recorded.get(item.city)||0)+1));
+  groupCandidateRecords(data.records.filter(record=>record.office==='縣轄市長'),shared).forEach(item=>{
+    if(!township.byCity.has(item.city))township.byCity.set(item.city,[]);
+    township.byCity.get(item.city).push(item);
+  });
   const cities=new Set([...byOffice.mayor.keys(),...byOffice.councilor.keys()]);
   const all=[...byOffice.mayor.values(),...byOffice.councilor.values()].flat();
   statCities.textContent=`${cities.size}/22`;

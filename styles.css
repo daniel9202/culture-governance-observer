@@ -272,6 +272,8 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-district-shape{fill:none;stroke:#7f7c6e;stroke-width:.5;stroke-linejoin:round;cursor:pointer}
 .map-district-shape.has-records{fill:var(--lime);fill-opacity:.5;stroke:#5f6833;stroke-width:.7}
 .map-district-shape.is-approximate{stroke-dasharray:2.5 2}
+.map-district-shape.is-township{stroke:#55584e;stroke-width:.9;stroke-dasharray:3.5 2.5}
+.map-district-shape.is-township.has-records{fill:var(--lime);fill-opacity:.5;stroke:#5f6833;stroke-dasharray:none}
 .map-district-shape:hover{fill:var(--lime);fill-opacity:.75}
 .party-legend .legend-district i{width:12px;height:9px;border-radius:2px;background:var(--lime);box-shadow:inset 0 0 0 1px #5f6833}
 /* 顯示選舉區界線時，選取的縣市改回中性底色，顏色留給選舉區 */
