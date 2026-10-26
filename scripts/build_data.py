@@ -15,6 +15,8 @@ INPUT = ROOT / "data" / "input"
 OUTPUT = ROOT / "data"
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PROPOSER_ROLES = {"候選人", "現任議員", "推定現任議員", "待判定"}
+# published_date 留空時 editor_notes 必須包含這句，說明是來源沒有日期而不是還沒查
+NO_DATE_NOTE = "來源頁面沒有發布日期"
 CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任問政／提案", "現任首長施政"}
 REVIEW_STATUSES = {"人工審核", "AI初審待複核"}
 TOPIC_CATEGORY_NAMES = {
@@ -163,7 +165,7 @@ def build_candidates():
         if not any(row.values()):
             continue
         label = f"candidates.csv row {index}"
-        required(row, ["id", "city", "office", "candidate", "party", "summary", "published_date", "source_title", "source_url", "last_verified", "proposer_role", "content_nature", "role_evidence"], label)
+        required(row, ["id", "city", "office", "candidate", "party", "summary", "source_title", "source_url", "last_verified", "proposer_role", "content_nature", "role_evidence"], label)
         if "publish_id" not in row:
             raise ValueError("candidates.csv: missing publish_id column")
         publish_id = (row.get("publish_id") or "").strip()
@@ -175,7 +177,12 @@ def build_candidates():
             raise ValueError(f"{label}: new record requires publish_id")
         else:
             missing_legacy_publish_ids.append(index)
-        valid_date(row["published_date"], label)
+        # 候選人競選網站的政見頁本來就沒有發布日期，填擷取日會變成假資訊。
+        # 這種情況允許留空，但 editor_notes 必須寫明，避免和「還沒查」混在一起。
+        if row["published_date"]:
+            valid_date(row["published_date"], label)
+        elif NO_DATE_NOTE not in (row.get("editor_notes") or ""):
+            raise ValueError(f"{label}: published_date 留空時，editor_notes 必須註明「{NO_DATE_NOTE}」")
         valid_date(row["last_verified"], label)
         valid_url(row["source_url"], label)
         valid_choice(row["proposer_role"], PROPOSER_ROLES, "proposer_role", label)
