@@ -82,12 +82,9 @@
       "election": "2022臺北市長選舉",
       "reelection_status": "具2026連任資格",
       "topics": [
-        "文化預算",
-        "文化治理"
+        "文化預算"
       ],
-      "topic_categories": [
-        "文化治理與預算"
-      ],
+      "topic_categories": [],
       "topic_subcategories": [],
       "pledge_title": "將文化局及所屬機構預算逐年提升，4年內增加至總預算4%",
       "pledge_summary": "將文化局及所屬機構預算逐年提升，4年內增加至總預算4%。",
@@ -123,7 +120,6 @@
       ],
       "topic_categories": [
         "文化場館",
-        "文化治理與預算",
         "文化空間與城市再生"
       ],
       "topic_subcategories": [],
@@ -335,8 +331,7 @@
       ],
       "topic_categories": [
         "表演藝術",
-        "文化場館",
-        "文化治理與預算"
+        "文化場館"
       ],
       "topic_subcategories": [],
       "pledge_title": "鬆綁藝文團體租借場地法規",
@@ -408,13 +403,11 @@
       "topics": [
         "文化場館",
         "文學",
-        "文化治理",
         "文學館"
       ],
       "topic_categories": [
         "文化場館",
         "閱讀與圖書館",
-        "文化治理與預算",
         "博物館與地方文化館"
       ],
       "topic_subcategories": [],
