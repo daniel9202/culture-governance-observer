@@ -3,6 +3,9 @@
 const params=new URLSearchParams(location.search);
 const city=params.get('city')||'',office=params.get('office')==='councilor'?'councilor':'mayor',candidateName=params.get('name')||'';
 const OFFICE_LABEL={mayor:'縣市長',councilor:'縣市議員'};
+// 縣轄市長的 officeKey 和縣市長一樣是 mayor（同一個列表頁），但職務名稱不同，
+// 標題與說明一律用資料本身的 office，不要用 officeKey 反推。
+const officeName=record=>record&&record.office?record.office:OFFICE_LABEL[office];
 const escapeHtml=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 const listPage=key=>`${key==='councilor'?'councilors':'mayors'}.html?city=${encodeURIComponent(city)}`;
 
@@ -21,8 +24,8 @@ loadCandidateDataset({districts:office==='councilor'}).then(data=>{
     title.textContent='找不到這位候選人';
     card.innerHTML='<p class="empty">本站目前沒有這位候選人的本屆競選文化政見，可能尚未收錄，或姓名已更正。可從上方連結查看該縣市的所有候選人。</p>';
   }else{
-    document.title=`${target.candidate}｜${city}${OFFICE_LABEL[office]}候選人文化政見｜文化治理觀察站`;
-    kicker.textContent=`${city}${target.district?` ${districtLabel(target)}`:''} / ${OFFICE_LABEL[office]}候選人`;
+    document.title=`${target.candidate}｜${city}${officeName(target)}候選人文化政見｜文化治理觀察站`;
+    kicker.textContent=`${city}${target.district?` ${districtLabel(target)}`:''} / ${officeName(target)}候選人`;
     title.textContent=target.candidate;
     party.textContent=target.party||'政黨待確認';
     card.innerHTML=renderCandidateCard(target,{showCity:false,linkName:false,openShared:true});

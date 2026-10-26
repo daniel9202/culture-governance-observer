@@ -39,6 +39,16 @@ let registered={mayor:new Map,councilor:new Map},registeredSources=[];
 const registeredIn=(key,city)=>registered[key].get(city)||[];
 // 現任縣市長登記連任（名冊 incumbent＝是，資料端依中選會名冊判定）
 const incumbentMayor=city=>registeredIn('mayor',city).find(record=>record.incumbent==='是');
+// 縣轄市長不畫在地圖上（縣轄市在縣以下，底圖沒有對應範圍），但地圖是進站入口，
+// 所以縣市長模式的側欄要有一行把人帶到「縣市長政見」頁的該縣市。
+let township={recorded:new Map,registered:new Map};
+const townshipNote=city=>{
+  const recorded=township.recorded.get(city)||0,registered=township.registered.get(city)||0;
+  if(!registered)return '';
+  return recorded
+    ?`<a class="map-detail-switch" href="mayors.html?city=${encodeURIComponent(city)}">本縣另有 ${recorded} 位縣轄市長候選人提出文化政策 →</a>`
+    :`<span class="map-district-note">本縣另有 ${registered} 位縣轄市長登記參選，尚未收錄文化政策。</span>`;
+};
 const sameCandidate=(registeredName,name)=>registeredName===name||registeredName.startsWith(name);
 // 議員模式的人數依目前圖層計算：區域選舉區與原住民選舉區分開算，否則面板會把全縣市的
 // 登記人數掛在原住民選舉區底下。
@@ -317,8 +327,9 @@ function renderDetail(){
   const missingNote=missing.length?`<p class="map-detail-missing">${office==='mayor'?`尚未收錄文化政策：${nameList(missing,12)}`:(shape?`本選舉區另有 ${missing.length} 位登記參選人尚未收錄文化政策：${nameList(missing,12)}`:`另有 ${missing.length} 位登記參選人尚未收錄文化政策`)}</p>`:'';
   const switchLink=otherCount?`<button type="button" class="map-detail-switch" data-switch="${other}">此縣市另有 ${otherCount} 位${OFFICES[other].label}候選人 →</button>`:'';
   const incumbentNote=incumbentLink((incumbents.get(city)||new Set).size,city,'map-detail-switch');
+  const townshipLine=office==='mayor'&&!shape?townshipNote(city):'';
   const regionLink=`<a class="map-detail-link" href="${regionUrl(city)}">${esc(city)}地方頁：預算、統計與全部候選人 →</a>`;
-  const foot=switchLink||incumbentNote?`<div class="map-detail-foot">${switchLink}${incumbentNote}</div>`:'';
+  const foot=switchLink||incumbentNote||townshipLine?`<div class="map-detail-foot">${switchLink}${townshipLine}${incumbentNote}</div>`:'';
   if(!city){detail.innerHTML='<p class="kicker">選擇縣市</p><h2>從地圖開始</h2><p class="map-detail-lead">點選地圖上的縣市，查看提出文化政策的候選人與政黨。</p>';return}
   const head=shape
     ?`<p class="kicker">${esc(city)} / ${OFFICES[office].label}</p><h2>${esc(shapeLabel(shape))}</h2>`
@@ -402,7 +413,8 @@ Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDat
   if(!roster)throw Error('無法讀取登記名冊');
   geometry=geo;PARTY_COLORS=colors;registeredSources=roster.sources||(roster.source?[roster.source]:[]);incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   roster.records.forEach(record=>{
-    // 縣轄市長不進地圖的人數統計
+    // 縣轄市長不進地圖的圓點與人數統計，只記每縣的登記人數，供側欄的導向連結使用
+    if(record.office==='縣轄市長'){township.registered.set(record.city,(township.registered.get(record.city)||0)+1);return}
     const key=record.office==='縣市長'?'mayor':record.office==='縣市議員'?'councilor':'';
     if(!key)return;
     if(!registered[key].has(record.city))registered[key].set(record.city,[]);
@@ -410,6 +422,8 @@ Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDat
   });
   const shared=data.shared_policy_groups||[];
   byOffice={mayor:groupByCity(data.records,shared,'mayor'),councilor:groupByCity(data.records,shared,'councilor')};
+  groupCandidateRecords(data.records.filter(record=>record.office==='縣轄市長'),shared)
+    .forEach(item=>township.recorded.set(item.city,(township.recorded.get(item.city)||0)+1));
   const cities=new Set([...byOffice.mayor.keys(),...byOffice.councilor.keys()]);
   const all=[...byOffice.mayor.values(),...byOffice.councilor.values()].flat();
   statCities.textContent=`${cities.size}/22`;
