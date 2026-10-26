@@ -273,7 +273,7 @@ REQUIRED_RESULT_FIELDS = ("is_relevant", "summary", "reason", "confidence", "act
                           "topics", "event_key", "nature")
 OFFICE_VALUES = ("縣市長", "縣轄市長", "縣市議員", "不適用")
 NATURE_VALUES = ("本屆競選政見", "現任施政成果", "其他")
-EXPORT_BODY_LIMIT = 3000
+EXPORT_BODY_LIMIT = 8000  # 3000 字會切掉報導後段的政見（2026-10-26 試跑時 1419、1421 都剛好截斷）
 
 
 def pending_candidates(values, columns, row_numbers, force, offset, limit):
@@ -291,10 +291,9 @@ def pending_candidates(values, columns, row_numbers, force, offset, limit):
         if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
             continue
         matched += 1
-        if matched <= offset:
+        # matched 要數完整個工作表，不能挑滿 limit 就 break，否則回報的總數會偏低
+        if matched <= offset or (limit is not None and len(picked) >= limit):
             continue
-        if limit is not None and len(picked) >= limit:
-            break
         picked.append((number, current, kind_by_label.get(current[columns["資料類型"]]), {
             "city": current[columns["縣市"]],
             "source_title": current[columns["來源標題"]],
@@ -303,7 +302,7 @@ def pending_candidates(values, columns, row_numbers, force, offset, limit):
     return picked, matched
 
 
-def export_pending(ws, path: Path, row_numbers, force, offset, limit):
+def export_pending(ws, path: Path, row_numbers, force, offset, limit, body_limit=EXPORT_BODY_LIMIT):
     """把待分析的列連同正文寫成 JSONL，交給不經 OpenAI API 的分析者（例如 Codex）。"""
     values = ws.get_all_values()
     columns = {name: index for index, name in enumerate(values[0])}
@@ -312,10 +311,13 @@ def export_pending(ws, path: Path, row_numbers, force, offset, limit):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as out:
         for number, _current, kind, row in picked:
-            body = article_text(row["source_url"])[:EXPORT_BODY_LIMIT]
+            full = article_text(row["source_url"])
+            body = full[:body_limit]
+            truncated = len(full) > body_limit
             out.write(json.dumps({"row": number, "kind": kind, "city": row["city"],
                                   "source_title": row["source_title"], "source_url": row["source_url"],
-                                  "article_text": body}, ensure_ascii=False) + "\n")
+                                  "article_text": body, "truncated": truncated,
+                                  "article_length": len(full)}, ensure_ascii=False) + "\n")
     rules = path.with_suffix(".prompt.md")
     sample = picked[0] if picked else (0, [], "candidate", {"city": "", "source_title": "", "source_url": ""})
     rules.write_text(
@@ -497,6 +499,7 @@ def main():
     parser.add_argument("--force", action="store_true", help="連 AI 摘要已填的列也重跑（僅適用 --reanalyze，換提示詞後重新分析用）")
     parser.add_argument("--offset", type=int, default=0, help="跳過前幾列符合條件的列再開始（僅適用 --reanalyze，搭配 --limit 分批）")
     parser.add_argument("--export-pending", metavar="FILE", help="把待分析的列連同正文匯出成 JSONL，交給不經 OpenAI API 的分析者")
+    parser.add_argument("--body-limit", type=int, default=EXPORT_BODY_LIMIT, help=f"匯出時每則正文的字數上限（預設 {EXPORT_BODY_LIMIT}）")
     parser.add_argument("--import-results", metavar="FILE", help="把外部分析結果（JSONL）驗證後寫回 Sheet")
     parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
     args = parser.parse_args()
@@ -541,7 +544,7 @@ def main():
     ws = worksheet()
     # 匯出／匯入完全不碰模型，不要求 OPENAI_API_KEY
     if args.export_pending:
-        export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit)
+        export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit, args.body_limit)
         return
     if args.import_results:
         ensure_extra_headers(ws, ws.get_all_values())
