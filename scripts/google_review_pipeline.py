@@ -6,6 +6,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -23,9 +24,9 @@ SPREADSHEET_ID = os.environ.get("GOOGLE_REVIEW_SPREADSHEET_ID", "")
 HEADERS = ["資料類型", "收集時間", "縣市", "發布日期", "來源名稱", "來源標題", "來源網址", "審核狀態", "AI摘要", "AI分類", "AI判斷理由", "AI信心分數", "候選人／提出者", "政黨／提出者類型", "職務", "政策主張／具體訴求", "人工備註", "審核者", "審核時間", "發布ID"]
 # Sheet 的 A:T 是審核台的欄位契約（Code.gs 的 HEADERS），不能動；
 # 新的結構化欄位接在既有的 A:Z 之後，審核台不讀，不影響它的驗證。
-EXTRA_HEADERS = ["政見名稱", "政策論述", "分組鍵", "原文對照"]
+EXTRA_HEADERS = ["政見名稱", "政策論述", "分組鍵", "原文對照", "內容性質"]
 EXTRA_FIRST_COLUMN = "AA"
-EXTRA_LAST_COLUMN = "AD"
+EXTRA_LAST_COLUMN = "AE"
 TOPIC_TAGS_FILE = ROOT / "config" / "topic_categories.csv"
 KIND_LABELS = {"candidate": "候選人政見", "civic_call": "民間政策訴求"}
 SKIPPED_REANALYZE_LABELS = {"公民政策倡議"}
@@ -108,7 +109,8 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
 - source_sentences 與 concrete_proposals 等長，逐項放該主張所依據的來源整句原文（不刪減），供審核者對照。
 - policy_title 只填來源自己命名的政見名稱（例「文化旗艦．魅力臺中」「五大客家政策」），來源沒有命名就留空字串，不要自創。
 - policy_argument 放整體論述一句，來源沒有就留空字串。
-- event_key 用「提出者姓名＋政見名稱」組成、去掉標點與空白（例「江啟臣文化旗艦魅力臺中」）；同一場發布會的不同報導必須得到相同的 event_key。沒有政見名稱時改用「姓名＋主要主張的關鍵詞」。
+- nature 區分語境：候選人承諾未來要做的事填「本屆競選政見」；現任首長或議員敘述任內已完成或正在做的事（例「市府已將客語繪本改編為動畫、累計獲得 13 項國際獎項」）填「現任施政成果」；其餘填「其他」。同一則若兩種都有，concrete_proposals 只放承諾未來要做的，已完成的成果放 policy_argument。
+- event_key 不得留空。用「提出者姓名＋政見名稱」組成、去掉標點與空白（例「江啟臣文化旗艦魅力臺中」）；同一場發布會的不同報導必須得到相同的 event_key。沒有政見名稱時改用「姓名＋主要主張的關鍵詞」。
 - topics 從下列清單挑 1 至 5 個，不得自創：{'、'.join(tags)}。
 - office 只能填「縣市長」「縣轄市長」「縣市議員」「不適用」。「縣轄市長」指竹北、頭份、苗栗、彰化、員林、南投、斗六、太保、朴子、屏東、宜蘭、花蓮、臺東、馬公 14 個縣轄市的市長；鄉長、鎮長與鄉鎮市民代表不在收錄範圍，office 填「不適用」並在 reason 寫明實際職務。
 """
@@ -119,7 +121,7 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
             "type": "object", "additionalProperties": False,
             "properties": {
                 "is_relevant": {"type": "boolean"}, "summary": {"type": "string"},
-                "category": {"type": "string"}, "reason": {"type": "string"},
+                "reason": {"type": "string"},
                 "confidence": {"type": "number", "minimum": 0, "maximum": 1},
                 "actor": {"type": "string"}, "actor_type": {"type": "string"},
                 "office": {"type": "string", "enum": ["縣市長", "縣轄市長", "縣市議員", "不適用"]},
@@ -129,11 +131,12 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
                 "concrete_proposals": {"type": "array", "items": {"type": "string"}},
                 "source_sentences": {"type": "array", "items": {"type": "string"}},
                 "topics": {"type": "array", "items": {"type": "string", "enum": tags}},
-                "event_key": {"type": "string"}
+                "event_key": {"type": "string"},
+                "nature": {"type": "string", "enum": ["本屆競選政見", "現任施政成果", "其他"]}
             },
-            "required": ["is_relevant", "summary", "category", "reason", "confidence", "actor", "actor_type", "office",
+            "required": ["is_relevant", "summary", "reason", "confidence", "actor", "actor_type", "office",
                          "policy_or_request", "policy_title", "policy_argument", "concrete_proposals",
-                         "source_sentences", "topics", "event_key"]
+                         "source_sentences", "topics", "event_key", "nature"]
         }}},
     )
     return json.loads(response.output_text)
@@ -143,9 +146,16 @@ def ai_columns(ai):
     """AI 結果 → Sheet 既有欄位（分類、政策主張）與新增欄位（AA:AD）。"""
     proposals = [x.strip() for x in ai.get("concrete_proposals", []) if x.strip()] or \
         [x.strip() for x in (ai.get("policy_or_request") or "").split("||") if x.strip()]
-    topics = "|".join(dict.fromkeys(ai.get("topics", []))) or ai.get("category", "")
-    extra = [ai.get("policy_title", ""), ai.get("policy_argument", ""), ai.get("event_key", ""),
-             "||".join(x.strip() for x in ai.get("source_sentences", []) if x.strip())]
+    # 不退回舊的 category：那是自由字串，2026-10-26 首批重跑時把 candidate 寫進了 AI分類欄
+    topics = "|".join(dict.fromkeys(ai.get("topics", [])))
+    key = (ai.get("event_key") or "").strip()
+    if not key:
+        # 模型偶爾留空；用姓名＋政見名稱（或第一項主張）補上，同一場發布會仍能歸在一起
+        base = ai.get("policy_title") or (proposals[0][:12] if proposals else "")
+        key = re.sub(r"[^\w\u4e00-\u9fff]", "", f"{ai.get('actor', '')}{base}")
+    extra = [ai.get("policy_title", ""), ai.get("policy_argument", ""), key,
+             "||".join(x.strip() for x in ai.get("source_sentences", []) if x.strip()),
+             ai.get("nature", "")]
     return topics, "||".join(proposals), extra
 
 
