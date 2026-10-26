@@ -285,7 +285,7 @@ NATURE_VALUES = ("本屆競選政見", "現任施政成果", "其他")
 EXPORT_BODY_LIMIT = 8000  # 3000 字會切掉報導後段的政見（2026-10-26 試跑時 1419、1421 都剛好截斷）
 
 
-def pending_candidates(values, columns, row_numbers, force, offset, limit):
+def pending_candidates(values, columns, row_numbers, force, offset, limit, include_accepted=False):
     """挑出要分析的列：待審、且（摘要空白或 --force）。回傳 (列號, 該列, kind, row)。"""
     kind_by_label = {label: kind for kind, label in KIND_LABELS.items()}
     picked, matched = [], 0
@@ -293,7 +293,8 @@ def pending_candidates(values, columns, row_numbers, force, offset, limit):
         current = current + [""] * (len(values[0]) - len(current))
         if row_numbers is not None and number not in row_numbers:
             continue
-        if current[columns["審核狀態"]] != "pending":
+        status = current[columns["審核狀態"]]
+        if status != "pending" and not (include_accepted and status == "accepted"):
             continue
         if not force and current[columns["AI摘要"]].strip():
             continue
@@ -311,11 +312,11 @@ def pending_candidates(values, columns, row_numbers, force, offset, limit):
     return picked, matched
 
 
-def export_pending(ws, path: Path, row_numbers, force, offset, limit, body_limit=EXPORT_BODY_LIMIT):
+def export_pending(ws, path: Path, row_numbers, force, offset, limit, body_limit=EXPORT_BODY_LIMIT, include_accepted=False):
     """把待分析的列連同正文寫成 JSONL，交給不經 OpenAI API 的分析者（例如 Codex）。"""
     values = ws.get_all_values()
     columns = {name: index for index, name in enumerate(values[0])}
-    picked, matched = pending_candidates(values, columns, row_numbers, force, offset, limit)
+    picked, matched = pending_candidates(values, columns, row_numbers, force, offset, limit, include_accepted)
     tags = topic_tags()
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as out:
@@ -393,7 +394,12 @@ def import_results(ws, path: Path):
         current = values[number - 1] + [""] * (len(values[0]) - len(values[number - 1]))
         note = current[columns["人工備註"]] or ("AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else "")
         topics, proposals, extra = ai_columns(ai)
-        updates.append({"range": f"I{number}:Q{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], proposals, note]]})
+        if current[columns["審核狀態"]] == "accepted":
+            # 已經人工審核過：候選人、政黨、職務、人工備註是審核者填的，不覆蓋
+            updates.append({"range": f"I{number}:L{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"]]]})
+            updates.append({"range": f"P{number}", "values": [[proposals]]})
+        else:
+            updates.append({"range": f"I{number}:Q{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], proposals, note]]})
         updates.append({"range": f"U{number}:V{number}", "values": [["complete", device]]})
         updates.append({"range": f"X{number}:Y{number}", "values": [[completed_at, ""]]})
         updates.append({"range": f"{EXTRA_FIRST_COLUMN}{number}:{EXTRA_LAST_COLUMN}{number}", "values": [extra]})
@@ -402,7 +408,7 @@ def import_results(ws, path: Path):
     print(f"已寫回 {len(items)} 列（{path.name}）", flush=True)
 
 
-def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None, force: bool = False, offset: int = 0) -> None:
+def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None, force: bool = False, offset: int = 0, include_accepted: bool = False) -> None:
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
@@ -432,8 +438,11 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
         current += [""] * (len(values[0]) - len(current))
         if row_numbers is not None and number not in row_numbers:
             continue
+        status = current[columns["審核狀態"]]
+        if status != "pending" and not (include_accepted and status == "accepted"):
+            continue
         # --force：換過提示詞之後要重跑已經分析完的列，這時不看「摘要是否已填」
-        if current[columns["審核狀態"]] != "pending" or (not force and current[columns["AI摘要"]].strip()):
+        if not force and current[columns["AI摘要"]].strip():
             continue
         if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
             skipped += 1
@@ -466,8 +475,18 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
             note = current[columns["人工備註"]] or ("AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else "")
             completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
             topics, proposals, extra = ai_columns(ai)
-            updates = [
-                {"range": f"I{number}:Q{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], proposals, note]]},
+            if current[columns["審核狀態"]] == "accepted":
+                # 已經人工審核過：候選人、政黨、職務、人工備註是審核者填的，不覆蓋，
+                # 只更新 AI 自己產出的摘要、分類、理由、信心與具體主張。
+                updates = [
+                    {"range": f"I{number}:L{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"]]]},
+                    {"range": f"P{number}", "values": [[proposals]]},
+                ]
+            else:
+                updates = [
+                    {"range": f"I{number}:Q{number}", "values": [[ai["summary"], topics, ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], proposals, note]]},
+                ]
+            updates += [
                 {"range": f"U{number}:V{number}", "values": [["complete", device]]},
                 {"range": f"X{number}:Y{number}", "values": [[completed_at, ""]]},
                 {"range": f"{EXTRA_FIRST_COLUMN}{number}:{EXTRA_LAST_COLUMN}{number}", "values": [extra]},
@@ -508,6 +527,7 @@ def main():
     parser.add_argument("--force", action="store_true", help="連 AI 摘要已填的列也重跑（僅適用 --reanalyze，換提示詞後重新分析用）")
     parser.add_argument("--offset", type=int, default=0, help="跳過前幾列符合條件的列再開始（僅適用 --reanalyze，搭配 --limit 分批）")
     parser.add_argument("--export-pending", metavar="FILE", help="把待分析的列連同正文匯出成 JSONL，交給不經 OpenAI API 的分析者")
+    parser.add_argument("--include-accepted", action="store_true", help="連已接受的列也處理（重跑時不覆蓋候選人、政黨、職務、人工備註這四個人工審核過的欄位）")
     parser.add_argument("--body-limit", type=int, default=EXPORT_BODY_LIMIT, help=f"匯出時每則正文的字數上限（預設 {EXPORT_BODY_LIMIT}）")
     parser.add_argument("--import-results", metavar="FILE", help="把外部分析結果（JSONL）驗證後寫回 Sheet")
     parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
@@ -553,7 +573,7 @@ def main():
     ws = worksheet()
     # 匯出／匯入完全不碰模型，不要求 OPENAI_API_KEY
     if args.export_pending:
-        export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit, args.body_limit)
+        export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit, args.body_limit, args.include_accepted)
         return
     if args.import_results:
         ensure_extra_headers(ws, ws.get_all_values())
@@ -562,7 +582,7 @@ def main():
     client = OpenAI()
     if args.reanalyze:
         ensure_extra_headers(ws, ws.get_all_values())
-        reanalyze_sheet(ws, client, args.limit, row_numbers, force=args.force, offset=args.offset)
+        reanalyze_sheet(ws, client, args.limit, row_numbers, force=args.force, offset=args.offset, include_accepted=args.include_accepted)
         return
     chunk = args.chunk
     values = ws.get_all_values()
