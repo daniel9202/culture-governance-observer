@@ -106,7 +106,12 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
     return json.loads(response.output_text)
 
 
-def append_to_sheet(ws, values, output):
+def last_data_row(values):
+    """最後一列有網址的資料列；尾端的空白列不算。"""
+    return max((number for number, row in enumerate(values[1:], start=2) if len(row) > 6 and row[6].strip()), default=1)
+
+
+def append_to_sheet(ws, start, output):
     """寫入新列並讀回驗證。
 
     不用 ws.append_rows()：那張工作表有大量預先格式化的空白列（2026-10-26 時
@@ -118,9 +123,6 @@ def append_to_sheet(ws, values, output):
     completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     # 一般模式原本不填 U/V/X，審核台會看到空白的處理狀態；一併補上。
     rows = [list(row) + ["complete", device, "", completed_at, "", ""] for row in output]
-    # 以「最後一列有網址的資料列」為準，不用 len(values)：尾端的空白列也會被算進去
-    last = max((number for number, row in enumerate(values[1:], start=2) if len(row) > 6 and row[6].strip()), default=1)
-    start = last + 1
     end = start + len(rows) - 1
     needed = end - ws.row_count
     if needed > 0:
@@ -133,7 +135,8 @@ def append_to_sheet(ws, values, output):
     missing = expected - landed
     if missing:
         raise SystemExit(f"寫入後驗證失敗：{len(missing)} 筆未落在 A{start}:Z{end}，請勿重跑前先檢查工作表")
-    print(f"已寫入並驗證 A{start}:Z{end}（{len(rows)} 列）")
+    print(f"已寫入並驗證 A{start}:Z{end}（{len(rows)} 列）", flush=True)
+    return end
 
 
 def inbox_rows():
@@ -158,7 +161,7 @@ def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
             time.sleep(delay)
 
 
-def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None) -> None:
+def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int] | None = None, force: bool = False) -> None:
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
@@ -188,7 +191,8 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
         current += [""] * (len(values[0]) - len(current))
         if row_numbers is not None and number not in row_numbers:
             continue
-        if current[columns["審核狀態"]] != "pending" or current[columns["AI摘要"]].strip():
+        # --force：換過提示詞之後要重跑已經分析完的列，這時不看「摘要是否已填」
+        if current[columns["審核狀態"]] != "pending" or (not force and current[columns["AI摘要"]].strip()):
             continue
         if current[columns["資料類型"]] in SKIPPED_REANALYZE_LABELS:
             skipped += 1
@@ -253,6 +257,8 @@ def main():
     parser.add_argument("--reanalyze", action="store_true", help="重新分析 Sheet 上待審且 AI 摘要為空的既有列")
     parser.add_argument("--limit", type=int, help="最多處理幾列（僅適用 --reanalyze）")
     parser.add_argument("--rows", help="只處理指定 Sheet 列號，以逗號分隔（僅適用 --reanalyze）")
+    parser.add_argument("--force", action="store_true", help="連 AI 摘要已填的列也重跑（僅適用 --reanalyze，換提示詞後重新分析用）")
+    parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
         parser.error("--limit 必須大於 0")
@@ -260,6 +266,10 @@ def main():
         parser.error("--limit 只能搭配 --reanalyze")
     if args.rows and not args.reanalyze:
         parser.error("--rows 只能搭配 --reanalyze")
+    if args.force and not args.reanalyze:
+        parser.error("--force 只能搭配 --reanalyze")
+    if args.chunk < 1:
+        parser.error("--chunk 必須大於 0")
     try:
         row_numbers = {int(value) for value in args.rows.split(",")} if args.rows else None
     except ValueError:
@@ -269,8 +279,9 @@ def main():
     ws = worksheet()
     client = OpenAI()
     if args.reanalyze:
-        reanalyze_sheet(ws, client, args.limit, row_numbers)
+        reanalyze_sheet(ws, client, args.limit, row_numbers, force=args.force)
         return
+    chunk = args.chunk
     values = ws.get_all_values()
     if not values or values[0][:len(HEADERS)] != HEADERS:
         raise SystemExit("Google Sheet 欄位不符，停止寫入")
@@ -278,6 +289,22 @@ def main():
     output = []
     backfill = []
     skipped = 0
+    appended = 0
+    next_row = last_data_row(values) + 1
+
+    def flush(force=False):
+        """每累積 chunk 列就寫一次，並印出列號。
+
+        桌面版 Codex 跑長指令時常吞掉緩衝輸出，而且一次寫到最後才落盤的話，
+        中途失敗整輪就白跑（2026-10-26 曾因此損失 130 列的分析）。
+        """
+        nonlocal output, next_row, appended
+        if not output or (not force and len(output) < chunk):
+            return
+        next_row = append_to_sheet(ws, next_row, output) + 1
+        appended += len(output)
+        output = []
+
     for kind, row in inbox_rows():
         if row["source_url"] in existing:
             number, current = existing[row["source_url"]]
@@ -295,11 +322,11 @@ def main():
         note = "AI 建議排除（仍待人工確認）" if not ai["is_relevant"] else ""
         output.append([KIND_LABELS[kind], row["collected_at"], row["city"], row["published_date"], row["source_name"], row["source_title"], row["source_url"], status, ai["summary"], ai["category"], ai["reason"], ai["confidence"], ai["actor"], ai["actor_type"], ai["office"], ai["policy_or_request"], note, "", "", ""])
         existing[row["source_url"]] = (0, [])
+        flush()
+    flush(force=True)
     if backfill:
         ws.batch_update(backfill, value_input_option="USER_ENTERED")
-    if output:
-        append_to_sheet(ws, values, output)
-    print(f"Google review sheet: appended={len(output)}, AI_backfilled={len(backfill)}, already_complete={skipped}")
+    print(f"Google review sheet: appended={appended}, AI_backfilled={len(backfill)}, already_complete={skipped}", flush=True)
 
 
 if __name__ == "__main__":
