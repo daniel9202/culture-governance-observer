@@ -92,6 +92,26 @@ git status --short --branch
 
 只有在工作目錄乾淨時才執行 `git pull --rebase`。不要使用 `git add .`、`git clean -fd` 或 `git reset --hard`。
 
+### 重建 clasp 設定（`.clasp.json`）
+
+`.clasp.json` 在 `.gitignore` 裡、不進版本庫，所以重新 clone 或新開工作目錄（包含設計端的 `git worktree` 目錄）之後都不會有，而且兩個工作目錄不共用，要推審核台的那個目錄自己建一份。
+
+**不要從別台電腦或別的目錄複製**（`AGENTS.md` 規則）：每台電腦自己 `clasp login`、自己建 `.clasp.json`。也不要用 `clasp clone` 代替——它會把 Google 上的程式拉下來覆蓋 `apps-script/`，方向正好相反。
+
+在要推送的工作目錄下：
+
+1. `clasp login --status` 確認已登入；沒有就 `clasp login`。
+2. 到 Apps Script 專案的「專案設定」複製指令碼 ID（scriptId）。**不要寫進 git、文件或聊天訊息。**
+3. 在該工作目錄的根目錄建 `.clasp.json`：
+
+   ```json
+   { "scriptId": "<從專案設定複製>", "rootDir": "apps-script" }
+   ```
+
+   `rootDir` 一定要填 `apps-script`。漏掉的話 `clasp push` 會把整個 repo 當成 Apps Script 專案上傳，而 `clasp push` 是整份覆蓋、不合併。
+4. `clasp list-deployments`，與下面「審核台部署紀錄」最近一筆對照（現為第 13 版，commit `dae2d99`，BUILD `2026-10-24-2`）。不一致就停下來回報使用者，不要先推。
+5. `git pull --rebase`，確認在 `main`（或使用者指定、比 `main` 更新的分支）之後才 `clasp push`。
+
 ## 系統與資料流
 
 ```text
@@ -128,13 +148,13 @@ git status --short --branch
 
 | 檔案 | 用途 | 筆數 |
 | --- | --- | ---: |
-| `candidates.csv` | 候選人文化政見 | 39 |
-| `civic_policy_calls.csv` | 民間文化政策訴求 | 6 |
+| `candidates.csv` | 候選人文化政見 | 95 |
+| `civic_policy_calls.csv` | 民間文化政策訴求 | 4 |
 | `governments.csv` | 各縣市年度文化預決算 | 308 |
 | `local_cultural_issues.csv` | 地方文化議題 | 4 |
 | `pledge_fulfillment.csv` | 政策承諾實現追蹤 | 13 |
 | `region_metrics.csv` | 區域文化指標 | 22 |
-| `registered_candidates.csv` | 中選會登記參選人名冊（縣市長、議員；轉檔產生） | 1,583 |
+| `registered_candidates.csv` | 中選會登記參選人名冊（縣市長 81、縣市議員 1,492、縣轄市長 38；轉檔產生） | 1,611 |
 | `shared_policy_groups.csv` | 政黨／區域共同政見 | 2 |
 
 資料層級：

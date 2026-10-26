@@ -1,11 +1,26 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-23",
-  "source": {
-    "title": "中央選舉委員會：115年地方公職人員選舉候選人登記名冊，依115年10月16日審定公告更新",
-    "url": "https://web.cec.gov.tw/central/article/65213",
-    "as_of": "2026-10-16"
-  },
+  "last_updated": "2026-10-26",
+  "sources": [
+    {
+      "offices": "縣市長",
+      "title": "中央選舉委員會：115年地方公職人員選舉候選人登記名冊，依115年10月16日審定公告更新",
+      "url": "https://web.cec.gov.tw/central/article/65213",
+      "as_of": "2026-10-16"
+    },
+    {
+      "offices": "縣市議員",
+      "title": "中央選舉委員會：115年地方公職人員選舉候選人登記名冊，依115年10月16日審定公告更新",
+      "url": "https://web.cec.gov.tw/central/article/65213",
+      "as_of": "2026-10-16"
+    },
+    {
+      "offices": "縣轄市長",
+      "title": "中央選舉委員會：115年鄉鎮市長選舉候選人登記彙總表",
+      "url": "https://web.cec.gov.tw/central/article/64709",
+      "as_of": "2026-09-07"
+    }
+  ],
   "records": [
     {
       "city": "臺北市",
@@ -14162,6 +14177,348 @@
       "candidate": "孫貫志",
       "party": "無",
       "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣轄市長",
+      "district": "竹北市",
+      "candidate": "李貞秀",
+      "party": "無",
+      "registered_date": "2026-08-31",
+      "incumbent": ""
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣轄市長",
+      "district": "竹北市",
+      "candidate": "邱臣遠",
+      "party": "台灣民眾黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣轄市長",
+      "district": "竹北市",
+      "candidate": "吳旭智",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣轄市長",
+      "district": "竹北市",
+      "candidate": "曾聖凱",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "苗栗縣",
+      "office": "縣轄市長",
+      "district": "苗栗市",
+      "candidate": "禹耀東",
+      "party": "無",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "苗栗縣",
+      "office": "縣轄市長",
+      "district": "苗栗市",
+      "candidate": "余文忠",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "苗栗縣",
+      "office": "縣轄市長",
+      "district": "苗栗市",
+      "candidate": "楊燕梅",
+      "party": "無",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "苗栗縣",
+      "office": "縣轄市長",
+      "district": "苗栗市",
+      "candidate": "林月琴",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "苗栗縣",
+      "office": "縣轄市長",
+      "district": "頭份市",
+      "candidate": "曾玟學",
+      "party": "無",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "苗栗縣",
+      "office": "縣轄市長",
+      "district": "頭份市",
+      "candidate": "徐功凡",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣轄市長",
+      "district": "彰化市",
+      "candidate": "陳文賓",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣轄市長",
+      "district": "彰化市",
+      "candidate": "黃柏瑜",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣轄市長",
+      "district": "員林市",
+      "candidate": "張裕國",
+      "party": "無",
+      "registered_date": "2026-08-31",
+      "incumbent": ""
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣轄市長",
+      "district": "員林市",
+      "candidate": "凃俊任",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣轄市長",
+      "district": "員林市",
+      "candidate": "張政岳",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "南投縣",
+      "office": "縣轄市長",
+      "district": "南投市",
+      "candidate": "林富紳",
+      "party": "無",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "南投縣",
+      "office": "縣轄市長",
+      "district": "南投市",
+      "candidate": "張嘉哲",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "南投縣",
+      "office": "縣轄市長",
+      "district": "南投市",
+      "candidate": "沈夙崢",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣轄市長",
+      "district": "斗六市",
+      "candidate": "黃尤美",
+      "party": "中國國民黨",
+      "registered_date": "2026-08-31",
+      "incumbent": ""
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣轄市長",
+      "district": "斗六市",
+      "candidate": "賴淑娞",
+      "party": "無",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣轄市長",
+      "district": "斗六市",
+      "candidate": "尹令瑛",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "嘉義縣",
+      "office": "縣轄市長",
+      "district": "太保市",
+      "candidate": "鄭淑分",
+      "party": "無",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "嘉義縣",
+      "office": "縣轄市長",
+      "district": "太保市",
+      "candidate": "呂慧瑜",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "嘉義縣",
+      "office": "縣轄市長",
+      "district": "朴子市",
+      "candidate": "黃嫈珺",
+      "party": "無",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "嘉義縣",
+      "office": "縣轄市長",
+      "district": "朴子市",
+      "candidate": "王如經",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "屏東縣",
+      "office": "縣轄市長",
+      "district": "屏東市",
+      "candidate": "梁育慈",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-01",
+      "incumbent": ""
+    },
+    {
+      "city": "屏東縣",
+      "office": "縣轄市長",
+      "district": "屏東市",
+      "candidate": "周佳琪",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣轄市長",
+      "district": "宜蘭市",
+      "candidate": "陳美玲",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣轄市長",
+      "district": "宜蘭市",
+      "candidate": "韓瑩",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣轄市長",
+      "district": "宜蘭市",
+      "candidate": "楊仟慧",
+      "party": "無",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣轄市長",
+      "district": "花蓮市",
+      "candidate": "魏嘉彥",
+      "party": "無",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣轄市長",
+      "district": "花蓮市",
+      "candidate": "戴于文",
+      "party": "台灣民眾黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣轄市長",
+      "district": "花蓮市",
+      "candidate": "賴威任",
+      "party": "無",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣轄市長",
+      "district": "花蓮市",
+      "candidate": "張榮法",
+      "party": "無",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣轄市長",
+      "district": "臺東市",
+      "candidate": "陳銘風",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-03",
+      "incumbent": ""
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣轄市長",
+      "district": "臺東市",
+      "candidate": "翁聖惠",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-04",
+      "incumbent": ""
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣轄市長",
+      "district": "馬公市",
+      "candidate": "黃健忠",
+      "party": "民主進步黨",
+      "registered_date": "2026-09-02",
+      "incumbent": ""
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣轄市長",
+      "district": "馬公市",
+      "candidate": "洪棟霖",
+      "party": "中國國民黨",
+      "registered_date": "2026-09-03",
       "incumbent": ""
     }
   ]
