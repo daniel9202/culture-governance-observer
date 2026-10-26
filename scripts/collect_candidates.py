@@ -124,6 +124,9 @@ def collect(config, collection):
                             continue
                         if item["published_date"] and datetime.fromisoformat(item["published_date"]).date() < cutoff:
                             continue
+                        # resolution_error 只用於上面的警告訊息，不是 inbox 欄位；
+                        # 一起寫進 rows 會讓 csv.DictWriter 在寫檔時丟 ValueError。
+                        item.pop("resolution_error", None)
                         rows.append({"collected_at": collected_at, **item, "review_status": "pending", "review_note": ""})
                         known_urls.add(item["source_url"])
                         known_titles.append((city, normalized_title(item["source_title"])))
