@@ -256,11 +256,38 @@ def append_to_sheet(ws, start, output):
 
 
 def inbox_rows():
-    for filename, kind in (("candidate_sources.csv", "candidate"), ("civic_policy_calls.csv", "civic_call")):
+    for filename, kind in (("candidate_sources.csv", "candidate"),
+                           ("councilor_sources.csv", "candidate"),
+                           ("civic_policy_calls.csv", "civic_call")):
         with (ROOT / "data" / "inbox" / filename).open(encoding="utf-8-sig", newline="") as source:
             for row in csv.DictReader(source):
                 if row.get("review_status") == "pending":
                     yield kind, row
+
+
+def append_pending_without_analysis(ws, filename):
+    """把單一 inbox 的 pending 列送入 Sheet，AI 欄位留空供 --export-pending 使用。"""
+    path = ROOT / "data" / "inbox" / filename
+    if path.parent != ROOT / "data" / "inbox" or not path.exists():
+        raise SystemExit(f"找不到 inbox：{filename}")
+    values = ws.get_all_values()
+    if not values or values[0][:len(HEADERS)] != HEADERS:
+        raise SystemExit("Google Sheet 欄位不符，停止寫入")
+    ensure_extra_headers(ws, values)
+    existing = {row[6].strip() for row in values[1:] if len(row) > 6 and row[6].strip()}
+    output = []
+    with path.open(encoding="utf-8-sig", newline="") as source:
+        for row in csv.DictReader(source):
+            if row.get("review_status") != "pending" or row.get("source_url", "").strip() in existing:
+                continue
+            output.append(["候選人政見", row["collected_at"], row["city"], row["published_date"],
+                           row["source_name"], row["source_title"], row["source_url"], "pending",
+                           "", "", "", "", "", "", "", "", row.get("review_note", ""), "", "", "",
+                           "", "", "", "", ""])
+            existing.add(row["source_url"].strip())
+    if output:
+        append_to_sheet(ws, last_data_row(values) + 1, output)
+    print(f"Google review sheet pending append: appended={len(output)}", flush=True)
 
 
 def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
@@ -530,6 +557,7 @@ def main():
     parser.add_argument("--include-accepted", action="store_true", help="連已接受的列也處理（重跑時不覆蓋候選人、政黨、職務、人工備註這四個人工審核過的欄位）")
     parser.add_argument("--body-limit", type=int, default=EXPORT_BODY_LIMIT, help=f"匯出時每則正文的字數上限（預設 {EXPORT_BODY_LIMIT}）")
     parser.add_argument("--import-results", metavar="FILE", help="把外部分析結果（JSONL）驗證後寫回 Sheet")
+    parser.add_argument("--append-pending", metavar="INBOX_FILE", help="不呼叫模型，只把指定 inbox 的 pending 列送入 Sheet")
     parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
@@ -544,8 +572,8 @@ def main():
         parser.error("--chunk 必須大於 0")
     if args.offset and not (args.reanalyze or args.export_pending):
         parser.error("--offset 只能搭配 --reanalyze 或 --export-pending")
-    if args.export_pending and args.import_results:
-        parser.error("--export-pending 與 --import-results 不能同時使用")
+    if sum(bool(value) for value in (args.export_pending, args.import_results, args.append_pending)) > 1:
+        parser.error("--export-pending、--import-results、--append-pending 不能同時使用")
     if args.offset < 0:
         parser.error("--offset 不可為負數")
     def parse_rows(text):
@@ -572,6 +600,9 @@ def main():
         parser.error("--rows 列號必須大於等於 2")
     ws = worksheet()
     # 匯出／匯入完全不碰模型，不要求 OPENAI_API_KEY
+    if args.append_pending:
+        append_pending_without_analysis(ws, args.append_pending)
+        return
     if args.export_pending:
         export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit, args.body_limit, args.include_accepted)
         return
