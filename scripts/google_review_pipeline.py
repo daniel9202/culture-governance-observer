@@ -86,6 +86,7 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
 - policy_or_request 逐項列出具體主張，照抄原句，每項之間用 || 分隔（前台會依 || 拆成多條）。
 - 含預算金額、期程、地點、場館或計畫名稱的句子不得省略或改寫。
 - 一則報導若包含兩位以上候選人或提出者的政見，actor 只填主要對象，summary 與 policy_or_request 只寫該對象的內容，不要把其他人的政見併進來；並在 reason 開頭寫「本則另含：○○、○○」，提醒審核者使用拆分功能。
+- office 只能填「縣市長」「縣轄市長」「縣市議員」「不適用」。「縣轄市長」指竹北、頭份、苗栗、彰化、員林、南投、斗六、太保、朴子、屏東、宜蘭、花蓮、臺東、馬公 14 個縣轄市的市長；鄉長、鎮長與鄉鎮市民代表不在收錄範圍，office 填「不適用」並在 reason 寫明實際職務。
 """
     response = client.responses.create(
         model=os.environ.get("OPENAI_REVIEW_MODEL", "gpt-5-mini"),
@@ -97,7 +98,7 @@ def analyze(client: OpenAI, kind: str, row: dict[str, str]) -> dict:
                 "category": {"type": "string"}, "reason": {"type": "string"},
                 "confidence": {"type": "number", "minimum": 0, "maximum": 1},
                 "actor": {"type": "string"}, "actor_type": {"type": "string"},
-                "office": {"type": "string", "enum": ["縣市長", "縣市議員", "不適用"]}, "policy_or_request": {"type": "string"}
+                "office": {"type": "string", "enum": ["縣市長", "縣轄市長", "縣市議員", "不適用"]}, "policy_or_request": {"type": "string"}
             },
             "required": ["is_relevant", "summary", "category", "reason", "confidence", "actor", "actor_type", "office", "policy_or_request"]
         }}},

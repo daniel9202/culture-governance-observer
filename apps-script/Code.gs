@@ -1,5 +1,5 @@
 const SPREADSHEET_ID = '1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k';
-const BUILD = '2026-10-24-2';
+const BUILD = '2026-10-26-1';
 const REVIEW_SHEET = '審核資料';
 const HEADERS = ['資料類型','收集時間','縣市','發布日期','來源名稱','來源標題','來源網址','審核狀態','AI摘要','AI分類','AI判斷理由','AI信心分數','候選人／提出者','政黨／提出者類型','職務','政策主張／具體訴求','人工備註','審核者','審核時間','發布ID'];
 function duplicateText(value) {
@@ -72,18 +72,23 @@ function getDashboard(filters) {
   return {counts, items: filtered.slice(offset, offset + limit), totalFiltered: filtered.length, cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
 }
 
-const OFFICE_VALUES = ['縣市長', '縣市議員', '不適用'];
-// 舊資料的「職務」是 AI 自由填的，先把寫法不同但意思明確的對應回三個選項；
+const OFFICE_VALUES = ['縣市長', '縣轄市長', '縣市議員', '不適用'];
+// 舊資料的「職務」是 AI 自由填的，先把寫法不同但意思明確的對應回四個選項；
 // 對應不到的保持原樣，由審核者在介面上重新選。
 const OFFICE_ALIASES = {
   '議員': '縣市議員', '市議員': '縣市議員', '縣議員': '縣市議員', '縣市議員': '縣市議員',
   '直轄市議員': '縣市議員', '市議員候選人': '縣市議員', '議員候選人': '縣市議員',
   '市長': '縣市長', '縣長': '縣市長', '縣市長': '縣市長', '直轄市長': '縣市長',
   '縣市長候選人': '縣市長', '市長候選人': '縣市長',
+  '縣轄市長': '縣轄市長',
   '不適用': '不適用', '無': '不適用', '民間團體': '不適用', '公民團體': '不適用',
 };
+// 縣轄市的市長是縣以下的層級，和「縣市長」不同。OFFICE_ALIASES 是整串比對，
+// 「竹北市長」不會被「市長」那一條吃掉，但也對應不到任何選項，所以先比對市名。
+const COUNTY_CITY_MAYOR = /^(竹北|頭份|苗栗|彰化|員林|南投|斗六|太保|朴子|屏東|宜蘭|花蓮|臺東|台東|馬公)市長(候選人)?$/;
 function normalizeOffice(value) {
   const text = String(value || '').trim();
+  if (COUNTY_CITY_MAYOR.test(text)) return '縣轄市長';
   return OFFICE_ALIASES[text] || text;
 }
 
