@@ -27,7 +27,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_map_geometry import (  # noqa: E402  共用投影、附圖與簡化設定
     INSETS, VIEW_W, VIEW_H, LON0, LON1, LAT0, LAT1,
-    area, centroid, dbf_rows, inset_parts, main_project, shp_rows, simplify, to_path,
+    area, centroid, clean, dbf_rows, inset_parts, main_project, shp_rows, simplify_shared, to_path, topology_nodes,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -125,14 +125,15 @@ def inset_filter(parts, inset):
     return moved
 
 
-def project_rings(rings, project, min_area=0.6, tolerance=0.45):
-    screen = []
-    for ring in rings:
+def project_rings(rings, project, nodes, min_area=0.6, tolerance=0.45):
+    """投影並簡化；以共用的交會點切弧段，與縣市底圖、相鄰選舉區的界線重合。"""
+    projected = []
+    for ring in map(clean, rings):
         points = [project(x, y) for x, y in ring]
-        if area(points) < min_area:
+        if len(ring) < 3 or area(points) < min_area:
             continue
-        screen.append(simplify(points, tolerance))
-    return screen
+        projected.append((ring, points))
+    return simplify_shared(projected, nodes, tolerance)
 
 
 def main():
@@ -140,6 +141,7 @@ def main():
     shapes = shp_rows(next(SOURCE.glob("*.shp")))
     towns = {(row["COUNTYNAME"], row["TOWNNAME"]): parts for row, parts in zip(rows, shapes)}
     villages = load_villages()
+    nodes = topology_nodes()
     by_county = collections.defaultdict(list)
     for (county, _), parts in towns.items():
         by_county[county].extend(parts)
@@ -176,13 +178,13 @@ def main():
             if not kept:
                 undrawn.append({"district": row["district"], "reason": "所屬離島未繪入底圖"})
                 continue
-            rings = project_rings(outline(kept), inset_projection[row["city"]])
+            rings = project_rings(outline(kept), inset_projection[row["city"]], nodes)
         else:
             inland = [p for p in parts if all(LON0 <= x <= LON1 and LAT0 <= y <= LAT1 for x, y in p[:1])]
             # 縣市底圖不繪入綠島、蘭嶼、小琉球、龜山島等外島，選舉區層跟著排除，
             # 否則會出現底圖沒有、只有選區界線的孤島（面積擋不掉：琉球鄉和永和區差不多大）
             drawn = basemap[row["city"]]
-            rings = [ring for ring in project_rings(outline(inland), main_project)
+            rings = [ring for ring in project_rings(outline(inland), main_project, nodes)
                      if inside(centroid(ring), drawn)]
         if not rings:
             undrawn.append({"district": row["district"], "reason": "所屬離島未繪入底圖"})

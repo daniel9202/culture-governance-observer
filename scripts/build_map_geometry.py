@@ -4,7 +4,9 @@
 https://data.gov.tw/dataset/7442 （COUNTY_MOI_1140318）
 
 原始 shapefile 不納入版本庫；需要更新界線時，將解壓後的檔案放在
-tmp/admin-map/source/ 後執行：
+tmp/admin-map/source/ 後執行（另需 tmp/admin-map/town/ 的鄉鎮市區界線與
+tmp/admin-map/village/ 的村里界圖，用來算出與選舉區共用的界線交會點，
+見 build_district_geometry.py）：
 
     py -3 scripts/build_map_geometry.py
 
@@ -13,12 +15,16 @@ tmp/admin-map/source/ 後執行：
 專案需求不繪入，頁面註記中須說明。
 """
 from pathlib import Path
+import csv
 import json
 import math
 import struct
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "tmp" / "admin-map" / "source"
+TOWN_SOURCE = ROOT / "tmp" / "admin-map" / "town"
+VILLAGE_SOURCE = ROOT / "tmp" / "admin-map" / "village"
+DISTRICTS = ROOT / "config" / "election_districts.csv"
 OUT = ROOT / "map-geometry.json"
 
 VIEW_W, VIEW_H = 560, 760
@@ -122,21 +128,56 @@ def simplify(points, tolerance):
     return [points[i] for i in sorted(keep)]
 
 
-def simplify_shared(rings, tolerance):
-    """共用邊界只簡化一次，相鄰縣市才會沿同一條線接合，不留縫隙或雙線。
+def clean(ring):
+    """去掉重複的連續點與環尾的閉合點，共用邊才比對得起來。"""
+    return [pt for i, pt in enumerate(ring) if pt != ring[i - 1]]
 
-    rings 為 (原始經緯度環, 畫面座標環)。以邊在幾個環出現切出弧段：同一段弧
-    不論哪個縣市使用，都以固定方向簡化，再依各環的走向接回。
+
+def junctions(rings):
+    """界線交會點：連到三個以上不同鄰點的頂點。縣市、鄉鎮市區、村里的界線
+    在原始圖資中共用頂點，以三層一起算出的交會點切弧段，任何一層的外框
+    經過同一段界線都會切在相同位置。"""
+    neighbours = {}
+    for ring in rings:
+        ring = clean(ring)
+        n = len(ring)
+        for i in range(n):
+            neighbours.setdefault(ring[i], set()).update((ring[i - 1], ring[(i + 1) % n]))
+    return {point for point, near in neighbours.items() if len(near) > 2}
+
+
+def topology_nodes():
+    """縣市、鄉鎮市區與（選舉區用到的）村里界線一起算出的交會點。
+
+    縣市底圖、議員選舉區、縣轄市三份圖分別由不同腳本產生，都以這組交會點切弧段、
+    以相同參數簡化，疊在一起時界線才會重合。"""
+    rings = [ring for parts in shp_rows(next(SOURCE.glob("*.shp"))) for ring in parts]
+    town = next(TOWN_SOURCE.glob("*.shp"), None)
+    if not town:
+        raise SystemExit(f"缺鄉鎮市區界線：請將 TOWN_MOI_1140318 解壓到 {TOWN_SOURCE.relative_to(ROOT)}")
+    rings += [ring for parts in shp_rows(town) for ring in parts]
+    counties = {row["city"] for row in csv.DictReader(DISTRICTS.open(encoding="utf-8")) if row["unit_level"] == "村里"}
+    if counties:
+        village = next(VILLAGE_SOURCE.glob("*.dbf"), None)
+        if not village:
+            raise SystemExit(f"缺村里界圖：請將村里界圖解壓到 {VILLAGE_SOURCE.relative_to(ROOT)}")
+        rows = dbf_rows(village)
+        shapes = shp_rows(next(VILLAGE_SOURCE.glob("*.shp")))
+        rings += [ring for row, parts in zip(rows, shapes) if row["COUNTYNAME"] in counties for ring in parts]
+    return junctions(rings)
+
+
+def simplify_shared(rings, nodes, tolerance, cache=None):
+    """共用邊界只簡化一次，相鄰區塊才會沿同一條線接合，不留縫隙或雙線。
+
+    rings 為 (原始經緯度環, 畫面座標環)，原始環要先經過 clean()。在交會點切出
+    弧段：同一段弧不論哪個區塊使用，都以固定方向簡化，再依各環的走向接回。
     """
-    owners = {}
-    for index, (raw, _) in enumerate(rings):
-        for a, b in zip(raw, raw[1:] + raw[:1]):
-            owners.setdefault(frozenset((a, b)), set()).add(index)
-    cache, result = {}, []
+    cache = {} if cache is None else cache
+    result = []
     for raw, screen in rings:
         n = len(raw)
-        sig = [frozenset(owners[frozenset((raw[i], raw[(i + 1) % n]))]) for i in range(n)]
-        starts = [i for i in range(n) if sig[i] != sig[i - 1]]
+        starts = [i for i in range(n) if raw[i] in nodes]
         if not starts:
             # 整圈同一歸屬（島嶼、被包圍的縣市）：從最小的點開始，固定方向
             start = min(range(n), key=lambda i: raw[i])
@@ -212,8 +253,7 @@ def build():
             project = main_project
         rings = []
         for part in members:
-            # 去掉重複的連續點與環尾的閉合點，共用邊才比對得起來
-            part = [pt for i, pt in enumerate(part) if pt != part[i - 1]]
+            part = clean(part)
             screen = [project(x, y) for x, y in part]
             # 去除畫面上小於約 0.6 平方像素的礁岩
             if len(part) < 3 or area(screen) < 0.6:
@@ -222,12 +262,13 @@ def build():
         projected.append((row, inset, rings))
     # 本島縣市一起簡化，共用邊界才會一致；附圖各自獨立，沒有相鄰縣市
     main = [ring for _, inset, rings in projected if not inset for ring in rings]
-    shared = iter(simplify_shared(main, 0.45))
+    nodes = topology_nodes()
+    shared = iter(simplify_shared(main, nodes, 0.45))
     counties = []
     for row, inset, rings in projected:
         name = row["COUNTYNAME"]
         if inset:
-            rings = simplify_shared(rings, 0.45)
+            rings = simplify_shared(rings, nodes, 0.45)
         else:
             rings = [next(shared) for _ in rings]
         largest = max(rings, key=area)

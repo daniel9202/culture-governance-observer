@@ -21,7 +21,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_map_geometry import (  # noqa: E402  共用投影、附圖與簡化設定
     INSETS, VIEW_W, VIEW_H, LON0, LON1, LAT0, LAT1,
-    area, centroid, dbf_rows, inset_parts, main_project, shp_rows, to_path,
+    area, centroid, dbf_rows, inset_parts, main_project, shp_rows, to_path, topology_nodes,
 )
 from build_district_geometry import (  # noqa: E402  共用底圖比對與附圖處理
     TOWN_KEEP, county_rings, inside, inset_filter, project_rings,
@@ -51,6 +51,7 @@ def main():
                         for name, inset in town_inset.items() if by_county.get(name)}
     basemap = {county["name"]: county_rings(county["d"])
                for county in json.loads((ROOT / "map-geometry.json").read_text(encoding="utf-8"))["counties"]}
+    nodes = topology_nodes()
 
     townships, missing = [], []
     for county, town in county_cities():
@@ -64,10 +65,10 @@ def main():
             if not kept:
                 missing.append({"city": county, "town": town, "reason": "所屬離島未繪入底圖"})
                 continue
-            rings = project_rings(kept, inset_projection[county])
+            rings = project_rings(kept, inset_projection[county], nodes)
         else:
             inland = [p for p in parts if all(LON0 <= x <= LON1 and LAT0 <= y <= LAT1 for x, y in p[:1])]
-            rings = [ring for ring in project_rings(inland, main_project) if inside(centroid(ring), basemap[county])]
+            rings = [ring for ring in project_rings(inland, main_project, nodes) if inside(centroid(ring), basemap[county])]
         if not rings:
             missing.append({"city": county, "town": town, "reason": "投影後沒有可繪的範圍"})
             continue
