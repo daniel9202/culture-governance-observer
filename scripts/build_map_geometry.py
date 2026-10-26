@@ -122,6 +122,47 @@ def simplify(points, tolerance):
     return [points[i] for i in sorted(keep)]
 
 
+def simplify_shared(rings, tolerance):
+    """共用邊界只簡化一次，相鄰縣市才會沿同一條線接合，不留縫隙或雙線。
+
+    rings 為 (原始經緯度環, 畫面座標環)。以邊在幾個環出現切出弧段：同一段弧
+    不論哪個縣市使用，都以固定方向簡化，再依各環的走向接回。
+    """
+    owners = {}
+    for index, (raw, _) in enumerate(rings):
+        for a, b in zip(raw, raw[1:] + raw[:1]):
+            owners.setdefault(frozenset((a, b)), set()).add(index)
+    cache, result = {}, []
+    for raw, screen in rings:
+        n = len(raw)
+        sig = [frozenset(owners[frozenset((raw[i], raw[(i + 1) % n]))]) for i in range(n)]
+        starts = [i for i in range(n) if sig[i] != sig[i - 1]]
+        if not starts:
+            # 整圈同一歸屬（島嶼、被包圍的縣市）：從最小的點開始，固定方向
+            start = min(range(n), key=lambda i: raw[i])
+            order = list(range(start, n)) + list(range(start))
+            if raw[order[1]] > raw[order[-1]]:
+                order = [order[0]] + order[:0:-1]
+            key = tuple(raw[i] for i in order)
+            if key not in cache:
+                cache[key] = simplify([screen[i] for i in order] + [screen[order[0]]], tolerance)[:-1]
+            result.append(cache[key])
+            continue
+        out = []
+        for s, e in zip(starts, starts[1:] + [starts[0] + n]):
+            idx = [i % n for i in range(s, e + 1)]
+            arc = tuple(raw[i] for i in idx)
+            forward = arc <= arc[::-1]
+            key = arc if forward else arc[::-1]
+            if key not in cache:
+                pts = [screen[i] for i in (idx if forward else idx[::-1])]
+                cache[key] = simplify(pts, tolerance)
+            simplified = cache[key] if forward else cache[key][::-1]
+            out += simplified[:-1]
+        result.append(out)
+    return result
+
+
 def to_path(rings):
     return "".join(
         "M" + "L".join(f"{x:.1f},{y:.1f}" for x, y in ring) + "Z" for ring in rings if len(ring) >= 3
@@ -160,21 +201,35 @@ def inset_parts(parts, inset):
 def build():
     rows = dbf_rows(next(SOURCE.glob("*.dbf")))
     shapes = shp_rows(next(SOURCE.glob("*.shp")))
-    counties = []
+    projected = []
     for row, parts in zip(rows, shapes):
         name = row["COUNTYNAME"]
         inset = INSETS.get(name)
         if inset:
-            groups = [inset_parts(parts, inset)]
+            members, project = inset_parts(parts, inset)
         else:
-            groups = [([p for p in parts if all(LON0 <= x <= LON1 and LAT0 <= y <= LAT1 for x, y in p[:1])], main_project)]
+            members = [p for p in parts if all(LON0 <= x <= LON1 and LAT0 <= y <= LAT1 for x, y in p[:1])]
+            project = main_project
         rings = []
-        for part, project in ((p, f) for members, f in groups for p in members):
+        for part in members:
+            # 去掉重複的連續點與環尾的閉合點，共用邊才比對得起來
+            part = [pt for i, pt in enumerate(part) if pt != part[i - 1]]
             screen = [project(x, y) for x, y in part]
             # 去除畫面上小於約 0.6 平方像素的礁岩
-            if area(screen) < 0.6:
+            if len(part) < 3 or area(screen) < 0.6:
                 continue
-            rings.append(simplify(screen, 0.45))
+            rings.append((part, screen))
+        projected.append((row, inset, rings))
+    # 本島縣市一起簡化，共用邊界才會一致；附圖各自獨立，沒有相鄰縣市
+    main = [ring for _, inset, rings in projected if not inset for ring in rings]
+    shared = iter(simplify_shared(main, 0.45))
+    counties = []
+    for row, inset, rings in projected:
+        name = row["COUNTYNAME"]
+        if inset:
+            rings = simplify_shared(rings, 0.45)
+        else:
+            rings = [next(shared) for _ in rings]
         largest = max(rings, key=area)
         if not inset:
             # 本島縣市只留本島範圍（最大環與大型內環，例如新北市圍住臺北市的邊界）
