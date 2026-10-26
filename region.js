@@ -52,8 +52,8 @@ const renderFinanceSection=records=>{
 
 Promise.all([loadCandidateDataset({districts:true}),...['governments','local_cultural_issues','region_metrics'].map(x=>fetch('data/'+x+'.json').then(r=>r.json()))]).then(([p,g,i,m])=>{
   const rawPolicies=p.records.filter(x=>x.city===city),P=groupCandidateRecords(rawPolicies,(p.shared_policy_groups||[]).filter(x=>x.city===city)).sort((a,b)=>(a.office==='縣市長'?0:1)-(b.office==='縣市長'?0:1)),G=g.records.filter(x=>x.city===city),I=i.records.filter(x=>x.city===city),M=m.records.find(x=>x.city===city),topics=[...new Set(P.flatMap(x=>x.topics))];
-  document.title=`${city}文化儀表板｜文化治理觀察站`;
-  title.textContent=city+'文化儀表板';
+  document.title=`${city}文化政策與議題儀表板｜文化治理觀察站`;
+  title.textContent=city+'文化政策與議題儀表板';
   lede.textContent=`已收錄 ${P.length} 位候選人、${rawPolicies.length} 筆文化政見、${I.length} 筆地方文化議題，並彙整 ${M?.year||'待查核'} 年縣市文化統計。`;
   // 職務用精確比對：縣轄市長既不是縣市長也不是議員，不精確比對會被併進議員人數
   const people=office=>new Set(P.filter(x=>x.office===office).map(x=>x.candidate)).size;
