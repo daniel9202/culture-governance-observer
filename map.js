@@ -16,7 +16,9 @@ const partyInfo=party=>{
   return {...item,fill:item.hollow?'#ffffff':item.color,ring:item.hollow?'#55584e':(item.outline||'')};
 };
 const partyStyle=info=>`--party:${info.color};--party-fill:${info.fill};--party-ring:${info.ring||'transparent'}`;
-const OFFICES={mayor:{label:'縣市長',test:record=>!String(record.office).includes('議員')},councilor:{label:'縣市議員',test:record=>String(record.office).includes('議員')}};
+// 地圖只呈現縣市層級：縣轄市長在縣以下，底圖沒有對應範圍，也不該併進縣市長的圓點與人數，
+// 因此兩個模式都用精確比對，縣轄市長只出現在「縣市長政見」頁。
+const OFFICES={mayor:{label:'縣市長',test:record=>record.office==='縣市長'},councilor:{label:'縣市議員',test:record=>record.office==='縣市議員'}};
 // 附圖內的候選人圓點位置（避開島嶼輪廓）；align 為圓點排列方向
 const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:236,align:'start'},'澎湖縣':{x:24,y:420,align:'start'}};
 const SVG_NS='http://www.w3.org/2000/svg';
@@ -33,7 +35,7 @@ const layerMatches=item=>districtLayer==='indigenous'?indigenousDistrict(item.di
 const layerList=city=>(byOffice.councilor.get(city)||[]).filter(layerMatches);
 // 參選人數取自中選會登記名冊（data/registered_candidates.json）。
 // 名冊姓名可能附原住民族傳統名字（例：林筱薇IcyangTamana），因此以「名冊姓名以本站姓名開頭」比對。
-let registered={mayor:new Map,councilor:new Map},registeredSource=null;
+let registered={mayor:new Map,councilor:new Map},registeredSources=[];
 const registeredIn=(key,city)=>registered[key].get(city)||[];
 // 現任縣市長登記連任（名冊 incumbent＝是，資料端依中選會名冊判定）
 const incumbentMayor=city=>registeredIn('mayor',city).find(record=>record.incumbent==='是');
@@ -398,9 +400,11 @@ Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDat
     shapes.districts.forEach(shape=>shape.districts.forEach(name=>shapeOfDistrict.set(name,shape)));}
   const roster=data.registered_candidates;
   if(!roster)throw Error('無法讀取登記名冊');
-  geometry=geo;PARTY_COLORS=colors;registeredSource=roster.source;incumbents=incumbentNamesByCity(data.incumbent_records||[]);
+  geometry=geo;PARTY_COLORS=colors;registeredSources=roster.sources||(roster.source?[roster.source]:[]);incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   roster.records.forEach(record=>{
-    const key=record.office==='縣市長'?'mayor':'councilor';
+    // 縣轄市長不進地圖的人數統計
+    const key=record.office==='縣市長'?'mayor':record.office==='縣市議員'?'councilor':'';
+    if(!key)return;
     if(!registered[key].has(record.city))registered[key].set(record.city,[]);
     registered[key].get(record.city).push(record);
   });
@@ -412,7 +416,9 @@ Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDat
   const registeredTotal=key=>[...registered[key].values()].flat().length.toLocaleString('zh-TW');
   statMayors.innerHTML=`${[...byOffice.mayor.values()].flat().length}<small>/${registeredTotal('mayor')}</small>`;
   statCouncilors.innerHTML=`${[...byOffice.councilor.values()].flat().length}<small>/${registeredTotal('councilor')}</small>`;
-  if(registeredSource)registeredNote.innerHTML=`參選人數：<a href="${esc(registeredSource.url)}" target="_blank" rel="noopener">${esc(registeredSource.title)}</a>（製表日期 ${esc(registeredSource.as_of)}）`;
+  // 縣市長／議員與縣轄市長取自不同公告，來源依標題去重後全部列出
+  const citations=[...new Map(registeredSources.map(item=>[item.title+item.as_of,item])).values()];
+  if(citations.length)registeredNote.innerHTML='參選人數：'+citations.map(item=>`<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>（製表日期 ${esc(item.as_of)}）`).join('、');
   statParties.textContent=new Set(all.map(item=>item.party)).size;
   document.querySelectorAll('[data-office]').forEach(button=>button.addEventListener('click',()=>setOffice(button.dataset.office)));
   document.querySelectorAll('[data-layer]').forEach(button=>button.addEventListener('click',()=>setLayer(button.dataset.layer)));

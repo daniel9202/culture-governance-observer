@@ -55,7 +55,10 @@ Promise.all([loadCandidateDataset({districts:true}),...['governments','local_cul
   document.title=`${city}文化儀表板｜文化治理觀察站`;
   title.textContent=city+'文化儀表板';
   lede.textContent=`已收錄 ${P.length} 位候選人、${rawPolicies.length} 筆文化政見、${I.length} 筆地方文化議題，並彙整 ${M?.year||'待查核'} 年縣市文化統計。`;
-  count.textContent=`候選人 ${new Set(P.map(x=>x.candidate)).size} 位（縣市長 ${new Set(P.filter(x=>x.office==='縣市長').map(x=>x.candidate)).size} 位、議員 ${new Set(P.filter(x=>x.office!=='縣市長').map(x=>x.candidate)).size} 位）`;
+  // 職務用精確比對：縣轄市長既不是縣市長也不是議員，不精確比對會被併進議員人數
+  const people=office=>new Set(P.filter(x=>x.office===office).map(x=>x.candidate)).size;
+  const parts=[`縣市長 ${people('縣市長')} 位`,...(people('縣轄市長')?[`縣轄市長 ${people('縣轄市長')} 位`]:[]),`議員 ${people('縣市議員')} 位`];
+  count.textContent=`候選人 ${new Set(P.map(x=>x.candidate)).size} 位（${parts.join('、')}）`;
 
   if(M){
     document.getElementById('stats-note').textContent=`${M.year} 年縣市級文化統計；以下均為原始總量，尚未按人口標準化。`;

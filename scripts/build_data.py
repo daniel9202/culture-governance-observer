@@ -409,7 +409,7 @@ def build_region_metrics():
         records.append(record)
     return records
 
-REGISTERED_OFFICES = {"縣市長", "縣市議員"}
+REGISTERED_OFFICES = {"縣市長", "縣市議員", "縣轄市長"}
 CITIES = {
     "臺北市", "新北市", "桃園市", "臺中市", "臺南市", "高雄市", "基隆市", "新竹市", "嘉義市", "新竹縣", "苗栗縣",
     "彰化縣", "南投縣", "雲林縣", "嘉義縣", "屏東縣", "宜蘭縣", "花蓮縣", "臺東縣", "澎湖縣", "金門縣", "連江縣",
@@ -434,17 +434,21 @@ def build_registered_candidates():
         valid_date(row["registered_date"], label)
         valid_date(row["as_of"], label)
         valid_url(row["source_url"], label)
-        source = {"title": row["source_title"], "url": row["source_url"], "as_of": row["as_of"]}
-        if sources and source not in sources:
-            raise ValueError(f"{label}: all rows must share one source and as_of date")
-        sources = sources or [source]
+        # 縣轄市長取自另一份公告（鄉鎮市長登記彙總表），製表日期與四合一的審定公告不同，
+        # 所以來源改為依職務各自一份，不再要求全表一致。
+        source = {"offices": row["office"], "title": row["source_title"], "url": row["source_url"], "as_of": row["as_of"]}
+        same_office = [item for item in sources if item["offices"] == row["office"]]
+        if same_office and same_office[0] != source:
+            raise ValueError(f"{label}: 同一職務的所有列必須共用同一個來源與 as_of")
+        if not same_office:
+            sources.append(source)
         records.append({
             "city": row["city"], "office": row["office"], "district": row["district"], "candidate": row["candidate"],
             "party": row["party"], "registered_date": row["registered_date"],
             "incumbent": row.get("incumbent", ""),
         })
-    # 來源與名冊日期全表一致，只在檔案層級記錄一次，避免前台資料過大
-    return records, (sources[0] if sources else None)
+    # 來源只在檔案層級記錄，避免前台資料過大；依職務各一份
+    return records, sources
 
 DISTRICT_TYPES = {"區域", "平地原住民", "山地原住民"}
 ELECTION_DISTRICTS_CONFIG = ROOT / "config" / "election_districts.csv"
@@ -518,7 +522,7 @@ def check_against_registration(candidates, shared_groups, registered):
             errors.append(f"{label}: 縣市「{city}」不是 22 縣市的標準寫法（例：臺北市，不是台北市）")
             continue
         if office not in REGISTERED_OFFICES:
-            errors.append(f"{label}: 職務「{office}」必須是 縣市長 或 縣市議員")
+            errors.append(f"{label}: 職務「{office}」必須是 縣市長、縣市議員 或 縣轄市長")
             continue
         if (city, office, name, party) in checked:
             continue
@@ -578,7 +582,7 @@ if __name__ == "__main__":
     write("governments.json", build_governments())
     write("region_metrics.json", build_region_metrics())
     write("pledge_fulfillment.json", fulfillment)
-    write("registered_candidates.json", registered, source=registered_source)
+    write("registered_candidates.json", registered, sources=registered_source)
     write("election_districts.json", districts, source=districts_source)
     (OUTPUT / "party_colors.json").write_text(json.dumps({"schema_version": "1.1", "last_updated": date.today().isoformat(), **party_colors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("data validation passed")
