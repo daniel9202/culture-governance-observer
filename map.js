@@ -24,7 +24,7 @@ const INSET_MARKERS={'連江縣':{x:24,y:40,align:'start'},'金門縣':{x:24,y:2
 const SVG_NS='http://www.w3.org/2000/svg';
 const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
-let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCity='',incumbents=new Map;
+let geometry,byOffice={mayor:new Map,councilor:new Map},office='mayor',activeCity='',incumbents=new Map,mayorIncumbents=new Map;
 // 議員模式的地圖圖層：region＝區域選舉區界線（點選縣市後才畫），indigenous＝原住民選舉區。
 // 原住民選舉區依身分別劃分、涵蓋全縣市或跨多個鄉鎮市區，與區域選舉區重疊，畫不成互斥的面，
 // 所以該圖層不畫界線，改以縣市整體與人數徽章呈現。
@@ -330,6 +330,35 @@ function moveTooltip(event){
 }
 function hideTooltip(){document.getElementById('mapTooltip').hidden=true}
 
+// 現任縣市長卡片：2022 政見實現追蹤（pledge_fulfillment.json）與任內施政（office_category＝首長的公職政績）。
+// 任內施政只取參選縣市長者，縣轄市長的施政不放在縣市層級。
+const FULFILLMENT_STATUS=[['fulfilled','已實現'],['partial','部分實現'],['in_progress','執行中'],['no_verified_progress','未找到可驗證進度'],['not_assessable','不適合評估'],['not_checked','尚未查核']];
+function buildMayorIncumbents(pledges,records){
+  const map=new Map;
+  const ensure=(city,name,party,currentOffice)=>{
+    const key=`${city}\u0000${name}`;
+    if(!map.has(key))map.set(key,{city,candidate:name,party,current_office:currentOffice,pledges:[],gov:[]});
+    const item=map.get(key);item.party=item.party||party;item.current_office=item.current_office||currentOffice;return item;
+  };
+  pledges.forEach(row=>ensure(row.city,row.person,row.party,row.current_office).pledges.push(row));
+  records.filter(row=>incumbentKind(row)==='mayor'&&row.office==='縣市長').forEach(row=>ensure(row.city,row.candidate,row.party,row.current_office).gov.push(row));
+  const byCity=new Map;
+  map.forEach(item=>byCity.set(item.city,[...(byCity.get(item.city)||[]),item]));
+  return byCity;
+}
+function incumbentCard(item){
+  const party=partyInfo(item.party),checked=item.pledges.filter(row=>row.status!=='not_checked').length;
+  const counts=FULFILLMENT_STATUS.map(([key,label])=>[key,label,item.pledges.filter(row=>row.status===key).length]).filter(([, ,count])=>count);
+  const lead=[item.pledges.length?`2022 年文化政見 ${item.pledges.length} 筆，已查核 ${checked} 筆`:'',item.gov.length?`任內文化施政 ${item.gov.length} 筆`:''].filter(Boolean).join(' · ');
+  return `<a class="map-incumbent" href="fulfillment.html?city=${encodeURIComponent(item.city)}" style="${partyStyle(party)}">
+    <p class="map-incumbent-label">${esc(item.current_office||'現任縣市長')}</p>
+    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span></div></div>
+    <p>${esc(lead)}</p>
+    ${counts.length?`<ul class="map-incumbent-status">${counts.map(([key,label,count])=>`<li class="status-${key}">${esc(label)} <strong>${count}</strong></li>`).join('')}</ul>`:''}
+    <span class="map-candidate-more">看政見實現與任內施政 →</span>
+  </a>`;
+}
+
 function candidateCard(item,{district=true}={}){
   const party=partyInfo(item.party),summary=item.summary||item.policy_arguments[0]||'';
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
@@ -392,7 +421,8 @@ function renderDetail(){
       +`<p class="map-detail-scope">${esc(shape.districts.length===1?districtScope(shape.districts[0]):`${shape.districts.length} 個選舉區`)}・應選 ${shape.seats} 席</p>`
       +`<button type="button" class="map-detail-switch" data-back="1">← 回到${esc(city)}全部選舉區</button>`
     :`<p class="kicker">${esc(REGION_OF[city]||'')} / ${OFFICES[office].label}</p><h2>${esc(city)}</h2>`;
-  detail.innerHTML=head+(list.length
+  const incumbentBlock=office==='mayor'&&!shape&&!town?(mayorIncumbents.get(city)||[]).map(incumbentCard).join(''):'';
+  detail.innerHTML=head+incumbentBlock+(list.length
     ?`<p class="map-detail-lead">登記參選 ${total} 位，其中 ${list.length} 位提出文化政策，共 ${list.reduce((sum,item)=>sum+item.recordCount,0)} 筆紀錄。</p>${office==='councilor'&&!shape?districtGroups(list,city):`<div class="map-candidates">${list.map(item=>candidateCard(item,{district:!shape})).join('')}</div>`}${missingNote}${regionLink}`
     :`<p class="map-detail-lead">登記參選 ${total} 位，目前尚未收錄符合口徑的文化政策。這不代表候選人沒有提出，只是本站還沒有可查核的資料。</p>${office==='mayor'&&missing.length?`<p class="map-detail-missing">登記參選人：${nameList(missing,12)}</p>`:''}${regionLink}`)+foot;
   detail.querySelector('[data-back]')?.addEventListener('click',()=>{activeDistrict='';activeTownship='';renderDistricts();renderDetail()});
@@ -465,13 +495,16 @@ Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDat
   // 選舉區界線讀不到時只是沒有界線，不影響其餘地圖
   fetch('district-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null),
   // 縣轄市界線讀不到時只是沒有那一層，不影響其餘地圖
-  fetch('township-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null)]).then(([geo,data,colors,shapes,towns])=>{
+  fetch('township-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null),
+  // 政見實現追蹤讀不到時只是沒有現任縣市長卡片
+  fetch('data/pledge_fulfillment.json').then(response=>response.ok?response.json():null).catch(()=>null)]).then(([geo,data,colors,shapes,towns,fulfillment])=>{
   if(shapes){districtShapes=new Map(shapes.districts.map(shape=>[shape.id,shape]));
     shapes.districts.forEach(shape=>shape.districts.forEach(name=>shapeOfDistrict.set(name,shape)));}
   if(towns)townshipShapes=new Map(towns.townships.map(shape=>[shape.id,shape]));
   const roster=data.registered_candidates;
   if(!roster)throw Error('無法讀取登記名冊');
   geometry=geo;PARTY_COLORS=colors;registeredSources=roster.sources||(roster.source?[roster.source]:[]);incumbents=incumbentNamesByCity(data.incumbent_records||[]);
+  mayorIncumbents=buildMayorIncumbents(fulfillment?.records||[],data.incumbent_records||[]);
   roster.records.forEach(record=>{
     // 縣轄市長不進地圖的圓點與人數統計，只記每縣的登記人數，供側欄的導向連結使用
     if(record.office==='縣轄市長'){

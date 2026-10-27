@@ -54,7 +54,9 @@ const renderMayorGov=()=>{
   document.getElementById('mayorGov').hidden=!shown.length;
   document.getElementById('mayorGovCards').innerHTML=groupBy(shown,row=>row.city).map(group=>`<section class="tracker-city"><h2 class="tracker-city-name">${escapeHtml(group.key)}</h2>${groupBy(group.rows,row=>row.candidate).map(person=>`<article class="tracker-person">${incumbentHead(person,'施政紀錄')}<div class="cards">${person.rows.map(councilCard).join('')}</div></article>`).join('')}</section>`).join('');
 };
-const addCityOptions=cities=>{const select=document.getElementById('cityFilter'),existing=new Set([...select.options].map(o=>o.value));const value=select.value;[...new Set(cities)].filter(c=>c&&!existing.has(c)).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;select.append(o)});[...select.options].slice(1).sort((a,b)=>cityRank(a.value)-cityRank(b.value)).forEach(o=>select.append(o));select.value=value};
+const addCityOptions=cities=>{const select=document.getElementById('cityFilter'),existing=new Set([...select.options].map(o=>o.value));const value=select.value;[...new Set(cities)].filter(c=>c&&!existing.has(c)).forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;select.append(o)});[...select.options].slice(1).sort((a,b)=>cityRank(a.value)-cityRank(b.value)).forEach(o=>select.append(o));select.value=value;
+  // 首長分頁接受 ?city= 預選縣市（地圖的現任縣市長卡片連過來）
+  const wanted=new URLSearchParams(location.search);if(!value&&wanted.get('tab')!=='council'&&[...select.options].some(o=>o.value===wanted.get('city')))select.value=wanted.get('city')};
 
 fetch('data/pledge_fulfillment.json').then(r=>r.json()).then(data=>{records=(data.records||[]).sort(byCity);addCityOptions(records.map(x=>x.city));optionValues('current_office',document.getElementById('officeFilter'));optionValues('status',document.getElementById('statusFilter'));document.querySelectorAll('select').forEach(x=>x.addEventListener('change',render));render()}).catch(()=>{document.getElementById('empty').hidden=false;document.getElementById('empty').innerHTML='<strong>資料尚未載入</strong><span>請稍後重新整理。</span>'});
 

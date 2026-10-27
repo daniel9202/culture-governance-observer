@@ -393,3 +393,13 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .pledge-card .policy-actions .pledge-unchecked{color:var(--muted)}
 .pledge-related h4{font-size:.78rem;letter-spacing:.08em;color:var(--muted);margin:0 0 .35rem}.pledge-related ul{margin:0;padding-left:1.1rem;font-size:.9rem}
 .pledge-card:target{outline:2px solid var(--ink);outline-offset:4px}
+.map-incumbent{display:block;background:var(--tint);color:inherit;text-decoration:none;padding:1rem 1rem 1rem 1rem;border-left:4px solid var(--party);margin:0 0 1.2rem}
+.map-incumbent:hover{background:var(--paper)}
+.map-incumbent-label{margin:0 0 .35rem;font:700 .72rem ui-monospace,monospace;letter-spacing:.06em;color:var(--muted)}
+.map-incumbent h3{font-size:1.35rem;margin:0;line-height:1.2}
+.map-incumbent p{margin:.5rem 0 .4rem;font-size:.88rem;color:#3a3d35}
+.map-incumbent-status{list-style:none;display:flex;flex-wrap:wrap;gap:.3rem;margin:0;padding:0}
+.map-incumbent-status li{border:1px solid var(--line);background:var(--surface);padding:.1rem .45rem;font-size:.72rem}
+.map-incumbent-status li.status-fulfilled{background:var(--lime);border-color:var(--lime)}
+.map-incumbent-status li.status-not_checked{border-style:dashed;color:var(--muted)}
+.map-incumbent:hover .map-candidate-more{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
