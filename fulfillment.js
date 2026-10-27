@@ -19,8 +19,7 @@ const pledgeCard=pledge=>{
   <div class="card-meta"><span class="tag tag-status status-${escapeHtml(pledge.status)}">${escapeHtml(statusLabels[pledge.status]||'')}</span>${pledge.pledge_source_type?`<span class="tag tag-source">${escapeHtml(pledge.pledge_source_type)}</span>`:''}${pledge.pledge_nature?`<span class="tag tag-nature">${escapeHtml(pledge.pledge_nature)}</span>`:''}${topicTagList(pledge).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
   <h4>${escapeHtml(pledge.pledge_title)}</h4>
   <p class="summary">${escapeHtml(pledge.pledge_summary)}</p>
-  ${pledge.pledge_nature==='政策方向'?'<p class="pledge-nature-note">原文只寫方向，沒有可驗證的作為，難以判定是否實現。</p>':''}
-  <div class="policy-layer policy-actions"><h4>查核判斷</h4>${pledge.evidence_summary?`<p>${escapeHtml(pledge.evidence_summary)}</p>`:unchecked?'<p class="pledge-unchecked">本站尚未查核這筆政見的執行情形，不代表任何判斷。</p>':''}</div>
+  <div class="policy-layer policy-actions"><h4>查核判斷</h4>${pledge.pledge_nature==='政策方向'?'<p class="pledge-nature-note">政見原文只寫方向，沒有可驗證的作為，難以判定是否實現。</p>':''}${pledge.evidence_summary?`<p>${escapeHtml(pledge.evidence_summary)}</p>`:unchecked?'<p class="pledge-unchecked">本站尚未查核這筆政見的執行情形，不代表任何判斷。</p>':''}</div>
   ${relatedGovList(pledge)}
   <div class="source-row"><a href="${escapeHtml(safeUrl(pledge.pledge_source_url))}" target="_blank" rel="noopener">${escapeHtml(pledge.pledge_source_type||'原始政見')} ↗</a>${pledge.evidence_source_url?`<a href="${escapeHtml(safeUrl(pledge.evidence_source_url))}" target="_blank" rel="noopener">實現情形 ↗</a>`:''}${(pledge.additional_evidence||[]).map(item=>`<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener" title="${escapeHtml(item.title)}">${escapeHtml(item.title)} ↗</a>`).join('')}<span class="verification">${unchecked||!pledge.last_verified?'尚未查核':`查核 ${escapeHtml(pledge.last_verified)}`} · ${reportLink(pledge.id,`${pledge.city} ${pledge.person}：${pledge.pledge_title}（政見實現追蹤）`)}</span></div>
 </article>`;
