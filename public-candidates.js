@@ -93,15 +93,10 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
 };
 // 議員任內文化問政（非本屆政見）收在「現任追蹤」；地圖與議員頁依縣市計人數並連過去。
 // 只算議員；縣市長的任內施政另列在現任追蹤首長分頁。
-// 現任紀錄的身分（docs/FIELD-CONTRACT-INCUMBENT.md）：有 current_office 就依它判斷，「前…」為已卸任、「…議員／立法委員」為民意代表、其餘「…長」為首長；
-// 尚未補 current_office 的舊資料暫依參選職務 office 判斷，59 筆補完、欄位改必填後拿掉這段。
-window.incumbentKind=record=>{
-  const current=String(record?.current_office||'').trim();
-  if(!current)return ['縣市長','縣轄市長'].includes(record?.office)?'mayor':'representative';
-  if(current.startsWith('前'))return 'former';
-  if(/(議員|立法委員)$/.test(current))return 'representative';
-  return current.endsWith('長')?'mayor':'representative';
-};
+// 現任紀錄的身分（docs/FIELD-CONTRACT-INCUMBENT.md）：只讀 office_category（首長／民意代表／已卸任），current_office 只用來顯示，不從文字推斷身分。
+// 尚未補 office_category 的舊資料暫依參選職務 office 判斷，59 筆補完、欄位改必填後拿掉這段。
+const OFFICE_CATEGORY_KINDS={首長:'mayor',民意代表:'representative',已卸任:'former'};
+window.incumbentKind=record=>OFFICE_CATEGORY_KINDS[record?.office_category]||(['縣市長','縣轄市長'].includes(record?.office)?'mayor':'representative');
 window.incumbentNamesByCity=records=>records.filter(record=>incumbentKind(record)!=='mayor').reduce((map,record)=>map.set(record.city,(map.get(record.city)||new Set).add(record.candidate)),new Map);
 window.incumbentLink=(count,city,className='incumbent-link')=>count?`<a class="${className}" href="fulfillment.html?tab=council${city?`&city=${encodeURIComponent(city)}`:''}">${city?'本縣市':''}另有 ${count} 位民意代表的任內文化問政紀錄（非本屆政見）→</a>`:'';
 // 議員選區：資料本身有 district 欄位（資料端日後新增）就用資料的值；
@@ -158,7 +153,7 @@ window.loadCandidateDataset=async({districts=false}={})=>{
   if(roster)councilRoster=(roster.records||[]).filter(record=>record.office==='縣市議員');
   if(districtTable)districtScopes=new Map((districtTable.records||[]).map(record=>[record.district,record]));
   // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
-  // 前台的政見與統計只收「本屆競選政見」；現任公職政績（含舊值現任議員個人頁內容、問政／提案、首長施政）另存 incumbent_records（依資料端的 content_nature 欄位）。
+  // 前台的政見與統計只收「本屆競選政見」；公職政績（含舊值現任議員個人頁內容、問政／提案、首長施政）另存 incumbent_records（依資料端的 content_nature 欄位）。
   const records=staticData.records||[];
   return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'),shared_policy_groups:sharedData.records||[],registered_candidates:roster};
 };
