@@ -6083,23 +6083,27 @@
       "party": "無黨籍",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一則中央社報導原本裂成兩筆，已合併。被刪除的那筆的具體主張欄只是摘要本身的複製，無實質分項。"
+      ],
       "policy_title": "",
       "topics": [
         "客家文化",
         "客語傳承",
         "文化場館",
         "社區營造",
-        "地方文化館"
+        "地方文化館",
+        "多元語言"
       ],
       "topic_categories": [
         "客家文化",
         "文化場館",
         "地方文化與社區營造",
-        "博物館與地方文化館"
+        "博物館與地方文化館",
+        "語言與族群"
       ],
       "topic_subcategories": [],
-      "summary": "市府將持續透過語言扎根、文化推廣、館舍經營及跨域合作等多元策略，打造客語友善環境。",
+      "summary": "市府將持續透過語言扎根、文化推廣、館舍經營及跨域合作等多元策略，打造客語友善環境，讓客家文化融入市民日常生活，展現新竹市多元族群共榮的城市特色。",
       "policy_argument": "讓客家文化融入市民日常生活。",
       "concrete_proposals": [
         "除了出版客語繪本外，也辦理客語能力認證輔導班、客語親子共學、客語說故事等多元活動。",
@@ -6139,9 +6143,7 @@
       "content_nature": "現任首長施政",
       "role_evidence": "現任新竹市長，2026 登記參選連任",
       "corrections": [
-        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。",
-        "2026-10-04｜依使用者核定保留並改列現任首長施政。",
-        "依原文修正（2026-10-10）"
+        "2026-10-28 合併同網址重複列"
       ]
     },
     {
@@ -14539,65 +14541,6 @@
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-8829244dafe7",
-      "city": "新竹市",
-      "office": "縣市長",
-      "candidate": "高虹安",
-      "party": "無黨籍",
-      "publish_id": "candidate-auto-8829244dafe7",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "客語",
-        "客家文化",
-        "地方文化",
-        "多元語言"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "地方文化與社區營造",
-        "語言與族群"
-      ],
-      "topic_subcategories": [],
-      "summary": "市府將持續透過語言扎根、文化推廣、館舍經營及跨域合作等多元策略，打造客語友善環境，讓客家文化融入市民日常生活，展現新竹市多元族群共榮的城市特色。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "市府將持續透過語言扎根、文化推廣、館舍經營及跨域合作等多元策略，打造客語友善環境，讓客家文化融入市民日常生活，展現新竹市多元族群共榮的城市特色。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.cna.com.tw｜深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-            "url": "https://www.cna.com.tw/postwrite/chi/438831"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.cna.com.tw｜深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-            "url": "https://www.cna.com.tw/postwrite/chi/438831"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.cna.com.tw｜深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-            "url": "https://www.cna.com.tw/postwrite/chi/438831"
-          }
-        ]
-      },
-      "published_date": "2026-07-13",
-      "source_title": "www.cna.com.tw｜深化文化傳承與創新！高虹安市長主持會議 擘劃客家發展新藍圖",
-      "source_url": "https://www.cna.com.tw/postwrite/chi/438831",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "corrections": []
     },

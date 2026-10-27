@@ -820,13 +820,17 @@
       "responsibility": "新竹市政府及相關局處",
       "status": "not_assessable",
       "pledge_nature": "政策方向",
-      "related_records": [],
+      "related_records": [
+        "candidate-hsinchu-mayor-gao-hong-an-culture-001"
+      ],
       "evidence_summary": "政見僅敘述方向，無具體措施。",
       "evidence_source_title": "",
       "evidence_source_url": "",
       "additional_evidence": [],
       "last_verified": "2026-10-28",
-      "corrections": []
+      "corrections": [
+        "2026-10-28 建立與任內施政紀錄的關聯"
+      ]
     },
     {
       "id": "pingtung-chou-2022-peninsula",
@@ -892,14 +896,17 @@
       "responsibility": "基隆市政府及相關局處",
       "status": "not_checked",
       "pledge_nature": "具體措施",
-      "related_records": [],
+      "related_records": [
+        "candidate-sheet-draft-20260916-02"
+      ],
       "evidence_summary": "",
       "evidence_source_title": "",
       "evidence_source_url": "",
       "additional_evidence": [],
       "last_verified": "",
       "corrections": [
-        "2026-10-27 狀態由 not_assessable 改為 not_checked：本站尚未查核，非政見性質無法評估"
+        "2026-10-27 狀態由 not_assessable 改為 not_checked：本站尚未查核，非政見性質無法評估",
+        "2026-10-28 建立與任內施政紀錄的關聯"
       ]
     },
     {
