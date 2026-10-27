@@ -696,7 +696,9 @@
       "party": "中國國民黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
+      ],
       "policy_title": "",
       "topics": [
         "地方文化",
@@ -746,7 +748,9 @@
       "proposer_role": "推定現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
+      ]
     },
     {
       "id": "candidate-lgn-councilor-tsao-cheng-chun-arts-island-001",
@@ -756,7 +760,9 @@
       "party": "中國國民黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
+      ],
       "policy_title": "",
       "topics": [
         "公共藝術",
@@ -809,7 +815,9 @@
       "proposer_role": "推定現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
+      ]
     },
     {
       "id": "candidate-lgn-councilor-chen-shu-chien-arts-island-001",
@@ -1084,7 +1092,9 @@
       "party": "中國國民黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
+      ],
       "policy_title": "",
       "topics": [
         "閱讀",
@@ -1135,7 +1145,9 @@
       "proposer_role": "推定現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
+      ]
     },
     {
       "id": "candidate-hsz-councilor-hsu-mei-hui-historic-creative-market-001",
@@ -1272,7 +1284,9 @@
       "party": "中國國民黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
+      ],
       "policy_title": "",
       "topics": [
         "客家文化",
@@ -1320,7 +1334,9 @@
       "proposer_role": "推定現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
+      ]
     },
     {
       "id": "candidate-hsz-councilor-lin-tzu-ai-indigenous-culture-001",
@@ -4307,7 +4323,8 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：參與對象、執行期程、補助工具、預算規模"
+        "未載明：參與對象、執行期程、補助工具、預算規模",
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
       ],
       "policy_title": "",
       "topics": [
@@ -4358,7 +4375,8 @@
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為臺南市第7選舉區、民主進步黨候選人；臺南市議會於2026年更新的議員頁記載其文化主張並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為臺南市第7選舉區、民主進步黨候選人；臺南市議會於2026年更新的議員頁記載其文化主張並完成人工審核。",
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
     },
     {
@@ -4633,7 +4651,8 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：場館時程、經費、營運方式、演藝產業引進機制"
+        "未載明：場館時程、經費、營運方式、演藝產業引進機制",
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
       ],
       "policy_title": "",
       "topics": [
@@ -4684,7 +4703,8 @@
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為臺中市第12選舉區、中國國民黨候選人；官方政策頁明列巨蛋與大型演藝文化產業措施並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為臺中市第12選舉區、中國國民黨候選人；官方政策頁明列巨蛋與大型演藝文化產業措施並完成人工審核。",
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
     },
     {
@@ -4696,7 +4716,8 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：文化據點位置與數量、期程、經費、部落參與機制"
+        "未載明：文化據點位置與數量、期程、經費、部落參與機制",
+        "同一網址原本裂成兩筆，已合併。被刪除的那筆是來源片段，內容完全被本列涵蓋，無獨有主張。"
       ],
       "policy_title": "",
       "topics": [
@@ -4752,7 +4773,8 @@
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為臺中市第16選舉區、中國國民黨候選人；官方政策頁明列原民文化傳承與文化據點措施並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為臺中市第16選舉區、中國國民黨候選人；官方政策頁明列原民文化傳承與文化據點措施並完成人工審核。",
+        "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
     },
     {
@@ -10369,60 +10391,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-auto-584ec50060e1",
-      "city": "臺中市",
-      "office": "縣市議員",
-      "candidate": "古秀英",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-584ec50060e1",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "文化教育"
-      ],
-      "topic_categories": [
-        "文化教育"
-      ],
-      "topic_subcategories": [],
-      "summary": "強化原民教育落實原教法，推動文化傳承，增設文化據點，協助世代對話。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "強化原民教育落實原教法，推動文化傳承，增設文化據點，協助世代對話。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.tccc.gov.tw｜古秀英｜臺中市議會議員資訊",
-            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno="
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.tccc.gov.tw｜古秀英｜臺中市議會議員資訊",
-            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno="
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.tccc.gov.tw｜古秀英｜臺中市議會議員資訊",
-            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno="
-          }
-        ]
-      },
-      "published_date": "2026-10-01",
-      "source_title": "www.tccc.gov.tw｜古秀英｜臺中市議會議員資訊",
-      "source_url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno=",
-      "related_sources": [],
-      "source_type": "議會官方網站",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=82&uno=",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-e09fbb61959b",
       "city": "臺中市",
       "office": "縣市議員",
@@ -14683,118 +14651,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-auto-08ca1f4c4639",
-      "city": "新竹市",
-      "office": "縣市議員",
-      "candidate": "張祖琰",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-08ca1f4c4639",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "圖書館"
-      ],
-      "topic_categories": [
-        "閱讀與圖書館"
-      ],
-      "topic_subcategories": [],
-      "summary": "監督總圖書館興建進度，增設圖書分館。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "監督總圖書館興建進度，增設圖書分館。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.hsinchu-cc.gov.tw｜新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.hsinchu-cc.gov.tw｜新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.hsinchu-cc.gov.tw｜新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "www.hsinchu-cc.gov.tw｜新竹市議會：張祖琰議員政見與原住民族傳統藝術教育提案",
-      "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=11&mid=39",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-ee6e13ff8579",
-      "city": "新竹市",
-      "office": "縣市議員",
-      "candidate": "黃美慧",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-ee6e13ff8579",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "客家文化",
-        "地方文化",
-        "多元語言"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "地方文化與社區營造",
-        "語言與族群"
-      ],
-      "topic_subcategories": [],
-      "summary": "推動客家文化及客家語言發展。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "推動客家文化及客家語言發展。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.hsinchu-cc.gov.tw｜新竹市議會：黃美慧議員政見與客家事務質詢",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.hsinchu-cc.gov.tw｜新竹市議會：黃美慧議員政見與客家事務質詢",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.hsinchu-cc.gov.tw｜新竹市議會：黃美慧議員政見與客家事務質詢",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "www.hsinchu-cc.gov.tw｜新竹市議會：黃美慧議員政見與客家事務質詢",
-      "source_url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=25",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-3e212d67d6bb",
       "city": "花蓮縣",
       "office": "縣市議員",
@@ -15268,60 +15124,6 @@
       ]
     },
     {
-      "id": "candidate-auto-c85cc3d22037",
-      "city": "金門縣",
-      "office": "縣市議員",
-      "candidate": "周子傑",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-c85cc3d22037",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "地方文化"
-      ],
-      "topic_categories": [
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "地區特色文化再提升，推展兩岸文化宗教體育交流。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "地區特色文化再提升，推展兩岸文化宗教體育交流。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.kmcc.gov.tw｜金門縣議會：周子傑議員政見",
-            "url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.kmcc.gov.tw｜金門縣議會：周子傑議員政見",
-            "url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.kmcc.gov.tw｜金門縣議會：周子傑議員政見",
-            "url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "www.kmcc.gov.tw｜金門縣議會：周子傑議員政見",
-      "source_url": "https://www.kmcc.gov.tw/8844/54357/55476/55516/",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.kmcc.gov.tw/8844/54357/55476/55516/",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-34e69ac1dc93",
       "city": "連江縣",
       "office": "縣市議員",
@@ -15493,62 +15295,6 @@
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊與來源內容推定",
       "corrections": []
-    },
-    {
-      "id": "candidate-auto-607264b08452",
-      "city": "連江縣",
-      "office": "縣市議員",
-      "candidate": "曹丞君",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-607264b08452",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "藝文活動"
-      ],
-      "topic_categories": [
-        "文化平權與參與"
-      ],
-      "topic_subcategories": [],
-      "summary": "6.爭取國際藝術島活動經費，至少一半由縣府統籌使用。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "爭取國際藝術島活動經費，至少一半由縣府統籌使用。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.mtcc.gov.tw｜連江縣議會：曹丞君議員政見",
-            "url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.mtcc.gov.tw｜連江縣議會：曹丞君議員政見",
-            "url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.mtcc.gov.tw｜連江縣議會：曹丞君議員政見",
-            "url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "www.mtcc.gov.tw｜連江縣議會：曹丞君議員政見",
-      "source_url": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8",
-      "corrections": [
-        "2026-10-27 移除具體主張開頭的來源項次編號"
-      ]
     },
     {
       "id": "candidate-auto-c83f64edbb4c",
@@ -15790,120 +15536,6 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "corrections": []
-    },
-    {
-      "id": "candidate-auto-51804ec6c0fc",
-      "city": "臺中市",
-      "office": "縣市議員",
-      "candidate": "黃佳恬",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-51804ec6c0fc",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "藝文活動",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "文化平權與參與",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "12.加速推動台中巨蛋，引進大型演藝文化產業。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "加速推動台中巨蛋，引進大型演藝文化產業。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.tccc.gov.tw｜黃佳恬｜臺中市議會議員資訊",
-            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.tccc.gov.tw｜黃佳恬｜臺中市議會議員資訊",
-            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.tccc.gov.tw｜黃佳恬｜臺中市議會議員資訊",
-            "url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106"
-          }
-        ]
-      },
-      "published_date": "2026-10-01",
-      "source_title": "www.tccc.gov.tw｜黃佳恬｜臺中市議會議員資訊",
-      "source_url": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106",
-      "corrections": [
-        "2026-10-27 移除具體主張開頭的來源項次編號"
-      ]
-    },
-    {
-      "id": "candidate-auto-f2676b4f6d59",
-      "city": "臺南市",
-      "office": "縣市議員",
-      "candidate": "陳秋萍",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-f2676b4f6d59",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "地方文化"
-      ],
-      "topic_categories": [
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "5、加強構築文化網絡系統，推動在地文化資源多元應用及創意加值，發揚在地文化特色及形塑社區品牌。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "加強構築文化網絡系統，推動在地文化資源多元應用及創意加值，發揚在地文化特色及形塑社區品牌。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.tncc.gov.tw｜臺南市議會｜陳秋萍",
-            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.tncc.gov.tw｜臺南市議會｜陳秋萍",
-            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.tncc.gov.tw｜臺南市議會｜陳秋萍",
-            "url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3"
-          }
-        ]
-      },
-      "published_date": "2026-07-30",
-      "source_title": "www.tncc.gov.tw｜臺南市議會｜陳秋萍",
-      "source_url": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3",
-      "corrections": [
-        "2026-10-27 移除具體主張開頭的來源項次編號"
-      ]
     },
     {
       "id": "candidate-auto-3f8750d81011",
