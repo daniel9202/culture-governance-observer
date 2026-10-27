@@ -16134,6 +16134,79 @@
       "corrections": []
     },
     {
+      "id": "candidate-auto-b17e52c016d7",
+      "city": "桃園市",
+      "office": "縣市長",
+      "candidate": "黃世杰",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-b17e52c016d7",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "四大主張的標題與副標引自貼文正文，各主張底下的三個子項引自隨文發布的四張政見圖卡。",
+        "來源是 Facebook 分享連結（/share/p/），不保證長期有效，待補該貼文的永久連結。"
+      ],
+      "policy_title": "文化造浪：藝文四大主張",
+      "topics": [
+        "流行音樂",
+        "展演空間",
+        "文化場館",
+        "文學",
+        "影視文化",
+        "公共圖書空間",
+        "地方文化",
+        "文化產業"
+      ],
+      "topic_categories": [
+        "影視與流行音樂",
+        "文化場館",
+        "閱讀與圖書館",
+        "地方文化與社區營造",
+        "文化產業與文創"
+      ],
+      "topic_subcategories": [],
+      "summary": "提出發展演唱會經濟、完善各級展演空間、打造有故事的桃園、影視生態全面進化四大藝文主張。",
+      "policy_argument": "一座城市的魅力，來自豐富的文化生活，也來自這片土地孕育的故事。桃園有13行政區，有山、有海、有城市與鄉村，也有多元族群文化。不同世代、不同背景的人們，在這片土地上生活、扎根，累積出桃園獨特的地方記憶與文化底蘊。這些是桃園珍貴的文化資產，也是發展城市文化品牌的重要基礎。",
+      "concrete_proposals": [
+        "發展演唱會經濟｜桃園邁向展演城市：建立專案服務機制；單一窗口協調場地、交通與宣傳；串聯商圈、餐飲、旅宿，引導民眾停留消費。",
+        "完善各級展演空間｜打造多元藝文舞台：推動大型展演建設，接軌國際舞台；完善中小型展演場館，健全藝文展演生態；發展Live House、小型劇場等多元空間，培育在地文化量能。",
+        "打造有故事的桃園｜文化扎根地方共好：升級桃園文學季，建立年度文化品牌；創作者駐桃計畫，透過駐地、交流，讓創作深入地方；完善圖書館及社區閱讀資源，規劃藝文參與回饋機制。",
+        "影視生態全面進化｜讓人才與作品在桃園扎根：研議成立桃園電影委員會，整合協拍、招商與影視產業服務；串接院校、業者與劇組，提供培訓、實作及工作媒合；推動「影視 × 景點」，研議場景保存、主題遊程與後續行銷。"
+      ],
+      "related_statements": [
+        "從音樂、劇場、文學到電影、影視製作，我們要支持在地人才與團隊發展，讓好的作品在桃園誕生，也有機會走向全台灣、走向國際。"
+      ],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "黃世杰 Facebook｜文化造浪 桃園新動能！",
+            "url": "https://www.facebook.com/share/p/1Ht2eiJxmw/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "黃世杰 Facebook｜文化造浪 桃園新動能！",
+            "url": "https://www.facebook.com/share/p/1Ht2eiJxmw/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "黃世杰 Facebook｜文化造浪 桃園新動能！",
+            "url": "https://www.facebook.com/share/p/1Ht2eiJxmw/"
+          }
+        ]
+      },
+      "published_date": "2026-10-27",
+      "source_title": "黃世杰 Facebook｜文化造浪 桃園新動能！",
+      "source_url": "https://www.facebook.com/share/p/1Ht2eiJxmw/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-27",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "corrections": []
+    },
+    {
       "id": "candidate-auto-55b93aa66bc5",
       "city": "新北市",
       "office": "縣市長",
