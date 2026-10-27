@@ -302,19 +302,41 @@ def build_civic_calls():
         })
     return records
 
-def build_fulfillment():
+def build_fulfillment(candidate_records=None):
     records = []
-    allowed_statuses = {"fulfilled", "partial", "in_progress", "no_verified_progress", "not_assessable"}
+    # not_checked：本站還沒查，不代表任何關於候選人的判斷。
+    # not_assessable：查過了，但政見只寫方向、沒有可驗證的作為。兩者不可混用。
+    allowed_statuses = {"fulfilled", "partial", "in_progress", "no_verified_progress", "not_assessable", "not_checked"}
+    # pledge_nature 描述政見原文本身的性質，不是查核結果。選填。
+    allowed_natures = {"具體措施", "政策方向"}
+    governance_ids = {
+        record["id"]
+        for record in (candidate_records or [])
+        if record.get("content_nature") == "現任首長施政"
+    }
     for index, row in enumerate(rows("pledge_fulfillment.csv"), start=2):
         if not any(row.values()):
             continue
         label = f"pledge_fulfillment.csv row {index}"
-        required(row, ["id", "city", "person", "party", "current_office", "term", "election", "reelection_status", "pledge_source_type", "pledge_title", "pledge_summary", "pledge_date", "pledge_source_title", "pledge_source_url", "responsibility", "status", "evidence_summary", "last_verified"], label)
+        base_required = ["id", "city", "person", "party", "current_office", "term", "election", "reelection_status", "pledge_source_type", "pledge_title", "pledge_summary", "pledge_date", "pledge_source_title", "pledge_source_url", "responsibility", "status"]
+        # 尚未查核時沒有查核結果也沒有查核日期，硬填反而是假資訊。
+        if row.get("status", "").strip() != "not_checked":
+            base_required += ["evidence_summary", "last_verified"]
+        required(row, base_required, label)
         valid_date(row["pledge_date"], label)
-        valid_date(row["last_verified"], label)
+        if row["last_verified"].strip():
+            valid_date(row["last_verified"], label)
         valid_url(row["pledge_source_url"], label)
         if row["status"] not in allowed_statuses:
             raise ValueError(f"{label}: invalid status")
+        nature = (row.get("pledge_nature") or "").strip()
+        if nature and nature not in allowed_natures:
+            raise ValueError(f"{label}: invalid pledge_nature {nature}")
+        # related_records 指向 candidates.csv 的「現任首長施政」紀錄，以 | 分隔。
+        related_records = [x.strip() for x in (row.get("related_records") or "").split("|") if x.strip()]
+        for related in related_records:
+            if related not in governance_ids:
+                raise ValueError(f"{label}: related_records {related} 不是 candidates.csv 裡的「現任首長施政」紀錄")
         evidence_url = row.get("evidence_source_url", "").strip()
         if evidence_url:
             valid_url(evidence_url, label)
@@ -338,7 +360,9 @@ def build_fulfillment():
             "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
             "pledge_title": row["pledge_title"], "pledge_summary": row["pledge_summary"], "pledge_date": row["pledge_date"],
             "pledge_source_type": row["pledge_source_type"], "pledge_source_title": row["pledge_source_title"], "pledge_source_url": row["pledge_source_url"],
-            "responsibility": row["responsibility"], "status": row["status"], "evidence_summary": row["evidence_summary"],
+            "responsibility": row["responsibility"], "status": row["status"],
+            "pledge_nature": nature, "related_records": related_records,
+            "evidence_summary": row["evidence_summary"],
             "evidence_source_title": row.get("evidence_source_title", ""), "evidence_source_url": evidence_url,
             "additional_evidence": additional_evidence,
             "last_verified": row["last_verified"], "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
@@ -578,7 +602,7 @@ if __name__ == "__main__":
     shared_groups = build_shared_policy_groups()
     local_issues = build_local_issues()
     civic_calls = build_civic_calls()
-    fulfillment = build_fulfillment()
+    fulfillment = build_fulfillment(candidates)
     registered, registered_source = build_registered_candidates()
     districts, districts_source = build_election_districts(registered)
     errors, warnings = check_against_registration(candidates, shared_groups, registered)
