@@ -407,43 +407,40 @@
       "party": "民主進步黨",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "文化高雄．世界舞台",
+      "editor_notes": [
+        "主源改為官網政見頁。原主源是 Threads 分享連結，內容只有七個政策名稱、無實質主張，且分享連結不保證長期有效。",
+        "第 8 項的鳳山無線電信所、黃埔新村、鳳儀書院與曹公圳等地點只見於 CTWant 報導，官網原文未列，故併入並標明來源。",
+        "另併自由時報一則報導，內容與官網重複，不重列。",
+        "官網列為 7 大政策、18 項計畫，該頁只展開 7 大政策，18 項計畫未逐項列出。"
+      ],
+      "policy_title": "文化高雄・世界舞台",
       "topics": [
-        "社區文化",
+        "公共圖書空間",
         "文化資產",
         "傳統藝術",
-        "地方文史",
         "表演藝術",
         "文化產業",
-        "國際文化交流",
-        "圖書館",
-        "影視文化",
-        "城市再生",
-        "青年"
+        "國際文化交流"
       ],
       "topic_categories": [
-        "地方文化與社區營造",
+        "閱讀與圖書館",
         "文化資產",
         "表演藝術",
         "文化產業與文創",
-        "國際與兩岸交流",
-        "閱讀與圖書館",
-        "影視與流行音樂",
-        "文化空間與城市再生",
-        "青年"
+        "國際與兩岸交流"
       ],
       "topic_subcategories": [],
-      "summary": "文化高雄．世界舞台",
-      "policy_argument": "文化高雄．世界舞台",
+      "summary": "提出 7 大政策、18 項計畫，讓文化從土地生根、從生活長出創作，主張高雄下一階段應從興建場館、舉辦活動，進一步走向文化內容生產。",
+      "policy_argument": "過去 20 多年，高雄從高美館、駁二、衛武營、高流，到春天藝術節、大港開唱、高雄電影節、TTXC，逐步累積出完整的文化場館與城市品牌，也打下深厚的文化基礎。下一階段，我們要讓這些場館、活動與城市故事，轉化成更多屬於高雄的作品與文化內容！",
       "concrete_proposals": [
-        "文化生根。",
-        "時光再生。",
-        "百藝傳世。",
-        "南方立論。",
-        "高雄舞台。",
-        "內容造浪。",
-        "國際交陪。"
+        "文化生根：讓文化走進日常。61 座圖書館串起生活圈。深化社區營造、地方文化館、地方創生及文化基地。圖書館結合閱讀、展演、工作坊、親子與樂齡活動，拓展更多元功能。",
+        "時光再生：讓歷史記憶在城市延續。推動歷史場域街區營造，串聯文化資產與具有歷史故事的街區。建置 38 區地方文化資料及敘事，讓照片、文獻、口述歷史轉化為出版、影像、漫畫、動畫及戲劇內容。",
+        "百藝傳世：讓文化技藝有人接棒。盤點文化職人與傳統技藝，培育新一代接班，涵蓋歌仔戲、布袋戲、皮影戲，以及製偶、戲服、剪黏、交趾陶、木石雕、藝陣、祭典等傳統技藝。推動師徒傳習、青年學徒及長期培育，並支持傳統藝術跨域合作。",
+        "南方立論：讓高雄說自己的故事。建立「大南方人文與藝術研究」體系，整合高雄文學、美術史、南島藝術及高雄學等研究量能。研究港口、海洋、工業、眷村、移民、農漁等高雄經驗，建立屬於南方的文化論述。",
+        "高雄舞台：讓高雄生產自己的好作品。建立表演人才鏈，推動劇場人口倍增。支持歌仔戲、劇場、舞蹈、音樂劇、兒童劇及跨域原創作品。透過庄頭藝穗節、文化幣、青年席位及教育推廣，讓看表演成為市民生活中的日常選擇。",
+        "內容造浪：讓文化創意形成產業。布局港區、鳳山、左營、岡山四大文化內容基地，發展影視、音樂、出版、漫畫、動畫、遊戲、設計、XR 及 IP 產業。",
+        "國際交陪：讓高雄作品走向世界。從國際邀演走向國際共製，推動共同研究、策展、製作及影視、音樂合製，支持高雄作品進入國際藝術節、影展、書展與內容市場。整合高雄春天藝術節、大港開唱、高雄電影節、TTXC 等品牌，打造文化內容國際交流與交易平台。",
+        "「時光再生」規畫先從鳳山串聯無線電信所、黃埔新村、鳳儀書院與曹公圳，打造新的「文化客廳」，未來再拓展至岡山、旗山等地。"
       ],
       "related_statements": [
         "表示藝術工作者以專業帶給觀眾感動，政治工作者也應以專業讓市民生活得更好。"
@@ -457,8 +454,12 @@
         ],
         "concrete_proposals": [
           {
-            "title": "賴瑞隆 Threads：文化高雄．世界舞台",
-            "url": "https://www.threads.com/share/FA5zqGs_j/"
+            "title": "文化高雄・世界舞台 - 賴瑞隆官網",
+            "url": "https://www.zenolai.tw/policy/culture/16"
+          },
+          {
+            "title": "ctwant.com｜賴瑞隆化身歌仔戲演員推文化政見　拋7大政策：讓高雄作品走向世界 | 政治 | CTWANT - ctwant.com",
+            "url": "https://www.ctwant.com/article/496909/"
           }
         ],
         "related_statements": [
@@ -468,11 +469,14 @@
           }
         ]
       },
-      "published_date": "2026-09-07",
-      "source_title": "賴瑞隆 Threads：文化高雄．世界舞台",
-      "source_url": "https://www.threads.com/share/FA5zqGs_j/",
+      "published_date": "2026-09-09",
+      "source_title": "文化高雄・世界舞台：讓高雄的故事，走向世界！ - 賴瑞隆 2026",
+      "source_url": "https://www.zenolai.tw/policy/culture/16",
       "related_sources": [
-        "https://www.nownews.com/news/6872857"
+        "https://www.nownews.com/news/6872857",
+        "https://www.threads.com/share/FA5zqGs_j/",
+        "https://www.ctwant.com/article/496909/",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5616997"
       ],
       "source_type": "候選人原文",
       "last_verified": "2026-10-10",
@@ -480,9 +484,7 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-07｜查核賴瑞隆官方網站 https://zenolai.oen.tw/，未找到「文化高雄」、「世界舞台」或七項文化政策的同步頁面。",
-        "2026-10-03｜合併 candidate-khh-mayor-lai-jui-lung-002 的同一套「文化高雄・世界舞台」政策；保留既有 ID，原筆已含較完整的七大政策內容。",
-        "2026-10-10｜依原文修正。"
+        "2026-10-27 主源由 Threads 分享連結改為官網政見頁，併入 CTWant 與自由時報兩則報導"
       ]
     },
     {
@@ -3216,23 +3218,32 @@
       "party": "民主進步黨",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "高雄客家文化城",
+      "editor_notes": [
+        "主源改為官網政見頁，原 NOWnews 與自由時報兩則報導內容與官網重複，網址列入 related_sources。"
+      ],
+      "policy_title": "客家政策：「高雄客家文化城」三大核心目標",
       "topics": [
         "客家文化",
-        "文化觀光"
+        "客語傳承",
+        "文化產業",
+        "文化觀光",
+        "藝文節慶",
+        "民俗技藝"
       ],
       "topic_categories": [
         "客家文化",
-        "文化觀光"
+        "文化產業與文創",
+        "文化觀光",
+        "藝文節慶",
+        "民俗節慶"
       ],
       "topic_subcategories": [],
-      "summary": "提出三大政策，推動客語復興與傳承、保存創新客家文化並培育後生人才、建立高雄客家品牌。",
-      "policy_argument": "打造文化與經濟並行的「高雄客家文化城」。",
+      "summary": "推動客語復興和傳承、保存創新客家文化及培育後生人才、整合客庄產業聚落及建立高雄客家品牌。",
+      "policy_argument": "以客家文化、客語傳承、文化產業、文化觀光、藝文節慶、民俗技藝為主要政策方向。",
       "concrete_proposals": [
-        "將擴大校園與社區沉浸式客語教學，增加學習資源與師資，同時推廣客語友善商家認證。",
-        "將結合數位科技保存客家文化資產與口述歷史，透過創新的文化內容推廣客家文化，同時推動人才培育計畫。",
-        "將強化「右堆文化路徑」，串聯美濃傳統工藝與特色美食，結合六龜、杉林、甲仙等地特色，打造具國際能見度的客庄觀光廊帶。"
+        "推動客語復興和傳承：首重客語保存，擴大校園和社區沉浸式教學，增加學習資源和師資，並推廣客語友善商家認證，讓客語真正融入日常生活。",
+        "保存創新客家文化及培育後生人才：結合數位科技保存客家文資、口述歷史，以創新文化內容推廣客家文化；同時推動人才培育計畫，支持客家後生返鄉、留鄉發展。",
+        "整合客庄產業聚落及建立高雄客家品牌：強化「右堆文化路徑」，串聯美濃的傳統工藝和美食，結合六龜、杉林、甲仙各區特色，打造具國際能見度的客庄觀光廊帶；在都會區也會辦理主題文化節慶，展現客家多元風貌。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -3244,8 +3255,8 @@
         ],
         "concrete_proposals": [
           {
-            "title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
-            "url": "https://www.nownews.com/news/6868109"
+            "title": "客家政策：「高雄客家文化城」三大核心目標 - 賴瑞隆官網",
+            "url": "https://www.zenolai.tw/policy/culture/15"
           }
         ],
         "related_statements": [
@@ -3255,20 +3266,20 @@
           }
         ]
       },
-      "published_date": "2026-08-21",
-      "source_title": "2026/8/21｜自由時報｜台客盟挺「客家女婿」 賴瑞隆：3政策打造高雄客家文化城- 政治 - 自由時報",
-      "source_url": "https://www.nownews.com/news/6868109",
-      "related_sources": [],
-      "source_type": "新聞報導",
+      "published_date": "2026-09-09",
+      "source_title": "客家政策：「高雄客家文化城」三大核心目標 - 賴瑞隆 2026",
+      "source_url": "https://www.zenolai.tw/policy/culture/15",
+      "related_sources": [
+        "https://www.nownews.com/news/6868109",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5580479"
+      ],
+      "source_type": "候選人原文",
       "last_verified": "2026-10-10",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-16｜由 Google Sheet draft-20260916-19 整合稿發布。",
-        "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-21。",
-        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
-        "依原文修正（2026-10-10）"
+        "2026-10-27 主源由新聞報導改為官網政見頁，兩則報導合併"
       ]
     },
     {
@@ -7607,153 +7618,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-auto-d5b5d0d5a1df",
-      "city": "高雄市",
-      "office": "縣市長",
-      "candidate": "賴瑞隆",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-d5b5d0d5a1df",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "文化高雄・世界舞台：7 大政策 18 項計畫",
-      "topics": [
-        "原住民族文化",
-        "圖書館",
-        "文化場館",
-        "眷村文化",
-        "音樂文化",
-        "影視文化"
-      ],
-      "topic_categories": [
-        "原住民族文化",
-        "閱讀與圖書館",
-        "文化場館",
-        "文化資產",
-        "表演藝術",
-        "影視與流行音樂"
-      ],
-      "topic_subcategories": [],
-      "summary": "「文化高雄．世界舞台」涵蓋文化生根、時光再生、百藝傳世、南方立論、高雄舞台、內容造浪、國際交陪 7 大政策、18 項計畫。",
-      "policy_argument": "以原住民族文化、圖書館、文化場館、眷村文化、音樂文化、影視文化為主要政策方向。",
-      "concrete_proposals": [
-        "藉此提出「文化高雄．世界舞台」政策願景，涵蓋「文化生根、時光再生、百藝傳世、南方立論、高雄舞台、內容造浪、國際交陪」7大政策、18項計畫，主張高雄下一階段應從興建場館、舉辦活動，進一步走向文化內容生產。",
-        "賴瑞隆首先提出「文化生根」，希望深化社區營造、地方文化館及文化基地，並重新定位全市61座圖書館及分館，加入展演、工作坊、親子與樂齡等功能，以「一個圖書館，一個生活圈」讓文化融入市民日常。",
-        "第二項「時光再生」則以歷史場域及城市故事為核心，規畫先從鳳山串聯無線電信所、黃埔新村、鳳儀書院與曹公圳，打造新的「文化客廳」，未來再拓展至岡山、旗山等地。",
-        "同時建立高雄38區地方文化資料，將照片、文獻及口述歷史轉化為出版、漫畫、動畫、影像與戲劇作品。",
-        "第三項「百藝傳世」鎖定歌仔戲、布袋戲、皮影戲及各類傳統工藝，透過師徒傳習、青年學徒等方式培養下一代人才，並鼓勵傳統藝術與劇場、漫畫、動畫、影視、遊戲及科技藝術跨界合作。",
-        "第四項「南方立論」則規畫整合高雄文學、美術史、南島藝術及高雄學等研究資源，建立「大南方人文與藝術研究」體系，從港口、海洋、工業、軍事、眷村到農漁、客庄及原住民族文化等面向累積高雄自己的論述，並將研究成果轉化為影視、小說、漫畫、遊戲及IP創作素材。",
-        "第五項「高雄舞台」主張從「邀請作品來高雄」進一步走向「高雄自己製作作品」，建立編劇、導演、演員、舞者及舞台技術等完整人才鏈，同時透過庄頭藝穗節、文化幣、青年席位及教育推廣推動「劇場人口倍增」，讓觀看表演逐漸成為市民日常休閒選擇。",
-        "第六項「內容造浪」將布局港區、鳳山、左營及岡山4大文化內容基地，發展影視、音樂、出版、漫畫、動畫、遊戲、設計、XR及IP產業。",
-        "第七項「國際交陪」，則希望從單純邀請國外團隊演出，升級至共同研究、策展及製作，並整合高雄春天藝術節、大港開唱、高雄電影節及TTXC等既有品牌，協助高雄文化作品進入國際市場。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "ctwant.com｜賴瑞隆化身歌仔戲演員推文化政見　拋7大政策：讓高雄作品走向世界 | 政治 | CTWANT - ctwant.com",
-            "url": "https://www.ctwant.com/article/496909/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "ctwant.com｜賴瑞隆化身歌仔戲演員推文化政見　拋7大政策：讓高雄作品走向世界 | 政治 | CTWANT - ctwant.com",
-            "url": "https://www.ctwant.com/article/496909/"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "ctwant.com｜賴瑞隆化身歌仔戲演員推文化政見　拋7大政策：讓高雄作品走向世界 | 政治 | CTWANT - ctwant.com",
-            "url": "https://www.ctwant.com/article/496909/"
-          }
-        ]
-      },
-      "published_date": "2026-09-07",
-      "source_title": "ctwant.com｜賴瑞隆化身歌仔戲演員推文化政見　拋7大政策：讓高雄作品走向世界 | 政治 | CTWANT - ctwant.com",
-      "source_url": "https://www.ctwant.com/article/496909/",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-fafec85edc6b",
-      "city": "高雄市",
-      "office": "縣市長",
-      "candidate": "賴瑞隆",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-fafec85edc6b",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "同一政見有 2 則來源，內容合併後以",
-        "分項，重複者不重列"
-      ],
-      "policy_title": "高雄客家文化城",
-      "topics": [
-        "客語傳承",
-        "客家文化",
-        "文化資產",
-        "藝文節慶",
-        "社區營造",
-        "文化觀光"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "文化資產",
-        "藝文節慶",
-        "地方文化與社區營造",
-        "文化觀光"
-      ],
-      "topic_subcategories": [],
-      "summary": "推動「高雄客家文化城」，讓客家文化保存、人才培育與產業發展同步向前。",
-      "policy_argument": "以客語傳承、客家文化、文化資產、藝文節慶、社區營造、文化觀光為主要政策方向。",
-      "concrete_proposals": [
-        "推動「高雄客家文化城」，讓客家文化保存、人才培育與產業發展同步向前。",
-        "一、推動客語復興與傳承，擴大校園及社區沉浸式學習資源，並推廣客語友善商家，讓客語重新走入生活；",
-        "二、保存創新客家文化、培育後生人才，運用數位科技保存文資與口述歷史，支持青年返鄉、留鄉發展；",
-        "三、整合客庄產業、建立高雄客家品牌，強化「右堆文化路徑」，串聯地方產業、文化節慶及觀光資源，提升高雄客庄的能見度。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "自由時報｜重量級領袖齊聚高雄挺客家女婿 賴瑞隆3政策打造客家文化城 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5580479"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "自由時報｜重量級領袖齊聚高雄挺客家女婿 賴瑞隆3政策打造客家文化城 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5580479"
-          },
-          {
-            "title": "自由時報｜賴瑞隆獲客家領袖相挺 柯志恩續辦世界客博會 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/Kaohsiung/paper/1771650"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "自由時報｜重量級領袖齊聚高雄挺客家女婿 賴瑞隆3政策打造客家文化城 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5580479"
-          }
-        ]
-      },
-      "published_date": "2026-09-20",
-      "source_title": "自由時報｜重量級領袖齊聚高雄挺客家女婿 賴瑞隆3政策打造客家文化城 - 自由時報",
-      "source_url": "https://news.ltn.com.tw/news/politics/breakingnews/5580479",
-      "related_sources": [
-        "https://news.ltn.com.tw/news/Kaohsiung/paper/1771650"
-      ],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-3303c1151d52",
       "city": "高雄市",
       "office": "縣市長",
@@ -11974,64 +11838,6 @@
       "published_date": "2026-08-31",
       "source_title": "OEN 應援科技｜葉人文 － 臺南市長候選人 - OEN 應援科技",
       "source_url": "https://tainanyesman.oen.tw/",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-a2119ba90ad1",
-      "city": "高雄市",
-      "office": "縣市長",
-      "candidate": "賴瑞隆",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-a2119ba90ad1",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "文化高雄世界舞台與小城創生",
-      "topics": [
-        "地方文化",
-        "地方文史",
-        "文化觀光",
-        "地方創生"
-      ],
-      "topic_categories": [
-        "地方文化與社區營造",
-        "文化觀光"
-      ],
-      "topic_subcategories": [],
-      "summary": "賴瑞隆提出文化高雄世界舞台，主張呈現在地記憶與故事，並以文化窗口連結地方創生。",
-      "policy_argument": "他提出文化高雄世界舞台，要把地方記憶變成大家都願意看的作品。",
-      "concrete_proposals": [
-        "他提出文化高雄世界舞台，要把地方記憶變成大家都願意看的作品。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "自由時報｜解析賴瑞隆「小城創生」 網評：透過人的交流創造魅力街區 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5616997"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "自由時報｜解析賴瑞隆「小城創生」 網評：透過人的交流創造魅力街區 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5616997"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "自由時報｜解析賴瑞隆「小城創生」 網評：透過人的交流創造魅力街區 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/breakingnews/5616997"
-          }
-        ]
-      },
-      "published_date": "2026-10-24",
-      "source_title": "自由時報｜解析賴瑞隆「小城創生」 網評：透過人的交流創造魅力街區 - 自由時報",
-      "source_url": "https://news.ltn.com.tw/news/politics/breakingnews/5616997",
       "related_sources": [],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
