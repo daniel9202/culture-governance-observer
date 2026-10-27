@@ -3955,71 +3955,6 @@
       ]
     },
     {
-      "id": "candidate-yilan-mayor-wu-tsung-hsien-indigenous-001",
-      "city": "宜蘭縣",
-      "office": "縣市長",
-      "candidate": "吳宗憲",
-      "party": "中國國民黨",
-      "publish_id": "",
-      "review_status": "AI初審待複核",
-      "editor_notes": [
-        "未載明：文化保存對象、方法、預算、期程"
-      ],
-      "policy_title": "",
-      "topics": [
-        "原住民族文化",
-        "文化保存",
-        "原鄉建設"
-      ],
-      "topic_categories": [
-        "原住民族文化",
-        "文化資產",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [
-        "文化資產／保存"
-      ],
-      "summary": "會與部落領袖合作，推動原鄉建設、觀光與文化保存。",
-      "policy_argument": "推動原鄉建設、觀光與文化保存。",
-      "concrete_proposals": [
-        "會與部落領袖合作，推動原鄉建設、觀光與文化保存。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
-          }
-        ]
-      },
-      "published_date": "2026-05-10",
-      "source_title": "吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-      "source_url": "https://www.cna.com.tw/news/aloc/202605100054.aspx",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-10",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。",
-        "2026-10-10｜依原文修正。"
-      ]
-    },
-    {
       "id": "candidate-yilan-mayor-lin-kuo-chang-indigenous-001",
       "city": "宜蘭縣",
       "office": "縣市長",
@@ -16749,32 +16684,33 @@
       "party": "中國國民黨",
       "publish_id": "candidate-auto-565cea381440-a1d0",
       "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
+      "editor_notes": [
+        "同一則中央社報導原本在本站裂成兩筆（來源分類一筆標「新聞報導」、一筆標「新聞／公開網頁」），已合併，內容以較完整者為準。",
+        "本筆只取來源中的文化段落：礦業、地熱發電與觀光開發的族人參與及知情同意機制、長照十年計畫3.0與文化健康站、55歲以上原住民族健保費全額補助、傳統領域土地權利等主張不在本站收錄範圍。",
+        "來源為記者轉述，無候選人直述的論述段落，政策論述留空。"
+      ],
+      "policy_title": "挺部落顧原民",
       "topics": [
         "原住民族文化",
-        "文化保存",
-        "文化觀光",
-        "地方文化",
-        "多元語言"
+        "族語傳承",
+        "傳統祭儀",
+        "文化資產保存",
+        "文化觀光"
       ],
       "topic_categories": [
         "原住民族文化",
+        "民俗節慶",
         "文化資產",
-        "文化觀光",
-        "地方文化與社區營造",
-        "語言與族群"
+        "文化觀光"
       ],
       "topic_subcategories": [
         "文化資產／保存"
       ],
-      "summary": "未來將推動「挺部落顧原民」政策，不論礦業、地熱發電或觀光開發，都應落實族人參與及知情同意機制。 || 他將持續支持原住民族實驗學校，讓孩子從小就能在文化與族語環境中成長，同時推動祭儀、傳統技藝及舞蹈等文化振興工作，並透過數位典藏與族語教學…",
-      "policy_argument": "以原住民族文化、文化保存、文化觀光、地方文化、多元語言為主要政策方向。",
+      "summary": "推動「挺部落顧原民」政策，支持原住民族實驗學校，推動祭儀、傳統技藝及舞蹈等文化振興工作，並透過數位典藏與族語教學傳承文化。",
+      "policy_argument": "以原住民族文化、族語傳承、傳統祭儀、文化資產保存、文化觀光為主要政策方向。",
       "concrete_proposals": [
-        "未來將推動「挺部落顧原民」政策，不論礦業、地熱發電或觀光開發，都應落實族人參與及知情同意機制。",
         "他將持續支持原住民族實驗學校，讓孩子從小就能在文化與族語環境中成長，同時推動祭儀、傳統技藝及舞蹈等文化振興工作，並透過數位典藏與族語教學……",
-        "主張持續落實「長照十年計畫3.0」，強化文化健康站功能，並推動55歲以上原住民族健保費全額補助，減輕家庭負擔，讓長輩能在熟悉的文化環境中安心生活。",
-        "「挺部落顧原民」政策，主張尊重傳統領域土地權利，並推動55歲以上原民健保費全額補助。"
+        "會與部落領袖合作，推動原鄉建設、觀光與文化保存。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -16806,7 +16742,9 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 合併同一網址裂成的兩筆，剔除非文化主張"
+      ]
     },
     {
       "id": "candidate-auto-18553f37d4ee",
