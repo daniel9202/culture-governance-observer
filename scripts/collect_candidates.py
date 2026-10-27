@@ -90,7 +90,7 @@ def candidate_sections(text, roster):
         yield row, text[start:end]
 
 
-def collect_councilor_pages(collection):
+def collect_councilor_pages(collection, dry_run=False):
     inbox = ROOT / collection["inbox"]
     old_rows = load_rows(inbox)
     old_urls = {row.get("source_url", "") for row in old_rows}
@@ -122,7 +122,13 @@ def collect_councilor_pages(collection):
                     print(f"warning: {label}/{detail_url}: {exc}")
             seen_candidates = set()
             for source_url, source_text in sources:
-                for candidate, section in candidate_sections(source_text, party_roster):
+                matches = list(candidate_sections(source_text, party_roster))
+                # A party landing page can contain many candidates. A detail page
+                # belongs to one candidate; related links and footer text must not
+                # cause the same page to be assigned to additional candidates.
+                if source_url != landing_url:
+                    matches = matches[:1]
+                for candidate, section in matches:
                     if candidate["candidate"] in seen_candidates or "政見" not in section:
                         continue
                     policy = section.split("政見", 1)[1]
@@ -154,11 +160,12 @@ def collect_councilor_pages(collection):
             print(f"warning: {label}: {error}")
         matched = len({row["candidate"] for row, _ in found})
         stats.append((label, landing_url, len(found), policy_count, matched, added, error))
-    inbox.parent.mkdir(parents=True, exist_ok=True)
-    with inbox.open("w", encoding="utf-8", newline="") as target:
-        writer = csv.DictWriter(target, fieldnames=COUNCILOR_FIELDS, extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(rows)
+    if not dry_run:
+        inbox.parent.mkdir(parents=True, exist_ok=True)
+        with inbox.open("w", encoding="utf-8", newline="") as target:
+            writer = csv.DictWriter(target, fieldnames=COUNCILOR_FIELDS, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(rows)
     for label, url, found, policies, matched, added, error in stats:
         print(f"party={label} url={url} found={found} policy={policies} matched={matched} added={added} error={error}")
     print(f"{inbox.name}: {len(rows)} rows")
@@ -226,9 +233,9 @@ def fetch(city, terms, limit, candidate="", site=""):
             "resolution_error": resolution.error,
         }
 
-def collect(config, collection):
+def collect(config, collection, dry_run=False):
     if collection.get("source_mode") == "party_candidate_pages":
-        collect_councilor_pages(collection)
+        collect_councilor_pages(collection, dry_run=dry_run)
         return
     inbox = ROOT / collection["inbox"]
     rows = load_rows(inbox)
@@ -283,22 +290,24 @@ def collect(config, collection):
                 label = f"{city}/{candidate}" if candidate else city
                 print(f"warning: {label}: {exc}")
             time.sleep(0.25)
-    inbox.parent.mkdir(parents=True, exist_ok=True)
-    with inbox.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=FIELDS)
-        writer.writeheader()
-        writer.writerows(rows)
+    if not dry_run:
+        inbox.parent.mkdir(parents=True, exist_ok=True)
+        with inbox.open("w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=FIELDS)
+            writer.writeheader()
+            writer.writerows(rows)
     print(f"{inbox.name}: {len(rows)} rows; skipped {skipped_duplicates} duplicate titles")
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--collection", choices=None, help="只執行指定 collection")
+    parser.add_argument("--dry-run", action="store_true", help="執行蒐集與驗證但不寫入 inbox")
     args = parser.parse_args()
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     collections = config["collections"]
     selected = {args.collection: collections[args.collection]} if args.collection else collections
     for collection in selected.values():
-        collect(config, collection)
+        collect(config, collection, dry_run=args.dry_run)
 
 if __name__ == "__main__":
     main()

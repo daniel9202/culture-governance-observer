@@ -59,10 +59,8 @@
         "台灣民眾黨 議員候選人頁": "https://www.tpp.org.tw/2026election/candidates.php",
         "時代力量 議員候選人頁": "https://newpowerparty.tw/vote2026",
         "台灣綠黨 議員候選人頁": "https://web.greenparty.org.tw/posts/news/2026candidate/",
-        "台灣基進 議員候選人頁": "https://statebuilding.tw/candidates/",
-        "社會民主黨 議員候選人頁": "https://sdparty.oen.tw/"
+        "台灣基進 議員候選人頁": "https://statebuilding.tw/candidates/"
       },
-      "max_items_per_city": 15,
       "max_items_per_candidate": 8,
       "max_items_per_query": 4,
       "duplicate_title_threshold": 0.92
