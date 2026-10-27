@@ -14,7 +14,8 @@ const normaliseApprovedCandidate=record=>({
   topics:Array.isArray(record.topics)?record.topics:[],
   topic_categories:Array.isArray(record.topic_categories)?record.topic_categories:[],
   topic_subcategories:Array.isArray(record.topic_subcategories)?record.topic_subcategories:[],
-  policy_argument:record.policy_argument||record.summary||'',
+  // 政策論述只用來源有的原文，空就是空，不拿摘要補位（顯示「尚未收錄可核實的政策論述。」）。
+  policy_argument:record.policy_argument||'',
   concrete_proposals:Array.isArray(record.concrete_proposals)?record.concrete_proposals:[record.summary].filter(Boolean),
   related_statements:Array.isArray(record.related_statements)?record.related_statements:[],
   editor_notes:Array.isArray(record.editor_notes)?record.editor_notes:[],
@@ -59,7 +60,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     group.topic_categories.push(...record.topic_categories);
     group.topic_subcategories.push(...record.topic_subcategories);
     if(record.policy_title)group.policy_titles.push(record.policy_title);
-    group.policy_arguments.push(record.policy_argument||record.summary);
+    if(record.policy_argument)group.policy_arguments.push(record.policy_argument);
     group.concrete_proposals.push(...(record.concrete_proposals.length?record.concrete_proposals:[record.summary]));
     group.related_statements.push(...record.related_statements);
     group.editor_notes.push(...record.editor_notes);
