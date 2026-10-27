@@ -495,7 +495,9 @@
       "party": "社會民主黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一網址原本裂成兩筆。被刪除的那筆整筆內容是另一位議員何孟樺的發言，非苗博雅本人主張。"
+      ],
       "policy_title": "",
       "topics": [
         "語言文化",
@@ -548,8 +550,7 @@
       "content_nature": "現任問政／提案",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-04｜依來源性質更正為現任議員問政／提案。",
-        "2026-10-04｜依來源性質更正為現任議員問政／提案。"
+        "2026-10-27 移除誤植他人發言的重複列"
       ]
     },
     {
@@ -945,7 +946,9 @@
       "party": "中國國民黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同一網址原本裂成兩筆，已合併。第 4、5 項補自另一筆，原文為記者敘述（「他同時關注」「此外，他也關心」），已剔除框架詞。"
+      ],
       "policy_title": "",
       "topics": [
         "表演藝術",
@@ -970,7 +973,9 @@
       "concrete_proposals": [
         "建議持續邀請閩劇團及多元表演團體到梅石藝文中心演出。",
         "關注神像修復及保存管理。",
-        "要求國際藝術島提早展開宣傳以帶動觀光效益。"
+        "要求國際藝術島提早展開宣傳以帶動觀光效益。",
+        "關注國際藝術島留下的藝術作品保存情況，建議完整保留並增設作品介紹，讓民眾及遊客更了解創作理念。",
+        "關心梅石藝文中心未來經營方向，建議導入夜間表演活動，打造觀光客夜間休閒與藝文欣賞空間。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -1002,7 +1007,9 @@
       "proposer_role": "推定現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 合併同網址重複列，補入兩項遺漏主張，清除 HTML 實體 &emsp;"
+      ]
     },
     {
       "id": "candidate-lgn-councilor-chou-jui-kuo-traditional-architecture-001",
@@ -4169,7 +4176,9 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：場館面積、藝文設施內容、預算來源、營運方式、完成期程"
+        "未載明：場館面積、藝文設施內容、預算來源、營運方式、完成期程",
+        "同一網址原本裂成兩筆，已合併。第 2 項補自另一筆。",
+        "被刪除的那筆有兩處問題：前兩項句子開頭被截斷（「的，利用未來⋯」「，未來土城⋯」），另有一項是蘇巧慧的發言（「蘇巧慧說，未來她會和彭一書一起努力⋯」），非本人主張，不予收錄。"
       ],
       "policy_title": "",
       "topics": [
@@ -4186,7 +4195,8 @@
       "summary": "提出在土城看守所搬遷後的現址打造「複合式國際運動藝文中心」。",
       "policy_argument": "以大型複合場館承接土城轉型後的運動與藝文需求。",
       "concrete_proposals": [
-        "利用土城看守所搬遷後現址打造複合式國際運動藝文中心。"
+        "利用土城看守所搬遷後現址打造複合式國際運動藝文中心。",
+        "以「大漢溪藝術走廊」為名，共同舉辦雙年展或跨市大型地景藝術節。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -4219,7 +4229,7 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-01｜中選會登記名冊核對為新北市第8選舉區、民主進步黨候選人；民進黨新北市黨部新聞記載彭一書提出該案並完成人工審核。"
+        "2026-10-27 合併同網址重複列，移除誤植的他人發言與截斷句"
       ]
     },
     {
@@ -6223,7 +6233,7 @@
       "summary": "六大客家政策：社團補助加碼、哈客館續佈點、提升客語教育師資環境、擴大辦理義民祭、客家文化園區轉型、建置局處客語無障礙環境。",
       "policy_argument": "",
       "concrete_proposals": [
-        "1.社團補助加碼，每班最高 10 萬，跟台北市齊平 2.哈客館繼續佈點，從第十一館朝「十二年十五館」走 3.持續提升客語教育師資環境，鼓勵客語教師投入傳承 4.義民祭辦更大、六大節分區辦，讓區區都有客家味 5.客家文化園區轉型，不只是博物館，更是來新北必走的景點 6.各局處建置客語無障礙環境，講客語在新北不卡關"
+        "社團補助加碼，每班最高 10 萬，跟台北市齊平 2.哈客館繼續佈點，從第十一館朝「十二年十五館」走 3.持續提升客語教育師資環境，鼓勵客語教師投入傳承 4.義民祭辦更大、六大節分區辦，讓區區都有客家味 5.客家文化園區轉型，不只是博物館，更是來新北必走的景點 6.各局處建置客語無障礙環境，講客語在新北不卡關"
       ],
       "related_statements": [],
       "field_sources": {
@@ -6266,7 +6276,9 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 移除具體主張開頭的來源項次編號"
+      ]
     },
     {
       "id": "candidate-auto-7990c5d191d2",
@@ -14388,7 +14400,7 @@
       "summary": "1.發展藝文體育活動：音樂藝術氛圍紮根，運動體育發光發熱。",
       "policy_argument": "",
       "concrete_proposals": [
-        "1.發展藝文體育活動：音樂藝術氛圍紮根，運動體育發光發熱。"
+        "發展藝文體育活動：音樂藝術氛圍紮根，運動體育發光發熱。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -14420,7 +14432,9 @@
       "proposer_role": "現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "https://www.cyscc.gov.tw/Parliamentary_Content/315/14195/",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 移除具體主張開頭的來源項次編號"
+      ]
     },
     {
       "id": "candidate-auto-097f463f9831",
@@ -15217,7 +15231,7 @@
       "summary": "2. 爭取辦理外木山海洋音樂祭及休閒娛樂設施。",
       "policy_argument": "",
       "concrete_proposals": [
-        "2. 爭取辦理外木山海洋音樂祭及休閒娛樂設施。"
+        "爭取辦理外木山海洋音樂祭及休閒娛樂設施。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -15249,7 +15263,9 @@
       "proposer_role": "現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 移除具體主張開頭的來源項次編號"
+      ]
     },
     {
       "id": "candidate-auto-c85cc3d22037",
@@ -15362,72 +15378,6 @@
       "proposer_role": "推定現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "中選會本屆名冊與來源內容推定",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-6399cccfefc8",
-      "city": "連江縣",
-      "office": "縣市議員",
-      "candidate": "陳貽斌",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-6399cccfefc8",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "保存修復",
-        "文化保存",
-        "藝文活動",
-        "表演藝術",
-        "文化觀光"
-      ],
-      "topic_categories": [
-        "文化資產",
-        "文化平權與參與",
-        "表演藝術",
-        "文化觀光"
-      ],
-      "topic_subcategories": [
-        "文化資產／保存"
-      ],
-      "summary": "&emsp;議員陳貽斌關注梅石藝文中心使用率，建議持續邀請閩劇團及多元表演團體來馬演出，活化場館使用，同時關心神像修復及保存管理工作。 || 他也認為國際藝術島行銷仍有進步空間，應提早展開宣傳，進一步帶動觀光效益。 || 他同時關注國際藝術",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "&emsp;議員陳貽斌關注梅石藝文中心使用率，建議持續邀請閩劇團及多元表演團體來馬演出，活化場館使用，同時關心神像修復及保存管理工作。",
-        "他也認為國際藝術島行銷仍有進步空間，應提早展開宣傳，進一步帶動觀光效益。",
-        "他同時關注國際藝術島留下的藝術作品保存情況，建議完整保留並增設作品介紹，讓民眾及遊客更了解創作理念。",
-        "此外，他也關心梅石藝文中心未來經營方向，建議導入夜間表演活動，打造觀光客夜間休閒與藝文欣賞空間。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.mtcc.gov.tw｜連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
-            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid="
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.mtcc.gov.tw｜連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
-            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid="
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.mtcc.gov.tw｜連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
-            "url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid="
-          }
-        ]
-      },
-      "published_date": "2026-05-28",
-      "source_title": "www.mtcc.gov.tw｜連江縣議會：陳貽斌關注梅石藝文中心與神像保存",
-      "source_url": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid=",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=111810&webaid=",
       "corrections": []
     },
     {
@@ -15564,7 +15514,7 @@
       "summary": "6.爭取國際藝術島活動經費，至少一半由縣府統籌使用。",
       "policy_argument": "",
       "concrete_proposals": [
-        "6.爭取國際藝術島活動經費，至少一半由縣府統籌使用。"
+        "爭取國際藝術島活動經費，至少一半由縣府統籌使用。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -15596,77 +15546,9 @@
       "proposer_role": "現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "https://www.mtcc.gov.tw/ch/counciler_intro/7190?clid=8",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-b4132a2980d4",
-      "city": "新北市",
-      "office": "縣市議員",
-      "candidate": "彭一書",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-b4132a2980d4",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "同一政見有 2 則來源，合併後以",
-        "分項，重複者不重列"
-      ],
-      "policy_title": "",
-      "topics": [
-        "藝文活動",
-        "表演藝術",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "文化平權與參與",
-        "表演藝術",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "的，利用未來土城看守所搬遷後現址，打造「複合式國際運動藝文中心」，讓土城邁向下一個二十年。 || ，未來土城看守所搬遷後，利用現址打造「複合式國際運動藝文中心」，不論是親子利用假日看表演，青年下班打球，或是長輩運動聊天…… || 蘇巧慧說，",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "的，利用未來土城看守所搬遷後現址，打造「複合式國際運動藝文中心」，讓土城邁向下一個二十年。",
-        "，未來土城看守所搬遷後，利用現址打造「複合式國際運動藝文中心」，不論是親子利用假日看表演，青年下班打球，或是長輩運動聊天……",
-        "蘇巧慧說，未來她會和彭一書一起努力，推動這項好建設，也爭取國際賽事在土城舉辦，打造兼具運動、文化、休閒功能的新地標。",
-        "另外以「大漢溪藝術走廊」為名，共同舉辦雙年展或跨市大型地景藝術節。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.dppnt.org.tw｜出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
-            "url": "https://www.dppnt.org.tw/20260704news/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.dppnt.org.tw｜出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
-            "url": "https://www.dppnt.org.tw/20260704news/"
-          },
-          {
-            "title": "中央社 CNA｜黃世杰邀蘇巧慧逛桃園夜市　拋聯合政見盼串聯北北桃共好",
-            "url": "https://www.cna.com.tw/news/aloc/202610040202.aspx"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.dppnt.org.tw｜出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
-            "url": "https://www.dppnt.org.tw/20260704news/"
-          }
-        ]
-      },
-      "published_date": "2026-07-04",
-      "source_title": "www.dppnt.org.tw｜出席彭一書座談會 蘇巧慧：打造土城成為國際運動藝文中心",
-      "source_url": "https://www.dppnt.org.tw/20260704news/",
-      "related_sources": [
-        "https://www.cna.com.tw/news/aloc/202610040202.aspx"
-      ],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 移除具體主張開頭的來源項次編號"
+      ]
     },
     {
       "id": "candidate-auto-c83f64edbb4c",
@@ -15931,7 +15813,7 @@
       "summary": "12.加速推動台中巨蛋，引進大型演藝文化產業。",
       "policy_argument": "",
       "concrete_proposals": [
-        "12.加速推動台中巨蛋，引進大型演藝文化產業。"
+        "加速推動台中巨蛋，引進大型演藝文化產業。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -15963,7 +15845,9 @@
       "proposer_role": "現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=78&uno=&zno=106",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 移除具體主張開頭的來源項次編號"
+      ]
     },
     {
       "id": "candidate-auto-f2676b4f6d59",
@@ -15985,7 +15869,7 @@
       "summary": "5、加強構築文化網絡系統，推動在地文化資源多元應用及創意加值，發揚在地文化特色及形塑社區品牌。",
       "policy_argument": "",
       "concrete_proposals": [
-        "5、加強構築文化網絡系統，推動在地文化資源多元應用及創意加值，發揚在地文化特色及形塑社區品牌。"
+        "加強構築文化網絡系統，推動在地文化資源多元應用及創意加值，發揚在地文化特色及形塑社區品牌。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -16017,7 +15901,9 @@
       "proposer_role": "現任議員",
       "content_nature": "現任議員個人頁內容",
       "role_evidence": "https://www.tncc.gov.tw/councilorpage.asp?mainid=D0001474-2C67-47CE-9D7F-98065BE41CE3",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 移除具體主張開頭的來源項次編號"
+      ]
     },
     {
       "id": "candidate-auto-3f8750d81011",
@@ -16193,118 +16079,6 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-0acb3c8db17c",
-      "city": "臺北市",
-      "office": "縣市議員",
-      "candidate": "陳力新",
-      "party": "無黨籍",
-      "publish_id": "candidate-auto-0acb3c8db17c",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "文化觀光",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "文化觀光",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "#ERROR!",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "#ERROR!"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.lishin.taipei｜陳力新官方網站：觀光文化・在地經濟",
-            "url": "https://www.lishin.taipei/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.lishin.taipei｜陳力新官方網站：觀光文化・在地經濟",
-            "url": "https://www.lishin.taipei/"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.lishin.taipei｜陳力新官方網站：觀光文化・在地經濟",
-            "url": "https://www.lishin.taipei/"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "www.lishin.taipei｜陳力新官方網站：觀光文化・在地經濟",
-      "source_url": "https://www.lishin.taipei/",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-790a3577d023",
-      "city": "臺北市",
-      "office": "縣市議員",
-      "candidate": "苗博雅",
-      "party": "社會民主黨",
-      "publish_id": "candidate-auto-790a3577d023",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "文化觀光",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "文化觀光",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "何孟樺說，議會成立「台語復振連線」訴求就是希望政府與民團合作創造台語友善城市環境，不只是家庭、學校教台語，更應鼓勵民眾說台語，讓台語變成城市觀光文化的一部分。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "何孟樺說，議會成立「台語復振連線」訴求就是希望政府與民團合作創造台語友善城市環境，不只是家庭、學校教台語，更應鼓勵民眾說台語，讓台語變成城市觀光文化的一部分。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.cna.com.tw｜中央社：北市議會成立台語復振連線",
-            "url": "https://www.cna.com.tw/news/aloc/202605060163.aspx"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.cna.com.tw｜中央社：北市議會成立台語復振連線",
-            "url": "https://www.cna.com.tw/news/aloc/202605060163.aspx"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.cna.com.tw｜中央社：北市議會成立台語復振連線",
-            "url": "https://www.cna.com.tw/news/aloc/202605060163.aspx"
-          }
-        ]
-      },
-      "published_date": "2026-05-06",
-      "source_title": "www.cna.com.tw｜中央社：北市議會成立台語復振連線",
-      "source_url": "https://www.cna.com.tw/news/aloc/202605060163.aspx",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
-      "role_evidence": "中選會本屆名冊與來源內容推定",
       "corrections": []
     },
     {
