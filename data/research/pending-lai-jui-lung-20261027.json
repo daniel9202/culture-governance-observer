@@ -1,5 +1,5 @@
 {
- "note": "賴瑞隆官網三筆新增政見，使用者提供原文、雲端 session 依 AGENTS.md 忠於原文規則抽取。Codex 原樣 --append-pending 推入審核台，不要重新抽取或改寫。source_url 需補上各頁實際網址。另有「文化高雄．世界舞台」與「客家政策」兩頁，因對應既有列、須改寫而非新增，不在此檔。",
+ "note": "賴瑞隆官網三筆新增政見，使用者提供原文與網址，雲端 session 依 AGENTS.md 忠於原文規則抽取。Codex 原樣 --append-pending 推入審核台，不要重新抽取或改寫。網址已確認，不需再補。官網網域是 zenolai.tw，不是清冊登記的 zenolai.oen.tw。",
  "rows": [
   {
    "candidate": "賴瑞隆",
@@ -13,7 +13,7 @@
    "last_verified": "2026-10-27",
    "review_status": "人工審核",
    "device": "HPDAN-Codex",
-   "source_url": "待 Codex 由賴瑞隆官網政見頁補上實際網址",
+   "source_url": "https://www.zenolai.tw/policy/culture/19",
    "policy_title": "觀光5願景：打造世界的高雄",
    "published_date": "2026-09-30",
    "topics": "文化觀光|藝文節慶|影視文化|地方文化|客家文化|原住民族文化",
@@ -40,7 +40,7 @@
    "last_verified": "2026-10-27",
    "review_status": "人工審核",
    "device": "HPDAN-Codex",
-   "source_url": "待 Codex 由賴瑞隆官網政見頁補上實際網址",
+   "source_url": "https://www.zenolai.tw/policy/culture/14",
    "policy_title": "原住民政策：七大方向",
    "published_date": "2026-09-09",
    "topics": "原住民族文化|族語傳承|傳統祭儀|部落文化|文化場館|文化觀光",
@@ -67,7 +67,7 @@
    "last_verified": "2026-10-27",
    "review_status": "人工審核",
    "device": "HPDAN-Codex",
-   "source_url": "待 Codex 由賴瑞隆官網政見頁補上實際網址",
+   "source_url": "https://www.zenolai.tw/policy/culture/13",
    "policy_title": "新住民政策：新高雄一家人 5 大計畫",
    "published_date": "2026-09-09",
    "topics": "新住民文化|多元語言|藝文節慶|文化場館|地方文化",
