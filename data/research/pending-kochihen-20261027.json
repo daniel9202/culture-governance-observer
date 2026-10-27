@@ -1,5 +1,5 @@
 {
- "note": "柯志恩官網四筆，使用者提供原文、雲端 session 依 AGENTS.md 忠於原文規則抽取。Codex 原樣 --append-pending 推入審核台，不要重新抽取或改寫。source_url 需由 candidate_policy_pages.csv 補上各頁實際網址。",
+ "note": "柯志恩官網六筆，使用者提供原文、雲端 session 依 AGENTS.md 忠於原文規則抽取。Codex 原樣 --append-pending 推入審核台，不要重新抽取或改寫。source_url 需由 candidate_policy_pages.csv 補上各頁實際網址。",
  "rows": [
   {
    "candidate": "柯志恩",
@@ -111,6 +111,57 @@
    "last_verified": "2026-10-27",
    "review_status": "人工審核",
    "device": "HPDAN-Codex"
+  },
+  {
+   "candidate": "柯志恩",
+   "city": "高雄市",
+   "office": "縣市長",
+   "party": "中國國民黨",
+   "source_type": "候選人原文",
+   "proposer_role": "候選人",
+   "content_nature": "本屆競選政見",
+   "role_evidence": "中選會 115 年候選人登記名冊",
+   "published_date": "",
+   "last_verified": "2026-10-27",
+   "review_status": "人工審核",
+   "device": "HPDAN-Codex",
+   "source_url": "待 Codex 由 candidate_policy_pages.csv 填入該頁實際網址",
+   "policy_title": "高雄車站舊城再生",
+   "topics": "歷史街區|文化空間|地方文化",
+   "summary": "以高雄車站為樞紐推動舊城再生計畫，串連鼓山、鹽埕、三民到鳳山打造市區綠廊帶，並創造老店傳承、新創孵化的環境。",
+   "policy_argument": "",
+   "concrete_proposals": [
+    "在高雄車站周邊引進A級商辦與國際飯店，搭配青年創業獎勵金，創造老店傳承、新創孵化的優質環境。",
+    "舊城再生計畫，以高雄車站為樞紐，串連鼓山、鹽埕、三民到鳳山打造市區綠廊帶，並將台鐵地下化綠園道延伸為兼具生活品質與商業活力的都市廊道，讓綠意深深走入每個巷弄。"
+   ],
+   "editor_notes": "官網該頁兩項全數收錄。||第 1 項的 A 級商辦與國際飯店屬都市開發，依使用者 2026-10-27 判定該頁整頁屬文化政見範圍，故依不拆句規則整句保留。||來源頁面沒有發布日期",
+   "source_title": "高雄車站舊城再生！商業進駐、綠廊串城 - 柯志恩 2026"
+  },
+  {
+   "candidate": "柯志恩",
+   "city": "高雄市",
+   "office": "縣市長",
+   "party": "中國國民黨",
+   "source_type": "候選人原文",
+   "proposer_role": "候選人",
+   "content_nature": "本屆競選政見",
+   "role_evidence": "中選會 115 年候選人登記名冊",
+   "published_date": "",
+   "last_verified": "2026-10-27",
+   "review_status": "人工審核",
+   "device": "HPDAN-Codex",
+   "source_url": "待 Codex 由 candidate_policy_pages.csv 填入該頁實際網址",
+   "policy_title": "曹公圳黃金阿勃勒廊道",
+   "topics": "文化觀光|文化空間|地方文化",
+   "summary": "結合水岸景觀與季節性植栽推動「曹公圳黃金阿勃勒廊道」，並串聯賞花人潮與周邊商圈推動「鳳山花季夜經濟」。",
+   "policy_argument": "鳳山曹公圳不只是我們的母親河，更是具備無限的觀光潛力！",
+   "concrete_proposals": [
+    "我們將結合優美的水岸景觀與季節性植栽，推動「曹公圳黃金阿勃勒廊道」，打造初夏限定的壯麗黃金花海。",
+    "我們將串聯賞花人潮與周邊商圈，推動「鳳山花季夜經濟」。透過夜間光環境的營造，讓市民與遊客能白天賞花、夜晚漫步嚐美食，大幅提升在地的觀光產值與消費力。",
+    "讓曹公圳傳承歷史，也綻放嶄新生命力，一起點亮更美的鳳山！"
+   ],
+   "editor_notes": "官網該頁三段全數收錄。||曹公圳為清代曹謹闢建的水利設施，來源頁僅以「傳承歷史」帶過，未提出保存或詮釋主張；依使用者 2026-10-27 判定納入收錄範圍。||來源頁面沒有發布日期",
+   "source_title": "點亮鳳山！打造曹公圳黃金阿勃勒廊道 - 柯志恩 2026"
   }
  ]
 }
