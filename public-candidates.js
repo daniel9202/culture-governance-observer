@@ -93,9 +93,9 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
 };
 // 議員任內文化問政（非本屆政見）收在「現任追蹤」；地圖與議員頁依縣市計人數並連過去。
 // 只算議員；縣市長的任內施政另列在現任追蹤首長分頁。
-// 現任紀錄的身分（docs/FIELD-CONTRACT-INCUMBENT.md）：只讀 office_category（首長／民意代表／已卸任），current_office 只用來顯示，不從文字推斷身分。
+// 現任紀錄的身分（docs/FIELD-CONTRACT-INCUMBENT.md）：只讀 office_category（首長／民意代表），current_office 只用來顯示，不從文字推斷身分。
 // 尚未補 office_category 的舊資料暫依參選職務 office 判斷，59 筆補完、欄位改必填後拿掉這段。
-const OFFICE_CATEGORY_KINDS={首長:'mayor',民意代表:'representative',已卸任:'former'};
+const OFFICE_CATEGORY_KINDS={首長:'mayor',民意代表:'representative'};
 window.incumbentKind=record=>OFFICE_CATEGORY_KINDS[record?.office_category]||(['縣市長','縣轄市長'].includes(record?.office)?'mayor':'representative');
 window.incumbentNamesByCity=records=>records.filter(record=>incumbentKind(record)!=='mayor').reduce((map,record)=>map.set(record.city,(map.get(record.city)||new Set).add(record.candidate)),new Map);
 window.incumbentLink=(count,city,className='incumbent-link')=>count?`<a class="${className}" href="fulfillment.html?tab=council${city?`&city=${encodeURIComponent(city)}`:''}">${city?'本縣市':''}另有 ${count} 位民意代表的任內文化問政紀錄（非本屆政見）→</a>`:'';
@@ -154,8 +154,9 @@ window.loadCandidateDataset=async({districts=false}={})=>{
   if(districtTable)districtScopes=new Map((districtTable.records||[]).map(record=>[record.district,record]));
   // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
   // 前台的政見與統計只收「本屆競選政見」；公職政績（含舊值現任議員個人頁內容、問政／提案、首長施政）另存 incumbent_records（依資料端的 content_nature 欄位）。
+  // 目前沒有任何公職身分的候選人當一般候選人處理（2026-10-28 使用者決定），office_category 為「已卸任」的紀錄不進現任追蹤。
   const records=staticData.records||[];
-  return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'),shared_policy_groups:sharedData.records||[],registered_candidates:roster};
+  return {...staticData,records:records.filter(record=>record.content_nature==='本屆競選政見'),incumbent_records:records.filter(record=>record.content_nature!=='本屆競選政見'&&record.office_category!=='已卸任'),shared_policy_groups:sharedData.records||[],registered_candidates:roster};
 };
 // 候選人卡片與網址：縣市長／議員列表、地方頁、候選人頁共用。
 // 包在區塊內，避免和各頁自己宣告的 escapeHtml 等常數撞名。

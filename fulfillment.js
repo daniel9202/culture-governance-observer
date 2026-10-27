@@ -2,7 +2,7 @@ const statusLabels={fulfilled:'已實現',partial:'部分實現',in_progress:'�
 // 欄位契約（docs/FIELD-CONTRACT-FULFILLMENT.md）：pledge_nature 為政見原文性質；related_records 指向 candidates.csv 中 office_category 為首長的公職政績 id，build 後可能是陣列或以 | 分隔的字串。
 const relatedIds=pledge=>(Array.isArray(pledge.related_records)?pledge.related_records:String(pledge.related_records||'').split('|')).map(id=>String(id).trim()).filter(Boolean);
 const govAnchor=id=>`record-${String(id).replace(/[^\w-]/g,'_')}`;
-// 首長／民意代表分頁依 incumbentKind()（public-candidates.js）；已卸任者暫放民意代表分頁，頭銜照 current_office 顯示。
+// 首長／民意代表分頁依 incumbentKind()（public-candidates.js）；頭銜照 current_office 顯示。
 const isMayorRecord=record=>incumbentKind(record)==='mayor';
 // 人物標頭只用資料欄位：現職 current_office（舊資料沒有就略過）與參選職務 office。
 const incumbentHead=(person,unit)=>{const first=person.rows[0];return `<div class="tracker-person-head"><h3>${escapeHtml(person.key)}</h3><p class="party">${[first.party,first.current_office,`2026 參選${first.office}`].filter(Boolean).map(escapeHtml).join(' · ')}</p><span class="tracker-person-count">${person.rows.length} 筆${unit}</span></div>`};
