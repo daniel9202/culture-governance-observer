@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-26",
+  "last_updated": "2026-10-27",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -1568,29 +1568,31 @@
       "party": "民主進步黨",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
-      "policy_title": "",
+      "editor_notes": [
+        "第 2 項引自官網「產業升級四大支柱政見」第二、加速園區開發之八。",
+        "原文「非常感謝 卓榮泰 院長和文化部的協助」為致謝語，不列為政見。"
+      ],
+      "policy_title": "國影中心二期與三金博物館",
       "topics": [
-        "文化場館",
         "影視文化",
-        "地方文史",
-        "博物館"
+        "博物館",
+        "文化場館",
+        "文化觀光"
       ],
       "topic_categories": [
-        "文化場館",
         "影視與流行音樂",
-        "地方文化與社區營造",
-        "博物館與地方文化館"
+        "博物館與地方文化館",
+        "文化場館",
+        "文化觀光"
       ],
       "topic_subcategories": [],
-      "summary": "國影中心擁有國家級的影視音館藏。",
-      "policy_argument": "讓國影中心成為金馬獎、金曲獎、金鐘獎的三金博物館。",
+      "summary": "加速新莊國影中心二期，規劃設置台灣影視「三金」歷史與體驗博物館。",
+      "policy_argument": "國影中心擁有國家級的影視音館藏。",
       "concrete_proposals": [
-        "行政院核定國影中心二期計畫留新莊，增設800個汽車與800個機車停車位，經費由中央全額補助！"
+        "行政院核定國影中心二期計畫留新莊，增設800個汽車與800個機車停車位，經費由中央全額補助！",
+        "規劃設置台灣影視「三金」歷史與體驗博物館，透過互動科技保存台灣影音文化，打造新北最具吸引力的文化觀光地標。"
       ],
-      "related_statements": [
-        "表示將與中央共同推動國影中心成為匯聚臺灣影視音文化的重要據點。"
-      ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -1615,7 +1617,9 @@
       "source_title": "國影中心二期留新莊！中央全額補助停車位",
       "source_url": "https://chiao.tw/chiao_view/%E5%9C%8B%E5%BD%B1%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%9C%9F%E7%95%99%E6%96%B0%E8%8E%8A%EF%BC%81%E4%B8%AD%E5%A4%AE%E5%85%A8%E9%A1%8D%E8%A3%9C%E5%8A%A9%E5%81%9C%E8%BB%8A%E4%BD%8D",
       "related_sources": [
-        "https://udn.com/vote2026/story/124652/9675933"
+        "https://udn.com/vote2026/story/124652/9675933",
+        "https://chiao.tw/policies/%E7%94%A2%E6%A5%AD%E5%8D%87%E7%B4%9A%E5%9B%9B%E5%A4%A7%E6%94%AF%E6%9F%B1%E6%94%BF%E8%A6%8B",
+        "https://chiao.tw/chiao_view/%E5%9C%8B%E5%BD%B1%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%9C%9F%E7%95%99%E6%96%B0%E8%8E%8A%EF%BC%81%E4%B8%AD%E5%A4%AE%E5%85%A8%E9%A1%8D%E8%A3%9C%E5%8A%A9%E5%81%9C%E8%BB%8A%E4%BD%8D"
       ],
       "source_type": "候選人原文",
       "last_verified": "2026-10-10",
@@ -1623,8 +1627,7 @@
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-09-06｜主要來源改為候選人官網，原新聞改列輔助來源。",
-        "2026-10-10｜依原文修正。"
+        "2026-10-27 合併同一網址的重複列，並補入官網產業升級政見頁的三金博物館原文"
       ]
     },
     {
@@ -3463,70 +3466,6 @@
       ]
     },
     {
-      "id": "candidate-sheet-draft-20260916-04",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "蘇巧慧",
-      "party": "民主進步黨",
-      "publish_id": "",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "客家文化",
-        "多元語言",
-        "文化科技"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "語言與族群",
-        "數位文化與科技"
-      ],
-      "topic_subcategories": [],
-      "summary": "未來她不僅將持續推廣客語教育，擴大辦理客家信仰文化活動。",
-      "policy_argument": "結合新科技，建立「新北AI客語學習平台」。",
-      "concrete_proposals": [
-        "持續推廣客語教育，擴大辦理客家信仰文化活動，同時挹注客家文史團體和地方社團。",
-        "結合新科技，建立「新北AI客語學習平台」。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "聯合報｜蘇巧慧成立客家後援會成立 與金曲歌后飆客家歌嗨翻鄉親",
-            "url": "https://udn.com/news/amp/story/124652/9722811"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "聯合報｜蘇巧慧成立客家後援會成立 與金曲歌后飆客家歌嗨翻鄉親",
-            "url": "https://udn.com/news/amp/story/124652/9722811"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "聯合報｜蘇巧慧成立客家後援會成立 與金曲歌后飆客家歌嗨翻鄉親",
-            "url": "https://udn.com/news/amp/story/124652/9722811"
-          }
-        ]
-      },
-      "published_date": "2026-08-30",
-      "source_title": "聯合報｜蘇巧慧成立客家後援會成立 與金曲歌后飆客家歌嗨翻鄉親",
-      "source_url": "https://udn.com/news/amp/story/124652/9722811",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-10",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "corrections": [
-        "2026-09-17｜由 Google Sheet draft-20260916-04 整合稿發布。",
-        "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
-        "2026-10-10｜依原文修正。",
-        "2026-10-10｜依原文修正。"
-      ]
-    },
-    {
       "id": "candidate-sheet-draft-20260916-08",
       "city": "新竹縣",
       "office": "縣市長",
@@ -3814,31 +3753,36 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
+        "官網三大面向共 11 項，本站只收與文化相關的 8 項；原住民族租金補貼、55 歲以上長者假牙補助、建置烏來公共托育中心屬生活照顧，不在收錄範圍。",
         "官方頁未標示發布日期，依人工核定日期登錄。"
       ],
-      "policy_title": "",
+      "policy_title": "三大原住民族政見",
       "topics": [
         "原住民族文化",
         "族語傳承",
         "部落文化",
         "文化空間",
-        "青年文化",
-        "傳統祭儀"
+        "傳統祭儀",
+        "青年文化"
       ],
       "topic_categories": [
         "原住民族文化",
         "文化空間與城市再生",
-        "青年",
-        "民俗節慶"
+        "民俗節慶",
+        "青年"
       ],
       "topic_subcategories": [],
       "summary": "新北市原住民族預算翻轉計畫，使新北原住民「人均預算加倍、照顧也加倍」。",
-      "policy_argument": "讓原住民族文化能繼續扎根。",
+      "policy_argument": "新北市的原住民族人口為六都第二，超過 6.5 萬名族人在此打拚，而且還在逐年增加。蘇巧慧當市長，會推動新北市原住民族預算翻轉計畫，使新北原住民「人均預算加倍、照顧也加倍」，並確保預算投入「只增不減」，讓原住民族文化能繼續扎根。",
       "concrete_proposals": [
-        "提高社團補助上限，降低自籌款比例。",
-        "新增原住民族語言能力認證獎勵級別。",
-        "擴大原住民返鄉參加歲時祭儀等活動之交通費補助。",
-        "新增頭目文化傳承事務費。"
+        "持續興建部落聚會所：除了現有溪洲部落、三鶯部落及三峽隆恩埔三處部落聚會所之外，未來將持續選址興建部落聚會所，讓烏來及都市的族人都能擁有維繫情感、交流文化的空間。",
+        "推動原住民青年品牌孵化計畫：在現有的職涯輔導之上，協助原住民各領域專門人才（例如運動員、藝文、觀光等）與企業合作或開創個人品牌。",
+        "提高原住民族社團補助：提高社團補助上限，降低自籌款比例。",
+        "新增原住民族語言能力認證獎勵級別，從現行的「中高級 5,000 元；高級 1 萬元；優級 1 萬 5,000 元」，新增「初級：2,000 元；中級：3,000 元」，從根基復振族語。",
+        "擴大原住民返鄉參加歲時祭儀等活動之交通費補助：補助項目增加，新增原住民族運動會（全國泰雅族運動會、全國布農族運動會等）；補助範圍擴大，新增客運及包車，便利族人返鄉參加歲時祭儀等活動。",
+        "新增頭目文化傳承事務費：明確化頭目職權，並定期召開「市長與原住民族領袖高峰會議」，落實對傳統領袖的尊重。",
+        "成立新北市原住民族青年團：由市府建立常態化機制，讓青年參與市政決策。",
+        "支持部落恢復傳統社會制度：以阿美族為例，將「年齡階層相關活動」列為補助項目；推動烏來部落公法人制度，落實部落自主發展。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -3864,15 +3808,17 @@
       "published_date": "2026-10-01",
       "source_title": "三大原住民族政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
       "source_url": "https://chiao.tw/policies/%E4%B8%89%E5%A4%A7%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%94%BF%E8%A6%8B",
-      "related_sources": [],
+      "related_sources": [
+        "https://newtalk.tw/news/view/2026-09-12/1059404",
+        "https://chiao.tw/chiao_view/%E5%81%87%E6%97%A5%E8%A1%8C%E7%A8%8B%E6%BB%BF%E6%AA%94%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AE%93%E6%96%B0%E5%8C%97%E7%9A%84%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E6%9B%B4%E5%8A%A0%E7%B2%BE%E5%BD%A9%E2%9D%A4"
+      ],
       "source_type": "候選人原文",
       "last_verified": "2026-10-10",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "corrections": [
-        "2026-10-01｜中選會名冊核對與人工審核完成；官方頁無發布日期，依人工核定日期登錄；由 mayor-official-site-updates.csv 上架。",
-        "2026-10-10｜依原文修正。"
+        "2026-10-27 依官網原文補回語言認證獎勵金額級距、交通費補助新增項目與部落聚會所，原 4 項增為 8 項"
       ]
     },
     {
@@ -6519,83 +6465,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-auto-900db5a768f8",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "蘇巧慧",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-900db5a768f8",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "同一政見有 2 則來源，內容合併後以",
-        "分項，重複者不重列"
-      ],
-      "policy_title": "原住民族政見：預算加倍",
-      "topics": [
-        "原住民族文化",
-        "族語傳承",
-        "部落文化",
-        "傳統祭儀",
-        "文化觀光",
-        "青年文化"
-      ],
-      "topic_categories": [
-        "原住民族文化",
-        "民俗節慶",
-        "文化觀光",
-        "青年"
-      ],
-      "topic_subcategories": [],
-      "summary": "以「預算加倍」為核心，原住民族政見涵蓋「生活」、「文化」與「制度」三方面的支持。",
-      "policy_argument": "以原住民族文化、族語傳承、部落文化、傳統祭儀、文化觀光、青年文化為主要政策方向。",
-      "concrete_proposals": [
-        "未來的新北市府更要以「預算加倍」為核心，不只照顧族人在城市裡的生活，更要讓文化和制度有足夠的資源持續傳承與發展，所以她提出的原住民族政見涵蓋「生活」、「文化」與「制度」上的支持，期望全方面照顧到新北市的原住民族。",
-        "在文化傳承方面，未來她將提高原住民族社團補助，讓族人舉辦文化活動不必再為經費煩惱；同時增加原住民族語言認證獎勵級別，讓在都市生活的下一代有更多誘因學習族語；並擴大原鄉歲時祭儀返鄉交通補助，未來族人朋友可以團體包車返鄉參加歲時祭儀，讓回家的路更便利。",
-        "因此，她提出「擴大原住民族租金補貼」，只要是在新北市無自有房屋的族人，都可以提出申請；針對長輩，也將提供55歲以上族人最高5萬元的假牙補助，減輕生活負擔。",
-        "照顧生活的同時，也要支持原住民族青年發揮所長，因此她將推動「原住民青年品牌孵化計畫」，協助原住民族青年在藝文、觀光，甚至體育等不同領域發展，打造自己的品牌、開創更多創業機會。",
-        "她承諾新增傳統領袖（頭目）「文化傳承事務費」、明確化傳統領袖職權，並定期召開「市長與原住民族領袖高峰會議」，建立市府與族人直接溝通的管道。",
-        "同時，也將成立「新北市原住民族青年團」，讓年輕世代的聲音參與市政。",
-        "……未來的新北市府也要支持各族群恢復及延續傳統社會制度，例如將阿美族「年齡階層相關活動」納入補助項目，讓重要的文化制度能夠持續傳承；並推動烏來部落公法人制度，讓部落擁有更多自主決定公共事務的空間。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "Newtalk新聞｜民眾齊喊「阿美族媳婦加油！」蘇巧慧出席原民活動承諾預算翻倍、照顧族人生活與文化傳承| 政治 - Newtalk新聞",
-            "url": "https://newtalk.tw/news/view/2026-09-12/1059404"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "Newtalk新聞｜民眾齊喊「阿美族媳婦加油！」蘇巧慧出席原民活動承諾預算翻倍、照顧族人生活與文化傳承| 政治 - Newtalk新聞",
-            "url": "https://newtalk.tw/news/view/2026-09-12/1059404"
-          },
-          {
-            "title": "UDN｜阿美族媳婦蘇巧慧提原民政見預算翻倍、照顧族人生活文化| 2026九合一選舉 - UDN",
-            "url": "https://udn.com/vote2026/story/124652/9750752"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "Newtalk新聞｜民眾齊喊「阿美族媳婦加油！」蘇巧慧出席原民活動承諾預算翻倍、照顧族人生活與文化傳承| 政治 - Newtalk新聞",
-            "url": "https://newtalk.tw/news/view/2026-09-12/1059404"
-          }
-        ]
-      },
-      "published_date": "2026-09-12",
-      "source_title": "Newtalk新聞｜民眾齊喊「阿美族媳婦加油！」蘇巧慧出席原民活動承諾預算翻倍、照顧族人生活與文化傳承| 政治 - Newtalk新聞",
-      "source_url": "https://newtalk.tw/news/view/2026-09-12/1059404",
-      "related_sources": [
-        "https://udn.com/vote2026/story/124652/9750752"
-      ],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-d24ccb60ea1b",
       "city": "新北市",
       "office": "縣市長",
@@ -6604,48 +6473,44 @@
       "publish_id": "candidate-auto-d24ccb60ea1b",
       "review_status": "人工審核",
       "editor_notes": [
-        "同一政見有 5 則來源，內容合併後以",
-        "分項，重複者不重列"
+        "官網四大面向共 8 項，全數收錄。",
+        "併聯合報客家後援會與官網「假日行程滿檔」貼文兩則來源，內容與官網政見頁重複，不重列。",
+        "官方頁未標示發布日期，依人工核定日期登錄。"
       ],
-      "policy_title": "四大客家政見：AI 客語學習平台、伯公照護站",
+      "policy_title": "四大客家政見",
       "topics": [
-        "客語傳承",
         "客家文化",
+        "客語傳承",
         "民俗節慶",
-        "文化場館",
-        "傳統藝術",
-        "民俗技藝"
+        "文化產業",
+        "文化科技",
+        "青年文化"
       ],
       "topic_categories": [
         "客家文化",
         "民俗節慶",
-        "文化場館",
-        "文化資產"
+        "文化產業與文創",
+        "數位文化與科技",
+        "青年"
       ],
       "topic_subcategories": [],
-      "summary": "未來，要將客語及技藝課程加強推廣到校園與社區，並且擴大辦理客家信仰文化活動，持續支持文史團體與地方社團。",
-      "policy_argument": "以客語傳承、客家文化、民俗節慶、文化場館、傳統藝術、民俗技藝為主要政策方向。",
+      "summary": "將客語及技藝課程加強推廣到校園與社區，擴大辦理客家信仰文化活動，持續支持文史團體與地方社團。",
+      "policy_argument": "巧慧在立法院長期關心客家事務、爭取各項資源。未來，要將客語及技藝課程加強推廣到校園與社區，並且擴大辦理客家信仰文化活動，持續支持文史團體與地方社團。此外，還要結合新科技，開闢更多線上傳播管道，讓不同世代的市民朋友都能輕鬆學習、看見客家之美。",
       "concrete_proposals": [
-        "未來，要將客語及技藝課程加強推廣到校園與社區，並且擴大辦理客家信仰文化活動，持續支持文史團體與地方社團。",
-        "此外，還要結合新科技，開闢更多線上傳播管道，讓不同世代的市民朋友都能輕鬆學習、看見客家之美。",
-        "產業發展方面，市府將推動跨域媒合，舉辦以客家為主體的商展、影展，鼓勵客家元素融入影音創作、文化旅遊及時尚設計等生活日常。",
-        "此外，也將擴大設置「伯公照護站」照顧客家長輩，並進一步擴大客家幣的使用範圍與在地效益，和大家「共下打拚」，攜手打造友善、包容且充滿活力的新北新時代！",
-        "規劃並增加獎勵，讓客語薪傳師與客家藝匠師廣入校園社區，擴大推廣客語及技藝課程。",
-        "例如透過「做中學、學中做」的方式，邀請客家專業藝匠師合作，以客語教學為主軸，結合學校與社區大學，規劃客家相關工藝、戲劇、餐飲、信仰活動等文化技藝課程。",
-        "除了持續擴大辦理義民祭與伯公生活動外，更將推動北濱客家信仰文化活動，增加補助客家文史社團及培訓導覽師資，以呈現新北市客家多樣信仰文化的全貌。",
-        "積極整合各局處資源與合作平台，推出獎鼓勵機制，結合交通便利的中大型場館，辦理各類客家產業商展或客家影展，例如時尚設計、文化旅遊、影音創作、展演和飲食研發等領域，發展客家主體的會展經濟。",
-        "盤點交通便利且可擴充功能的公有建築或其他可多元利用之場所，增設客家青年新創孵育基地，以扶植客家青年發展具客家文化特色的新創企業。",
-        "AI 科技多元整合並保存客家文化、工藝、生活及語言等資料，可成為推廣新北客家文史傳承、創新與文化產業多元應用的好幫手。",
-        "同時協助客家青年新創事業與跨域產業廠商，在發展客家元素產品的過程中，提供更好的建議。",
-        "在客語薪傳師提供客語學習管道外，同時建立 AI 客語學習平台，透過沉浸、即時與遊戲化的互動模式，打破時間與空間上的侷限，隨時隨地輕鬆入門客語世界。",
-        "考量新北都會客家人口多為散居型態，將持續推動放寬設置伯公照護站的設置門檻。",
-        "擴大客家幣的使用對象與範圍，納入教學客語課程的師生。特約店也不限於客庄，讓新北都會客家一同受益。甚至可結合「北臺區域發展推動委員會」的跨縣市合作平台，持續深化合作與擴大市場。"
+        "廣入校園社區推廣客語及技藝課程：規劃並增加獎勵，讓客語薪傳師與客家藝匠師廣入校園社區，擴大推廣客語及技藝課程。",
+        "擴大辦理客家信仰文化活動，挹注客家文史團體：除了持續擴大辦理義民祭與伯公生活動外，更將推動北濱客家信仰文化活動，增加補助客家文史社團及培訓導覽師資，以呈現新北市客家多樣信仰文化的全貌。",
+        "媒合產業跨域合作，興辦客家主體商展與影展：結合交通便利的中大型場館，辦理各類客家產業商展或客家影展，例如時尚設計、文化旅遊、影音創作、展演和飲食研發等領域，發展客家主體的會展經濟。",
+        "盤點低利用公有空間，增加客家青年新創孵育基地：盤點交通便利且可擴充功能的公有建築或其他可多元利用之場所，增設客家青年新創孵育基地，以扶植客家青年發展具客家文化特色的新創企業。",
+        "建立客家文化 AI 資料庫，創造文化科技寶庫：AI 科技多元整合並保存客家文化、工藝、生活及語言等資料。",
+        "建立新北 AI 客語教學平台，隨時隨地學客語：在客語薪傳師提供客語學習管道外，同時建立 AI 客語學習平台，透過沉浸、即時與遊戲化的互動模式，打破時間與空間上的侷限。",
+        "放寬設置伯公照護站，照顧都會客家長輩健康：考量新北都會客家人口多為散居型態，將持續推動放寬設置伯公照護站的設置門檻。",
+        "擴大客家幣使用範圍：擴大客家幣的使用對象與範圍，納入教學客語課程的師生。特約店也不限於客庄，讓新北都會客家一同受益。"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "chiao.tw｜四大客家政見 - chiao.tw",
+            "title": "四大客家政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
             "url": "https://chiao.tw/policies/%E5%9B%9B%E5%A4%A7%E5%AE%A2%E5%AE%B6%E6%94%BF%E8%A6%8B"
           }
         ],
@@ -6665,26 +6530,30 @@
         ],
         "related_statements": [
           {
-            "title": "chiao.tw｜四大客家政見 - chiao.tw",
+            "title": "四大客家政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
             "url": "https://chiao.tw/policies/%E5%9B%9B%E5%A4%A7%E5%AE%A2%E5%AE%B6%E6%94%BF%E8%A6%8B"
           }
         ]
       },
       "published_date": "2026-09-30",
-      "source_title": "chiao.tw｜四大客家政見 - chiao.tw",
+      "source_title": "四大客家政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
       "source_url": "https://chiao.tw/policies/%E5%9B%9B%E5%A4%A7%E5%AE%A2%E5%AE%B6%E6%94%BF%E8%A6%8B",
       "related_sources": [
         "https://chiao.tw/policies/%E5%9B%9B%E5%A4%A7%E5%AE%A2%E5%AE%B6%E6%94%BF%E8%A6%8B",
         "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBDMkxRVXZuQnU1amdFaDByYkRlQkdDVm5uVzBuVTZWTjFSeXExcm5EbnJvdFc3Rms2a045UHJRWTlUV091U1ZYX2d0MWxKQQ?oc=5",
         "https://news.ltn.com.tw/news/politics/breakingnews/5602720",
-        "https://tw.news.yahoo.com/%E6%96%B0%E5%8C%9767%E8%90%AC%E5%AE%A2%E5%AE%B6%E4%BA%BA%E5%8F%A3-%E8%98%87%E5%B7%A7%E6%85%A7%E6%8E%A8ai%E5%AE%A2%E8%AA%9E%E5%B9%B3%E5%8F%B0-%E6%93%B4%E5%A4%A7%E4%BC%AF%E5%85%AC%E7%85%A7%E8%AD%B7%E7%AB%99-083736006.html"
+        "https://tw.news.yahoo.com/%E6%96%B0%E5%8C%9767%E8%90%AC%E5%AE%A2%E5%AE%B6%E4%BA%BA%E5%8F%A3-%E8%98%87%E5%B7%A7%E6%85%A7%E6%8E%A8ai%E5%AE%A2%E8%AA%9E%E5%B9%B3%E5%8F%B0-%E6%93%B4%E5%A4%A7%E4%BC%AF%E5%85%AC%E7%85%A7%E8%AD%B7%E7%AB%99-083736006.html",
+        "https://udn.com/news/amp/story/124652/9722811",
+        "https://chiao.tw/chiao_view/%E5%81%87%E6%97%A5%E8%A1%8C%E7%A8%8B%E6%BB%BF%E6%AA%94%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AE%93%E6%96%B0%E5%8C%97%E7%9A%84%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E6%9B%B4%E5%8A%A0%E7%B2%BE%E5%BD%A9%E2%9D%A4"
       ],
-      "source_type": "新聞／公開網頁",
+      "source_type": "候選人原文",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 依官網原文重整：導言段移入政策論述，具體主張由混雜的 13 項改為官網四大面向的 8 項，剔除競選結語口號"
+      ]
     },
     {
       "id": "candidate-auto-9687f5c5ffe5",
@@ -6695,26 +6564,28 @@
       "publish_id": "candidate-auto-9687f5c5ffe5",
       "review_status": "人工審核",
       "editor_notes": [
-        "本筆只取來源中的文化段落，其餘主張不在本站收錄範圍",
-        "同一政見有 2 則來源，內容合併後以",
-        "分項，重複者不重列"
+        "第 1 項引自官網「產業升級四大支柱政見」第三、商圈地方創生之一；第 2、3 項為三立新聞報導，分別針對新莊與三峽。",
+        "原政策論述為記者敘述框架，已刪除，來源無可引用的論述段落。"
       ],
-      "policy_title": "老街觀光券",
+      "policy_title": "老街與特色商圈振興",
       "topics": [
         "歷史街區",
-        "文化觀光"
+        "文化觀光",
+        "地方文化"
       ],
       "topic_categories": [
         "文化資產",
         "文化空間與城市再生",
-        "文化觀光"
+        "文化觀光",
+        "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "從三大面向改善新莊老街基礎設施，並配合市府大型活動發放「老街觀光券」。",
-      "policy_argument": "蘇巧慧進一步以新莊老街為例，為了讓新莊老街風華再現，她將從三大面向改善老街基礎設施，讓行人更安全、店家經營更便利；",
+      "summary": "針對特色商圈導入「一商圈一特色」的空間美學與體驗升級，並配合市府大型活動發放「老街觀光券」。",
+      "policy_argument": "以歷史街區、文化觀光、地方文化為主要政策方向。",
       "concrete_proposals": [
-        "同時她也將發行「老街觀光券」，配合市府大型活動發放老街觀光券，延長旅客停留時間並提升在地消費。",
-        "針對三峽，蘇巧慧提出推動「老街觀光券」及「老街季季有活動」，盼吸引更多遊客走進在地商圈，帶動觀光與消費，讓新莊、三峽都能發揮地方特色，創造更多發展機會。"
+        "新北市老街與特色商圈振興計畫：針對深坑、九份、淡水等特色商圈導入「一商圈一特色」的空間美學與體驗升級，同時加強步道接駁、商圈硬體美學設計、季季有活動，吸引人潮進入老街商圈。",
+        "發行「老街觀光券」，配合市府大型活動發放老街觀光券，延長旅客停留時間並提升在地消費。",
+        "推動「老街觀光券」及「老街季季有活動」，盼吸引更多遊客走進在地商圈。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -6745,14 +6616,17 @@
       "source_title": "三立新聞｜再拋政策！蘇巧慧：若當選市長將發「老街觀光券」　發揚新莊傳統文化 - 三立新聞",
       "source_url": "https://www.setn.com/news/1863730",
       "related_sources": [
-        "https://cnews.com.tw/248261017a01/"
+        "https://cnews.com.tw/248261017a01/",
+        "https://chiao.tw/policies/%E7%94%A2%E6%A5%AD%E5%8D%87%E7%B4%9A%E5%9B%9B%E5%A4%A7%E6%94%AF%E6%9F%B1%E6%94%BF%E8%A6%8B"
       ],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 刪除記者敘述框架的政策論述，補入官網老街與特色商圈振興計畫原文"
+      ]
     },
     {
       "id": "candidate-auto-8ea4ff5e54f0",
@@ -6763,28 +6637,24 @@
       "publish_id": "candidate-auto-8ea4ff5e54f0",
       "review_status": "人工審核",
       "editor_notes": [
-        "本筆只取來源中的文化段落，其餘主張不在本站收錄範圍"
+        "三金博物館部分與「國影中心二期與三金博物館」那筆重複，以官網政見頁為準；本筆保留是因為「觀光十字廊帶」只見於此來源。依忠於原文規則不拆句，故三金部分一併保留。"
       ],
-      "policy_title": "三金博物館與觀光十字廊帶",
+      "policy_title": "觀光十字廊帶",
       "topics": [
-        "博物館",
-        "文化場館",
+        "文化觀光",
         "文化空間",
-        "音樂產業",
-        "影視文化",
-        "文化觀光"
+        "博物館",
+        "影視文化"
       ],
       "topic_categories": [
-        "博物館與地方文化館",
-        "文化場館",
+        "文化觀光",
         "文化空間與城市再生",
-        "影視與流行音樂",
-        "文化產業與文創",
-        "文化觀光"
+        "博物館與地方文化館",
+        "影視與流行音樂"
       ],
       "topic_subcategories": [],
-      "summary": "將國家電影及視聽文化中心打造為結合金馬、金鐘、金曲的「三金博物館」，並串連新莊廟街、體育園區、中港大排及宏匯廣場，打造「觀光十字廊帶」。",
-      "policy_argument": "以博物館、文化場館、文化空間、音樂產業、影視文化、文化觀光為主要政策方向。",
+      "summary": "串連新莊廟街、體育園區、中港大排及宏匯廣場，打造「觀光十字廊帶」。",
+      "policy_argument": "以文化觀光、文化空間、博物館、影視文化為主要政策方向。",
       "concrete_proposals": [
         "計畫將國家電影及視聽文化中心打造為結合金馬、金鐘、金曲的「三金博物館」，並串連新莊廟街、體育園區、中港大排及宏匯廣場，打造「觀光十字廊帶」，帶動地方觀光發展。"
       ],
@@ -6828,7 +6698,9 @@
       "party": "民主進步黨",
       "publish_id": "candidate-auto-65c56abe6fc6",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "本筆只取來源中的文化段落，其餘主張不在本站收錄範圍：「95公分的兒童友善城市」、板龍快速道路、活化捷運高架橋下空地打造小型運動休閒場地三項均非文化內容；原第三項的國際藝文運動中心與第一項重複。"
+      ],
       "policy_title": "看守所遷移後打造複合式國際運動藝文中心",
       "topics": [
         "文化場館",
@@ -6844,9 +6716,7 @@
       "summary": "如當選市長將爭取台北看守所遷移後，現址打造為複合式國際運動藝文中心，以滿足市民運動、休閒及文化展演等多元需求。",
       "policy_argument": "以文化場館、表演藝術、國際文化交流為主要政策方向。",
       "concrete_proposals": [
-        "如當選市長將爭取台北看守所遷移後，現址打造為複合式國際運動藝文中心，以滿足市民運動、休閒及文化展演等多元需求。",
-        "提出了「95公分的兒童友善城市」，用95公分高的孩子視角，檢查所有城市的相關設施。",
-        "如當選計畫推動國際藝文運動中心，加速推動串聯新北三峽、鶯歌區至桃園市龍潭區的「板龍快速道路」，活化捷運高架橋下的空地，打造小型運動休閒場地。"
+        "如當選市長將爭取台北看守所遷移後，現址打造為複合式國際運動藝文中心，以滿足市民運動、休閒及文化展演等多元需求。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -6878,7 +6748,9 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 剔除三項非文化主張與一項重複"
+      ]
     },
     {
       "id": "candidate-auto-6092132077da",
@@ -6888,19 +6760,22 @@
       "party": "民主進步黨",
       "publish_id": "candidate-auto-6092132077da",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "原兩項內容重複，只留較完整者。"
+      ],
       "policy_title": "文化大平台：串聯各區特色",
       "topics": [
-        "地方文化"
+        "地方文化",
+        "文化產業"
       ],
       "topic_categories": [
-        "地方文化與社區營造"
+        "地方文化與社區營造",
+        "文化產業與文創"
       ],
       "topic_subcategories": [],
       "summary": "將進一步運用市府力量打造文化平台，讓創作者、作品與新北各區特色相互串聯。",
-      "policy_argument": "以地方文化為主要政策方向。",
+      "policy_argument": "以地方文化、文化產業為主要政策方向。",
       "concrete_proposals": [
-        "將進一步運用市府力量打造文化平台，讓創作者、作品與新北各區特色相互串聯。",
         "會運用市府力量強化文化產業發展，讓整個新北市可以變成一個大平台，作品不只在新北被看見，也可以利用新北的山、海特色做更多元展現；……"
       ],
       "related_statements": [],
@@ -6933,7 +6808,9 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "corrections": [
+        "2026-10-27 刪除重複分項"
+      ]
     },
     {
       "id": "candidate-auto-931da3c2baba",
@@ -11791,64 +11668,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-auto-a63ab12147d5",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "蘇巧慧",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-a63ab12147d5",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "多元文化更加精彩",
-      "topics": [
-        "客家文化",
-        "原住民族文化",
-        "文化科技"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "原住民族文化",
-        "數位文化與科技"
-      ],
-      "topic_subcategories": [],
-      "summary": "蘇巧慧提出客家與原住民族文化政策，包括AI客語學習平台、伯公照護站、原住民族預算翻倍及社團活動補助。",
-      "policy_argument": "未來，我會從四大面向推動客家政策，包括打造AI客語學習平台、擴大伯公照護站，讓客家文化持續扎根；同時也會推動原住民族預算翻倍、擴大社團活動補助，讓更多資源支持原住民族文化傳承。",
-      "concrete_proposals": [
-        "打造 #AI客語學習平台、擴大 #伯公照護站，讓客家文化持續扎根；同時也會推動 #原住民族預算翻倍、 #擴大社團活動補助，讓更多資源支持原住民族文化傳承。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "chiao.tw｜假日行程滿檔！一起讓新北的多元文化更加精彩❤️ - chiao.tw",
-            "url": "https://chiao.tw/chiao_view/%E5%81%87%E6%97%A5%E8%A1%8C%E7%A8%8B%E6%BB%BF%E6%AA%94%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AE%93%E6%96%B0%E5%8C%97%E7%9A%84%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E6%9B%B4%E5%8A%A0%E7%B2%BE%E5%BD%A9%E2%9D%A4"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "chiao.tw｜假日行程滿檔！一起讓新北的多元文化更加精彩❤️ - chiao.tw",
-            "url": "https://chiao.tw/chiao_view/%E5%81%87%E6%97%A5%E8%A1%8C%E7%A8%8B%E6%BB%BF%E6%AA%94%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AE%93%E6%96%B0%E5%8C%97%E7%9A%84%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E6%9B%B4%E5%8A%A0%E7%B2%BE%E5%BD%A9%E2%9D%A4"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "chiao.tw｜假日行程滿檔！一起讓新北的多元文化更加精彩❤️ - chiao.tw",
-            "url": "https://chiao.tw/chiao_view/%E5%81%87%E6%97%A5%E8%A1%8C%E7%A8%8B%E6%BB%BF%E6%AA%94%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AE%93%E6%96%B0%E5%8C%97%E7%9A%84%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E6%9B%B4%E5%8A%A0%E7%B2%BE%E5%BD%A9%E2%9D%A4"
-          }
-        ]
-      },
-      "published_date": "2026-10-11",
-      "source_title": "chiao.tw｜假日行程滿檔！一起讓新北的多元文化更加精彩❤️ - chiao.tw",
-      "source_url": "https://chiao.tw/chiao_view/%E5%81%87%E6%97%A5%E8%A1%8C%E7%A8%8B%E6%BB%BF%E6%AA%94%EF%BC%81%E4%B8%80%E8%B5%B7%E8%AE%93%E6%96%B0%E5%8C%97%E7%9A%84%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E6%9B%B4%E5%8A%A0%E7%B2%BE%E5%BD%A9%E2%9D%A4",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-20cf671b43a5",
       "city": "新北市",
       "office": "縣市長",
@@ -16157,62 +15976,6 @@
       "corrections": []
     },
     {
-      "id": "candidate-auto-085219fb7f90",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "蘇巧慧",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-085219fb7f90",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "影視文化",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "影視與流行音樂",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "國影中心擁有國家級的影視音館藏，我將與中央一起努力，讓國影中心成為金馬獎、金曲獎、金鐘獎的 #三金博物館 ，非常感謝 卓榮泰 院長和文化部的協助……",
-      "policy_argument": "以影視文化、地方文化為主要政策方向。",
-      "concrete_proposals": [
-        "國影中心擁有國家級的影視音館藏，我將與中央一起努力，讓國影中心成為金馬獎、金曲獎、金鐘獎的 #三金博物館 ，非常感謝 卓榮泰 院長和文化部的協助……"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "chiao.tw｜國影中心二期留新莊！中央全額補助停車位",
-            "url": "https://chiao.tw/chiao_view/%E5%9C%8B%E5%BD%B1%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%9C%9F%E7%95%99%E6%96%B0%E8%8E%8A%EF%BC%81%E4%B8%AD%E5%A4%AE%E5%85%A8%E9%A1%8D%E8%A3%9C%E5%8A%A9%E5%81%9C%E8%BB%8A%E4%BD%8D"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "chiao.tw｜國影中心二期留新莊！中央全額補助停車位",
-            "url": "https://chiao.tw/chiao_view/%E5%9C%8B%E5%BD%B1%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%9C%9F%E7%95%99%E6%96%B0%E8%8E%8A%EF%BC%81%E4%B8%AD%E5%A4%AE%E5%85%A8%E9%A1%8D%E8%A3%9C%E5%8A%A9%E5%81%9C%E8%BB%8A%E4%BD%8D"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "chiao.tw｜國影中心二期留新莊！中央全額補助停車位",
-            "url": "https://chiao.tw/chiao_view/%E5%9C%8B%E5%BD%B1%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%9C%9F%E7%95%99%E6%96%B0%E8%8E%8A%EF%BC%81%E4%B8%AD%E5%A4%AE%E5%85%A8%E9%A1%8D%E8%A3%9C%E5%8A%A9%E5%81%9C%E8%BB%8A%E4%BD%8D"
-          }
-        ]
-      },
-      "published_date": "2026-07-06",
-      "source_title": "chiao.tw｜國影中心二期留新莊！中央全額補助停車位",
-      "source_url": "https://chiao.tw/chiao_view/%E5%9C%8B%E5%BD%B1%E4%B8%AD%E5%BF%83%E4%BA%8C%E6%9C%9F%E7%95%99%E6%96%B0%E8%8E%8A%EF%BC%81%E4%B8%AD%E5%A4%AE%E5%85%A8%E9%A1%8D%E8%A3%9C%E5%8A%A9%E5%81%9C%E8%BB%8A%E4%BD%8D",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
       "id": "candidate-auto-c83f64edbb4c",
       "city": "屏東縣",
       "office": "縣市長",
@@ -17150,60 +16913,6 @@
       "published_date": "2026-10-01",
       "source_title": "創新聞｜西螺競選總部今成立張嘉郡、蕭德恕端地方建設政見– 地方 - 創新聞",
       "source_url": "https://pronews.tw/2026/10/01/316578/",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-904c554e63e7",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "蘇巧慧",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-904c554e63e7",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "文化產業"
-      ],
-      "topic_categories": [
-        "文化產業與文創"
-      ],
-      "topic_subcategories": [],
-      "summary": "我會持續努力，做創作者最堅實的後盾，要讓文創產業成為台灣的護國群山！",
-      "policy_argument": "以文化產業為主要政策方向。",
-      "concrete_proposals": [
-        "我會持續努力，做創作者最堅實的後盾，要讓文創產業成為台灣的護國群山！"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
-            "url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
-            "url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
-            "url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A"
-          }
-        ]
-      },
-      "published_date": "2026-03-01",
-      "source_title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
-      "source_url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A",
       "related_sources": [],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
