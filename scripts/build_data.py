@@ -197,7 +197,10 @@ def build_candidates():
             valid_url(source, label)
         topics = [x.strip() for x in row["topics"].split("|") if x.strip()]
         topic_categories, topic_subcategories = classify_topics(topics, label)
-        argument = (row.get("policy_argument") or "").strip() or f"以{'、'.join(topics)}為主要政策方向。"
+        # policy_argument 留空就是留空：來源沒有論述段落時，前台顯示「尚未收錄可核實的
+        # 政策論述」才是誠實的。先前這裡會用標籤拼出「以A、B為主要政策方向。」填補，
+        # 讀者無從分辨那句是程式生成的，違反忠於原文、不推論的規則。
+        argument = (row.get("policy_argument") or "").strip()
         proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()]
         statements = [x.strip() for x in (row.get("related_statements") or "").split("||") if x.strip()]
         editor_notes = [x.strip() for x in (row.get("editor_notes") or "").split("||") if x.strip()]
