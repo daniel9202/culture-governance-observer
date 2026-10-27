@@ -61,6 +61,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對蔡易餘為嘉義縣縣市長民主進步黨候選人；中央社報導其在2026年嘉義縣長提名政見會提出阿里山林鐵區間車與林業文化推廣措施。來源未提供預算與期程，已在條目中註明。",
         "2026-10-10｜依原文修正。"
@@ -132,6 +134,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對陳俊諺為新北市第5選舉區縣市議員民主進步黨候選人；聯合報報導其完成登記並提出古今板橋文化生活圈。來源未提供場址、預算、期程與執行機制，已在條目中註明。"
       ]
@@ -196,6 +200,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對苗栗縣縣市長候選人身分；民進黨官方新聞稿具名記載候選人未來文化承諾。措施尚未提供預算與期程，已在條目中註明。",
         "2026-10-10｜依原文修正。"
@@ -257,6 +263,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對屏東縣縣市長候選人身分；報導具名記載候選人承諾當選後立即推動工程。地方提出的計畫預算約1200萬元，非候選人已承諾之預算。",
         "2026-10-03｜依資料稽核修正與內容不符的細標籤。",
@@ -326,8 +334,10 @@
       "source_type": "政黨新聞稿",
       "last_verified": "2026-10-10",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "現任屏東縣長，2026 登記參選連任",
+      "office_category": "首長",
+      "current_office": "現任屏東縣長",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對屏東縣縣市長候選人身分；中央社報導具名記載候選人於2026政策說明會提出的文化建設與廊帶規劃。",
         "2026-10-10｜依原文修正。"
@@ -395,6 +405,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對花蓮縣縣市議員第三選舉區候選人身分；來源具名記載候選人文化主張。政策未載預算、期程或執行機制，已於摘要保留其概括性。"
       ]
@@ -483,6 +495,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 主源由 Threads 分享連結改為官網政見頁，併入 CTWant 與自由時報兩則報導"
       ]
@@ -547,8 +561,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "民意代表",
+      "current_office": "現任臺北市議員",
       "corrections": [
         "2026-10-27 移除誤植他人發言的重複列"
       ]
@@ -621,6 +637,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -684,8 +702,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任澎湖縣議員",
       "corrections": []
     },
     {
@@ -746,8 +766,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任金門縣議員",
       "corrections": [
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
@@ -813,8 +835,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": [
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
@@ -876,8 +900,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": [
         "2026-10-04｜依來源性質更正為現任議員問政／提案。",
         "2026-10-04｜依來源性質更正為現任議員問政／提案。"
@@ -942,8 +968,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": []
     },
     {
@@ -1013,8 +1041,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": [
         "2026-10-27 合併同網址重複列，補入兩項遺漏主張，清除 HTML 實體 &emsp;"
       ]
@@ -1077,8 +1107,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": [
         "2026-10-04｜依來源性質更正為現任議員問政／提案。",
         "2026-10-04｜依來源性質更正為現任議員問政／提案。"
@@ -1143,8 +1175,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": [
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
@@ -1206,8 +1240,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": []
     },
     {
@@ -1272,8 +1308,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": []
     },
     {
@@ -1332,8 +1370,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": [
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
       ]
@@ -1396,8 +1436,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-02",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": []
     },
     {
@@ -1457,8 +1499,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "民意代表",
+      "current_office": "現任臺東縣議員",
       "corrections": [
         "2026-10-04｜依來源性質更正為現任議員問政／提案。",
         "2026-10-04｜依來源性質更正為現任議員問政／提案。"
@@ -1523,6 +1567,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -1581,6 +1627,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "依原文修正（2026-10-10）"
       ]
@@ -1651,6 +1699,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 合併同一網址的重複列，並補入官網產業升級政見頁的三金博物館原文"
       ]
@@ -1724,6 +1774,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-17｜整合已審核中央社來源：補入新北職人 Passport 政策。",
         "2026-10-10｜依原文修正。",
@@ -1789,6 +1841,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-10｜依原文修正。"
       ]
@@ -1863,6 +1917,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-10｜依原文修正。"
       ]
@@ -1931,6 +1987,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-02｜補充政策白皮書與斗六設址方向。",
         "2026-09-06｜主要來源改為候選人官網，原新聞改列輔助來源。",
@@ -2003,6 +2061,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-17｜整合已審核中央社來源：補入原住民族部落照顧與文化自治政策。",
         "依原文修正（2026-10-10）"
@@ -2065,6 +2125,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-10｜依原文修正。"
       ]
@@ -2126,6 +2188,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-10｜依原文修正。",
         "依原文修正（2026-10-10）"
@@ -2189,6 +2253,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入，與既有林國漳卡片合併呈現。",
         "2026-10-10｜依原文修正。"
@@ -2249,6 +2315,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。"
       ]
@@ -2309,6 +2377,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
@@ -2370,6 +2440,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。"
       ]
@@ -2442,6 +2514,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-03｜合併 candidate-hsinchu-councilor-li-mei-arts-001 的重複官方候選人頁內容；保留既有 ID，補「視覺藝術」細標籤，不以場地描述標示為美術館。",
@@ -2508,6 +2582,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-03｜合併 candidate-changhua-councilor-kao-tsai-ling-language-001 的同一官方候選人頁內容；保留既有 ID，補入原青返鄉築夢。"
@@ -2567,6 +2643,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。"
       ]
@@ -2632,6 +2710,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-01｜政黨由「小民參政歐巴桑聯盟」更正為「無黨籍」：依中選會115年地方公職人員選舉候選人登記名冊，臺北市第7選舉區登記姓名「林筱薇IcyangTamana」、推薦之政黨為「無」。擔任政黨職務（如發言人）不等於接受政黨推薦參選，政黨欄位以中選會推薦紀錄為準。"
@@ -2697,6 +2777,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。"
       ]
@@ -2764,6 +2846,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-03｜合併 candidate-ntpc-councilor-chen-yu-chieh-cultural-tourism-001 的同一官方候選人頁內容；保留既有 ID，補入傳統市場轉型措施。"
@@ -2824,6 +2908,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-01｜政黨由「台灣前進」更正為「無黨籍」：依中選會115年地方公職人員選舉候選人登記名冊，高雄市第4選舉區登記姓名「薛兆基」、推薦之政黨為「無」。「台灣前進」為小黨與無黨籍候選人的聯合，並非中選會登記的推薦政黨；政黨欄位以中選會推薦紀錄為準。",
@@ -2894,6 +2980,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-14｜由審核資料轉列候選人政見；原始收錄類型為民間政策訴求，經補查確認為候選人提出的具體文化政策主張。",
         "依原文修正（2026-10-10）"
@@ -2954,6 +3042,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-07 整合稿發布。",
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-11。",
@@ -3016,6 +3106,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-09 整合稿發布。",
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-07。",
@@ -3085,6 +3177,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-10 整合稿發布。",
         "2026-09-17｜整合已審核官方政見頁：補入星光計畫、文化創投與巷弄文化小蜜蜂。",
@@ -3155,6 +3249,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-11 整合稿發布。",
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-08。",
@@ -3226,6 +3322,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-18 整合稿發布。",
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-09-01。",
@@ -3301,6 +3399,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 主源由新聞報導改為官網政見頁，兩則報導合併"
       ]
@@ -3364,6 +3464,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-16｜由 Google Sheet draft-20260916-25 整合稿發布。",
         "2026-10-03｜發布日期由匯入日期更正為來源標題所載報導日期 2026-08-10。",
@@ -3430,6 +3532,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-17｜由 Google Sheet draft-20260916-01 整合稿發布。",
         "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
@@ -3489,8 +3593,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-10",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "現任基隆市長，2026 登記參選連任",
+      "office_category": "首長",
+      "current_office": "現任基隆市長",
       "corrections": [
         "2026-09-17｜由 Google Sheet draft-20260916-02 整合稿發布。",
         "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
@@ -3562,6 +3668,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-17｜由 Google Sheet draft-20260916-08 整合稿發布。",
         "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
@@ -3623,6 +3731,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-09-17｜由 Google Sheet draft-20260916-12 整合稿發布。",
         "2026-10-03｜來源網址由 Google 新聞轉址改為可直接開啟的原始／刊登報導網址。",
@@ -3689,6 +3799,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-28 原收錄該頁五項，依使用者判定只留文化相關的第 2 項"
       ]
@@ -3762,6 +3874,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-official-site-updates.csv 上架。",
         "2026-10-03｜合併 candidate-tpe-mayor-shen-boyang-002 的同一文化徑×山林徑政策；保留候選人官網完整版，公共媒體報導改列附屬來源。",
@@ -3841,6 +3955,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 依官網原文補回語言認證獎勵金額級距、交通費補助新增項目與部落聚會所，原 4 項增為 8 項"
       ]
@@ -3907,6 +4023,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。",
         "依原文修正（2026-10-10）"
@@ -3973,6 +4091,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。",
         "2026-10-10｜依原文修正。"
@@ -4034,6 +4154,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對與人工審核完成；由 mayor-cultural-policy-leads.csv 上架。",
         "2026-10-10｜依原文修正。"
@@ -4101,8 +4223,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "民意代表",
+      "current_office": "現任臺中市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第1選舉區、民主進步黨候選人；2026年新聞記載其具體文化主張並完成人工審核。",
         "2026-10-04｜依來源性質更正為現任議員問政／提案。",
@@ -4169,6 +4293,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會登記名冊核對為臺北市第1選舉區、中國國民黨候選人；候選人競選網站人工審核完成。"
       ]
@@ -4234,6 +4360,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 合併同網址重複列，移除誤植的他人發言與截斷句"
       ]
@@ -4298,8 +4426,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "待判定",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "議會提案或新聞頁；不是議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第5選舉區、民主進步黨候選人；臺南市議會 2026 年 9 月 24 日頁面記載其具體文化主張並完成人工審核。"
       ]
@@ -4362,8 +4492,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第7選舉區、民主進步黨候選人；臺南市議會於2026年更新的議員頁記載其文化主張並完成人工審核。",
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
@@ -4429,6 +4561,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第4選舉區、民主進步黨候選人；2026年新聞記載具體文化觀光主張並完成人工審核。"
       ]
@@ -4499,6 +4633,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第9選舉區、民主進步黨候選人；候選人官網收錄2026政見並完成人工審核。"
       ]
@@ -4563,6 +4699,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對為桃園市第1選舉區、中國國民黨候選人；2026年登記參選新聞記載具體文化主張並完成人工審核。",
         "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
@@ -4628,6 +4766,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對為桃園市第8選舉區、中國國民黨候選人；2026年登記參選新聞記載具體藝文展演中心主張並完成人工審核。"
       ]
@@ -4690,8 +4830,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺中市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第12選舉區、中國國民黨候選人；官方政策頁明列巨蛋與大型演藝文化產業措施並完成人工審核。",
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
@@ -4760,8 +4902,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺中市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第16選舉區、中國國民黨候選人；官方政策頁明列原民文化傳承與文化據點措施並完成人工審核。",
         "2026-10-27 合併同網址重複列（片段筆內容已被涵蓋）"
@@ -4828,8 +4972,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺中市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺中市第17選舉區、中國國民黨候選人；官方政策頁明列原民表演空間、族語與文化發展措施並完成人工審核。"
       ]
@@ -4890,8 +5036,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第1選舉區、中國國民黨候選人；官方政策頁明列國圖南部分館措施並完成人工審核。"
       ]
@@ -4959,8 +5107,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第2選舉區、中國國民黨候選人；官方政策頁明列文化資產、文化觀光與藝文活動措施並完成人工審核。"
       ]
@@ -5020,8 +5170,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "待判定",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "議會提案或新聞頁；不是議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為臺南市第10選舉區、中國國民黨候選人；2026年候選人記者會明列文化中心改造升級措施並完成人工審核。"
       ]
@@ -5083,6 +5235,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第7選舉區、中國國民黨候選人；候選人官方網站以「再四年」列為服務政見並明列電影車措施，完成人工審核。"
       ]
@@ -5154,8 +5308,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任高雄市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第9選舉區、中國國民黨候選人；高雄市議會個人政策頁明列客家文化、流行音樂與藝文特區措施並完成人工審核。",
         "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
@@ -5218,8 +5374,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任高雄市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第11選舉區、中國國民黨候選人；高雄市議會個人政策頁明列林園海洋文化與文化觀光路線措施並完成人工審核。"
       ]
@@ -5283,8 +5441,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任高雄市議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為高雄市第12選舉區、中國國民黨候選人；高雄市議會個人政策頁明列原住民文化復育、族語與意象場域措施並完成人工審核。"
       ]
@@ -5349,8 +5509,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任新竹縣議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為新竹縣第3選舉區、中國國民黨候選人；新竹縣議會個人政策頁及2026年縣府總質詢來源明列老街與客家文化措施並完成人工審核。"
       ]
@@ -5413,8 +5575,10 @@
       "source_type": "候選人原文",
       "last_verified": "2026-10-01",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊＋議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任彰化縣議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為彰化縣第1選舉區、中國國民黨候選人；彰化縣議會個人政策頁明列音樂之都與街頭藝人、學生展演平台措施，完成人工審核。"
       ]
@@ -5475,8 +5639,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "聯合新聞網報導明載李世淦於屏東縣議會業務報告與質詢中提出客語教育主張。",
+      "office_category": "民意代表",
+      "current_office": "現任屏東縣議員",
       "corrections": [
         "2026-10-01｜中選會名冊核對為屏東縣第3選舉區、中國國民黨候選人；聯合新聞網報導其在議會提出客語教育與客家民族教育法構想，完成人工審核。",
         "2026-10-03｜依資料稽核修正與內容不符的細標籤。",
@@ -5550,6 +5716,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜中選會名冊核對為嘉義市第2選舉區中國國民黨候選人；候選人官方網站的2026政見與問政頁明列舊城文化節點串聯及嘉菸設計基地活化措施，完成人工審核。"
       ]
@@ -5616,6 +5784,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜中選會名冊核對為宜蘭縣第12選舉區親民黨候選人；親民黨候選人頁明列部落文化體驗、傳統祭儀與文化健康站措施，完成人工審核。"
       ]
@@ -5678,8 +5848,10 @@
       "source_type": "政府質詢紀錄",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "新竹縣政府公布縣政總質詢內容，記載羅美文以議員身分提出湖口裝甲新村修復要求。",
+      "office_category": "民意代表",
+      "current_office": "現任新竹縣議員",
       "corrections": [
         "2026-10-02｜中選會名冊核對為新竹縣第3選舉區勞動黨候選人；新竹縣府公開質詢紀錄明列其要求修繕復原湖口裝甲新村，完成人工審核。",
         "2026-10-04｜經查來源為縣政總質詢紀錄，改列現任問政／提案。"
@@ -5745,6 +5917,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜中選會名冊核對為新竹市第4選舉區時代力量候選人；候選人官方頁明列漁村與造船文化推廣及漁港觀光發展，完成人工審核。"
       ]
@@ -5808,6 +5982,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜中選會名冊核對為新北市第3選舉區台灣綠黨候選人；台灣綠黨2026候選人政見明列畢旅結合文化地景與公共議題，完成人工審核。"
       ]
@@ -5877,6 +6053,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對薛兆基為高雄市第4選舉區無黨籍候選人；具名新聞記載其與漫畫家及文史團體討論眷村保存、漫畫家駐村與戶外展演等候選人主張。來源未提供預算與期程，已在條目中註明。"
       ]
@@ -5948,8 +6126,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "待判定",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "具名新聞列為桃園市議員；非議會個人頁",
+      "office_category": "民意代表",
+      "current_office": "現任桃園市議員",
       "corrections": [
         "2026-10-02｜已依中選會名冊核對張碩芳為桃園市第1選舉區中國國民黨候選人；來源報導其以現任桃園市議員身分在文化局、客家局工作報告提出質詢。因非議會個人頁，依現行規則列「待判定／現任問政或提案」，於議員任內問政分頁呈現，不計入本屆競選政見。"
       ]
@@ -6008,8 +6188,10 @@
       "source_type": "新聞報導",
       "last_verified": "2026-10-04",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "依中選會本屆名冊與議會個人頁推定為現任議員；此推定並非議會官方認證。",
+      "office_category": "民意代表",
+      "current_office": "現任臺北市議員",
       "corrections": [
         "2026-10-04｜由 civic_policy_calls.csv 既有資料遷入；原資料ID civic-tpe-temple-fire-safety-001；發布ID留空，沿用既有資料例外。"
       ]
@@ -6069,8 +6251,10 @@
       "source_type": "議會質詢報導",
       "last_verified": "2026-10-04",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任問政／提案",
+      "content_nature": "公職政績",
       "role_evidence": "依中選會本屆名冊與議會個人頁推定為現任議員；此推定並非議會官方認證。",
+      "office_category": "民意代表",
+      "current_office": "現任桃園市議員",
       "corrections": [
         "2026-10-04｜由 civic_policy_calls.csv 既有資料遷入；原資料ID civic-tao-guishan-cultural-ecology-001；發布ID留空，沿用既有資料例外。"
       ]
@@ -6140,8 +6324,10 @@
       "source_type": "政府新聞稿",
       "last_verified": "2026-10-10",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "現任新竹市長，2026 登記參選連任",
+      "office_category": "首長",
+      "current_office": "現任新竹市長",
       "corrections": [
         "2026-10-28 合併同網址重複列"
       ]
@@ -6213,6 +6399,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -6290,6 +6478,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 移除具體主張開頭的來源項次編號"
       ]
@@ -6373,6 +6563,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -6434,6 +6626,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -6523,6 +6717,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 依官網原文重整：導言段移入政策論述，具體主張由混雜的 13 項改為官網四大面向的 8 項，剔除競選結語口號"
       ]
@@ -6596,6 +6792,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 刪除記者敘述框架的政策論述，補入官網老街與特色商圈振興計畫原文"
       ]
@@ -6660,6 +6858,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -6720,6 +6920,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 剔除三項非文化主張與一項重複"
       ]
@@ -6780,8 +6982,71 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 刪除重複分項"
+      ]
+    },
+    {
+      "id": "candidate-auto-904c554e63e7",
+      "city": "新北市",
+      "office": "縣市長",
+      "candidate": "蘇巧慧",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-904c554e63e7",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "蘇巧慧擔任立法委員任內推動的法案，不是本屆競選政見。",
+        "來源頁實質主張未抽取，concrete_proposals 僅為結語，待重新抽取。"
+      ],
+      "policy_title": "",
+      "topics": [
+        "文化產業"
+      ],
+      "topic_categories": [
+        "文化產業與文創"
+      ],
+      "topic_subcategories": [],
+      "summary": "我會持續努力，做創作者最堅實的後盾，要讓文創產業成為台灣的護國群山！",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "我會持續努力，做創作者最堅實的後盾，要讓文創產業成為台灣的護國群山！"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
+            "url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
+            "url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
+            "url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A"
+          }
+        ]
+      },
+      "published_date": "2026-03-01",
+      "source_title": "蘇巧慧2026官方網站｜民眾借書，創作者也能獲利，巧慧推動公共出借權",
+      "source_url": "https://chiao.tw/chiao_view/%E6%B0%91%E7%9C%BE%E5%80%9F%E6%9B%B8%EF%BC%8C%E5%89%B5%E4%BD%9C%E8%80%85%E4%B9%9F%E8%83%BD%E7%8D%B2%E5%88%A9%EF%BC%8C%E5%B7%A7%E6%85%A7%E6%8E%A8%E5%8B%95%E5%85%AC%E5%85%B1%E5%87%BA%E5%80%9F%E6%AC%8A",
+      "related_sources": [],
+      "source_type": "新聞／公開網頁",
+      "last_verified": "2026-10-26",
+      "proposer_role": "候選人",
+      "content_nature": "公職政績",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "民意代表",
+      "current_office": "現任立法委員",
+      "corrections": [
+        "2026-10-28 依新欄位契約取回：先前因 content_nature 四個枚舉值都不適用而整列移除"
       ]
     },
     {
@@ -6839,6 +7104,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -6895,6 +7162,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -6963,6 +7232,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7039,6 +7310,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7112,6 +7385,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7180,6 +7455,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7244,6 +7521,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7344,6 +7623,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-28 補入官網原文兩項並拆開黏合句"
       ]
@@ -7423,6 +7704,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7487,6 +7770,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-28 依官網原文重整，原本兩句黏成一項，改為三項"
       ]
@@ -7591,6 +7876,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7658,6 +7945,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7732,6 +8021,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7799,6 +8090,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7878,6 +8171,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -7935,6 +8230,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8000,6 +8297,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8065,6 +8364,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8144,6 +8445,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8212,6 +8515,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8270,6 +8575,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8332,6 +8639,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8408,6 +8717,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8466,6 +8777,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8547,6 +8860,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8628,6 +8943,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8697,6 +9014,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8770,6 +9089,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8829,6 +9150,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8904,6 +9227,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -8982,6 +9307,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9044,6 +9371,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9103,6 +9432,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9183,6 +9514,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9249,6 +9582,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9315,6 +9650,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9378,8 +9715,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "首長",
+      "current_office": "現任屏東縣長",
       "corrections": []
     },
     {
@@ -9459,6 +9798,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9522,6 +9863,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9592,6 +9935,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9649,6 +9994,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9705,6 +10052,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9767,6 +10116,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9842,6 +10193,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9897,6 +10250,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -9970,6 +10325,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 與中華日報同一組政見的報導合併，剔除記者敘述框架"
       ]
@@ -10040,6 +10397,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10106,6 +10465,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10174,6 +10535,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10226,8 +10589,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=3&mid=39",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": []
     },
     {
@@ -10280,8 +10645,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=18&mid=39",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": []
     },
     {
@@ -10338,8 +10705,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=36&mid=39",
+      "office_category": "民意代表",
+      "current_office": "現任新竹市議員",
       "corrections": []
     },
     {
@@ -10395,8 +10764,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.tccc.gov.tw/wb_introduction02.asp?cno=65&uno=",
+      "office_category": "民意代表",
+      "current_office": "現任臺中市議員",
       "corrections": []
     },
     {
@@ -10451,6 +10822,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10505,8 +10878,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.tncc.gov.tw/councilorpage.asp?mainid=5ABA0B90-9FD2-4B3E-BA48-FA776C993C02",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": []
     },
     {
@@ -10559,8 +10934,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.tncc.gov.tw/councilorpage.asp?mainid=63ECF425-FD64-4636-A3D3-05B420A3924D",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": []
     },
     {
@@ -10617,6 +10994,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10674,6 +11053,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10732,6 +11113,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10792,6 +11175,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10857,6 +11242,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -10911,68 +11298,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-33bf75fbee31",
-      "city": "金門縣",
-      "office": "縣市長",
-      "candidate": "張國威",
-      "party": "無黨籍",
-      "publish_id": "candidate-auto-33bf75fbee31",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "閩南文化",
-        "文創產業",
-        "文化觀光",
-        "青年文化",
-        "文化教育"
-      ],
-      "topic_categories": [
-        "語言與族群",
-        "文化產業與文創",
-        "文化觀光",
-        "青年",
-        "文化教育"
-      ],
-      "topic_subcategories": [],
-      "summary": "深化金門戰地、閩南、僑鄉、酒香及鄒魯文化，結合觀光、教育、產業；活化閒置營區引入文創與特色體驗，創造青年返鄉機會。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "深化金門戰地、閩南、僑鄉、酒香及鄒魯文化，結合觀光、教育、產業；活化閒置營區引入文創與特色體驗，創造青年返鄉機會。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "金門縣政府（金門日報轉載）｜五合一選舉登記 縣長參選人提金門發展願景",
-            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=CBA5DE87BB96F03C&sms=BF7D6D478B935644"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "金門縣政府（金門日報轉載）｜五合一選舉登記 縣長參選人提金門發展願景",
-            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=CBA5DE87BB96F03C&sms=BF7D6D478B935644"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "金門縣政府（金門日報轉載）｜五合一選舉登記 縣長參選人提金門發展願景",
-            "url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=CBA5DE87BB96F03C&sms=BF7D6D478B935644"
-          }
-        ]
-      },
-      "published_date": "2026-09-03",
-      "source_title": "金門縣政府（金門日報轉載）｜五合一選舉登記 縣長參選人提金門發展願景",
-      "source_url": "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=CBA5DE87BB96F03C&sms=BF7D6D478B935644",
-      "related_sources": [],
-      "source_type": "議會官方網站",
-      "last_verified": "2026-10-26",
-      "proposer_role": "待判定",
-      "content_nature": "現任問政／提案",
-      "role_evidence": "來源未說明身分",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11038,6 +11365,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11100,6 +11429,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11163,8 +11494,10 @@
       "source_type": "議會官方網站",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "首長",
+      "current_office": "現任苗栗縣長",
       "corrections": []
     },
     {
@@ -11224,6 +11557,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11283,6 +11618,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11346,6 +11683,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11411,6 +11750,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11465,8 +11806,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "首長",
+      "current_office": "現任臺北市長",
       "corrections": []
     },
     {
@@ -11528,6 +11871,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11588,6 +11933,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11650,6 +11997,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11715,6 +12064,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11774,6 +12125,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11833,6 +12186,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11894,6 +12249,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -11954,6 +12311,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12014,6 +12373,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12074,6 +12435,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12131,6 +12494,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12187,6 +12552,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12248,6 +12615,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12259,8 +12628,7 @@
       "publish_id": "candidate-auto-144999c33ac2",
       "review_status": "人工審核",
       "editor_notes": [
-        "同一政見有 2 則來源，合併後以",
-        "分項，重複者不重列"
+        "併入金門縣政府（金門日報轉載）同一組政見的報導。被併的那筆原標為現任問政／提案，但其 role_evidence 寫「來源未說明身分」、來源標題是「五合一選舉登記 縣長參選人提金門發展願景」，內容是競選政見而非問政紀錄；張國威無公職身分，依使用者 2026-10-28 規則當一般候選人處理。"
       ],
       "policy_title": "金門五大文化特色活化與行銷",
       "topics": [
@@ -12277,7 +12645,7 @@
         "文化資產"
       ],
       "topic_subcategories": [],
-      "summary": "張國威提出活化閒置營區導入文創與特色體驗，並整合金門五大文化特色發展觀光及地方。",
+      "summary": "深化金門戰地、閩南、僑鄉、酒香及鄒魯文化，結合觀光、教育、產業；活化閒置營區引入文創與特色體驗，創造青年返鄉機會。",
       "policy_argument": "張國威主張深化金門戰地、閩南、僑鄉、酒香與鄒魯五大文化底蘊，結合觀光、教育與產業。",
       "concrete_proposals": [
         "文化方面，他主張深化金門戰地、閩南、僑鄉、酒香與鄒魯五大文化底蘊，結合觀光、教育與產業，讓金門獨特的文化成為走向世界最重要的資產。",
@@ -12313,14 +12681,19 @@
       "source_title": "udn｜張國威成立金城競總 3名縣長候選人同台高喊「翻轉金門」 - udn",
       "source_url": "https://udn.com/vote2026/story/124652/9836320",
       "related_sources": [
-        "https://www.sjtv.com.tw/articles/118113"
+        "https://www.sjtv.com.tw/articles/118113",
+        "https://www.kinmen.gov.tw/News_Content2.aspx?n=98E3CA7358C89100&s=CBA5DE87BB96F03C&sms=BF7D6D478B935644"
       ],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-28 合併錯標為現任問政／提案的重複列"
+      ]
     },
     {
       "id": "candidate-auto-312964021835-eba8",
@@ -12384,6 +12757,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12448,6 +12823,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12511,6 +12888,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12572,6 +12951,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12631,6 +13012,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12694,6 +13077,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12752,6 +13137,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12815,6 +13202,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12875,6 +13264,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12929,6 +13320,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -12988,6 +13381,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13061,6 +13456,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13117,6 +13514,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13184,8 +13583,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "首長",
+      "current_office": "現任屏東市長",
       "corrections": []
     },
     {
@@ -13244,6 +13645,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13298,8 +13701,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "公職政績",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "首長",
+      "current_office": "現任宜蘭市長",
       "corrections": []
     },
     {
@@ -13374,6 +13779,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13436,6 +13843,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13494,6 +13903,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13555,6 +13966,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13614,6 +14027,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13693,6 +14108,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13749,6 +14166,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13813,6 +14232,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13877,6 +14298,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -13941,6 +14364,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14003,6 +14428,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14062,6 +14489,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14120,6 +14549,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14179,6 +14610,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14235,8 +14668,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.chcc.gov.tw/member/Details2.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C121%2C1%2C%2C%2C%2C%2C%2C%2C3525",
+      "office_category": "民意代表",
+      "current_office": "現任彰化縣議員",
       "corrections": []
     },
     {
@@ -14297,6 +14732,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14351,8 +14788,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.cyscc.gov.tw/Parliamentary_Content/315/14195/",
+      "office_category": "民意代表",
+      "current_office": "現任嘉義縣議員",
       "corrections": [
         "2026-10-27 移除具體主張開頭的來源項次編號"
       ]
@@ -14412,8 +14851,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任新竹縣議員",
       "corrections": []
     },
     {
@@ -14480,6 +14921,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14542,6 +14985,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14605,6 +15050,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14615,7 +15062,9 @@
       "party": "無黨籍",
       "publish_id": "candidate-auto-1c1a123450c6",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "原標為現任首長施政，但魏嘉賢是現任花蓮縣議員、不是首長；該筆內容是以花蓮縣長參選人身分的公開呼籲，與他另外兩筆同性質，改列本屆競選政見。"
+      ],
       "policy_title": "",
       "topics": [
         "文化資產",
@@ -14663,9 +15112,13 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
-      "content_nature": "現任首長施政",
+      "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
-      "corrections": []
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-28 由現任首長施政改列本屆競選政見"
+      ]
     },
     {
       "id": "candidate-auto-6faf5f5f5a5e",
@@ -14719,6 +15172,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14781,6 +15236,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14845,6 +15302,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14899,6 +15358,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -14959,6 +15420,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15011,8 +15474,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.kmc.gov.tw/index.php/mac/mi/kljs/287-kljs-03",
+      "office_category": "民意代表",
+      "current_office": "現任基隆市議員",
       "corrections": [
         "2026-10-27 移除具體主張開頭的來源項次編號"
       ]
@@ -15072,8 +15537,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": []
     },
     {
@@ -15128,8 +15595,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "https://www.mtcc.gov.tw/ch/Detail/7168?mcid=109198&webaid=",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": []
     },
     {
@@ -15186,8 +15655,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任連江縣議員",
       "corrections": []
     },
     {
@@ -15245,6 +15716,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15305,8 +15778,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任屏東縣議員",
       "corrections": []
     },
     {
@@ -15368,6 +15843,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15429,6 +15906,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15484,6 +15963,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15540,8 +16021,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任臺南市議員",
       "corrections": []
     },
     {
@@ -15605,6 +16088,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15658,8 +16143,10 @@
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "推定現任議員",
-      "content_nature": "現任議員個人頁內容",
+      "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任臺東縣議員",
       "corrections": []
     },
     {
@@ -15716,6 +16203,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15780,6 +16269,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15848,6 +16339,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": [
         "2026-10-27 合併同一網址裂成的兩筆，剔除非文化主張"
       ]
@@ -15915,6 +16408,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -15971,6 +16466,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16025,6 +16522,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16098,6 +16597,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16152,6 +16653,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16209,6 +16712,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16265,6 +16770,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16321,6 +16828,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16383,6 +16892,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16458,6 +16969,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16526,6 +17039,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16589,6 +17104,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16658,6 +17175,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16725,6 +17244,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16791,6 +17312,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16855,6 +17378,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16911,6 +17436,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -16971,6 +17498,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     },
     {
@@ -17027,6 +17556,8 @@
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
       "corrections": []
     }
   ]

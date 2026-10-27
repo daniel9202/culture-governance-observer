@@ -17,7 +17,10 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PROPOSER_ROLES = {"候選人", "現任議員", "推定現任議員", "待判定"}
 # published_date 留空時 editor_notes 必須包含這句，說明是來源沒有日期而不是還沒查
 NO_DATE_NOTE = "來源頁面沒有發布日期"
-CONTENT_NATURES = {"本屆競選政見", "現任議員個人頁內容", "現任問政／提案", "現任首長施政"}
+CONTENT_NATURES = {"本屆競選政見", "公職政績"}
+# 現行身分狀態。判斷用，前台分頁與 related_records 驗證都讀這欄。
+# 沒有任何公職身分的候選人當一般候選人處理，不收公職政績紀錄，所以沒有「已卸任」。
+OFFICE_CATEGORIES = {"首長", "民意代表"}
 REVIEW_STATUSES = {"人工審核", "AI初審待複核"}
 TOPIC_CATEGORY_NAMES = {
     "文化治理與預算", "文化資產", "文化場館", "表演藝術", "視覺藝術", "博物館與地方文化館",
@@ -187,9 +190,16 @@ def build_candidates():
         valid_url(row["source_url"], label)
         valid_choice(row["proposer_role"], PROPOSER_ROLES, "proposer_role", label)
         valid_choice(row["content_nature"], CONTENT_NATURES, "content_nature", label)
-        # 縣轄市長也是該市的民選首長，任內施政與縣市長同類，前台也同樣呈現在首長頁
-        if row["content_nature"] == "現任首長施政" and row["office"] not in {"縣市長", "縣轄市長"}:
-            raise ValueError(f"{label}: 現任首長施政 is only valid when office is 縣市長 or 縣轄市長")
+        # 公職政績必須標明現行身分：office_category 給程式判斷，current_office 給讀者看。
+        # 身分一律以現行職位為準，與這次參選的 office 無關（例如現任議員參選縣市長）。
+        office_category = (row.get("office_category") or "").strip()
+        current_office = (row.get("current_office") or "").strip()
+        if row["content_nature"] == "公職政績":
+            if not office_category or not current_office:
+                raise ValueError(f"{label}: 公職政績必須填 office_category 與 current_office")
+            valid_choice(office_category, OFFICE_CATEGORIES, "office_category", label)
+        elif office_category:
+            valid_choice(office_category, OFFICE_CATEGORIES, "office_category", label)
         review_status = (row.get("review_status") or "").strip() or "人工審核"
         valid_choice(review_status, REVIEW_STATUSES, "review_status", label)
         related_sources = [x.strip() for x in (row.get("related_sources") or "").split("|") if x.strip()]
@@ -218,6 +228,7 @@ def build_candidates():
             "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],
             "proposer_role": row["proposer_role"], "content_nature": row["content_nature"], "role_evidence": row["role_evidence"],
+            "office_category": office_category, "current_office": current_office,
             "corrections": [x.strip() for x in row["correction_log"].split("||") if x.strip()]
         })
     if missing_legacy_publish_ids:
@@ -312,7 +323,7 @@ def build_fulfillment(candidate_records=None):
     governance_ids = {
         record["id"]
         for record in (candidate_records or [])
-        if record.get("content_nature") == "現任首長施政"
+        if record.get("content_nature") == "公職政績" and record.get("office_category") == "首長"
     }
     for index, row in enumerate(rows("pledge_fulfillment.csv"), start=2):
         if not any(row.values()):
@@ -336,7 +347,7 @@ def build_fulfillment(candidate_records=None):
         related_records = [x.strip() for x in (row.get("related_records") or "").split("|") if x.strip()]
         for related in related_records:
             if related not in governance_ids:
-                raise ValueError(f"{label}: related_records {related} 不是 candidates.csv 裡的「現任首長施政」紀錄")
+                raise ValueError(f"{label}: related_records {related} 不是 candidates.csv 裡 office_category 為「首長」的公職政績紀錄")
         evidence_url = row.get("evidence_source_url", "").strip()
         if evidence_url:
             valid_url(evidence_url, label)
