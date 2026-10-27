@@ -24,9 +24,6 @@ const normaliseApprovedCandidate=record=>({
   source_type:record.source_type||'審核上架',
   review_status:record.review_status||'人工審核',
 });
-// 先行上架、尚待人工複核的資料（資料方法：AI 初審，人工複核）。
-window.isPendingReview=record=>record?.review_status==='AI初審待複核';
-window.pendingReviewTag=record=>record?.pending_review||isPendingReview(record)?'<span class="tag tag-pending" title="由 AI 初審先行上架，每週由人工複核">AI 初審・待複核</span>':'';
 const sourceTitle=(title,url)=>{
   const clean=String(title||'').trim();
   if(clean&&!/^相關來源 \d+$/.test(clean)&&clean!=='來源')return clean;
@@ -43,7 +40,7 @@ const sourceEntries=record=>{
   });
   return entries;
 };
-const emptyCandidateGroup=record=>({...record,topics:[],topic_categories:[],topic_subcategories:[],policy_titles:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],pending_review:false,ids:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
+const emptyCandidateGroup=record=>({...record,topics:[],topic_categories:[],topic_subcategories:[],policy_titles:[],policy_arguments:[],concrete_proposals:[],related_statements:[],editor_notes:[],ids:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
 // 候選人個人資料與多人共同提出的政見分開保存，但在同一張候選人卡片呈現。
 window.groupCandidateRecords=(records,sharedPolicies=[])=>{
@@ -64,7 +61,6 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     group.concrete_proposals.push(...(record.concrete_proposals.length?record.concrete_proposals:[record.summary]));
     group.related_statements.push(...record.related_statements);
     group.editor_notes.push(...record.editor_notes);
-    if(isPendingReview(record))group.pending_review=true;
     if(record.id)group.ids.push(record.id);
     group.sources.push(...sourceEntries(record));
     if(record.published_date)group.published_dates.push(record.published_date);
@@ -178,6 +174,6 @@ window.loadCandidateDataset=async({districts=false}={})=>{
   window.renderCandidateCard=(x,{showCity=true,linkName=true,openShared=false}={})=>{
     const name=linkName?`<a class="candidate-name-link" href="${esc(candidateUrl(x))}">${esc(x.candidate)}</a>`:esc(x.candidate);
     const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
-    return `<article class="card candidate-card"><div class="card-meta">${pendingReviewTag(x)}${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtFullLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span>${(x.policy_titles||[]).length?`<p class="policy-titles">${x.policy_titles.map(t=>`<span>${esc(t)}</span>`).join('')}</p>`:''}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'來源未載日期')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+    return `<article class="card candidate-card"><div class="card-meta">${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtFullLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span>${(x.policy_titles||[]).length?`<p class="policy-titles">${x.policy_titles.map(t=>`<span>${esc(t)}</span>`).join('')}</p>`:''}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'尚未收錄可核實的政策論述。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${x.editor_notes.length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4>${bullets(x.editor_notes,'')}</div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'來源未載日期')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
 }
