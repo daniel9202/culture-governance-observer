@@ -1883,8 +1883,11 @@
       "candidate": "林國漳",
       "party": "民主進步黨",
       "publish_id": "",
-      "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "review_status": "人工審核",
+      "editor_notes": [
+        "五大綱領全收，各項以報導原句為準，刪去「林國漳提出的第一項政見」「第二項」「在……方面，林國漳提出」等記者敘述框架與句尾的目的說明，以「……」標出。",
+        "摘要取自報導末段林國漳本人說法；政策論述取自導言中「他表示」之後的轉述。"
+      ],
       "public_note": "",
       "policy_title": "文化立縣2.0",
       "topics": [
@@ -1894,7 +1897,12 @@
         "文化產業",
         "博物館",
         "民俗節慶",
-        "藝文節慶"
+        "藝文節慶",
+        "文化場館",
+        "傳統藝術",
+        "影視文化",
+        "文化參與",
+        "文化觀光"
       ],
       "topic_categories": [
         "地方文化與社區營造",
@@ -1903,54 +1911,59 @@
         "文化產業與文創",
         "博物館與地方文化館",
         "民俗節慶",
-        "藝文節慶"
+        "藝文節慶",
+        "文化場館",
+        "影視與流行音樂",
+        "文化平權與參與",
+        "文化觀光"
       ],
       "topic_subcategories": [],
-      "summary": "林國漳提出的第一項政見「文化即生活」。",
-      "policy_argument": "在「文化即治理」方面，制定「宜蘭文化30年政策白皮書」。",
+      "summary": "文化不能脫離生活，也不能與教育、產業及地方認同切割，因此提出從「文化立縣」走向「文化治縣」的主張。",
+      "policy_argument": "未來文化政策不應侷限於單一局處，而要從過去的「文化立縣」進一步走向「文化治縣」，透過跨局處整合，讓文化成為公共決策的共同語言，轉化為宜蘭未來發展的競爭力。",
       "concrete_proposals": [
-        "推動「文化場域活化計畫」。",
-        "啟動「文化根系扎根計畫」。",
-        "研議實施「一日文化假」。",
-        "制定「宜蘭文化30年政策白皮書」。",
-        "爭取主辦「台灣設計展」。"
+        "文化即生活：……推動「文化場域活化計畫」，透過夜間開放、志工導覽等方式，打破文化場館僅供展示的既有框架，讓文化資源深入全縣12鄉鎮市，融入民眾日常生活。",
+        "文化即教育：……啟動「文化根系扎根計畫」，推動歌仔戲入校及藝術人才培育體系，並以丸山遺址為核心，爭取設立東部考古研究中心……",
+        "文化即認同：……推動「節慶文化保存計畫」，盤點各鄉鎮市特色民俗及祭典，同時研議實施「一日文化假」，讓青年學子有機會實際參與地方祭典及文化活動……",
+        "文化即治理：……籌辦城市文化論壇、制定「宜蘭文化30年政策白皮書」，擴大文化政策的公民參與；同時規劃重整中興文創園區，打造兼具展演、創作及人才培育功能的複合式文化基地。",
+        "文化即產業：……爭取主辦「台灣設計展」，並運用宜蘭既有影展基礎，創辦「蘭陽國際底片影展暨電影節」，同時串聯全縣60餘座博物館家族……"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
+            "title": "葛瑪蘭新聞網｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
             "url": "https://www.kamalan-news.com/political/22/18859"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
+            "title": "葛瑪蘭新聞網｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
             "url": "https://www.kamalan-news.com/political/22/18859"
           }
         ],
         "related_statements": [
           {
-            "title": "林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
+            "title": "葛瑪蘭新聞網｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
             "url": "https://www.kamalan-news.com/political/22/18859"
           }
         ]
       },
       "published_date": "2026-08-28",
-      "source_title": "林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
+      "source_title": "葛瑪蘭新聞網｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
       "source_url": "https://www.kamalan-news.com/political/22/18859",
       "related_sources": [
         "https://2026openchang.tw/"
       ],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-10",
+      "source_type": "新聞／公開網頁",
+      "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-10｜依原文修正。"
+        "2026-10-10｜依原文修正。",
+        "2026-10-29｜依報導原文重寫五大綱領，合併同一報導的 candidate-auto-931da3c2baba（只收第二項「文化即教育」）並刪除該列。"
       ]
     },
     {
@@ -7440,66 +7453,6 @@
       "corrections": [
         "2026-10-29｜依使用者貼上的官網政見頁原文新增；收錄項目由使用者指定。"
       ]
-    },
-    {
-      "id": "candidate-auto-931da3c2baba",
-      "city": "宜蘭縣",
-      "office": "縣市長",
-      "candidate": "林國漳",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-931da3c2baba",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "public_note": "",
-      "policy_title": "文化立縣 2.0 五大綱領",
-      "topics": [
-        "文化資產",
-        "傳統藝術",
-        "文化教育"
-      ],
-      "topic_categories": [
-        "文化資產",
-        "文化教育"
-      ],
-      "topic_subcategories": [],
-      "summary": "第二項「文化即教育」，規劃啟動「文化根系扎根計畫」，推動歌仔戲入校及藝術人才培育體系，並以丸山遺址為核心，爭取設立東部考古研究中心，希望從教",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "第二項「文化即教育」，規劃啟動「文化根系扎根計畫」，推動歌仔戲入校及藝術人才培育體系，並以丸山遺址為核心，爭取設立東部考古研究中心，希望從教育扎根地方文化，培養下一代對家鄉歷史及文化的認識。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.kamalan-news.com｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
-            "url": "https://www.kamalan-news.com/political/22/18859"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.kamalan-news.com｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
-            "url": "https://www.kamalan-news.com/political/22/18859"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.kamalan-news.com｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
-            "url": "https://www.kamalan-news.com/political/22/18859"
-          }
-        ]
-      },
-      "published_date": "2026-08-28",
-      "source_title": "www.kamalan-news.com｜林國漳拋「文化立縣2.0」五大綱領～從文化立縣走向文化治縣",
-      "source_url": "https://www.kamalan-news.com/political/22/18859",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": []
     },
     {
       "id": "candidate-auto-e47fc0942b03",
