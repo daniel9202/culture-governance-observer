@@ -25,14 +25,17 @@ const normaliseApprovedCandidate=record=>({
   source_type:record.source_type||'審核上架',
   review_status:record.review_status||'人工審核',
 });
-const sourceTitle=(title,url)=>{
+const hasRealTitle=title=>{
   const clean=String(title||'').trim();
-  if(clean&&!/^相關來源 \d+$/.test(clean)&&clean!=='來源')return clean;
+  return Boolean(clean)&&!/^相關來源 \d+$/.test(clean)&&clean!=='來源';
+};
+const sourceTitle=(title,url)=>{
+  if(hasRealTitle(title))return String(title).trim();
   try{return `延伸來源（${new URL(url).hostname.replace(/^www\./,'')}）`;}catch{return '延伸來源';}
 };
 const sourceEntries=record=>{
   const entries=[];
-  const add=(title,url)=>{if(typeof url==='string'&&url.trim())entries.push({title:sourceTitle(title,url.trim()),url:url.trim()})};
+  const add=(title,url)=>{if(typeof url==='string'&&url.trim())entries.push({title:sourceTitle(title,url.trim()),url:url.trim(),hasTitle:hasRealTitle(title)})};
   add(record.source_title,record.source_url);
   Object.values(record.field_sources||{}).flat().forEach(source=>add(source?.title,source?.url));
   (record.related_sources||[]).forEach((source,index)=>{
@@ -40,6 +43,15 @@ const sourceEntries=record=>{
     else add(source?.title,source?.url);
   });
   return entries;
+};
+// 同一網址只留一條，維持第一次出現的位置；有真實標題的優先，不被後來的裸網址蓋掉。
+const uniqueSources=sources=>{
+  const byUrl=new Map;
+  sources.forEach(source=>{
+    const existing=byUrl.get(source.url);
+    if(!existing||(!existing.hasTitle&&source.hasTitle))byUrl.set(source.url,source);
+  });
+  return [...byUrl.values()];
 };
 const emptyCandidateGroup=record=>({...record,topics:[],topic_categories:[],topic_subcategories:[],policy_titles:[],policy_arguments:[],concrete_proposals:[],related_statements:[],public_notes:[],ids:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
@@ -87,7 +99,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
   });
   return [...groups.values()].map(group=>({...group,district:councilDistrict(group),
     topics:uniqueValues(group.topics),topic_categories:uniqueValues(group.topic_categories),topic_subcategories:uniqueValues(group.topic_subcategories),policy_titles:uniqueValues(group.policy_titles),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),ids:uniqueValues(group.ids),
-    sources:[...new Map(group.sources.map(source=>[source.url,source])).values()],published_dates:uniqueValues(group.published_dates).sort(),
+    sources:uniqueSources(group.sources),published_dates:uniqueValues(group.published_dates).sort(),
     shared_policies:[...new Map(group.shared_policies.map(policy=>[policy.id,policy])).values()],
     party_shared_policies:[...new Map(group.party_shared_policies.map(policy=>[policy.id,policy])).values()],
     regional_shared_policies:[...new Map(group.regional_shared_policies.map(policy=>[policy.id,policy])).values()],
