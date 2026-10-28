@@ -5958,62 +5958,65 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：文化調查保存方式、導覽或展示內容、執行經費、期程"
+        "未載明：文化政策執行經費、期程"
       ],
       "public_note": "",
       "policy_title": "",
       "topics": [
+        "藝文活動",
         "漁村文化",
         "地方文化",
         "文化觀光",
         "產業文化"
       ],
       "topic_categories": [
+        "文化平權與參與",
         "地方文化與社區營造",
         "文化觀光",
         "文化資產"
       ],
       "topic_subcategories": [],
-      "summary": "主張推廣南寮漁村及造船文化，並協助漁港觀光發展，讓在地漁業與造船記憶成為文化與地方發展的基礎。",
-      "policy_argument": "漁村與造船文化應結合漁港觀光發展，讓在地產業記憶轉化為可參與的文化與地方經濟資源。",
+      "summary": "振興舊城商圈，促進南寮升級。",
+      "policy_argument": "振興舊城商圈，促進南寮升級。",
       "concrete_proposals": [
-        "推廣南寮漁村及造船文化。",
-        "協助發展漁港觀光。"
+        "鼓勵藝文團體在地發展，以城市為舞台，創造舊城新魅力。",
+        "推廣南寮漁村及造船文化，協助發展漁港觀光。"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "林彥甫 2026候選人政見",
-            "url": "https://sites.google.com/npptw.org/yenfulin"
+            "title": "林彥甫｜新竹市議員｜北區",
+            "url": "https://newpowerparty.tw/vote2026/candidate-2603"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "林彥甫 新竹市議會個人政見",
-            "url": "https://www.hsinchu-cc.gov.tw/tc/councilor.aspx?c=24&mid=39"
+            "title": "林彥甫｜新竹市議員｜北區",
+            "url": "https://newpowerparty.tw/vote2026/candidate-2603"
           }
         ],
         "related_statements": [
           {
-            "title": "林彥甫 2026候選人政見",
-            "url": "https://sites.google.com/npptw.org/yenfulin"
+            "title": "林彥甫｜新竹市議員｜北區",
+            "url": "https://newpowerparty.tw/vote2026/candidate-2603"
           }
         ]
       },
       "published_date": "2026-10-02",
-      "source_title": "林彥甫 2026候選人政見",
-      "source_url": "https://sites.google.com/npptw.org/yenfulin",
+      "source_title": "林彥甫｜新竹市議員｜北區",
+      "source_url": "https://newpowerparty.tw/vote2026/candidate-2603",
       "related_sources": [],
-      "source_type": "候選人原文",
-      "last_verified": "2026-10-02",
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-10-27",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-02｜中選會名冊核對為新竹市第4選舉區時代力量候選人；候選人官方頁明列漁村與造船文化推廣及漁港觀光發展，完成人工審核。"
+        "2026-10-02｜中選會名冊核對為新竹市第4選舉區時代力量候選人；候選人官方頁明列漁村與造船文化推廣及漁港觀光發展，完成人工審核。",
+        "2026-10-27｜改以時代力量候選人頁為唯一來源，依頁面原文補入藝文團體在地發展政見。"
       ]
     },
     {
