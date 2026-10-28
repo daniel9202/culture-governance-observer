@@ -12,7 +12,7 @@
 
 - **主要工作機是 Danasus，其他電腦也可以直接 clone 工作；同步只透過 GitHub。** 不要用 OneDrive 或 Google Drive 同步 repo：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。手機一律用遠端連線。
 - **同一時間只在一台電腦工作。** 換電腦前，把兩端的工作都 commit 並 push；還沒完成、不能上線的推到備份分支（設計端 `origin/design`、資料端 `origin/data-wip`），不要推 `main`。到另一台開工先 `git fetch origin`，再 rebase 到 `origin/main` 或取回備份分支。
-- **只在 Danasus 做的事**：Codex 的排程自動化（Sheet 補資料）、建立 Apps Script 觸發器。`backups/`、`.claude/` 只留在 Danasus，不進 git，也不要複製到其他電腦。
+- **工作不限電腦**（2026-10-29 使用者取消原本「只在 Danasus 做」的限制）：排程自動化、Apps Script 觸發器、審核、寫入 CSV、push 都可以在任何一台電腦或 AI 雲端環境做，但要遵守「同一時間只在一台」與下方的來源標示。`backups/`、`.claude/` 不進 git，也不要複製到其他電腦。
 - **兩台都可以用 clasp 推審核台**，但 `clasp push` 會整份覆蓋 Google 上的程式，不會合併，所以：
   1. 推之前先 `git pull`，只從 `main`（或使用者指定、比 `main` 更新的分支）推。
   2. 審核台的修改一律先 commit 進 git 再推，不在 Google 編輯器直接改。
@@ -23,9 +23,8 @@
   7. 正式部署的做法：`clasp create-version "<說明>"` 建新版本，再把**既有的正式部署**改指向該版本（`clasp update-deployment <正式部署 ID> -V <版本號>`）。不新增部署，正式網址才不會變。出問題時把正式部署指回前一個版本號即可還原；舊版本不要刪。
 - **標示來源電腦**：每一筆變更都要看得出是哪台電腦做的。
   - Git commit：每台電腦在 `.git/hooks/commit-msg` 裝本機 hook，自動在訊息尾端加上 `Machine: <電腦名稱>`（取自 `%COMPUTERNAME%`）。hook 不進版本庫，換電腦或重新 clone 後要重裝。
-  - Google Sheet 的「處理者／裝置」欄：一律填 `<電腦名稱>-<AI>`，例如 `DANASUS-Codex`、`HPDAN-Claude`；不要再用 `本機-Codex` 這類看不出電腦的寫法。Codex 排程的提示詞也要照此填寫。
+  - Google Sheet 的「處理者／裝置」欄：一律填 `<電腦名稱>-<AI>`，例如 `DANASUS-Codex`、`HPDAN-Claude`；AI 雲端環境填 `CLOUD-<AI>`，例如 `CLOUD-Claude`。不要再用 `本機-Codex` 這類看不出電腦的寫法。排程的提示詞也要照此填寫。
   - Apps Script：`clasp create-version` 的說明以電腦名稱開頭，例如 `HPDAN｜審核台：人工備註篩選`；交接文件的部署紀錄也寫上電腦名稱。
-- **其他電腦（例：HPdan）可以做**：人工審核、把已核准資料寫入 CSV 並建置、經使用者確認後 push，以及依上述程序推送與部署審核台。
 - Danasus 上兩個工作端各用一個工作目錄，共用同一個 `.git`：
 
   | 工作端 | 目錄 | 分支 |
