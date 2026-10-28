@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-28",
+  "last_updated": "2026-10-29",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -16348,73 +16348,6 @@
       "published_date": "2026-09-03",
       "source_title": "more-news.tw｜黃敬平完成第4屆市議員登記　六大政見拚建設、拚交通、拚生活品質",
       "source_url": "https://more-news.tw/711120/",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-565cea381440",
-      "city": "宜蘭縣",
-      "office": "縣市長",
-      "candidate": "林國漳",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-565cea381440",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "public_note": "",
-      "policy_title": "",
-      "topics": [
-        "原住民族文化",
-        "文化保存",
-        "文化觀光",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "原住民族文化",
-        "文化資產",
-        "文化觀光",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [
-        "文化資產／保存"
-      ],
-      "summary": "國民黨宜蘭縣長參選人吳宗憲（左2）9日走訪大同鄉部落，參與村校聯合運動會與耆老交流，並表示未來將持續推動原鄉建設、觀光與文化保存，讓更多人願意回鄉發展。 || 大同鄉幅員遼闊，面臨交通、醫療、教育及產業發展等挑戰，未來若有機會承擔縣政，會與",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "國民黨宜蘭縣長參選人吳宗憲（左2）9日走訪大同鄉部落，參與村校聯合運動會與耆老交流，並表示未來將持續推動原鄉建設、觀光與文化保存，讓更多人願意回鄉發展。",
-        "大同鄉幅員遼闊，面臨交通、醫療、教育及產業發展等挑戰，未來若有機會承擔縣政，會與部落領袖合作，推動原鄉建設、觀光與文化保存，讓更多人願意回鄉發展。",
-        "主張持續落實「長照十年計畫3.0」，強化文化健康站功能，並推動55歲以上原住民族健保費全額補助，減輕家庭負擔，讓長輩能在熟悉的文化環境中安心生活。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.cna.com.tw｜吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.cna.com.tw｜吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.cna.com.tw｜吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-            "url": "https://www.cna.com.tw/news/aloc/202605100054.aspx"
-          }
-        ]
-      },
-      "published_date": "2026-05-10",
-      "source_title": "www.cna.com.tw｜吳宗憲、林國漳訪宜蘭大同鄉　提政見爭取原民支持",
-      "source_url": "https://www.cna.com.tw/news/aloc/202605100054.aspx",
       "related_sources": [],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
