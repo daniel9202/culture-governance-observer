@@ -2711,31 +2711,27 @@
       "office": "縣市議員",
       "candidate": "林筱薇",
       "party": "無黨籍",
-      "publish_id": "",
-      "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "publish_id": "candidate-tpe-councilor-lin-hsiao-wei-001",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "官網第 1 項「發展台北」的第四點；同項其他三點（升學、就業、創業）非文化政策，不收錄。",
+        "原文超過 80 字，刪去「結合產業推廣與國際拓展機構之模式，創造原住民族文化產業推廣，促進學術產業及產業交流」等子句，以「……」標出。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "發展台北：建立國際產業平台及文化產業化",
       "topics": [
         "原住民族文化",
-        "多元語言",
-        "文化教育",
-        "節慶與民俗文化"
+        "文化產業"
       ],
       "topic_categories": [
         "原住民族文化",
-        "語言與族群",
-        "文化教育",
-        "民俗節慶"
+        "文化產業與文創"
       ],
       "topic_subcategories": [],
-      "summary": "主張都市原住民族政策不應只停留在文化活動或節慶補助，而要形成涵蓋居住、就業、語言、文化學習、照顧與決策參與的支持制度。",
-      "policy_argument": "以制度性資源支持都市原住民族文化學習、人才發展與公共參與。",
+      "summary": "建立國際產業平台及文化產業化",
+      "policy_argument": "台北市的原住民族政策，不能只停在文化活動、節慶補助或個案救助。",
       "concrete_proposals": [
-        "建立都市原住民發展支持系統。",
-        "推動都市原住民族多元人才規劃。",
-        "提高文化學習歷程在特殊選才的採計比重。",
-        "提供文化語言、藝術、音樂、影像與設計等領域升學與就業支持。"
+        "串聯各項專業技術及不同產業，建立人才與企業合作平臺……將原住民族文化朝向產業發展，掌握原住民族文化詮釋權與收益分配權，建立能夠長期經營的文化事業。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -2762,8 +2758,8 @@
       "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
       "source_url": "https://www.imvlin.com/whatvdo",
       "related_sources": [],
-      "source_type": "候選人原文",
-      "last_verified": "2026-10-01",
+      "source_type": "候選人官方網站",
+      "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
@@ -2771,7 +2767,8 @@
       "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
-        "2026-10-01｜政黨由「小民參政歐巴桑聯盟」更正為「無黨籍」：依中選會115年地方公職人員選舉候選人登記名冊，臺北市第7選舉區登記姓名「林筱薇IcyangTamana」、推薦之政黨為「無」。擔任政黨職務（如發言人）不等於接受政黨推薦參選，政黨欄位以中選會推薦紀錄為準。"
+        "2026-10-01｜政黨由「小民參政歐巴桑聯盟」更正為「無黨籍」：依中選會115年地方公職人員選舉候選人登記名冊，臺北市第7選舉區登記姓名「林筱薇IcyangTamana」、推薦之政黨為「無」。擔任政黨職務（如發言人）不等於接受政黨推薦參選，政黨欄位以中選會推薦紀錄為準。",
+        "2026-10-29｜依使用者貼上的官網政見原文重寫；本站只收文化相關部分（第 1 項之四、第 4 項全部、第 5 項之三），其餘居住、就業、平權、照護不收錄。"
       ]
     },
     {
@@ -7238,14 +7235,13 @@
       "policy_title": "宜蘭客家一七GO",
       "topics": [
         "客家文化",
-        "族語傳承",
+        "客語傳承",
         "文化觀光",
         "文化資產",
-        "飲食文化"
+        "產業文化"
       ],
       "topic_categories": [
         "客家文化",
-        "原住民族文化",
         "文化觀光",
         "文化資產"
       ],
@@ -11021,56 +11017,136 @@
       "party": "無黨籍",
       "publish_id": "candidate-auto-deed7d5096d7",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "官網第 4 項「文化台北」四點全收。",
+        "第一點刪去「創造文化相關活動」；第三點原為一長句，超過 80 字，分在「臺北城市族語教材庫」之後斷開，前後以「……」標出。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "文化台北：讓族語文化回到城市日常",
       "topics": [
         "原住民族文化",
-        "藝文節慶"
+        "族語傳承",
+        "文化教育",
+        "文化空間"
       ],
       "topic_categories": [
         "原住民族文化",
-        "藝文節慶"
+        "文化教育",
+        "文化空間與城市再生"
       ],
       "topic_subcategories": [],
-      "summary": "原住民族政策不應只停在文化活動、節慶補助或個案救助。",
-      "policy_argument": "",
+      "summary": "文化台北：讓族語文化回到城市日常",
+      "policy_argument": "台北市的原住民族政策，不能只停在文化活動、節慶補助或個案救助。",
       "concrete_proposals": [
-        "台北市的原住民族政策，不能只停在文化活動、節慶補助或個案救助。"
+        "盤點市有空間設置常態性「都市原住民文化聚會所」……並推動「母語行動圖書館」，將族語繪本、影音教材、教具及數位學習設備帶進校園、社區、社會住宅、親子館及原住民族友善店家。",
+        "建立全市族語師資與代課人才庫，整合族語老師、教學支援、語言推廣人員及具教學能力的族語人才，降低停課情況。",
+        "每學年公開各校選習人數及實際完成課程人數，檢驗學生的族語受教權是否真正受到保障。",
+        "成立「族語支持顧問團」，定期辦理族語教師交流與共同備課，提升族語教學品質，並建立「臺北城市族語教材庫」……",
+        "……監督市府每年檢視族語課程的開課情形、學員參與及教師需求，了解課程是否符合族人的需要，讓族語教學能持續改善。",
+        "推動「臺北市族語家庭陪伴計畫」，鼓勵協助親子共學或共同製作教材，並結合中央既有族語平臺、語料庫，支持科技團隊開發族語語音辨識數位創作工具。",
+        "推動「全民原教」，提供第一線服務人員接受基礎原住民族文化教育，依照行政工作單位職責提供業務相關進階訓練。",
+        "支持都市原住民族青年與語言工作者參與國際文化復振組織交流，讓臺北成為國際原住民族語言復振的重要交流城市。"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "www.imvlin.com｜林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
             "url": "https://www.imvlin.com/whatvdo"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "www.imvlin.com｜林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
             "url": "https://www.imvlin.com/whatvdo"
           }
         ],
         "related_statements": [
           {
-            "title": "www.imvlin.com｜林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
             "url": "https://www.imvlin.com/whatvdo"
           }
         ]
       },
       "published_date": "2026-09-08",
-      "source_title": "www.imvlin.com｜林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+      "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
       "source_url": "https://www.imvlin.com/whatvdo",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
+      "source_type": "候選人官方網站",
+      "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-29｜依使用者貼上的官網政見原文重寫；本站只收文化相關部分（第 1 項之四、第 4 項全部、第 5 項之三），其餘居住、就業、平權、照護不收錄。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-councilor-lin-hsiao-wei-002",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "林筱薇",
+      "party": "無黨籍",
+      "publish_id": "candidate-tpe-councilor-lin-hsiao-wei-002",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "官網第 5 項「共生台北」的第三點；同項其他兩點（青銀共創空間、長者傳承）未收錄。"
+      ],
+      "public_note": "",
+      "policy_title": "共生台北：建立文化使用與授權諮詢制度",
+      "topics": [
+        "原住民族文化",
+        "文化資產",
+        "文化產業"
+      ],
+      "topic_categories": [
+        "原住民族文化",
+        "文化資產",
+        "文化產業與文創"
+      ],
+      "topic_subcategories": [],
+      "summary": "建立文化使用與授權諮詢制度",
+      "policy_argument": "台北市的原住民族政策，不能只停在文化活動、節慶補助或個案救助。",
+      "concrete_proposals": [
+        "設置「原住民族文化使用與授權諮詢窗口」，提供文化來源確認、傳統智慧創作權查詢、權利人或部落聯繫、法律諮詢、授權契約範本、合理報酬及收益分配建議。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "url": "https://www.imvlin.com/whatvdo"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "url": "https://www.imvlin.com/whatvdo"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+            "url": "https://www.imvlin.com/whatvdo"
+          }
+        ]
+      },
+      "published_date": "2026-09-08",
+      "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
+      "source_url": "https://www.imvlin.com/whatvdo",
+      "related_sources": [],
+      "source_type": "候選人官方網站",
+      "last_verified": "2026-10-29",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-29｜依使用者貼上的官網政見原文新增。"
+      ]
     },
     {
       "id": "candidate-auto-deb676a53c50",
