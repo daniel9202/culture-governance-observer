@@ -61,7 +61,8 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
     if(record.policy_argument)group.policy_arguments.push(record.policy_argument);
     group.concrete_proposals.push(...(record.concrete_proposals.length?record.concrete_proposals:[record.summary]));
     group.related_statements.push(...record.related_statements);
-    // 出處說明逐筆保留並帶上該筆標題，不去重合併。
+    // 出處說明逐筆保留並帶上該筆標題，不去重合併；標題為空時只印備註句。
+    if(record.public_note)group.public_notes.push({title:record.policy_title||'',note:record.public_note});
     if(record.id)group.ids.push(record.id);
     group.sources.push(...sourceEntries(record));
     if(record.published_date)group.published_dates.push(record.published_date);
