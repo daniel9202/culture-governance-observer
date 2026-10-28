@@ -17554,6 +17554,205 @@
       "office_category": "",
       "current_office": "",
       "corrections": []
+    },
+    {
+      "id": "candidate-auto-7ae98ee42cfd",
+      "city": "基隆市",
+      "office": "縣市長",
+      "candidate": "童子瑋",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-7ae98ee42cfd",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "引自官網「城市藍圖」的七大區域發展定位，其中涉及文化者為中正區、中山區兩條，其餘區域定位未收錄。",
+        "來源頁面沒有發布日期。"
+      ],
+      "policy_title": "城市藍圖：七大區域發展定位",
+      "topics": [
+        "文化觀光",
+        "影視文化",
+        "聚落保存",
+        "地方文化"
+      ],
+      "topic_categories": [
+        "文化觀光",
+        "影視與流行音樂",
+        "文化資產",
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [
+        "文化資產／保存"
+      ],
+      "summary": "中正區：結合正濱漁港與歷史聚落，推動影視文化觀光；中山區：結合海洋生態館與觀光廊帶，點亮西岸新國門。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "中正區：結合正濱漁港與歷史聚落，推動影視文化觀光",
+        "中山區：結合海洋生態館與觀光廊帶，點亮西岸新國門"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "城市藍圖 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/policy/城市藍圖"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "城市藍圖 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/policy/城市藍圖"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "城市藍圖 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/policy/城市藍圖"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "城市藍圖 - t-ziwei.com",
+      "source_url": "https://t-ziwei.com/archives/policy/城市藍圖",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-28",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-2539f8700f78",
+      "city": "基隆市",
+      "office": "縣市長",
+      "candidate": "童子瑋",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-2539f8700f78",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "三個方向照原文收錄；第三個方向（住宿供給）本身不是文化設施，因屬同一政見頁一併保留。"
+      ],
+      "policy_title": "讓夜晚，成為基隆的觀光引擎",
+      "topics": [
+        "文化觀光",
+        "展演空間",
+        "文化資產",
+        "空間活化",
+        "音樂"
+      ],
+      "topic_categories": [
+        "文化觀光",
+        "文化場館",
+        "文化資產",
+        "文化空間與城市再生",
+        "表演藝術"
+      ],
+      "topic_subcategories": [],
+      "summary": "從既有空間重新活化、讓城市的營業時間延長、讓觀光從停留變成過夜三個方向，推動古蹟夜間開放、港邊酒吧區、Live House 和夜間展演空間，以及崁仔頂深夜導覽常態化。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "既有空間重新活化：古蹟夜間開放、港邊酒吧區、Live House 和夜間展演空間",
+        "讓城市的營業時間延長：港口夜景、崁仔頂深夜導覽常態化",
+        "讓觀光從停留變成過夜：虎仔山青年旅館轉型、港區夜宿遊艇、精品飯店"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "讓夜晚，成為基隆的觀光引擎 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/2547"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "讓夜晚，成為基隆的觀光引擎 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/2547"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "讓夜晚，成為基隆的觀光引擎 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/2547"
+          }
+        ]
+      },
+      "published_date": "2026-06-01",
+      "source_title": "讓夜晚，成為基隆的觀光引擎 - t-ziwei.com",
+      "source_url": "https://t-ziwei.com/archives/2547",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-28",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-1d484c6c345a",
+      "city": "基隆市",
+      "office": "縣市長",
+      "candidate": "童子瑋",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-1d484c6c345a",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "引自官網教育政策頁，該頁教育政策中僅此一項涉及文化。",
+        "本站僅取得該項目標題，項目內文未取得，待補。",
+        "來源頁面沒有發布日期。"
+      ],
+      "policy_title": "E｜Education｜厚植「基隆學」，讓孩子認識家鄉文化",
+      "topics": [
+        "文化教育",
+        "文化扎根",
+        "地方文史"
+      ],
+      "topic_categories": [
+        "文化教育",
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
+      "summary": "厚植「基隆學」，讓孩子認識家鄉文化",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "厚植「基隆學」，讓孩子認識家鄉文化"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "E｜Education｜讓基隆的孩子走向世界 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/2825"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "E｜Education｜讓基隆的孩子走向世界 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/2825"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "E｜Education｜讓基隆的孩子走向世界 - t-ziwei.com",
+            "url": "https://t-ziwei.com/archives/2825"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "E｜Education｜讓基隆的孩子走向世界 - t-ziwei.com",
+      "source_url": "https://t-ziwei.com/archives/2825",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-28",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
     }
   ]
 }
