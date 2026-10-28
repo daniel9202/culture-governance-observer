@@ -214,6 +214,15 @@ def build_candidates():
         proposals = [x.strip() for x in (row.get("concrete_proposals") or "").split("||") if x.strip()]
         statements = [x.strip() for x in (row.get("related_statements") or "").split("||") if x.strip()]
         editor_notes = [x.strip() for x in (row.get("editor_notes") or "").split("||") if x.strip()]
+        # public_note 是前台唯一會顯示的本站說明，只用來交代出處：來源頁或官網分類
+        # 本身看不出是文化政策時（例如從「教育政策」頁挑出的基隆學），告訴讀者這筆
+        # 從哪裡來。本站的刪節、剔除框架詞、收錄範圍與篩選判斷一律留在 editor_notes，
+        # 不對外呈現——只收錄文化相關內容是本站的前提，不需要逐筆註記。
+        public_note = (row.get("public_note") or "").strip()
+        if "||" in public_note:
+            raise ValueError(f"{label}: public_note 只能一句，不要用 || 分段")
+        if public_note and public_note in editor_notes:
+            raise ValueError(f"{label}: public_note 不要與 editor_notes 重複同一句")
         sources = {
             "policy_argument": field_sources(row.get("policy_argument_sources"), row["source_title"], row["source_url"], label),
             "concrete_proposals": field_sources(row.get("concrete_proposal_sources"), row["source_title"], row["source_url"], label),
@@ -222,7 +231,7 @@ def build_candidates():
         records.append({
             "id": row["id"], "city": row["city"], "office": row["office"], "candidate": row["candidate"], "party": row["party"],
             "publish_id": publish_id,
-            "review_status": review_status, "editor_notes": editor_notes,
+            "review_status": review_status, "editor_notes": editor_notes, "public_note": public_note,
             "policy_title": row.get("policy_title") or "",
             "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
             "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
