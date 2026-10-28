@@ -18168,6 +18168,221 @@
       "office_category": "",
       "current_office": "",
       "corrections": []
+    },
+    {
+      "id": "candidate-tpe-councilor-liu-pin-hsin-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "劉品妡",
+      "party": "民主進步黨",
+      "publish_id": "candidate-tpe-councilor-liu-pin-hsin-001",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期，published_date 留空",
+        "系列政策第一篇，三項全收；第四點為第三項「臺北文化點數」的說明段。"
+      ],
+      "public_note": "",
+      "policy_title": "臺北藝術月、藝術巴士與臺北文化點數",
+      "topics": [
+        "藝文節慶",
+        "文化觀光",
+        "文化近用",
+        "文化參與",
+        "兒童藝文"
+      ],
+      "topic_categories": [
+        "藝文節慶",
+        "文化觀光",
+        "文化平權與參與",
+        "文化教育"
+      ],
+      "topic_subcategories": [],
+      "summary": "把臺北的秋天，打造成「臺北藝術月」！",
+      "policy_argument": "讓文化支持不只是一次性的消費補助，而是培養不同世代長期參與藝文的入口。",
+      "concrete_proposals": [
+        "打造「臺北藝術月」：整合秋季展演節目，建立共同品牌與活動日曆，跨局處結合觀光，串連全市各區在地場館與活動，放大文化能量。",
+        "擴大「藝術巴士」接駁：以專車串連美術館、劇場與獨立展演空間，搭配乘車折抵優惠，結合交通與參與文化活動。",
+        "推動「臺北文化點數」，擴大不同世代的文化參與",
+        "針對兒童，鼓勵從小接觸閱讀、表演、展覽與文化體驗；針對高齡者，則透過文化點數結合社區活動、場館資源與共伴參與機制，鼓勵市民走出家門、持續參與城市文化生活。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "劉品妡 Instagram｜妡．文化台北政策 #01｜把臺北的秋天，打造成「臺北藝術月」！",
+            "url": "https://www.instagram.com/p/DevMn2kTOoe/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "劉品妡 Instagram｜妡．文化台北政策 #01｜把臺北的秋天，打造成「臺北藝術月」！",
+            "url": "https://www.instagram.com/p/DevMn2kTOoe/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "劉品妡 Instagram｜妡．文化台北政策 #01｜把臺北的秋天，打造成「臺北藝術月」！",
+            "url": "https://www.instagram.com/p/DevMn2kTOoe/"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "劉品妡 Instagram｜妡．文化台北政策 #01｜把臺北的秋天，打造成「臺北藝術月」！",
+      "source_url": "https://www.instagram.com/p/DevMn2kTOoe/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-29",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊（臺北市第6選舉區）",
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-29｜依使用者貼上的候選人 Instagram 貼文原文新增。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-councilor-liu-pin-hsin-002",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "劉品妡",
+      "party": "民主進步黨",
+      "publish_id": "candidate-tpe-councilor-liu-pin-hsin-002",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期，published_date 留空",
+        "系列政策第二篇；貼文寫「提出三大方向」，實際列出 01 至 04 共四項，依原文四項全收。"
+      ],
+      "public_note": "",
+      "policy_title": "藝術不只在場館：深耕大安、文山在地資源",
+      "topics": [
+        "空間活化",
+        "展演空間",
+        "藝文節慶",
+        "社區藝文",
+        "兒童藝文",
+        "文化場館"
+      ],
+      "topic_categories": [
+        "文化空間與城市再生",
+        "文化場館",
+        "藝文節慶",
+        "地方文化與社區營造",
+        "文化教育"
+      ],
+      "topic_subcategories": [],
+      "summary": "藝術不只在場館：深耕大安、文山在地資源",
+      "policy_argument": "辦活動很棒，更要能壯大在地文化生命力，帶動地方共榮！",
+      "concrete_proposals": [
+        "活化閒置公有空間｜打造多功能藝文據點：盤點公有閒置空間，彈性轉型為小劇場、展覽、排練與工作坊，並攜手在地大學合作，給創作者與居民更多就近參與的選擇。",
+        "結合自然與老街｜開辦「文山山城藝文季」：以文山的茶山、溪畔與老街為舞台，融合社區劇場、音樂、戶外展覽與茶山走讀；採日間活動為主，兼顧在地安寧與觀光亮點。",
+        "串連在地店家｜建立「大安藝術街區」特約店據點：支持在地獨立書店、咖啡館與老屋舉辦講座與微型展覽，讓整個街區自然融入藝術月的版圖。",
+        "扎根社區親子教育｜打造「兒童藝術基地」：善用既有圖書館分館與文山在地活動場館，開設固定的親子藝文活動，長期爭取市立兒童美術館。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "劉品妡 Instagram｜妡．文化台北政策 #02｜藝術不只在場館：深耕大安、文山在地資源",
+            "url": "https://www.instagram.com/p/De8EBqbSRrU/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "劉品妡 Instagram｜妡．文化台北政策 #02｜藝術不只在場館：深耕大安、文山在地資源",
+            "url": "https://www.instagram.com/p/De8EBqbSRrU/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "劉品妡 Instagram｜妡．文化台北政策 #02｜藝術不只在場館：深耕大安、文山在地資源",
+            "url": "https://www.instagram.com/p/De8EBqbSRrU/"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "劉品妡 Instagram｜妡．文化台北政策 #02｜藝術不只在場館：深耕大安、文山在地資源",
+      "source_url": "https://www.instagram.com/p/De8EBqbSRrU/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-29",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊（臺北市第6選舉區）",
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-29｜依使用者貼上的候選人 Instagram 貼文原文新增。"
+      ]
+    },
+    {
+      "id": "candidate-tpe-councilor-liu-pin-hsin-003",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "劉品妡",
+      "party": "民主進步黨",
+      "publish_id": "candidate-tpe-councilor-liu-pin-hsin-003",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期，published_date 留空",
+        "貼文為公園政策五個面向，本站只收第 05 項「公共藝術與文化參與」；自然遊戲地景、15 分鐘社區遊戲網絡、兒童參與式設計、循環材料管理屬公園設計，不收錄。",
+        "貼文無標題，source_title 的「《PLAY!》與臺北公園政策五個面向」為本站依內容所擬。"
+      ],
+      "public_note": "",
+      "policy_title": "藝術共玩公園計畫",
+      "topics": [
+        "公共藝術",
+        "兒童藝文",
+        "文化參與",
+        "社區藝文"
+      ],
+      "topic_categories": [
+        "視覺藝術",
+        "文化教育",
+        "文化平權與參與",
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
+      "summary": "孩子第一次接觸美學、空間與自然的場所，往往不是美術館，而是家門口的這座小公園。",
+      "policy_argument": "文化就活在孩子每天奔跑的草地上、生活呼吸的街角中。",
+      "concrete_proposals": [
+        "從遊樂設備，延伸為公共藝術與文化參與：推動「藝術共玩公園計畫」。邀請在地藝術家、地景設計師與兒童教育工作者共同規劃，讓公園成為孩子每天走進的生活藝術空間，讓文化自然走入社區日常。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "劉品妡 Instagram｜《PLAY!》與臺北公園政策五個面向",
+            "url": "https://www.instagram.com/p/De04qCATIKV/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "劉品妡 Instagram｜《PLAY!》與臺北公園政策五個面向",
+            "url": "https://www.instagram.com/p/De04qCATIKV/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "劉品妡 Instagram｜《PLAY!》與臺北公園政策五個面向",
+            "url": "https://www.instagram.com/p/De04qCATIKV/"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "劉品妡 Instagram｜《PLAY!》與臺北公園政策五個面向",
+      "source_url": "https://www.instagram.com/p/De04qCATIKV/",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-10-29",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊（臺北市第6選舉區）",
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-29｜依使用者貼上的候選人 Instagram 貼文原文新增。"
+      ]
     }
   ]
 }
