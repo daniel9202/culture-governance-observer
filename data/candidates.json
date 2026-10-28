@@ -1579,8 +1579,10 @@
       "party": "民主進步黨",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
+      "editor_notes": [
+        "同一則報導在鏡報與三立各有一個網址，原本裂成兩筆，已合併，另一網址列入 related_sources。"
+      ],
+      "policy_title": "文化資產要有路徑、機制與後續投入",
       "topics": [
         "文化資產",
         "地方文史",
@@ -1621,7 +1623,9 @@
       "published_date": "2026-08-03",
       "source_title": "議員：台北需要沈伯洋把在地故事帶向世界",
       "source_url": "https://www.mirrormedia.mg/external/setn_1883065",
-      "related_sources": [],
+      "related_sources": [
+        "https://www.setn.com/news/1883065"
+      ],
       "source_type": "新聞報導",
       "last_verified": "2026-10-10",
       "proposer_role": "候選人",
@@ -1630,7 +1634,7 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "依原文修正（2026-10-10）"
+        "2026-10-28 合併同一則報導的兩個網址"
       ]
     },
     {
@@ -3863,7 +3867,8 @@
       "editor_notes": [
         "引自官網政策專區該頁第 04 節「政策內容」，政策摘要段落列為政策論述。",
         "第 2、3、4 項超過 80 字未刪減：該三項的具體節點名稱（剝皮寮、霞海城隍廟、凱達格蘭文化館等）是政見的實質內容，刪減會失去可查核性，比照「含預算數字或期程的部分不刪」處理。",
-        "該頁另有政策背景、目標、預期效益、推動藍圖與願景五節，屬論述與說明，不列為具體主張。"
+        "該頁另有政策背景、目標、預期效益、推動藍圖與願景五節，屬論述與說明，不列為具體主張。",
+        "第 9、10 項補自自由時報報導，為官網頁沒有的經費規模與執行策略；該報導其餘內容與官網重複，不重列。"
       ],
       "policy_title": "台北文化徑×山林徑",
       "topics": [
@@ -3894,7 +3899,9 @@
         "三大登山觀光中心：在北劍潭、東象山、南貓空建立整合服務據點，分別串聯士林夜市與故宮、信義商圈與台北101、木柵茶園與動物園。",
         "三座中心將提供登山杖、雨具、頭燈、輕量背包等裝備租借，以及置物櫃、更衣室、洗鞋區等基本服務，並導入中英日韓四語導覽、即時步道狀態與生態季節導覽預約。",
         "從捷運站到登山口補上「最後一哩路」，增開接駁服務，並重新檢視步道分級與安全資訊，讓長者、行動不便者及不開車的市民，也能更便利地親近山林。",
-        "文化徑與山林徑將透過統一的步道標示、數位導覽與交通服務相互串聯，讓一趟旅程可以從城市街區一路走進山林。"
+        "文化徑與山林徑將透過統一的步道標示、數位導覽與交通服務相互串聯，讓一趟旅程可以從城市街區一路走進山林。",
+        "規劃投入五千萬元，在象山、劍潭、貓空登山口設置登山觀光中心。",
+        "五大執行策略涵蓋推動路徑品牌化、導入數位治理、提升場域易達性、深化在地參與、建立跨局處常態推動平台，並整合「首都二．〇」概念。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -3921,7 +3928,8 @@
       "source_title": "台北文化徑×山林徑 — 沈伯洋台北市長競選官方網站",
       "source_url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91",
       "related_sources": [
-        "https://news.pts.org.tw/article/826016"
+        "https://news.pts.org.tw/article/826016",
+        "https://news.ltn.com.tw/news/politics/paper/1769937"
       ],
       "source_type": "候選人原文",
       "last_verified": "2026-10-10",
@@ -3931,7 +3939,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-28 依官網原文由 3 項擴充為 8 項"
+        "2026-10-28 依官網原文由 3 項擴充為 8 項",
+        "2026-10-28 併入自由時報報導獨有的五千萬元經費與五大執行策略"
       ]
     },
     {
@@ -8419,87 +8428,6 @@
       "source_title": "匯流新聞網｜鄭朝方步行登記參選新竹縣長 用竹北成績直攻縣政2 大痛點 - 匯流新聞網",
       "source_url": "https://cnews.com.tw/247260902a09/",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-733f7b1b9d9e",
-      "city": "臺北市",
-      "office": "縣市長",
-      "candidate": "沈伯洋",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-733f7b1b9d9e",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "同一政見有 3 則來源，內容合併後以",
-        "分項，重複者不重列"
-      ],
-      "policy_title": "首都文化徑 × 山林徑",
-      "topics": [
-        "客家文化",
-        "原住民族文化",
-        "文化資產",
-        "眷村文化",
-        "戰爭記憶",
-        "文化觀光"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "原住民族文化",
-        "文化資產",
-        "文化觀光"
-      ],
-      "topic_subcategories": [],
-      "summary": "……將布局「三大登山觀光中心、四大主題文化路徑、五大策略重塑城市連結」，規劃投入五千萬元，在象山、劍潭、貓空登山口設置登山觀光中心，提供裝備",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "……將布局「三大登山觀光中心、四大主題文化路徑、五大策略重塑城市連結」，規劃投入五千萬元，在象山、劍潭、貓空登山口設置登山觀光中心，提供裝備租借，並提出產業文化遺跡、城市歷史記憶等主題路徑，串聯城市文化網絡，透過路徑品牌化、導入數位治理，打造亞洲第一觀光登山城市。",
-        "將在象山、劍潭、貓空等關鍵登山口，設三座登山觀光中心，提供登山杖等裝備租借、置物更衣、刷鞋槽、中英日韓語導覽、即時路況以及生態預約等服務，重新檢視步道分級標準、建立整合式數位導覽與安全應急平台，佈建廁所、飲水、休息點、照明、指標等資源，改善熱門點位小巴班次不足。",
-        "四大主題文化路徑為「產業文化遺跡」，走入文山茶園、南港茶廠及大稻埕老茶行，見證茶葉、煤礦與糖業發展軌跡；「城市歷史記憶」，涵蓋艋舺、大稻埕、城內及北投，保存文化資產及城區蛻變脈絡；「多元族群敘事」，梳理客家開墾、原住民族遷徙、眷村及國宅發展等不同歷史脈絡，呈現族群遷徙與共生歷程；「人權與民主記憶」，涉及二二八及白色恐怖相關紀念場所，銘記台灣爭取自由人權歷程。",
-        "五大執行策略涵蓋推動路徑品牌化、導入數位治理、提升場域易達性、深化在地參與、建立跨局處常態推動平台，結合先前推出每月六百點的「親子同行卡」政策，帶動路徑沿線商圈和市場，整合早先提過的「首都二．〇」概念、都市大腦「台北研究院」等政策願景，打造文化生態系。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "自由時報｜沈伯洋提文化、山林徑政策 打造亞洲第一登山城市 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/paper/1769937"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "自由時報｜沈伯洋提文化、山林徑政策 打造亞洲第一登山城市 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/paper/1769937"
-          },
-          {
-            "title": "puma.taipei｜台北文化徑×山林徑 - puma.taipei",
-            "url": "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91"
-          },
-          {
-            "title": "三立新聞｜推首都文化徑政策！沈伯洋揪網紅走讀劍潭山 - 三立新聞",
-            "url": "https://live.setn.com/Live/3892/25298"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "自由時報｜沈伯洋提文化、山林徑政策 打造亞洲第一登山城市 - 自由時報",
-            "url": "https://news.ltn.com.tw/news/politics/paper/1769937"
-          }
-        ]
-      },
-      "published_date": "2026-09-08",
-      "source_title": "自由時報｜沈伯洋提文化、山林徑政策 打造亞洲第一登山城市 - 自由時報",
-      "source_url": "https://news.ltn.com.tw/news/politics/paper/1769937",
-      "related_sources": [
-        "https://puma.taipei/policies/%E5%8F%B0%E5%8C%97%E6%96%87%E5%8C%96%E5%BE%91%C3%97%E5%B1%B1%E6%9E%97%E5%BE%91",
-        "https://live.setn.com/Live/3892/25298"
-      ],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
@@ -17522,64 +17450,6 @@
       "published_date": "2026-10-13",
       "source_title": "蕃新聞｜大嘉義整合平台簽署合作備忘錄 - 蕃新聞",
       "source_url": "https://n.yam.com/Article/20261013685003",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": []
-    },
-    {
-      "id": "candidate-auto-df427d13a65a",
-      "city": "臺北市",
-      "office": "縣市長",
-      "candidate": "沈伯洋",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-df427d13a65a",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "policy_title": "",
-      "topics": [
-        "文化資產",
-        "地方文化"
-      ],
-      "topic_categories": [
-        "文化資產",
-        "地方文化與社區營造"
-      ],
-      "topic_subcategories": [],
-      "summary": "文化資產不能只停留在緬懷過去，要有路徑、機制和後續投入，讓地方文史工作者累積的故事被看見——像台北記憶倉庫，其實就能串聯西門町、北門……",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "文化資產不能只停留在緬懷過去，要有路徑、機制和後續投入，讓地方文史工作者累積的故事被看見——像台北記憶倉庫，其實就能串聯西門町、北門……"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "三立新聞｜聽沈伯洋談文化政策　許淑華：台北需要他把這些在地故事帶向世界 - 三立新聞",
-            "url": "https://www.setn.com/news/1883065"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "三立新聞｜聽沈伯洋談文化政策　許淑華：台北需要他把這些在地故事帶向世界 - 三立新聞",
-            "url": "https://www.setn.com/news/1883065"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "三立新聞｜聽沈伯洋談文化政策　許淑華：台北需要他把這些在地故事帶向世界 - 三立新聞",
-            "url": "https://www.setn.com/news/1883065"
-          }
-        ]
-      },
-      "published_date": "2026-08-03",
-      "source_title": "三立新聞｜聽沈伯洋談文化政策　許淑華：台北需要他把這些在地故事帶向世界 - 三立新聞",
-      "source_url": "https://www.setn.com/news/1883065",
       "related_sources": [],
       "source_type": "新聞／公開網頁",
       "last_verified": "2026-10-26",
