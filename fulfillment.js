@@ -67,7 +67,7 @@ const councilCard=record=>`<article class="card pledge-card" id="${govAnchor(rec
   <div class="card-meta">${['現任議員','推定現任議員'].includes(record.proposer_role)?`<span class="tag tag-status">${escapeHtml(record.proposer_role)}</span>`:''}${record.source_type?`<span class="tag tag-source">${escapeHtml(record.source_type)}</span>`:''}${topicTagList(record).map(topic=>`<span class="tag">${escapeHtml(topic)}</span>`).join('')}</div>
   <p class="summary">${escapeHtml(record.summary)}</p>
   ${(record.concrete_proposals||[]).length?`<div class="policy-layer policy-actions"><h4>具體主張</h4><ul>${record.concrete_proposals.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
-  ${(record.editor_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${record.editor_notes.map(item=>`<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`:''}
+  ${String(record.public_note||'').trim()?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><p>${escapeHtml(record.public_note.trim())}</p></div>`:''}
   ${record.role_evidence?`<p class="role-evidence">判定依據：${escapeHtml(record.role_evidence)}</p>`:''}
   <div class="source-row"><a href="${escapeHtml(safeUrl(record.source_url))}" target="_blank" rel="noopener">${escapeHtml(record.source_title||'原始來源')} ↗</a><span class="verification">查核 ${escapeHtml(record.last_verified)} · ${reportLink(record.id,`${record.city} ${record.candidate}（現任紀錄）`)}</span></div>
 </article>`;
