@@ -12591,7 +12591,10 @@
       "party": "無黨籍",
       "publish_id": "candidate-auto-31bdd006bbe5",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "使用者 2026-10-29 確認官網只有這一項文化政見。",
+        "官網段落多在敘述過去十年向文化局爭取、已完成表演者申請網站的經過，未列出「示範場域」的具體做法；原文整段保留在政策論述。"
+      ],
       "public_note": "",
       "policy_title": "臺南街頭藝術文化示範場域",
       "topics": [
@@ -12605,45 +12608,47 @@
         "文化產業與文創"
       ],
       "topic_subcategories": [],
-      "summary": "葉人文主張建立台南街頭藝術文化示範場域，統一管理展演場地並保障表演者安全。",
+      "summary": "臺南街頭藝術文化示範場域",
       "policy_argument": "過去表演者在夜市被惡意攻擊，我們跟臺南市政府文化局爭取了十年，要求政府統一管理展演場地，最終才完成表演者申請網站，並保障表演者的安全為第一優先。表演者是臺南市重要的藝術人才和文化資產，再給我們一個十年，我們讓臺南成為國內外令人欽羨的藝術文化之都。",
       "concrete_proposals": [
-        "要求政府統一管理展演場地，最終才完成表演者申請網站，並保障表演者的安全為第一優先。",
+        "臺南街頭藝術文化示範場域",
         "再給我們一個十年，我們讓臺南成為國內外令人欽羨的藝術文化之都。"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "OEN 應援科技｜葉人文 － 臺南市長候選人 - OEN 應援科技",
+            "title": "葉人文 － 臺南市長候選人（官方網站）",
             "url": "https://tainanyesman.oen.tw/"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "OEN 應援科技｜葉人文 － 臺南市長候選人 - OEN 應援科技",
+            "title": "葉人文 － 臺南市長候選人（官方網站）",
             "url": "https://tainanyesman.oen.tw/"
           }
         ],
         "related_statements": [
           {
-            "title": "OEN 應援科技｜葉人文 － 臺南市長候選人 - OEN 應援科技",
+            "title": "葉人文 － 臺南市長候選人（官方網站）",
             "url": "https://tainanyesman.oen.tw/"
           }
         ]
       },
       "published_date": "2026-08-31",
-      "source_title": "OEN 應援科技｜葉人文 － 臺南市長候選人 - OEN 應援科技",
+      "source_title": "葉人文 － 臺南市長候選人（官方網站）",
       "source_url": "https://tainanyesman.oen.tw/",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
+      "source_type": "候選人官方網站",
+      "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-29｜摘要原為本站改寫，改用官網標題；具體主張移除「要求政府統一管理展演場地……」一句（為過去爭取成果，非本屆主張）。"
+      ]
     },
     {
       "id": "candidate-auto-67bc1d3734e1",
