@@ -36,3 +36,5 @@
 
 - 江啟臣、沈伯洋、柯志恩：使用者已親自瀏覽整個官網政見頁，有文化相關的頁面都已貼給本站；不再需要逐分類、逐篩選比對，柯志恩 60 頁正文雜湊也不再列為待辦。
 - 吳宗憲：使用者確認官網 https://www.yilan2026.tw/#policy 沒有列文化政見；文化政見以已收錄的新聞報導為準。
+- 林國漳：使用者確認官網 https://2026openchang.tw/#vision 只有「宜蘭客家一七GO」一張文化卡片，卡片連到 https://www.facebook.com/photo/?fbid=122129655237086317&set=a.122101310919086317 ；其他官網政見非文化類。已依貼文原文更新 candidate-auto-e47fc0942b03，其餘文化政見以新聞為準。
+- 韓瑩（https://2026yilan-win.tw/#vision）：使用者 2026-10-29 確認官網沒有文化政見；鄒明諺（https://mymytsou.com/ ，政見頁 https://mymytsou.com/official/policies ）：使用者同日確認官網政見頁沒有任何政見，不只是沒有文化政見；兩人文化政見以新聞為準。

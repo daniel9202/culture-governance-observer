@@ -7230,55 +7230,72 @@
       "publish_id": "candidate-auto-e47fc0942b03",
       "review_status": "人工審核",
       "editor_notes": [
-        "來源頁面沒有發布日期，published_date 留空"
+        "官網文化相關政見只有這張卡片，卡片連到 Facebook 貼文；其他官網政見非文化類（使用者 2026-10-29 確認）。",
+        "來源頁面沒有發布日期，published_date 留空",
+        "五項行動超過 80 字者依原文刪減，以「……」標出；預算數字（2,000 元）保留。"
       ],
       "public_note": "",
       "policy_title": "宜蘭客家一七GO",
       "topics": [
-        "客家文化"
+        "客家文化",
+        "族語傳承",
+        "文化觀光",
+        "文化資產",
+        "飲食文化"
       ],
       "topic_categories": [
-        "客家文化"
+        "客家文化",
+        "原住民族文化",
+        "文化觀光",
+        "文化資產"
       ],
       "topic_subcategories": [],
-      "summary": "推動宜蘭客家底蘊再生，結合文化、產業與科技，使客家文化融入生活、信仰與土地。",
-      "policy_argument": "",
+      "summary": "國漳提出五大行動，從文化、產業到科技，全面推動宜蘭客家底蘊再生",
+      "policy_argument": "宜蘭的客家文化，不該只是節慶時的點綴，而應該成為地方創生最重要的力量。",
       "concrete_proposals": [
-        "推動宜蘭客家底蘊再生，結合文化、產業與科技，使客家文化融入生活、信仰與土地。"
+        "【台七線森活圈】最美客家廊道：爭取客委會「客庄幸福計畫」走進宜蘭，串聯員山、大同、三星的客家聚落……打造全國唯一的「客家森活廊道」。",
+        "【客底大覺醒】數位族譜找回榮耀：……林國漳提議設置「客底文化示範區」，推動「數位族譜大數據」，讓「游、呂、廖」等客家後代，透過簡單的操作就能找回家族的故事。",
+        "【詔安腔復興】找回宜蘭原音：結盟雲、彰兩縣師資，將瀕臨失傳的「詔安腔」帶回宜蘭校園。發起「尋找最後的詔安音」紀錄計畫，並將客語認證獎勵金加碼至 2,000 元……",
+        "【蘭陽客底廚房】HA-FOOD 品牌創新：……打造宜蘭HA-FOOD在地特色料理；並在蘇澳朝陽漁港成立交流中心，紀錄從山區焗腦到海邊捕魚的「海客」生活軌跡。",
+        "【AI 智能客庄】手遊解謎玩透透：結合 Pikmin Bloom（皮克敏）與「蹦世界」等實境解謎，讓遊客走進巷弄闖關，以科技帶動在地消費……"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "林國漳競選官方網站｜宜蘭客家一七GO｜林國漳2026宜蘭縣長參選人",
-            "url": "https://www.facebook.com/share/p/1J9vMrYbYn"
+            "title": "林國漳官方網站｜宜蘭客家一七GO（Facebook 貼文）",
+            "url": "https://www.facebook.com/photo/?fbid=122129655237086317&set=a.122101310919086317"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "林國漳競選官方網站｜宜蘭客家一七GO｜林國漳2026宜蘭縣長參選人",
-            "url": "https://www.facebook.com/share/p/1J9vMrYbYn"
+            "title": "林國漳官方網站｜宜蘭客家一七GO（Facebook 貼文）",
+            "url": "https://www.facebook.com/photo/?fbid=122129655237086317&set=a.122101310919086317"
           }
         ],
         "related_statements": [
           {
-            "title": "林國漳競選官方網站｜宜蘭客家一七GO｜林國漳2026宜蘭縣長參選人",
-            "url": "https://www.facebook.com/share/p/1J9vMrYbYn"
+            "title": "林國漳官方網站｜宜蘭客家一七GO（Facebook 貼文）",
+            "url": "https://www.facebook.com/photo/?fbid=122129655237086317&set=a.122101310919086317"
           }
         ]
       },
       "published_date": "",
-      "source_title": "林國漳競選官方網站｜宜蘭客家一七GO｜林國漳2026宜蘭縣長參選人",
-      "source_url": "https://www.facebook.com/share/p/1J9vMrYbYn",
-      "related_sources": [],
+      "source_title": "林國漳官方網站｜宜蘭客家一七GO（Facebook 貼文）",
+      "source_url": "https://www.facebook.com/photo/?fbid=122129655237086317&set=a.122101310919086317",
+      "related_sources": [
+        "https://2026openchang.tw/#vision"
+      ],
       "source_type": "候選人官方網站",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-29｜依使用者貼上的官網卡片原文（Facebook 貼文）重寫摘要、論述與五項行動；來源改為卡片連到的貼文網址。"
+      ]
     },
     {
       "id": "candidate-auto-06b825b3ac38",
@@ -13720,7 +13737,7 @@
         "文化空間與城市再生"
       ],
       "topic_subcategories": [],
-      "summary": "韓瑩主張行銷宜市舊城區歷史文化廊帶，結合在地青年創意與特色店家；陳美玲則提出宜蘭南北館市場耐震補強與東門夜市美學改善等任內成果。",
+      "summary": "在行銷宜市舊城區歷史文化廊帶，結合在地青年創意與特色店家，讓文化底蘊轉化為在地經濟動能。",
       "policy_argument": "行銷宜市舊城區歷史文化廊帶，結合在地青年創意與特色店家，讓文化底蘊轉化為在地經濟動能。",
       "concrete_proposals": [
         "在行銷宜市舊城區歷史文化廊帶，結合在地青年創意與特色店家，讓文化底蘊轉化為在地經濟動能。"
