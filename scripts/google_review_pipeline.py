@@ -235,7 +235,7 @@ def append_to_sheet(ws, start, output):
     回報成功、列數增加，但資料沒有落在任何一列，是會靜默掉資料的寫法。
     改成自己算出第一個空白列，寫固定範圍，再讀回確認網址真的在表上。
     """
-    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    device = os.environ.get('DEVICE_LABEL') or f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
     completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     # 一般模式原本不填 U/V/X，審核台會看到空白的處理狀態；一併補上。
     rows = [list(row[:20]) + ["complete", device, "", completed_at, "", ""] + list(row[20:]) for row in output]
@@ -367,7 +367,7 @@ def import_results(ws, path: Path):
     values = ws.get_all_values()
     columns = {name: index for index, name in enumerate(values[0])}
     tags = set(topic_tags())
-    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    device = os.environ.get('DEVICE_LABEL') or f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
     completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     items, problems = [], []
     for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
@@ -418,7 +418,7 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
     if missing:
         raise SystemExit(f"Google Sheet 缺少欄位：{', '.join(missing)}")
     kind_by_label = {label: kind for kind, label in KIND_LABELS.items()}
-    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    device = os.environ.get('DEVICE_LABEL') or f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
     attempted = completed = failed = skipped = matched = 0
     pending_updates = []
     pending_results = []
