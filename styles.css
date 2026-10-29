@@ -471,3 +471,8 @@ main>.section:first-child,.method{padding-top:4rem}
   .nav-sub a{padding:.6rem 0;border-bottom:0}
   .nav-sub a:hover{background:none}
 }
+/* 縣市長／議員候選人頁的切換，樣式同現任追蹤的分頁按鈕 */
+.map-switch a{font:700 .9rem/1 "Noto Sans TC","PingFang TC",sans-serif;padding:.65rem 1.1rem;color:var(--ink);text-decoration:none;margin:0}
+.map-switch a+a{border-left:1px solid var(--ink)}
+.map-switch a[aria-current="page"]{background:var(--ink);color:var(--lime)}
+.map-switch a:not([aria-current]):hover{background:var(--tint)}
