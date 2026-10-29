@@ -12,3 +12,4 @@
 | 陳語倢 | `candidate-ntpc-councilor-chen-yu-chieh-001` | https://www.tpp.org.tw/election2026/candidatedetail.php?cid=161 | 網頁回應 403。 | 主題、小標題與文化措施原文。 |
 | 彭一書 | `candidate-ntpc-councilor-peng-yi-shu-arts-center-001` | https://www.dppnt.org.tw/20260704news/ | 網頁回應 403，無法確認引述者及分類。 | 彭一書本人關於藝文中心的完整發言與頁面標題。 |
 | 陳俊諺 | `candidate-npc-councilor-chen-jun-yen-old-new-banqiao-001`、`candidate-auto-0b52ff6e4804` | https://udn.com/news/story/124652/9727600 | 已抓取但當次未取得文化政策正文，依每網址一次規則不再重試。 | 古今板橋文化生活圈相關完整原句。 |
+| 林彥甫 | `candidate-hsz-councilor-lin-yen-fu-fishing-village-culture-001` | https://newpowerparty.tw/vote2026/candidate-2603 | 頁面逾時，無法讀取。 | 漁村、造船文化與藝文團體相關主題、小標題及完整原文。 |
