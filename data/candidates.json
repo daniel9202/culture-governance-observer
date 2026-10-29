@@ -1818,7 +1818,7 @@
       "policy_title": "",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "聯合報",
       "topics": [
         "客家文化",
         "文化教育",
@@ -1878,7 +1878,8 @@
       "corrections": [
         "2026-09-17｜整合已審核中央社來源：補入新北職人 Passport 政策。",
         "2026-10-10｜依原文修正。",
-        "依原文修正（2026-10-10）"
+        "依原文修正（2026-10-10）",
+        "2026-10-30｜依新卡片結構補媒體名稱；本則內容官網六大客家政策沒有，保留。"
       ]
     },
     {
@@ -6481,7 +6482,7 @@
       "policy_title": "新住民四大升級：新北公共通譯人才庫",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "UDN",
       "topics": [
         "新住民文化",
         "多元語言",
@@ -6496,8 +6497,7 @@
       "policy_argument": "",
       "concrete_proposals": [
         "建立跨局處共用的「新北公共通譯人才庫」，依照語言及專業分類，讓需要通譯服務時，可以更快找到適合的人。",
-        "全面檢視捷運、輕軌、公車、醫療院所、市府工程及災害應變資訊，逐步增加英、越、印、泰、日、韓等多語資訊與標示。",
-        "主動協助高齡新住民及其家庭連結醫療、長照、社會福利及社區照顧資源，並透過新住民家庭服務與社區服務網絡，加強多語長照資訊與服務轉介。"
+        "全面檢視捷運、輕軌、公車、醫療院所、市府工程及災害應變資訊，逐步增加英、越、印、泰、日、韓等多語資訊與標示。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -6524,14 +6524,16 @@
       "source_title": "UDN｜出席新北中和點燈文化節李四川：跨局處建立新北公共通譯人才庫| 2026九合一選舉 - UDN",
       "source_url": "https://udn.com/vote2026/story/124652/9821283",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
+      "source_type": "新聞報導",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜刪除高齡新住民醫療、長照轉介一項（社福服務，比照蘇巧慧伯公照護站不收錄）；來源類型改為新聞報導，補媒體名稱。"
+      ]
     },
     {
       "id": "candidate-auto-d24ccb60ea1b",
@@ -12075,13 +12077,14 @@
       "publish_id": "candidate-auto-20cf671b43a5",
       "review_status": "人工審核",
       "editor_notes": [
-        "具體主張部分項目依使用者審閱改寫"
+        "具體主張部分項目依使用者審閱改寫",
+        "與官網六大客家政策（candidate-auto-2290ebb1fc91）比對：社團補助、哈客館、義民祭分區、客語無障礙與官網重複，但兩句都另含官網沒有的內容（客語教育師資與鐘點費、園區轉型為產業綜合中心、強化宣傳客家藝文展演），依計畫整句保留。"
       ],
       "public_note": "",
       "policy_title": "六大客家政策",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "中央社 CNA",
       "topics": [
         "客家文化",
         "文化場館",
@@ -12126,14 +12129,16 @@
       "source_title": "中央社 CNA｜李四川推六大客家政見允優化師資擴大辦理義民祭| 地方 - 中央社 CNA",
       "source_url": "https://www.cna.com.tw/news/aloc/202610030177.aspx",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
+      "source_type": "新聞報導",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜來源類型改為新聞報導，補媒體名稱。"
+      ]
     },
     {
       "id": "candidate-auto-b9f67d85b4c8",
@@ -16521,16 +16526,19 @@
       "id": "candidate-auto-55b93aa66bc5",
       "city": "新北市",
       "office": "縣市長",
-      "candidate": "李四川",
-      "party": "中國國民黨",
+      "candidate": "蘇巧慧",
+      "party": "民主進步黨",
       "publish_id": "candidate-auto-55b93aa66bc5",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "同篇報導的李四川部分為深坑輕軌延伸石碇（交通），不收錄。",
+        "policy_title 取自新聞標題「蘇巧慧力挺本土藝文創作」。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "力挺本土藝文創作",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "引新聞",
       "topics": [
         "地方文化"
       ],
@@ -16538,10 +16546,10 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "蘇巧慧直言，新北擁有豐富的自然景觀與多元文化，未來將從空間媒合、場地使用、行政協調及跨界合作著手，協助劇團降低創作與營運負擔，讓更多優秀作品被看見。",
+      "summary": "新北擁有豐富的自然景觀與多元文化，未來將從空間媒合、場地使用、行政協調及跨界合作著手，協助劇團降低創作與營運負擔，讓更多優秀作品被看見。",
       "policy_argument": "",
       "concrete_proposals": [
-        "蘇巧慧直言，新北擁有豐富的自然景觀與多元文化，未來將從空間媒合、場地使用、行政協調及跨界合作著手，協助劇團降低創作與營運負擔，讓更多優秀作品被看見。"
+        "新北擁有豐富的自然景觀與多元文化，未來將從空間媒合、場地使用、行政協調及跨界合作著手，協助劇團降低創作與營運負擔，讓更多優秀作品被看見。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -16568,14 +16576,16 @@
       "source_title": "引新聞｜李四川拚深坑輕軌延伸石碇 蘇巧慧力挺本土藝文創作 - 引新聞",
       "source_url": "https://innews.com.tw/%E6%9D%8E%E5%9B%9B%E5%B7%9D%E6%8B%9A%E6%B7%B1%E5%9D%91%E8%BC%95%E8%BB%8C%E5%BB%B6%E4%BC%B8%E7%9F%B3%E7%A2%87%E3%80%80%E8%98%87%E5%B7%A7%E6%85%A7%E5%8A%9B%E6%8C%BA%E6%9C%AC%E5%9C%9F%E8%97%9D%E6%96%87/",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
+      "source_type": "新聞報導",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜原掛在李四川名下，但引述內容為蘇巧慧的發言，改列蘇巧慧；去除敘事主語「蘇巧慧直言，」；來源類型改為新聞報導，補媒體名稱。"
+      ]
     },
     {
       "id": "candidate-ntpc-mayor-lee-sichuan-culture-001",
