@@ -74,7 +74,7 @@ function groupByCity(records,shared,officeKey){
     if(!map.has(candidate.city))map.set(candidate.city,[]);
     map.get(candidate.city).push({...candidate,recordCount:counts.get([candidate.city,candidate.candidate].join('\u0000'))||0});
   });
-  map.forEach(list=>list.sort((a,b)=>b.recordCount-a.recordCount||a.candidate.localeCompare(b.candidate,'zh-Hant')));
+  map.forEach(list=>list.sort(compareCandidates));
   return map;
 }
 

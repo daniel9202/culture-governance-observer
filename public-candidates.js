@@ -56,6 +56,8 @@ const uniqueSources=sources=>{
 const emptyCandidateGroup=record=>({...record,records:[],topics:[],topic_categories:[],topic_subcategories:[],policy_titles:[],policy_arguments:[],concrete_proposals:[],related_statements:[],public_notes:[],ids:[],sources:[],published_dates:[],corrections:[],shared_policies:[],party_shared_policies:[],regional_shared_policies:[]});
 const groupKey=record=>[record.city,record.office,record.candidate].join('\u0000');
 // 候選人個人資料與多人共同提出的政見分開保存，但在同一張候選人卡片呈現。
+// 候選人顯示順序（2026-10-30）：縣市依 cityRank → 議員依選區 → 姓名筆畫。不依收錄筆數排序，資料多寡多半反映收錄進度。
+window.compareCandidates=(a,b)=>(typeof cityRank==='function'?cityRank(a.city)-cityRank(b.city):0)||(a.district&&b.district&&typeof districtNumber==='function'?districtNumber(a.district)-districtNumber(b.district):0)||String(a.candidate).localeCompare(String(b.candidate),'zh-Hant');
 window.groupCandidateRecords=(records,sharedPolicies=[])=>{
   const groups=new Map;
   const ensureGroup=record=>{

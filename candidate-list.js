@@ -28,7 +28,7 @@ function render(){
   empty.hidden=rows.length>0;
 }
 loadCandidateDataset({districts:isCouncilorPage}).then(data=>{
-  platforms=groupCandidateRecords(data.records.filter(inScope),data.shared_policy_groups||[]).filter(inScope);
+  platforms=groupCandidateRecords(data.records.filter(inScope),data.shared_policy_groups||[]).filter(inScope).sort(compareCandidates);
   incumbents=incumbentNamesByCity(data.incumbent_records||[]);
   options('cityFilter',uniq(platforms.map(x=>x.city)).sort((a,b)=>cityRank(a)-cityRank(b)));
   options('partyFilter',uniq(platforms.map(x=>x.party)));
