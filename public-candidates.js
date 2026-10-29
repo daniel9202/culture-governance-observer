@@ -227,21 +227,21 @@ window.loadCandidateDataset=async({districts=false}={})=>{
       const subs=groupRows(rows,record=>record.official_subtopic||'');
       const body=subs.map(sub=>`${sub.key?`<h4>${esc(sub.key)}</h4>`:''}${argumentBox(sub.rows)}${proposalList(sub.rows)}`).join('');
       const links=uniqueLinks(rows.map(record=>({url:record.source_url,label:(record.official_subtopic||(named?topic.key:newsParts(record).headline))})));
-      return `<section class="cd-sub">${subTags(rows)}<h3>${esc(title)}</h3>${body}${subFoot(links,uniqueValues(rows.map(record=>record.published_date)).join('、'))}</section>`;
+      return `<section class="cd-sub"><h3>${esc(title)}</h3>${subTags(rows)}${body}${subFoot(links,uniqueValues(rows.map(record=>record.published_date)).join('、'))}</section>`;
     }).join('');
   };
   const newsSubcard=record=>{
     const {outlet,headline}=newsParts(record);
-    return `<section class="cd-sub">${subTags([record])}<h3>${esc(headline)}</h3>${argumentBox([record])}${proposalList([record])}${subFoot([{url:record.source_url,label:outlet||'新聞來源'},...(record.related_sources||[]).map(source=>typeof source==='string'?{url:source,label:'其他報導'}:{url:source.url,label:source.title||'其他報導'})],record.published_date)}</section>`;
+    return `<section class="cd-sub cd-sub-news">${outlet?`<p class="cd-outlet">${esc(outlet)}</p>`:''}<h3>${esc(headline)}</h3>${subTags([record])}${argumentBox([record])}${proposalList([record])}${subFoot([{url:record.source_url,label:outlet||'新聞來源'},...(record.related_sources||[]).map(source=>typeof source==='string'?{url:source,label:'其他報導'}:{url:source.url,label:source.title||'其他報導'})],record.published_date)}</section>`;
   };
-  const zone=(title,content,emptyText)=>`<section class="cd-zone"><h3 class="cd-zone-title">${esc(title)}</h3>${content||`<p class="cd-empty">${esc(emptyText)}</p>`}</section>`;
+  const zone=(title,content,emptyText,count)=>`<section class="cd-zone"><h3 class="cd-zone-title">${esc(title)}${count?`<span class="cd-zone-count">${esc(count)}</span>`:''}</h3>${content||`<p class="cd-empty">${esc(emptyText)}</p>`}</section>`;
   window.candidateSummaryCounts=x=>{const records=x.records||[];return {proposals:records.reduce((sum,record)=>sum+recordProposals(record).length,0),news:records.filter(record=>!isOfficialRecord(record)).length,officialTopics:uniqueValues(records.filter(isOfficialRecord).map(record=>record.official_topic||record.policy_title||newsParts(record).headline)),newsTopics:uniqueValues(records.filter(record=>!isOfficialRecord(record)).map(record=>record.policy_title))}};
   // 候選人頁：完整卡片。
   window.renderCandidateDetail=(x,{openShared=true}={})=>{
     const records=x.records||[],official=records.filter(isOfficialRecord),news=records.filter(record=>!isOfficialRecord(record));
     const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
     const notes=(x.public_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${x.public_notes.map(item=>`<li>${item.title?`<strong>${esc(item.title)}</strong>：`:''}${esc(item.note)}</li>`).join('')}</ul></div>`:'';
-    return `<article class="card cd-card">${zone('官網政見',officialSubcards(official),'尚未收錄候選人官網或官方社群的文化政見。')}${zone('相關新聞',news.map(newsSubcard).join(''),'尚未收錄本屆競選政見的相關新聞。')}${shared}${notes}<small class="verification">最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+    return `<article class="card cd-card">${zone('官網政見',officialSubcards(official),'尚未收錄候選人官網或官方社群的文化政見。',official.length?`${official.reduce((sum,record)=>sum+recordProposals(record).length,0)} 項`:'')}${zone('相關新聞',news.map(newsSubcard).join(''),'尚未收錄本屆競選政見的相關新聞。',news.length?`${news.length} 則`:'')}${shared}${notes}<small class="verification">最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
   // 縣市長列表：精簡卡，整張連到候選人頁。
   // 政黨色：列表頁載入 data/party_colors.json 後填入（candidate-list.js）；沒有就用中性色。

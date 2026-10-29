@@ -404,21 +404,27 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-incumbent-status li.status-not_checked{border-style:dashed;color:var(--muted)}
 .map-incumbent:hover .map-candidate-more{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 /* 候選人卡片新結構（2026-10-30）：官網政見／相關新聞兩區，一列資料一張子卡 */
-.cd-card{padding:1.4rem;min-height:0}
-.cd-zone{margin:0 0 1.6rem}
-.cd-card .cd-zone-title{display:flex;align-items:center;gap:.6rem;font:700 .78rem ui-monospace,monospace;letter-spacing:.12em;color:var(--muted);margin:0 0 .8rem}
-.cd-zone-title:after{content:"";flex:1;border-top:1px solid var(--line)}
-.cd-sub{border:1px solid var(--line);padding:1rem 1.1rem;margin:0 0 .8rem;background:var(--surface)}
-.cd-card .cd-sub h3{margin:0 0 .5rem;font-size:1.12rem;line-height:1.4}
-.cd-sub h4{margin:.9rem 0 .3rem;font-size:.92rem}
-.cd-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 .45rem}
-.cd-tags span{border:1px solid var(--line);padding:.05rem .45rem;font-size:.72rem;color:var(--muted)}
-.cd-argument{background:var(--tint);padding:.6rem .8rem;margin:0 0 .7rem;font-size:.92rem}
-.cd-argument small{display:block;font:700 .68rem ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);margin-bottom:.15rem}
-.cd-props{margin:0;padding-left:1.2rem}.cd-props li{margin:.3rem 0;font-size:.95rem}
-.cd-foot{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.7rem;padding-top:.6rem;border-top:1px dashed var(--line);font-size:.78rem;color:var(--muted)}
-.cd-foot a{color:var(--ink)}
-.cd-empty{font-size:.9rem;color:var(--muted);background:var(--tint);padding:.7rem .9rem;margin:0}
+.cd-card{padding:1.6rem;min-height:0;border-top:6px solid var(--party,var(--ink))}
+.cd-zone{margin:0 0 2rem}
+.cd-card .cd-zone-title{display:flex;align-items:baseline;gap:.6rem;font-size:1.05rem;font-weight:800;letter-spacing:.04em;color:var(--ink);margin:0 0 .9rem;padding-bottom:.5rem;border-bottom:2px solid var(--ink)}
+.cd-zone-count{font-size:.82rem;font-weight:700;color:var(--ink);background:var(--tint);padding:.1rem .5rem;margin-left:auto}
+.cd-sub{border:1px solid var(--line);border-left:4px solid var(--party,var(--ink));padding:1.1rem 1.2rem;margin:0 0 .9rem;background:var(--surface)}
+.cd-sub-news{border-left-color:var(--line);border-left-width:4px}
+.cd-card .cd-sub h3{margin:0 0 .55rem;font-size:1.2rem;line-height:1.45}
+.cd-outlet{margin:0 0 .3rem;font-size:.78rem;font-weight:800;letter-spacing:.06em;color:var(--ink)}
+.cd-sub h4{margin:1rem 0 .35rem;font-size:.95rem;padding-left:.5rem;border-left:3px solid var(--line)}
+.cd-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 .7rem}
+.cd-tags span{background:var(--tint);padding:.12rem .5rem;font-size:.75rem;font-weight:700;color:var(--ink)}
+.cd-argument{background:var(--tint);padding:.6rem .8rem;margin:0 0 .7rem;font-size:.95rem;color:var(--ink)}
+.cd-argument small{display:block;font-size:.72rem;font-weight:800;letter-spacing:.06em;color:var(--ink);margin-bottom:.15rem}
+.cd-props{list-style:none;margin:0;padding:0}
+.cd-props li{position:relative;margin:.4rem 0;padding-left:1.1rem;font-size:1rem;line-height:1.6;color:var(--ink)}
+.cd-props li:before{content:"";position:absolute;left:0;top:.62em;width:.45rem;height:.45rem;background:var(--party,var(--ink))}
+.cd-foot{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.8rem;padding-top:.6rem;border-top:1px dashed var(--line);font-size:.8rem;color:var(--muted)}
+.cd-foot a{color:var(--ink);font-weight:700}
+.cd-empty{font-size:.92rem;color:var(--ink);background:var(--tint);padding:.7rem .9rem;margin:0}
+.candidate-party{display:flex;align-items:center;gap:.45rem;color:var(--ink)}
+.candidate-party i{width:10px;height:10px;border-radius:50%;background:var(--party,var(--muted))}
 .map-candidate .map-count{margin:.5rem 0 .2rem;font-size:.88rem;color:var(--ink);display:block}
 .pledge-source{min-height:0}.pledge-source>h4{margin:0 0 .6rem;font-size:1.05rem}
 .pledge-rows{list-style:none;margin:0;padding:0}
