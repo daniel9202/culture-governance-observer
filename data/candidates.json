@@ -371,12 +371,14 @@
       "party": "無黨籍",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜依來源保留完整文化原句；移除非文化項目及原有改寫。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "文化傳承．族群共榮",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "東台灣新聞網",
       "topics": [
         "多元文化",
         "客家文化",
@@ -391,12 +393,10 @@
         "文化教育"
       ],
       "topic_subcategories": [],
-      "summary": "劉靜文在2026年參選花蓮縣議員第三選區的聲明中提出推廣客家、閩南及原住民族文化，並結合教育與地方特色傳承多元文化。",
+      "summary": "推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。",
       "policy_argument": "",
       "concrete_proposals": [
-        "推廣客家文化。",
-        "推廣閩南文化。",
-        "推廣原住民族文化。"
+        "推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -431,7 +431,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-02｜已依中選會登記名冊核對花蓮縣縣市議員第三選舉區候選人身分；來源具名記載候選人文化主張。政策未載預算、期程或執行機制，已於摘要保留其概括性。"
+        "2026-10-02｜已依中選會登記名冊核對花蓮縣縣市議員第三選舉區候選人身分；來源具名記載候選人文化主張。政策未載預算、期程或執行機制，已於摘要保留其概括性。",
+        "2026-10-30｜依新聞原文修正摘要與具體主張，刪除非文化項目及轉述。"
       ]
     },
     {
@@ -1601,12 +1602,14 @@
       "party": "中國國民黨",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜改貼完整新聞原句；原分點為轉述，並保留同一句中的露營區內容。來源描述鎮民代表質詢並宣布參選，競選政見性質有待確認。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "翻轉南區觀光困境",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "東台灣新聞網",
       "topics": [
         "原住民族文化",
         "文化觀光",
@@ -1620,11 +1623,10 @@
         "文化空間與城市再生"
       ],
       "topic_subcategories": [],
-      "summary": "主張修復並更新193線沿線的馬太林文化園區入口與稻草藝術裝置，並研議合適區域規劃露營區，提升南區人文景觀的觀光吸引力。",
+      "summary": "此外，秀吉·撒夫洛也提到如東豐里的鐵份瀑布、馬太林文化園區入口以及沿線的稻草藝術裝置等觀光景點，如今因缺乏後續打理、修復而逐漸破敗，呼籲鎮公所建設課及相關單位應盡速通盤檢討、除舊佈新，甚至研議將合適區域規劃為露營區，才能真正留住遊客。",
       "policy_argument": "",
       "concrete_proposals": [
-        "修復馬太林文化園區入口及沿線稻草藝術裝置。",
-        "研議在合適區域規劃露營區，串聯193線人文景觀與觀光。"
+        "此外，秀吉·撒夫洛也提到如東豐里的鐵份瀑布、馬太林文化園區入口以及沿線的稻草藝術裝置等觀光景點，如今因缺乏後續打理、修復而逐漸破敗，呼籲鎮公所建設課及相關單位應盡速通盤檢討、除舊佈新，甚至研議將合適區域規劃為露營區，才能真正留住遊客。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -1658,7 +1660,9 @@
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜依新聞原文修正摘要、具體主張與來源欄位。"
+      ]
     },
     {
       "id": "candidate-tpe-mayor-shen-boyang-001",
@@ -15209,12 +15213,14 @@
       "party": "無黨籍",
       "publish_id": "candidate-auto-3e212d67d6bb",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜依來源保留完整文化原句；移除非文化項目及原有改寫。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "文化傳承．族群共榮",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "東台灣新聞網",
       "topics": [
         "客家文化",
         "原住民族文化",
@@ -15230,11 +15236,10 @@
         "文化資產"
       ],
       "topic_subcategories": [],
-      "summary": "二、拚經濟．促進產業發展【農業・觀光・青年】 推動農業升級、特色觀光及地方創生，協助青年創業就業，提升地方競爭力。 || 四、文化傳承．族群共榮【教育文化】 推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造",
+      "summary": "推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。",
       "policy_argument": "",
       "concrete_proposals": [
-        "二、拚經濟．促進產業發展【農業・觀光・青年】 推動農業升級、特色觀光及地方創生，協助青年創業就業，提升地方競爭力。",
-        "四、文化傳承．族群共榮【教育文化】 推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。"
+        "推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -15261,14 +15266,16 @@
       "source_title": "etaiwan.news｜劉靜文轉換跑道參選花蓮縣議員第三選區",
       "source_url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
+      "source_type": "新聞報導",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜依新聞原文修正摘要與具體主張，刪除非文化項目及轉述。"
+      ]
     },
     {
       "id": "candidate-auto-1c1a123450c6",
