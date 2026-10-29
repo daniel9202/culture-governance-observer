@@ -244,9 +244,12 @@ window.loadCandidateDataset=async({districts=false}={})=>{
     return `<article class="card cd-card">${zone('官網政見',officialSubcards(official),'尚未收錄候選人官網或官方社群的文化政見。')}${zone('相關新聞',news.map(newsSubcard).join(''),'尚未收錄本屆競選政見的相關新聞。')}${shared}${notes}<small class="verification">最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
   // 縣市長列表：精簡卡，整張連到候選人頁。
+  // 政黨色：列表頁載入 data/party_colors.json 後填入（candidate-list.js）；沒有就用中性色。
+  window.PARTY_COLOR_MAP=window.PARTY_COLOR_MAP||{};
+  // 縣市長列表：精簡卡，整張連到候選人頁。
   window.renderCandidateCompact=x=>{
-    const {proposals,news,officialTopics}=candidateSummaryCounts(x);
-    const party=typeof partyInfo==='function'?partyInfo(x.party):null;
-    return `<a class="card cd-compact" href="${esc(candidateUrl(x))}"${party?` style="--party:${esc(party.fill)}"`:''}><div class="cd-compact-head"><h3>${esc(x.candidate)}</h3><span>${esc([x.city,x.office,x.party].filter(Boolean).join(' · '))}</span></div><p class="cd-line"><b>官網政見</b>${officialTopics.length?esc(officialTopics.join('、')):'<span class="cd-muted">尚未收錄</span>'}</p><p class="cd-count">收錄 ${proposals} 項政見 · 相關新聞 ${news} 則</p><span class="cd-more">看文化政見與來源 →</span></a>`;
+    const {proposals,news,officialTopics}=candidateSummaryCounts(x),color=PARTY_COLOR_MAP[x.party]?.color;
+    const topics=officialTopics.length?`<ul class="cd-chips">${officialTopics.map(topic=>`<li>${esc(topic)}</li>`).join('')}</ul>`:'<p class="cd-none">尚未收錄</p>';
+    return `<a class="card cd-compact" href="${esc(candidateUrl(x))}"${color?` style="--party:${esc(color)}"`:''}><div class="cd-compact-head"><h3>${esc(x.candidate)}</h3><span class="cd-party"><i></i>${esc(x.party||'政黨待確認')}</span></div><p class="cd-place">${esc([x.city,x.district?districtFullLabel(x):'',x.office].filter(Boolean).join(' · '))}</p><div class="cd-block"><p class="cd-label">官網政見</p>${topics}</div><dl class="cd-stats"><div><dt>收錄政見</dt><dd>${proposals}<small>項</small></dd></div><div><dt>相關新聞</dt><dd>${news}<small>則</small></dd></div></dl><span class="cd-more">看文化政見與來源 <span aria-hidden="true">→</span></span></a>`;
   };
 }

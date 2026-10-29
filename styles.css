@@ -419,14 +419,6 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .cd-foot{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.7rem;padding-top:.6rem;border-top:1px dashed var(--line);font-size:.78rem;color:var(--muted)}
 .cd-foot a{color:var(--ink)}
 .cd-empty{font-size:.9rem;color:var(--muted);background:var(--tint);padding:.7rem .9rem;margin:0}
-.cd-compact{display:block;text-decoration:none;color:inherit;border-left:4px solid var(--party,var(--line));min-height:0}
-.cd-compact:hover{background:var(--paper)}
-.cd-compact-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .8rem;margin-bottom:.7rem}
-.cd-compact .cd-compact-head h3{margin:0;font-size:1.5rem}.cd-compact-head span{font-size:.85rem;color:var(--muted)}
-.cd-line{margin:.35rem 0;font-size:.9rem}.cd-line b{display:inline-block;min-width:4.6rem;color:var(--muted);font-size:.8rem}
-.cd-muted{color:var(--muted)}.cd-count{margin:.5rem 0 0;font-size:.82rem;color:var(--muted)}
-.cd-more{display:block;margin-top:.75rem;font-size:.8rem;font-weight:700;color:var(--muted)}
-.cd-compact:hover .cd-more{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 .map-candidate .map-count{margin:.5rem 0 .2rem;font-size:.88rem;color:var(--ink);display:block}
 .pledge-source{min-height:0}.pledge-source>h4{margin:0 0 .6rem;font-size:1.05rem}
 .pledge-rows{list-style:none;margin:0;padding:0}
@@ -476,3 +468,23 @@ main>.section:first-child,.method{padding-top:4rem}
 .map-switch a+a{border-left:1px solid var(--ink)}
 .map-switch a[aria-current="page"]{background:var(--ink);color:var(--lime)}
 .map-switch a:not([aria-current]):hover{background:var(--tint)}
+/* 縣市長列表精簡卡：頂邊用政黨色，官網主題用標籤，數字放大 */
+.cd-compact{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);border-top:6px solid var(--party,var(--ink));min-height:0;gap:.9rem;transition:background .15s}
+.cd-compact:hover{background:var(--paper)}
+.cd-compact-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1rem}
+.cd-compact .cd-compact-head h3{margin:0;font-size:1.75rem;line-height:1.15;letter-spacing:-.02em}
+.cd-party{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:700;color:var(--ink)}
+.cd-party i{width:10px;height:10px;border-radius:50%;background:var(--party,var(--ink))}
+.cd-place{margin:-.5rem 0 0;font-size:.9rem;color:var(--ink)}
+.cd-block{border-top:1px solid var(--line);padding-top:.8rem}
+.cd-label{margin:0 0 .5rem;font-size:.78rem;font-weight:800;letter-spacing:.08em;color:var(--ink)}
+.cd-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.cd-chips li{background:var(--tint);padding:.3rem .65rem;font-size:.9rem;font-weight:700;line-height:1.4}
+.cd-none{margin:0;font-size:.9rem;color:var(--muted)}
+.cd-stats{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cd-stats div{padding:.7rem 0}.cd-stats div+div{border-left:1px solid var(--line);padding-left:1rem}
+.cd-stats dt{font-size:.78rem;font-weight:700;color:var(--ink)}
+.cd-stats dd{margin:.15rem 0 0;font:800 1.9rem/1 "Noto Sans TC","PingFang TC",sans-serif}
+.cd-stats dd small{font-size:.8rem;font-weight:700;margin-left:.2rem}
+.cd-more{align-self:flex-start;margin-top:auto;font-size:.88rem;font-weight:800;color:var(--ink);border-bottom:2px solid var(--party,var(--ink));padding-bottom:.1rem}
+.cd-compact:hover .cd-more span{display:inline-block;transform:translateX(3px)}
