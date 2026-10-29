@@ -444,3 +444,8 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .section-head>p{max-width:760px;margin:0;font-size:.95rem}
 .cards:has(>.tracker-city){align-items:start}
 .cards>.tracker-city+.tracker-city{margin-top:0}
+/* 2026-10-30 頁首距離統一：導覽列下方到每頁第一個標題同一距離 */
+main>.section:first-child,.method{padding-top:4rem}
+.method>h1:first-child{margin-top:0}
+.page-intro+.section{padding-top:3rem}
+@media(max-width:760px){main>.section:first-child,.method{padding-top:3rem}}
