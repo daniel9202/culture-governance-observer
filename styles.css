@@ -435,3 +435,12 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .pledge-row-head .tag{flex:none;margin:0}
 .pledge-more summary{cursor:pointer;font-size:.8rem;color:var(--muted);margin-top:.25rem}
 .pledge-more p{font-size:.88rem}
+/* 2026-10-30 全站統一：內頁不用黑底大標題，改淺底頁首；區塊說明放在標題下方 */
+.page-intro{padding-bottom:0}
+.page-intro h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.1;letter-spacing:-.04em;margin:.5rem 0 1rem;max-width:none}
+.page-lede{color:var(--muted);max-width:none;margin:0;font-size:1.02rem}
+.page-intro+.section{padding-top:3rem}
+.section-head{grid-template-columns:1fr;gap:.6rem;align-items:start}
+.section-head>p{max-width:760px;margin:0;font-size:.95rem}
+.cards:has(>.tracker-city){align-items:start}
+.cards>.tracker-city+.tracker-city{margin-top:0}
