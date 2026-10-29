@@ -607,7 +607,8 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "原具體措施為摘要改寫，非來源原句，已移除；官網首頁為一段敘述，未強拆分點。"
+        "原具體措施為摘要改寫，非來源原句，已移除；官網首頁為一段敘述，未強拆分點。",
+        "2026-10-30｜官網首頁原句作為一項具體主張；刪除非原句的相關說法。"
       ],
       "public_note": "",
       "policy_title": "",
@@ -634,10 +635,10 @@
       "topic_subcategories": [],
       "summary": "以艋舺的歷史、信仰與街區故事為底蘊，串連在地店家與觀光動線，推動文化結合科技的導覽體驗，帶動在地經濟，把萬華的故事好好說給世界聽。",
       "policy_argument": "",
-      "concrete_proposals": [],
-      "related_statements": [
-        "主張讓萬華的故事被好好說給世界聽。"
+      "concrete_proposals": [
+        "以艋舺的歷史、信仰與街區故事為底蘊，串連在地店家與觀光動線，推動文化結合科技的導覽體驗，帶動在地經濟，把萬華的故事好好說給世界聽。"
       ],
+      "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
@@ -670,7 +671,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-30：依官網首頁原文重整主題與摘要，移除改寫的具體措施。"
+        "2026-10-30：依官網首頁原文重整主題與摘要，移除改寫的具體措施。",
+        "2026-10-30｜補入官網首頁原句，刪除轉述的相關說法。"
       ]
     },
     {
@@ -2628,9 +2630,9 @@
         "原文超過 80 字，刪去「結合產業推廣與國際拓展機構之模式，創造原住民族文化產業推廣，促進學術產業及產業交流」等子句，以「……」標出。"
       ],
       "public_note": "",
-      "policy_title": "發展台北：建立國際產業平台及文化產業化",
-      "official_topic": "",
-      "official_subtopic": "",
+      "policy_title": "建立國際產業平台及文化產業化",
+      "official_topic": "發展台北：建立都市原住民發展支持系統",
+      "official_subtopic": "建立國際產業平台及文化產業化",
       "source_outlet": "",
       "topics": [
         "原住民族文化",
@@ -2671,7 +2673,7 @@
       "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
       "source_url": "https://www.imvlin.com/whatvdo",
       "related_sources": [],
-      "source_type": "候選人官方網站",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -4208,12 +4210,13 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：修繕範圍、預算、完成期程、社區藝文活動執行機制"
+        "未載明：修繕範圍、預算、完成期程、社區藝文活動執行機制",
+        "2026-10-30｜摘要及修繕項目改為來源原句；來源已讀部分未見「推動更多社區藝文活動」，該項移除。長句刪去一個子句，以省略號標示。"
       ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
-      "official_subtopic": "",
+      "policy_title": "景觀與文化：守護自然，活化歷史",
+      "official_topic": "斯綱的願景：看見士林北投的無限可能",
+      "official_subtopic": "景觀與文化：守護自然，活化歷史",
       "source_outlet": "",
       "topics": [
         "文化資產",
@@ -4227,11 +4230,10 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "候選人競選網站提出守護士林北投自然與歷史人文，爭取修繕及活化北投車站、士林官邸周邊等地方歷史建築，並推動社區藝文活動。",
+      "summary": "斯綱主張在保護陽明山國家公園與北投溫泉區自然生態的前提下，推動永續觀光。",
       "policy_argument": "",
       "concrete_proposals": [
-        "爭取經費修繕與活化北投車站及士林官邸周邊等地方歷史建築。",
-        "推動更多社區藝文活動。"
+        "我們將積極爭取經費，修繕與活化地方歷史建築，如北投車站、士林官邸周邊等，……打造兼具生態與文化的宜居城市。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -4258,7 +4260,7 @@
       "source_title": "張斯綱｜臺北市議員候選人小額募款專區",
       "source_url": "https://careaboutyou.oen.tw/",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -4266,7 +4268,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-01｜中選會登記名冊核對為臺北市第1選舉區、中國國民黨候選人；候選人競選網站人工審核完成。"
+        "2026-10-01｜中選會登記名冊核對為臺北市第1選舉區、中國國民黨候選人；候選人競選網站人工審核完成。",
+        "2026-10-30｜依候選人網站修正主題、摘要與具體主張，刪除未核實的社區藝文活動。"
       ]
     },
     {
@@ -11070,7 +11073,7 @@
       ],
       "public_note": "",
       "policy_title": "文化台北：讓族語文化回到城市日常",
-      "official_topic": "",
+      "official_topic": "文化台北：讓族語文化回到城市日常",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -11122,7 +11125,7 @@
       "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
       "source_url": "https://www.imvlin.com/whatvdo",
       "related_sources": [],
-      "source_type": "候選人官方網站",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -11145,9 +11148,9 @@
         "官網第 5 項「共生台北」的第三點；同項其他兩點（青銀共創空間、長者傳承）未收錄。"
       ],
       "public_note": "",
-      "policy_title": "共生台北：建立文化使用與授權諮詢制度",
-      "official_topic": "",
-      "official_subtopic": "",
+      "policy_title": "建立文化使用與授權諮詢制度",
+      "official_topic": "共生台北：打造都市原民青銀共創空間",
+      "official_subtopic": "建立文化使用與授權諮詢制度",
       "source_outlet": "",
       "topics": [
         "原住民族文化",
@@ -11190,7 +11193,7 @@
       "source_title": "林筱薇 2026 臺北市平地原住民議員候選人｜政見",
       "source_url": "https://www.imvlin.com/whatvdo",
       "related_sources": [],
-      "source_type": "候選人官方網站",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -17869,7 +17872,7 @@
       "source_title": "劉品妡 Instagram｜妡．文化台北政策 #01｜把臺北的秋天，打造成「臺北藝術月」！",
       "source_url": "https://www.instagram.com/p/DevMn2kTOoe/",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官方社群",
       "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -17946,7 +17949,7 @@
       "source_title": "劉品妡 Instagram｜妡．文化台北政策 #02｜藝術不只在場館：深耕大安、文山在地資源",
       "source_url": "https://www.instagram.com/p/De8EBqbSRrU/",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官方社群",
       "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -18018,7 +18021,7 @@
       "source_title": "劉品妡 Instagram｜《PLAY!》與臺北公園政策五個面向",
       "source_url": "https://www.instagram.com/p/De04qCATIKV/",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官方社群",
       "last_verified": "2026-10-29",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
