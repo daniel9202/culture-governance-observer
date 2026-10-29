@@ -15046,7 +15046,9 @@
       "party": "民主進步黨",
       "publish_id": "candidate-auto-c83f64edbb4c",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "屏東縣立美術館、王船文化館、恆春文化中心已完工，屬現任施政，不列為本屆政見。"
+      ],
       "public_note": "",
       "policy_title": "",
       "topics": [
@@ -15058,11 +15060,10 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "未來將推動觀光、建造太空博物館，持續帶來工作機會。 || 並興建3大文化建設，包含屏東縣立美術館、王船文化館、恆春文化中心。",
+      "summary": "未來將推動觀光、建造太空博物館，持續帶來工作機會。",
       "policy_argument": "",
       "concrete_proposals": [
-        "未來將推動觀光、建造太空博物館，持續帶來工作機會。",
-        "並興建3大文化建設，包含屏東縣立美術館、王船文化館、恆春文化中心。"
+        "未來將推動觀光、建造太空博物館，持續帶來工作機會。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -15096,7 +15097,9 @@
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜依使用者指正，移除三大文化建設一句（現任施政），只留太空博物館。"
+      ]
     },
     {
       "id": "candidate-auto-f0d69845006b",
