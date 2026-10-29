@@ -1,19 +1,18 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23d7ff48'/><circle cx='32' cy='32' r='28' fill='%23151712'/><g fill='none' stroke='%23d7ff48' stroke-width='5' stroke-linecap='round'><path d='M32 16v4M20 26h24M39 27C35 37 29 42 21 46M25 28C29 37 35 42 43 46'/></g></svg>">
   <meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'"><meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="以台灣地圖比較 2026 地方選舉中，哪些縣市的候選人提出了文化政策，以及候選人與政黨。">
   <title>文化政見地圖｜文化治理觀察站</title>
-  <link rel="stylesheet" href="styles.css?v=20261028-3">
+  <link rel="stylesheet" href="styles.css?v=20261030-7">
 </head>
 <body>
-  <header class="hero hero-slim"><nav><a class="brand" href="index.html">文化治理觀察站</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span aria-hidden="true"></span><span class="menu-label">選單</span></button><div class="nav-links" id="site-menu"><a href="map.html">文化政見地圖</a><a href="mayors.html">縣市長政見</a><a href="councilors.html">議員政見</a><a href="regions.html">地方文化政策與議題儀表板</a><a href="fulfillment.html">現任追蹤</a><a href="civic.html">民間訴求</a><a href="methodology.html">資料方法</a><a href="updates.html">更新紀錄</a></div></nav></header>
+  <header class="hero hero-slim"><nav><a class="brand" href="index.html">文化治理觀察站</a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span aria-hidden="true"></span><span class="menu-label">選單</span></button><div class="nav-links" id="site-menu"><a href="map.html">文化政見地圖</a><div class="nav-group"><button class="nav-group-toggle" type="button" aria-expanded="false" aria-controls="nav-candidates">候選人文化政見</button><div class="nav-sub" id="nav-candidates"><a href="mayors.html">縣市長候選人</a><a href="councilors.html">議員候選人</a></div></div><a href="regions.html">地方文化政策與議題儀表板</a><a href="fulfillment.html">現任追蹤</a><a href="civic.html">民間訴求</a><a href="methodology.html">資料方法</a><a href="updates.html">更新紀錄</a></div></nav></header>
   <main>
     <section class="section map-intro">
       <div class="section-head">
-        <div><p class="kicker">2026 LOCAL ELECTIONS / CULTURAL POLICY MAP</p><h1>誰把文化<br>寫進政見？</h1></div>
-        <p>地圖只標示本站已查核的本屆競選文化政見，包含候選人本人與共同政見；現任議員任內的問政紀錄另見「現任追蹤」。縣市長以圓點代表候選人、顏色代表政黨，議員模式只標示已收錄的人數。</p>
+        <div><h1>哪些候選人把文化寫進政見</h1></div>
       </div>
       <div class="map-stats" aria-label="收錄統計">
         <div><strong id="statCities">—</strong><span>縣市有候選人<br>提出文化政策</span></div>
@@ -50,18 +49,18 @@
     </section>
 
     <section class="section map-compare-section">
-      <div class="section-head"><div><p class="kicker">COMPARE 22 CITIES &amp; COUNTIES</p><h2>縣市比較</h2></div><p>依地區排列 22 個縣市。點縣市名稱可在地圖上查看，點候選人姓名開啟個人政見頁。「尚未收錄」只代表本站目前沒有符合口徑的資料，不等於候選人沒有文化政策。</p></div>
+      <div class="section-head"><div><h2>縣市比較</h2></div><p>依地區排列 22 個縣市。點縣市名稱可在地圖上查看，點候選人姓名開啟個人政見頁。「尚未收錄」只代表本站目前沒有符合口徑的資料，不等於候選人沒有文化政策。</p></div>
       <div class="compare-head" aria-hidden="true"><span>縣市</span><span>縣市長候選人</span><span>議員候選人</span></div>
       <div class="compare-list" id="compareList"></div>
     </section>
 
     <section class="section map-party-section">
-      <div class="section-head"><div><p class="kicker">BY PARTY</p><h2>各政黨提出情形</h2></div><p>以候選人人數計算；同一位候選人有多筆政見紀錄時只算一次。各黨人數差異多半反映本站收錄進度，不代表各黨對文化的重視程度。</p></div>
+      <div class="section-head"><div><h2>各政黨提出情形</h2></div><p>以候選人人數計算；同一位候選人有多筆政見紀錄時只算一次。各黨人數差異多半反映本站收錄進度，不代表各黨對文化的重視程度。</p></div>
       <div class="party-bars" id="partyBars"></div>
     </section>
 
     <section class="section map-method">
-      <p class="kicker">READING THE MAP</p>
+      
       <h2>統計口徑與底圖</h2>
       <ul>
         <li>候選人以「縣市＋參選職務＋姓名」去重；政見紀錄數是指本站收錄、可追溯來源的文化政策紀錄筆數。</li>
@@ -75,6 +74,6 @@
     </section>
   </main>
   <footer><p>文化治理觀察站</p><p>開放資料專案 · <a href="methodology.html">資料方法</a> · <a href="updates.html">更新紀錄</a></p></footer>
-  <script src="nav.js?v=20261005-1"></script><script src="public-candidates.js?v=20261028-7"></script><script src="map.js?v=20261028-1"></script>
+  <script src="nav.js?v=20261030-1"></script><script src="public-candidates.js?v=20261030-5"></script><script src="map.js?v=20261030-3"></script>
 </body>
 </html>

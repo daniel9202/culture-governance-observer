@@ -380,6 +380,15 @@ npm run build
 
 設計端只提交前台檔案，不碰 `apps-script/` 與 `backups/`；`data/*.json` 等建置產物由資料端提交（見「工作分工」）。提交前再跑一次 `npm run build`，並確認沒有把建置重產的 `data/` 檔案一起 stage。
 
+## 待辦（2026-10-29 新增）
+
+- [ ] **資料蒐集移到 AI 雲端環境**：雲端 secrets 設 `GOOGLE_SERVICE_ACCOUNT_JSON`、`GOOGLE_REVIEW_SPREADSHEET_ID`；setup 跑 `pip install -r requirements-automation.txt`；每輪依序跑 `collect_candidates.py` → `google_review_pipeline.py --append-pending` → `--export-pending` → 雲端 AI 分析 → `--import-results`。開始前要先處理：
+  - `google_review_pipeline.py` 的裝置欄寫死 `{COMPUTERNAME 或 HOSTNAME}-Codex`，雲端會變成隨機主機名，要改成可以用環境變數指定（例：`CLOUD-Claude`）。
+  - `tmp/pipeline-cache/` 在雲端不會保留，每輪都會重抓正文。
+  - 雲端不推 `main`，只推備份分支；核准、寫入 CSV、push 仍照現行流程。（AGENTS.md「只在 Danasus 做」的限制已於 2026-10-29 取消；雲端的裝置欄填 `CLOUD-<AI>`。）
+- [ ] **向中選會取得候選人號次**：號次抽籤公告出來後，補進登記名冊資料。`import_cec_registrations.py` 會依 9/7 名冊還原 10/16 已刪除的 10 人，不要直接重跑，要另外處理。欄位新增前要先列出來，等設計端確認。
+- [ ] **檢視類別標籤的分類是否合理**（2026-10-30 使用者列為待辦）：候選人頁與地圖只保留類別標籤（`topics` 欄經 `config/topic_categories.csv` 歸成大類）。要看的是：各筆的 `topics` 是否貼切、小類歸到哪個大類是否合理、同一人合併後前 6 個標籤能否代表整體。同日已移除候選人頁的「政見名稱標籤」（`policy_title` 原文標題，來源標題不統一）與地圖卡名字下方的第一筆摘要；`policy_title` 欄位仍留在 CSV，只是前台不顯示。若之後要在地圖放候選人層級的一句歸納（例：「涵蓋原民、客家、文化觀光」），需新增候選人層級欄位，由人工或 AI 歸納，並先和設計端確認欄位。
+
 ## 建議續作順序（2026-10-01 晚間）
 
 ### 使用者指定的下一步：文化政見地圖（優先）

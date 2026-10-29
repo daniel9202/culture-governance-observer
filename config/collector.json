@@ -47,24 +47,6 @@
       "max_items_per_query": 4,
       "duplicate_title_threshold": 0.92
     },
-    "councilor_policy": {
-      "inbox": "data/inbox/councilor_sources.csv",
-      "query_terms": "(文化 OR 藝文 OR 文資 OR 博物館 OR 圖書館 OR 文創 OR 客家 OR 原住民族文化) (政見 OR 政策 OR 白皮書 OR 主張 OR 承諾)",
-      "registered_candidates": "data/input/registered_candidates.csv",
-      "office_filter": "縣市議員",
-      "source_mode": "party_candidate_pages",
-      "official_sites": {
-        "民主進步黨 議員候選人頁": "https://teamtaiwan.dpp.org.tw/councilor",
-        "中國國民黨 議員候選人頁": "https://2026.kmtks.org.tw/Council",
-        "台灣民眾黨 議員候選人頁": "https://www.tpp.org.tw/2026election/candidates.php",
-        "時代力量 議員候選人頁": "https://newpowerparty.tw/vote2026",
-        "台灣綠黨 議員候選人頁": "https://web.greenparty.org.tw/posts/news/2026candidate/",
-        "台灣基進 議員候選人頁": "https://statebuilding.tw/candidates/"
-      },
-      "max_items_per_candidate": 8,
-      "max_items_per_query": 4,
-      "duplicate_title_threshold": 0.92
-    },
     "township_mayor_policy": {
       "inbox": "data/inbox/township_mayor_sources.csv",
       "query_terms": "(文化 OR 藝文 OR 文資 OR 博物館 OR 圖書館 OR 文創 OR 客家 OR 原住民族文化) (政見 OR 政策 OR 白皮書 OR 主張 OR 承諾)",

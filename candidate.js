@@ -20,7 +20,7 @@ loadCandidateDataset({districts:office==='councilor'}).then(data=>{
   renderContext();
   if(!target){
     document.title='找不到候選人｜文化治理觀察站';
-    kicker.textContent=city?`${city} / ${OFFICE_LABEL[office]}`:'CANDIDATE';
+    kicker.textContent=city?`${city} / ${OFFICE_LABEL[office]}`:'';
     title.textContent='找不到這位候選人';
     card.innerHTML='<p class="empty">本站目前沒有這位候選人的本屆競選文化政見，可能尚未收錄，或姓名已更正。可從上方連結查看該縣市的所有候選人。</p>';
   }else{
@@ -28,7 +28,7 @@ loadCandidateDataset({districts:office==='councilor'}).then(data=>{
     kicker.textContent=`${city}${target.district?` ${districtLabel(target)}`:''} / ${officeName(target)}候選人`;
     title.textContent=target.candidate;
     party.textContent=target.party||'政黨待確認';
-    card.innerHTML=renderCandidateCard(target,{showCity:false,linkName:false,openShared:true});
+    card.innerHTML=renderCandidateDetail(target,{openShared:true});
   }
   const rest=sameOffice.filter(record=>record!==target).sort((a,b)=>a.candidate.localeCompare(b.candidate,'zh-Hant'));
   if(rest.length){

@@ -12,7 +12,7 @@ function render(){
   civicEmpty.hidden=rows.length>0;
 }
 fetch('data/civic_policy_calls.json').then(r=>r.json()).then(data=>{
-  calls=data.records.map(normaliseCall);
+  calls=data.records.map(normaliseCall).sort((a,b)=>cityRank(a.city)-cityRank(b.city));
   options('civicCityFilter',uniq(calls.map(x=>x.city)).sort((a,b)=>cityRank(a)-cityRank(b)));
   options('civicTypeFilter',uniq(calls.map(x=>x.proposer_type)));
   options('civicTopicFilter',uniq(calls.flatMap(recordTopicCategories)).sort((a,b)=>topicCategoryRank(a)-topicCategoryRank(b)));

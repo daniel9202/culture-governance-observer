@@ -403,3 +403,88 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 .map-incumbent-status li.status-fulfilled{background:var(--lime);border-color:var(--lime)}
 .map-incumbent-status li.status-not_checked{border-style:dashed;color:var(--muted)}
 .map-incumbent:hover .map-candidate-more{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+/* 候選人卡片新結構（2026-10-30）：官網政見／相關新聞兩區，一列資料一張子卡 */
+.cd-card{padding:1.4rem;min-height:0}
+.cd-zone{margin:0 0 1.6rem}
+.cd-card .cd-zone-title{display:flex;align-items:center;gap:.6rem;font:700 .78rem ui-monospace,monospace;letter-spacing:.12em;color:var(--muted);margin:0 0 .8rem}
+.cd-zone-title:after{content:"";flex:1;border-top:1px solid var(--line)}
+.cd-sub{border:1px solid var(--line);padding:1rem 1.1rem;margin:0 0 .8rem;background:var(--surface)}
+.cd-card .cd-sub h3{margin:0 0 .5rem;font-size:1.12rem;line-height:1.4}
+.cd-sub h4{margin:.9rem 0 .3rem;font-size:.92rem}
+.cd-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin:0 0 .45rem}
+.cd-tags span{border:1px solid var(--line);padding:.05rem .45rem;font-size:.72rem;color:var(--muted)}
+.cd-argument{background:var(--tint);padding:.6rem .8rem;margin:0 0 .7rem;font-size:.92rem}
+.cd-argument small{display:block;font:700 .68rem ui-monospace,monospace;letter-spacing:.08em;color:var(--muted);margin-bottom:.15rem}
+.cd-props{margin:0;padding-left:1.2rem}.cd-props li{margin:.3rem 0;font-size:.95rem}
+.cd-foot{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.7rem;padding-top:.6rem;border-top:1px dashed var(--line);font-size:.78rem;color:var(--muted)}
+.cd-foot a{color:var(--ink)}
+.cd-empty{font-size:.9rem;color:var(--muted);background:var(--tint);padding:.7rem .9rem;margin:0}
+.map-candidate .map-count{margin:.5rem 0 .2rem;font-size:.88rem;color:var(--ink);display:block}
+.pledge-source{min-height:0}.pledge-source>h4{margin:0 0 .6rem;font-size:1.05rem}
+.pledge-rows{list-style:none;margin:0;padding:0}
+.pledge-row{padding:.6rem 0;border-top:1px solid var(--line)}.pledge-row:first-child{border-top:0;padding-top:0}
+.pledge-row-head{display:flex;justify-content:space-between;gap:.8rem;align-items:flex-start}
+.pledge-row-head .tag{flex:none;margin:0}
+.pledge-more summary{cursor:pointer;font-size:.8rem;color:var(--muted);margin-top:.25rem}
+.pledge-more p{font-size:.88rem}
+/* 2026-10-30 全站統一：內頁不用黑底大標題，改淺底頁首；區塊說明放在標題下方 */
+.page-intro{padding-bottom:0}
+.page-intro h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.1;letter-spacing:-.04em;margin:.5rem 0 1rem;max-width:none}
+.page-lede{color:var(--muted);max-width:none;margin:0;font-size:1.02rem}
+.page-intro+.section{padding-top:3rem}
+.section-head{grid-template-columns:1fr;gap:.6rem;align-items:start}
+.section-head>p{max-width:760px;margin:0;font-size:.95rem}
+.cards:has(>.tracker-city){align-items:start}
+.cards>.tracker-city+.tracker-city{margin-top:0}
+/* 2026-10-30 頁首距離統一：導覽列下方到每頁第一個標題同一距離 */
+main>.section:first-child,.method{padding-top:4rem}
+.method>h1:first-child{margin-top:0}
+.page-intro+.section{padding-top:3rem}
+@media(max-width:760px){main>.section:first-child,.method{padding-top:3rem}}
+/* 2026-10-30 小標不用橘色英文：只留中文的位置說明（縣市／職務），改灰色 */
+.kicker,.map-detail .kicker{font:700 .82rem/1.4 "Noto Sans TC","PingFang TC",sans-serif;letter-spacing:.04em;color:var(--muted)}
+.kicker:empty{display:none}
+/* 2026-10-30 選單：「候選人文化政見」子選單（縣市長候選人、議員候選人） */
+.nav-group{position:relative;display:inline-block;margin-left:2rem}
+.nav-group-toggle{background:none;border:0;padding:0;color:inherit;font:inherit;font-size:.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem}
+.nav-group-toggle:after{content:"";width:.4rem;height:.4rem;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-.15rem) rotate(45deg)}
+.nav-group.is-current>.nav-group-toggle{color:var(--lime)}
+.nav-sub{display:none;position:absolute;top:calc(100% + .7rem);left:-1rem;min-width:11rem;background:var(--ink);border:1px solid #3c3f38;padding:.4rem 0;z-index:10;box-shadow:0 14px 28px #0005}
+.nav-group:hover .nav-sub,.nav-group:focus-within .nav-sub,.nav-group-toggle[aria-expanded="true"]+.nav-sub{display:block}
+.nav-group:hover .nav-sub:before{content:"";position:absolute;left:0;right:0;top:-.8rem;height:.8rem}
+.nav-sub a{display:block;margin:0;padding:.55rem 1rem;white-space:nowrap}
+.nav-sub a:hover{background:#262922}
+@media(min-width:761px) and (max-width:1240px){.nav-group{margin-left:1.1rem}.nav-group-toggle{font-size:.84rem}}
+@media(max-width:760px){
+  .nav-group{display:block;margin:0;border-bottom:1px solid #34372f}
+  .nav-group-toggle{padding:.8rem 0;font-size:1rem;width:100%;cursor:default}
+  .nav-group-toggle:after{display:none}
+  .nav-sub{display:block;position:static;border:0;box-shadow:none;padding:0 0 .4rem 1rem;min-width:0;background:none}
+  .nav-sub a{padding:.6rem 0;border-bottom:0}
+  .nav-sub a:hover{background:none}
+}
+/* 縣市長／議員候選人頁的切換，樣式同現任追蹤的分頁按鈕 */
+.map-switch a{font:700 .9rem/1 "Noto Sans TC","PingFang TC",sans-serif;padding:.65rem 1.1rem;color:var(--ink);text-decoration:none;margin:0}
+.map-switch a+a{border-left:1px solid var(--ink)}
+.map-switch a[aria-current="page"]{background:var(--ink);color:var(--lime)}
+.map-switch a:not([aria-current]):hover{background:var(--tint)}
+/* 縣市長列表精簡卡：頂邊用政黨色，官網主題用標籤，數字放大 */
+.cd-compact{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);border-top:6px solid var(--party,var(--ink));min-height:0;gap:.9rem;transition:background .15s}
+.cd-compact:hover{background:var(--paper)}
+.cd-compact-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1rem}
+.cd-compact .cd-compact-head h3{margin:0;font-size:1.75rem;line-height:1.15;letter-spacing:-.02em}
+.cd-party{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:700;color:var(--ink)}
+.cd-party i{width:10px;height:10px;border-radius:50%;background:var(--party,var(--ink))}
+.cd-place{margin:-.5rem 0 0;font-size:.9rem;color:var(--ink)}
+.cd-block{border-top:1px solid var(--line);padding-top:.8rem}
+.cd-label{margin:0 0 .5rem;font-size:.78rem;font-weight:800;letter-spacing:.08em;color:var(--ink)}
+.cd-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.cd-chips li{background:var(--tint);padding:.3rem .65rem;font-size:.9rem;font-weight:700;line-height:1.4}
+.cd-none{margin:0;font-size:.9rem;color:var(--muted)}
+.cd-stats{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cd-stats div{padding:.7rem 0}.cd-stats div+div{border-left:1px solid var(--line);padding-left:1rem}
+.cd-stats dt{font-size:.78rem;font-weight:700;color:var(--ink)}
+.cd-stats dd{margin:.15rem 0 0;font:800 1.9rem/1 "Noto Sans TC","PingFang TC",sans-serif}
+.cd-stats dd small{font-size:.8rem;font-weight:700;margin-left:.2rem}
+.cd-more{align-self:flex-start;margin-top:auto;font-size:.88rem;font-weight:800;color:var(--ink);border-bottom:2px solid var(--party,var(--ink));padding-bottom:.1rem}
+.cd-compact:hover .cd-more span{display:inline-block;transform:translateX(3px)}

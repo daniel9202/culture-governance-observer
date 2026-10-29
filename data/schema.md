@@ -6,7 +6,18 @@
 
 ## `candidates.csv`
 
-每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`publish_id`、`review_status`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`editor_notes`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`proposer_role`、`content_nature`、`role_evidence`、`correction_log`、`related_sources`、`policy_title`。`publish_id` 對應「審核資料」中的發布ID與「發布紀錄」中的發布ID；新資料必填，既有資料暫缺時建置會警告，從其他正式資料表遷入的既有資料亦適用舊資料警告規則。`review_status` 可為 `人工審核` 或 `AI初審待複核`；空值等同 `人工審核`。`editor_notes` 記錄本站的檢核與編輯備註，與候選人發言分開呈現；多項以 `||` 分隔，建置輸出為陣列。`policy_title` 為選填欄位，照來源原文記錄候選人自己的政策名稱；沒有明確名稱時留空，建置輸出空字串。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄候選人或團隊可核實、但未必構成承諾的公開說法。上述多項欄位皆以 `||` 分隔。候選人資料一列代表候選人自己的單一政策單元；同一政策被多則報導提到時盡量合併一列，其他來源放入 `related_sources`，避免重複收錄。`concrete_proposals` 依來源原順序與用詞以 `||` 分隔；來源有編號時保留順序但不需重複加編號。子項下的細項暫與該子項寫在一起，不另拆列或自創層級。原始資料無法細分時，`concrete_proposals` 留空，只填 `summary` 與 `policy_argument`，不得為了湊分點而硬拆。`topics` 僅作本站篩選與標籤，不用來拆解或重組候選人政策結構。`office` 目前使用 `縣市長` 與 `縣市議員` 兩種值，網站據此分別呈現於首頁與議員政見頁。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。
+每筆記錄包含：`id`、`city`、`office`、`candidate`、`party`、`publish_id`、`review_status`、`topics`、`summary`、`policy_argument`、`concrete_proposals`、`related_statements`、`editor_notes`、`published_date`、`source_title`、`source_url`、`source_type`、`last_verified`、`proposer_role`、`content_nature`、`role_evidence`、`correction_log`、`related_sources`、`policy_title`、`official_topic`、`official_subtopic`、`source_outlet`。`publish_id` 對應「審核資料」中的發布ID與「發布紀錄」中的發布ID；新資料必填，既有資料暫缺時建置會警告，從其他正式資料表遷入的既有資料亦適用舊資料警告規則。`review_status` 可為 `人工審核` 或 `AI初審待複核`；空值等同 `人工審核`。`editor_notes` 記錄本站的檢核與編輯備註，與候選人發言分開呈現；多項以 `||` 分隔，建置輸出為陣列。`policy_title` 為選填欄位，照來源原文記錄候選人自己的政策名稱；沒有明確名稱時留空，建置輸出空字串。`policy_argument` 記錄整體政策論述；`concrete_proposals` 記錄可辨識的具體措施；`related_statements` 記錄候選人或團隊可核實、但未必構成承諾的公開說法。上述多項欄位皆以 `||` 分隔。候選人資料一列代表候選人自己的單一政策單元；同一政策被多則報導提到時盡量合併一列，其他來源放入 `related_sources`，避免重複收錄。`concrete_proposals` 依來源原順序與用詞以 `||` 分隔；來源有編號時保留順序但不需重複加編號。子項下的細項暫與該子項寫在一起，不另拆列或自創層級。原始資料無法細分時，`concrete_proposals` 留空，只填 `summary` 與 `policy_argument`，不得為了湊分點而硬拆。`topics` 僅作本站篩選與標籤，不用來拆解或重組候選人政策結構。`office` 目前使用 `縣市長` 與 `縣市議員` 兩種值，網站據此分別呈現於首頁與議員政見頁。候選人官網與新聞內容重複時，以官網為主要來源，新聞列入 `related_sources` 作為輔助來源。
+
+### 候選人卡片結構（2026-10-30）
+
+候選人卡片分「官網政見」與「相關新聞」兩區，一列資料對應一張子卡。
+
+- `source_type`：官網政見區只收 `候選人官網`、`候選人官方社群`、`政黨候選人頁`；新聞一律填 `新聞報導`。舊值（`候選人原文`、`候選人官方網站`、`候選人頁`、`新聞／公開網頁`）逐步改為上述值。
+- `official_topic`：官網主題原名，照官網標題照貼，例如 `四大客家政見`。同一主題一列；散在其他列、出自同一主題頁的項目要移回該列。官網沒有分主題時留空，依內容拆列。有值時 `source_type` 必須是官網類（建置檢查）。
+- `official_subtopic`：主題底下的子計畫，例如 `新北觀光政見` 之下的 `鑽石山城計畫`；必須搭配 `official_topic`。
+- `source_outlet`：新聞媒體名稱，例如 `中央社`；官網資料留空。前台新聞子卡用 `source_title` 的新聞標題當標題、`source_outlet` 當頁尾。
+- 新聞列只放官網沒有的項目；與官網重複的項目刪除並在 `editor_notes` 註明。一句話同時含重複與獨有內容時，依忠於原文規則整句保留。
+- 獨立成卡的新聞項目，`concrete_proposals` 貼完整原句，不刪節。
 
 `published_date` 原則必填；候選人競選網站的政見頁等來源本身沒有發布日期時可以留空，但 `editor_notes` 必須包含「來源頁面沒有發布日期」，與「尚未查核」區分，前台顯示為「來源未載日期」。
 

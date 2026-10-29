@@ -21,6 +21,8 @@ CONTENT_NATURES = {"本屆競選政見", "公職政績"}
 # 現行身分狀態。判斷用，前台分頁與 related_records 驗證都讀這欄。
 # 沒有任何公職身分的候選人當一般候選人處理，不收公職政績紀錄，所以沒有「已卸任」。
 OFFICE_CATEGORIES = {"首長", "民意代表"}
+# 候選人頁「官網政見」區只收這幾種來源；official_topic 有值時 source_type 必須是其一。
+OFFICIAL_SOURCE_TYPES = {"候選人官網", "候選人官方社群", "政黨候選人頁"}
 REVIEW_STATUSES = {"人工審核", "AI初審待複核"}
 TOPIC_CATEGORY_NAMES = {
     "文化治理與預算", "文化資產", "文化場館", "表演藝術", "視覺藝術", "博物館與地方文化館",
@@ -200,6 +202,14 @@ def build_candidates():
             valid_choice(office_category, OFFICE_CATEGORIES, "office_category", label)
         elif office_category:
             valid_choice(office_category, OFFICE_CATEGORIES, "office_category", label)
+        # official_topic 是官網主題原名（例如「四大客家政見」），official_subtopic 是主題下的子計畫。
+        # 前台依這兩欄把官網資料分子標題；新聞資料兩欄都留空，以新聞標題當子卡標題。
+        official_topic = (row.get("official_topic") or "").strip()
+        official_subtopic = (row.get("official_subtopic") or "").strip()
+        if official_topic and row["source_type"] not in OFFICIAL_SOURCE_TYPES:
+            raise ValueError(f"{label}: 有 official_topic 時 source_type 必須是 {'、'.join(sorted(OFFICIAL_SOURCE_TYPES))}")
+        if official_subtopic and not official_topic:
+            raise ValueError(f"{label}: official_subtopic 需要搭配 official_topic")
         review_status = (row.get("review_status") or "").strip() or "人工審核"
         valid_choice(review_status, REVIEW_STATUSES, "review_status", label)
         related_sources = [x.strip() for x in (row.get("related_sources") or "").split("|") if x.strip()]
@@ -233,6 +243,7 @@ def build_candidates():
             "publish_id": publish_id,
             "review_status": review_status, "editor_notes": editor_notes, "public_note": public_note,
             "policy_title": row.get("policy_title") or "",
+            "official_topic": official_topic, "official_subtopic": official_subtopic, "source_outlet": (row.get("source_outlet") or "").strip(),
             "topics": topics, "topic_categories": topic_categories, "topic_subcategories": topic_subcategories,
             "summary": row["summary"], "policy_argument": argument, "concrete_proposals": proposals, "related_statements": statements, "field_sources": sources, "published_date": row["published_date"],
             "source_title": row["source_title"], "source_url": row["source_url"], "related_sources": related_sources, "source_type": row["source_type"], "last_verified": row["last_verified"],

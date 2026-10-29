@@ -143,7 +143,7 @@ def analysis_prompt(kind, row, body, tags):
 - 只輸出文化相關的主張。交通、醫療、社福、產業園區、運動設施等非文化內容不要列入 concrete_proposals；整則都不是文化政策時，is_relevant 填 false，仍要填 summary 與 reason，由審核者判斷。
 - source_sentences 與 concrete_proposals 等長，逐項放該主張所依據的來源整句原文（不刪減），供審核者對照。
 - policy_title 只填來源自己命名的政見名稱（例「文化旗艦．魅力臺中」「五大客家政策」），來源沒有命名就留空字串，不要自創。
-- policy_argument 放整體論述一句，來源沒有就留空字串。
+- policy_argument 放這位提出者在該主題上的整體方向（願景、問題意識、施政主軸；客家、原住民族專章政策的開頭背景或立場段落也算），照抄來源原句。不得與 summary 相同或只是 summary、concrete_proposals 的子句；不得是單一計畫名稱、句子片段，或「某某主張／提出……」的報導敘事句。來源沒有符合的句子就留空字串，留空是常態。
 - nature 區分語境：候選人承諾未來要做的事填「本屆競選政見」；現任首長或議員敘述任內已完成或正在做的事（例「市府已將客語繪本改編為動畫、累計獲得 13 項國際獎項」）填「現任施政成果」；其餘填「其他」。同一則若兩種都有，concrete_proposals 只放承諾未來要做的，已完成的成果放 policy_argument。
 - event_key 不得留空，也不得包含日期（同一場發布會的不同報導日期不同，帶日期就分不到同一組）。用「提出者姓名＋政見名稱」組成、去掉標點與空白（例「江啟臣文化旗艦魅力臺中」）；同一場發布會的不同報導必須得到相同的 event_key。沒有政見名稱時改用「姓名＋主要主張的關鍵詞」。
 - topics 從下列清單挑 1 至 5 個，不得自創：{'、'.join(tags)}。
@@ -235,7 +235,7 @@ def append_to_sheet(ws, start, output):
     回報成功、列數增加，但資料沒有落在任何一列，是會靜默掉資料的寫法。
     改成自己算出第一個空白列，寫固定範圍，再讀回確認網址真的在表上。
     """
-    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    device = os.environ.get('DEVICE_LABEL') or f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
     completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     # 一般模式原本不填 U/V/X，審核台會看到空白的處理狀態；一併補上。
     rows = [list(row[:20]) + ["complete", device, "", completed_at, "", ""] + list(row[20:]) for row in output]
@@ -256,38 +256,11 @@ def append_to_sheet(ws, start, output):
 
 
 def inbox_rows():
-    for filename, kind in (("candidate_sources.csv", "candidate"),
-                           ("councilor_sources.csv", "candidate"),
-                           ("civic_policy_calls.csv", "civic_call")):
+    for filename, kind in (("candidate_sources.csv", "candidate"), ("civic_policy_calls.csv", "civic_call")):
         with (ROOT / "data" / "inbox" / filename).open(encoding="utf-8-sig", newline="") as source:
             for row in csv.DictReader(source):
                 if row.get("review_status") == "pending":
                     yield kind, row
-
-
-def append_pending_without_analysis(ws, filename):
-    """把單一 inbox 的 pending 列送入 Sheet，AI 欄位留空供 --export-pending 使用。"""
-    path = ROOT / "data" / "inbox" / filename
-    if path.parent != ROOT / "data" / "inbox" or not path.exists():
-        raise SystemExit(f"找不到 inbox：{filename}")
-    values = ws.get_all_values()
-    if not values or values[0][:len(HEADERS)] != HEADERS:
-        raise SystemExit("Google Sheet 欄位不符，停止寫入")
-    ensure_extra_headers(ws, values)
-    existing = {row[6].strip() for row in values[1:] if len(row) > 6 and row[6].strip()}
-    output = []
-    with path.open(encoding="utf-8-sig", newline="") as source:
-        for row in csv.DictReader(source):
-            if row.get("review_status") != "pending" or row.get("source_url", "").strip() in existing:
-                continue
-            output.append(["候選人政見", row["collected_at"], row["city"], row["published_date"],
-                           row["source_name"], row["source_title"], row["source_url"], "pending",
-                           "", "", "", "", "", "", "", "", row.get("review_note", ""), "", "", "",
-                           "", "", "", "", ""])
-            existing.add(row["source_url"].strip())
-    if output:
-        append_to_sheet(ws, last_data_row(values) + 1, output)
-    print(f"Google review sheet pending append: appended={len(output)}", flush=True)
 
 
 def sheets_batch_update_with_retry(ws, updates: list[dict]) -> None:
@@ -394,7 +367,7 @@ def import_results(ws, path: Path):
     values = ws.get_all_values()
     columns = {name: index for index, name in enumerate(values[0])}
     tags = set(topic_tags())
-    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    device = os.environ.get('DEVICE_LABEL') or f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
     completed_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     items, problems = [], []
     for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
@@ -445,7 +418,7 @@ def reanalyze_sheet(ws, client: OpenAI, limit: int | None, row_numbers: set[int]
     if missing:
         raise SystemExit(f"Google Sheet 缺少欄位：{', '.join(missing)}")
     kind_by_label = {label: kind for kind, label in KIND_LABELS.items()}
-    device = f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
+    device = os.environ.get('DEVICE_LABEL') or f"{os.environ.get('COMPUTERNAME') or os.environ.get('HOSTNAME') or 'UNKNOWN'}-Codex"
     attempted = completed = failed = skipped = matched = 0
     pending_updates = []
     pending_results = []
@@ -557,7 +530,6 @@ def main():
     parser.add_argument("--include-accepted", action="store_true", help="連已接受的列也處理（重跑時不覆蓋候選人、政黨、職務、人工備註這四個人工審核過的欄位）")
     parser.add_argument("--body-limit", type=int, default=EXPORT_BODY_LIMIT, help=f"匯出時每則正文的字數上限（預設 {EXPORT_BODY_LIMIT}）")
     parser.add_argument("--import-results", metavar="FILE", help="把外部分析結果（JSONL）驗證後寫回 Sheet")
-    parser.add_argument("--append-pending", metavar="INBOX_FILE", help="不呼叫模型，只把指定 inbox 的 pending 列送入 Sheet")
     parser.add_argument("--chunk", type=int, default=20, help="一般模式每幾列寫一次 Sheet（預設 20），桌面版跑長指令時調小比較看得到進度")
     args = parser.parse_args()
     if args.limit is not None and args.limit < 1:
@@ -572,8 +544,8 @@ def main():
         parser.error("--chunk 必須大於 0")
     if args.offset and not (args.reanalyze or args.export_pending):
         parser.error("--offset 只能搭配 --reanalyze 或 --export-pending")
-    if sum(bool(value) for value in (args.export_pending, args.import_results, args.append_pending)) > 1:
-        parser.error("--export-pending、--import-results、--append-pending 不能同時使用")
+    if args.export_pending and args.import_results:
+        parser.error("--export-pending 與 --import-results 不能同時使用")
     if args.offset < 0:
         parser.error("--offset 不可為負數")
     def parse_rows(text):
@@ -600,9 +572,6 @@ def main():
         parser.error("--rows 列號必須大於等於 2")
     ws = worksheet()
     # 匯出／匯入完全不碰模型，不要求 OPENAI_API_KEY
-    if args.append_pending:
-        append_pending_without_analysis(ws, args.append_pending)
-        return
     if args.export_pending:
         export_pending(ws, Path(args.export_pending), row_numbers, args.force, args.offset, args.limit, args.body_limit, args.include_accepted)
         return
