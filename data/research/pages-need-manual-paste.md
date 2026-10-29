@@ -7,3 +7,4 @@
 | 劉芩妤 | `candidate-tc-councilor-liu-qin-yu-001` | https://www.tpp.org.tw/election2026/candidatedetail.php?cid=167 | 網頁回應 403，無法讀取。 | 文化主題名稱、原文、子項與小標題。 |
 | 李玫 | `candidate-hcc-councilor-li-mei-001` | https://www.tpp.org.tw/election2026/candidatedetail.php?cid=200 | 網頁回應 403，無法讀取。 | 文化主題名稱、原文、子項與小標題。 |
 | 林于凱 | `candidate-khh-councilor-lin-yu-kai-001` | https://www.tpp.org.tw/election2026/candidatedetail.php?cid=187 | 網頁回應 403，無法讀取。 | 文化主題名稱、原文、子項與小標題。 |
+| 林政賢 | `candidate-tyc-councilor-lin-cheng-hsien-cultural-governance-001` | https://tyenews.com/2026/09/1402151/ | 已讀到文章，但本次取得的內容未涵蓋文化政策段落；依每網址一次規則不重試。 | 閩南事務處、南門市場相關段落的完整原句。 |
