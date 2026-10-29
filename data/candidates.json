@@ -2490,9 +2490,11 @@
       "party": "台灣民眾黨",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜來源僅列政見短語；「原青返鄉築夢」未顯示文化內容，故移除；原摘要及具體主張為轉述，改為來源文字。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "族語扎根傳承",
       "official_topic": "",
       "official_subtopic": "",
       "source_outlet": "",
@@ -2510,11 +2512,10 @@
         "青年"
       ],
       "topic_subcategories": [],
-      "summary": "提出「族語扎根傳承」與「原青返鄉築夢」，以教育、日常使用與青年返鄉支持原住民族語言及文化延續。",
+      "summary": "族語扎根傳承",
       "policy_argument": "",
       "concrete_proposals": [
-        "推動族語扎根傳承。",
-        "支持原住民青年返鄉築夢。"
+        "族語扎根傳承"
       ],
       "related_statements": [],
       "field_sources": {
@@ -2550,7 +2551,8 @@
       "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
-        "2026-10-03｜合併 candidate-changhua-councilor-kao-tsai-ling-language-001 的同一官方候選人頁內容；保留既有 ID，補入原青返鄉築夢。"
+        "2026-10-03｜合併 candidate-changhua-councilor-kao-tsai-ling-language-001 的同一官方候選人頁內容；保留既有 ID，補入原青返鄉築夢。",
+        "2026-10-30｜依政黨候選人頁原文修正摘要與具體主張，移除未明示文化內容的項目。"
       ]
     },
     {
