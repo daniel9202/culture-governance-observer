@@ -235,7 +235,7 @@ window.loadCandidateDataset=async({districts=false}={})=>{
     return `<section class="cd-sub">${subTags([record])}<h3>${esc(headline)}</h3>${argumentBox([record])}${proposalList([record])}${subFoot([{url:record.source_url,label:outlet||'新聞來源'},...(record.related_sources||[]).map(source=>typeof source==='string'?{url:source,label:'其他報導'}:{url:source.url,label:source.title||'其他報導'})],record.published_date)}</section>`;
   };
   const zone=(title,content,emptyText)=>`<section class="cd-zone"><h3 class="cd-zone-title">${esc(title)}</h3>${content||`<p class="cd-empty">${esc(emptyText)}</p>`}</section>`;
-  window.candidateSummaryCounts=x=>{const records=x.records||[];return {proposals:records.reduce((sum,record)=>sum+recordProposals(record).length,0),news:records.filter(record=>!isOfficialRecord(record)).length,officialTopics:uniqueValues(records.filter(isOfficialRecord).map(record=>record.official_topic||record.policy_title||newsParts(record).headline))}};
+  window.candidateSummaryCounts=x=>{const records=x.records||[];return {proposals:records.reduce((sum,record)=>sum+recordProposals(record).length,0),news:records.filter(record=>!isOfficialRecord(record)).length,officialTopics:uniqueValues(records.filter(isOfficialRecord).map(record=>record.official_topic||record.policy_title||newsParts(record).headline)),newsTopics:uniqueValues(records.filter(record=>!isOfficialRecord(record)).map(record=>record.policy_title))}};
   // 候選人頁：完整卡片。
   window.renderCandidateDetail=(x,{openShared=true}={})=>{
     const records=x.records||[],official=records.filter(isOfficialRecord),news=records.filter(record=>!isOfficialRecord(record));
@@ -248,9 +248,9 @@ window.loadCandidateDataset=async({districts=false}={})=>{
   window.PARTY_COLOR_MAP=window.PARTY_COLOR_MAP||{};
   // 縣市長列表：精簡卡，整張連到候選人頁。
   window.renderCandidateCompact=x=>{
-    const {proposals,news,officialTopics}=candidateSummaryCounts(x),color=PARTY_COLOR_MAP[x.party]?.color;
+    const {proposals,news,officialTopics,newsTopics}=candidateSummaryCounts(x),color=PARTY_COLOR_MAP[x.party]?.color;
     const shared=(x.shared_policies||[]).length?`<div class="cd-block"><p class="cd-label">共同政見</p><ul class="cd-chips">${x.shared_policies.map(policy=>`<li>${esc(policy.title)}</li>`).join('')}</ul></div>`:'';
     const topics=officialTopics.length?`<ul class="cd-chips">${officialTopics.map(topic=>`<li>${esc(topic)}</li>`).join('')}</ul>`:'<p class="cd-none">尚未收錄</p>';
-    return `<a class="card cd-compact" href="${esc(candidateUrl(x))}"${color?` style="--party:${esc(color)}"`:''}><div class="cd-compact-head"><h3>${esc(x.candidate)}</h3><span class="cd-party"><i></i>${esc(x.party||'政黨待確認')}</span></div><p class="cd-place">${esc([x.city,x.district?districtFullLabel(x):'',x.office].filter(Boolean).join(' · '))}</p><div class="cd-block"><p class="cd-label">官網政見</p>${topics}</div>${shared}<dl class="cd-stats"><div><dt>收錄政見</dt><dd>${proposals}<small>項</small></dd></div><div><dt>相關新聞</dt><dd>${news}<small>則</small></dd></div></dl><span class="cd-more">看文化政見與來源 <span aria-hidden="true">→</span></span></a>`;
+    return `<a class="card cd-compact" href="${esc(candidateUrl(x))}"${color?` style="--party:${esc(color)}"`:''}><div class="cd-compact-head"><h3>${esc(x.candidate)}</h3><span class="cd-party"><i></i>${esc(x.party||'政黨待確認')}</span></div><p class="cd-place">${esc([x.city,x.district?districtFullLabel(x):'',x.office].filter(Boolean).join(' · '))}</p><div class="cd-block"><p class="cd-label">官網政見</p>${topics}</div>${newsTopics.length?`<div class="cd-block"><p class="cd-label">新聞報導的政見</p><ul class="cd-chips cd-chips-news">${newsTopics.map(topic=>`<li>${esc(topic)}</li>`).join('')}</ul></div>`:''}${shared}<dl class="cd-stats"><div><dt>收錄政見</dt><dd>${proposals}<small>項</small></dd></div><div><dt>相關新聞</dt><dd>${news}<small>則</small></dd></div></dl><span class="cd-more">看文化政見與來源 <span aria-hidden="true">→</span></span></a>`;
   };
 }

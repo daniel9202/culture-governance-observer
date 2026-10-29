@@ -480,6 +480,7 @@ main>.section:first-child,.method{padding-top:4rem}
 .cd-label{margin:0 0 .5rem;font-size:.78rem;font-weight:800;letter-spacing:.08em;color:var(--ink)}
 .cd-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
 .cd-chips li{background:var(--tint);padding:.3rem .65rem;font-size:.9rem;font-weight:700;line-height:1.4}
+.cd-chips-news li{background:transparent;border:1px solid var(--line);font-weight:600}
 .cd-none{margin:0;font-size:.9rem;color:var(--muted)}
 .cd-stats{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .cd-stats div{padding:.7rem 0}.cd-stats div+div{border-left:1px solid var(--line);padding-left:1rem}
