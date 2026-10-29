@@ -606,10 +606,12 @@
       "party": "無黨籍",
       "publish_id": "",
       "review_status": "AI初審待複核",
-      "editor_notes": [],
+      "editor_notes": [
+        "原具體措施為摘要改寫，非來源原句，已移除；官網首頁為一段敘述，未強拆分點。"
+      ],
       "public_note": "",
       "policy_title": "",
-      "official_topic": "",
+      "official_topic": "觀光文化・在地經濟",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -630,14 +632,9 @@
         "文化空間與城市再生"
       ],
       "topic_subcategories": [],
-      "summary": "以萬華歷史街區為基礎，串連廟宇、市場、歷史行業與街區故事，發展文化結合科技的導覽體驗，讓文化保存帶動在地經濟。",
+      "summary": "以艋舺的歷史、信仰與街區故事為底蘊，串連在地店家與觀光動線，推動文化結合科技的導覽體驗，帶動在地經濟，把萬華的故事好好說給世界聽。",
       "policy_argument": "",
-      "concrete_proposals": [
-        "串連艋舺歷史、信仰與街區故事。",
-        "連結在地店家與觀光動線。",
-        "推動文化結合科技的導覽體驗。",
-        "把文化保存轉化為在地經濟的長期支撐。"
-      ],
+      "concrete_proposals": [],
       "related_statements": [
         "主張讓萬華的故事被好好說給世界聽。"
       ],
@@ -665,14 +662,16 @@
       "source_title": "陳力新官方網站：觀光文化・在地經濟",
       "source_url": "https://www.lishin.taipei/",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30：依官網首頁原文重整主題與摘要，移除改寫的具體措施。"
+      ]
     },
     {
       "id": "candidate-phh-councilor-hsu-kuo-cheng-cultural-market-001",
@@ -6298,7 +6297,7 @@
       ],
       "public_note": "",
       "policy_title": "六大客家政策",
-      "official_topic": "",
+      "official_topic": "六大客家政策",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -6362,7 +6361,7 @@
         "https://tw.news.yahoo.com/%E6%9D%8E%E5%9B%9B%E5%B7%9D%E6%8F%90%E5%AE%A2%E5%AE%B6%E6%94%BF%E8%A6%8B-%E5%85%81%E5%84%AA%E5%8C%96%E5%AE%A2%E8%AA%9E%E6%95%99%E8%82%B2%E5%B8%AB%E8%B3%87%E7%92%B0%E5%A2%83-%E5%9C%96-122859033.html",
         "https://cnews.com.tw/248261011a01/"
       ],
-      "source_type": "候選人官方網站",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -6370,7 +6369,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-27 移除具體主張開頭的來源項次編號"
+        "2026-10-27 移除具體主張開頭的來源項次編號",
+        "2026-10-30｜依新卡片結構補官網主題，來源類型統一為候選人官網。"
       ]
     },
     {
@@ -6383,13 +6383,15 @@
       "review_status": "人工審核",
       "editor_notes": [
         "同一政見有 3 則來源，內容合併後以",
-        "分項，重複者不重列"
+        "分項，重複者不重列",
+        "保留的兩項含官網沒有的內容（文化幣用途、藝術節串聯的場館與巨蛋城），依計畫整句保留。",
+        "第 2 項的「……」待回中央社原文補完整句。"
       ],
       "public_note": "",
       "policy_title": "文化三策：文化幣、新北國際藝術節、創作免場租",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "中央社 CNA",
       "topics": [
         "美術館",
         "文化場館",
@@ -6413,7 +6415,8 @@
       "summary": "每年發放15萬份「新北文化幣」，每份價值新台幣600元，可用於觀賞舞蹈、舞台劇、電影，或購書、逛展覽及參與新北各項藝文活動。",
       "policy_argument": "",
       "concrete_proposals": [
-        "每年發放15萬份「新北文化幣」，每份價值新台幣600元，可用於觀賞舞蹈、舞台劇、電影，或購書、逛展覽及參與新北各項藝文活動。 打造「新北國際藝術節」，讓優秀藝文團隊站上更大舞台；……他將串聯新北美術館、藝文場館、特色街區、山海河岸及未來的新北巨蛋城，邀國際團隊來新北，也讓世界看見新北。 盤點閒置或可活化的公有空間，讓在地團隊免費進駐。"
+        "每年發放15萬份「新北文化幣」，每份價值新台幣600元，可用於觀賞舞蹈、舞台劇、電影，或購書、逛展覽及參與新北各項藝文活動。",
+        "打造「新北國際藝術節」，讓優秀藝文團隊站上更大舞台；……他將串聯新北美術館、藝文場館、特色街區、山海河岸及未來的新北巨蛋城，邀國際團隊來新北，也讓世界看見新北。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -6451,14 +6454,17 @@
         "https://udn.com/news/story/124652/9778812",
         "https://today.line.me/tw/v3/article/VxpqLDV?view=topic&referral=TOPIC-Election"
       ],
-      "source_type": "新聞／公開網頁",
+      "source_type": "新聞報導",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜官網「李四川挺文化」頁已收文化三策（candidate-ntpc-mayor-lee-sichuan-culture-001）；刪除與官網相同的「盤點閒置或可活化的公有空間，讓在地團隊免費進駐。」，原以空白分隔的項目改用",
+        "分項；來源類型改為新聞報導。"
+      ]
     },
     {
       "id": "candidate-auto-432ac2696cc5",
@@ -16570,6 +16576,86 @@
       "office_category": "",
       "current_office": "",
       "corrections": []
+    },
+    {
+      "id": "candidate-ntpc-mayor-lee-sichuan-culture-001",
+      "city": "新北市",
+      "office": "縣市長",
+      "candidate": "李四川",
+      "party": "中國國民黨",
+      "publish_id": "candidate-ntpc-mayor-lee-sichuan-culture-001",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期，published_date 留空。",
+        "同頁另有六大客家政策（candidate-auto-2290ebb1fc91）與其他非文化圖卡，不收錄。",
+        "天主教育化民族舞蹈團的故事為舉例，不列為政見；「補助是政府給的，買票是市民給的」「舞團缺的常常不是掌聲，是一間排練室」「做工程的人都知道……」等為說明與結語，不收錄。",
+        "summary 由原文「所以我提出新北文化三策」與三策小標接成，未改字。"
+      ],
+      "public_note": "",
+      "policy_title": "新北文化三策",
+      "official_topic": "李四川挺文化",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化近用",
+        "藝文節慶",
+        "國際文化交流",
+        "表演藝術",
+        "空間活化"
+      ],
+      "topic_categories": [
+        "文化平權與參與",
+        "藝文節慶",
+        "國際與兩岸交流",
+        "表演藝術",
+        "文化空間與城市再生"
+      ],
+      "topic_subcategories": [],
+      "summary": "所以我提出新北文化三策：文化幣600元，讓市民走進文化；新北國際藝術節，讓世界看見新北；創作免場租，讓人才留在新北。",
+      "policy_argument": "文化，是把地方的生命力帶向世界。說實在，文化不是只有大場館、大活動。是一群人在一個地方扎根幾十年，把地方的故事變成作品。",
+      "concrete_proposals": [
+        "文化幣600元，讓市民走進文化：每年規劃15萬份，設籍新北、不限年齡，抽籤發放。",
+        "新北國際藝術節，讓世界看見新北：把國際團隊請進來，也把新北的團隊送出去。",
+        "創作免場租，讓人才留在新北：盤點閒置或可活化的公有空間，讓在地團隊免費進駐。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "李四川競選政策頁｜李四川挺文化",
+            "url": "https://portaly.cc/hammerlee/pages/culture"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "李四川競選政策頁｜李四川挺文化",
+            "url": "https://portaly.cc/hammerlee/pages/culture"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "李四川競選政策頁｜李四川挺文化",
+            "url": "https://portaly.cc/hammerlee/pages/culture"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "李四川競選政策頁｜李四川挺文化",
+      "source_url": "https://portaly.cc/hammerlee/pages/culture",
+      "related_sources": [
+        "https://www.cna.com.tw/news/aipl/202609260169.aspx",
+        "https://udn.com/news/story/124652/9778812"
+      ],
+      "source_type": "候選人官網",
+      "last_verified": "2026-10-30",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-10-30｜依使用者貼上的官網「李四川挺文化」圖卡原文新增。"
+      ]
     },
     {
       "id": "candidate-auto-2a00c5a3f274",
