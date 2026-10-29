@@ -449,3 +449,6 @@ main>.section:first-child,.method{padding-top:4rem}
 .method>h1:first-child{margin-top:0}
 .page-intro+.section{padding-top:3rem}
 @media(max-width:760px){main>.section:first-child,.method{padding-top:3rem}}
+/* 2026-10-30 小標不用橘色英文：只留中文的位置說明（縣市／職務），改灰色 */
+.kicker,.map-detail .kicker{font:700 .82rem/1.4 "Noto Sans TC","PingFang TC",sans-serif;letter-spacing:.04em;color:var(--muted)}
+.kicker:empty{display:none}
