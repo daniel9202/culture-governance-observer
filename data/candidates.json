@@ -5573,76 +5573,6 @@
       ]
     },
     {
-      "id": "candidate-ylc-councilor-chen-chieh-lin-indigenous-culture-001",
-      "city": "宜蘭縣",
-      "office": "縣市議員",
-      "candidate": "陳傑麟",
-      "party": "親民黨",
-      "publish_id": "",
-      "review_status": "AI初審待複核",
-      "editor_notes": [
-        "未載明：部落旅遊路線、祭儀補助額度、文化詮釋、社區參與機制、期程"
-      ],
-      "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
-      "official_subtopic": "",
-      "source_outlet": "",
-      "topics": [
-        "原住民族文化",
-        "文化觀光",
-        "傳統祭儀",
-        "文化健康"
-      ],
-      "topic_categories": [
-        "原住民族文化",
-        "文化觀光",
-        "民俗節慶",
-        "高齡與世代共融"
-      ],
-      "topic_subcategories": [],
-      "summary": "提出推廣部落生態旅遊與文化體驗，並爭取經費擴大傳統祭儀及運動賽事，另規劃為文化健康站爭取長照經費及改善據點。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "協助文化健康站爭取長照經費並改善基礎設施及社區關懷據點。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "陳傑麟 2026候選人政見",
-            "url": "https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "陳傑麟 2026候選人政見",
-            "url": "https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "陳傑麟 2026候選人政見",
-            "url": "https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005"
-          }
-        ]
-      },
-      "published_date": "2026-10-02",
-      "source_title": "陳傑麟 2026候選人政見",
-      "source_url": "https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005",
-      "related_sources": [],
-      "source_type": "候選人原文",
-      "last_verified": "2026-10-02",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "office_category": "",
-      "current_office": "",
-      "corrections": [
-        "2026-10-02｜中選會名冊核對為宜蘭縣第12選舉區親民黨候選人；親民黨候選人頁明列部落文化體驗、傳統祭儀與文化健康站措施，完成人工審核。"
-      ]
-    },
-    {
       "id": "candidate-hcc-councilor-lo-mei-wen-military-village-001",
       "city": "新竹縣",
       "office": "縣市議員",
@@ -11215,10 +11145,12 @@
       "party": "親民黨",
       "publish_id": "candidate-auto-0277960ed4f2",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜依頁面兩項原始條列分開，摘要改為第一項原文。"
+      ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
+      "policy_title": "部落觀光與文化傳承",
+      "official_topic": "部落觀光與文化傳承",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -11232,10 +11164,11 @@
         "文化觀光"
       ],
       "topic_subcategories": [],
-      "summary": "行銷生態旅遊：督促縣府推廣部落生態旅遊與文化體驗，創造地方就業機會。 支持歲時祭儀：爭取縣府經費，協助鄉公所擴大辦理各項運動賽事與傳統祭儀。",
+      "summary": "行銷生態旅遊：督促縣府推廣部落生態旅遊與文化體驗，創造地方就業機會。",
       "policy_argument": "",
       "concrete_proposals": [
-        "行銷生態旅遊：督促縣府推廣部落生態旅遊與文化體驗，創造地方就業機會。 支持歲時祭儀：爭取縣府經費，協助鄉公所擴大辦理各項運動賽事與傳統祭儀。"
+        "行銷生態旅遊：督促縣府推廣部落生態旅遊與文化體驗，創造地方就業機會。",
+        "支持歲時祭儀：爭取縣府經費，協助鄉公所擴大辦理各項運動賽事與傳統祭儀。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -11262,14 +11195,16 @@
       "source_title": "youth.pfpnext.com｜陳傑麟 2026候選人政見",
       "source_url": "https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
+      "source_type": "政黨候選人頁",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜更正來源類型、補主題，依頁面原項目分列。"
+      ]
     },
     {
       "id": "candidate-auto-677fe1de9b61",

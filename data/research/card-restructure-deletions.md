@@ -9,3 +9,6 @@
 - `candidate-ntpc-councilor-kan-chung-wei-cultural-landscape-001`（甘崇緯）
   - editor_notes：2026-10-30｜來源的畢旅與文化地景內容屬頁面上另一位候選人王振庭，非甘崇緯；移除誤歸屬的整列。
   - correction_log：2026-10-30｜依台灣綠黨候選人介紹核對發言人後刪除誤植；來源 https://web.greenparty.org.tw/posts/news/2026candidate/ 。
+- `candidate-ylc-councilor-chen-chieh-lin-indigenous-culture-001`（陳傑麟）
+  - editor_notes：2026-10-30｜既存具體主張僅為文化健康站長照經費及設施，屬長照與社福而非文化措施；不補回先前已移除的其他項目，移除整列。
+  - correction_log：2026-10-30｜依收錄範圍移除非文化整列；來源 https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005 。
