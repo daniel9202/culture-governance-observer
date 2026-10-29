@@ -452,3 +452,22 @@ main>.section:first-child,.method{padding-top:4rem}
 /* 2026-10-30 小標不用橘色英文：只留中文的位置說明（縣市／職務），改灰色 */
 .kicker,.map-detail .kicker{font:700 .82rem/1.4 "Noto Sans TC","PingFang TC",sans-serif;letter-spacing:.04em;color:var(--muted)}
 .kicker:empty{display:none}
+/* 2026-10-30 選單：「候選人文化政見」子選單（縣市長候選人、議員候選人） */
+.nav-group{position:relative;display:inline-block;margin-left:2rem}
+.nav-group-toggle{background:none;border:0;padding:0;color:inherit;font:inherit;font-size:.92rem;cursor:pointer;display:inline-flex;align-items:center;gap:.35rem}
+.nav-group-toggle:after{content:"";width:.4rem;height:.4rem;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-.15rem) rotate(45deg)}
+.nav-group.is-current>.nav-group-toggle{color:var(--lime)}
+.nav-sub{display:none;position:absolute;top:calc(100% + .7rem);left:-1rem;min-width:11rem;background:var(--ink);border:1px solid #3c3f38;padding:.4rem 0;z-index:10;box-shadow:0 14px 28px #0005}
+.nav-group:hover .nav-sub,.nav-group:focus-within .nav-sub,.nav-group-toggle[aria-expanded="true"]+.nav-sub{display:block}
+.nav-group:hover .nav-sub:before{content:"";position:absolute;left:0;right:0;top:-.8rem;height:.8rem}
+.nav-sub a{display:block;margin:0;padding:.55rem 1rem;white-space:nowrap}
+.nav-sub a:hover{background:#262922}
+@media(min-width:761px) and (max-width:1240px){.nav-group{margin-left:1.1rem}.nav-group-toggle{font-size:.84rem}}
+@media(max-width:760px){
+  .nav-group{display:block;margin:0;border-bottom:1px solid #34372f}
+  .nav-group-toggle{padding:.8rem 0;font-size:1rem;width:100%;cursor:default}
+  .nav-group-toggle:after{display:none}
+  .nav-sub{display:block;position:static;border:0;box-shadow:none;padding:0 0 .4rem 1rem;min-width:0;background:none}
+  .nav-sub a{padding:.6rem 0;border-bottom:0}
+  .nav-sub a:hover{background:none}
+}
