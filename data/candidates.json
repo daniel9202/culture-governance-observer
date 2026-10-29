@@ -4501,10 +4501,10 @@
         "具體主張部分項目依使用者審閱改寫"
       ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "加強規劃促進觀光",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "Newtalk新聞",
       "topics": [
         "文化觀光",
         "地方文化",
@@ -4568,11 +4568,12 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "官方頁尚未逐項列出量化目標、完成期限與執行分工。"
+        "官方頁尚未逐項列出量化目標、完成期限與執行分工。",
+        "2026-10-30｜改貼官網原句；移除未明示文化內容的商圈、夜間經濟、市場轉型與青年創業項目。"
       ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
+      "policy_title": "鳳山文史觀光廊帶",
+      "official_topic": "鳳山創生・商圈文史活力",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -4591,13 +4592,10 @@
         "青年"
       ],
       "topic_subcategories": [],
-      "summary": "主張振興鳳山商圈與夜間經濟、推動傳統市場現代化與市場用地轉型，並發展鳳山文史觀光廊帶及青年創業扎根。",
+      "summary": "鳳山文史觀光廊帶",
       "policy_argument": "",
       "concrete_proposals": [
-        "振興鳳山商圈與夜間經濟。",
-        "推動傳統市場現代化與市場用地轉型新生。",
-        "發展鳳山文史觀光廊帶。",
-        "支援青年創業與扎根。"
+        "鳳山文史觀光廊帶"
       ],
       "related_statements": [],
       "field_sources": {
@@ -4624,7 +4622,7 @@
       "source_title": "陳慧文2026政見與歷屆政見",
       "source_url": "https://www.huiwen.tw/vision.html",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -4632,7 +4630,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為高雄市第9選舉區、民主進步黨候選人；候選人官網收錄2026政見並完成人工審核。"
+        "2026-10-01｜中選會名冊核對為高雄市第9選舉區、民主進步黨候選人；候選人官網收錄2026政見並完成人工審核。",
+        "2026-10-30｜依官網更正來源分類與主題，移除非文化項目並修正轉述。"
       ]
     },
     {
@@ -5003,11 +5002,12 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：巡迴路線、場次、合作單位、經費、執行期程"
+        "未載明：巡迴路線、場次、合作單位、經費、執行期程",
+        "2026-10-30｜原摘要及主張為轉述，改貼官網原文。"
       ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
+      "policy_title": "《美力台灣3D》電影車穿梭高雄帶來愛與幸福",
+      "official_topic": "服務政見",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -5020,10 +5020,10 @@
         "影視與流行音樂"
       ],
       "topic_subcategories": [],
-      "summary": "主張讓《美力台灣3D》電影車穿梭高雄，以行動放映提供市民接觸影像藝術與文化內容的機會。",
+      "summary": "《美力台灣3D》電影車穿梭高雄帶來愛與幸福",
       "policy_argument": "",
       "concrete_proposals": [
-        "讓《美力台灣3D》電影車穿梭高雄。"
+        "《美力台灣3D》電影車穿梭高雄帶來愛與幸福"
       ],
       "related_statements": [],
       "field_sources": {
@@ -5050,7 +5050,7 @@
       "source_title": "黃柏霖市議員｜服務政見",
       "source_url": "https://alin.ar.com.tw/",
       "related_sources": [],
-      "source_type": "候選人原文",
+      "source_type": "候選人官網",
       "last_verified": "2026-10-01",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -5058,7 +5058,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-01｜中選會名冊核對為高雄市第7選舉區、中國國民黨候選人；候選人官方網站以「再四年」列為服務政見並明列電影車措施，完成人工審核。"
+        "2026-10-01｜中選會名冊核對為高雄市第7選舉區、中國國民黨候選人；候選人官方網站以「再四年」列為服務政見並明列電影車措施，完成人工審核。",
+        "2026-10-30｜依官網修正來源分類、標題及原文。"
       ]
     },
     {
@@ -15338,73 +15339,6 @@
       "corrections": [
         "2026-10-28 由現任首長施政改列本屆競選政見"
       ]
-    },
-    {
-      "id": "candidate-auto-c12c42b45001",
-      "city": "高雄市",
-      "office": "縣市議員",
-      "candidate": "陳慧文",
-      "party": "民主進步黨",
-      "publish_id": "candidate-auto-c12c42b45001",
-      "review_status": "人工審核",
-      "editor_notes": [],
-      "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
-      "official_subtopic": "",
-      "source_outlet": "",
-      "topics": [
-        "眷村文化",
-        "藝文活動",
-        "傳統市場",
-        "文化觀光"
-      ],
-      "topic_categories": [
-        "文化資產",
-        "文化平權與參與",
-        "地方文化與社區營造",
-        "文化觀光"
-      ],
-      "topic_subcategories": [],
-      "summary": "鳳山文史觀光廊帶。 || 閒置空間再造，眷村懷舊探索、工業區轉型，成立鳳山創意產業育成中心。 || 設旅遊中心，整合旅遊景點，串聯藝文，市場與街區，包裝鳳山城市美學。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "閒置空間再造，眷村懷舊探索、工業區轉型，成立鳳山創意產業育成中心。",
-        "設旅遊中心，整合旅遊景點，串聯藝文，市場與街區，包裝鳳山城市美學。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "www.huiwen.tw｜陳慧文2026政見與歷屆政見",
-            "url": "https://www.huiwen.tw/vision.html"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "www.huiwen.tw｜陳慧文2026政見與歷屆政見",
-            "url": "https://www.huiwen.tw/vision.html"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "www.huiwen.tw｜陳慧文2026政見與歷屆政見",
-            "url": "https://www.huiwen.tw/vision.html"
-          }
-        ]
-      },
-      "published_date": "2026-09-09",
-      "source_title": "www.huiwen.tw｜陳慧文2026政見與歷屆政見",
-      "source_url": "https://www.huiwen.tw/vision.html",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": []
     },
     {
       "id": "candidate-auto-a130a3fa1e28",
