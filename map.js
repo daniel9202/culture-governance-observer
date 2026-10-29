@@ -360,12 +360,12 @@ function incumbentCard(item){
 }
 
 function candidateCard(item,{district=true}={}){
-  const party=partyInfo(item.party);
+  const party=partyInfo(item.party),counts=candidateSummaryCounts(item);
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
   return `<a class="map-candidate" href="${esc(candidateUrl(item))}" style="${partyStyle(party)}">
-    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${district&&item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div><strong>${item.recordCount}<small>筆紀錄</small></strong></div>
-    <div class="map-topics">${topicTagList(item).slice(0,6).map(topic=>`<span>${esc(topic)}</span>`).join('')}${shared}</div>
-    <span class="map-candidate-more">看政見與來源 →</span>
+    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${district&&item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div></div>
+    <p class="map-count">收錄 ${counts.proposals} 項政見 · 相關新聞 ${counts.news} 則</p>${shared?`<div class="map-topics">${shared}</div>`:''}
+    <span class="map-candidate-more">看文化政見與來源 →</span>
   </a>`;
 }
 

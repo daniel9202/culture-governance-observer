@@ -23,7 +23,8 @@ function render(){
     const note=document.getElementById('incumbentNote')||count.insertAdjacentElement('afterend',Object.assign(document.createElement('p'),{id:'incumbentNote',className:'incumbent-note'}));
     note.innerHTML=incumbentLink(city?(incumbents.get(city)||new Set).size:[...incumbents.values()].reduce((sum,names)=>sum+names.size,0),city);
   }
-  cards.innerHTML=rows.map(x=>renderCandidateCard(x)).join('');
+  // 縣市長列表用精簡卡（2026-10-30），完整內容在候選人頁；議員列表暫維持原卡片。
+  cards.innerHTML=rows.map(x=>isCouncilorPage?renderCandidateCard(x):renderCandidateCompact(x)).join('');
   empty.hidden=rows.length>0;
 }
 loadCandidateDataset({districts:isCouncilorPage}).then(data=>{

@@ -28,7 +28,7 @@ loadCandidateDataset({districts:office==='councilor'}).then(data=>{
     kicker.textContent=`${city}${target.district?` ${districtLabel(target)}`:''} / ${officeName(target)}候選人`;
     title.textContent=target.candidate;
     party.textContent=target.party||'政黨待確認';
-    card.innerHTML=renderCandidateCard(target,{showCity:false,linkName:false,openShared:true});
+    card.innerHTML=renderCandidateDetail(target,{openShared:true});
   }
   const rest=sameOffice.filter(record=>record!==target).sort((a,b)=>a.candidate.localeCompare(b.candidate,'zh-Hant'));
   if(rest.length){

@@ -28,11 +28,26 @@ const pledgeCard=pledge=>{
 </article>`;
 };
 
+// 依原始政見來源分組，一項一行：標題＋狀態；查核判斷、相關施政與來源點開才看（2026-10-30）。
+const pledgeRow=pledge=>{
+  const unchecked=pledge.status==='not_checked';
+  return `<li class="pledge-row"><div class="pledge-row-head"><strong>${escapeHtml(pledge.pledge_title)}</strong><span class="tag tag-status status-${escapeHtml(pledge.status)}">${escapeHtml(statusLabels[pledge.status]||'')}</span></div>
+  <details class="pledge-more"><summary>查核判斷</summary>
+  ${pledge.pledge_summary&&pledge.pledge_summary!==pledge.pledge_title?`<p class="summary">${escapeHtml(pledge.pledge_summary)}</p>`:''}
+  ${pledge.pledge_nature==='政策方向'?'<p class="pledge-nature-note">政見原文只寫方向，沒有可驗證的作為，難以判定是否實現。</p>':''}${pledge.evidence_summary?`<p>${escapeHtml(pledge.evidence_summary)}</p>`:unchecked?'<p class="pledge-unchecked">本站尚未查核這筆政見的執行情形，不代表任何判斷。</p>':''}
+  ${relatedGovList(pledge)}
+  <div class="source-row">${pledge.evidence_source_url?`<a href="${escapeHtml(safeUrl(pledge.evidence_source_url))}" target="_blank" rel="noopener">實現情形 ↗</a>`:''}${(pledge.additional_evidence||[]).map(item=>`<a href="${escapeHtml(safeUrl(item.url))}" target="_blank" rel="noopener" title="${escapeHtml(item.title)}">${escapeHtml(item.title)} ↗</a>`).join('')}<span class="verification">${unchecked||!pledge.last_verified?'尚未查核':`查核 ${escapeHtml(pledge.last_verified)}`} · ${reportLink(pledge.id,`${pledge.city} ${pledge.person}：${pledge.pledge_title}（政見實現追蹤）`)}</span></div>
+  </details></li>`;
+};
+const pledgeSourceGroup=source=>{
+  const first=source.rows[0];
+  return `<section class="card pledge-source"><h4>${escapeHtml(source.key)}</h4><ul class="pledge-rows">${source.rows.map(pledgeRow).join('')}</ul><div class="source-row"><a href="${escapeHtml(safeUrl(first.pledge_source_url))}" target="_blank" rel="noopener">${escapeHtml(first.pledge_source_type||'原始政見')} ↗</a><span class="verification">${escapeHtml(first.pledge_date||'')}</span></div></section>`;
+};
 const personBlock=person=>{
   const first=person.rows[0];
   return `<article class="tracker-person">
     <div class="tracker-person-head"><h3>${escapeHtml(first.person)}</h3><p class="party">${escapeHtml(first.party)} · ${escapeHtml(first.current_office)} · ${escapeHtml(first.term)}</p><span class="tag">${escapeHtml(first.reelection_status||'')}</span><span class="tracker-person-count">${person.rows.length} 筆政見</span></div>
-    <div class="cards">${person.rows.map(pledgeCard).join('')}</div>
+    ${groupBy(person.rows,row=>row.pledge_source_title||row.pledge_source_type||'原始政見').map(source=>pledgeSourceGroup(source)).join('')}
   </article>`;
 };
 
