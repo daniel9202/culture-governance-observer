@@ -2639,10 +2639,12 @@
       "party": "台灣基進",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜依使用者決定調整來源分類，按來源原文修正摘要與措施。"
+      ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
+      "policy_title": "母語永傳承",
+      "official_topic": "母語永傳承",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -2656,12 +2658,11 @@
         "文化觀光"
       ],
       "topic_subcategories": [],
-      "summary": "提出「母語永傳承」，以台語實驗小學、本土語言優先的地名英譯與文化景點導覽，推動臺北市的母語公共使用。",
+      "summary": "推動台北市成立第一所台語實驗小學",
       "policy_argument": "",
       "concrete_proposals": [
-        "成立第一所台語實驗小學。",
-        "在地英譯名以本土語言優先。",
-        "盤點文化景點並製作本土語言導覽資訊。"
+        "推動台北市成立第一所台語實驗小學",
+        "創造本土語語言景觀，在地英譯名以本土語言優先、盤點文化景點製作本土語言導覽資訊"
       ],
       "related_statements": [
         "以「母語永傳承」概括政策方向。"
@@ -2690,7 +2691,7 @@
       "source_title": "吳欣岱｜台灣基進・市議員候選人｜台灣前進",
       "source_url": "https://taiwangogo.tw/wu-hsin-tai/",
       "related_sources": [],
-      "source_type": "候選人頁",
+      "source_type": "政黨候選人頁",
       "last_verified": "2026-09-14",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -2698,7 +2699,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-10-30｜依使用者決定調整來源分類，按來源原文修正摘要與措施。"
       ]
     },
     {
