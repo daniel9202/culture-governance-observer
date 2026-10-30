@@ -2215,10 +2215,12 @@
       "party": "台灣基進",
       "publish_id": "",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜依使用者決定調整來源分類，移除非文化項目並依來源修正原文。"
+      ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
+      "policy_title": "建構台南成為本土堡壘",
+      "official_topic": "建構台南成為本土堡壘",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
@@ -2230,12 +2232,10 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "主張市政以本土文化與本土語言優先，並將設立台語委員會與轉型正義納入施政方向。",
+      "summary": "秉持台灣基進堅守國家主體性的精神，以本土文化、本土語言為優先，並要求市府設立台語委員會專責相關事務。",
       "policy_argument": "",
       "concrete_proposals": [
-        "設立台語委員會專責相關事務。",
-        "市政以本土文化與本土語言優先。",
-        "落實轉型正義並去除威權遺緒。"
+        "秉持台灣基進堅守國家主體性的精神，以本土文化、本土語言為優先，並要求市府設立台語委員會專責相關事務。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -2262,7 +2262,7 @@
       "source_title": "吳依潔｜台灣基進・市議員候選人｜台灣前進",
       "source_url": "https://taiwangogo.tw/wu-yi-chieh/",
       "related_sources": [],
-      "source_type": "候選人頁",
+      "source_type": "政黨候選人頁",
       "last_verified": "2026-09-14",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
@@ -2271,7 +2271,8 @@
       "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
-        "2026-10-03｜依資料稽核修正與內容不符的細標籤。"
+        "2026-10-03｜依資料稽核修正與內容不符的細標籤。",
+        "2026-10-30｜依使用者決定調整來源分類，移除非文化項目並依來源修正原文。"
       ]
     },
     {
@@ -15629,12 +15630,14 @@
       "party": "中國國民黨",
       "publish_id": "candidate-auto-3f8750d81011",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-10-30｜依使用者決定分類為新聞報導，補全含文化中心及其他建設的同一句原文，移除不具體的教育段落。"
+      ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "文化中心改造升級",
       "official_topic": "",
       "official_subtopic": "",
-      "source_outlet": "",
+      "source_outlet": "臺南市議會",
       "topics": [
         "地方文化"
       ],
@@ -15642,11 +15645,10 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "未來將特別關注鐵路地下化後續效益、台南捷運推動、文化中心改造升級、南台南副都心發展，以及東區商業機能提升（如Costco、引進IKEA）等重大議題…… || 東區作為文教重鎮，應持續強化文化薰陶與教育支持系統，正視校園霸凌、特教資源不足與幼",
+      "summary": "在城市建設面向，歐政豪提出未來將特別關注鐵路地下化後續效益、台南捷運推動、文化中心改造升級、南台南副都心發展，以及東區商業機能提升（如Costco、引進IKEA）等重大議題，同時強化通學步道與行人安全環境，打造更安全便利的生活空間。",
       "policy_argument": "",
       "concrete_proposals": [
-        "未來將特別關注鐵路地下化後續效益、台南捷運推動、文化中心改造升級、南台南副都心發展，以及東區商業機能提升（如Costco、引進IKEA）等重大議題……",
-        "東區作為文教重鎮，應持續強化文化薰陶與教育支持系統，正視校園霸凌、特教資源不足與幼教量能問題。"
+        "在城市建設面向，歐政豪提出未來將特別關注鐵路地下化後續效益、台南捷運推動、文化中心改造升級、南台南副都心發展，以及東區商業機能提升（如Costco、引進IKEA）等重大議題，同時強化通學步道與行人安全環境，打造更安全便利的生活空間。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -15673,14 +15675,16 @@
       "source_title": "www.tncc.gov.tw｜歐政豪青年軍成立：關注文化中心改造升級",
       "source_url": "https://www.tncc.gov.tw/page.asp?mainid=%7B34FAAE5C-E6EC-4541-8A71-0F9B9DD60C48%7D",
       "related_sources": [],
-      "source_type": "新聞／公開網頁",
+      "source_type": "新聞報導",
       "last_verified": "2026-10-26",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-10-30｜依使用者決定分類為新聞報導，補全含文化中心及其他建設的同一句原文，移除不具體的教育段落。"
+      ]
     },
     {
       "id": "candidate-auto-9f6d7ed9b658",
