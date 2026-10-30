@@ -12,3 +12,6 @@
 - `candidate-ylc-councilor-chen-chieh-lin-indigenous-culture-001`（陳傑麟）
   - editor_notes：2026-10-30｜既存具體主張僅為文化健康站長照經費及設施，屬長照與社福而非文化措施；不補回先前已移除的其他項目，移除整列。
   - correction_log：2026-10-30｜依收錄範圍移除非文化整列；來源 https://youth.pfpnext.com/2026/candidate-detail.php?id=pfp2026-005 。
+
+- `candidate-auto-3e212d67d6bb`（劉靜文）：2026-10-30｜依使用者決定合併至 candidate-hualien-councilor-liu-ching-wen-multicultural-001，網址記於 related_sources。
+- `candidate-hln-councilor-hsiu-chi-saflo-193-culture-001`（秀吉．撒夫洛）：2026-10-30｜依使用者判定，鎮民代表質詢並非競選政見，刪除整列；刪除列的 correction_log 記於此。

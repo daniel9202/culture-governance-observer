@@ -372,7 +372,8 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "2026-10-30｜依來源保留完整文化原句；移除非文化項目及原有改寫。"
+        "2026-10-30｜依來源保留完整文化原句；移除非文化項目及原有改寫。",
+        "2026-10-30｜依使用者確認合併重複列 candidate-auto-3e212d67d6bb，網址記於其他來源。"
       ],
       "public_note": "",
       "policy_title": "文化傳承．族群共榮",
@@ -422,7 +423,9 @@
       "published_date": "2026-08-31",
       "source_title": "劉靜文轉換跑道參選花蓮縣議員第三選區",
       "source_url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/",
-      "related_sources": [],
+      "related_sources": [
+        "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
+      ],
       "source_type": "新聞報導",
       "last_verified": "2026-10-02",
       "proposer_role": "候選人",
@@ -432,7 +435,8 @@
       "current_office": "",
       "corrections": [
         "2026-10-02｜已依中選會登記名冊核對花蓮縣縣市議員第三選舉區候選人身分；來源具名記載候選人文化主張。政策未載預算、期程或執行機制，已於摘要保留其概括性。",
-        "2026-10-30｜依新聞原文修正摘要與具體主張，刪除非文化項目及轉述。"
+        "2026-10-30｜依新聞原文修正摘要與具體主張，刪除非文化項目及轉述。",
+        "2026-10-30｜依使用者確認合併重複列 candidate-auto-3e212d67d6bb，網址記於其他來源。"
       ]
     },
     {
@@ -1592,76 +1596,6 @@
       "corrections": [
         "2026-10-04｜依來源性質更正為現任議員問政／提案。",
         "2026-10-04｜依來源性質更正為現任議員問政／提案。"
-      ]
-    },
-    {
-      "id": "candidate-hln-councilor-hsiu-chi-saflo-193-culture-001",
-      "city": "花蓮縣",
-      "office": "縣市議員",
-      "candidate": "秀吉．撒夫洛",
-      "party": "中國國民黨",
-      "publish_id": "",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "2026-10-30｜改貼完整新聞原句；原分點為轉述，並保留同一句中的露營區內容。來源描述鎮民代表質詢並宣布參選，競選政見性質有待確認。"
-      ],
-      "public_note": "",
-      "policy_title": "翻轉南區觀光困境",
-      "official_topic": "",
-      "official_subtopic": "",
-      "source_outlet": "東台灣新聞網",
-      "topics": [
-        "原住民族文化",
-        "文化觀光",
-        "公共藝術",
-        "文化空間"
-      ],
-      "topic_categories": [
-        "原住民族文化",
-        "文化觀光",
-        "視覺藝術",
-        "文化空間與城市再生"
-      ],
-      "topic_subcategories": [],
-      "summary": "此外，秀吉·撒夫洛也提到如東豐里的鐵份瀑布、馬太林文化園區入口以及沿線的稻草藝術裝置等觀光景點，如今因缺乏後續打理、修復而逐漸破敗，呼籲鎮公所建設課及相關單位應盡速通盤檢討、除舊佈新，甚至研議將合適區域規劃為露營區，才能真正留住遊客。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "此外，秀吉·撒夫洛也提到如東豐里的鐵份瀑布、馬太林文化園區入口以及沿線的稻草藝術裝置等觀光景點，如今因缺乏後續打理、修復而逐漸破敗，呼籲鎮公所建設課及相關單位應盡速通盤檢討、除舊佈新，甚至研議將合適區域規劃為露營區，才能真正留住遊客。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
-            "url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
-            "url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
-            "url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/"
-          }
-        ]
-      },
-      "published_date": "2026-06-08",
-      "source_title": "東台灣新聞網：翻轉南區觀光困境，秀吉・撒夫洛聚焦193線觀光資源",
-      "source_url": "https://etaiwan.news/2026/06/08/%E5%AE%A3%E5%B8%83%E5%8F%83%E9%81%B8%E5%B9%B3%E5%9C%B0%E5%8E%9F%E4%BD%8F%E6%B0%91%E7%AC%AC%E5%9B%9B%E9%81%B8%E5%8D%80%E7%B8%A3%E8%AD%B0%E5%93%A1%E9%81%B8%E8%88%89%EF%BD%9C%E7%BF%BB%E8%BD%89%E5%8D%97/",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-02",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "候選人官方頁、政黨頁或候選人具名新聞來源",
-      "office_category": "",
-      "current_office": "",
-      "corrections": [
-        "2026-10-30｜依新聞原文修正摘要、具體主張與來源欄位。"
       ]
     },
     {
@@ -15074,78 +15008,6 @@
       "office_category": "",
       "current_office": "",
       "corrections": []
-    },
-    {
-      "id": "candidate-auto-3e212d67d6bb",
-      "city": "花蓮縣",
-      "office": "縣市議員",
-      "candidate": "劉靜文",
-      "party": "無黨籍",
-      "publish_id": "candidate-auto-3e212d67d6bb",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "2026-10-30｜依來源保留完整文化原句；移除非文化項目及原有改寫。"
-      ],
-      "public_note": "",
-      "policy_title": "文化傳承．族群共榮",
-      "official_topic": "",
-      "official_subtopic": "",
-      "source_outlet": "東台灣新聞網",
-      "topics": [
-        "客家文化",
-        "原住民族文化",
-        "文化觀光",
-        "地方文化",
-        "文化傳承"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "原住民族文化",
-        "文化觀光",
-        "地方文化與社區營造",
-        "文化資產"
-      ],
-      "topic_subcategories": [],
-      "summary": "推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "推廣客家、閩南及原住民族文化，促進族群融合，結合教育與地方特色，傳承多元文化，打造共榮共好的花蓮。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "etaiwan.news｜劉靜文轉換跑道參選花蓮縣議員第三選區",
-            "url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "etaiwan.news｜劉靜文轉換跑道參選花蓮縣議員第三選區",
-            "url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "etaiwan.news｜劉靜文轉換跑道參選花蓮縣議員第三選區",
-            "url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/"
-          }
-        ]
-      },
-      "published_date": "2026-08-31",
-      "source_title": "etaiwan.news｜劉靜文轉換跑道參選花蓮縣議員第三選區",
-      "source_url": "https://etaiwan.news/2026/08/31/%E5%8A%89%E9%9D%9C%E6%96%87%EF%BD%9C%E8%BD%89%E6%8F%9B%E8%B7%91%E9%81%93%E5%8F%83%E9%81%B8%E8%8A%B1%E8%93%AE%E7%B8%A3%E8%AD%B0%E5%93%A1%E7%AC%AC%E4%B8%89%E9%81%B8%E5%8D%80%EF%BC%8C%E6%B0%A3%E5%8B%A2/",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": [
-        "2026-10-30｜依新聞原文修正摘要與具體主張，刪除非文化項目及轉述。"
-      ]
     },
     {
       "id": "candidate-auto-1c1a123450c6",
