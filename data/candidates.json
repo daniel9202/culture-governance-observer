@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-10-30",
+  "last_updated": "2026-11-02",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -17662,6 +17662,408 @@
       "corrections": [
         "2026-10-29｜依使用者貼上的候選人 Instagram 貼文原文新增。"
       ]
+    },
+    {
+      "id": "candidate-auto-d3879015b7aa",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "王振庭",
+      "party": "台灣綠黨",
+      "publish_id": "candidate-auto-d3879015b7aa",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "本筆只取該頁「教育改革庭好的」中與文化有關的一項。",
+        "來源頁面沒有發布日期"
+      ],
+      "public_note": "",
+      "policy_title": "教育改革庭好的",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化教育",
+        "文化旅遊"
+      ],
+      "topic_categories": [
+        "文化教育",
+        "文化觀光"
+      ],
+      "topic_subcategories": [],
+      "summary": "畢旅有意義：透過補助引導畢旅結合文化地景與政策議題，避免形式化，讓旅程轉化為社會實踐。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "畢旅有意義：透過補助引導畢旅結合文化地景與政策議題，避免形式化，讓旅程轉化為社會實踐。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "王振庭｜2026 議員候選人政見",
+            "url": "https://web.greenparty.org.tw/posts/news/2026candidate-chengting/"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "王振庭｜2026 議員候選人政見",
+            "url": "https://web.greenparty.org.tw/posts/news/2026candidate-chengting/"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "王振庭｜2026 議員候選人政見",
+            "url": "https://web.greenparty.org.tw/posts/news/2026candidate-chengting/"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "王振庭｜2026 議員候選人政見",
+      "source_url": "https://web.greenparty.org.tw/posts/news/2026candidate-chengting/",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-11-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-49e441ba78e8",
+      "city": "基隆市",
+      "office": "縣市議員",
+      "candidate": "吳程澤",
+      "party": "台灣基進",
+      "publish_id": "candidate-auto-49e441ba78e8",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源僅列政見短語，本筆只取含文化的一句，其餘主張不在本站收錄範圍。",
+        "來源頁面沒有發布日期"
+      ],
+      "public_note": "",
+      "policy_title": "基礎政見",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "地方文化",
+        "地方創生",
+        "文化與地方認同"
+      ],
+      "topic_categories": [
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
+      "summary": "交通升級，文化主體，地方創生。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "交通升級，文化主體，地方創生。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "吳程澤｜2026 議員候選人政見",
+            "url": "https://statebuilding.tw/candidates/16816"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "吳程澤｜2026 議員候選人政見",
+            "url": "https://statebuilding.tw/candidates/16816"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "吳程澤｜2026 議員候選人政見",
+            "url": "https://statebuilding.tw/candidates/16816"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "吳程澤｜2026 議員候選人政見",
+      "source_url": "https://statebuilding.tw/candidates/16816",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-11-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-515edbd6d26e",
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "candidate": "蘇智弦",
+      "party": "台灣民眾黨",
+      "publish_id": "candidate-auto-515edbd6d26e",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期"
+      ],
+      "public_note": "",
+      "policy_title": "",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "產業文化",
+        "文化資產",
+        "文化觀光",
+        "眷村文化",
+        "保存修復"
+      ],
+      "topic_categories": [
+        "文化資產",
+        "文化觀光"
+      ],
+      "topic_subcategories": [
+        "文化資產／保存"
+      ],
+      "summary": "彰美路及和美早市打造「和美紡織文化商圈」，串聯和美古蹟帶動觀光。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "彰美路及和美早市打造「和美紡織文化商圈」，串聯和美古蹟帶動觀光。",
+        "辦理老屋街區立面修復與故事導覽，打造兼具生活與觀光價值的文創眷村。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "蘇智弦｜2026 議員候選人政見",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "蘇智弦｜2026 議員候選人政見",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "蘇智弦｜2026 議員候選人政見",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "蘇智弦｜2026 議員候選人政見",
+      "source_url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-11-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-974faa34ccba",
+      "city": "新竹市",
+      "office": "縣市議員",
+      "candidate": "葉國文",
+      "party": "台灣民眾黨",
+      "publish_id": "candidate-auto-974faa34ccba",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期"
+      ],
+      "public_note": "",
+      "policy_title": "",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "音樂文化",
+        "藝文節慶",
+        "展演空間",
+        "文化教育"
+      ],
+      "topic_categories": [
+        "表演藝術",
+        "藝文節慶",
+        "文化場館",
+        "文化教育"
+      ],
+      "topic_subcategories": [],
+      "summary": "爭取舉辦濕地音樂祭，融合音樂藝術與濕地生態環境教育。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "爭取舉辦濕地音樂祭，融合音樂藝術與濕地生態環境教育。",
+        "爭取小巨蛋設立於香山區，帶動運動、藝文與地方發展。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "葉國文｜2026 議員候選人政見",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=202"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "葉國文｜2026 議員候選人政見",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=202"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "葉國文｜2026 議員候選人政見",
+            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=202"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "葉國文｜2026 議員候選人政見",
+      "source_url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=202",
+      "related_sources": [],
+      "source_type": "政黨候選人頁",
+      "last_verified": "2026-11-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-cbbe6ef0fd5c",
+      "city": "新北市",
+      "office": "縣市長",
+      "candidate": "蘇巧慧",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-cbbe6ef0fd5c",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "本筆只取官網「都更與住宅政見」第四項，該頁其餘六項屬都更與住宅政策，不在收錄範圍。",
+        "來源頁面沒有發布日期"
+      ],
+      "public_note": "",
+      "policy_title": "都更配合歷史建築或觀光老街，營造特色街景",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "歷史建築",
+        "歷史街區",
+        "文化空間"
+      ],
+      "topic_categories": [
+        "文化資產",
+        "文化空間與城市再生"
+      ],
+      "topic_subcategories": [],
+      "summary": "都更的內容更應該要配合在地的歷史建築、觀光老街，營造每一個區塊、聚落的特色街景。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "都更是為了讓城市機能更好、更有活力。因此，都更的內容更應該要配合在地的歷史建築、觀光老街，營造每一個區塊、聚落的特色街景。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "都更與住宅政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+            "url": "https://chiao.tw/policies/%E9%83%BD%E6%9B%B4%E8%88%87%E4%BD%8F%E5%AE%85%E6%94%BF%E8%A6%8B#都更配合歷史建築或觀光老街"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "都更與住宅政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+            "url": "https://chiao.tw/policies/%E9%83%BD%E6%9B%B4%E8%88%87%E4%BD%8F%E5%AE%85%E6%94%BF%E8%A6%8B#都更配合歷史建築或觀光老街"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "都更與住宅政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+            "url": "https://chiao.tw/policies/%E9%83%BD%E6%9B%B4%E8%88%87%E4%BD%8F%E5%AE%85%E6%94%BF%E8%A6%8B#都更配合歷史建築或觀光老街"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "都更與住宅政見 - 蘇巧慧 2026｜溫暖·創新·會做事",
+      "source_url": "https://chiao.tw/policies/%E9%83%BD%E6%9B%B4%E8%88%87%E4%BD%8F%E5%AE%85%E6%94%BF%E8%A6%8B#都更配合歷史建築或觀光老街",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-11-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-auto-48d3fcc5f878",
+      "city": "臺北市",
+      "office": "縣市長",
+      "candidate": "沈伯洋",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-48d3fcc5f878",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源是座談會的新聞資料，未載預算與期程；動漫廊道的內容尚未公布。",
+        "使用者直接指定的來源，未經審核台。"
+      ],
+      "public_note": "",
+      "policy_title": "活化市民大道高架橋下方空間，打造音樂等主題廊道",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化廊道",
+        "文化空間",
+        "音樂文化"
+      ],
+      "topic_categories": [
+        "文化空間與城市再生",
+        "表演藝術"
+      ],
+      "topic_subcategories": [],
+      "summary": "將規劃活化市民大道高架橋下方空間，打造音樂等主題廊道，透過串聯街區及周邊商圈，帶動人流與地方經濟發展及城市美感。",
+      "policy_argument": "城市美感是提升市民認同感與驕傲感的重要因素",
+      "concrete_proposals": [
+        "未來規劃活化市民大道高架橋下方空間，打造音樂等主題廊道，也可串聯街區及周邊商圈，帶動人流與地方經濟發展",
+        "後續也將公布設置動漫廊道"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "中央社｜沈伯洋談城市美感 規劃市民大道橋下音樂廊道",
+            "url": "https://www.cna.com.tw/news/aipl/202610220314.aspx"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "中央社｜沈伯洋談城市美感 規劃市民大道橋下音樂廊道",
+            "url": "https://www.cna.com.tw/news/aipl/202610220314.aspx"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "中央社｜沈伯洋談城市美感 規劃市民大道橋下音樂廊道",
+            "url": "https://www.cna.com.tw/news/aipl/202610220314.aspx"
+          }
+        ]
+      },
+      "published_date": "2026-10-22",
+      "source_title": "中央社｜沈伯洋談城市美感 規劃市民大道橋下音樂廊道",
+      "source_url": "https://www.cna.com.tw/news/aipl/202610220314.aspx",
+      "related_sources": [],
+      "source_type": "新聞／公開網頁",
+      "last_verified": "2026-11-02",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
     }
   ]
 }
