@@ -15,7 +15,8 @@
 - **DNS 在 Cloudflare**：
   - 根網域的 4 筆 A 紀錄和 `www` 的 CNAME 都要維持 **DNS only（灰色雲朵）**，不要照 Cloudflare 的提示改成 proxied。
   - `_github-pages-challenge-daniel9202` 這筆 TXT 不能刪，GitHub 會用它確認網域。
-  - 這裡只用 Cloudflare 的 DNS，與「資料發布流程」裡停用的 Cloudflare Worker／D1 舊流程無關，那條禁令不變。
+  - 這裡的 DNS 與「資料發布流程」裡停用的 Cloudflare Worker／D1 舊流程無關，那條禁令不變。
+  - **流量統計（2026-11-05 起，使用者同意）**：`collect.culturalpolicywatch.tw` 是獨立的統計 Worker 與 D1，只收匿名每日彙總，程式在私有 repo `daniel9202/culture-governance-analytics`。它不是舊流程：不得寫入或讀取政見資料，也不得作為資料來源。前台追蹤碼在 `nav.js`，各頁 CSP 的 `connect-src` 要保留這個網址。
 - **公測站**：<https://daniel9202.github.io/culture-governance-observer-beta/>，部署流程放在 `daniel9202/culture-governance-observer-beta`，內容來自本 repo 的 `beta` 分支。
   - 公測站是公開的，「核准前不得出現在公開網站」同樣適用：**未核准的資料不能推到 `beta`**。
   - 排程每 15 分鐘檢查一次，有變更才部署；要立刻更新時，到該 repo 的 Actions 手動執行 **Deploy beta site**。
