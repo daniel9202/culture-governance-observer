@@ -49,5 +49,7 @@ const dataFiles = [
 
 for (const file of siteFiles) cpSync(resolve(root, file), resolve(dist, file));
 for (const file of dataFiles) cpSync(resolve(root, "data", file), resolve(dist, "data", file));
+// 號次資料由資料端產生；還沒有檔案時前台只是不顯示號次，建置不該失敗。
+if (existsSync(resolve(root, "data", "ballot_numbers.json"))) cpSync(resolve(root, "data", "ballot_numbers.json"), resolve(dist, "data", "ballot_numbers.json"));
 
 console.log("site build passed");

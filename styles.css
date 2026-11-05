@@ -495,3 +495,14 @@ main>.section:first-child,.method{padding-top:4rem}
 .cd-stats dd small{font-size:.8rem;font-weight:700;margin-left:.2rem}
 .cd-more{align-self:flex-start;margin-top:auto;font-size:.88rem;font-weight:800;color:var(--ink);border-bottom:2px solid var(--party,var(--ink));padding-bottom:.1rem}
 .cd-compact:hover .cd-more span{display:inline-block;transform:translateX(3px)}
+/* 候選人號次：中性樣式，不用政黨色與強調色，避免看起來像競選文宣 */
+.ballot-number{display:inline-block;margin-left:.45rem;padding:.05rem .4rem;border:1px solid var(--ink);background:var(--surface);color:var(--ink);font:700 .78rem/1.4 "Noto Sans TC","PingFang TC",sans-serif;letter-spacing:0;vertical-align:middle;white-space:nowrap}
+.ballot-source{margin:.35rem 0 .6rem;font-size:.82rem;color:var(--muted)}
+.ballot-source summary{cursor:pointer;width:fit-content}
+.ballot-source p{margin:.4rem 0 .2rem;color:var(--ink);font-weight:700}
+.ballot-source a{display:block;overflow-wrap:anywhere}
+.ballot-source small{display:block;margin-top:.2rem}
+.candidate-ballot{display:flex;flex-wrap:wrap;align-items:flex-start;gap:.4rem .7rem;margin:-.8rem 0 1.4rem}
+.candidate-ballot:empty{display:none}
+.candidate-ballot .ballot-number{margin-left:0}
+.candidate-ballot .ballot-source{margin:0;flex:1 1 12rem}

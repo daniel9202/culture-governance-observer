@@ -363,7 +363,7 @@ function candidateCard(item,{district=true}={}){
   const party=partyInfo(item.party),counts=candidateSummaryCounts(item);
   const shared=item.shared_policies.length?`<span class="map-shared">共同政見 ${item.shared_policies.length} 項</span>`:'';
   return `<a class="map-candidate" href="${esc(candidateUrl(item))}" style="${partyStyle(party)}">
-    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${district&&item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div></div>
+    <div class="map-candidate-head"><div><h3>${esc(item.candidate)}${ballotBadge(item)}</h3><span class="map-party"><i></i>${esc(item.party||party.short)}</span>${district&&item.district?`<span class="map-district">${esc(districtLabel(item))}</span>`:''}</div></div>
     <p class="map-count">收錄 ${counts.proposals} 項政見 · 相關新聞 ${counts.news} 則</p>${shared?`<div class="map-topics">${shared}</div>`:''}
     <span class="map-candidate-more">看文化政見與來源 →</span>
   </a>`;
@@ -490,7 +490,7 @@ function renderParties(){
 
 const loadJson=(url,message)=>fetch(url).then(response=>{if(!response.ok)throw Error(message);return response.json()});
 // 名冊由 loadCandidateDataset 一併載入（同時供議員選區查詢），不另外重複讀取。
-Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset({districts:true}),loadJson('data/party_colors.json','無法讀取政黨色'),
+Promise.all([loadJson('map-geometry.json','無法讀取地圖'),loadCandidateDataset({districts:true,ballots:true}),loadJson('data/party_colors.json','無法讀取政黨色'),
   // 選舉區界線讀不到時只是沒有界線，不影響其餘地圖
   fetch('district-geometry.json').then(response=>response.ok?response.json():null).catch(()=>null),
   // 縣轄市界線讀不到時只是沒有那一層，不影響其餘地圖

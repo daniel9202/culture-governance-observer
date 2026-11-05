@@ -100,7 +100,7 @@ window.groupCandidateRecords=(records,sharedPolicies=[])=>{
       if(String(policy.last_verified||'')>String(group.last_verified||''))group.last_verified=policy.last_verified;
     });
   });
-  return [...groups.values()].map(group=>({...group,district:councilDistrict(group),
+  return [...groups.values()].map(group=>({...group,district:councilDistrict(group),...candidateBallot(group),
     topics:uniqueValues(group.topics),topic_categories:uniqueValues(group.topic_categories),topic_subcategories:uniqueValues(group.topic_subcategories),policy_titles:uniqueValues(group.policy_titles),policy_arguments:uniqueValues(group.policy_arguments),concrete_proposals:uniqueValues(group.concrete_proposals),related_statements:uniqueValues(group.related_statements),ids:uniqueValues(group.ids),
     sources:uniqueSources(group.sources),published_dates:uniqueValues(group.published_dates).sort(),
     shared_policies:[...new Map(group.shared_policies.map(policy=>[policy.id,policy])).values()],
@@ -127,6 +127,20 @@ window.councilDistrict=record=>{
   const exact=inCity.filter(item=>item.candidate===record.candidate);
   const matches=exact.length?exact:inCity.filter(item=>item.candidate.startsWith(record.candidate));
   return matches.length===1?matches[0].district:'';
+};
+// 候選人號次（data/ballot_numbers.json）：來源為各地方選舉委員會的號次抽籤結果，只在有號次且有來源時才回傳欄位。
+// 缺值一律不顯示，不寫「待公告」，避免把尚未擷取和尚未公告混為一談。
+// 號次只掛在合併後的候選人卡片上，不寫回各筆政見，也不進入政見統計、政黨統計或地圖配色。
+// 姓名比對規則同選區；同一縣市、職務有兩位以上符合時不猜，留空。
+let ballotRows=[],ballotSources=new Map;
+const candidateBallot=record=>{
+  const rows=ballotRows.filter(item=>item.city===record.city&&item.office===record.office);
+  const exact=rows.filter(item=>item.candidate===record.candidate);
+  const matches=exact.length?exact:rows.filter(item=>item.candidate.startsWith(record.candidate));
+  if(matches.length!==1)return {};
+  const {ballot_number:number,source_id:sourceId}=matches[0],source=ballotSources.get(sourceId);
+  if(!Number.isInteger(number)||number<1||!source?.title||!source?.url)return {};
+  return {ballot_number:number,ballot_source_title:source.title,ballot_source_url:source.url,ballot_as_of:source.as_of||''};
 };
 // 中選會選舉區劃分公告（data/election_districts.json）：選舉區的範圍與類別。
 // 原住民選舉區涵蓋全縣市或跨多個鄉鎮市區，與區域選舉區重疊，標籤不用「第N選舉區」。
@@ -159,14 +173,17 @@ window.districtFullLabel=record=>{
 };
 // 原住民選舉區排在區域選舉區之後
 window.districtNumber=district=>(indigenousDistrict(district)?1e6:0)+Number(String(district).match(/第(\d+)選舉區/)?.[1]||Infinity);
-window.loadCandidateDataset=async({districts=false}={})=>{
-  const [staticData,sharedData,roster,districtTable]=await Promise.all([
+window.loadCandidateDataset=async({districts=false,ballots=false}={})=>{
+  const [staticData,sharedData,roster,districtTable,ballotTable]=await Promise.all([
     fetch('data/candidates.json').then(response=>{if(!response.ok)throw Error('無法讀取候選人資料');return response.json()}),
     fetch('data/shared_policy_groups.json').then(response=>{if(!response.ok)throw Error('無法讀取共同政見資料');return response.json()}),
     // 名冊讀取失敗時只是不顯示選區，不影響政見本身
     districts?fetch('data/registered_candidates.json').then(response=>response.ok?response.json():null).catch(()=>null):null,
     districts?fetch('data/election_districts.json').then(response=>response.ok?response.json():null).catch(()=>null):null,
+    // 號次讀取失敗或檔案不存在時只是不顯示號次，不影響政見本身
+    ballots?fetch('data/ballot_numbers.json').then(response=>response.ok?response.json():null).catch(()=>null):null,
   ]);
+  if(ballotTable){ballotRows=ballotTable.records||[];ballotSources=new Map((ballotTable.sources||[]).map(source=>[source.id,source]))}
   if(roster)councilRoster=(roster.records||[]).filter(record=>record.office==='縣市議員');
   if(districtTable)districtScopes=new Map((districtTable.records||[]).map(record=>[record.district,record]));
   // 只使用經 build_data.py 驗證的正式資料；Cloudflare 已核准 API 屬舊流程，已停用。
@@ -190,13 +207,16 @@ window.loadCandidateDataset=async({districts=false}={})=>{
   const sourceList=record=>record.sources.length?`<ul class="source-list">${record.sources.map((source,index)=>`<li><a class="source-link" href="${esc(safe(source.url))}" target="_blank" rel="noopener">${sourceContent(source,index)}<span aria-hidden="true">↗</span></a></li>`).join('')}</ul>`:'<p>尚未收錄來源。</p>';
   const sharedPolicyList=policies=>policies.map(policy=>`<section class="shared-policy-item"><h5>${esc(policy.title)}</h5><p>${esc(policy.summary)}</p>${bullets(policy.concrete_proposals||[],'尚未收錄具體主張。')}<a href="${esc(safe(policy.source_url))}" target="_blank" rel="noopener">${esc(policy.source_title||'查看共同政見來源')} ↗</a></section>`).join('');
   const sharedPolicySection=(title,policies,open=false)=>policies.length?`<details class="policy-layer policy-shared"${open?' open':''}><summary><h4>${title}</h4><span class="shared-toggle">${policies.length} 項</span></summary>${sharedPolicyList(policies)}</details>`:'';
+  // 號次標籤與來源。整張卡片是連結的列表與地圖側欄只放標籤（連結內不能再放連結），來源在候選人頁與地方頁展開。
+  window.ballotBadge=x=>x.ballot_number?`<span class="ballot-number" title="候選人號次">${esc(x.ballot_number)}號</span>`:'';
+  window.ballotSource=x=>x.ballot_number?`<details class="ballot-source"><summary>號次來源</summary><p>依${esc(x.city)}選舉委員會號次抽籤結果</p><a href="${esc(safe(x.ballot_source_url))}" target="_blank" rel="noopener">${esc(x.ballot_source_title)} ↗</a>${x.ballot_as_of?`<small>公告／製表日期：${esc(x.ballot_as_of)}</small>`:''}</details>`:'';
   window.officeKey=office=>String(office).includes('議員')?'councilor':'mayor';
   window.candidateUrl=record=>`candidate.html?${new URLSearchParams({city:record.city,office:officeKey(record.office),name:record.candidate})}`;
   window.regionUrl=city=>`region.html?city=${encodeURIComponent(city)}`;
   window.renderCandidateCard=(x,{showCity=true,linkName=true,openShared=false}={})=>{
     const name=linkName?`<a class="candidate-name-link" href="${esc(candidateUrl(x))}">${esc(x.candidate)}</a>`:esc(x.candidate);
     const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
-    return `<article class="card candidate-card"><div class="card-meta">${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtFullLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}</h3><span class="party">${esc(x.party)}</span><div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'資料彙整中。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${(x.public_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${x.public_notes.map(item=>`<li>${item.title?`<strong>${esc(item.title)}</strong>：`:''}${esc(item.note)}</li>`).join('')}</ul></div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'來源未載日期')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+    return `<article class="card candidate-card"><div class="card-meta">${showCity?`<span class="tag">${esc(x.city)}</span>`:''}${x.district?`<span class="tag tag-district">${esc(districtFullLabel(x))}</span>`:''}<span class="tag">${esc(x.office)}</span>${topicTagList(x).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div><h3>${name}${ballotBadge(x)}</h3><span class="party">${esc(x.party)}</span>${ballotSource(x)}<div class="policy-layer"><h4>政策論述</h4>${bullets(x.policy_arguments,'資料彙整中。')}</div><div class="policy-layer policy-actions"><h4>具體主張</h4>${bullets(x.concrete_proposals,'尚未收錄具體主張。')}</div><div class="policy-layer policy-statements"><h4>相關發言</h4>${bullets(x.related_statements,'尚未收錄可核實的相關發言。')}</div>${(x.public_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${x.public_notes.map(item=>`<li>${item.title?`<strong>${esc(item.title)}</strong>：`:''}${esc(item.note)}</li>`).join('')}</ul></div>`:''}${shared}<div class="policy-layer policy-sources"><h4>相關來源</h4>${sourceList(x)}</div><small class="verification">發布：${esc(x.published_dates.join('、')||'來源未載日期')} · 最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
   // 候選人卡片新結構（2026-10-30）：「官網政見」依 official_topic／official_subtopic 分子卡，
   // 「相關新聞」一則新聞一張子卡。一列資料對應一張子卡；分區只看 source_type，不從內文推斷。
@@ -251,6 +271,6 @@ window.loadCandidateDataset=async({districts=false}={})=>{
     const {proposals,news,officialTopics,newsTopics}=candidateSummaryCounts(x),color=PARTY_COLOR_MAP[x.party]?.color;
     const shared=(x.shared_policies||[]).length?`<div class="cd-block"><p class="cd-label">共同政見</p><ul class="cd-chips">${x.shared_policies.map(policy=>`<li>${esc(policy.title)}</li>`).join('')}</ul></div>`:'';
     const topics=officialTopics.length?`<ul class="cd-chips">${officialTopics.map(topic=>`<li>${esc(topic)}</li>`).join('')}</ul>`:'<p class="cd-none">尚未收錄</p>';
-    return `<a class="card cd-compact" href="${esc(candidateUrl(x))}"${color?` style="--party:${esc(color)}"`:''}><div class="cd-compact-head"><h3>${esc(x.candidate)}</h3><span class="cd-party"><i></i>${esc(x.party||'政黨待確認')}</span></div><p class="cd-place">${esc([x.city,x.district?districtFullLabel(x):'',x.office].filter(Boolean).join(' · '))}</p><div class="cd-block"><p class="cd-label">官網政見</p>${topics}</div>${newsTopics.length?`<div class="cd-block"><p class="cd-label">新聞報導政見</p><ul class="cd-chips cd-chips-news">${newsTopics.map(topic=>`<li>${esc(topic)}</li>`).join('')}</ul></div>`:''}${shared}<dl class="cd-stats"><div><dt>收錄政見</dt><dd>${proposals}<small>項</small></dd></div><div><dt>相關新聞</dt><dd>${news}<small>則</small></dd></div></dl><span class="cd-more">看文化政見與來源 <span aria-hidden="true">→</span></span></a>`;
+    return `<a class="card cd-compact" href="${esc(candidateUrl(x))}"${color?` style="--party:${esc(color)}"`:''}><div class="cd-compact-head"><h3>${esc(x.candidate)}${ballotBadge(x)}</h3><span class="cd-party"><i></i>${esc(x.party||'政黨待確認')}</span></div><p class="cd-place">${esc([x.city,x.district?districtFullLabel(x):'',x.office].filter(Boolean).join(' · '))}</p><div class="cd-block"><p class="cd-label">官網政見</p>${topics}</div>${newsTopics.length?`<div class="cd-block"><p class="cd-label">新聞報導政見</p><ul class="cd-chips cd-chips-news">${newsTopics.map(topic=>`<li>${esc(topic)}</li>`).join('')}</ul></div>`:''}${shared}<dl class="cd-stats"><div><dt>收錄政見</dt><dd>${proposals}<small>項</small></dd></div><div><dt>相關新聞</dt><dd>${news}<small>則</small></dd></div></dl><span class="cd-more">看文化政見與來源 <span aria-hidden="true">→</span></span></a>`;
   };
 }

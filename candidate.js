@@ -13,7 +13,7 @@ function renderContext(){
   context.innerHTML=city?`<a href="${regionUrl(city)}">← ${escapeHtml(city)}地方頁：文化預算、統計與全部候選人</a><a href="${listPage(office)}">${escapeHtml(city)}全部${OFFICE_LABEL[office]}候選人政見</a>`:'';
 }
 
-Promise.all([loadCandidateDataset({districts:office==='councilor'}),fetch('data/party_colors.json').then(response=>response.ok?response.json():{}).catch(()=>({}))]).then(([data,colors])=>{
+Promise.all([loadCandidateDataset({districts:office==='councilor',ballots:true}),fetch('data/party_colors.json').then(response=>response.ok?response.json():{}).catch(()=>({}))]).then(([data,colors])=>{
   window.PARTY_COLOR_MAP=colors.parties||{};
   const inCity=groupCandidateRecords(data.records.filter(record=>record.city===city),(data.shared_policy_groups||[]).filter(policy=>policy.city===city));
   const sameOffice=inCity.filter(record=>officeKey(record.office)===office);
@@ -29,6 +29,7 @@ Promise.all([loadCandidateDataset({districts:office==='councilor'}),fetch('data/
     kicker.textContent=`${city}${target.district?` ${districtLabel(target)}`:''} / ${officeName(target)}候選人`;
     title.textContent=target.candidate;
     party.innerHTML=`<i></i>${escapeHtml(target.party||'政黨待確認')}`;
+    ballot.innerHTML=target.ballot_number?`${ballotBadge(target)}${ballotSource(target)}`:'';
     const color=PARTY_COLOR_MAP[target.party]?.color;
     if(color)document.documentElement.style.setProperty('--party',color);
     card.innerHTML=renderCandidateDetail(target,{openShared:true});

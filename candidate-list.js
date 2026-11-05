@@ -27,7 +27,7 @@ function render(){
   cards.innerHTML=rows.map(x=>renderCandidateCompact(x)).join('');
   empty.hidden=rows.length>0;
 }
-Promise.all([loadCandidateDataset({districts:isCouncilorPage}),fetch('data/party_colors.json').then(response=>response.ok?response.json():{}).catch(()=>({}))]).then(([data,colors])=>{
+Promise.all([loadCandidateDataset({districts:isCouncilorPage,ballots:true}),fetch('data/party_colors.json').then(response=>response.ok?response.json():{}).catch(()=>({}))]).then(([data,colors])=>{
   window.PARTY_COLOR_MAP=colors.parties||{};
   platforms=groupCandidateRecords(data.records.filter(inScope),data.shared_policy_groups||[]).filter(inScope).sort(compareCandidates);
   incumbents=incumbentNamesByCity(data.incumbent_records||[]);
