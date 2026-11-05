@@ -127,8 +127,8 @@ Apps Script 自動蒐集 → Google Sheet「審核資料」
 
 - **只 `git add` 自己範圍的檔案。** 禁止 `git add .`、`git reset --hard`、`git clean -fd`。
 - 設計端要確認沒有把建置重產的 `data/` 檔案一起 stage。
-- 資料端：`git pull --rebase`，經使用者確認後 `git push origin main`。
-- 設計端：`git rebase origin/main`，再 `git push origin HEAD:main`。
+- 資料端：`git pull --rebase origin beta`，經使用者確認後 `git push origin HEAD:beta`。
+- 設計端：`git rebase origin/beta`，再 `git push origin HEAD:beta`。上線流程見 `AGENTS.md`「發布流程」。
 - push 後回報固定格式：`commit hash｜筆數變化｜欄位是否變動｜內容分類｜待辦／風險`。
 
 ## 在 GitHub 網頁上改

@@ -25,14 +25,15 @@
 
 ## 發布流程（2026-11-05 起）
 
-所有設計與資料更新都走同一條路，**不直接推 `staging` 或 `main`**：
+資料端（以 Codex 為主）與設計端（Claude Code，也是主要管理端）對網站的所有更新都走同一條路，**除非使用者指定，不直接推 `staging` 或 `main`**：
 
 ```text
 推 beta → 公測站更新 → 使用者在公測站確認沒問題 → 把 beta 推到 staging
 → promote-staging.yml 驗證建置後，自動快轉 main → 正式站部署
 ```
 
-- **把 `beta` 推到 `staging` 一律要使用者確認**：`git push origin origin/beta:staging`。推上去就會自動進正式站，中間不再有人工關卡。
+- **把 `beta` 推到 `staging` 一律要使用者確認**：`git push origin origin/beta:staging`。使用者看過公測站後，由使用者自己或請 AI 執行。推上去就會自動進正式站，中間不再有人工關卡。
+- **使用者指定直接更新 `main` 時**：`git push origin origin/beta:main`，然後把 `staging` 快轉到同一個 commit，分支才不會分岔。
 - 這一步會把 `beta` 上所有內容一起送出。還沒確認的工作先不要推 `beta`，放在備份分支。
 - `staging` 與 `main` 只能快轉，不得強制推送。自動快轉失敗，代表 `main` 被直接改過或分支分岔，停下來回報使用者，不要自行合併或強推。
 - **例外**：改動 `.github/workflows/` 的 commit 無法自動快轉（內建權限不能更新 workflow 檔），經使用者確認後，由 `daniel9202` 帳號直接推 `main`，再同步到 `staging` 與 `beta`。
