@@ -8,6 +8,22 @@
 
 台灣文化政策的觀察入口。2026 地方選舉的文化政見是第一個模組；之後會加入中央與地方文化預算、預算對應的政策與要點、全國文化會議的回應與追蹤。公開網站是 GitHub Pages：<https://culturalpolicywatch.tw/>，推上 `main` 就會部署。
 
+## 網站、網域與公測站（2026-11-05 起）
+
+- **正式站**：<https://culturalpolicywatch.tw/>，推上 `main` 就會部署。部署走 GitHub Actions，不需要 `CNAME` 檔。不要移除 Pages 設定裡的 Custom domain，也不要按 Unpublish site。
+- **舊網址**：`daniel9202.github.io/culture-governance-observer/` 由 GitHub 自動 301 轉到新網域，子頁與參數都保留。新寫的連結與文件一律用新網址。
+- **DNS 在 Cloudflare**：
+  - 根網域的 4 筆 A 紀錄和 `www` 的 CNAME 都要維持 **DNS only（灰色雲朵）**，不要照 Cloudflare 的提示改成 proxied。
+  - `_github-pages-challenge-daniel9202` 這筆 TXT 不能刪，GitHub 會用它確認網域。
+  - 這裡只用 Cloudflare 的 DNS，與「資料發布流程」裡停用的 Cloudflare Worker／D1 舊流程無關，那條禁令不變。
+- **公測站**：<https://daniel9202.github.io/culture-governance-observer-beta/>，部署流程放在 `daniel9202/culture-governance-observer-beta`，內容來自本 repo 的 `staging` 分支。
+  - 公測站是公開的，「核准前不得出現在公開網站」同樣適用：**未核准的資料不能推到 `staging`**。推 `staging` 比照推 `main` 的確認規則。
+  - `staging` 不會自動跟上 `main`，要測最新內容時先把 `main` 合併過去。
+  - 排程每 15 分鐘檢查一次，有變更才部署；要立刻更新時，到該 repo 的 Actions 手動執行 **Deploy beta site**。
+  - `noindex` 與測試站橫幅由該 repo 的 `scripts/mark-beta.mjs` 在部署時加上，不要寫進本 repo，否則會跟著上正式站。
+- **GitHub 帳號**：寫入 `daniel9202` 的 repo 要用 `daniel9202` 帳號。動手前先跑 `gh api user --jq .login` 確認；Danasus 上 `gh` 的預設帳號曾是 `chunjen-paa`，只有讀取權限。token 不得印出或寫進檔案。
+- **審核台待部署**：`main` 的 `apps-script/` 已是 BUILD `2026-11-05-1`（「前往公開前台」按鈕改新網址），尚未用 clasp 部署。部署前照「工作環境」的 clasp 規則，並記到交接文件。
+
 ## 工作環境
 
 - **主要工作機是 Danasus，其他電腦也可以直接 clone 工作；同步只透過 GitHub。** 不要用 OneDrive 或 Google Drive 同步 repo：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。手機一律用遠端連線。
@@ -52,6 +68,14 @@
 - 欄位契約：設計端只顯示 CSV 已有的欄位，不從標題或內文推斷身分或政見性質。資料端新增、改名或刪除欄位前，要先列出來，等設計端確認。
 
 ## 開工與收工
+
+開工與每次 push 前，都要先讀 GitHub 上最新的規則與進度，有變動就照新的做：
+
+```bash
+git fetch origin
+git show origin/main:AGENTS.md
+git log origin/main -5 --stat -- AGENTS.md docs/PROJECT-HANDOFF.md
+```
 
 開工：
 

@@ -382,6 +382,7 @@ npm run build
 
 ## 待辦（2026-10-29 新增）
 
+- [ ] **部署審核台 BUILD `2026-11-05-1`**（2026-11-05 新增）：只改了「前往公開前台」按鈕的網址，舊網址會自動轉址所以不急，可以等下次改審核台時一起部署。部署後記到「審核台部署紀錄」。
 - [ ] **資料蒐集移到 AI 雲端環境**：雲端 secrets 設 `GOOGLE_SERVICE_ACCOUNT_JSON`、`GOOGLE_REVIEW_SPREADSHEET_ID`；setup 跑 `pip install -r requirements-automation.txt`；每輪依序跑 `collect_candidates.py` → `google_review_pipeline.py --append-pending` → `--export-pending` → 雲端 AI 分析 → `--import-results`。開始前要先處理：
   - `google_review_pipeline.py` 的裝置欄寫死 `{COMPUTERNAME 或 HOSTNAME}-Codex`，雲端會變成隨機主機名，要改成可以用環境變數指定（例：`CLOUD-Claude`）。
   - `tmp/pipeline-cache/` 在雲端不會保留，每輪都會重抓正文。
