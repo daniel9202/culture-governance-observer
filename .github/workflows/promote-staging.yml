@@ -1,0 +1,39 @@
+name: Promote staging to main
+on:
+  push:
+    branches: [staging]
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: promote-staging
+  cancel-in-progress: false
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Validate data and build site
+        run: npm run build
+      - name: Fast-forward main
+        id: promote
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" = "$GITHUB_SHA" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! git merge-base --is-ancestor origin/main "$GITHUB_SHA"; then
+            echo "::error::main is not an ancestor of staging. Nothing was pushed; ask the user how to reconcile."
+            exit 1
+          fi
+          git push origin "$GITHUB_SHA:refs/heads/main"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      # Pushes made with GITHUB_TOKEN do not trigger other workflows, so start the deploy explicitly.
+      - name: Deploy production site
+        if: steps.promote.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"

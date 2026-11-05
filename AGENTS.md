@@ -10,24 +10,37 @@
 
 ## 網站、網域與公測站（2026-11-05 起）
 
-- **正式站**：<https://culturalpolicywatch.tw/>，推上 `main` 就會部署。部署走 GitHub Actions，不需要 `CNAME` 檔。不要移除 Pages 設定裡的 Custom domain，也不要按 Unpublish site。
+- **正式站**：<https://culturalpolicywatch.tw/>，`main` 更新就會部署，`main` 由 `staging` 自動更新，不要直接推（見下方「發布流程」）。部署走 GitHub Actions，不需要 `CNAME` 檔。不要移除 Pages 設定裡的 Custom domain，也不要按 Unpublish site。
 - **舊網址**：`daniel9202.github.io/culture-governance-observer/` 由 GitHub 自動 301 轉到新網域，子頁與參數都保留。新寫的連結與文件一律用新網址。
 - **DNS 在 Cloudflare**：
   - 根網域的 4 筆 A 紀錄和 `www` 的 CNAME 都要維持 **DNS only（灰色雲朵）**，不要照 Cloudflare 的提示改成 proxied。
   - `_github-pages-challenge-daniel9202` 這筆 TXT 不能刪，GitHub 會用它確認網域。
   - 這裡只用 Cloudflare 的 DNS，與「資料發布流程」裡停用的 Cloudflare Worker／D1 舊流程無關，那條禁令不變。
-- **公測站**：<https://daniel9202.github.io/culture-governance-observer-beta/>，部署流程放在 `daniel9202/culture-governance-observer-beta`，內容來自本 repo 的 `staging` 分支。
-  - 公測站是公開的，「核准前不得出現在公開網站」同樣適用：**未核准的資料不能推到 `staging`**。推 `staging` 比照推 `main` 的確認規則。
-  - `staging` 不會自動跟上 `main`，要測最新內容時先把 `main` 合併過去。
+- **公測站**：<https://daniel9202.github.io/culture-governance-observer-beta/>，部署流程放在 `daniel9202/culture-governance-observer-beta`，內容來自本 repo 的 `beta` 分支。
+  - 公測站是公開的，「核准前不得出現在公開網站」同樣適用：**未核准的資料不能推到 `beta`**。
   - 排程每 15 分鐘檢查一次，有變更才部署；要立刻更新時，到該 repo 的 Actions 手動執行 **Deploy beta site**。
   - `noindex` 與測試站橫幅由該 repo 的 `scripts/mark-beta.mjs` 在部署時加上，不要寫進本 repo，否則會跟著上正式站。
 - **GitHub 帳號**：寫入 `daniel9202` 的 repo 要用 `daniel9202` 帳號。動手前先跑 `gh api user --jq .login` 確認；Danasus 上 `gh` 的預設帳號曾是 `chunjen-paa`，只有讀取權限。token 不得印出或寫進檔案。
 - **審核台待部署**：`main` 的 `apps-script/` 已是 BUILD `2026-11-05-1`（「前往公開前台」按鈕改新網址），尚未用 clasp 部署。部署前照「工作環境」的 clasp 規則，並記到交接文件。
 
+## 發布流程（2026-11-05 起）
+
+所有設計與資料更新都走同一條路，**不直接推 `staging` 或 `main`**：
+
+```text
+推 beta → 公測站更新 → 使用者在公測站確認沒問題 → 把 beta 推到 staging
+→ promote-staging.yml 驗證建置後，自動快轉 main → 正式站部署
+```
+
+- **把 `beta` 推到 `staging` 一律要使用者確認**：`git push origin origin/beta:staging`。推上去就會自動進正式站，中間不再有人工關卡。
+- 這一步會把 `beta` 上所有內容一起送出。還沒確認的工作先不要推 `beta`，放在備份分支。
+- `staging` 與 `main` 只能快轉，不得強制推送。自動快轉失敗，代表 `main` 被直接改過或分支分岔，停下來回報使用者，不要自行合併或強推。
+- **例外**：改動 `.github/workflows/` 的 commit 無法自動快轉（內建權限不能更新 workflow 檔），經使用者確認後，由 `daniel9202` 帳號直接推 `main`，再同步到 `staging` 與 `beta`。
+
 ## 工作環境
 
 - **主要工作機是 Danasus，其他電腦也可以直接 clone 工作；同步只透過 GitHub。** 不要用 OneDrive 或 Google Drive 同步 repo：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。手機一律用遠端連線。
-- **同一時間只在一台電腦工作。** 換電腦前，把兩端的工作都 commit 並 push；還沒完成、不能上線的推到備份分支（設計端 `origin/design`、資料端 `origin/data-wip`），不要推 `main`。到另一台開工先 `git fetch origin`，再 rebase 到 `origin/main` 或取回備份分支。
+- **同一時間只在一台電腦工作。** 換電腦前，把兩端的工作都 commit 並 push；還沒完成、不能上線的推到備份分支（設計端 `origin/design`、資料端 `origin/data-wip`），不要推 `beta`。到另一台開工先 `git fetch origin`，再 rebase 到 `origin/beta` 或取回備份分支。
 - **工作不限電腦**（2026-10-29 使用者取消原本「只在 Danasus 做」的限制）：排程自動化、Apps Script 觸發器、審核、寫入 CSV、push 都可以在任何一台電腦或 AI 雲端環境做，但要遵守「同一時間只在一台」與下方的來源標示。`backups/`、`.claude/` 不進 git，也不要複製到其他電腦。
 - **兩台都可以用 clasp 推審核台**，但 `clasp push` 會整份覆蓋 Google 上的程式，不會合併，所以：
   1. 推之前先 `git pull`，只從 `main`（或使用者指定、比 `main` 更新的分支）推。
@@ -88,8 +101,8 @@ git status --short --branch
 
 - **只 `git add` 自己範圍的檔案。** 禁止 `git add .`、`git reset --hard`、`git clean -fd`。
 - 跑 `npm run build`，確認通過。設計端要確認沒有把建置重產的 `data/` 檔案一起 stage。
-- 資料端：`git pull --rebase`，經使用者確認後 `git push origin main`。
-- 設計端：`git rebase origin/main`，再 `git push origin HEAD:main`。尚未完成的工作可以推到 `origin/design` 當備份，不會上線。
+- 資料端：`git pull --rebase origin beta`，經使用者確認後 `git push origin HEAD:beta`。
+- 設計端：`git rebase origin/beta`，再 `git push origin HEAD:beta`。尚未完成的工作可以推到 `origin/design` 當備份，不會上線。
 - push 後回報固定格式的交接訊息：
 
   ```text
@@ -103,8 +116,8 @@ git status --short --branch
 Apps Script 自動蒐集 → Google Sheet「審核資料」
 → 使用者在 Apps Script 審核台核准（核准前不得寫入 `data/input/`，也不得出現在公開網站）
 → 資料端 AI 讀取已核准資料 → 寫入 data/input/*.csv → npm run build
-→ 使用者手動確認 → push
-→ GitHub Actions → GitHub Pages
+→ 使用者手動確認 → 推 beta → 公測站
+→ 使用者確認 → 推 staging → 自動快轉 main → GitHub Pages
 ```
 
 - **資料端 push 到 GitHub、推送 Apps Script 之前，都要先經使用者手動確認。**
