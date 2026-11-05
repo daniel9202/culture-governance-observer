@@ -6,7 +6,7 @@
 
 ## 專案定位
 
-台灣文化政策的觀察入口。2026 地方選舉的文化政見是第一個模組；之後會加入中央與地方文化預算、預算對應的政策與要點、全國文化會議的回應與追蹤。公開網站是 GitHub Pages：<https://daniel9202.github.io/culture-governance-observer/>，推上 `main` 就會部署。
+台灣文化政策的觀察入口。2026 地方選舉的文化政見是第一個模組；之後會加入中央與地方文化預算、預算對應的政策與要點、全國文化會議的回應與追蹤。公開網站是 GitHub Pages：<https://culturalpolicywatch.tw/>，推上 `main` 就會部署。
 
 ## 工作環境
 

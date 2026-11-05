@@ -185,7 +185,7 @@ npm run build
 
 - Pull request 只要涉及 `data/input/**` 或 `scripts/build_data.py`，GitHub Actions 會執行資料驗證。
 - 推送至 `main` 會建置 `dist/` 並部署 GitHub Pages。
-- 公開前台連結目前為：<https://daniel9202.github.io/culture-governance-observer/>。
+- 公開前台連結目前為：<https://culturalpolicywatch.tw/>。
 
 ## 審核台與外部設定
 
