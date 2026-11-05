@@ -13962,6 +13962,9 @@
       "policy_argument": "",
       "concrete_proposals": [
         "左營兼具鳳山舊城、眷村聚落、軍事文化、宗教信仰及蓮池潭等多元文化資源，近年透過眷村「以租代護」計畫修復不少眷村建築，下一步更應思考如何讓老屋活化再利用……",
+        "他建議市府以「以租代護」為基礎，規劃青年漫畫家、插畫家、動畫創作者、設計師及數位內容團隊進駐眷村駐村創作……打造南台灣漫畫創作重鎮。",
+        "若再結合戶外展演舞台，可串聯漫畫創作、舞蹈、音樂、文創市集及藝術工作坊，白天是青年創作空間，夜晚成為藝文展演舞台……",
+        "高雄市政府可規劃成立「高雄漫畫創作中心」，推動青年漫畫家駐村計畫、高雄國際漫畫節、青年原創漫畫競賽及跨域藝術交流……",
         "……未來將持續邀集漫畫家、藝術工作者、文史團體及相關單位共同研議，推動漫畫家駐村、戶外展演舞台等構想逐步落實……"
       ],
       "related_statements": [],
@@ -13998,7 +14001,8 @@
       "current_office": "",
       "corrections": [
         "2026-11-04｜併入同來源舊列（candidate-khh-councilor-hsueh-chao-chi-youth-arts-village-001）；舊列獨有內容依來源原句補入。",
-        "2026-11-05｜移除誤植為候選人主張的內容：「他期待左營……基地」與戶外表演舞台建議，來源均為林政德所言；另移除失去前文的「這項構想……」一句。"
+        "2026-11-05｜移除誤植為候選人主張的內容：「他期待左營……基地」與戶外表演舞台建議，來源均為林政德所言；另移除失去前文的「這項構想……」一句。",
+        "2026-11-05｜依來源原句補入薛兆基本人主張：眷村駐村創作、結合戶外展演舞台、高雄漫畫創作中心。"
       ]
     },
     {
@@ -14427,6 +14431,76 @@
       "corrections": [
         "2026-11-04｜併入同來源舊列（candidate-ptg-councilor-li-shih-kan-hakka-language-001）；舊列獨有內容依來源原句補入。",
         "2026-11-05｜移除誤植內容：「屏東早在民國2007年……」來源為李世斌所言。"
+      ]
+    },
+    {
+      "id": "candidate-auto-5d54ee79eb04",
+      "city": "屏東縣",
+      "office": "縣市議員",
+      "candidate": "李世斌",
+      "party": "民主進步黨",
+      "publish_id": "candidate-auto-5d54ee79eb04",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "2026-11-05｜現任身分依聯合報稱「屏東縣議員」推定，並非議會官方認證；與李世淦同一來源，主張分別列筆。"
+      ],
+      "public_note": "",
+      "policy_title": "",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "客語",
+        "客家文化",
+        "文化傳承",
+        "客語傳承",
+        "文化教育"
+      ],
+      "topic_categories": [
+        "客家文化",
+        "文化資產",
+        "文化教育"
+      ],
+      "topic_subcategories": [],
+      "summary": "……建議成立全客語實驗國小，讓客語從幼兒園延續至國小，希望以116學年度招收首屆實驗教育新生為努力方向，邀集中央、學校、教師、家長及社區共同研議。",
+      "policy_argument": "屏東早在民國2007年推動客語沉浸式教學，2011年有全客語幼兒園，但孩子進入國小後，若缺乏客語使用環境，原本學會母語仍可能逐漸生疏……",
+      "concrete_proposals": [
+        "……建議成立全客語實驗國小，讓客語從幼兒園延續至國小，希望以116學年度招收首屆實驗教育新生為努力方向，邀集中央、學校、教師、家長及社區共同研議。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "udn.com｜客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+            "url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "udn.com｜客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+            "url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "udn.com｜客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+            "url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2"
+          }
+        ]
+      },
+      "published_date": "2026-09-30",
+      "source_title": "udn.com｜客語斷層拉警報！屏東2議員提解方 盼催生全台首所全客語實驗國小",
+      "source_url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2",
+      "related_sources": [],
+      "source_type": "新聞／公開網頁",
+      "last_verified": "2026-11-05",
+      "proposer_role": "推定現任議員",
+      "content_nature": "公職政績",
+      "role_evidence": "中選會本屆名冊與來源內容推定",
+      "office_category": "民意代表",
+      "current_office": "現任屏東縣議員",
+      "corrections": [
+        "2026-11-05｜新增：依來源原句收錄，該內容原誤植於李世淦一筆（candidate-auto-f0d69845006b）。"
       ]
     },
     {
