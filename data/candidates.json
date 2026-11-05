@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-11-04",
+  "last_updated": "2026-11-05",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -13930,7 +13930,9 @@
       "party": "無黨籍",
       "publish_id": "candidate-auto-a130a3fa1e28",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "2026-11-05｜來源中戶外表演舞台由林政德提議，薛兆基表示將推動此構想逐步落實。"
+      ],
       "public_note": "",
       "policy_title": "",
       "official_topic": "",
@@ -13956,13 +13958,10 @@
       "topic_subcategories": [
         "文化資產／保存"
       ],
-      "summary": "他期待左營不只是保存歷史，更能成為孕育下一代漫畫家、藝術家與創作者的基地。 || 左營兼具鳳山舊城、眷村聚落、軍事文化、宗教信仰及蓮池潭等多元文化資源，近年透過眷村「以租代護」計畫修復不少眷村建築，下一步更應思考如何讓老屋活化再利用…… |",
+      "summary": "左營兼具鳳山舊城、眷村聚落、軍事文化、宗教信仰及蓮池潭等多元文化資源，近年透過眷村「以租代護」計畫修復不少眷村建築，下一步更應思考如何讓老屋活化再利用……",
       "policy_argument": "",
       "concrete_proposals": [
-        "他期待左營不只是保存歷史，更能成為孕育下一代漫畫家、藝術家與創作者的基地。",
         "左營兼具鳳山舊城、眷村聚落、軍事文化、宗教信仰及蓮池潭等多元文化資源，近年透過眷村「以租代護」計畫修復不少眷村建築，下一步更應思考如何讓老屋活化再利用……",
-        "可利用眷村整建中的空間，規劃一座融合老屋、老樹與眷村景觀的戶外表演舞台，不僅提供左營高中舞蹈班及在地青年藝術團隊更多公開演出的機會……",
-        "這項構想不只是增加一座舞台，更是推動文化創生的重要一步。",
         "……未來將持續邀集漫畫家、藝術工作者、文史團體及相關單位共同研議，推動漫畫家駐村、戶外展演舞台等構想逐步落實……"
       ],
       "related_statements": [],
@@ -13991,14 +13990,15 @@
       "source_url": "https://www.5ch.com.tw/news.php?act=view&id=81694",
       "related_sources": [],
       "source_type": "新聞／公開網頁",
-      "last_verified": "2026-11-04",
+      "last_verified": "2026-11-05",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-11-04｜併入同來源舊列（candidate-khh-councilor-hsueh-chao-chi-youth-arts-village-001）；舊列獨有內容依來源原句補入。"
+        "2026-11-04｜併入同來源舊列（candidate-khh-councilor-hsueh-chao-chi-youth-arts-village-001）；舊列獨有內容依來源原句補入。",
+        "2026-11-05｜移除誤植為候選人主張的內容：「他期待左營……基地」與戶外表演舞台建議，來源均為林政德所言；另移除失去前文的「這項構想……」一句。"
       ]
     },
     {
@@ -14361,7 +14361,8 @@
       "publish_id": "candidate-auto-f0d69845006b",
       "review_status": "人工審核",
       "editor_notes": [
-        "具體主張部分項目依使用者審閱改寫"
+        "具體主張部分項目依使用者審閱改寫",
+        "2026-11-05｜同一來源的全客語實驗國小主張出自李世斌，未列入本筆。"
       ],
       "public_note": "",
       "policy_title": "",
@@ -14385,11 +14386,10 @@
         "文化教育"
       ],
       "topic_subcategories": [],
-      "summary": "制定「客家民族教育法」構想，希望參考原住民族教育相關制度，建立客語師資長期培育及保障機制，讓客語傳承從文化活動提升到教育制度。 || 屏東早在民國2007年推動客語沉浸式教學，2011年有全客語幼兒園，但孩子進入國小後，若缺乏客語使用環境，",
+      "summary": "制定「客家民族教育法」構想，參考原住民族教育相關制度，建立客語師資長期培育及保障機制，讓客語傳承從文化活動提升到教育制度。",
       "policy_argument": "",
       "concrete_proposals": [
         "制定「客家民族教育法」構想，參考原住民族教育相關制度，建立客語師資長期培育及保障機制，讓客語傳承從文化活動提升到教育制度。",
-        "屏東早在民國2007年推動客語沉浸式教學，2011年有全客語幼兒園，但孩子進入國小後，若缺乏客語使用環境，原本學會母語仍可能逐漸生疏……",
         "李世淦說，客語要永續，不能只靠節慶活動或短期計畫，應從家庭、學校及師資三方面扎根，讓孩子「敢講、會講、願意講」。"
       ],
       "related_statements": [],
@@ -14418,14 +14418,15 @@
       "source_url": "https://udn.com/news/story/7327/9786852?from=udn-relatednews_ch2",
       "related_sources": [],
       "source_type": "新聞／公開網頁",
-      "last_verified": "2026-11-04",
+      "last_verified": "2026-11-05",
       "proposer_role": "推定現任議員",
       "content_nature": "公職政績",
       "role_evidence": "中選會本屆名冊與來源內容推定",
       "office_category": "民意代表",
       "current_office": "現任屏東縣議員",
       "corrections": [
-        "2026-11-04｜併入同來源舊列（candidate-ptg-councilor-li-shih-kan-hakka-language-001）；舊列獨有內容依來源原句補入。"
+        "2026-11-04｜併入同來源舊列（candidate-ptg-councilor-li-shih-kan-hakka-language-001）；舊列獨有內容依來源原句補入。",
+        "2026-11-05｜移除誤植內容：「屏東早在民國2007年……」來源為李世斌所言。"
       ]
     },
     {
