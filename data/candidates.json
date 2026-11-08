@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-11-05",
+  "last_updated": "2026-11-08",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -4979,99 +4979,6 @@
         "2026-10-27 移除具體主張開頭的來源項次編號",
         "2026-10-30｜依新卡片結構補官網主題，來源類型統一為候選人官網。",
         "2026-11-04｜依官網補回遺漏的第 3 項（客語教育師資）。"
-      ]
-    },
-    {
-      "id": "candidate-auto-7990c5d191d2",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "李四川",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-7990c5d191d2",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "同一政見有 3 則來源，內容合併後以",
-        "分項，重複者不重列",
-        "保留的兩項含官網沒有的內容（文化幣用途、藝術節串聯的場館與巨蛋城），依計畫整句保留。",
-        "第 2 項的「……」待回中央社原文補完整句。"
-      ],
-      "public_note": "",
-      "policy_title": "文化三策：文化幣、新北國際藝術節、創作免場租",
-      "official_topic": "",
-      "official_subtopic": "",
-      "source_outlet": "中央社 CNA",
-      "topics": [
-        "美術館",
-        "文化場館",
-        "歷史街區",
-        "影視文化",
-        "藝文節慶",
-        "文化近用"
-      ],
-      "topic_categories": [
-        "博物館與地方文化館",
-        "文化場館",
-        "文化資產",
-        "文化空間與城市再生",
-        "影視與流行音樂",
-        "藝文節慶",
-        "文化平權與參與"
-      ],
-      "topic_subcategories": [
-        "博物館與地方文化館／美術館"
-      ],
-      "summary": "每年發放15萬份「新北文化幣」，每份價值新台幣600元，可用於觀賞舞蹈、舞台劇、電影，或購書、逛展覽及參與新北各項藝文活動。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "每年發放15萬份「新北文化幣」，每份價值新台幣600元，可用於觀賞舞蹈、舞台劇、電影，或購書、逛展覽及參與新北各項藝文活動。",
-        "打造「新北國際藝術節」，讓優秀藝文團隊站上更大舞台；……他將串聯新北美術館、藝文場館、特色街區、山海河岸及未來的新北巨蛋城，邀國際團隊來新北，也讓世界看見新北。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "中央社 CNA｜李四川「文化三策」　撒文化幣、創作空間免場租",
-            "url": "https://www.cna.com.tw/news/aipl/202609260169.aspx"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "中央社 CNA｜李四川「文化三策」　撒文化幣、創作空間免場租",
-            "url": "https://www.cna.com.tw/news/aipl/202609260169.aspx"
-          },
-          {
-            "title": "udn｜李四川今公布文化政策 新北發六百元文化幣、創作免場租 - udn",
-            "url": "https://udn.com/news/story/124652/9778812"
-          },
-          {
-            "title": "LINE TODAY｜李四川拋「文化三策」 蘇巧慧：當立委時就推政策 | EBC 東森新聞 - LINE TODAY",
-            "url": "https://today.line.me/tw/v3/article/VxpqLDV?view=topic&referral=TOPIC-Election"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "中央社 CNA｜李四川「文化三策」　撒文化幣、創作空間免場租",
-            "url": "https://www.cna.com.tw/news/aipl/202609260169.aspx"
-          }
-        ]
-      },
-      "published_date": "2026-09-26",
-      "source_title": "中央社 CNA｜李四川「文化三策」　撒文化幣、創作空間免場租",
-      "source_url": "https://www.cna.com.tw/news/aipl/202609260169.aspx",
-      "related_sources": [
-        "https://udn.com/news/story/124652/9778812",
-        "https://today.line.me/tw/v3/article/VxpqLDV?view=topic&referral=TOPIC-Election"
-      ],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": [
-        "2026-10-30｜官網「李四川挺文化」頁已收文化三策（candidate-ntpc-mayor-lee-sichuan-culture-001）；刪除與官網相同的「盤點閒置或可活化的公有空間，讓在地團隊免費進駐。」，原以空白分隔的項目改用",
-        "分項；來源類型改為新聞報導。"
       ]
     },
     {
@@ -10682,78 +10589,6 @@
       "office_category": "首長",
       "current_office": "現任臺北市長",
       "corrections": []
-    },
-    {
-      "id": "candidate-auto-20cf671b43a5",
-      "city": "新北市",
-      "office": "縣市長",
-      "candidate": "李四川",
-      "party": "中國國民黨",
-      "publish_id": "candidate-auto-20cf671b43a5",
-      "review_status": "人工審核",
-      "editor_notes": [
-        "具體主張部分項目依使用者審閱改寫",
-        "與官網六大客家政策（candidate-auto-2290ebb1fc91）比對：社團補助、哈客館、義民祭分區、客語無障礙與官網重複，但兩句都另含官網沒有的內容（客語教育師資與鐘點費、園區轉型為產業綜合中心、強化宣傳客家藝文展演），依計畫整句保留。"
-      ],
-      "public_note": "",
-      "policy_title": "六大客家政策",
-      "official_topic": "",
-      "official_subtopic": "",
-      "source_outlet": "中央社 CNA",
-      "topics": [
-        "客家文化",
-        "文化場館",
-        "藝文活動",
-        "多元語言"
-      ],
-      "topic_categories": [
-        "客家文化",
-        "文化場館",
-        "文化平權與參與",
-        "語言與族群"
-      ],
-      "topic_subcategories": [],
-      "summary": "李四川提出六大客家政策，包括客家社團補助、哈客館、客語師資、義民祭、客家文化園區及客語友善環境。",
-      "policy_argument": "",
-      "concrete_proposals": [
-        "將在侯友宜奠定的基礎上推進，包括實質提高客家社團補助、穩健推進12年15座「哈客館」的目標、持續優化客語教育師資環境，盼望提高鐘點費。",
-        "擴大辦理義民祭及重大節日分區舉辦，加速推動「新北市客家文化園區」轉型為產業綜合中心、強化宣傳客家藝文展演，及打造局處客語無障礙友善環境。"
-      ],
-      "related_statements": [],
-      "field_sources": {
-        "policy_argument": [
-          {
-            "title": "中央社 CNA｜李四川推六大客家政見允優化師資擴大辦理義民祭| 地方 - 中央社 CNA",
-            "url": "https://www.cna.com.tw/news/aloc/202610030177.aspx"
-          }
-        ],
-        "concrete_proposals": [
-          {
-            "title": "中央社 CNA｜李四川推六大客家政見允優化師資擴大辦理義民祭| 地方 - 中央社 CNA",
-            "url": "https://www.cna.com.tw/news/aloc/202610030177.aspx"
-          }
-        ],
-        "related_statements": [
-          {
-            "title": "中央社 CNA｜李四川推六大客家政見允優化師資擴大辦理義民祭| 地方 - 中央社 CNA",
-            "url": "https://www.cna.com.tw/news/aloc/202610030177.aspx"
-          }
-        ]
-      },
-      "published_date": "2026-10-03",
-      "source_title": "中央社 CNA｜李四川推六大客家政見允優化師資擴大辦理義民祭| 地方 - 中央社 CNA",
-      "source_url": "https://www.cna.com.tw/news/aloc/202610030177.aspx",
-      "related_sources": [],
-      "source_type": "新聞報導",
-      "last_verified": "2026-10-26",
-      "proposer_role": "候選人",
-      "content_nature": "本屆競選政見",
-      "role_evidence": "中選會 115 年候選人登記名冊",
-      "office_category": "",
-      "current_office": "",
-      "corrections": [
-        "2026-10-30｜來源類型改為新聞報導，補媒體名稱。"
-      ]
     },
     {
       "id": "candidate-auto-b9f67d85b4c8",
