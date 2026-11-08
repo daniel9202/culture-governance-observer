@@ -1729,7 +1729,7 @@
       "review_status": "人工審核",
       "editor_notes": [],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "巷口微型圖書館",
       "official_topic": "",
       "official_subtopic": "",
       "source_outlet": "",
@@ -1742,11 +1742,10 @@
         "數位文化與科技"
       ],
       "topic_subcategories": [],
-      "summary": "提出在捷運站與超商增設智慧還書箱，並以 App 預約與配送圖書，擴大公共圖書館服務的生活可近性。",
+      "summary": "捷運站、超商增設智慧還書箱，APP 預約好書直送。",
       "policy_argument": "",
       "concrete_proposals": [
-        "在捷運站與超商增設智慧還書箱。",
-        "以 App 預約圖書並配送。"
+        "巷口微型圖書館：捷運站、超商增設智慧還書箱，APP 預約好書直送。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -1781,7 +1780,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-11-09｜依使用者提供的來源原文核對。"
       ]
     },
     {
@@ -1931,7 +1931,7 @@
       "review_status": "人工審核",
       "editor_notes": [],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "美學城市：活化古城故事，讓藝文融入生活",
       "official_topic": "",
       "official_subtopic": "",
       "source_outlet": "",
@@ -1956,7 +1956,7 @@
       "topic_subcategories": [
         "博物館與地方文化館／美術館"
       ],
-      "summary": "深耕在地藝文培育。",
+      "summary": "活化古城故事，讓藝文融入生活",
       "policy_argument": "",
       "concrete_proposals": [
         "深耕在地藝文培育：增加各校藝文教育預算，並定期辦理培育工作坊，支持南區在地藝術團體發展。",
@@ -1998,7 +1998,8 @@
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
         "2026-10-03｜合併 candidate-hsinchu-councilor-li-mei-arts-001 的重複官方候選人頁內容；保留既有 ID，補「視覺藝術」細標籤，不以場地描述標示為美術館。",
-        "2026-10-10｜依原文修正。"
+        "2026-10-10｜依原文修正。",
+        "2026-11-09｜依使用者提供的來源原文核對。"
       ]
     },
     {
@@ -2086,7 +2087,7 @@
       "review_status": "人工審核",
       "editor_notes": [],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "三民好生活",
       "official_topic": "",
       "official_subtopic": "",
       "source_outlet": "",
@@ -2099,10 +2100,10 @@
         "文化教育"
       ],
       "topic_subcategories": [],
-      "summary": "提出持續推動客語教育，支持客家語言的日常傳承。",
+      "summary": "持續推動客語教育",
       "policy_argument": "",
       "concrete_proposals": [
-        "持續推動客語教育。"
+        "持續推動客語教育"
       ],
       "related_statements": [],
       "field_sources": {
@@ -2137,7 +2138,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-09-14｜由舊審核資料遷入。"
+        "2026-09-14｜由舊審核資料遷入。",
+        "2026-11-09｜依使用者提供的來源原文核對。"
       ]
     },
     {
@@ -2291,7 +2293,7 @@
       "review_status": "人工審核",
       "editor_notes": [],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "在地發展",
       "official_topic": "",
       "official_subtopic": "",
       "source_outlet": "",
@@ -2309,14 +2311,12 @@
         "青年"
       ],
       "topic_subcategories": [],
-      "summary": "提出整合北海岸觀光網、提升旅遊文化體驗，並以青年創業與社區文創活化地方特色，推動傳統市場轉型。",
+      "summary": "整合北海岸觀光網，提升旅遊文化體驗",
       "policy_argument": "",
       "concrete_proposals": [
-        "整合北海岸觀光網。",
-        "提升旅遊文化體驗。",
-        "輔導青年創業與新產業。",
-        "活化社區文創亮點。",
-        "推動傳統市場轉型。"
+        "整合北海岸觀光網，提升旅遊文化體驗",
+        "輔導青創與新產業，活化社區文創亮點",
+        "推動環境市集轉型，打造傳統市場未來"
       ],
       "related_statements": [],
       "field_sources": {
@@ -2352,7 +2352,8 @@
       "current_office": "",
       "corrections": [
         "2026-09-14｜由舊審核資料遷入。",
-        "2026-10-03｜合併 candidate-ntpc-councilor-chen-yu-chieh-cultural-tourism-001 的同一官方候選人頁內容；保留既有 ID，補入傳統市場轉型措施。"
+        "2026-10-03｜合併 candidate-ntpc-councilor-chen-yu-chieh-cultural-tourism-001 的同一官方候選人頁內容；保留既有 ID，補入傳統市場轉型措施。",
+        "2026-11-09｜依使用者提供的來源原文核對。"
       ]
     },
     {
@@ -3523,11 +3524,9 @@
       "publish_id": "",
       "review_status": "AI初審待複核",
       "editor_notes": [
-        "未載明：場館面積、藝文設施內容、預算來源、營運方式、完成期程",
-        "同一網址原本裂成兩筆，已合併。第 2 項補自另一筆。",
-        "被刪除的那筆有兩處問題：前兩項句子開頭被截斷（「的，利用未來⋯」「，未來土城⋯」），另有一項是蘇巧慧的發言（「蘇巧慧說，未來她會和彭一書一起努力⋯」），非本人主張，不予收錄。"
+        "依使用者提供的來源原文核對。報導由蘇巧慧轉述彭一書的提案，未載彭本人發言，也未見大漢溪藝術走廊、雙年展或地景藝術節，移除無來源支持的措施。"
       ],
-      "public_note": "",
+      "public_note": "本則政見出自民進黨新北市黨部發布的新聞，由蘇巧慧轉述彭一書的提案，目前尚未找到其他可確認彭一書提出此案的來源。",
       "policy_title": "",
       "official_topic": "",
       "official_subtopic": "",
@@ -3543,11 +3542,10 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "提出在土城看守所搬遷後的現址打造「複合式國際運動藝文中心」。",
+      "summary": "利用未來土城看守所搬遷後現址，打造「複合式國際運動藝文中心」",
       "policy_argument": "",
       "concrete_proposals": [
-        "利用土城看守所搬遷後現址打造複合式國際運動藝文中心。",
-        "以「大漢溪藝術走廊」為名，共同舉辦雙年展或跨市大型地景藝術節。"
+        "她也支持彭一書所提出的，利用未來土城看守所搬遷後現址，打造「複合式國際運動藝文中心」，讓土城邁向下一個二十年。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -3582,7 +3580,8 @@
       "office_category": "",
       "current_office": "",
       "corrections": [
-        "2026-10-27 合併同網址重複列，移除誤植的他人發言與截斷句"
+        "2026-10-27 合併同網址重複列，移除誤植的他人發言與截斷句",
+        "2026-11-09｜依使用者提供的來源原文核對。報導由蘇巧慧轉述彭一書的提案，未載彭本人發言，也未見大漢溪藝術走廊、雙年展或地景藝術節，移除無來源支持的措施。"
       ]
     },
     {
@@ -16520,7 +16519,7 @@
         "來源頁面沒有發布日期"
       ],
       "public_note": "",
-      "policy_title": "",
+      "policy_title": "活絡觀光｜濱海休閒廊道與紡織文創新生命",
       "official_topic": "",
       "official_subtopic": "",
       "source_outlet": "",
@@ -16538,45 +16537,47 @@
       "topic_subcategories": [
         "文化資產／保存"
       ],
-      "summary": "彰美路及和美早市打造「和美紡織文化商圈」，串聯和美古蹟帶動觀光。",
+      "summary": "在彰美路及和美早市一帶活化老舊廠房與老屋，發展紡織工藝體驗、文創市集與漫遊商圈。",
       "policy_argument": "",
       "concrete_proposals": [
-        "彰美路及和美早市打造「和美紡織文化商圈」，串聯和美古蹟帶動觀光。",
-        "辦理老屋街區立面修復與故事導覽，打造兼具生活與觀光價值的文創眷村。"
+        "結合和美「織女的故鄉」的紡織歷史，在彰美路及和美早市一帶活化老舊廠房與老屋，發展紡織工藝體驗、文創市集與漫遊商圈，帶動和美古蹟與老街觀光。",
+        "推動老屋街區立面修復與故事導覽，打造兼具生活與觀光價值的文創眷村。"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "蘇智弦｜2026 議員候選人政見",
-            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214"
+            "title": "活絡觀光｜濱海休閒廊道與紡織文創新生命",
+            "url": "https://mrfrancis0127.github.io/ChihHsuan-2026/documents/04-tourism/"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "蘇智弦｜2026 議員候選人政見",
-            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214"
+            "title": "活絡觀光｜濱海休閒廊道與紡織文創新生命",
+            "url": "https://mrfrancis0127.github.io/ChihHsuan-2026/documents/04-tourism/"
           }
         ],
         "related_statements": [
           {
-            "title": "蘇智弦｜2026 議員候選人政見",
-            "url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214"
+            "title": "活絡觀光｜濱海休閒廊道與紡織文創新生命",
+            "url": "https://mrfrancis0127.github.io/ChihHsuan-2026/documents/04-tourism/"
           }
         ]
       },
       "published_date": "",
-      "source_title": "蘇智弦｜2026 議員候選人政見",
-      "source_url": "https://www.tpp.org.tw/2026election/candidatedetail.php?cid=214",
+      "source_title": "活絡觀光｜濱海休閒廊道與紡織文創新生命",
+      "source_url": "https://mrfrancis0127.github.io/ChihHsuan-2026/documents/04-tourism/",
       "related_sources": [],
-      "source_type": "政黨候選人頁",
-      "last_verified": "2026-11-02",
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-09",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
       "office_category": "",
       "current_office": "",
-      "corrections": []
+      "corrections": [
+        "2026-11-09｜依使用者提供的蘇智弦競選團隊政見全文核對既有兩項措施，修正來源網址。"
+      ]
     },
     {
       "id": "candidate-auto-974faa34ccba",
