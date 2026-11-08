@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-11-08",
+  "last_updated": "2026-11-09",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -3449,7 +3449,8 @@
       "editor_notes": [
         "未載明：修繕範圍、預算、完成期程、社區藝文活動執行機制",
         "2026-10-30｜摘要及修繕項目改為來源原句；來源已讀部分未見「推動更多社區藝文活動」，該項移除。長句刪去一個子句，以省略號標示。",
-        "2026-10-30｜前次僅閱讀部分頁面即刪除社區藝文活動，證據不足，已列待貼原文；本次恢復已核對的完整修繕句。"
+        "2026-10-30｜前次僅閱讀部分頁面即刪除社區藝文活動，證據不足，已列待貼原文；本次恢復已核對的完整修繕句。",
+        "2026-11-02｜完整頁面「人文與社福」段落確有社區藝文活動，已恢復。"
       ],
       "public_note": "",
       "policy_title": "景觀與文化：守護自然，活化歷史",
@@ -3468,10 +3469,11 @@
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "我們將積極爭取經費，修繕與活化地方歷史建築，如北投車站、士林官邸周邊等，讓文化資產不僅被保存，更能成為連結在地情感與吸引觀光客的亮點，打造兼具生態與文化的宜居城市。",
+      "summary": "景觀與文化：守護自然，活化歷史",
       "policy_argument": "",
       "concrete_proposals": [
-        "我們將積極爭取經費，修繕與活化地方歷史建築，如北投車站、士林官邸周邊等，讓文化資產不僅被保存，更能成為連結在地情感與吸引觀光客的亮點，打造兼具生態與文化的宜居城市。"
+        "我們將積極爭取經費，修繕與活化地方歷史建築，如北投車站、士林官邸周邊等，讓文化資產不僅被保存，更能成為連結在地情感與吸引觀光客的亮點，打造兼具生態與文化的宜居城市。",
+        "同時，我們也會推動更多的社區藝文活動與體育賽事，凝聚社區共識，讓士林、北投成為一個充滿人情味與活力的溫暖大家庭。"
       ],
       "related_statements": [],
       "field_sources": {
@@ -3508,7 +3510,8 @@
       "corrections": [
         "2026-10-01｜中選會登記名冊核對為臺北市第1選舉區、中國國民黨候選人；候選人競選網站人工審核完成。",
         "2026-10-30｜依候選人網站修正主題、摘要與具體主張，刪除未核實的社區藝文活動。",
-        "2026-10-30｜補回已核對的修繕措施完整原句；另就先前刪除的社區藝文活動保留待查。"
+        "2026-10-30｜補回已核對的修繕措施完整原句；另就先前刪除的社區藝文活動保留待查。",
+        "2026-11-02｜依完整頁面補回社區藝文活動原句，修正先前誤刪。"
       ]
     },
     {
@@ -4482,7 +4485,7 @@
         "文化資產"
       ],
       "topic_subcategories": [],
-      "summary": "振興舊城商圈，促進南寮升級。",
+      "summary": "振興舊城商圈，促進南寮升級",
       "policy_argument": "",
       "concrete_proposals": [
         "鼓勵藝文團體在地發展，以城市為舞台，創造舊城新魅力。",
@@ -4522,7 +4525,8 @@
       "current_office": "",
       "corrections": [
         "2026-10-02｜中選會名冊核對為新竹市第4選舉區時代力量候選人；候選人官方頁明列漁村與造船文化推廣及漁港觀光發展，完成人工審核。",
-        "2026-10-27｜改以時代力量候選人頁為唯一來源，依頁面原文補入藝文團體在地發展政見。"
+        "2026-10-27｜改以時代力量候選人頁為唯一來源，依頁面原文補入藝文團體在地發展政見。",
+        "2026-11-02｜核對政黨候選人頁，兩項措施與原文相符。"
       ]
     },
     {
@@ -9991,51 +9995,61 @@
       "party": "無黨籍",
       "publish_id": "candidate-auto-15acfc111d1e",
       "review_status": "人工審核",
-      "editor_notes": [],
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。",
+        "與既有聯合報資料涵蓋的政策重疊，改以官網為主；聯合報列為相關來源。｜依審核資料第 1389 列核准文字及原文對照核對。"
+      ],
       "public_note": "",
-      "policy_title": "",
-      "official_topic": "",
+      "policy_title": "「諸羅顯影」經濟學",
+      "official_topic": "「諸羅顯影」經濟學",
       "official_subtopic": "",
       "source_outlet": "",
       "topics": [
+        "文化資產",
+        "文化科技",
         "地方文化"
       ],
       "topic_categories": [
+        "文化資產",
+        "數位文化與科技",
         "地方文化與社區營造"
       ],
       "topic_subcategories": [],
-      "summary": "以「藝術圓夢中心經濟學」與「諸羅顯影經濟學」，用美學、藝術、科技及建築整合城市發展。",
+      "summary": "諸羅顯影計畫提出，在城牆原址的地面材質上進行細膩的轉換與鋪設——即便柏油路面必須存在，我們也可以透過貼近歷史材質的設計手法，讓行經該處的民眾在腳步的觸感與視覺的鋪面中，清晰意識到：「這裡就是昔日城牆的邊界」。",
       "policy_argument": "",
       "concrete_proposals": [
-        "提出「藝術圓夢中心經濟學」與「諸羅顯影經濟學」，以美學、藝術、科技及建築整合城市發展；將既有文化、城市空間與生活需求轉化為城市經濟及治理動能。"
+        "諸羅顯影計畫提出，在城牆原址的地面材質上進行細膩的轉換與鋪設——即便柏油路面必須存在，我們也可以透過貼近歷史材質的設計手法，讓行經該處的民眾在腳步的觸感與視覺的鋪面中，清晰意識到：「這裡就是昔日城牆的邊界」。",
+        "計畫規劃在特定的時段與節點（例如市政府門口或特定歷史節點），運用先進的光雕投影技術（Projection Mapping），在城市空間中重現當年的古城風貌與歷史場景。"
       ],
       "related_statements": [],
       "field_sources": {
         "policy_argument": [
           {
-            "title": "聯合報｜嘉市長選戰倒數百日 台藝大前校長陳愷璜提十大經濟政見虛實整合策略",
-            "url": "https://udn.com/vote2026/story/124652/9703532"
+            "title": "陳愷璜競選網站｜「諸羅顯影」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-5"
           }
         ],
         "concrete_proposals": [
           {
-            "title": "聯合報｜嘉市長選戰倒數百日 台藝大前校長陳愷璜提十大經濟政見虛實整合策略",
-            "url": "https://udn.com/vote2026/story/124652/9703532"
+            "title": "陳愷璜競選網站｜「諸羅顯影」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-5"
           }
         ],
         "related_statements": [
           {
-            "title": "聯合報｜嘉市長選戰倒數百日 台藝大前校長陳愷璜提十大經濟政見虛實整合策略",
-            "url": "https://udn.com/vote2026/story/124652/9703532"
+            "title": "陳愷璜競選網站｜「諸羅顯影」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-5"
           }
         ]
       },
-      "published_date": "2026-08-20",
-      "source_title": "聯合報｜嘉市長選戰倒數百日 台藝大前校長陳愷璜提十大經濟政見虛實整合策略",
-      "source_url": "https://udn.com/vote2026/story/124652/9703532",
-      "related_sources": [],
-      "source_type": "新聞／公開網頁",
-      "last_verified": "2026-10-26",
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜「諸羅顯影」經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-5",
+      "related_sources": [
+        "https://udn.com/vote2026/story/124652/9703532"
+      ],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
       "proposer_role": "候選人",
       "content_nature": "本屆競選政見",
       "role_evidence": "中選會 115 年候選人登記名冊",
@@ -16999,6 +17013,459 @@
         "2026-11-08｜依使用者指定完整收錄候選人官網展演中心及國際藝文活動兩項政見。",
         "2026-11-08｜依使用者指定完整補入青少年運動與展演基地。"
       ]
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-2026-policy-1",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-2026-policy-1",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。｜依審核資料第 1385 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "走路經濟學",
+      "official_topic": "走路經濟學",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "地方文化"
+      ],
+      "topic_categories": [
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
+      "summary": "面對這樣充滿潛力的走路經濟學，政府與在地治理者應當扮演什麼角色？其中，市政府最重要的一項任務，就是「把地方故事給挖出來」。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "面對這樣充滿潛力的走路經濟學，政府與在地治理者應當扮演什麼角色？其中，市政府最重要的一項任務，就是「把地方故事給挖出來」。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳愷璜競選網站｜走路經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-1"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳愷璜競選網站｜走路經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-1"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳愷璜競選網站｜走路經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-1"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜走路經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-1",
+      "related_sources": [],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-2026-policy-2",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-2026-policy-2",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。｜依審核資料第 1386 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "跨宗教經濟學",
+      "official_topic": "跨宗教經濟學",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "宗教文化",
+        "文化節慶"
+      ],
+      "topic_categories": [
+        "民俗節慶",
+        "藝文節慶"
+      ],
+      "topic_subcategories": [],
+      "summary": "首要任務是將各不同宗教傳統信仰中的儀式、祭典與核心精神，進行深度的「美學轉譯」。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "首要任務是將各不同宗教傳統信仰中的儀式、祭典與核心精神，進行深度的「美學轉譯」。",
+        "未來，嘉義市可以跳脫傳統單一宮廟活動的框架，效仿音樂節、藝術節與文化節的模式，定期舉辦規模宏大的「跨宗教藝術節」或「宗教節」。",
+        "這是一項定期的活動——每年都有這樣一次，一年四季都可以呼應不同的宗教、推動不同的活動，進而扮演一種非常獨特、全新的經濟平台推動角色。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳愷璜競選網站｜跨宗教經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-2"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳愷璜競選網站｜跨宗教經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-2"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳愷璜競選網站｜跨宗教經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-2"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜跨宗教經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-2",
+      "related_sources": [],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-2026-policy-3",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-2026-policy-3",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。｜依審核資料第 1387 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "公園經濟學",
+      "official_topic": "公園經濟學",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化空間",
+        "地方文化"
+      ],
+      "topic_categories": [
+        "文化空間與城市再生",
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
+      "summary": "當這 52 座公園被賦予不同的主題與定位時，它們就不再只是單調的休憩空間，而是 52 個城市的展覽場所。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "當這 52 座公園被賦予不同的主題與定位時，它們就不再只是單調的休憩空間，而是 52 個城市的展覽場所。",
+        "彰顯歷史文化紋理：讓公園成為訴說地方歷史與木都故事的載體。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳愷璜競選網站｜公園經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-3"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳愷璜競選網站｜公園經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-3"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳愷璜競選網站｜公園經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-3"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜公園經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-3",
+      "related_sources": [],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-2026-policy-4",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-2026-policy-4",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。｜依審核資料第 1388 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "木都經濟學",
+      "official_topic": "木都經濟學",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化資產",
+        "文化空間"
+      ],
+      "topic_categories": [
+        "文化資產",
+        "文化空間與城市再生"
+      ],
+      "topic_subcategories": [],
+      "summary": "跨國界資本鏈結：從台灣出發，擴及亞洲至全世界，吸引尋求永續投資與碳權回饋的國際對象，讓老屋修繕獲得龐大且務實的民間與國際資本支援。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "跨國界資本鏈結：從台灣出發，擴及亞洲至全世界，吸引尋求永續投資與碳權回饋的國際對象，讓老屋修繕獲得龐大且務實的民間與國際資本支援。",
+        "透過國際資本的挹注與當代生態系統的建構，這六千多棟過去可能面臨崩壞的城市角落，將在短短的八年、十年到十五年內，以可見的速度全面完成修繕與更新。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳愷璜競選網站｜木都經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-4"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳愷璜競選網站｜木都經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-4"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳愷璜競選網站｜木都經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-4"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜木都經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-4",
+      "related_sources": [],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-2026-policy-6",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-2026-policy-6",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。",
+        "與既有聯合報資料涵蓋的政策重疊，改以官網為主；聯合報列為相關來源。",
+        "首頁摘要與詳文描述有差異；詳文稱並非一棟場館興建計畫。｜依審核資料第 1390 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "「藝術圓夢中心」經濟學",
+      "official_topic": "「藝術圓夢中心」經濟學",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "藝術教育",
+        "文化產業"
+      ],
+      "topic_categories": [
+        "文化教育",
+        "文化產業與文創"
+      ],
+      "topic_subcategories": [],
+      "summary": "打造藝術聚落與夢想孵化基地，讓創作帶動商機，藝術家與城市共同圓夢、共同繁榮。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "打造藝術聚落與夢想孵化基地，讓創作帶動商機，藝術家與城市共同圓夢、共同繁榮。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳愷璜競選網站｜「藝術圓夢中心」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-6"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳愷璜競選網站｜「藝術圓夢中心」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-6"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳愷璜競選網站｜「藝術圓夢中心」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-6"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜「藝術圓夢中心」經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-6",
+      "related_sources": [
+        "https://udn.com/vote2026/story/124652/9703532"
+      ],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-2026-policy-7",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-2026-policy-7",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；已依審核通過的官網主題整理。｜依審核資料第 1391 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "「十字廊帶」經濟學",
+      "official_topic": "「十字廊帶」經濟學",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化節慶",
+        "地方文化"
+      ],
+      "topic_categories": [
+        "藝文節慶",
+        "地方文化與社區營造"
+      ],
+      "topic_subcategories": [],
+      "summary": "規模做出來之後，下一步是讓它被看見、被停留。具體作法是以這個區域為範圍，每隔兩年到三年籌劃一次「十字廊帶生活文化藝術節」，用節慶把散落的地方特色串成一條可遊、可停留的路線。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "規模做出來之後，下一步是讓它被看見、被停留。具體作法是以這個區域為範圍，每隔兩年到三年籌劃一次「十字廊帶生活文化藝術節」，用節慶把散落的地方特色串成一條可遊、可停留的路線。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "陳愷璜競選網站｜「十字廊帶」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-7"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "陳愷璜競選網站｜「十字廊帶」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-7"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "陳愷璜競選網站｜「十字廊帶」經濟學",
+            "url": "https://chiayi-mayor.duckdns.org/#policy-7"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "陳愷璜競選網站｜「十字廊帶」經濟學",
+      "source_url": "https://chiayi-mayor.duckdns.org/#policy-7",
+      "related_sources": [],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
+    },
+    {
+      "id": "candidate-chiayi-chen-kaihuang-wood-office-2026",
+      "city": "嘉義市",
+      "office": "縣市長",
+      "candidate": "陳愷璜",
+      "party": "無黨籍",
+      "publish_id": "candidate-chiayi-chen-kaihuang-wood-office-2026",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "來源頁面沒有發布日期；PDF 第 21 頁，屬「執行面的超展開」構想。｜依審核資料第 1406 列核准文字及原文對照核對。"
+      ],
+      "public_note": "",
+      "policy_title": "木造建築整建維護專案辦公室",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "文化資產",
+        "歷史建築"
+      ],
+      "topic_categories": [
+        "文化資產"
+      ],
+      "topic_subcategories": [],
+      "summary": "必須成立專屬的「木造建築整建維護專案辦公室」，提供一站式的法律諮詢與「特許容積」補償，將木屋視為「都市動態資產」而非單純的舊建物。",
+      "policy_argument": "",
+      "concrete_proposals": [
+        "必須成立專屬的「木造建築整建維護專案辦公室」，提供一站式的法律諮詢與「特許容積」補償，將木屋視為「都市動態資產」而非單純的舊建物。"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "市長參選人陳愷璜政策白皮書",
+            "url": "https://chiayi-mayor.duckdns.org/assets/docs/chiayi-policy-whitepaper.pdf#page=21"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "市長參選人陳愷璜政策白皮書",
+            "url": "https://chiayi-mayor.duckdns.org/assets/docs/chiayi-policy-whitepaper.pdf#page=21"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "市長參選人陳愷璜政策白皮書",
+            "url": "https://chiayi-mayor.duckdns.org/assets/docs/chiayi-policy-whitepaper.pdf#page=21"
+          }
+        ]
+      },
+      "published_date": "",
+      "source_title": "市長參選人陳愷璜政策白皮書",
+      "source_url": "https://chiayi-mayor.duckdns.org/assets/docs/chiayi-policy-whitepaper.pdf#page=21",
+      "related_sources": [],
+      "source_type": "候選人官網",
+      "last_verified": "2026-11-05",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "中選會 115 年候選人登記名冊",
+      "office_category": "",
+      "current_office": "",
+      "corrections": []
     }
   ]
 }
