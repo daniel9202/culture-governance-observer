@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "last_updated": "2026-11-09",
+  "last_updated": "2026-11-14",
   "records": [
     {
       "id": "candidate-chiayi-mayor-tsai-yi-yu-forestry-culture-001",
@@ -17467,6 +17467,75 @@
       "office_category": "",
       "current_office": "",
       "corrections": []
+    },
+    {
+      "id": "candidate-taipei-councilor-chang-ming-yu-performing-arts-001",
+      "city": "臺北市",
+      "office": "縣市議員",
+      "candidate": "張銘祐",
+      "party": "民主進步黨",
+      "publish_id": "manual-approved-20261114-chang-ming-yu-performing-arts",
+      "review_status": "人工審核",
+      "editor_notes": [
+        "發布日期依使用者於 2026-11-14 提供、顯示「2 小時」的貼文截圖記錄。第三項貼文文字為「台北城西」，圖卡為「中正」，採貼文文字版本。提供內容未載具體預算、增幅、場址、平台機制及執行期程。"
+      ],
+      "public_note": "",
+      "policy_title": "台北表演藝術四項政見",
+      "official_topic": "",
+      "official_subtopic": "",
+      "source_outlet": "",
+      "topics": [
+        "表演藝術",
+        "文化場館"
+      ],
+      "topic_categories": [
+        "表演藝術",
+        "文化場館"
+      ],
+      "topic_subcategories": [],
+      "summary": "從排練到登台，從首演到巡演，銘祐提出四項政見，讓表演藝術團隊在台北有空間創作，讓制度成為扶植本市藝文團體的靠山。",
+      "policy_argument": "每一個出色的作品，從構思發想到落地呈現，背後需要完整的團隊運作；製作從前端開始就需要解決排練場地的問題、籌措製作費，也需要有完整的行政團隊支撐藝術創作、票房行銷，好作品首演完了，想辦法引起回響、複製到異地演出，或是平衡收支再創下一個佳作，團體才會有機會讓更多人看見。",
+      "concrete_proposals": [
+        "表團營運資源再增幅！增加平價排練場",
+        "建立台北市排練與展演場地平台",
+        "打造台北城西表演藝術文化新軸線",
+        "優化獎補助，厚植北市藝文永續體質"
+      ],
+      "related_statements": [],
+      "field_sources": {
+        "policy_argument": [
+          {
+            "title": "張銘祐｜台北表演藝術四項政見",
+            "url": "https://www.threads.com/@mingyo19840717/post/Dft0Rpdn36-/media"
+          }
+        ],
+        "concrete_proposals": [
+          {
+            "title": "張銘祐｜台北表演藝術四項政見",
+            "url": "https://www.threads.com/@mingyo19840717/post/Dft0Rpdn36-/media"
+          }
+        ],
+        "related_statements": [
+          {
+            "title": "張銘祐｜台北表演藝術四項政見",
+            "url": "https://www.threads.com/@mingyo19840717/post/Dft0Rpdn36-/media"
+          }
+        ]
+      },
+      "published_date": "2026-11-14",
+      "source_title": "張銘祐｜台北表演藝術四項政見",
+      "source_url": "https://www.threads.com/@mingyo19840717/post/Dft0Rpdn36-/media",
+      "related_sources": [],
+      "source_type": "候選人原文",
+      "last_verified": "2026-11-14",
+      "proposer_role": "候選人",
+      "content_nature": "本屆競選政見",
+      "role_evidence": "https://web.cec.gov.tw/central/article/65213",
+      "office_category": "",
+      "current_office": "",
+      "corrections": [
+        "2026-11-14｜使用者核准原文及截圖補件，指定直接推 staging；處理裝置 HPDAN-Codex。"
+      ]
     }
   ]
 }
