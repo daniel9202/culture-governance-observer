@@ -13,5 +13,10 @@ sources/
 .secrets/
 .tools/
 
+# Claude Code: only shared agents and skills are tracked
+.claude/*
+!.claude/agents/
+!.claude/skills/
+
 # Local Apps Script deployment settings
 .clasp.json

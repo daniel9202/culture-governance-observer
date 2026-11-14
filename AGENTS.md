@@ -43,7 +43,7 @@
 
 - **主要工作機是 Danasus，其他電腦也可以直接 clone 工作；同步只透過 GitHub。** 不要用 OneDrive 或 Google Drive 同步 repo：2026-09-14 曾因此產生 `-Danasus` 衝突副本（見 `tmp/conflict-archive/`）。手機一律用遠端連線。
 - **同一時間只在一台電腦工作。** 換電腦前，把兩端的工作都 commit 並 push；還沒完成、不能上線的推到備份分支（設計端 `origin/design`、資料端 `origin/data-wip`），不要推 `beta`。到另一台開工先 `git fetch origin`，再 rebase 到 `origin/beta` 或取回備份分支。
-- **工作不限電腦**（2026-10-29 使用者取消原本「只在 Danasus 做」的限制）：排程自動化、Apps Script 觸發器、審核、寫入 CSV、push 都可以在任何一台電腦或 AI 雲端環境做，但要遵守「同一時間只在一台」與下方的來源標示。`backups/`、`.claude/` 不進 git，也不要複製到其他電腦。
+- **工作不限電腦**（2026-10-29 使用者取消原本「只在 Danasus 做」的限制）：排程自動化、Apps Script 觸發器、審核、寫入 CSV、push 都可以在任何一台電腦或 AI 雲端環境做，但要遵守「同一時間只在一台」與下方的來源標示。`backups/` 不進 git，也不要複製到其他電腦。`.claude/` 只有 `agents/` 與 `skills/` 進 git（2026-11-14 使用者決定，見「模型分工」），其餘本機設定照舊不進 git、不複製。
 - **兩台都可以用 clasp 推審核台**，但 `clasp push` 會整份覆蓋 Google 上的程式，不會合併，所以：
   1. 推之前先 `git pull`，只從 `main`（或使用者指定、比 `main` 更新的分支）推。
   2. 審核台的修改一律先 commit 進 git 再推，不在 Google 編輯器直接改。
@@ -71,7 +71,7 @@
 
 | 工作端 | 負責 | 只能提交 |
 | --- | --- | --- |
-| 設計端 | 前台外觀、互動、頁面架構 | `styles.css`、根目錄 `*.html`／`*.js`、`map-geometry.json`、`config/party_colors.json`、`docs/`、本檔 |
+| 設計端 | 前台外觀、互動、頁面架構 | `styles.css`、根目錄 `*.html`／`*.js`、`map-geometry.json`、`config/party_colors.json`、`docs/`、`.claude/agents/`、`.claude/skills/`、本檔 |
 | 資料端 | 蒐集、新增、更正資料；Apps Script 審核台與蒐集後台；push | `data/input/`、`data/*.json`、`data/research/`、`data/schema.md`、`scripts/build_data.py` 的驗證規則、`apps-script/` |
 
 審核台介面若要調整，設計端寫成需求交給資料端，不直接修改 `apps-script/`。
@@ -81,6 +81,25 @@
 - 看到對方範圍的問題，只回報使用者，由負責的一端處理。
 - `docs/` 與本檔只在使用者明確要求時修改，且不得夾帶對方的工作檔案。
 - 欄位契約：設計端只顯示 CSV 已有的欄位，不從標題或內文推斷身分或政見性質。資料端新增、改名或刪除欄位前，要先列出來，等設計端確認。
+
+## 模型分工（2026-11-14 起）
+
+兩個工作端的分法不變；這一節只說明 Claude Code 這一端怎麼分配模型，以及與 Codex 的交接。
+
+- **Codex 是資料檔唯一的寫入者**：`data/input/`、`apps-script/`、管線腳本只由資料端寫。Claude Code 碰資料時只讀，或產出清單與結果檔交給資料端。
+- **Opus 是主對話**：規格、規則、上線前把關、忠於原文查核、頁面架構與新模組設計。
+- **Sonnet 做規則明確、量大或重複的工作**：蒐集初篩、文件比對、例行前台修改。前兩項由主對話派給子代理，回來後由主對話檢查再回報；例行前台修改可以另開 Sonnet 對話直接做。
+- 子代理定義在 `.claude/agents/`，流程在 `.claude/skills/`，都進 git，各台電腦一致：
+
+  | 指令 | 做什麼 | 由誰做 |
+  | --- | --- | --- |
+  | `/release-gate` | `beta` 推 `staging` 前的把關 | Opus |
+  | `/fidelity-audit` | 對照來源查核政見文字是否忠於原文 | Opus |
+  | `/triage-leads` | 蒐集來源初篩 | Sonnet 子代理 `lead-triager`，Opus 檢查 |
+  | `/docs-sync` | 找出過時的文件段落，確認後修改 | Sonnet 子代理 `docs-checker`，Opus 檢查 |
+
+- Codex 讀不到 `.claude/`。兩端都要遵守的規則只寫在本檔，不要只寫在 skill 裡。
+- 不從 Claude Code 直接驅動 Codex：資料端的 push 與 clasp 都要使用者確認，交接走 Google Sheet 的狀態欄、結果檔與固定格式的交接訊息。
 
 ## 開工與收工
 
