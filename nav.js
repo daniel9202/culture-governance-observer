@@ -27,7 +27,7 @@ window.reportUrl=(ids,name)=>{
   return `${REPORT_FORM_URL}?${params}`;
 };
 window.reportLink=(ids,name)=>`<a class="report-link" href="${reportUrl(ids,name).replace(/&/g,'&amp;')}" target="_blank" rel="noopener">回報錯誤</a>`;
-document.querySelector('footer p:last-child')?.insertAdjacentHTML('beforeend',` · <a href="${reportUrl().replace(/&/g,'&amp;')}" target="_blank" rel="noopener">意見回報</a>`);
+document.querySelector('footer > p:last-child')?.insertAdjacentHTML('beforeend',` · <a href="${reportUrl().replace(/&/g,'&amp;')}" target="_blank" rel="noopener">意見回報</a>`);
 // 匿名流量統計：只在正式站與公測站送出，沒有 Cookie 與訪客 ID，失敗不影響頁面。
 // 在網址加 ?no_track=1 可讓這個瀏覽器不再計入（管理者自用），?no_track=0 恢復。
 (()=>{

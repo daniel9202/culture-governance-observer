@@ -159,6 +159,7 @@ a.hub-card-primary:hover,a.hub-card-primary:focus-visible{background:var(--lime)
 .region-entry-link{display:flex;flex-direction:column;justify-content:space-between;min-height:230px;background:var(--lime);color:var(--ink);font-size:1.25rem;font-weight:800}
 .region-entry-link strong{align-self:flex-end;font-size:3rem;font-weight:400}
 footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:space-between;font-weight:700}
+.footer-brand p{margin:0}.footer-credit{margin-top:.6rem!important;font-weight:400;font-size:.85rem;line-height:1.6}.footer-credit span{display:block;font-weight:700}
 .method{max-width:900px;margin:auto;padding:5rem 5vw 6rem}
 .method-lede{font-size:1.2rem;line-height:1.7;border-left:3px solid var(--lime);padding-left:1.2rem}
 .method ul,.method ol{padding-left:1.3rem}
