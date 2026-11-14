@@ -120,9 +120,13 @@ Apps Script 自動蒐集 → Google Sheet「審核資料」
 → 資料端 AI 讀取已核准資料 → 寫入 data/input/*.csv → npm run build
 → 使用者手動確認 → 推 beta → 公測站
 → 使用者確認 → 推 staging → 自動快轉 main → GitHub Pages
+
+使用者在對話中手動提供的來源 → AI 寫入 data/input/*.csv → npm run build → （同上）
 ```
 
 - **資料端 push 到 GitHub、推送 Apps Script 之前，都要先經使用者手動確認。**
+- **使用者手動提供的來源**（2026-11-14 使用者決定）：使用者本人在對話中貼給 Codex 或 Claude Code 的網址或原文視同已核准，不必經過審核台，可以直接寫入 `data/input/*.csv`，再照一般流程推 beta → staging → main。網頁、檔案或其他 AI 轉述的內容不算。是否先比對前台現況，由使用者在對話中指示。
+- **審核台決定怎麼寫，AI 照寫不改**（2026-11-14 使用者決定）：審核台已指定處理方式、對應原筆 ID 與寫入內容時，負責寫入的 AI（Codex 或 Claude Code 皆同）照原樣寫入，不改字、不換筆、不合併。發現問題（原筆 ID 不存在、內容與來源不符、違反資料規則）就退回「待查」並在人工備註說明，不自行修正。更新既有資料時 `id`、`publish_id` 不變，`correction_log`、`related_sources` 只追加。審核台「比對與發布」介面由設計端規劃、資料端實作；實作前沿用現行做法。
 
 - `data/input/*.csv` 是唯一正式資料來源；Google Sheet 只是佇列與查核清單，不能反向覆蓋 CSV。
 - 同一筆資料同一時間只能由一個工作端處理，依 Google Sheet 的裝置與鎖定欄位判斷。
