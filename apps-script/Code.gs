@@ -1,5 +1,5 @@
 const SPREADSHEET_ID = '1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k';
-const BUILD = '2026-11-14-1';
+const BUILD = '2026-11-15-1';
 const REVIEW_SHEET = '審核資料';
 const HEADERS = ['資料類型','收集時間','縣市','發布日期','來源名稱','來源標題','來源網址','審核狀態','AI摘要','AI分類','AI判斷理由','AI信心分數','候選人／提出者','政黨／提出者類型','職務','政策主張／具體訴求','人工備註','審核者','審核時間','發布ID'];
 function duplicateText(value) {
@@ -156,7 +156,11 @@ function ensureReviewStatusValidation_(sheet) {
     .requireValueInList(REVIEW_STATUSES, true)
     .setAllowInvalid(false)
     .build();
-  sheet.getRange(2, 8, Math.max(sheet.getMaxRows() - 1, 1), 1).setDataValidation(rule);
+  // 「審核資料」若已轉成表格，審核狀態是有類型的欄位，不能用程式設定驗證規則；
+  // 這時略過，狀態值照樣寫入，下拉選項由使用者在表格欄位設定裡維護。
+  try {
+    sheet.getRange(2, 8, Math.max(sheet.getMaxRows() - 1, 1), 1).setDataValidation(rule);
+  } catch (e) { /* 有類型的表格欄位 */ }
 }
 
 function splitReview(payload) {
