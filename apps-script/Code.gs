@@ -1,5 +1,5 @@
 const SPREADSHEET_ID = '1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k';
-const BUILD = '2026-11-15-1';
+const BUILD = '2026-11-15-2';
 const REVIEW_SHEET = '審核資料';
 const HEADERS = ['資料類型','收集時間','縣市','發布日期','來源名稱','來源標題','來源網址','審核狀態','AI摘要','AI分類','AI判斷理由','AI信心分數','候選人／提出者','政黨／提出者類型','職務','政策主張／具體訴求','人工備註','審核者','審核時間','發布ID'];
 function duplicateText(value) {
@@ -374,13 +374,20 @@ function saveComparisonDecision(payload) {
     const columns = compareColumns_(sheet, true);
     ensureReviewStatusValidation_(sheet);
     const status = OPERATIONS[operation];
-    sheet.getRange(row, 8).setValue(status);
-    if (note) sheet.getRange(row, 17).setValue(note);
-    sheet.getRange(row, 18, 1, 2).setValues([[Session.getActiveUser().getEmail() || 'Google 審核者', new Date()]]);
-    sheet.getRange(row, columns['處理方式']).setValue(operation);
-    sheet.getRange(row, columns['對應原筆ID']).setValue(operation === '新增政見' ? '' : targetId);
-    sheet.getRange(row, columns['寫入內容']).setValue(operation !== '不收錄' && Object.keys(content).length ? JSON.stringify(content) : '');
-    sheet.getRange(row, columns['更正理由']).setValue(operation === '更新既有資料' ? reason : '');
+    // 先寫比對欄位，最後才改狀態：中途失敗時這筆仍停在原狀態，不會變成內容不完整的 ready_to_write。
+    // 每一欄分開寫，失敗時錯誤訊息會指出是哪一欄（「審核資料」是表格，有類型的欄位會拒絕不合類型的值）。
+    const put = (column, label, value) => {
+      try { sheet.getRange(row, column).setValue(value); }
+      catch (e) { throw new Error('寫入「' + label + '」欄（第 ' + column + ' 欄）失敗：' + e.message); }
+    };
+    put(columns['處理方式'], '處理方式', operation);
+    put(columns['對應原筆ID'], '對應原筆ID', operation === '新增政見' ? '' : targetId);
+    put(columns['寫入內容'], '寫入內容', operation !== '不收錄' && Object.keys(content).length ? JSON.stringify(content) : '');
+    put(columns['更正理由'], '更正理由', operation === '更新既有資料' ? reason : '');
+    if (note) put(17, '人工備註', note);
+    put(18, '審核者', Session.getActiveUser().getEmail() || 'Google 審核者');
+    put(19, '審核時間', new Date());
+    put(8, '審核狀態', status);
     return {ok: true, rowNumber: row, status};
   } finally { lock.releaseLock(); }
 }
