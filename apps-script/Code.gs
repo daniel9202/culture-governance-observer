@@ -1,5 +1,5 @@
 const SPREADSHEET_ID = '1ulT-xd19TY7TsUcC9jBjvHh30ZuUnSbja3bJp2fNh_k';
-const BUILD = '2026-11-05-1';
+const BUILD = '2026-11-14-1';
 const REVIEW_SHEET = '審核資料';
 const HEADERS = ['資料類型','收集時間','縣市','發布日期','來源名稱','來源標題','來源網址','審核狀態','AI摘要','AI分類','AI判斷理由','AI信心分數','候選人／提出者','政黨／提出者類型','職務','政策主張／具體訴求','人工備註','審核者','審核時間','發布ID'];
 function duplicateText(value) {
@@ -55,7 +55,7 @@ function getDashboard(filters) {
     return item;
   });
   addDuplicateHints(rows);
-  const counts = {all: rows.length, pending: 0, accepted: 0, rejected: 0, published: 0, split: 0};
+  const counts = {all: rows.length, pending: 0, accepted: 0, rejected: 0, split: 0};
   rows.forEach(row => { if (Object.prototype.hasOwnProperty.call(counts, row['審核狀態'])) counts[row['審核狀態']] += 1; });
   filters = filters || {};
   const filtered = rows.filter(row => {
@@ -69,7 +69,9 @@ function getDashboard(filters) {
   filtered.sort((a, b) => direction * String(a['收集時間']).localeCompare(String(b['收集時間']), 'zh-Hant', {numeric: true}));
   const offset = Math.max(0, Number(filters.offset) || 0);
   const limit = Math.min(200, Math.max(1, Number(filters.limit) || 200));
-  return {counts, items: filtered.slice(offset, offset + limit), totalFiltered: filtered.length, cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
+  const items = filtered.slice(offset, offset + limit);
+  addPublishedUrlHints_(items);
+  return {counts, items, totalFiltered: filtered.length, cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
 }
 
 const OFFICE_VALUES = ['縣市長', '縣轄市長', '縣市議員', '不適用'];
@@ -94,7 +96,7 @@ function normalizeOffice(value) {
 
 function saveReview(payload) {
   if (!payload || !['pending', 'accepted', 'rejected'].includes(payload.status)) throw new Error('審核狀態不合法。');
-  // 拒絕或退回待審核都不該先要求把資料分類好；只有「接受並送準備上架」才檢查。
+  // 拒絕或退回待審核都不該先要求把資料分類好；只有「接受並送比對」才檢查。
   const office = normalizeOffice(payload.office);
   if (payload.status === 'accepted' && !OFFICE_VALUES.includes(office)) {
     throw new Error('請先選擇職務／提出者身分再接受這筆資料。');
@@ -151,7 +153,7 @@ function saveReviews(payload) {
 
 function ensureReviewStatusValidation_(sheet) {
   const rule = SpreadsheetApp.newDataValidation()
-    .requireValueInList(['pending', 'accepted', 'rejected', 'published', 'split'], true)
+    .requireValueInList(REVIEW_STATUSES, true)
     .setAllowInvalid(false)
     .build();
   sheet.getRange(2, 8, Math.max(sheet.getMaxRows() - 1, 1), 1).setDataValidation(rule);
@@ -209,42 +211,196 @@ function splitReview(payload) {
   } finally { lock.releaseLock(); }
 }
 
-const DRAFT_SHEET = '整合草稿';
-const DRAFT_HEADERS = ['草稿ID','草稿狀態','資料類型','縣市','職務','候選人／提出者','政黨／提出者類型','政策論述','具體主張','相關發言','來源清單','整合依據','前台處理方式','建立時間','最後更新'];
-function integrationSheet_() {
-  const book = SpreadsheetApp.openById(SPREADSHEET_ID);
-  let sheet = book.getSheetByName(DRAFT_SHEET);
-  if (!sheet) { sheet = book.insertSheet(DRAFT_SHEET); sheet.getRange(1, 1, 1, DRAFT_HEADERS.length).setValues([DRAFT_HEADERS]); sheet.setFrozenRows(1); }
-  const headers = sheet.getRange(1, 1, 1, DRAFT_HEADERS.length).getDisplayValues()[0];
-  if (DRAFT_HEADERS.some((header, index) => headers[index] !== header)) throw new Error('整合草稿欄位與程式版本不符。');
-  return sheet;
+// ── 比對與發布（docs/REVIEW-CONSOLE-COMPARE.md）────────────────────────────
+// accepted＝待比對；使用者在比對頁核准後才變成 ready_to_write，寫入 CSV 的 AI 只處理 ready_to_write。
+const REVIEW_STATUSES = ['pending', 'accepted', 'rejected', 'split', 'published', 'ready_to_write', 'written', 'pending_check', 'not_included'];
+const COMPARE_STATUSES = ['accepted', 'pending_check', 'ready_to_write', 'written', 'not_included'];
+// 新欄位放在 AR:AV（第 44–48 欄）；AF:AQ 沒有欄名但部分有資料，不能動。
+const COMPARE_HEADERS = ['處理方式', '對應原筆ID', '寫入內容', '更正理由', '寫入commit'];
+const COMPARE_FIRST_COLUMN = 44;
+const OPERATIONS = {
+  '新增政見': 'ready_to_write', '更新既有資料': 'ready_to_write', '只補來源': 'ready_to_write',
+  '不收錄': 'not_included', '待查': 'pending_check'
+};
+// 寫入內容只收這些 CSV 欄位；多值欄位用 CSV 寫法（topics 用 |，其他用 ||）。
+const CONTENT_FIELDS = ['policy_title', 'summary', 'policy_argument', 'concrete_proposals', 'related_statements', 'topics', 'editor_notes'];
+const BETA_JSON_URL = 'https://raw.githubusercontent.com/daniel9202/culture-governance-observer/beta/data/candidates.json';
+
+function reviewSheet_() {
+  return SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(REVIEW_SHEET);
 }
-function getIntegrationDashboard(filters) {
-  const sheet = integrationSheet_();
-  const values = sheet.getDataRange().getDisplayValues();
-  const rows = values.slice(1).filter(row => row.some(Boolean)).map((row, index) => {
-    const item = Object.fromEntries(DRAFT_HEADERS.map((header, column) => [header, row[column] || '']));
-    item.rowNumber = index + 2;
+
+// 依欄名找欄位；比對欄位不存在時建在 AR:AV（該處欄名必須是空的才寫）。
+function compareColumns_(sheet, create) {
+  const lastColumn = Math.max(sheet.getLastColumn(), COMPARE_FIRST_COLUMN + COMPARE_HEADERS.length - 1);
+  const headers = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0];
+  const map = {};
+  headers.forEach((header, index) => { if (header && !(header in map)) map[header] = index + 1; });
+  const missing = COMPARE_HEADERS.filter(header => !map[header]);
+  if (missing.length && create) {
+    const target = headers.slice(COMPARE_FIRST_COLUMN - 1, COMPARE_FIRST_COLUMN - 1 + COMPARE_HEADERS.length);
+    if (target.some(Boolean)) throw new Error('AR:AV 已有其他欄名，請先確認欄位位置。');
+    sheet.getRange(1, COMPARE_FIRST_COLUMN, 1, COMPARE_HEADERS.length).setValues([COMPARE_HEADERS]);
+    COMPARE_HEADERS.forEach((header, index) => { map[header] = COMPARE_FIRST_COLUMN + index; });
+  }
+  return map;
+}
+
+function readRows_(sheet) {
+  const lastRow = sheet.getLastRow(), lastColumn = sheet.getLastColumn();
+  if (lastRow < 2) return [];
+  const values = sheet.getRange(1, 1, lastRow, lastColumn).getDisplayValues();
+  const headers = values[0];
+  return values.slice(1).map((row, index) => {
+    const item = {rowNumber: index + 2};
+    headers.forEach((header, column) => { if (header && !(header in item)) item[header] = row[column] || ''; });
     return item;
   });
-  filters = filters || {};
-  const filtered = rows.filter(row => {
-    if (filters.status && filters.status !== 'all' && row['草稿狀態'] !== filters.status) return false;
-    if (filters.city && filters.city !== 'all' && row['縣市'] !== filters.city) return false;
-    const query = String(filters.query || '').trim().toLowerCase();
-    return !query || [row['候選人／提出者'], row['政策論述'], row['具體主張'], row['縣市']].join(' ').toLowerCase().includes(query);
-  });
-  const counts = {draft_ready: 0, rework: 0, published: 0};
-  rows.forEach(row => { if (Object.prototype.hasOwnProperty.call(counts, row['草稿狀態'])) counts[row['草稿狀態']] += 1; });
-  return {counts, items: filtered.slice(0, 100), cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
 }
-function saveIntegrationDecision(payload) {
-  if (!payload || !['published', 'rework'].includes(payload.status)) throw new Error('整合稿狀態不合法。');
-  const sheet = integrationSheet_();
-  const row = Number(payload.rowNumber);
-  if (!Number.isInteger(row) || row < 2 || row > sheet.getLastRow()) throw new Error('找不到整合稿。');
-  if (sheet.getRange(row, 1).getDisplayValue() !== payload.draftId) throw new Error('整合稿已變更，請重新整理。');
-  sheet.getRange(row, 2).setValue(payload.status);
-  sheet.getRange(row, 15).setValue(new Date());
-  return {ok: true, rowNumber: row, status: payload.status};
+
+// 公開的 beta 資料，切塊快取 10 分鐘（CacheService 單一值上限 100KB）。
+function betaRecords_() {
+  const cache = CacheService.getScriptCache();
+  const meta = cache.get('beta_records_n');
+  if (meta) {
+    const keys = Array.from({length: Number(meta)}, (_, i) => 'beta_records_' + i);
+    const parts = cache.getAll(keys);
+    if (keys.every(key => parts[key] !== undefined)) return JSON.parse(keys.map(key => parts[key]).join(''));
+  }
+  const response = UrlFetchApp.fetch(BETA_JSON_URL, {muteHttpExceptions: true});
+  if (response.getResponseCode() !== 200) throw new Error('讀不到 beta 分支的 candidates.json（HTTP ' + response.getResponseCode() + '）。');
+  const join = value => Array.isArray(value) ? value.join('||') : String(value || '');
+  const records = (JSON.parse(response.getContentText()).records || []).map(r => ({
+    id: r.id, city: r.city, office: r.office, candidate: r.candidate, party: r.party,
+    policy_title: r.policy_title || '', summary: join(r.summary), policy_argument: join(r.policy_argument),
+    concrete_proposals: join(r.concrete_proposals), related_statements: join(r.related_statements),
+    topics: Array.isArray(r.topics) ? r.topics.join('|') : String(r.topics || ''), editor_notes: join(r.editor_notes), source_url: r.source_url || '',
+    related_sources: Array.isArray(r.related_sources) ? r.related_sources : [], last_verified: r.last_verified || '',
+    correction_log: Array.isArray(r.corrections) ? r.corrections : [], content_nature: r.content_nature || ''
+  }));
+  const text = JSON.stringify(records), size = 25000, parts = {};
+  for (let i = 0; i * size < text.length; i++) parts['beta_records_' + i] = text.slice(i * size, (i + 1) * size);
+  try { cache.putAll(parts, 600); cache.put('beta_records_n', String(Object.keys(parts).length), 600); } catch (e) { /* 快取失敗不影響結果 */ }
+  return records;
+}
+
+function normalizeUrl_(url) {
+  return String(url || '').trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[#?].*$/, '').replace(/\/+$/, '');
+}
+
+// 只用來排序：字元二元組的重疊比例。
+function similarity_(a, b) {
+  const grams = text => { const t = duplicateText(text), set = {}; for (let i = 0; i < t.length - 1; i++) set[t.slice(i, i + 2)] = 1; return set; };
+  const ga = grams(a), gb = grams(b), ka = Object.keys(ga);
+  if (!ka.length) return 0;
+  const hit = ka.filter(k => gb[k]).length;
+  return hit / Math.sqrt(ka.length * Math.max(Object.keys(gb).length, 1));
+}
+
+function parseContent_(text) {
+  if (!text) return null;
+  try { const value = JSON.parse(text); return value && typeof value === 'object' ? value : null; } catch (e) { return null; }
+}
+
+function getCompareDashboard(filters) {
+  filters = filters || {};
+  const sheet = reviewSheet_();
+  const rows = readRows_(sheet);
+  const counts = {};
+  COMPARE_STATUSES.forEach(status => { counts[status] = 0; });
+  rows.forEach(row => { if (row['審核狀態'] in counts) counts[row['審核狀態']] += 1; });
+  const status = COMPARE_STATUSES.includes(filters.status) ? filters.status : 'accepted';
+  const query = String(filters.query || '').toLowerCase().trim();
+  const filtered = rows.filter(row => {
+    if (row['審核狀態'] !== status) return false;
+    if (filters.city && filters.city !== 'all' && row['縣市'] !== filters.city) return false;
+    return !query || [row['來源標題'], row['AI摘要'], row['候選人／提出者'], row['縣市'], row['人工備註']].join(' ').toLowerCase().includes(query);
+  });
+  const direction = filters.sort === 'oldest' ? 1 : -1;
+  filtered.sort((a, b) => direction * String(a['收集時間']).localeCompare(String(b['收集時間']), 'zh-Hant', {numeric: true}));
+  const offset = Math.max(0, Number(filters.offset) || 0);
+  const limit = Math.min(50, Math.max(1, Number(filters.limit) || 50));
+  const page = filtered.slice(offset, offset + limit);
+  const records = page.length ? betaRecords_() : [];
+  const urlIndex = {};
+  records.forEach(r => [r.source_url].concat(r.related_sources).forEach(url => {
+    const key = normalizeUrl_(url); if (key) (urlIndex[key] = urlIndex[key] || []).push(r.id);
+  }));
+  const items = page.map(row => {
+    const item = Object.assign({}, row);
+    const actor = String(row['候選人／提出者'] || '').trim(), office = normalizeOffice(row['職務']);
+    const content = parseContent_(row['寫入內容']) || {};
+    const basis = [content.policy_title, content.concrete_proposals, content.summary, row['政策主張／具體訴求'], row['AI摘要']].join(' ');
+    item.existing = records
+      .filter(r => r.candidate === actor && r.city === row['縣市'] && (!OFFICE_VALUES.includes(office) || office === '不適用' || r.office === office))
+      .map(r => Object.assign({score: Math.round(similarity_(basis, [r.policy_title, r.concrete_proposals, r.summary, r.topics].join(' ')) * 100)}, r))
+      .sort((a, b) => b.score - a.score);
+    item.urlHits = [...new Set(urlIndex[normalizeUrl_(row['來源網址'])] || [])];
+    item.content = content;
+    return item;
+  });
+  return {counts, items, totalFiltered: filtered.length, cities: [...new Set(rows.map(row => row['縣市']).filter(Boolean))].sort()};
+}
+
+function checkRow_(sheet, payload, allowed) {
+  const row = Number(payload && payload.rowNumber);
+  if (!Number.isInteger(row) || row < 2 || row > sheet.getLastRow()) throw new Error('找不到指定資料列。');
+  if (sheet.getRange(row, 7).getDisplayValue() !== payload.sourceUrl) throw new Error('資料列已變更，請重新整理後再審核。');
+  const current = sheet.getRange(row, 8).getDisplayValue();
+  if (!allowed.includes(current)) throw new Error('這筆目前是「' + current + '」，不能在比對頁修改。');
+  return row;
+}
+
+function saveComparisonDecision(payload) {
+  if (!payload || !Object.prototype.hasOwnProperty.call(OPERATIONS, payload.operation)) throw new Error('請選擇處理方式。');
+  const operation = payload.operation, targetId = String(payload.targetId || '').trim();
+  const reason = String(payload.reason || '').trim(), note = String(payload.note || '').trim();
+  const content = {};
+  CONTENT_FIELDS.forEach(field => { const value = String((payload.content || {})[field] || '').trim(); if (value) content[field] = value; });
+  if (operation === '新增政見' && !content.concrete_proposals && !content.summary && !content.policy_title) throw new Error('新增政見至少要有政見名稱、摘要或具體主張。');
+  if ((operation === '更新既有資料' || operation === '只補來源') && !targetId) throw new Error('請指定原筆 ID。');
+  if (operation === '更新既有資料' && !reason) throw new Error('更新既有資料要填更正理由。');
+  if ((operation === '不收錄' || operation === '待查') && !note) throw new Error(operation === '待查' ? '請寫下待查事項。' : '請寫下不收錄的原因。');
+  if (targetId && operation !== '新增政見' && !betaRecords_().some(r => r.id === targetId)) throw new Error('beta 資料裡找不到原筆 ID：' + targetId);
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const sheet = reviewSheet_();
+    const row = checkRow_(sheet, payload, ['accepted', 'pending_check', 'ready_to_write']);
+    const columns = compareColumns_(sheet, true);
+    ensureReviewStatusValidation_(sheet);
+    const status = OPERATIONS[operation];
+    sheet.getRange(row, 8).setValue(status);
+    if (note) sheet.getRange(row, 17).setValue(note);
+    sheet.getRange(row, 18, 1, 2).setValues([[Session.getActiveUser().getEmail() || 'Google 審核者', new Date()]]);
+    sheet.getRange(row, columns['處理方式']).setValue(operation);
+    sheet.getRange(row, columns['對應原筆ID']).setValue(operation === '新增政見' ? '' : targetId);
+    sheet.getRange(row, columns['寫入內容']).setValue(operation !== '不收錄' && Object.keys(content).length ? JSON.stringify(content) : '');
+    sheet.getRange(row, columns['更正理由']).setValue(operation === '更新既有資料' ? reason : '');
+    return {ok: true, rowNumber: row, status};
+  } finally { lock.releaseLock(); }
+}
+
+// 比對頁「退回資訊蒐集」：回到 pending，保留已填的比對欄位供下次參考。
+function returnToSources(payload) {
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const sheet = reviewSheet_();
+    const row = checkRow_(sheet, payload, ['accepted', 'pending_check', 'ready_to_write']);
+    sheet.getRange(row, 8).setValue('pending');
+    return {ok: true, rowNumber: row, status: 'pending'};
+  } finally { lock.releaseLock(); }
+}
+
+// 資訊蒐集卡片：來源網址已在 beta 資料某筆的 source_url／related_sources 出現時提示。讀不到 beta 資料時不提示，不擋審核。
+function addPublishedUrlHints_(items) {
+  if (!items.length) return;
+  let records;
+  try { records = betaRecords_(); } catch (e) { return; }
+  const index = {};
+  records.forEach(r => [r.source_url].concat(r.related_sources).forEach(url => {
+    const key = normalizeUrl_(url); if (key) (index[key] = index[key] || []).push(r.id);
+  }));
+  items.forEach(item => { item.urlHits = [...new Set(index[normalizeUrl_(item['來源網址'])] || [])]; });
 }
