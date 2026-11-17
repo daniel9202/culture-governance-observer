@@ -128,7 +128,7 @@ window.councilDistrict=record=>{
   const matches=exact.length?exact:inCity.filter(item=>item.candidate.startsWith(record.candidate));
   return matches.length===1?matches[0].district:'';
 };
-// 候選人號次（data/ballot_numbers.json）：來源為各地方選舉委員會的號次抽籤結果，只在有號次且有來源時才回傳欄位。
+// 候選人號次（data/ballot_numbers.json）：來源為中央與地方選委會資料（號次抽籤結果、候選人名單或選舉公報），只在有號次且有來源時才回傳欄位。
 // 缺值一律不顯示，不寫「待公告」，避免把尚未擷取和尚未公告混為一談。
 // 號次只掛在合併後的候選人卡片上，不寫回各筆政見，也不進入政見統計、政黨統計或地圖配色。
 // 姓名比對規則同選區；同一縣市、職務有兩位以上符合時不猜，留空。
@@ -209,7 +209,7 @@ window.loadCandidateDataset=async({districts=false,ballots=false}={})=>{
   const sharedPolicySection=(title,policies,open=false)=>policies.length?`<details class="policy-layer policy-shared"${open?' open':''}><summary><h4>${title}</h4><span class="shared-toggle">${policies.length} 項</span></summary>${sharedPolicyList(policies)}</details>`:'';
   // 號次標籤與來源。整張卡片是連結的列表與地圖側欄只放標籤（連結內不能再放連結），來源在候選人頁與地方頁展開。
   window.ballotBadge=x=>x.ballot_number?`<span class="ballot-number" title="候選人號次 ${esc(x.ballot_number)} 號"><b${String(x.ballot_number).length>1?' class="is-wide"':''}>${esc(x.ballot_number)}</b>號</span>`:'';
-  window.ballotSource=x=>x.ballot_number?`<details class="ballot-source"><summary>號次來源</summary><p>依${esc(x.city)}選舉委員會號次抽籤結果</p><a href="${esc(safe(x.ballot_source_url))}" target="_blank" rel="noopener">${esc(x.ballot_source_title)} ↗</a>${x.ballot_as_of?`<small>公告／製表日期：${esc(x.ballot_as_of)}</small>`:''}</details>`:'';
+  window.ballotSource=x=>x.ballot_number?`<details class="ballot-source"><summary>號次來源</summary><p>來自中央與地方選委會資料</p><a href="${esc(safe(x.ballot_source_url))}" target="_blank" rel="noopener">${esc(x.ballot_source_title)} ↗</a>${x.ballot_as_of?`<small>公告／製表日期：${esc(x.ballot_as_of)}</small>`:''}</details>`:'';
   window.officeKey=office=>String(office).includes('議員')?'councilor':'mayor';
   window.candidateUrl=record=>`candidate.html?${new URLSearchParams({city:record.city,office:officeKey(record.office),name:record.candidate})}`;
   window.regionUrl=city=>`region.html?city=${encodeURIComponent(city)}`;
