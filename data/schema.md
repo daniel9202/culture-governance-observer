@@ -48,3 +48,7 @@
 ## `registered_candidates.csv`
 
 中選會「候選人登記彙總表」的轉檔結果，用於計算各縣市參選人數，**不是本站查核的政見資料**。由 `scripts/import_cec_registrations.py` 從中選會 PDF 產生，請勿手動逐筆編輯。欄位：`city`、`office`（`縣市長` 或 `縣市議員`；直轄市長、直轄市議員分別併入）、`district`（選舉區，議員為「臺北市第1選舉區」等）、`candidate`（照名冊登錄，可能含原住民族傳統名字）、`party`（推薦之政黨，未推薦為「無」）、`registered_date`、`incumbent`（僅用「是」或留空；標示現任縣市長，依 2026-10-10 的現任職務與中選會登記名冊判定，僅供地圖樣式使用）、`source_title`、`source_url`、`as_of`（名冊製表日期）。全表須共用同一來源與 `as_of`；輸出的 JSON 只在檔案層級記錄一次 `source`。2026-10-16：依中選會候選人資格審定公告刪除 10 位不符規定者（議員 1,502→1,492，縣市長 81 不變），全表來源與 `as_of` 同步改為審定公告；重跑 `import_cec_registrations.py` 會還原這 10 人，見該腳本說明。
+
+## `ballot_numbers.csv`
+
+候選人號次資料，一位候選人一列。欄位：`city`、`office`（只收 `縣市長`、`縣市議員`）、`district`、`candidate`（四者必須與 `registered_candidates.csv` 完全相符）、`ballot_number`（正整數）、`ballot_source_title`、`ballot_source_url`（地方選委會實際公告或附件 URL，必須以 `https://web.cec.gov.tw/` 開頭）、`ballot_as_of`（公告或製表日期）。同一選區內號次不可重複。輸出為 `ballot_numbers.json`，來源在檔案層級以 `sources` 與 `source_id` 去重記錄；尚未取得的名冊候選人只警告，不補猜號次。

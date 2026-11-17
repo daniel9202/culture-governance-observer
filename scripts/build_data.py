@@ -516,6 +516,43 @@ def build_registered_candidates():
     # 來源只在檔案層級記錄，避免前台資料過大；依職務各一份
     return records, sources
 
+def build_ballot_numbers(registered):
+    records, sources, seen_numbers = [], [], set()
+    roster = {(r["city"], r["office"], r["district"], r["candidate"]) for r in registered}
+    covered = set()
+    for index, row in enumerate(rows("ballot_numbers.csv"), start=2):
+        if not any(row.values()):
+            continue
+        label = f"ballot_numbers.csv row {index}"
+        required(row, ["city", "office", "district", "candidate", "ballot_number", "ballot_source_title", "ballot_source_url", "ballot_as_of"], label)
+        if row["office"] not in {"縣市長", "縣市議員"}:
+            raise ValueError(f"{label}: office must be 縣市長 or 縣市議員")
+        if not row["ballot_number"].isdigit() or int(row["ballot_number"]) <= 0:
+            raise ValueError(f"{label}: ballot_number must be a positive integer")
+        valid_date(row["ballot_as_of"], label)
+        url = row["ballot_source_url"]
+        if not url.startswith("https://web.cec.gov.tw/") or url.rstrip("/") in {"https://web.cec.gov.tw", "https://web.cec.gov.tw/"}:
+            raise ValueError(f"{label}: ballot_source_url must be an actual https://web.cec.gov.tw/ announcement or attachment URL")
+        identity = (row["city"], row["office"], row["district"], row["candidate"])
+        if identity not in roster:
+            raise ValueError(f"{label}: candidate not found in registered_candidates.csv")
+        number_key = (*identity[:3], int(row["ballot_number"]))
+        if number_key in seen_numbers:
+            raise ValueError(f"{label}: duplicate ballot number in the same district")
+        seen_numbers.add(number_key); covered.add(identity)
+        source = {"title": row["ballot_source_title"], "url": url, "as_of": row["ballot_as_of"]}
+        if source not in sources: sources.append(source)
+        records.append({"city": row["city"], "office": row["office"], "district": row["district"], "candidate": row["candidate"], "ballot_number": int(row["ballot_number"]), "source_id": None, "_source": source})
+    for i, source in enumerate(sources, 1):
+        for record in records:
+            if record["_source"] == source: record["source_id"] = f"S{i}"
+    for record in records: record.pop("_source")
+    target = {key for key in roster if key[1] in {"縣市長", "縣市議員"}}
+    missing = target - covered
+    if missing:
+        print(f"WARNING ballot_numbers.csv: {len(missing)} 位縣市長／縣市議員尚未取得號次", file=sys.stderr)
+    return records, sources
+
 DISTRICT_TYPES = {"區域", "平地原住民", "山地原住民"}
 ELECTION_DISTRICTS_CONFIG = ROOT / "config" / "election_districts.csv"
 
@@ -635,6 +672,7 @@ if __name__ == "__main__":
     civic_calls = build_civic_calls()
     fulfillment = build_fulfillment(candidates)
     registered, registered_source = build_registered_candidates()
+    ballot_numbers, ballot_sources = build_ballot_numbers(registered)
     districts, districts_source = build_election_districts(registered)
     errors, warnings = check_against_registration(candidates, shared_groups, registered)
     party_colors, party_warnings = build_party_colors(candidates, shared_groups)
@@ -649,6 +687,7 @@ if __name__ == "__main__":
     write("region_metrics.json", build_region_metrics())
     write("pledge_fulfillment.json", fulfillment)
     write("registered_candidates.json", registered, sources=registered_source)
+    write("ballot_numbers.json", ballot_numbers, sources=ballot_sources)
     write("election_districts.json", districts, source=districts_source)
     (OUTPUT / "party_colors.json").write_text(json.dumps({"schema_version": "1.1", "last_updated": date.today().isoformat(), **party_colors}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("data validation passed")

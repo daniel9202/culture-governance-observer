@@ -1,0 +1,7157 @@
+{
+  "schema_version": "1.1",
+  "last_updated": "2026-11-17",
+  "sources": [
+    {
+      "title": "臺北市第9屆市長、第15屆議員及第15屆里長選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/6ae7925e-d158-42ba-814c-34794f003ddb.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "臺北市第9屆市長、第15屆議員及第15屆里長選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/b74a02c0-b39e-4258-afd8-eb31787b0eb0.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年桃園市市長及市議員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/ec66f36e-120e-4ae3-9e52-e26051b5a17f.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年桃園市市長及市議員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/c48d03cc-887e-4355-abf3-0ff9a5548f65.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "臺南市第5屆直轄市長、市議員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/43dc2d1c-71f5-4da0-b0cd-a8b2ab046e26.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "臺南市第5屆直轄市長、市議員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/4e97400f-6cfe-466c-98a6-cff24c576450.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "基隆市第20屆市長、市議會第21屆議員及第23屆里長選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/a88ef20e-9a87-49df-a19e-3e9730fef1e7.pdf",
+      "as_of": "2026-10-28"
+    },
+    {
+      "title": "基隆市第20屆市長、市議會第21屆議員及第23屆里長選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/efe74705-3231-4466-b9fb-44b78f8d78c2.pdf",
+      "as_of": "2026-10-28"
+    },
+    {
+      "title": "嘉義市第12屆市長及市議員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/f52381ae-dde4-427b-9ae0-0cd9ffdbb32c.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年宜蘭縣地方公職人員選舉今日完成候選人號次抽籤",
+      "url": "https://web.cec.gov.tw/api/file/a8881295-c06b-400f-9e9b-10bd6a080842.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年宜蘭縣地方公職人員選舉今日完成候選人號次抽籤",
+      "url": "https://web.cec.gov.tw/api/file/4b4bf06a-8768-4d2c-8c9a-2875a38fc177.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/d2e6c0e2-4579-4034-ad98-fa2baca90066.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/76561c9b-2eaa-4cee-9b4e-de1f46510459.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人姓名號次抽籤概況表",
+      "url": "https://web.cec.gov.tw/api/file/417ed431-af02-4cd9-b027-c5ffa865c2bc.pdf",
+      "as_of": "2026-10-29"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人姓名號次抽籤概況表",
+      "url": "https://web.cec.gov.tw/api/file/3fa6c5bc-efb9-4f5b-aff5-a6da35f2d8f3.pdf",
+      "as_of": "2026-10-29"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/5fb0eb40-da2f-4477-8529-853cbb60e76a.pdf",
+      "as_of": "2026-10-28"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/af4001de-cfa1-4b10-948e-4f6addd8e5fa.pdf",
+      "as_of": "2026-10-28"
+    },
+    {
+      "title": "臺東縣115年地方公職人員選舉候選人抽籤號次結果",
+      "url": "https://web.cec.gov.tw/api/file/fabcff0f-fa7f-4318-9a71-831f3204db14.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "臺東縣115年地方公職人員選舉候選人抽籤號次結果",
+      "url": "https://web.cec.gov.tw/api/file/3d985fc3-0e05-4137-83f4-087647745023.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年花蓮縣地方公職人員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/7fc6c79a-1de4-412e-a20e-4870cdcece96.pdf",
+      "as_of": "2026-10-29"
+    },
+    {
+      "title": "115年花蓮縣地方公職人員選舉候選人姓名號次抽籤結果",
+      "url": "https://web.cec.gov.tw/api/file/839b06dc-129a-42ac-9769-313458aa2a64.pdf",
+      "as_of": "2026-10-29"
+    },
+    {
+      "title": "澎湖縣115年地方公職人員選舉候選人姓名號次抽籤一覽表",
+      "url": "https://web.cec.gov.tw/api/file/c24874c0-bf5f-4fb9-b43c-8abf0dc8290a.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "澎湖縣115年地方公職人員選舉候選人姓名號次抽籤一覽表",
+      "url": "https://web.cec.gov.tw/api/file/66c9c80e-534b-4a60-81ab-a2b692c2ced3.pdf",
+      "as_of": "2026-10-27"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人號次一欄表",
+      "url": "https://web.cec.gov.tw/api/file/9a122fc1-c3be-4a9a-8e8f-837bd9571551.pdf",
+      "as_of": "2026-10-30"
+    },
+    {
+      "title": "115年地方公職人員選舉候選人號次一欄表",
+      "url": "https://web.cec.gov.tw/api/file/20e96e99-5b94-4a15-955b-a17c77dd5aa5.pdf",
+      "as_of": "2026-10-30"
+    }
+  ],
+  "records": [
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "汪志冰",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "林杏兒",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "陳怡潔",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "陳慈慧",
+      "ballot_number": 4,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "林世宗",
+      "ballot_number": 5,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "紀建漢",
+      "ballot_number": 6,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "劉致妤",
+      "ballot_number": 7,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "賴苡任",
+      "ballot_number": 8,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "謝閔弘",
+      "ballot_number": 9,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "陳彥廷",
+      "ballot_number": 10,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "侯漢廷",
+      "ballot_number": 11,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "陳重文",
+      "ballot_number": 12,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "鍾佩玲",
+      "ballot_number": 13,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "張斯綱",
+      "ballot_number": 14,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "李文",
+      "ballot_number": 15,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "黃瀞瑩",
+      "ballot_number": 16,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "林聖峰",
+      "ballot_number": 17,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "林揚庭",
+      "ballot_number": 18,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "林延鳳",
+      "ballot_number": 19,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第1選舉區",
+      "candidate": "陳賢蔚",
+      "ballot_number": 20,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "闕枚莎",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "游淑慧",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "陳冠安",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "陳又新",
+      "ballot_number": 4,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "王孝維",
+      "ballot_number": 5,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "何恕懷",
+      "ballot_number": 6,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "吳世正",
+      "ballot_number": 7,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "高嘉瑜",
+      "ballot_number": 8,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "李明賢",
+      "ballot_number": 9,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "陳宥丞",
+      "ballot_number": 10,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "何孟樺",
+      "ballot_number": 11,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "黃啟彬",
+      "ballot_number": 12,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第2選舉區",
+      "candidate": "吳欣岱",
+      "ballot_number": 13,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "許淑華",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "詹為元",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "秦慧珠",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "左曉明",
+      "ballot_number": 4,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "洪健益",
+      "ballot_number": 5,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "許甫",
+      "ballot_number": 6,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "許原榮",
+      "ballot_number": 7,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "戴錫欽",
+      "ballot_number": 8,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "鄧樂強",
+      "ballot_number": 9,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "張文潔",
+      "ballot_number": 10,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "郭凡",
+      "ballot_number": 11,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "李明璇",
+      "ballot_number": 12,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第3選舉區",
+      "candidate": "林柏勛",
+      "ballot_number": 13,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "柳采葳",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "黃麗香",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "李易儒",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "陳炳甫",
+      "ballot_number": 4,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "林亮君",
+      "ballot_number": 5,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "李惠暄",
+      "ballot_number": 6,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "朱政騏",
+      "ballot_number": 7,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "林珍羽",
+      "ballot_number": 8,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "林子揚",
+      "ballot_number": 9,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "顏若芳",
+      "ballot_number": 10,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "熊羿",
+      "ballot_number": 11,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "陳怡君",
+      "ballot_number": 12,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "賴俊翰",
+      "ballot_number": 13,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第4選舉區",
+      "candidate": "葉林傳",
+      "ballot_number": 14,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "張延廷",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "吳志剛",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "陳力新",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "吳怡萱",
+      "ballot_number": 4,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "徐立信",
+      "ballot_number": 5,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "馬郁雯",
+      "ballot_number": 6,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "鍾小平",
+      "ballot_number": 7,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "郭昭巖",
+      "ballot_number": 8,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "譚傳紹",
+      "ballot_number": 9,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "張銘祐",
+      "ballot_number": 10,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "王振庭",
+      "ballot_number": 11,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "洪婉臻",
+      "ballot_number": 12,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "劉耀仁",
+      "ballot_number": 13,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第5選舉區",
+      "candidate": "應佳妤",
+      "ballot_number": 14,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "曾獻瑩",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "耿葳",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "王欣儀",
+      "ballot_number": 5,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "張維學",
+      "ballot_number": 6,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "陳聖文",
+      "ballot_number": 7,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "陳錦祥",
+      "ballot_number": 8,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "陳峙穎",
+      "ballot_number": 9,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "簡舒培",
+      "ballot_number": 10,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "李道翔",
+      "ballot_number": 11,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "楊植斗",
+      "ballot_number": 12,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "張志豪",
+      "ballot_number": 13,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "李奇峯",
+      "ballot_number": 14,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "苗博雅",
+      "ballot_number": 15,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "徐弘庭",
+      "ballot_number": 16,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "鍾沛君",
+      "ballot_number": 17,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第6選舉區",
+      "candidate": "劉品妡",
+      "ballot_number": 18,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第7選舉區",
+      "candidate": "林筱薇IcyangTamana",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第7選舉區",
+      "candidate": "李芳儒",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第8選舉區",
+      "candidate": "孔垂崢HaisulIslituan",
+      "ballot_number": 1,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第8選舉區",
+      "candidate": "林家豪",
+      "ballot_number": 2,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市議員",
+      "district": "臺北市第8選舉區",
+      "candidate": "李傅鈺婷",
+      "ballot_number": 3,
+      "source_id": "S1"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市長",
+      "district": "臺北市",
+      "candidate": "郭璽",
+      "ballot_number": 1,
+      "source_id": "S2"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市長",
+      "district": "臺北市",
+      "candidate": "林志成",
+      "ballot_number": 2,
+      "source_id": "S2"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市長",
+      "district": "臺北市",
+      "candidate": "沈伯洋",
+      "ballot_number": 3,
+      "source_id": "S2"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市長",
+      "district": "臺北市",
+      "candidate": "蕭文乾",
+      "ballot_number": 4,
+      "source_id": "S2"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市長",
+      "district": "臺北市",
+      "candidate": "蔣萬安",
+      "ballot_number": 5,
+      "source_id": "S2"
+    },
+    {
+      "city": "臺北市",
+      "office": "縣市長",
+      "district": "臺北市",
+      "candidate": "唐新民",
+      "ballot_number": 6,
+      "source_id": "S2"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市長",
+      "district": "桃園市",
+      "candidate": "黃世杰",
+      "ballot_number": 1,
+      "source_id": "S3"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市長",
+      "district": "桃園市",
+      "candidate": "張善政",
+      "ballot_number": 2,
+      "source_id": "S3"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "徐千晴",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "余信憲",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "張碩芳",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "凌濤",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "陳美梅",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "林政賢",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "黃瓊慧",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "沈佩玲",
+      "ballot_number": 8,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "于北辰",
+      "ballot_number": 9,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "黃家齊",
+      "ballot_number": 10,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "詹江村",
+      "ballot_number": 11,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "王妃天崩開局穿越整頓霸凌者佀廣洋",
+      "ballot_number": 12,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "李凱倫",
+      "ballot_number": 13,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "佀廣洋",
+      "ballot_number": 14,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "李光達",
+      "ballot_number": 15,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "李柏瑟",
+      "ballot_number": 16,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "黃婉如",
+      "ballot_number": 17,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "朱永煇",
+      "ballot_number": 18,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第1選舉區",
+      "candidate": "許孟祥",
+      "ballot_number": 19,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "呂學記",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "陳泓維",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "李宗豪",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "孫韻璇",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "高華駿",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "周曉芸",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "林明義",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "江冠妤",
+      "ballot_number": 8,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第2選舉區",
+      "candidate": "陳雅倫",
+      "ballot_number": 9,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "劉茂羣",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "許家睿",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "段林淑婷",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "林晏良",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "蔡永芳",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "楊朝偉",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "呂林小鳳",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第3選舉區",
+      "candidate": "朱珍瑤",
+      "ballot_number": 8,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第4選舉區",
+      "candidate": "郭麗華",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第4選舉區",
+      "candidate": "許清順",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第4選舉區",
+      "candidate": "錢龍",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第4選舉區",
+      "candidate": "張桂綿",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第4選舉區",
+      "candidate": "劉勝全",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第4選舉區",
+      "candidate": "胡家智",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第5選舉區",
+      "candidate": "游吾和",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第5選舉區",
+      "candidate": "吳文凱",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第5選舉區",
+      "candidate": "徐其萬",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第6選舉區",
+      "candidate": "徐慈檉",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第6選舉區",
+      "candidate": "陳治文",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第6選舉區",
+      "candidate": "李柏坊",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第6選舉區",
+      "candidate": "劉儲禎",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第6選舉區",
+      "candidate": "江國輝",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "彭俊豪",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "劉安祺",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "葉明月",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "魏筠",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "張曉昀",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "吳睿霖",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "劉曾玉春",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "梁為超",
+      "ballot_number": 8,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "徐盛揚",
+      "ballot_number": 9,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "張兆恩",
+      "ballot_number": 10,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "李欣",
+      "ballot_number": 11,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "邱奕勝",
+      "ballot_number": 12,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "謝美英",
+      "ballot_number": 13,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "張仲方",
+      "ballot_number": 14,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "彭康傑",
+      "ballot_number": 15,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "黃崇真",
+      "ballot_number": 16,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第7選舉區",
+      "candidate": "毛嘉慶",
+      "ballot_number": 17,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "舒翠玲",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "黃敬平",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "吳正吉",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "羅文欽",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "彭柏霖",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "陳韋曄",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "劉仁照",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "王珮毓",
+      "ballot_number": 8,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "白丞堯",
+      "ballot_number": 9,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第8選舉區",
+      "candidate": "高宇彥",
+      "ballot_number": 10,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "黃盈淇",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "鄭淑方",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "周玉琴",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "古振豐",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "劉定唐",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "項柏翰",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第9選舉區",
+      "candidate": "李家興",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第10選舉區",
+      "candidate": "吳平娥",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第10選舉區",
+      "candidate": "徐玉樹",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第10選舉區",
+      "candidate": "張贊聞",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第10選舉區",
+      "candidate": "劉熒隆",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第10選舉區",
+      "candidate": "林昭賢",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第11選舉區",
+      "candidate": "陳睿生",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第11選舉區",
+      "candidate": "邱文威",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第12選舉區",
+      "candidate": "許更生",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第12選舉區",
+      "candidate": "張佩芸",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第12選舉區",
+      "candidate": "吳進昌",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第13選舉區",
+      "candidate": "林志強",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第13選舉區",
+      "candidate": "王仙蓮",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第13選舉區",
+      "candidate": "李鴻志",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第13選舉區",
+      "candidate": "楊進福",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第13選舉區",
+      "candidate": "陳卉蓁",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第13選舉區",
+      "candidate": "張秀菊",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "邱伯倫",
+      "ballot_number": 1,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "張倉豪",
+      "ballot_number": 2,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "簡志偉",
+      "ballot_number": 3,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "謝卓儒",
+      "ballot_number": 4,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "曾庭筠",
+      "ballot_number": 5,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "陳瑛",
+      "ballot_number": 6,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "蘇偉恩",
+      "ballot_number": 7,
+      "source_id": "S4"
+    },
+    {
+      "city": "桃園市",
+      "office": "縣市議員",
+      "district": "桃園市第14選舉區",
+      "candidate": "林秋霖",
+      "ballot_number": 8,
+      "source_id": "S4"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市長",
+      "district": "臺南市",
+      "candidate": "蕭燐洪",
+      "ballot_number": 1,
+      "source_id": "S5"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市長",
+      "district": "臺南市",
+      "candidate": "謝龍介",
+      "ballot_number": 2,
+      "source_id": "S5"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市長",
+      "district": "臺南市",
+      "candidate": "陳亭妃",
+      "ballot_number": 3,
+      "source_id": "S5"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市長",
+      "district": "臺南市",
+      "candidate": "葉人文",
+      "ballot_number": 4,
+      "source_id": "S5"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "陳詩薇",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "張新斛",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "侯陸太",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "沈家鳳",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "趙昆原",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "王宣貿",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "李宗翰",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第1選舉區",
+      "candidate": "蔡育輝",
+      "ballot_number": 8,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第2選舉區",
+      "candidate": "王詩媛",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第2選舉區",
+      "candidate": "蔡秋蘭",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第2選舉區",
+      "candidate": "蔡蘇秋金",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第2選舉區",
+      "candidate": "陳昆和",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第2選舉區",
+      "candidate": "謝舒凡",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第2選舉區",
+      "candidate": "方一峰",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第3選舉區",
+      "candidate": "吳通龍",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第3選舉區",
+      "candidate": "陳秋宏",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第3選舉區",
+      "candidate": "施朝清",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第3選舉區",
+      "candidate": "尤淨寬",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第4選舉區",
+      "candidate": "賴懋慶",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第4選舉區",
+      "candidate": "周奕齊",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "陳碧玉",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "李文俊",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "廖俊道",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "李偉智",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "林志展",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "余柷青",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第5選舉區",
+      "candidate": "李佳蓉",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "蔡麗青",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "郭信良",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "林緯",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "唐儀靜",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "邱昭勝",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "黃麗招",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "郭品辰",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "李中岑",
+      "ballot_number": 8,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第6選舉區",
+      "candidate": "姚正玉",
+      "ballot_number": 9,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "林燕祝",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "吳依潔",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "楊中成",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "卞宗康",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "朱正軒",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "林乃立",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "林冠維",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "陳秋萍",
+      "ballot_number": 8,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "黄肇輝",
+      "ballot_number": 9,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "李秉倫",
+      "ballot_number": 10,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第7選舉區",
+      "candidate": "周宏昌",
+      "ballot_number": 11,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "許至椿",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "江明宗",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "鄭方形",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "蔡宗豪",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "邱莉莉",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "謝秉舟",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "周嘉韋",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "童小芸",
+      "ballot_number": 8,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "林建南",
+      "ballot_number": 9,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "陳昌輝",
+      "ballot_number": 10,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第8選舉區",
+      "candidate": "沈震南",
+      "ballot_number": 11,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "李伯利",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "林依婷",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "葉翰勲",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "蕭漍華",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "李啓維",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "周麗津",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "盧崑福",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "呂維胤",
+      "ballot_number": 8,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第9選舉區",
+      "candidate": "陳冠諭",
+      "ballot_number": 9,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "蔡筱薇",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "陳金鐘",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "李宗霖",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "陳進男",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "歐政豪",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "王家貞",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第10選舉區",
+      "candidate": "曾之婕",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "郭如芳",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "吳禹寰",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "翁語含",
+      "ballot_number": 3,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "杜素吟",
+      "ballot_number": 4,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "劉正昌",
+      "ballot_number": 5,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "許又仁",
+      "ballot_number": 6,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "陳皇宇",
+      "ballot_number": 7,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "郭鴻儀",
+      "ballot_number": 8,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第11選舉區",
+      "candidate": "鄭佳欣",
+      "ballot_number": 9,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第12選舉區",
+      "candidate": "李美素",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第12選舉區",
+      "candidate": "吳東明",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第13選舉區",
+      "candidate": "施余興望TjakumayTagaw",
+      "ballot_number": 1,
+      "source_id": "S6"
+    },
+    {
+      "city": "臺南市",
+      "office": "縣市議員",
+      "district": "臺南市第13選舉區",
+      "candidate": "辛晴晴LanguiTamapima",
+      "ballot_number": 2,
+      "source_id": "S6"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市長",
+      "district": "基隆市",
+      "candidate": "童子瑋",
+      "ballot_number": 1,
+      "source_id": "S7"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市長",
+      "district": "基隆市",
+      "candidate": "魏造文",
+      "ballot_number": 2,
+      "source_id": "S7"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市長",
+      "district": "基隆市",
+      "candidate": "謝國樑",
+      "ballot_number": 3,
+      "source_id": "S7"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "黃紀仁",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "林廷翰",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "江清容",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "呂美玲",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "林孟泓",
+      "ballot_number": 5,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "王珍玨",
+      "ballot_number": 6,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "藍敏煌",
+      "ballot_number": 7,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第1選舉區",
+      "candidate": "張文彬",
+      "ballot_number": 8,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "韓世昱",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "李程祥",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "陳宜",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "陳軍佐",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "何淑萍",
+      "ballot_number": 5,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "林廷奕",
+      "ballot_number": 6,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "黃申棟",
+      "ballot_number": 7,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "李嘉濠",
+      "ballot_number": 8,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第2選舉區",
+      "candidate": "鄭素禎",
+      "ballot_number": 9,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第3選舉區",
+      "candidate": "林杏潔",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第3選舉區",
+      "candidate": "莊傑宇",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第3選舉區",
+      "candidate": "曾維祥",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第3選舉區",
+      "candidate": "鄭文婷",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "莊敬聖",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "宋瑋莉",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "郭美秀",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "吳巧瀅",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "林祐德",
+      "ballot_number": 5,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "李昀靜",
+      "ballot_number": 6,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "許孟修",
+      "ballot_number": 7,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "施偉政",
+      "ballot_number": 8,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第4選舉區",
+      "candidate": "呂承祐",
+      "ballot_number": 9,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "黃忠賢",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "黃舒琳",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "吳程澤",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "秦鉦",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "劉韋巡",
+      "ballot_number": 5,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "張之豪",
+      "ballot_number": 6,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "李文耀",
+      "ballot_number": 7,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "張家馨",
+      "ballot_number": 8,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "吳驊珈",
+      "ballot_number": 9,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "黃永翔",
+      "ballot_number": 10,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "俞叁發",
+      "ballot_number": 11,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第5選舉區",
+      "candidate": "鄭愷玲",
+      "ballot_number": 12,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第6選舉區",
+      "candidate": "連恩典",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第6選舉區",
+      "candidate": "莫璦緁",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第6選舉區",
+      "candidate": "蔡長宏",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第6選舉區",
+      "candidate": "朱書昕",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第6選舉區",
+      "candidate": "陳冠羽",
+      "ballot_number": 5,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第7選舉區",
+      "candidate": "楊秀玉",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第7選舉區",
+      "candidate": "曾怡芳",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第7選舉區",
+      "candidate": "張耿輝",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第7選舉區",
+      "candidate": "陳安淇",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第7選舉區",
+      "candidate": "蔡旺璉",
+      "ballot_number": 5,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第7選舉區",
+      "candidate": "戴璟安",
+      "ballot_number": 6,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第8選舉區",
+      "candidate": "拔耐．茹妮老王",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第8選舉區",
+      "candidate": "陳明建",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第9選舉區",
+      "candidate": "林崇道Motu Quyat",
+      "ballot_number": 1,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第9選舉區",
+      "candidate": "徐馬政妘",
+      "ballot_number": 2,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第9選舉區",
+      "candidate": "高願孝",
+      "ballot_number": 3,
+      "source_id": "S8"
+    },
+    {
+      "city": "基隆市",
+      "office": "縣市議員",
+      "district": "基隆市第9選舉區",
+      "candidate": "高李茂俊",
+      "ballot_number": 4,
+      "source_id": "S8"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "黃政融",
+      "ballot_number": 1,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "陳嘉弘",
+      "ballot_number": 2,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "鄭光宏",
+      "ballot_number": 3,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "林煒軒",
+      "ballot_number": 4,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "張秀華",
+      "ballot_number": 5,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "李明燦",
+      "ballot_number": 6,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "黃思婷",
+      "ballot_number": 7,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "王浩",
+      "ballot_number": 8,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "李忠曆",
+      "ballot_number": 9,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "陳致愷",
+      "ballot_number": 10,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "魏志軒",
+      "ballot_number": 11,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "陳姿妏",
+      "ballot_number": 12,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "蔡坤叡",
+      "ballot_number": 13,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "黃敏修",
+      "ballot_number": 14,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "曾奕豪",
+      "ballot_number": 15,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "孫貫志",
+      "ballot_number": 16,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "蔡坤達",
+      "ballot_number": 17,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "黃大祐",
+      "ballot_number": 18,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "林詩涵",
+      "ballot_number": 19,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "林子淨",
+      "ballot_number": 20,
+      "source_id": "S9"
+    },
+    {
+      "city": "嘉義市",
+      "office": "縣市議員",
+      "district": "嘉義市第2選舉區",
+      "candidate": "陳品蓁",
+      "ballot_number": 21,
+      "source_id": "S9"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "district": "宜蘭縣",
+      "candidate": "林國漳",
+      "ballot_number": 1,
+      "source_id": "S10"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "district": "宜蘭縣",
+      "candidate": "陳宏毅",
+      "ballot_number": 2,
+      "source_id": "S10"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "district": "宜蘭縣",
+      "candidate": "吳宗憲",
+      "ballot_number": 3,
+      "source_id": "S10"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "district": "宜蘭縣",
+      "candidate": "劉燦輝",
+      "ballot_number": 4,
+      "source_id": "S10"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市長",
+      "district": "宜蘭縣",
+      "candidate": "楊鉯婷",
+      "ballot_number": 5,
+      "source_id": "S10"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "陳漢澤",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "楊易林",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "莊淑如",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "林麗",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "黃奎翰",
+      "ballot_number": 5,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "劉仲書",
+      "ballot_number": 6,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "林錫明",
+      "ballot_number": 7,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "黃定和",
+      "ballot_number": 8,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "黃光佑",
+      "ballot_number": 9,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "游國連",
+      "ballot_number": 10,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "林岳賢",
+      "ballot_number": 11,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "何加忻",
+      "ballot_number": 12,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "項秀蘭",
+      "ballot_number": 13,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "張勝德",
+      "ballot_number": 14,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第1選舉區",
+      "candidate": "林蒼佑",
+      "ballot_number": 15,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第2選舉區",
+      "candidate": "林瑞文",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第2選舉區",
+      "candidate": "賴良洲",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第2選舉區",
+      "candidate": "林詩穎",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第3選舉區",
+      "candidate": "游順評",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第3選舉區",
+      "candidate": "李淑芬",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第3選舉區",
+      "candidate": "吳秋玟",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第4選舉區",
+      "candidate": "黃浴沂",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第4選舉區",
+      "candidate": "陳玉麟",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第4選舉區",
+      "candidate": "李姿婷",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第5選舉區",
+      "candidate": "沈清山",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第5選舉區",
+      "candidate": "陳福山",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第5選舉區",
+      "candidate": "江子言",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第5選舉區",
+      "candidate": "黃建勇",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "李中",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "陳漢鍾",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "謝家倫",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "呂惠卿",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "黃琤婷",
+      "ballot_number": 5,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "薛呈懿",
+      "ballot_number": 6,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "林宜弘",
+      "ballot_number": 7,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第6選舉區",
+      "candidate": "王乾明",
+      "ballot_number": 8,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第7選舉區",
+      "candidate": "張明華",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第7選舉區",
+      "candidate": "沈信雄",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第7選舉區",
+      "candidate": "林義剛",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第7選舉區",
+      "candidate": "黃子堯",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第8選舉區",
+      "candidate": "楊弘旻",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第8選舉區",
+      "candidate": "林佩螢",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第8選舉區",
+      "candidate": "邱素梅",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第8選舉區",
+      "candidate": "林峻輔",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第9選舉區",
+      "candidate": "游雅絢",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第9選舉區",
+      "candidate": "江信賢",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第9選舉區",
+      "candidate": "曾茂照",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第9選舉區",
+      "candidate": "黃賢能",
+      "ballot_number": 4,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第9選舉區",
+      "candidate": "郭嘉呈",
+      "ballot_number": 5,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第10選舉區",
+      "candidate": "李明哲",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第10選舉區",
+      "candidate": "陳玉萍",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第10選舉區",
+      "candidate": "黃士駿",
+      "ballot_number": 3,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第11選舉區",
+      "candidate": "孫湯玉惠aly saku",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第12選舉區",
+      "candidate": "陳傑麟",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第12選舉區",
+      "candidate": "沈志弘",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第13選舉區",
+      "candidate": "李勝雄",
+      "ballot_number": 1,
+      "source_id": "S11"
+    },
+    {
+      "city": "宜蘭縣",
+      "office": "縣市議員",
+      "district": "宜蘭縣第13選舉區",
+      "candidate": "曹天民",
+      "ballot_number": 2,
+      "source_id": "S11"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市長",
+      "district": "新竹縣",
+      "candidate": "鄭朝方",
+      "ballot_number": 1,
+      "source_id": "S12"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市長",
+      "district": "新竹縣",
+      "candidate": "徐欣瑩",
+      "ballot_number": 2,
+      "source_id": "S12"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市長",
+      "district": "新竹縣",
+      "candidate": "朱定瑀",
+      "ballot_number": 3,
+      "source_id": "S12"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第1選舉區",
+      "candidate": "王炳漢",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第1選舉區",
+      "candidate": "陳凱榮",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第1選舉區",
+      "candidate": "陳秀玲",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第1選舉區",
+      "candidate": "李雅芬",
+      "ballot_number": 4,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第1選舉區",
+      "candidate": "鄭美琴",
+      "ballot_number": 5,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第1選舉區",
+      "candidate": "張珈源",
+      "ballot_number": 6,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "林禹佑",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "范揚琪",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "戴佩如",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "杜文中",
+      "ballot_number": 4,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "邱靖雅",
+      "ballot_number": 5,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "歐陽霆",
+      "ballot_number": 6,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "游雅婷",
+      "ballot_number": 7,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "朱健銘",
+      "ballot_number": 8,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "蔡志環",
+      "ballot_number": 9,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "邵啟月",
+      "ballot_number": 10,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "蔡蕥鍹",
+      "ballot_number": 11,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "范格菱",
+      "ballot_number": 12,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "張育慈",
+      "ballot_number": 13,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第2選舉區",
+      "candidate": "林碩彥",
+      "ballot_number": 14,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "余筱菁",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "羅美文",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "陳栢誠",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "賴寶鈺",
+      "ballot_number": 4,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "戴翊如",
+      "ballot_number": 5,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "楊勝馭",
+      "ballot_number": 6,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "吳菊花",
+      "ballot_number": 7,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "陳岫玫",
+      "ballot_number": 8,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "何建樺",
+      "ballot_number": 9,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "翁紹軒",
+      "ballot_number": 10,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第3選舉區",
+      "candidate": "甄克堅",
+      "ballot_number": 11,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第4選舉區",
+      "candidate": "徐勝凌",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第4選舉區",
+      "candidate": "林茂青",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第4選舉區",
+      "candidate": "吳傳地",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第4選舉區",
+      "candidate": "張以聖",
+      "ballot_number": 4,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第4選舉區",
+      "candidate": "何昌臨",
+      "ballot_number": 5,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第4選舉區",
+      "candidate": "徐源發",
+      "ballot_number": 6,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第5選舉區",
+      "candidate": "徐瑜新",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第5選舉區",
+      "candidate": "蔡澄均",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第5選舉區",
+      "candidate": "羅仕琦",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第6選舉區",
+      "candidate": "呂宛庭",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第6選舉區",
+      "candidate": "黃路加",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第6選舉區",
+      "candidate": "陳新源",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第7選舉區",
+      "candidate": "張良印",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第8選舉區",
+      "candidate": "黃正彪",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "鍾心渝",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "林昭錡",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "羅俊傑",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "彭余美玲",
+      "ballot_number": 4,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "黃豪杰",
+      "ballot_number": 5,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "上官秋燕",
+      "ballot_number": 6,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "鄭朝鐘",
+      "ballot_number": 7,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "林裙靜",
+      "ballot_number": 8,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第9選舉區",
+      "candidate": "楊昌德",
+      "ballot_number": 9,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第10選舉區",
+      "candidate": "邱坤桶",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第10選舉區",
+      "candidate": "何時名",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第11選舉區",
+      "candidate": "王辰翔",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第11選舉區",
+      "candidate": "范文鴻",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第12選舉區",
+      "candidate": "法隆伊佑",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第12選舉區",
+      "candidate": "林秉君kaying．kuying．kalang",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第13選舉區",
+      "candidate": "曾國大Masaw．Moto",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第13選舉區",
+      "candidate": "范經生",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第13選舉區",
+      "candidate": "林世偉",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第13選舉區",
+      "candidate": "羅恩加",
+      "ballot_number": 4,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第13選舉區",
+      "candidate": "高忠正",
+      "ballot_number": 5,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第14選舉區",
+      "candidate": "張益生",
+      "ballot_number": 1,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第14選舉區",
+      "candidate": "張雁萍",
+      "ballot_number": 2,
+      "source_id": "S13"
+    },
+    {
+      "city": "新竹縣",
+      "office": "縣市議員",
+      "district": "新竹縣第14選舉區",
+      "candidate": "LalingYumin",
+      "ballot_number": 3,
+      "source_id": "S13"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市長",
+      "district": "彰化縣",
+      "candidate": "陳素月",
+      "ballot_number": 1,
+      "source_id": "S14"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市長",
+      "district": "彰化縣",
+      "candidate": "魏平政",
+      "ballot_number": 2,
+      "source_id": "S14"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市長",
+      "district": "彰化縣",
+      "candidate": "邱建富",
+      "ballot_number": 3,
+      "source_id": "S14"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市長",
+      "district": "彰化縣",
+      "candidate": "陳重嘉",
+      "ballot_number": 4,
+      "source_id": "S14"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "許雅琳",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "許原龍",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "陳銌銌",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "温芝樺",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "莊陞漢",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "黃玉如",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "黃千宴",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "顧勝敏",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "白玉如",
+      "ballot_number": 9,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "李成濟",
+      "ballot_number": 10,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "林世賢",
+      "ballot_number": 11,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "林世明",
+      "ballot_number": 12,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "吳韋達",
+      "ballot_number": 13,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "楊子賢",
+      "ballot_number": 14,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第1選舉區",
+      "candidate": "謝宗樺",
+      "ballot_number": 15,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "楊竣程",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "凃淑媚",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "蔣煙燈",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "藍駿宇",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "林英嘉",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "蔡匡威",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "許志宏",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "王信筌",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第2選舉區",
+      "candidate": "郭燕陵",
+      "ballot_number": 9,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "蘇智弦",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "蕭文雄",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "柯振杯",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "曾煥燁",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "周君綾",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "林明鴻",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "鍾雅茹",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "林宗翰",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "王國忠",
+      "ballot_number": 9,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第3選舉區",
+      "candidate": "林小琪",
+      "ballot_number": 10,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "張雪如",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "曹嘉豪",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "賴澤民",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "張詩怡",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "張欣倩",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "黃正盛",
+      "ballot_number": 9,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "林俊毅",
+      "ballot_number": 11,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "張詠勝",
+      "ballot_number": 12,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第4選舉區",
+      "candidate": "詹雅婷",
+      "ballot_number": 13,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第5選舉區",
+      "candidate": "許文萍",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第5選舉區",
+      "candidate": "黃佳惠",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第5選舉區",
+      "candidate": "楊仁彬",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第5選舉區",
+      "candidate": "陳玉姫",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第5選舉區",
+      "candidate": "劉珊伶",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第5選舉區",
+      "candidate": "張春洋",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第6選舉區",
+      "candidate": "蕭妤亘",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第6選舉區",
+      "candidate": "彭世和",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第6選舉區",
+      "candidate": "詹琬惠",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第6選舉區",
+      "candidate": "蕭岳倫",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第6選舉區",
+      "candidate": "許書維",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第6選舉區",
+      "candidate": "鄭俊雄",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "鄭朝元",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "江熊一楓",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "謝典霖",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "李浩誠",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "劉淑芳",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "杜懿彩",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "陳世凱",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第7選舉區",
+      "candidate": "李俊諭",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "張國棟",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "洪騰明",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "謝淑如",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "黄淑儀",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "洪雅婷",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "吳淑娟",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "曾温泉",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第8選舉區",
+      "candidate": "洪子超",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第9選舉區",
+      "candidate": "陳明義",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第9選舉區",
+      "candidate": "陳榮妹",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "謝秀美",
+      "ballot_number": 1,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "張瑋婷",
+      "ballot_number": 2,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "高采翎",
+      "ballot_number": 3,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "肯當．迪洛安",
+      "ballot_number": 4,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "王昌智 MacLunai",
+      "ballot_number": 5,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "高世鴻",
+      "ballot_number": 6,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "金凱傑Ilia．Nangavulan",
+      "ballot_number": 7,
+      "source_id": "S15"
+    },
+    {
+      "city": "彰化縣",
+      "office": "縣市議員",
+      "district": "彰化縣第10選舉區",
+      "candidate": "吳秋祿",
+      "ballot_number": 8,
+      "source_id": "S15"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市長",
+      "district": "雲林縣",
+      "candidate": "吳炳輝",
+      "ballot_number": 1,
+      "source_id": "S16"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市長",
+      "district": "雲林縣",
+      "candidate": "張嘉郡",
+      "ballot_number": 2,
+      "source_id": "S16"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市長",
+      "district": "雲林縣",
+      "candidate": "劉建國",
+      "ballot_number": 3,
+      "source_id": "S16"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市長",
+      "district": "雲林縣",
+      "candidate": "林佳瑜",
+      "ballot_number": 4,
+      "source_id": "S16"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "黃勝志",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "曾博鴻",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "陳永修",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "黃釋瑩",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "邱世文",
+      "ballot_number": 5,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "鍾明馨",
+      "ballot_number": 6,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "楊朝祈",
+      "ballot_number": 7,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "賴瑪玲",
+      "ballot_number": 8,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "林岳璋",
+      "ballot_number": 9,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "陳芳盈",
+      "ballot_number": 10,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "張光儀",
+      "ballot_number": 11,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "林靖冠",
+      "ballot_number": 12,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "王竣毅",
+      "ballot_number": 13,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "林群力",
+      "ballot_number": 14,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "廖郁賢",
+      "ballot_number": 15,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "江文登",
+      "ballot_number": 16,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "廖昶淳",
+      "ballot_number": 17,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第1選舉區",
+      "candidate": "許百芳",
+      "ballot_number": 18,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "陳麗蘭",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "吳延豐",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "高明達",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "林森寳",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "賴明源",
+      "ballot_number": 5,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "黃景鴻",
+      "ballot_number": 6,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "張庭綺",
+      "ballot_number": 7,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "洪惠玲",
+      "ballot_number": 8,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第2選舉區",
+      "candidate": "王秋足",
+      "ballot_number": 9,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "黃美瑤",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "蔡明水",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "陳俊龍",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "李明明",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "魏順興",
+      "ballot_number": 5,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "張維心",
+      "ballot_number": 6,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "沈昱霆",
+      "ballot_number": 7,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "王鈺齊",
+      "ballot_number": 8,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "陳乙辰",
+      "ballot_number": 9,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "黃凱",
+      "ballot_number": 10,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第3選舉區",
+      "candidate": "林文彬",
+      "ballot_number": 11,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "楊智凱",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "王裔迪",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "李明哲",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "廖子漢",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "廖庭輝",
+      "ballot_number": 5,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "游淑雲",
+      "ballot_number": 6,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "李泓儀",
+      "ballot_number": 7,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "張家閎",
+      "ballot_number": 8,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "廖偉晴",
+      "ballot_number": 9,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第4選舉區",
+      "candidate": "洪如萍",
+      "ballot_number": 10,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "趙育祥",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "蘇國誼",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "蔡永順",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "郭佩瑄",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "許留賓",
+      "ballot_number": 5,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "蔡梨美",
+      "ballot_number": 6,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "吳蕙蘭",
+      "ballot_number": 7,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "吳宗典",
+      "ballot_number": 8,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "林宜豊",
+      "ballot_number": 9,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第5選舉區",
+      "candidate": "林建鴻",
+      "ballot_number": 10,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "蔡岳儒",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "王承宏",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "黃美蘭",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "蔡孟真",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "陳定鈞",
+      "ballot_number": 5,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "王新堯",
+      "ballot_number": 6,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第6選舉區",
+      "candidate": "黃文祥",
+      "ballot_number": 7,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第7選舉區",
+      "candidate": "周志祥Kacaw．Kaco",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第7選舉區",
+      "candidate": "鄭玫惠",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第8選舉區",
+      "candidate": "張忠豪",
+      "ballot_number": 1,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第8選舉區",
+      "candidate": "蔡嘉峻PisawHakaw",
+      "ballot_number": 2,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第8選舉區",
+      "candidate": "李丘威達",
+      "ballot_number": 3,
+      "source_id": "S17"
+    },
+    {
+      "city": "雲林縣",
+      "office": "縣市議員",
+      "district": "雲林縣第8選舉區",
+      "candidate": "高瑛翠",
+      "ballot_number": 4,
+      "source_id": "S17"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市長",
+      "district": "臺東縣",
+      "candidate": "李吳穎智",
+      "ballot_number": 1,
+      "source_id": "S18"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市長",
+      "district": "臺東縣",
+      "candidate": "陳瑩",
+      "ballot_number": 2,
+      "source_id": "S18"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市長",
+      "district": "臺東縣",
+      "candidate": "王志偉",
+      "ballot_number": 3,
+      "source_id": "S18"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市長",
+      "district": "臺東縣",
+      "candidate": "吳秀華",
+      "ballot_number": 4,
+      "source_id": "S18"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "吳景槐",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "黃治維",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "傅文鵬",
+      "ballot_number": 3,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "周達三",
+      "ballot_number": 4,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "陳炫諭",
+      "ballot_number": 5,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "王春梅",
+      "ballot_number": 6,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "江家榛",
+      "ballot_number": 7,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "吳佩珊",
+      "ballot_number": 8,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "李哲",
+      "ballot_number": 9,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "陳允萍",
+      "ballot_number": 10,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "張國洲",
+      "ballot_number": 11,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "林參天",
+      "ballot_number": 12,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "簡維國",
+      "ballot_number": 13,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "潘頤頻",
+      "ballot_number": 14,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "王文怡",
+      "ballot_number": 15,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "林文隆",
+      "ballot_number": 16,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第1選舉區",
+      "candidate": "饒慶鈺",
+      "ballot_number": 17,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第2選舉區",
+      "candidate": "張家瑋",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第2選舉區",
+      "candidate": "楊招信",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第3選舉區",
+      "candidate": "許進榮",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第3選舉區",
+      "candidate": "鄭銘顯",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第3選舉區",
+      "candidate": "林東滿",
+      "ballot_number": 3,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第4選舉區",
+      "candidate": "潘貴蘭",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第4選舉區",
+      "candidate": "陳宏宗",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第5選舉區",
+      "candidate": "廖雙穎",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第5選舉區",
+      "candidate": "翁麗吟",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第6選舉區",
+      "candidate": "王益凱",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第6選舉區",
+      "candidate": "謝賢裕",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第7選舉區",
+      "candidate": "林茂松",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第7選舉區",
+      "candidate": "陳政宗",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第7選舉區",
+      "candidate": "林琮翰",
+      "ballot_number": 3,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第7選舉區",
+      "candidate": "陽昇宏",
+      "ballot_number": 4,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第7選舉區",
+      "candidate": "陽奇良",
+      "ballot_number": 5,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第7選舉區",
+      "candidate": "方賢仁",
+      "ballot_number": 7,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第8選舉區",
+      "candidate": "鄭崗山",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第8選舉區",
+      "candidate": "沙順恩",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第9選舉區",
+      "candidate": "羅春明",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第9選舉區",
+      "candidate": "尤忠正",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第10選舉區",
+      "candidate": "楊清順CinsunPawtawan",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第11選舉區",
+      "candidate": "高美珠",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第11選舉區",
+      "candidate": "楊秋珍",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第11選舉區",
+      "candidate": "武雪恩",
+      "ballot_number": 3,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第12選舉區",
+      "candidate": "温源田",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第12選舉區",
+      "candidate": "邱文俊",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第13選舉區",
+      "candidate": "胡淑貞",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第13選舉區",
+      "candidate": "余桂花",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第13選舉區",
+      "candidate": "余瑋廷KavasIspalidaz",
+      "ballot_number": 3,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第13選舉區",
+      "candidate": "胡金至",
+      "ballot_number": 4,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第14選舉區",
+      "candidate": "蔣爭光",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第14選舉區",
+      "candidate": "章正輝Lemaljiz‧Kusaza",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第15選舉區",
+      "candidate": "林芳如",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第15選舉區",
+      "candidate": "包惠玲",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第16選舉區",
+      "candidate": "董昌華",
+      "ballot_number": 1,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第16選舉區",
+      "candidate": "鍾文明",
+      "ballot_number": 2,
+      "source_id": "S19"
+    },
+    {
+      "city": "臺東縣",
+      "office": "縣市議員",
+      "district": "臺東縣第16選舉區",
+      "candidate": "李奉祈",
+      "ballot_number": 3,
+      "source_id": "S19"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "district": "花蓮縣",
+      "candidate": "魏嘉賢",
+      "ballot_number": 1,
+      "source_id": "S20"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "district": "花蓮縣",
+      "candidate": "張峻",
+      "ballot_number": 2,
+      "source_id": "S20"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "district": "花蓮縣",
+      "candidate": "游淑貞",
+      "ballot_number": 3,
+      "source_id": "S20"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市長",
+      "district": "花蓮縣",
+      "candidate": "羅佩秦",
+      "ballot_number": 4,
+      "source_id": "S20"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "許願神",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "黃達祥",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "胡仁順",
+      "ballot_number": 3,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "林宗昆",
+      "ballot_number": 4,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "謝豪杰",
+      "ballot_number": 5,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "洪士閔",
+      "ballot_number": 6,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "田珍綺",
+      "ballot_number": 7,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "韓林梅",
+      "ballot_number": 8,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "徐子芳",
+      "ballot_number": 9,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "謝國榮",
+      "ballot_number": 10,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "莊依婕",
+      "ballot_number": 11,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "江躍辰",
+      "ballot_number": 12,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "陳財能",
+      "ballot_number": 13,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "傅國淵",
+      "ballot_number": 14,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第1選舉區",
+      "candidate": "蔡翼陽",
+      "ballot_number": 15,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第2選舉區",
+      "candidate": "鄭寶秀",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第2選舉區",
+      "candidate": "張美華",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "姜景文",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "鄭乾龍",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "楊悟空",
+      "ballot_number": 3,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "孟繁嘉",
+      "ballot_number": 4,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "劉靜文",
+      "ballot_number": 5,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "陳思伃",
+      "ballot_number": 6,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "徐雪玉",
+      "ballot_number": 7,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "蘇文將",
+      "ballot_number": 8,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "張宸瑋",
+      "ballot_number": 9,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "吳建志",
+      "ballot_number": 10,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "林則葹",
+      "ballot_number": 11,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "黃宣寓",
+      "ballot_number": 12,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "蔡文隆",
+      "ballot_number": 13,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第3選舉區",
+      "candidate": "彭建華",
+      "ballot_number": 14,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第4選舉區",
+      "candidate": "詹金富",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第4選舉區",
+      "candidate": "黃玲蘭",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第4選舉區",
+      "candidate": "林宏熙",
+      "ballot_number": 3,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第4選舉區",
+      "candidate": "吳新文",
+      "ballot_number": 4,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第4選舉區",
+      "candidate": "鍾素政",
+      "ballot_number": 5,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第5選舉區",
+      "candidate": "那莫 諾虎Namoh Nofu",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第5選舉區",
+      "candidate": "笛布斯．顗賚",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第5選舉區",
+      "candidate": "陳進德",
+      "ballot_number": 4,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第5選舉區",
+      "candidate": "李正文",
+      "ballot_number": 5,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第6選舉區",
+      "candidate": "萬中興",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第6選舉區",
+      "candidate": "蔡依靜Lamen‧Panay",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第6選舉區",
+      "candidate": "林正福",
+      "ballot_number": 3,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第6選舉區",
+      "candidate": "邱福順Kacaw．Folaw",
+      "ballot_number": 4,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第7選舉區",
+      "candidate": "秀吉．撒夫洛",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第7選舉區",
+      "candidate": "哈尼．噶照Hani Kacaw",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第7選舉區",
+      "candidate": "林玉芬",
+      "ballot_number": 3,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第8選舉區",
+      "candidate": "田韻馨",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第8選舉區",
+      "candidate": "王沈剛竹",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第8選舉區",
+      "candidate": "王玫瑰SitangYuci",
+      "ballot_number": 3,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第9選舉區",
+      "candidate": "伊布．達納畢瑪Ibu·Tanapinma",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第9選舉區",
+      "candidate": "陳群",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第10選舉區",
+      "candidate": "金淑敏",
+      "ballot_number": 1,
+      "source_id": "S21"
+    },
+    {
+      "city": "花蓮縣",
+      "office": "縣市議員",
+      "district": "花蓮縣第10選舉區",
+      "candidate": "李忠祥",
+      "ballot_number": 2,
+      "source_id": "S21"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市長",
+      "district": "澎湖縣",
+      "candidate": "許智富",
+      "ballot_number": 1,
+      "source_id": "S22"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市長",
+      "district": "澎湖縣",
+      "candidate": "周倪安",
+      "ballot_number": 2,
+      "source_id": "S22"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市長",
+      "district": "澎湖縣",
+      "candidate": "葉竹林",
+      "ballot_number": 3,
+      "source_id": "S22"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市長",
+      "district": "澎湖縣",
+      "candidate": "吳淑瑾",
+      "ballot_number": 4,
+      "source_id": "S22"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市長",
+      "district": "澎湖縣",
+      "candidate": "陳振中",
+      "ballot_number": 5,
+      "source_id": "S22"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市長",
+      "district": "澎湖縣",
+      "candidate": "陳盡川",
+      "ballot_number": 6,
+      "source_id": "S22"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "吳仁祥",
+      "ballot_number": 1,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "藍凱元",
+      "ballot_number": 2,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "莊光大",
+      "ballot_number": 3,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "陳偉澄",
+      "ballot_number": 4,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "陳海山",
+      "ballot_number": 5,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "呂光宇",
+      "ballot_number": 6,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "蘇育德",
+      "ballot_number": 7,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "蘇陳綉色",
+      "ballot_number": 8,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "張惠雅",
+      "ballot_number": 9,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "陳毓仁",
+      "ballot_number": 10,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "許國政",
+      "ballot_number": 11,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "呂黃春金",
+      "ballot_number": 12,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "歐松林",
+      "ballot_number": 13,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "陳慧娟",
+      "ballot_number": 14,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "胡正仁",
+      "ballot_number": 15,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "林柏成",
+      "ballot_number": 16,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "顏家康",
+      "ballot_number": 17,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "莊國輝",
+      "ballot_number": 18,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第1選舉區",
+      "candidate": "鄭清發",
+      "ballot_number": 19,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第2選舉區",
+      "candidate": "吳政杰",
+      "ballot_number": 1,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第2選舉區",
+      "candidate": "蔡清續",
+      "ballot_number": 2,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第2選舉區",
+      "candidate": "李麗美",
+      "ballot_number": 3,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第2選舉區",
+      "candidate": "廖璟華",
+      "ballot_number": 4,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第2選舉區",
+      "candidate": "許育愷",
+      "ballot_number": 5,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第3選舉區",
+      "candidate": "宋昀芝",
+      "ballot_number": 1,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第3選舉區",
+      "candidate": "宋萬富",
+      "ballot_number": 2,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第3選舉區",
+      "candidate": "許皆詳",
+      "ballot_number": 3,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第3選舉區",
+      "candidate": "魏睿宏",
+      "ballot_number": 4,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第4選舉區",
+      "candidate": "許月里",
+      "ballot_number": 1,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第4選舉區",
+      "candidate": "許嘉峻",
+      "ballot_number": 2,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第4選舉區",
+      "candidate": "李家萱",
+      "ballot_number": 3,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第5選舉區",
+      "candidate": "黃榮焜",
+      "ballot_number": 1,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第5選舉區",
+      "candidate": "陳佩真",
+      "ballot_number": 2,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第6選舉區",
+      "candidate": "鄭淑卿",
+      "ballot_number": 1,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第6選舉區",
+      "candidate": "張仁和",
+      "ballot_number": 2,
+      "source_id": "S23"
+    },
+    {
+      "city": "澎湖縣",
+      "office": "縣市議員",
+      "district": "澎湖縣第6選舉區",
+      "candidate": "夏晨榮",
+      "ballot_number": 3,
+      "source_id": "S23"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "唐麗輝",
+      "ballot_number": 1,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "許玉仙",
+      "ballot_number": 2,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "許大鴻",
+      "ballot_number": 3,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "蔡其雍",
+      "ballot_number": 4,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "尚文凱",
+      "ballot_number": 5,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "傅蒼松",
+      "ballot_number": 6,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "黃世丞",
+      "ballot_number": 7,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "楊霈璿",
+      "ballot_number": 8,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "洪允典",
+      "ballot_number": 9,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "林鑫一",
+      "ballot_number": 10,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "倪于媃",
+      "ballot_number": 11,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "董森堡",
+      "ballot_number": 12,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "董家瑋",
+      "ballot_number": 13,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "陳子芸",
+      "ballot_number": 14,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "莊勝騏",
+      "ballot_number": 15,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "李慧艷",
+      "ballot_number": 16,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "陳泱瑚",
+      "ballot_number": 17,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "戴德滿",
+      "ballot_number": 18,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第1選舉區",
+      "candidate": "楊忠俊",
+      "ballot_number": 19,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "蔡水游",
+      "ballot_number": 1,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "李文益",
+      "ballot_number": 2,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "周子傑",
+      "ballot_number": 3,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "黃萱萱",
+      "ballot_number": 4,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "吳佩雯",
+      "ballot_number": 5,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "王秀玉",
+      "ballot_number": 6,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "陳錦偉",
+      "ballot_number": 7,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "陳麒翔",
+      "ballot_number": 8,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "李應文",
+      "ballot_number": 9,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "王國代",
+      "ballot_number": 10,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第2選舉區",
+      "candidate": "楊育菡",
+      "ballot_number": 11,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第3選舉區",
+      "candidate": "洪和興",
+      "ballot_number": 1,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第3選舉區",
+      "candidate": "洪長享",
+      "ballot_number": 2,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第3選舉區",
+      "candidate": "洪若珊",
+      "ballot_number": 3,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市議員",
+      "district": "金門縣第3選舉區",
+      "candidate": "洪毓壕",
+      "ballot_number": 4,
+      "source_id": "S24"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "張國威",
+      "ballot_number": 1,
+      "source_id": "S25"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "李文良",
+      "ballot_number": 2,
+      "source_id": "S25"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "洪和成",
+      "ballot_number": 3,
+      "source_id": "S25"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "張火木",
+      "ballot_number": 4,
+      "source_id": "S25"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "陳玉珍",
+      "ballot_number": 5,
+      "source_id": "S25"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "梁文韜",
+      "ballot_number": 6,
+      "source_id": "S25"
+    },
+    {
+      "city": "金門縣",
+      "office": "縣市長",
+      "district": "金門縣",
+      "candidate": "黃世團",
+      "ballot_number": 7,
+      "source_id": "S25"
+    }
+  ]
+}
