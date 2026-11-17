@@ -259,7 +259,7 @@ footer{padding:2.5rem 5vw;background:var(--lime);display:flex;justify-content:sp
 /* hidden 屬性的 display:none 會被 .map-switch 的 display 蓋掉，要明確寫回來 */
 .map-switch[hidden],.map-zoom-out[hidden]{display:none}
 .map-layer-switch{font-size:.85rem}
-.map-zoom-out{font:700 .82rem/1 "Noto Sans TC","PingFang TC",sans-serif;padding:.5rem .85rem;border:1px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.map-zoom-out{font:700 .9rem/1 "Noto Sans TC","PingFang TC",sans-serif;padding:.5rem .85rem;border:1px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
 .map-zoom-out:hover{background:var(--tint)}
 /* 放大後線寬不跟著放大，標籤改以 --zoom 反向縮小 */
 .county,.county-outline,.map-district-shape{vector-effect:non-scaling-stroke}
@@ -497,7 +497,8 @@ main>.section:first-child,.method{padding-top:4rem}
 .cd-more{align-self:flex-start;margin-top:auto;font-size:.88rem;font-weight:800;color:var(--ink);border-bottom:2px solid var(--party,var(--ink));padding-bottom:.1rem}
 .cd-compact:hover .cd-more span{display:inline-block;transform:translateX(3px)}
 /* 候選人號次：中性樣式，不用政黨色與強調色，避免看起來像競選文宣 */
-.ballot-number{display:inline-block;margin-left:.45rem;padding:.05rem .4rem;border:1px solid var(--ink);background:var(--surface);color:var(--ink);font:700 .78rem/1.4 "Noto Sans TC","PingFang TC",sans-serif;letter-spacing:0;vertical-align:middle;white-space:nowrap}
+.ballot-number{display:inline-flex;align-items:center;gap:.15rem;margin-left:.45rem;color:var(--ink);font:700 .9rem/1 "Noto Sans TC","PingFang TC",sans-serif;letter-spacing:0;vertical-align:middle;white-space:nowrap}
+.ballot-number b{display:inline-grid;place-items:center;min-width:1.55em;height:1.55em;padding:0 .2em;border:1.5px solid var(--ink);border-radius:999px;background:var(--surface);font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
 .ballot-source{margin:.35rem 0 .6rem;font-size:.82rem;color:var(--muted)}
 .ballot-source summary{cursor:pointer;width:fit-content}
 .ballot-source p{margin:.4rem 0 .2rem;color:var(--ink);font-weight:700}
