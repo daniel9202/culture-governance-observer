@@ -208,7 +208,7 @@ window.loadCandidateDataset=async({districts=false,ballots=false}={})=>{
   const sharedPolicyList=policies=>policies.map(policy=>`<section class="shared-policy-item"><h5>${esc(policy.title)}</h5><p>${esc(policy.summary)}</p>${bullets(policy.concrete_proposals||[],'尚未收錄具體主張。')}<a href="${esc(safe(policy.source_url))}" target="_blank" rel="noopener">${esc(policy.source_title||'查看共同政見來源')} ↗</a></section>`).join('');
   const sharedPolicySection=(title,policies,open=false)=>policies.length?`<details class="policy-layer policy-shared"${open?' open':''}><summary><h4>${title}</h4><span class="shared-toggle">${policies.length} 項</span></summary>${sharedPolicyList(policies)}</details>`:'';
   // 號次標籤與來源。整張卡片是連結的列表與地圖側欄只放標籤（連結內不能再放連結），來源在候選人頁與地方頁展開。
-  window.ballotBadge=x=>x.ballot_number?`<span class="ballot-number" title="候選人號次 ${esc(x.ballot_number)} 號"><b>${esc(x.ballot_number)}</b>號</span>`:'';
+  window.ballotBadge=x=>x.ballot_number?`<span class="ballot-number" title="候選人號次 ${esc(x.ballot_number)} 號"><b${String(x.ballot_number).length>1?' class="is-wide"':''}>${esc(x.ballot_number)}</b>號</span>`:'';
   window.ballotSource=x=>x.ballot_number?`<details class="ballot-source"><summary>號次來源</summary><p>依${esc(x.city)}選舉委員會號次抽籤結果</p><a href="${esc(safe(x.ballot_source_url))}" target="_blank" rel="noopener">${esc(x.ballot_source_title)} ↗</a>${x.ballot_as_of?`<small>公告／製表日期：${esc(x.ballot_as_of)}</small>`:''}</details>`:'';
   window.officeKey=office=>String(office).includes('議員')?'councilor':'mayor';
   window.candidateUrl=record=>`candidate.html?${new URLSearchParams({city:record.city,office:officeKey(record.office),name:record.candidate})}`;
