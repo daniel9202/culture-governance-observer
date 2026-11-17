@@ -1,0 +1,561 @@
+{
+  "date": "2026-11-16",
+  "device": "DANASUS-Codex",
+  "documents": [
+    {
+      "filename": "南投縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/南投縣縣長.pdf",
+      "sha256": "fa2c4ff6bfc1f9ede318c6cdad89ff4dd9be161990259a6c998bab53439bc9e8",
+      "bytes": 9551089,
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "嘉義市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/嘉義市市長.pdf",
+      "sha256": "c3a632373a4b077f24dbc818cc53ea6c3a448475a983f6eaf01f753e5ccad938",
+      "bytes": 20450611,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 15508,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 5758,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 3,
+          "characters": 38082,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 4,
+          "characters": 1834,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 4,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "嘉義縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/嘉義縣縣長.pdf",
+      "sha256": "87925670e1e0a9a71b74b03be36e556a51ec680e949592f7124b6ba4aaab2aac",
+      "bytes": 9148114,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 7495,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 119550,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "基隆市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/基隆市市長.pdf",
+      "sha256": "61e9d93725c34c9dc162ede66b0ba87d4db0f82f16f28510946eecde8fb14ac8",
+      "bytes": 1586578,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8090,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "宜蘭縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/宜蘭縣縣長.pdf",
+      "sha256": "f50fc5b56b0af0f1120e0141de46d72678020440daf8ef8359068e41f0346706",
+      "bytes": 31458509,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8794,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 12342,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 3,
+          "characters": 10603,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 4,
+          "characters": 5797,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 4,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "屏東縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/屏東縣縣長.pdf",
+      "sha256": "fcc3df8f080100c817f2290ab29af56d7a1e049b4c9d6052913402280dc5e25a",
+      "bytes": 14285664,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 6919,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 56658,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "彰化縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/彰化縣縣長.pdf",
+      "sha256": "2a50d463501b943ba027de26a14532c6f00d0dc191a1a717bf68d64ae3a6f36a",
+      "bytes": 5284004,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 11522,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "新北市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/115年/新北市市長.pdf",
+      "sha256": "39f1e02e678d0264f5ec0ce7f60113a6b70da1e8cac5ad2ae9f70102f6dd6c2c",
+      "bytes": 1761009,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8458,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "新竹市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/新竹市市長.pdf",
+      "sha256": "85ec4bbfe359633e3ceeae7e4957d283084631e9e1a212f22bc6e829d2aa3b6d",
+      "bytes": 7856897,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 10756,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 14024,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "新竹縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/新竹縣縣長.pdf",
+      "sha256": "49e2f7aff26946f6002139cf578097141776d627c9d73ebf0827fd079242baf6",
+      "bytes": 3538120,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 12645,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 48155,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "桃園市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/115年/桃園市市長.pdf",
+      "sha256": "63a5929cfd46163a7fca281e9fd611da53d775d476fe473b7212bc628374004e",
+      "bytes": 7603635,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 6057,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 121993,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "澎湖縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/澎湖縣縣長.pdf",
+      "sha256": "e69ced25fe3672bbfde0f6566b080ef16b405ad1bb31f98c616775de41a9112e",
+      "bytes": 24515462,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8651,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 12118,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "臺中市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/115年/臺中市市長.pdf",
+      "sha256": "efffbbba3889dfa4772f7dd6f843238941dae6b7675c2e9131c4ffc4e5627e45",
+      "bytes": 3754931,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 4263,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "臺北市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/115年/臺北市市長.pdf",
+      "sha256": "38a0ab1d573283f1906ddab4519aa7d3e90176f340a37d91237bcaf99afb3698",
+      "bytes": 3434196,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8802,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "臺南市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/115年/臺南市市長.pdf",
+      "sha256": "92c37187e86be443d44598da95a6d1ec2b66a212e647d04d5329b06cebefb9ef",
+      "bytes": 3204017,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 4908,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "臺東縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/臺東縣縣長.pdf",
+      "sha256": "e1b19112ba2875f32074c94600e0f0f88fc14fc3744fbe30dbb0c39fcd6ddd61",
+      "bytes": 24548583,
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "花蓮縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/花蓮縣縣長.pdf",
+      "sha256": "af55fd2e7f1677e277b9f03e3f76b7dee5f3deae5ba2e02b8fca99f45ee6941c",
+      "bytes": 2947233,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 16671,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 37218,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "苗栗縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/苗栗縣縣長.pdf",
+      "sha256": "cc4843740b16d3096041f6dc88f14e34ccde488a984088861a780f02271f9f9e",
+      "bytes": 13225227,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8701,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 112942,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 3,
+          "characters": 11509,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 4,
+          "characters": 8341,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 5,
+          "characters": 5613,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 6,
+          "characters": 6743,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 6,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "連江縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/連江縣縣長.pdf",
+      "sha256": "1905a2596ef2b29b1806d37033ec85eb77bbbcad03bbf69074d38faa2fa04902",
+      "bytes": 8888783,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 11134,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 4271,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 3,
+          "characters": 8431,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 4,
+          "characters": 6321,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 5,
+          "characters": 9733,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 6,
+          "characters": 8708,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 7,
+          "characters": 4145,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 8,
+          "characters": 7098,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 8,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "金門縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/金門縣縣長.pdf",
+      "sha256": "ad758ce1debdbb897bfa2f64457f5e7193ff198fad0f00a4db6aed760c7956d1",
+      "bytes": 5350932,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 8683,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 6015,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 3,
+          "characters": 10370,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 4,
+          "characters": 8367,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 5,
+          "characters": 4977,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 6,
+          "characters": 5834,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 6,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "雲林縣縣長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/雲林縣縣長.pdf",
+      "sha256": "b43b8cee61ea232dd11eb3fb31223d3e001fc57bb40a14e3368d67facebfc961",
+      "bytes": 4591751,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 11610,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        },
+        {
+          "page": 2,
+          "characters": 49280,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 2,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    },
+    {
+      "filename": "高雄市市長.pdf",
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/03直轄市長/115年/高雄市市長.pdf",
+      "sha256": "75724eac1ded65fb62a8fd036aaa97f6c73abf15b8bb1482a33dc2cf5ebd1541",
+      "bytes": 4604808,
+      "pages": [
+        {
+          "page": 1,
+          "characters": 6881,
+          "method": "PDF text layer",
+          "needs_ocr": false
+        }
+      ],
+      "page_count": 1,
+      "download_status": "verified PDF opened",
+      "ocr_note": "Whole-page OCR covers image-based policies even when text layer is present."
+    }
+  ],
+  "errors": [],
+  "text_layer_extraction_failures": [
+    {
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/南投縣縣長.pdf",
+      "error": "Reached maximum number of tokens per stream."
+    },
+    {
+      "url": "https://bulletin.cec.gov.tw/01選舉公報/04縣市長/115年/臺東縣縣長.pdf",
+      "error": "Reached maximum number of tokens per stream."
+    }
+  ]
+}
