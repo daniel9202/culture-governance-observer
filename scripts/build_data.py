@@ -546,6 +546,7 @@ def build_ballot_numbers(registered):
     for i, source in enumerate(sources, 1):
         for record in records:
             if record["_source"] == source: record["source_id"] = f"S{i}"
+        source["id"] = f"S{i}"
     for record in records: record.pop("_source")
     target = {key for key in roster if key[1] in {"縣市長", "縣市議員"}}
     missing = target - covered
