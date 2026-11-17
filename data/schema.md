@@ -57,4 +57,6 @@
 
 ## `ballot_numbers.csv`
 
+2026-11-18 使用者核准：`ballot_source_url` 另允許 `https://eebulletin.cec.gov.tw/` 官方選舉公報實際網址；此規則擴充下段原有的網域限制。公報來源同樣必須核對原文、號次與登記名冊，掃描型公報須先回報使用者決定是否進行 OCR 與逐筆原圖核對。
+
 候選人號次資料，一位候選人一列。欄位：`city`、`office`（只收 `縣市長`、`縣市議員`）、`district`、`candidate`（四者必須與 `registered_candidates.csv` 完全相符）、`ballot_number`（正整數）、`ballot_source_title`、`ballot_source_url`（地方選委會實際公告或附件 URL，必須以 `https://web.cec.gov.tw/` 開頭）、`ballot_as_of`（公告或製表日期）。同一選區內號次不可重複。輸出為 `ballot_numbers.json`，來源在檔案層級以 `sources` 與 `source_id` 去重記錄；尚未取得的名冊候選人只警告，不補猜號次。

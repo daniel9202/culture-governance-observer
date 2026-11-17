@@ -531,8 +531,9 @@ def build_ballot_numbers(registered):
             raise ValueError(f"{label}: ballot_number must be a positive integer")
         valid_date(row["ballot_as_of"], label)
         url = row["ballot_source_url"]
-        if not url.startswith("https://web.cec.gov.tw/") or url.rstrip("/") in {"https://web.cec.gov.tw", "https://web.cec.gov.tw/"}:
-            raise ValueError(f"{label}: ballot_source_url must be an actual https://web.cec.gov.tw/ announcement or attachment URL")
+        allowed_ballot_origins = ("https://web.cec.gov.tw/", "https://eebulletin.cec.gov.tw/")
+        if not url.startswith(allowed_ballot_origins) or url.rstrip("/") in {origin.rstrip("/") for origin in allowed_ballot_origins}:
+            raise ValueError(f"{label}: ballot_source_url must be an actual CEC announcement, attachment or election bulletin URL")
         identity = (row["city"], row["office"], row["district"], row["candidate"])
         if identity not in roster:
             raise ValueError(f"{label}: candidate not found in registered_candidates.csv")
