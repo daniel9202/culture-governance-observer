@@ -223,6 +223,11 @@ window.loadCandidateDataset=async({districts=false,ballots=false}={})=>{
   // 舊值（候選人原文、候選人官方網站、候選人頁）資料端重整完前先視為官網類。
   const OFFICIAL_SOURCE_TYPES=new Set(['候選人官網','候選人官方社群','政黨候選人頁','候選人原文','候選人官方網站','候選人頁']);
   const isOfficialRecord=record=>OFFICIAL_SOURCE_TYPES.has(record.source_type);
+  // 選舉公報（2026-11-17）：source_type＝「選舉公報」自成一區，不歸入官網或新聞；與官網內容重複也分開保留。
+  // 頁碼沒有正式欄位，不從文字或網址推斷。
+  const GAZETTE_SOURCE_TYPE='選舉公報';
+  const isGazetteRecord=record=>record.source_type===GAZETTE_SOURCE_TYPE;
+  const isNewsRecord=record=>!isOfficialRecord(record)&&!isGazetteRecord(record);
   const recordProposals=record=>record.concrete_proposals.length?record.concrete_proposals:[record.summary].filter(Boolean);
   // 新聞標題：source_title 為「媒體｜標題 - 媒體」時取中間的標題；媒體名稱優先用 source_outlet。
   const newsParts=record=>{
@@ -254,14 +259,19 @@ window.loadCandidateDataset=async({districts=false,ballots=false}={})=>{
     const {outlet,headline}=newsParts(record);
     return `<section class="cd-sub cd-sub-news">${outlet?`<p class="cd-outlet">${esc(outlet)}</p>`:''}<h3>${esc(headline)}</h3>${subTags([record])}${argumentBox([record])}${proposalList([record])}${subFoot([{url:record.source_url,label:outlet||'新聞來源'},...(record.related_sources||[]).map(source=>typeof source==='string'?{url:source,label:'其他報導'}:{url:source.url,label:source.title||'其他報導'})],record.published_date)}</section>`;
   };
+  // 公報一列一張子卡；標題只用 policy_title，沒有就不放標題。
+  const gazetteSubcard=record=>{
+    const links=[{url:record.source_url,label:'選舉公報'},...(record.related_sources||[]).map(source=>typeof source==='string'?{url:source,label:'其他來源'}:{url:source.url,label:source.title||'其他來源'})];
+    return `<section class="cd-sub cd-sub-gazette">${record.policy_title?`<h3>${esc(record.policy_title)}</h3>`:''}${subTags([record])}${argumentBox([record])}${proposalList([record])}${subFoot(uniqueLinks(links),record.published_date)}</section>`;
+  };
   const zone=(title,content,emptyText,count)=>`<section class="cd-zone"><h3 class="cd-zone-title">${esc(title)}${count?`<span class="cd-zone-count">${esc(count)}</span>`:''}</h3>${content||`<p class="cd-empty">${esc(emptyText)}</p>`}</section>`;
-  window.candidateSummaryCounts=x=>{const records=x.records||[];return {proposals:records.reduce((sum,record)=>sum+recordProposals(record).length,0),news:records.filter(record=>!isOfficialRecord(record)).length,officialTopics:uniqueValues(records.filter(isOfficialRecord).map(record=>record.official_topic||record.policy_title||newsParts(record).headline)),newsTopics:uniqueValues(records.filter(record=>!isOfficialRecord(record)).map(record=>record.policy_title))}};
+  window.candidateSummaryCounts=x=>{const records=x.records||[];return {proposals:records.reduce((sum,record)=>sum+recordProposals(record).length,0),news:records.filter(isNewsRecord).length,officialTopics:uniqueValues(records.filter(isOfficialRecord).map(record=>record.official_topic||record.policy_title||newsParts(record).headline)),newsTopics:uniqueValues(records.filter(isNewsRecord).map(record=>record.policy_title))}};
   // 候選人頁：完整卡片。
   window.renderCandidateDetail=(x,{openShared=true}={})=>{
-    const records=x.records||[],official=records.filter(isOfficialRecord),news=records.filter(record=>!isOfficialRecord(record));
+    const records=x.records||[],gazette=records.filter(isGazetteRecord),official=records.filter(isOfficialRecord),news=records.filter(isNewsRecord);
     const shared=officeKey(x.office)==='councilor'?`${sharedPolicySection('政黨共同政見',x.party_shared_policies||[],openShared)}${sharedPolicySection('區域共同政見',x.regional_shared_policies||[],openShared)}`:'';
     const notes=(x.public_notes||[]).length?`<div class="policy-layer policy-editor-note"><h4>本站備註</h4><ul>${x.public_notes.map(item=>`<li>${item.title?`<strong>${esc(item.title)}</strong>：`:''}${esc(item.note)}</li>`).join('')}</ul></div>`:'';
-    return `<article class="card cd-card">${zone('官網政見',officialSubcards(official),'尚未收錄候選人官網或官方社群的文化政見。',official.length?`${official.reduce((sum,record)=>sum+recordProposals(record).length,0)} 項`:'')}${zone('相關新聞',news.map(newsSubcard).join(''),'尚未收錄本屆競選政見的相關新聞。',news.length?`${news.length} 則`:'')}${shared}${notes}<small class="verification">最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
+    return `<article class="card cd-card">${zone('選舉公報政見',gazette.map(gazetteSubcard).join(''),'尚未收錄選舉公報政見。',gazette.length?`${gazette.reduce((sum,record)=>sum+recordProposals(record).length,0)} 項`:'')}${zone('官網政見',officialSubcards(official),'尚未收錄候選人官網或官方社群的文化政見。',official.length?`${official.reduce((sum,record)=>sum+recordProposals(record).length,0)} 項`:'')}${zone('相關新聞',news.map(newsSubcard).join(''),'尚未收錄本屆競選政見的相關新聞。',news.length?`${news.length} 則`:'')}${shared}${notes}<small class="verification">最後查核：${esc(x.last_verified)} · ${reportLink(x.ids,`${x.city} ${x.office} ${x.candidate}`)}</small></article>`;
   };
   // 縣市長列表：精簡卡，整張連到候選人頁。
   // 政黨色：列表頁載入 data/party_colors.json 後填入（candidate-list.js）；沒有就用中性色。
